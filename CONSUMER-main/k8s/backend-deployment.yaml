@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: proxy-api
+  namespace: proxy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: proxy-api
+  template:
+    metadata:
+      labels:
+        app: proxy-api
+    spec:
+      containers:
+        - name: api
+          image: proxy-api:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - configMapRef:
+                name: proxy-config
+            - secretRef:
+                name: proxy-secrets
+          # Readiness checks real dependency status (GET /health, app/main.py:
+          # LLM/embedding/vector/graph/cache) so a pod is pulled out of
+          # rotation if a dependency is down. Liveness hits /health/live
+          # instead (no dependency checks) -- a transient Qdrant/Neo4j blip
+          # must not get an otherwise-healthy pod killed and restarted.
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health/live
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 20
+            timeoutSeconds: 3
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: proxy-api
+  namespace: proxy
+spec:
+  selector:
+    app: proxy-api
+  ports:
+    - port: 8000
+      targetPort: 8000
+  type: ClusterIP
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: proxy-api-hpa
+  namespace: proxy
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: proxy-api
+  minReplicas: 2
+  maxReplicas: 8
+  metrics:
+    - type: Resource
+      resource:
+        name: cpu
+        target:
+          type: Utilization
+          averageUtilization: 70

@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/*
+  Plaster theme. Every colour, typeface, radius and shadow the UI uses is
+  declared here and consumed through Tailwind utilities (bg-sage, text-ink,
+  rounded-panel, shadow-float, font-display …). Do not hard-code hex values
+  in components; add a token here instead. See src/ui/README.md.
+*/
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bricolage Grotesque", "DM Sans", ui-sans-serif, sans-serif;
+
+  /* surfaces */
+  --color-chalk: #f7f6f2;
+  --color-sage: #dce6dd;
+  --color-stone: #e9e2d6;
+  --color-blue: #d7dfe8;
+  --color-blush: #ede0da;
+
+  /* text */
+  --color-ink: #2a2f2c;
+  --color-mute: #6a716d;
+
+  /* action */
+  --color-teal: #1e6b63;
+  --color-teal-deep: #124f49;
+  --color-teal-tint: #c9dfda;
+
+  /* states */
+  --color-ochre: #f2e5bd;
+  --color-ochre-ink: #64500e;
+  --color-rust: #8a3b2e;
+  --color-line: rgba(42, 47, 44, 0.14);
+  --color-line-strong: #b9c0bc;
+  --color-wash: rgba(42, 47, 44, 0.06);
+
+  /* shape */
+  --radius-frame: 28px;
+  --radius-panel: 18px;
+  --radius-tile: 12px;
+  --radius-ctrl: 10px;
+
+  --shadow-float:
+    0 18px 44px rgba(42, 47, 44, 0.14), 0 1px 0 rgba(255, 255, 255, 0.7) inset;
+  --shadow-lift: 0 8px 24px rgba(42, 47, 44, 0.1);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--color-ink);
+  background: var(--color-chalk);
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+}
+:focus-visible {
+  outline: 3px solid var(--color-teal);
+  outline-offset: 2px;
+}
+::backdrop {
+  background: rgba(42, 47, 44, 0.35);
+}

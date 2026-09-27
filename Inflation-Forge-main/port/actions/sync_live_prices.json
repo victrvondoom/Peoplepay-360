@@ -1,0 +1,12 @@
+{
+  "identifier": "inflationforge_sync_prices",
+  "title": "Sync live inflation prices",
+  "icon": "Refresh",
+  "description": "Collect current and same-season prior-year city price evidence.",
+  "trigger": {"type": "self-service", "operation": "DAY-2", "userInputs": {"properties": {}, "required": []}},
+  "invocationMethod": {
+    "type": "WEBHOOK", "url": "{{ .secrets.INFLATIONFORGE_URL }}/api/prices/sync-async?force=true", "agent": false,
+    "synchronized": true, "method": "POST", "headers": {"Content-Type": "application/json"}, "body": {}
+  },
+  "requiredApproval": false
+}

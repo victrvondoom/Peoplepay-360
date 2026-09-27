@@ -1,0 +1,26 @@
+{
+  "identifier": "inflationforge_add_item",
+  "title": "Add inflation item",
+  "icon": "Microservice",
+  "description": "Validate and activate a live source row across the InflationForge city map.",
+  "trigger": {
+    "type": "self-service", "operation": "CREATE",
+    "userInputs": {
+      "properties": {
+        "name": {"type": "string", "title": "Display Name"},
+        "category": {"type": "string", "title": "Category", "enum": ["HOUSING", "GROCERIES", "TRANSPORT", "DINING", "UTILITIES", "OTHER"]},
+        "unit": {"type": "string", "title": "Canonical Unit"},
+        "source_label": {"type": "string", "title": "Exact Discovered Source Row"},
+        "conversion_multiplier": {"type": "number", "title": "Conversion Multiplier", "default": 1},
+        "owner": {"type": "string", "title": "Owner", "default": "inflation-research"}
+      },
+      "required": ["name", "category", "unit", "source_label", "conversion_multiplier", "owner"]
+    }
+  },
+  "invocationMethod": {
+    "type": "WEBHOOK", "url": "{{ .secrets.INFLATIONFORGE_URL }}/api/items", "agent": false,
+    "synchronized": true, "method": "POST", "headers": {"Content-Type": "application/json"},
+    "body": {"name": "{{ .inputs.name }}", "category": "{{ .inputs.category }}", "unit": "{{ .inputs.unit }}", "source_label": "{{ .inputs.source_label }}", "conversion_multiplier": "{{ .inputs.conversion_multiplier }}", "owner": "{{ .inputs.owner }}"}
+  },
+  "requiredApproval": false
+}

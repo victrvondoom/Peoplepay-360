@@ -1,0 +1,77 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "beacon"
+version = "0.2.0"
+description = "Beacon Night Shift: the on-call agent that fixes the 3 AM page with your voice, and does not wake you the second time"
+authors = [{ name = "Prashant", email = "prashant101007@gmail.com" }]
+requires-python = ">=3.12"
+license = "Apache-2.0"
+dependencies = [
+    "boto3",
+    "cordon",
+    "genji",
+    "litellm",
+]
+
+[project.optional-dependencies]
+# Runtime deps of the slim agent image (Dockerfile.agent): voice turn,
+# remediation, change ledger, dashboard. Kept separate so the torch-based
+# triage image does not need them.
+agent = [
+    "strands-agents",
+    "aws-lambda-powertools[tracer]",
+    "pydantic",
+    "litellm",
+    "pyyaml",
+]
+dev = [
+    "pytest",
+    "moto[logs,sns,dynamodb,cloudwatch,ec2,ecs,ssm,stepfunctions,events,sts]",
+    "pytest-mock",
+    "mypy",
+    "boto3-stubs[logs,sns,bedrock-runtime,dynamodb,connect,cloudwatch,ec2,ecs,ssm,stepfunctions,sts,polly,lambda]",
+    "types-tqdm",
+    "types-PyYAML",
+    "ruff>=0.15",
+    "pre-commit",
+    "cfn-lint",
+    "fastapi",
+    "uvicorn",
+    "httpx",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.mypy]
+strict = true
+packages = ["beacon"]
+mypy_path = "src"
+
+[[tool.mypy.overrides]]
+module = [
+    "cordon.*", "genji", "genji.*", "litellm", "litellm.*",
+    "strands", "strands.*", "aws_lambda_powertools", "aws_lambda_powertools.*",
+]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = ["mypy_boto3_dynamodb", "mypy_boto3_dynamodb.*", "mypy_boto3_connect", "mypy_boto3_connect.*"]
+ignore_missing_imports = true
+
+[tool.ruff]
+target-version = "py312"
+src = ["src"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "TCH"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["TCH"]
+"scripts/local_server.py" = ["E501"]  # fixture RCA text and scripted replies stay verbatim
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

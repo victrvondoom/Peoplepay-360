@@ -1,0 +1,19 @@
+{
+  "identifier": "inflationforge_item",
+  "title": "InflationForge Tracked Item",
+  "icon": "Microservice",
+  "schema": {
+    "properties": {
+      "category": {"type": "string", "title": "Category", "enum": ["HOUSING", "GROCERIES", "TRANSPORT", "DINING", "UTILITIES", "OTHER"]},
+      "unit": {"type": "string", "title": "Canonical Unit"},
+      "status": {"type": "string", "title": "Status", "enum": ["ACTIVE", "RETIRED"]},
+      "owner": {"type": "string", "title": "Owner"},
+      "version": {"type": "string", "title": "Version"},
+      "source_method": {"type": "string", "title": "Source Method"},
+      "spec_hash": {"type": "string", "title": "Specification Hash"},
+      "updated_at": {"type": "string", "format": "date-time", "title": "Updated At"}
+    },
+    "required": ["category", "unit", "status", "owner", "version", "source_method", "spec_hash"]
+  },
+  "mirrorProperties": {}, "calculationProperties": {}, "aggregationProperties": {}, "relations": {}
+}

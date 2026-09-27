@@ -1,0 +1,19 @@
+services:
+  inflationforge:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      INFLATIONFORGE_DB: /app/artifacts/inflationforge.db
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://host.docker.internal:4318
+      OTEL_EXPORTER_OTLP_PROTOCOL: http/protobuf
+      OTEL_SERVICE_NAME: inflationforge
+      SIGNOZ_API_URL: http://host.docker.internal:8080
+      SIGNOZ_API_KEY: ${SIGNOZ_API_KEY:-}
+    env_file:
+      - path: .env
+        required: false
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    volumes:
+      - ./artifacts:/app/artifacts

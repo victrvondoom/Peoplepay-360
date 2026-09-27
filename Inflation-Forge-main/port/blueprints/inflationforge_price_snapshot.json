@@ -1,0 +1,21 @@
+{
+  "identifier": "inflationforge_price_snapshot",
+  "title": "InflationForge Price Snapshot",
+  "icon": "Data",
+  "schema": {
+    "properties": {
+      "provider_mode": {"type": "string", "title": "Provider Mode"},
+      "current_year": {"type": "number", "title": "Current Year"},
+      "previous_year": {"type": "number", "title": "Previous Year"},
+      "city_count": {"type": "number", "title": "Cities"},
+      "item_count": {"type": "number", "title": "Items"},
+      "observation_count": {"type": "number", "title": "Observations"},
+      "comparison_count": {"type": "number", "title": "Comparisons"},
+      "content_hash": {"type": "string", "title": "Content Hash"},
+      "trace_id": {"type": "string", "title": "SigNoz Trace ID"},
+      "retrieved_at": {"type": "string", "format": "date-time", "title": "Retrieved At"}
+    },
+    "required": ["provider_mode", "current_year", "previous_year", "city_count", "item_count", "observation_count", "comparison_count", "content_hash", "trace_id", "retrieved_at"]
+  },
+  "mirrorProperties": {}, "calculationProperties": {}, "aggregationProperties": {}, "relations": {}
+}

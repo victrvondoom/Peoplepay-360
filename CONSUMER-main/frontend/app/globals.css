@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --proxy-black: #050505;
+  --proxy-glass: rgba(13, 15, 22, 0.62);
+  --proxy-glass-strong: rgba(18, 22, 32, 0.78);
+  --proxy-line: rgba(255, 255, 255, 0.10);
+  --proxy-text: #f7fbff;
+  --proxy-muted: #a8b3c7;
+  --proxy-tertiary: #687386;
+  --proxy-cyan: #00e5ff;
+  --proxy-purple: #9b5cff;
+  --proxy-green: #37f29a;
+  --proxy-amber: #ffc857;
+  --proxy-red: #ff4d6d;
+}
+
+html { background: var(--proxy-black); color: var(--proxy-text); text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; }
+body { margin: 0; min-height: 100vh; background: var(--proxy-black); color: var(--proxy-text); font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+/* The OS/browser default scrollbar renders as a stark opaque white bar on
+   Windows, clashing badly against this dark UI everywhere it shows up.
+   Hidden globally -- scrolling (wheel/touch/keyboard) still works fine,
+   there's just no visible track/thumb. */
+* { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar { width: 0; height: 0; background: transparent; }
+::selection { background: rgba(0, 229, 255, .28); color: var(--proxy-text); }
+button, a, input, textarea { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid var(--proxy-cyan); outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+.not-sr-only { position: static; width: auto; height: auto; padding: initial; margin: initial; overflow: visible; clip: auto; white-space: normal; }
+@keyframes flow { from { transform: translateX(-100%); } to { transform: translateX(220%); } }
+@keyframes breathe { 0%, 100% { opacity: .78; transform: translate3d(0,0,0) scale(1); } 50% { opacity: 1; transform: translate3d(0,-1px,0) scale(1.01); } }
+.animate-flow { animation: flow 1.3s linear infinite; }
+.motion-card { transform: translateZ(0); transition: transform .18s ease, border-color .18s ease, background .18s ease; }
+.motion-card:hover { transform: translate3d(0,-2px,0); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; } }
+@media (prefers-contrast: more) { :root { --proxy-line: rgba(255,255,255,.32); --proxy-muted: #d8e0ee; } }
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -20;
+  }
+}
+.animate-dash {
+  animation: dash 1s linear infinite;
+}
+
+@keyframes aperture-agent-reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.aperture-agent-content {
+  animation: aperture-agent-reveal .22s cubic-bezier(.16,1,.3,1);
+}
+.agent-doc summary {
+  list-style: none;
+}
+.agent-doc summary::-webkit-details-marker {
+  display: none;
+}
+.agent-doc summary::before {
+  content: "▸";
+  display: inline-block;
+  margin-right: 6px;
+  transition: transform .15s ease;
+}
+.agent-doc[open] summary::before {
+  transform: rotate(90deg);
+}
+

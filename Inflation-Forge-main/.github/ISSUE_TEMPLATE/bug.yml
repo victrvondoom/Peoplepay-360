@@ -1,0 +1,21 @@
+name: Bug report
+description: Report a reproducible data, API, UI, or observability defect.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: textarea
+    id: observed
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+  - type: input
+    id: trace
+    attributes:
+      label: Snapshot or trace ID
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+    validations:
+      required: true

@@ -1,0 +1,149 @@
+{
+  "domains": {
+    "telecom": {
+      "active_version": "v1",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_telecom_v1_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "active",
+          "chunk_count": 2281,
+          "created_at": "2026-07-07T16:54:11.182568+00:00",
+          "last_indexed": "2026-07-07T17:10:36.759122+00:00"
+        }
+      }
+    },
+    "ecommerce": {
+      "active_version": "v1",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_ecommerce_v1_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "active",
+          "chunk_count": 1609,
+          "created_at": "2026-07-07T17:10:36.774885+00:00",
+          "last_indexed": "2026-07-07T17:18:25.759332+00:00"
+        }
+      }
+    },
+    "health_insurance": {
+      "active_version": "v1",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_health_insurance_v1_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "needs_reindex",
+          "chunk_count": 7400,
+          "created_at": "2026-07-07T21:40:01.826122+00:00",
+          "last_indexed": "2026-07-07T21:59:07.349553+00:00"
+        }
+      }
+    },
+    "banking": {
+      "active_version": "v1",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_banking_v1_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "active",
+          "chunk_count": 3616,
+          "created_at": "2026-07-07T22:25:39.540303+00:00",
+          "last_indexed": "2026-07-07T23:18:10.707628+00:00"
+        }
+      }
+    },
+    "airlines": {
+      "active_version": "v1",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_airlines_v1_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "active",
+          "chunk_count": 2042,
+          "created_at": "2026-07-07T23:18:10.707628+00:00",
+          "last_indexed": "2026-07-08T02:49:51.550297+00:00"
+        }
+      }
+    },
+    "housing": {
+      "active_version": "v1",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_housing_v1_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "active",
+          "chunk_count": 1278,
+          "created_at": "2026-07-08T02:49:51.557789+00:00",
+          "last_indexed": "2026-07-08T02:52:28.249242+00:00"
+        }
+      }
+    },
+    "government": {
+      "active_version": "v1",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_government_v1_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "active",
+          "chunk_count": 1956,
+          "created_at": "2026-07-08T02:52:28.257818+00:00",
+          "last_indexed": "2026-07-08T02:59:37.826772+00:00"
+        }
+      }
+    },
+    "healthcare": {
+      "active_version": "v2",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_healthcare_v1_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "deprecated",
+          "chunk_count": 3512,
+          "created_at": "2026-07-08T03:00:37.453830+00:00",
+          "last_indexed": "2026-07-08T03:14:18.874036+00:00"
+        },
+        "v2": {
+          "collection_name": "proxy_healthcare_v2_nvidia_1024",
+          "provider": "nvidia",
+          "embedding_model": "nvidia/nv-embedqa-e5-v5",
+          "dimension": 1024,
+          "status": "active",
+          "chunk_count": 3587,
+          "created_at": "2026-07-08T03:29:08.562404+00:00",
+          "last_indexed": "2026-07-08T03:39:38.553154+00:00"
+        }
+      }
+    },
+    "healthcare_provider": {
+      "active_version": "v1",
+      "versions": {
+        "v1": {
+          "collection_name": "proxy_healthcare_provider",
+          "provider": "legacy",
+          "embedding_model": "unknown",
+          "dimension": null,
+          "status": "unknown_dimension",
+          "chunk_count": null,
+          "created_at": "2026-07-11T17:25:52.480386+00:00",
+          "last_indexed": null
+        }
+      }
+    }
+  }
+}

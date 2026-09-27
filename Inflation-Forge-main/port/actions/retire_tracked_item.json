@@ -1,0 +1,12 @@
+{
+  "identifier": "inflationforge_retire_item",
+  "title": "Retire tracked inflation item",
+  "icon": "Delete",
+  "description": "Stop future collection while preserving historical observations.",
+  "trigger": {"type": "self-service", "operation": "DAY-2", "blueprintIdentifier": "inflationforge_item", "userInputs": {"properties": {"actor": {"type": "string", "title": "Actor", "default": "inflation-research-lead"}}, "required": ["actor"]}},
+  "invocationMethod": {
+    "type": "WEBHOOK", "url": "{{ .secrets.INFLATIONFORGE_URL }}/api/items/{{ .entity.identifier }}?actor={{ .inputs.actor }}", "agent": false,
+    "synchronized": true, "method": "DELETE", "headers": {"Content-Type": "application/json"}, "body": {}
+  },
+  "requiredApproval": true
+}
