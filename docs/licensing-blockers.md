@@ -81,6 +81,34 @@ reimplementation of Rumi's planner, which is the line §3 draws.
 
 ---
 
+## 2b. Audit: `adapters/resolution.py` vs B1 — **CLEARED**
+
+**Date:** 2026-09-27. `CONSUMER-main` (PROXY) is the *other* unlicensed project,
+so its adapter needs the same audit the spatial one got.
+
+**Finding: no copied expression. Safe under §3's service-boundary rule.**
+
+| Checked | Result |
+|---|---|
+| PROXY's agent logic ported to Python? | **No.** No LangGraph, LangChain, Gemini or supervisor code. The only mention of that stack is a docstring noting it runs *in PROXY*, with PROXY's own credentials. |
+| How does it reach PROXY? | **HTTP only** — `urllib.request`. A client of a service its owners operate. |
+| Any prompt text or corpus copied? | **No.** |
+| Interface facts recorded? | Yes — endpoint shapes only, which is what §3 permits. |
+
+**A design property worth keeping.** The adapter caps every drafted artifact at
+`EvidenceClass.UNVERIFIED` and sets `requires_human_review: True` — verified as
+enforced at all six construction sites, not merely promised in the docstring. The
+reasoning is right: *an appeal letter is an argument the user may choose to send,
+not a fact about the world.* PROXY's deterministic citation verifier is carried
+across as a separate, narrower signal rather than averaged into the draft's
+credibility.
+
+**Still blocked for distribution.** Clearing the adapter does not clear PROXY. The
+capability only works when someone runs PROXY, and that party needs a licence to
+do so lawfully as part of a product.
+
+---
+
 ## 3. Rule going forward
 
 Until a licence exists for `CONSUMER-main` and `rumi-main`:

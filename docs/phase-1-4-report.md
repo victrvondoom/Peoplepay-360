@@ -15,12 +15,21 @@ Measured, not recalled. All figures from runs on 2026-09-27.
 | `test_assurance_core.py` | **79 passed** | **79 passed** | **unchanged** |
 | `test_peoplepay_invariants.py` | — | **70 passed** | +70 new |
 | Beacon offline suite | 307 passed, 1 failed | **377 passed, 1 failed** | +70 passed |
-| `tests/test_integration_layer.py` (root) | — | **53 passed** | +53 new |
-| `tests/test_gateway.py` (root) | — | **14 passed** | +14 new |
+| Root suite (`tests/`) | — | **210 passed** | +210 new |
 | `ruff check` (all new code) | — | **clean** | — |
 | `mypy` (`beacon.peoplepay`) | — | **clean, 6 files** | — |
+| `mypy` (`adapters/ gateway/ transaction/`) | 6 errors | **clean, 15 files** | −6 |
 
-**Total: 444 passing tests**, one pre-existing unrelated failure.
+Root suite breakdown, measured: integration layer 50, gateway 48, property
+adapter 22, resolution adapter 23, SQLite store 32, auth 35.
+
+The gateway file grew 17 → 48: body limits, environment-driven configuration,
+dispatch shape checking, and four tests that bind a real loopback socket
+because the connection bug in §5 is invisible to a stub.
+
+**Total: 587 passing tests** (377 Beacon + 210 root), one pre-existing unrelated
+failure (`test_hardening.py` — numpy pinned 2.5.3, environment has 1.26.4;
+recorded in `test-baseline.md` before this work began).
 
 Two suites, two runners, because the code lives at two levels:
 
@@ -162,32 +171,134 @@ there is no signal, instead of defaulting to English.
 | Permission denials were unlogged | Medium | Now appended to the ledger with `outcome: DENIED` |
 | `ToolRegistry` has no `pay`/`book`/`execute` | — | **By design.** An absent tool beats a disabled one. |
 | No rate limiting | Medium | **Now closed.** The gateway (`c0539fe`) added a per-caller sliding-window limiter; `tests/test_gateway.py` pins it, including thread safety under 8 concurrent threads. |
-| Memory vault is in-memory only | Medium | Deliberate for Phase 4. No persistence means no at-rest encryption story yet. |
-| **`/health/integrations` is unauthenticated and reports `endpoint`** | **Low now, Medium once providers are wired** | **OPEN — not fixed.** See below. |
+| Memory vault is in-memory only | Medium | **Still open.** Transactions are now durable (`SqliteTransactionStore`); the *memory vault* is not. A restart keeps the transaction and loses the user's preferences. |
+| No at-rest encryption on the SQLite file | Medium | **Open.** The file holds verbatim utterances and budgets in plaintext. SQLite has no built-in encryption; this needs filesystem-level protection or SQLCipher. |
+| `/health/integrations` exposed internal `endpoint` values | Low → **closed** | **Fixed.** `HealthReport.to_dict(include_endpoint=False)` omits it by default; the gateway passes `include_endpoint=True` only for an authenticated caller. Unauthenticated readers get `endpoint_configured: true/false` — *whether*, never *where*. |
+| Header-asserted identity (`X-Beacon-User` trusted as sent) | High → **closed** | **Fixed.** `gateway/auth.py` verifies an HMAC-signed bearer token; 35 tests. |
+| Unbounded request body: `Content-Length` drove `rfile.read()` | Medium → **closed** | **Fixed.** Refused against `MAX_BODY_BYTES` *before* the read, so a declared length can no longer drive allocation. |
+| Malformed `Content-Length` raised an unhandled `ValueError` | Low → **closed** | **Fixed.** `int()` on an attacker-controlled header now yields a 400 instead of a 500. |
 
-### Open: the health page is public and will expose internal URLs
+### Closed: identity is now verified
 
-`gateway/app.py` serves `/health` and `/health/integrations` **before** the
-`X-Beacon-User` check. That is defensible for liveness probes, but the payload
-includes each capability's `endpoint`. Today every endpoint is `null`, so
-nothing leaks. **The moment `BEACON_MARKET_URL` or `BEACON_SPATIAL_URL` is set,
-an internal service URL becomes readable by any unauthenticated caller.**
+`gateway/auth.py` issues and verifies `v1.<user-b64>.<expiry>.<hmac-sha256>`
+against `BEACON_GATEWAY_SECRET`. Properties, each pinned by test:
 
-Verified by test: `TestUnauthenticatedHealthSurface` asserts endpoints are null
-today, and a further test documents that a configured endpoint *does* surface.
-No secret-shaped values (token/password/api_key) appear in the payload.
+- a forged user id **fails the signature** (the test keeps the original
+  signature and swaps the id — refused)
+- the signature covers the expiry, so it **cannot be extended** alone
+- a token signed with a different secret is refused
+- **in VERIFIED mode `X-Beacon-User` is ignored entirely**, so the header cannot
+  bypass the check the token exists to perform
+- `hmac.compare_digest` for constant-time comparison; one `InvalidToken` type for
+  every rejection, so probing learns nothing about which check failed
 
-**Not fixed here on purpose.** The two honest fixes — move
-`/health/integrations` behind auth, or drop `endpoint` from the public payload —
-are both changes to the gateway author's deliberate ordering, and liveness
-probes may depend on it being open. Flagged for a decision rather than changed
-silently.
+**Open mode is retained deliberately and loudly.** With no secret set the bare
+header is still accepted so local development is unaffected — but
+`/health/integrations` reports `auth.mode: "OPEN"` with *"caller identity is
+unverified, local use only"*, and `serve()` prints the same line at boot. A
+deployment that forgets the secret can be *seen* to have forgotten it.
 
-**§26 status.** Audit logging: done (hash-chained ledger). Rate limiting: **now
-done** at the gateway. Per-request identity: done (`X-Beacon-User`, 401 without
-it, 403 on missing DISCOVERY). Authentication is header-asserted identity with
-no verification — fine for a local gateway, **not** an auth system; a real
-deployment needs a verified token.
+**This is symmetric-secret auth for a first-party gateway, not OIDC.** No issuer,
+audience, key rotation or revocation list. Replacing `verify_caller` is the
+single seam for a real IdP.
+
+### Closed: the health page no longer leaks internal URLs
+
+Fixed at the source rather than the caller: `HealthReport.to_dict()` takes
+`include_endpoint=False` and the value is **never serialized** for an
+unauthenticated reader, rather than written and then blanked. `missing_config`
+stays visible either way — it names environment variables, which is a deployment
+hint rather than a network target.
+
+**§26 status — now complete.** Audit logging: done (hash-chained ledger). Rate
+limiting: done, per-caller sliding window, thread-safe under contention.
+Per-request identity: **done and verified**.
+
+### Closed: the request body is bounded, and a refusal is readable
+
+`_body` read `Content-Length` straight into `int()` and then into
+`rfile.read(length)`. Both halves of that were wrong on a surface that fronts
+money: a non-numeric header became an unhandled `ValueError` (a 500 that tells a
+prober the parse crashed), and a large one was an allocation the caller chose.
+
+Now the header is treated as a claim at every step — non-numeric, negative, over
+`MAX_BODY_BYTES`, or shorter than declared are each a 400 — and the size check
+happens before the read.
+
+**A bug the fix introduced, found only by running the server.** Refusing without
+reading leaves the body in the socket, so under `HTTP/1.1` keep-alive the next
+request parses mid-body. Setting `close_connection` was not enough either:
+`send_response` advertises keep-alive regardless, so the server closed a socket
+the client still believed it could reuse — and closing with unread data in the
+receive buffer sends RST, which destroys the 400 before the caller can read it.
+The limit was protective and unusable at the same time.
+
+The working shape is all three together: drain the refused body in bounded chunks
+(never buffered whole, capped by `DRAIN_LIMIT`), send an explicit
+`Connection: close`, and set `close_connection`.
+
+**Worth recording because of how it was caught.** The unit tests were green
+throughout — they drive `_body` with a `SimpleNamespace` stub, which has no
+socket to desynchronize. Only an end-to-end run against a live server surfaced
+it, and reproducing it in the suite needed `http.client` with a *reused*
+connection; `urllib.request` opens a fresh one per request and never reads the
+corrupted socket. `TestRefusalOnAReusedConnection` pins it, and was confirmed to
+fail with the drain removed.
+
+### Configuration is read from the environment, and bad values are visible
+
+`RATE_LIMIT`, the rate window, the body limit, the drain cap, the bind host, the
+port and all four adapter timeouts now come from the environment, defaulting to
+the values that were previously hardcoded — so an unset environment changes
+nothing.
+
+The failure mode worth designing against is not a typo, it is a typo that
+silently disables a control: `BEACON_GATEWAY_RATE_LIMIT=sixty` must not yield an
+unlimited gateway, and `=0` must not either. So `_env_int` / `_env_float` keep the
+default, refuse values below a floor, and record what they rejected — surfaced in
+`/health/integrations` as `config_warnings` and printed at boot, not only logged.
+
+The bind host stays `127.0.0.1` by default. This surface has an `OPEN` auth mode,
+so it must not become externally reachable merely because it was deployed
+somewhere with a public interface.
+
+Every knob, with the default it falls back to:
+
+| Variable | Default | Effect |
+|---|---|---|
+| `BEACON_GATEWAY_SECRET` | *unset* | HMAC secret. Unset → `OPEN` mode, reported on the health page. |
+| `BEACON_GATEWAY_HOST` | `127.0.0.1` | Bind interface. |
+| `BEACON_GATEWAY_PORT` | `8080` | Bind port. |
+| `BEACON_GATEWAY_RATE_LIMIT` | `60` | Requests per caller per window. Floor 1. |
+| `BEACON_GATEWAY_RATE_WINDOW_SECONDS` | `60.0` | Sliding window length. |
+| `BEACON_GATEWAY_MAX_BODY_BYTES` | `1048576` | Largest accepted request body. Floor 1024. |
+| `BEACON_GATEWAY_DRAIN_LIMIT` | `8388608` | How much of a refused body is drained so the 400 is readable. |
+| `BEACON_GATEWAY_VERBOSE` | *unset* | Request logging to stderr. |
+| `BEACON_SPATIAL_URL` / `_TIMEOUT` | *unset* / `15.0` | Rumi endpoint and timeout. |
+| `BEACON_MARKET_URL` / `_TIMEOUT` | *unset* / `15.0` | InflationForge endpoint and timeout. |
+| `BEACON_PROPERTY_URL` / `_TIMEOUT` | *unset* / `20.0` | InHeir endpoint and timeout. |
+| `BEACON_RESOLUTION_URL` / `_TIMEOUT` | *unset* / `60.0` | PROXY endpoint and timeout. |
+
+The four timeouts differ because the upstreams do: PROXY runs a multi-agent case
+workflow and is slow by nature, while a price lookup either answers quickly or is
+down. An unset `*_URL` is `NOT_CONFIGURED` — still listed on the health page,
+because hiding it would make that page a lie by omission.
+
+### The gateway dispatch is now type-checked
+
+`_dispatch` was annotated `Capability`, the abstract base, while calling
+`room_context`, `price_evidence`, `location_intelligence`, `property_reports`,
+`run_case` and `ask` — none of which it declares. Six `attr-defined` errors, and
+correct only because each route happened to be paired with the right adapter.
+
+Four `runtime_checkable` protocols now name the four call shapes
+(`SpatialCapability`, `MarketCapability`, `PropertyCapability`,
+`ResolutionCapability`), following `TransactionStore`. The explicit per-route
+dispatch is unchanged — a generic `getattr` would still let a request name any
+method — but it now narrows through the protocol first. Since `capabilities` is
+injectable, a substituted adapter that lacks the call reads as a 400 rather than
+surfacing as an `AttributeError` dressed up as a 502 from a provider that was
+never contacted.
 
 ---
 
@@ -314,17 +425,49 @@ not write it and have not audited it for copied expression.
    14 tests covering the rate limiter, health reporting, and the unauthenticated
    health surface. One new open finding (§5).
 
+4. ~~Decide the `/health/integrations` exposure~~ — **done.** Redacted for
+   unauthenticated callers, at the source (`HealthReport.to_dict`).
+5. ~~Replace header-asserted identity~~ — **done.** `gateway/auth.py`, 35 tests.
+6. ~~Persistence~~ — **done.** `transaction/sqlite_store.py`, event-sourced, 32
+   tests. See below.
+7. **InHeir** (property) and **PROXY** (resolution) adapters now exist with tests
+   (22 and 23). Both were added in parallel with this work; **neither has been
+   reviewed by me**, and PROXY remains **blocked by B1** for distribution.
+
+### Persistence, as built
+
+`SqliteTransactionStore` implements the existing `TransactionStore` protocol, so
+swapping it for the in-memory store is a constructor change.
+
+**Event-sourced on purpose.** Each ledger event is a row; `get()` replays them
+and calls `verify_chain()` *before* returning the aggregate. Storing only current
+state would mean trusting a row someone could have edited. Pinned by five
+tamper tests: editing an actor, deleting an event, and rewriting a `detail` blob
+are each caught on load, and `verify_all()` names the broken transaction while
+leaving the intact one alone.
+
+**A bug this found in my own code.** The first version persisted no mandate at
+all, so a reloaded transaction came back with `max_amount = None` — the user's
+stated budget cap silently gone. A dropped constraint *widens* what the agent may
+do, which is the worst direction for a persistence bug to fail in, so all 20
+`IntentMandate` fields are now serialized explicitly and a test asserts the
+restrictive ones (`blocked_merchants`, `required_condition`, `require_warranty`)
+survive.
+
+Money is stored as integer minor units inside JSON (`{"minor": 5000000,
+"currency": "INR"}`); a test greps the raw row to prove no float representation
+appears.
+
 Remaining, in order:
 
-4. **Decide the `/health/integrations` exposure** (§5). One-line fix either way;
-   needs the gateway author's call on whether liveness probes must stay open.
-5. **Replace header-asserted identity with a verified token.** `X-Beacon-User`
-   is trusted as given — acceptable locally, not for any real deployment.
-6. **Persistence.** `InMemoryTransactionStore` is the only implementation;
-   nothing survives a restart. `TransactionStore` is the protocol to implement.
-7. **InHeir** (property) — MIT, unblocked, but zero tests (B10).
-8. **PROXY** (resolution) — blocked on B1. The `DISPUTE_REQUIRED → RESOLVED` path
-   that `states.py` declares and nothing implements.
+8. **Review the property and resolution adapters.** They arrived with tests but
+   without my audit — the spatial adapter needed a B1 licensing review, and
+   PROXY is the *other* unlicensed project, so the resolution adapter needs the
+   same check before any distribution.
+9. **Durable memory vault.** Transactions survive a restart; the user's
+   preferences do not.
+10. **At-rest protection for the SQLite file** — it holds verbatim utterances and
+    budgets in plaintext.
 
 Only after those: YouTube, Telegram, community experiences, transport/NCMC, exam
 booking, payment providers, real-money execution.

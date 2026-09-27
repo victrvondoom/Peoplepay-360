@@ -31,13 +31,20 @@ import threading
 import time
 from collections import defaultdict, deque
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
-from typing import Any
+from typing import Any, TypeVar
 from urllib.parse import urlparse
 
 from beacon.peoplepay.authority import Permission, TransactionType
 from beacon.peoplepay.transaction import Transaction, TransactionOwnershipError
 
-from adapters.base import Capability, CapabilityMode
+from adapters.base import (
+    Capability,
+    CapabilityMode,
+    MarketCapability,
+    PropertyCapability,
+    ResolutionCapability,
+    SpatialCapability,
+)
 from adapters.bridge import SLOT_FOR_CAPABILITY, attach_capability_result
 from adapters.market import MarketAdapter
 from adapters.property import PropertyAdapter
@@ -47,13 +54,125 @@ from gateway.auth import SECRET_ENV, auth_mode, verify_caller
 from transaction.eventbus import EventBus
 from transaction.store import InMemoryTransactionStore, TransactionNotFound
 
-__all__ = ["GatewayState", "build_capabilities", "make_handler", "serve"]
+__all__ = [
+    "GatewayState",
+    "build_capabilities",
+    "config_warnings",
+    "make_handler",
+    "serve",
+]
+
+
+def _env_int(name: str, default: int, *, minimum: int = 1) -> int:
+    """Read a positive int from the environment, falling back on nonsense.
+
+    A deployment that typos ``BEACON_GATEWAY_RATE_LIMIT=sixty`` must not get a
+    gateway that refuses to boot, and must not silently get *no* limit either.
+    So an unparseable or out-of-range value keeps the default, and the fact is
+    reported through :func:`config_warnings` so the health page can show it.
+    """
+    raw = os.getenv(name)
+    if raw is None or not raw.strip():
+        return default
+    try:
+        value = int(raw)
+    except ValueError:
+        _CONFIG_WARNINGS.append(f"{name}={raw!r} is not an integer; using {default}")
+        return default
+    if value < minimum:
+        _CONFIG_WARNINGS.append(
+            f"{name}={value} is below the minimum {minimum}; using {default}"
+        )
+        return default
+    return value
+
+
+def _env_float(name: str, default: float, *, minimum: float = 0.0) -> float:
+    """As :func:`_env_int`, for timeouts."""
+    raw = os.getenv(name)
+    if raw is None or not raw.strip():
+        return default
+    try:
+        value = float(raw)
+    except ValueError:
+        _CONFIG_WARNINGS.append(f"{name}={raw!r} is not a number; using {default}")
+        return default
+    if value <= minimum:
+        _CONFIG_WARNINGS.append(
+            f"{name}={value} must be greater than {minimum}; using {default}"
+        )
+        return default
+    return value
+
+
+#: Populated by the ``_env_*`` readers above when a value is rejected.  Surfaced
+#: on the health page rather than only logged: a limit that silently fell back to
+#: its default is exactly the kind of thing an operator finds out too late.
+_CONFIG_WARNINGS: list[str] = []
+
+
+def config_warnings() -> tuple[str, ...]:
+    """Every environment value that was rejected in favour of a default."""
+    return tuple(_CONFIG_WARNINGS)
+
 
 #: Requests allowed per user per window.  Crude on purpose: a real deployment
 #: puts this at the edge, but "no limit at all" is not a defensible default for
 #: a surface that fronts money.
-RATE_LIMIT = 60
-RATE_WINDOW_SECONDS = 60.0
+RATE_LIMIT = _env_int("BEACON_GATEWAY_RATE_LIMIT", 60)
+RATE_WINDOW_SECONDS = _env_float("BEACON_GATEWAY_RATE_WINDOW_SECONDS", 60.0)
+
+#: Largest request body the gateway will read, in bytes.  ``Content-Length``
+#: is attacker-controlled, so it is a budget to check against rather than an
+#: allocation size to trust.
+MAX_BODY_BYTES = _env_int("BEACON_GATEWAY_MAX_BODY_BYTES", 1_048_576, minimum=1024)
+
+#: How much of a refused body the gateway will read and discard so that the
+#: client can finish writing and read the 400.  Bounded well above the body
+#: limit but far below anything that would matter: draining is a courtesy to a
+#: well-behaved client, not an obligation to a hostile one.
+DRAIN_LIMIT = _env_int("BEACON_GATEWAY_DRAIN_LIMIT", 8 * 1_048_576, minimum=1024)
+
+#: Chunk size for that drain, so no refused body is ever held whole in memory.
+_DRAIN_CHUNK = 65_536
+
+#: Interface the gateway binds.  Loopback by default -- this surface fronts
+#: money and has an ``OPEN`` auth mode, so it must not become reachable off
+#: the host just because it was deployed somewhere with a public interface.
+BIND_HOST = os.getenv("BEACON_GATEWAY_HOST") or "127.0.0.1"
+
+#: Type variable for :func:`_as`.  The protocols it narrows to are structural,
+#: so there is no common base to bind against.
+_P = TypeVar("_P")
+
+
+def _as(capability: Capability, shape: type[_P], name: str) -> _P:
+    """Narrow an adapter to the call shape its route needs.
+
+    ``shape`` is one of the ``*Capability`` protocols and is used only as an
+    ``isinstance`` argument -- it is never instantiated.  mypy still reports
+    ``type-abstract`` at each call site because ``type[P]`` for a protocol ``P``
+    normally implies constructibility; those four call sites carry a scoped
+    ignore for exactly that, which is narrower than widening ``shape`` to
+    ``Any`` and losing the return-type narrowing this function exists to give.
+
+    The dispatch below is explicit per capability rather than a generic
+    ``getattr``, so the route name already decides which method is called.  What
+    this adds is the check that the adapter *behind* that name actually offers
+    it: capabilities are injectable (``GatewayState(capabilities=...)``), so a
+    substituted or half-built adapter is reachable in practice.
+
+    Raising ``NotImplementedError`` puts that case on the 400 path -- the route
+    was asked for something this adapter cannot do -- instead of letting an
+    ``AttributeError`` fall through to the 502 handler, where it would be
+    reported as an upstream provider failure that never happened.
+    """
+    if not isinstance(capability, shape):
+        raise NotImplementedError(
+            f"capability {name!r} ({type(capability).__name__}) does not implement "
+            f"{shape.__name__}"
+        )
+    return capability
 
 
 def build_capabilities() -> dict[str, Capability]:
@@ -62,12 +181,26 @@ def build_capabilities() -> dict[str, Capability]:
     A capability with no endpoint is still listed.  ``NOT_CONFIGURED`` is a
     reportable state, and hiding an unconfigured capability would make the
     health page a lie by omission.
+
+    Each timeout is read from the environment because the four upstreams have
+    genuinely different shapes -- PROXY runs a multi-agent case workflow and is
+    slow by nature, while a price lookup either answers quickly or is down -- and
+    a deployment tuning one must not have to edit code to do it.  The defaults
+    match each adapter's own default, so an unset environment changes nothing.
     """
     return {
-        "spatial": SpatialAdapter(),
-        "market": MarketAdapter(),
-        "property": PropertyAdapter(),
-        "resolution": ResolutionAdapter(),
+        "spatial": SpatialAdapter(
+            timeout=_env_float("BEACON_SPATIAL_TIMEOUT", 15.0),
+        ),
+        "market": MarketAdapter(
+            timeout=_env_float("BEACON_MARKET_TIMEOUT", 15.0),
+        ),
+        "property": PropertyAdapter(
+            timeout=_env_float("BEACON_PROPERTY_TIMEOUT", 20.0),
+        ),
+        "resolution": ResolutionAdapter(
+            timeout=_env_float("BEACON_RESOLUTION_TIMEOUT", 60.0),
+        ),
     }
 
 
@@ -167,6 +300,10 @@ class GatewayState:
                     "local use only"
                 ),
             },
+            # A limit that fell back to its default because the environment
+            # said something unparseable is a deployment fault, and silence
+            # about it is how a "rate limited" gateway turns out not to be.
+            "config_warnings": list(config_warnings()),
             "note": (
                 "A transaction may be planned on SANDBOX evidence, but no "
                 "SANDBOX or MOCK source can satisfy a real-money decision."
@@ -195,18 +332,86 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             self.send_header("Content-Length", str(len(raw)))
             # This surface is JSON for a first-party UI; no cross-origin grant.
             self.send_header("X-Content-Type-Options", "nosniff")
+            # When a handler has decided this connection cannot continue -- a
+            # body refused without being read, so the request stream is still
+            # mid-message -- the client has to be told.  ``send_response`` emits
+            # keep-alive for HTTP/1.1 regardless of ``close_connection``, so
+            # without this header the socket would simply be closed underneath a
+            # client that believed it could send another request on it.
+            if self.close_connection:
+                self.send_header("Connection", "close")
             self.end_headers()
             self.wfile.write(raw)
 
         def _fail(self, code: int, message: str, **extra: Any) -> None:
             self._send(code, {"error": message, **extra})
 
+        def _drain(self, length: int) -> None:
+            """Read and discard a refused body so the caller can read our reply.
+
+            Bounded twice over: never more than ``DRAIN_LIMIT`` in total, and
+            never more than one chunk in memory at a time.  A client whose body
+            is larger than that gets the reset it was always going to get -- the
+            alternative is reading an unbounded stream on its say-so.
+            """
+            remaining = min(length, DRAIN_LIMIT)
+            while remaining > 0:
+                chunk = self.rfile.read(min(_DRAIN_CHUNK, remaining))
+                if not chunk:
+                    break
+                remaining -= len(chunk)
+
         def _body(self) -> dict[str, Any]:
-            length = int(self.headers.get("Content-Length") or 0)
-            if not length:
+            """Parse the request body, trusting nothing the client declared.
+
+            ``Content-Length`` arrives from the caller, so each step treats it as
+            a claim: a non-numeric or negative value is a bad request rather than
+            an unhandled ``ValueError``, and a value over ``MAX_BODY_BYTES`` is
+            refused on the strength of the header alone, so a declared length
+            never sizes a buffer.  A refused body is then drained in bounded
+            chunks (see :meth:`_drain`) -- read and discarded, never held whole --
+            because a client mid-write must be able to read the 400.  A body
+            shorter than declared is reported rather than parsed as truncated
+            JSON.
+            """
+            raw_length = self.headers.get("Content-Length")
+            if raw_length is None or not raw_length.strip():
                 return {}
             try:
-                parsed = json.loads(self.rfile.read(length).decode("utf-8"))
+                length = int(raw_length)
+            except ValueError:
+                # Unlike the size limit below, there is no trustworthy length to
+                # drain against here, so the connection simply ends.  The client
+                # has sent its headers and is told why before the close.
+                self.close_connection = True
+                raise ValueError("Content-Length is not an integer") from None
+            if length < 0:
+                self.close_connection = True
+                raise ValueError("Content-Length is negative")
+            if not length:
+                return {}
+            if length > MAX_BODY_BYTES:
+                # Refused -- but the client is still writing those bytes, and a
+                # socket closed with unread data in its receive buffer is reset
+                # rather than closed (RST on Windows), which destroys the 400
+                # before the caller can read it.  So the rest is drained in
+                # bounded chunks and discarded: the point of the limit is to
+                # never *buffer* an oversized body, not to never read one.
+                # ``DRAIN_LIMIT`` keeps that bounded for a client that lied
+                # about its length, and the connection closes either way.
+                self._drain(length)
+                self.close_connection = True
+                raise ValueError(
+                    f"body of {length} bytes exceeds the {MAX_BODY_BYTES}-byte limit"
+                )
+            data = self.rfile.read(length)
+            if len(data) != length:
+                self.close_connection = True
+                raise ValueError(
+                    f"body is {len(data)} bytes but Content-Length declared {length}"
+                )
+            try:
+                parsed = json.loads(data.decode("utf-8"))
             except (json.JSONDecodeError, UnicodeDecodeError) as exc:
                 raise ValueError(f"body is not valid JSON: {exc}") from exc
             if not isinstance(parsed, dict):
@@ -425,12 +630,14 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                     raise NotImplementedError(
                         "spatial requires a 'room' object in Rumi's roomSchema shape"
                     )
-                return capability.room_context(room, brief=body.get("brief"))
+                spatial = _as(capability, SpatialCapability, name)  # type: ignore[type-abstract]
+                return spatial.room_context(room, brief=body.get("brief"))
             if name == "market":
                 query = str(body.get("item_query") or "").strip()
                 if not query:
                     raise NotImplementedError("market requires 'item_query'")
-                return capability.price_evidence(
+                market = _as(capability, MarketCapability, name)  # type: ignore[type-abstract]
+                return market.price_evidence(
                     item_query=query, city_id=body.get("city_id")
                 )
             if name == "property":
@@ -438,10 +645,11 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 if not address:
                     raise NotImplementedError("property requires 'address'")
                 lookup = str(body.get("lookup") or "location").strip().lower()
+                prop = _as(capability, PropertyCapability, name)  # type: ignore[type-abstract]
                 if lookup == "location":
-                    return capability.location_intelligence(address=address)
+                    return prop.location_intelligence(address=address)
                 if lookup == "reports":
-                    return capability.property_reports(address=address)
+                    return prop.property_reports(address=address)
                 raise NotImplementedError(
                     f"unknown property lookup {lookup!r}; use 'location' or 'reports'"
                 )
@@ -449,13 +657,14 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 # Two distinct calls, chosen explicitly. A dispute workflow is
                 # consequential enough that the caller must name which one.
                 action = str(body.get("action") or "").strip().lower()
+                resolution = _as(capability, ResolutionCapability, name)  # type: ignore[type-abstract]
                 if action == "run_case":
                     case_id = str(body.get("case_id") or "").strip()
                     if not case_id:
                         raise NotImplementedError(
                             "resolution run_case requires 'case_id'"
                         )
-                    return capability.run_case(
+                    return resolution.run_case(
                         case_id=case_id,
                         include_draft=bool(body.get("include_draft", True)),
                     )
@@ -464,7 +673,7 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                     if not question:
                         raise NotImplementedError("resolution ask requires 'question'")
                     try:
-                        return capability.ask(
+                        return resolution.ask(
                             question=question,
                             domain=str(body.get("domain") or "ecommerce"),
                             institution_name=str(body.get("institution_name") or ""),
@@ -482,16 +691,18 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
 
 def serve(port: int | None = None, *, state: GatewayState | None = None) -> None:
     """Run the gateway.  Blocks."""
-    bound = port or int(os.getenv("BEACON_GATEWAY_PORT", "8080"))
+    bound = port or _env_int("BEACON_GATEWAY_PORT", 8080, minimum=1)
     gateway_state = state or GatewayState()
-    httpd = ThreadingHTTPServer(("127.0.0.1", bound), make_handler(gateway_state))
+    httpd = ThreadingHTTPServer((BIND_HOST, bound), make_handler(gateway_state))
     health = gateway_state.integrations()
-    print(f"beacon-gateway on http://127.0.0.1:{bound}")
+    print(f"beacon-gateway on http://{BIND_HOST}:{bound}")
     for row in health["capabilities"]:
         print(f"  {row['name']:<10} {row['mode']}")
     # Loud at boot, not only in the JSON: an operator who forgot the secret
     # should not have to curl the health page to find out.
     print(f"  auth       {health['auth']['mode']} - {health['auth']['detail']}")
+    for warning in config_warnings():
+        print(f"  config     WARNING: {warning}")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:

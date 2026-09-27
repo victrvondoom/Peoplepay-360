@@ -24,7 +24,7 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
 from enum import StrEnum
-from typing import Any
+from typing import Any, Protocol, runtime_checkable
 
 from beacon.assurance.evidence import (
     EvidenceClass,
@@ -40,6 +40,10 @@ __all__ = [
     "CapabilityMode",
     "CapabilityResult",
     "HealthReport",
+    "MarketCapability",
+    "PropertyCapability",
+    "ResolutionCapability",
+    "SpatialCapability",
 ]
 
 
@@ -258,3 +262,63 @@ class Capability(ABC):
             observations=tuple(self.missing(g) for g in gaps),
             gaps=gaps,
         )
+
+
+# --- domain seams -----------------------------------------------------
+#
+# ``Capability`` above says what every adapter must be; these say what each
+# *kind* of adapter offers.  They exist because the gateway dispatches by route
+# name and must not use a generic ``getattr`` (that would let a request name any
+# method on an adapter).  Declaring the four shapes gives that explicit dispatch
+# a type to check against, so a route whose adapter has been swapped for one
+# that does not implement the call is caught at the boundary and reported as a
+# caller error -- rather than surfacing as an ``AttributeError`` dressed up as a
+# provider failure.
+#
+# ``runtime_checkable`` follows ``TransactionStore`` in ``transaction/store.py``:
+# the check is structural and shallow (method presence only, not signatures),
+# which is exactly the guarantee the dispatch needs.
+
+
+@runtime_checkable
+class SpatialCapability(Protocol):
+    """An adapter that can turn a room payload into transaction context."""
+
+    def room_context(
+        self, room: dict[str, Any], *, brief: dict[str, Any] | None = None
+    ) -> CapabilityResult: ...
+
+
+@runtime_checkable
+class MarketCapability(Protocol):
+    """An adapter that can produce price evidence for an item."""
+
+    def price_evidence(
+        self, *, item_query: str, city_id: str | None = None
+    ) -> CapabilityResult: ...
+
+
+@runtime_checkable
+class PropertyCapability(Protocol):
+    """An adapter that can answer the two property lookups."""
+
+    def location_intelligence(self, *, address: str) -> CapabilityResult: ...
+
+    def property_reports(self, *, address: str) -> CapabilityResult: ...
+
+
+@runtime_checkable
+class ResolutionCapability(Protocol):
+    """An adapter that can run a dispute case or answer a rights question."""
+
+    def run_case(
+        self, *, case_id: str, include_draft: bool = True
+    ) -> CapabilityResult: ...
+
+    def ask(
+        self,
+        *,
+        question: str,
+        domain: str = "ecommerce",
+        institution_name: str = "",
+    ) -> CapabilityResult: ...
