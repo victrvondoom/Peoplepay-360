@@ -1,7 +1,40 @@
 # PeoplePay — Personal Transaction Intelligence Network
 
-**Status:** Architecture accepted, not yet implemented. No code modified.
+**Status:** Phases 1–4 implemented and tested. Phases 5+ not started.
 **Date:** 2026-09-27
+**Implementation:** `Beacon-main/src/beacon/peoplepay/` — see
+[`phase-1-4-report.md`](phase-1-4-report.md) for measured results and
+[`licensing-blockers.md`](licensing-blockers.md) for B1.
+
+> **Phase 1–4 as built.** The plan below was followed, with these concrete
+> outcomes:
+>
+> | Phase | Module | Result |
+> |---|---|---|
+> | 1 | `peoplepay/transaction.py` | `Transaction` aggregate, one id, 7 context slots |
+> | 2 | `peoplepay/nodes.py`, `authority.py` | 18 node kinds, 10 source types, 5 permissions, 9 transaction types |
+> | 3 | `peoplepay/memory.py` | 4-scope vault, retention + visibility, preference/inference wall |
+> | 4 | `peoplepay/agent.py` | Thin shell, 9 controlled tools, no execute/pay/book |
+>
+> **Tests: 79/79 assurance unchanged, +70 new invariant tests, ruff and mypy
+> clean.** One pre-existing unrelated failure (`test_hardening.py`, Docker pin).
+>
+> Three findings worth carrying forward:
+>
+> - **A sandbox leak existed and was fixed.** `EvidenceNode.is_sandbox` reads
+>   provenance off *observations*, so declaring a node sandbox in its payload
+>   alone left it looking clean. Any future adapter must attach sandbox
+>   provenance to an observation, not just a flag.
+> - **`beacon.assurance` changed additively, once.** `evidence.py` gained new
+>   `NodeKind`/`EdgeKind` members (spatial, property, document, scan, market,
+>   booking, resolution). No member moved or was removed and no logic changed,
+>   which is why the 79 tests pass unmodified. Keep future changes additive.
+> - **`transaction/aggregate.py` is a re-export, not a second aggregate.** A
+>   competing implementation existed briefly and was converged onto
+>   `beacon.peoplepay.transaction.Transaction`; both paths now yield the same
+>   class object. Do not reintroduce a parallel aggregate.
+> - **Rate limiting (§26) is not implemented.** It needs an HTTP boundary that
+>   does not exist yet. Not faked.
 **Supersedes:** the *structure* proposed in `integration-map.md` §4–5. That file's
 per-project audit and conflict register (§2, §3) remain authoritative and are
 referenced, not repeated, here.

@@ -49,6 +49,38 @@ No line of PROXY or Rumi source is present in `beacon/peoplepay/`.
 
 ---
 
+## 2a. Audit: `adapters/spatial.py` vs B1 — **CLEARED**
+
+**Date:** 2026-09-27. Raised by `phase-1-4-report.md` §9 because this adapter
+targets Rumi, which is unlicensed. Audited line by line.
+
+**Finding: no copied expression. Safe to keep under §3's service-boundary rule.**
+
+| Checked | Result |
+|---|---|
+| Geometry algorithms reimplemented in Python? | **No.** Zero `math.*` calls, no area/polygon computation. It defers to Rumi's `free-floor.ts` and `geometry/index.ts` by design and says so. |
+| How does it obtain room data? | **HTTP only** — `urllib.request` via one private `_get()`. It is a client of a service Rumi's owners run. |
+| Any Rumi source copied? | **No.** No TypeScript translated to Python. |
+| Any Rumi values copied? | **One:** `RUMI_DOOR_CLEARANCE_M = 0.9`, matching `rumi-main/shared/planner/space.ts:52` (`DOOR_CLEARANCE = 0.9`). |
+
+**On that one constant.** A single unadorned numeric fact — a 0.9 m door
+clearance — is not protectable expression; it is a measurement, and it is
+attributed to its source in a comment rather than passed off as ours. The
+surrounding logic (`max(clearance, door_width)`) was written independently even
+though Rumi computes the same thing, and the adapter names it as *mirroring*
+Rumi rather than deriving from it.
+
+**Residual risk: low, but not zero.** If Rumi's owners consider their clearance
+rules proprietary, the honest fix is to fetch the value from Rumi's API instead
+of hard-coding it. That is a one-line change and worth making if a licence
+negotiation turns adversarial. Noted rather than pre-emptively done, because
+fetching a constant over HTTP on every call has its own cost.
+
+**Unchanged conclusion:** the adapter may stay. It must not grow a Python
+reimplementation of Rumi's planner, which is the line §3 draws.
+
+---
+
 ## 3. Rule going forward
 
 Until a licence exists for `CONSUMER-main` and `rumi-main`:
