@@ -41,6 +41,7 @@ from adapters.base import Capability, CapabilityMode
 from adapters.bridge import SLOT_FOR_CAPABILITY, attach_capability_result
 from adapters.market import MarketAdapter
 from adapters.property import PropertyAdapter
+from adapters.resolution import ResolutionAdapter
 from adapters.spatial import SpatialAdapter
 from gateway.auth import SECRET_ENV, auth_mode, verify_caller
 from transaction.eventbus import EventBus
@@ -66,6 +67,7 @@ def build_capabilities() -> dict[str, Capability]:
         "spatial": SpatialAdapter(),
         "market": MarketAdapter(),
         "property": PropertyAdapter(),
+        "resolution": ResolutionAdapter(),
     }
 
 
@@ -442,6 +444,36 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                     return capability.property_reports(address=address)
                 raise NotImplementedError(
                     f"unknown property lookup {lookup!r}; use 'location' or 'reports'"
+                )
+            if name == "resolution":
+                # Two distinct calls, chosen explicitly. A dispute workflow is
+                # consequential enough that the caller must name which one.
+                action = str(body.get("action") or "").strip().lower()
+                if action == "run_case":
+                    case_id = str(body.get("case_id") or "").strip()
+                    if not case_id:
+                        raise NotImplementedError(
+                            "resolution run_case requires 'case_id'"
+                        )
+                    return capability.run_case(
+                        case_id=case_id,
+                        include_draft=bool(body.get("include_draft", True)),
+                    )
+                if action == "ask":
+                    question = str(body.get("question") or "").strip()
+                    if not question:
+                        raise NotImplementedError("resolution ask requires 'question'")
+                    try:
+                        return capability.ask(
+                            question=question,
+                            domain=str(body.get("domain") or "ecommerce"),
+                            institution_name=str(body.get("institution_name") or ""),
+                        )
+                    except ValueError as exc:
+                        # An unknown domain is a caller error, not a 502.
+                        raise NotImplementedError(str(exc)) from exc
+                raise NotImplementedError(
+                    f"unknown resolution action {action!r}; use 'run_case' or 'ask'"
                 )
             raise NotImplementedError(f"capability {name!r} has no gateway dispatch")
 

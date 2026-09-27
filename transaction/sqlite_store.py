@@ -40,6 +40,7 @@ from beacon.assurance.ledger import EventKind, LedgerEvent
 from beacon.assurance.money import Money
 from beacon.assurance.policy import AutonomyLevel
 from beacon.assurance.states import OPEN_STATES, State
+from beacon.assurance.policy import IntentMandate
 from beacon.peoplepay.authority import (
     ConditionalGrant,
     Permission,
@@ -291,14 +292,15 @@ class SqliteTransactionStore:
                 INSERT INTO transactions (
                     transaction_id, user_id, transaction_type, state,
                     raw_utterance, language, normalized_intent,
-                    created_at, updated_at, permissions_json, context_json,
-                    plan_json, memory_refs_json
-                ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)
+                    created_at, updated_at, mandate_json, permissions_json,
+                    context_json, plan_json, memory_refs_json
+                ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                 ON CONFLICT(transaction_id) DO UPDATE SET
                     state             = excluded.state,
                     language          = excluded.language,
                     normalized_intent = excluded.normalized_intent,
                     updated_at        = excluded.updated_at,
+                    mandate_json      = excluded.mandate_json,
                     permissions_json  = excluded.permissions_json,
                     context_json      = excluded.context_json,
                     plan_json         = excluded.plan_json,
@@ -314,6 +316,7 @@ class SqliteTransactionStore:
                     tx.normalized_intent,
                     _iso(tx.created_at),
                     _iso(tx.updated_at),
+                    _mandate_to_json(tx.mandate),
                     _permissions_to_json(tx.permissions),
                     json.dumps(tx.context, default=str),
                     json.dumps(tx.plan, default=str) if tx.plan is not None else None,
@@ -378,6 +381,7 @@ class SqliteTransactionStore:
             state=State(row["state"]),
             language=row["language"],
             normalized_intent=row["normalized_intent"],
+            mandate=_mandate_from_json(row["mandate_json"]),
             permissions=_permissions_from_json(row["permissions_json"]),
             context=json.loads(row["context_json"]),
             plan=json.loads(row["plan_json"]) if row["plan_json"] else None,
