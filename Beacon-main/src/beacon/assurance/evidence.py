@@ -229,6 +229,37 @@ class NodeKind(StrEnum):
 
     INTENT = "INTENT"
     USER_POLICY = "USER_POLICY"
+
+    # --- real-world context contributed by the capability subsystems -----
+    # Added for the integrated system: spatial (Rumi), property (InHeir),
+    # document and scan evidence.  Additive only -- no existing member moved.
+    SPATIAL_CONTEXT = "SPATIAL_CONTEXT"
+    """A room capture: dimensions, walls, openings, clearances, free floor."""
+
+    SPATIAL_CONSTRAINT = "SPATIAL_CONSTRAINT"
+    """A derived limit a candidate must satisfy, e.g. max desk width."""
+
+    PLACEMENT_CHECK = "PLACEMENT_CHECK"
+    """Deterministic verdict that a product fits a specific spot."""
+
+    PROPERTY = "PROPERTY"
+    PROPERTY_EVIDENCE = "PROPERTY_EVIDENCE"
+    LOCATION_EVIDENCE = "LOCATION_EVIDENCE"
+    DOCUMENT = "DOCUMENT"
+    DOCUMENT_EVIDENCE = "DOCUMENT_EVIDENCE"
+    SCAN = "SCAN"
+    """A camera frame and what the router classified it as."""
+
+    MARKET_EVIDENCE = "MARKET_EVIDENCE"
+    """Historical / comparative price context, distinct from a live quote."""
+
+    BASKET = "BASKET"
+    """A multi-item plan evaluated as one budget."""
+
+    BOOKING = "BOOKING"
+    RESOLUTION = "RESOLUTION"
+    """Outcome of a dispute / refund workflow."""
+
     PRODUCT = "PRODUCT"
     OFFER = "OFFER"
     MERCHANT = "MERCHANT"
@@ -266,6 +297,17 @@ class EdgeKind(StrEnum):
     VERIFIES = "VERIFIES"
     DISPUTES = "DISPUTES"
     SUPERSEDES = "SUPERSEDES"
+    CONSTRAINS = "CONSTRAINS"
+    """Source imposes a limit the destination must satisfy (spatial, budget)."""
+
+    SATISFIES = "SATISFIES"
+    """Destination was checked against a constraint and passed."""
+
+    CLASSIFIED_AS = "CLASSIFIED_AS"
+    """A scan was routed to a capability as this kind of thing."""
+
+    RESOLVES = "RESOLVES"
+    """Destination closes out the exception the source raised."""
 
 
 @dataclass(frozen=True, slots=True)

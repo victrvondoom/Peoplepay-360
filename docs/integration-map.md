@@ -4,6 +4,14 @@
 **Date:** 2026-09-27
 **Scope:** Audit of five projects found under `payment at critical situation/`, and the plan to unify them into one transaction-centric system.
 
+> **Note (2026-09-27):** §4 (Proposed structure) and §5 (Implementation plan) below
+> are **superseded by [`architecture.md`](architecture.md)**, which reframes the
+> system around a single multilingual agent with Memory / Evidence / Action layers,
+> and adds four pillars this audit did not assess (personal vault, cross-platform
+> evidence connectors, user-to-user experience graph, transport).
+> **§1–§3 and §6 of this file remain authoritative** — the per-project audit and the
+> conflict register are unchanged and are referenced rather than duplicated there.
+
 ---
 
 ## 0. Executive summary — read this first
