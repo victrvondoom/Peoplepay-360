@@ -1,5 +1,30 @@
 # Beacon — Integration Map
 
+> **Addendum, 2026-09-27 (later the same day).** Parts of the plan below are now
+> built, and two of its assumptions changed. Read this box first.
+>
+> **The aggregate moved.** `beacon.peoplepay` is the canonical `Transaction`,
+> not the `transaction/aggregate.py` proposed in §4. A second aggregate appeared
+> during implementation with a stronger permission model (an unordered
+> DISCOVERY/PLANNING/BOOKING/PAYMENT/SHARING set enforcing that "find me a
+> laptop" is not "buy me a laptop"), so this layer converged onto it and deleted
+> its own. `transaction/aggregate.py` is now a re-export.
+>
+> **B1 is confirmed and unresolved.** See `docs/licensing-blockers.md`:
+> `rumi-main` and `CONSUMER-main` carry no licence at any level. Integration
+> with both is therefore **service-boundary only** — no source vendored. The
+> spatial adapter complies: it is Python, reads Rumi room JSON over HTTP, and
+> copies no Rumi implementation.
+>
+> **Built and tested so far:** capability contract (`adapters/base.py`), market
+> adapter (InflationForge, verified live on :8010), spatial adapter (Rumi room
+> JSON), the capability bridge, the central store, the event bus, and the HTTP
+> gateway with `/health/integrations`. 50 integration tests + 149 upstream.
+>
+> **Still open:** property (InHeir), resolution (PROXY), commerce and payment
+> adapters — the last two remain `NOT_CONFIGURED` because no such code exists in
+> any of the five projects (B2, B3).
+
 **Status:** Discovery complete. No code modified.
 **Date:** 2026-09-27
 **Scope:** Audit of five projects found under `payment at critical situation/`, and the plan to unify them into one transaction-centric system.
