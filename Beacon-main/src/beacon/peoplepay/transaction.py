@@ -314,11 +314,32 @@ class Transaction:
         if sandbox:
             body["sandbox"] = True
 
+        obs = tuple(observations)
+        if (sandbox or source_type is SourceType.SANDBOX) and not any(
+            o.provenance.sandbox for o in obs
+        ):
+            # ``EvidenceNode.is_sandbox`` reads provenance off the *observations*,
+            # so a node declared sandbox with none attached would look clean to
+            # ``has_sandbox_evidence``.  Record the provenance where the graph
+            # actually looks, rather than only in the payload.
+            obs = (
+                *obs,
+                self.observation(
+                    field_name="sandbox_marker",
+                    value=None,
+                    source=source,
+                    source_type=source_type,
+                    evidence_class=EvidenceClass.SANDBOX,
+                    sandbox=True,
+                    note="declared sandbox; carries no real-world claim",
+                ),
+            )
+
         node = self.graph.add(
             kind,  # type: ignore[arg-type]
             actor=actor,
             payload=body,
-            observations=observations,
+            observations=obs,
             confidence=confidence,
         )
         self.updated_at = utcnow()

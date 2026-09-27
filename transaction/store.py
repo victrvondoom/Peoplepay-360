@@ -12,6 +12,9 @@ we do not migrate working systems into one database.
 ``InMemoryTransactionStore`` is the reference implementation and is what the
 tests and the local gateway use.  ``TransactionStore`` is the protocol a
 DynamoDB / Postgres backend implements later without touching callers.
+
+The aggregate itself is ``beacon.peoplepay.transaction.Transaction`` -- the
+canonical one.  This module stores it; it does not define a second one.
 """
 
 from __future__ import annotations
@@ -23,7 +26,7 @@ from typing import Any, Protocol, runtime_checkable
 
 from beacon.assurance.states import OPEN_STATES, State
 
-from transaction.aggregate import Transaction
+from beacon.peoplepay.transaction import Transaction
 
 __all__ = [
     "InMemoryTransactionStore",
@@ -116,7 +119,9 @@ class InMemoryTransactionStore:
         """
         broken: dict[str, str] = {}
         for tx in self.all():
-            ok, message = tx.verify_integrity()
+            # The canonical aggregate exposes the chain on its ledger; there is
+            # no verify_integrity() shortcut on the transaction itself.
+            ok, message = tx.ledger.verify_chain()
             if not ok:
                 broken[tx.transaction_id] = message
         return broken
