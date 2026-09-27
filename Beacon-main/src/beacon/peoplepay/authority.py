@@ -17,9 +17,11 @@ question: *who has to be present* when authority is used.  This module answers
 from __future__ import annotations
 
 from dataclasses import dataclass, field, replace
-from datetime import datetime
 from enum import StrEnum
-from typing import Any
+from typing import TYPE_CHECKING, Any
+
+if TYPE_CHECKING:
+    from datetime import datetime
 
 from beacon.assurance import AutonomyLevel, Money, utcnow
 
