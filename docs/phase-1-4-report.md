@@ -14,9 +14,24 @@ Measured, not recalled. All figures from runs on 2026-09-27.
 |---|---|---|---|
 | `test_assurance_core.py` | **79 passed** | **79 passed** | **unchanged** |
 | `test_peoplepay_invariants.py` | — | **70 passed** | +70 new |
-| Full offline suite | 307 passed, 1 failed | **377 passed, 1 failed** | +70 passed |
-| `ruff check` (new code) | — | **clean** | — |
-| `mypy` (new code) | — | **clean, 6 files** | — |
+| Beacon offline suite | 307 passed, 1 failed | **377 passed, 1 failed** | +70 passed |
+| `tests/test_integration_layer.py` (root) | — | **53 passed** | +53 new |
+| `tests/test_gateway.py` (root) | — | **14 passed** | +14 new |
+| `ruff check` (all new code) | — | **clean** | — |
+| `mypy` (`beacon.peoplepay`) | — | **clean, 6 files** | — |
+
+**Total: 444 passing tests**, one pre-existing unrelated failure.
+
+Two suites, two runners, because the code lives at two levels:
+
+```
+cd Beacon-main && python -m pytest      # beacon.assurance + beacon.peoplepay
+cd .           && python -m pytest      # transaction/, adapters/, gateway/
+```
+
+The root `pytest.ini` scopes collection to `tests/` and excludes the five
+acquired projects — collecting them from the root fails on duplicate test
+basenames and an `ImportPathMismatchError` in `CONSUMER-main`.
 
 **The 79 assurance tests were not modified and still pass.** No test was deleted,
 skipped or relaxed.
@@ -146,12 +161,33 @@ there is no signal, instead of defaulting to English.
 | Cross-user transaction access | High | Blocked by `assert_owned_by`; 4 tests |
 | Permission denials were unlogged | Medium | Now appended to the ledger with `outcome: DENIED` |
 | `ToolRegistry` has no `pay`/`book`/`execute` | — | **By design.** An absent tool beats a disabled one. |
-| No rate limiting | Medium | **Not implemented.** §26 asks for it; in-memory Phase 4 has no request boundary to attach it to. Belongs with the HTTP surface. |
+| No rate limiting | Medium | **Now closed.** The gateway (`c0539fe`) added a per-caller sliding-window limiter; `tests/test_gateway.py` pins it, including thread safety under 8 concurrent threads. |
 | Memory vault is in-memory only | Medium | Deliberate for Phase 4. No persistence means no at-rest encryption story yet. |
+| **`/health/integrations` is unauthenticated and reports `endpoint`** | **Low now, Medium once providers are wired** | **OPEN — not fixed.** See below. |
 
-**Honest limitation:** §26 lists rate limits and audit logging. Audit logging is
-done (the hash-chained ledger). **Rate limiting is not** — it needs a transport
-layer that does not exist yet. Flagged rather than faked.
+### Open: the health page is public and will expose internal URLs
+
+`gateway/app.py` serves `/health` and `/health/integrations` **before** the
+`X-Beacon-User` check. That is defensible for liveness probes, but the payload
+includes each capability's `endpoint`. Today every endpoint is `null`, so
+nothing leaks. **The moment `BEACON_MARKET_URL` or `BEACON_SPATIAL_URL` is set,
+an internal service URL becomes readable by any unauthenticated caller.**
+
+Verified by test: `TestUnauthenticatedHealthSurface` asserts endpoints are null
+today, and a further test documents that a configured endpoint *does* surface.
+No secret-shaped values (token/password/api_key) appear in the payload.
+
+**Not fixed here on purpose.** The two honest fixes — move
+`/health/integrations` behind auth, or drop `endpoint` from the public payload —
+are both changes to the gateway author's deliberate ordering, and liveness
+probes may depend on it being open. Flagged for a decision rather than changed
+silently.
+
+**§26 status.** Audit logging: done (hash-chained ledger). Rate limiting: **now
+done** at the gateway. Per-request identity: done (`X-Beacon-User`, 401 without
+it, 403 on missing DISCOVERY). Authentication is header-asserted identity with
+no verification — fine for a local gateway, **not** an auth system; a real
+deployment needs a verified token.
 
 ---
 
@@ -264,12 +300,30 @@ not write it and have not audited it for copied expression.
 
 ## 10. Next integration candidates
 
-1. **Test the adapter/store layer.** It has no invariant tests. The store, event
-   bus and both adapters are unverified by the suite that guards everything else.
-2. **Audit `adapters/spatial.py` for B1 compliance** (above).
-3. **HTTP surface** — where rate limiting and per-request identity belong.
-4. **InHeir** (property) — MIT, unblocked, but zero tests (B10).
-5. **PROXY** (resolution) — blocked on B1. The `DISPUTE_REQUIRED → RESOLVED` path
+**Items 1–3 are now done.**
+
+1. ~~Test the adapter/store layer~~ — **done.** 53 tests in
+   `tests/test_integration_layer.py` covering the store's one-aggregate-per-id
+   guard, tamper detection on the hash chain, the event bus, the capability
+   contract, the float→`Money` boundary (audited conflict C1), and the bridge.
+2. ~~Audit `adapters/spatial.py` for B1~~ — **done, cleared.** See
+   `licensing-blockers.md` §2a. No copied expression; it is an HTTP client with
+   no geometry implementation. Three tests now enforce that property so a future
+   inlining of Rumi's planner fails the suite.
+3. ~~HTTP surface~~ — **exists** (`gateway/app.py`, `c0539fe`) and is now tested:
+   14 tests covering the rate limiter, health reporting, and the unauthenticated
+   health surface. One new open finding (§5).
+
+Remaining, in order:
+
+4. **Decide the `/health/integrations` exposure** (§5). One-line fix either way;
+   needs the gateway author's call on whether liveness probes must stay open.
+5. **Replace header-asserted identity with a verified token.** `X-Beacon-User`
+   is trusted as given — acceptable locally, not for any real deployment.
+6. **Persistence.** `InMemoryTransactionStore` is the only implementation;
+   nothing survives a restart. `TransactionStore` is the protocol to implement.
+7. **InHeir** (property) — MIT, unblocked, but zero tests (B10).
+8. **PROXY** (resolution) — blocked on B1. The `DISPUTE_REQUIRED → RESOLVED` path
    that `states.py` declares and nothing implements.
 
 Only after those: YouTube, Telegram, community experiences, transport/NCMC, exam

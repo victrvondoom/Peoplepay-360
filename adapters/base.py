@@ -97,18 +97,33 @@ class HealthReport:
         """True only when this capability may back a real-money decision."""
         return self.mode in _REAL_MODES
 
-    def to_dict(self) -> dict[str, Any]:
-        return {
+    def to_dict(self, *, include_endpoint: bool = False) -> dict[str, Any]:
+        """Serialize for a health payload.
+
+        ``endpoint`` is withheld by default.  ``/health/integrations`` is
+        deliberately unauthenticated so an operator can reach it during an
+        incident, which means anything in it is public -- and an internal
+        hostname such as ``http://internal-market.svc:8010`` is a map of the
+        private network handed to whoever asks.  Callers that are already behind
+        the auth check pass ``include_endpoint=True``.
+
+        ``endpoint_configured`` still answers the question an operator actually
+        has ("is this wired up at all?") without naming the host.
+        """
+        body = {
             "name": self.name,
             "mode": str(self.mode),
             "detail": self.detail,
             "checked_at": self.checked_at,
-            "endpoint": self.endpoint,
+            "endpoint_configured": self.endpoint is not None,
             "missing_config": list(self.missing_config),
             "upstream": self.upstream,
             "usable": self.usable,
             "decision_grade": self.decision_grade,
         }
+        if include_endpoint:
+            body["endpoint"] = self.endpoint
+        return body
 
 
 @dataclass(frozen=True, slots=True)

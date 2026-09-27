@@ -40,7 +40,9 @@ from beacon.peoplepay.transaction import Transaction, TransactionOwnershipError
 from adapters.base import Capability, CapabilityMode
 from adapters.bridge import SLOT_FOR_CAPABILITY, attach_capability_result
 from adapters.market import MarketAdapter
+from adapters.property import PropertyAdapter
 from adapters.spatial import SpatialAdapter
+from gateway.auth import SECRET_ENV, auth_mode, verify_caller
 from transaction.eventbus import EventBus
 from transaction.store import InMemoryTransactionStore, TransactionNotFound
 
@@ -63,6 +65,7 @@ def build_capabilities() -> dict[str, Capability]:
     return {
         "spatial": SpatialAdapter(),
         "market": MarketAdapter(),
+        "property": PropertyAdapter(),
     }
 
 
@@ -104,17 +107,29 @@ class GatewayState:
 
     # --- health --------------------------------------------------------
 
-    def integrations(self) -> dict[str, Any]:
+    def integrations(self, *, authenticated: bool = False) -> dict[str, Any]:
         """Per-capability health, plus what the system can therefore do.
 
         ``health()`` is contractually non-raising, but a broken adapter must not
         take the health page down with it, so a raise is reported as
         ``UNAVAILABLE`` rather than propagated.
+
+        ``endpoint`` names an internal service URL, and this route is reachable
+        without credentials so that liveness probes keep working.  So it is only
+        included for an authenticated caller: an unauthenticated reader learns
+        *that* a capability is configured (``endpoint_configured``), never
+        *where* it lives.  ``missing_config`` stays visible either way -- it names
+        environment variables, which is a deployment hint rather than a target.
+
+        The omission happens inside ``HealthReport.to_dict``, so the value is
+        never serialized rather than being written and then blanked.
         """
         reports = []
         for name, capability in sorted(self.capabilities.items()):
             try:
-                reports.append(capability.health().to_dict())
+                reports.append(
+                    capability.health().to_dict(include_endpoint=authenticated)
+                )
             except Exception as exc:  # noqa: BLE001 - health must never 500
                 reports.append(
                     {
@@ -138,6 +153,18 @@ class GatewayState:
             # Stated plainly so the UI cannot imply real-money readiness that
             # the capability modes do not support (Sec. 24).
             "real_money_ready": "payment" in decision_grade,
+            # An OPEN gateway trusts whatever user id it is handed.  Saying so
+            # here means a deployment that forgot the secret is visible rather
+            # than quietly insecure.
+            "auth": {
+                "mode": str(auth_mode()),
+                "detail": (
+                    "signed bearer tokens required"
+                    if str(auth_mode()) == "VERIFIED"
+                    else f"no {SECRET_ENV} set: caller identity is unverified, "
+                    "local use only"
+                ),
+            },
             "note": (
                 "A transaction may be planned on SANDBOX evidence, but no "
                 "SANDBOX or MOCK source can satisfy a real-money decision."
@@ -185,14 +212,22 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             return parsed
 
         def _caller(self) -> str | None:
-            """Who is asking.
+            """Who is asking, as far as it can be verified.
 
-            A header is not authentication and this does not pretend otherwise;
-            it is the seam where a real verifier goes.  Every transaction read
-            and write is still checked against ``assert_owned_by``, so a wrong
-            id cannot reach another user's data.
+            With ``BEACON_GATEWAY_SECRET`` set this requires a signed bearer
+            token and ignores ``X-Beacon-User`` entirely; without one it accepts
+            the bare header so local development still works, and the health page
+            reports ``OPEN`` so the weaker mode is visible.  See
+            ``gateway/auth.py``.
+
+            Every transaction read and write is *additionally* checked against
+            ``assert_owned_by``, so identity is defence in depth rather than the
+            only thing between two users' data.
             """
-            return self.headers.get("X-Beacon-User") or None
+            return verify_caller(
+                authorization=self.headers.get("Authorization"),
+                user_header=self.headers.get("X-Beacon-User"),
+            )
 
         # --- routing ---------------------------------------------------
 
@@ -202,7 +237,12 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 self._send(200, {"status": "ok", "service": "beacon-gateway"})
                 return
             if path == "/health/integrations":
-                self._send(200, state.integrations())
+                # Open on purpose, for liveness probes.  An authenticated caller
+                # additionally sees each capability's endpoint.
+                self._send(
+                    200,
+                    state.integrations(authenticated=self._caller() is not None),
+                )
                 return
 
             user = self._caller()
@@ -391,6 +431,18 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return capability.price_evidence(
                     item_query=query, city_id=body.get("city_id")
                 )
+            if name == "property":
+                address = str(body.get("address") or "").strip()
+                if not address:
+                    raise NotImplementedError("property requires 'address'")
+                lookup = str(body.get("lookup") or "location").strip().lower()
+                if lookup == "location":
+                    return capability.location_intelligence(address=address)
+                if lookup == "reports":
+                    return capability.property_reports(address=address)
+                raise NotImplementedError(
+                    f"unknown property lookup {lookup!r}; use 'location' or 'reports'"
+                )
             raise NotImplementedError(f"capability {name!r} has no gateway dispatch")
 
     return Handler
@@ -405,6 +457,9 @@ def serve(port: int | None = None, *, state: GatewayState | None = None) -> None
     print(f"beacon-gateway on http://127.0.0.1:{bound}")
     for row in health["capabilities"]:
         print(f"  {row['name']:<10} {row['mode']}")
+    # Loud at boot, not only in the JSON: an operator who forgot the secret
+    # should not have to curl the health page to find out.
+    print(f"  auth       {health['auth']['mode']} - {health['auth']['detail']}")
     try:
         httpd.serve_forever()
     except KeyboardInterrupt:
