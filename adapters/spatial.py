@@ -63,6 +63,15 @@ _MEASUREMENT_TO_CLASS = {
 #: Source: rumi-main/shared/planner/space.ts -> DOOR_CLEARANCE.
 RUMI_DOOR_CLEARANCE_M = 0.9
 
+#: How far to trust a screening verdict, given the product measurement it used.
+#: A verdict built on an estimated dimension is weaker than one built on a
+#: confirmed catalogue figure, and the number says so rather than the class.
+_PLACEMENT_CONFIDENCE: dict[str, float] = {
+    "confirmed": 0.8,
+    "estimated": 0.5,
+    "unknown": 0.4,
+}
+
 
 @dataclass(frozen=True, slots=True)
 class SpatialConstraint:
@@ -470,9 +479,12 @@ class SpatialAdapter(Capability):
                 self.observe(
                     "placement_verdict",
                     "NOT_RULED_OUT" if placeable else "DOES_NOT_FIT",
-                    evidence_class=_MEASUREMENT_TO_CLASS.get(
-                        measurement_source, EvidenceClass.UNVERIFIED
-                    ),
+                    # A verdict we computed is UNVERIFIED at best: it is only as
+                    # good as the dimensions it screened. It is never UNKNOWN,
+                    # because a class that means "no answer" may not carry one --
+                    # the unmeasured case returns UNKNOWN_DIMENSIONS above and
+                    # attaches no verdict at all.
+                    evidence_class=EvidenceClass.UNVERIFIED,
                     note=(
                         f"screened against {len(constraints)} necessary room "
                         f"bounds at revision {context.revision} (product "
@@ -482,6 +494,7 @@ class SpatialAdapter(Capability):
                 ),
             ),
             gaps=(),
+            confidence=_PLACEMENT_CONFIDENCE.get(measurement_source, 0.4),
             subsystem_ref=f"rumi:room:{context.room_id}@{context.revision}",
         )
 
