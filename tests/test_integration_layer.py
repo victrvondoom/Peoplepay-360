@@ -340,6 +340,7 @@ class TestOneTransactionCorrelatesEveryCapability:
             item_query="milk"
         )
         node_id = attach_capability_result(txn, result)
+        assert node_id is not None
         source_type = txn.graph.get(node_id).payload["source_type"]
         assert source_type == str(SourceType.SANDBOX)
         assert SourceType.SANDBOX not in DECISION_CAPABLE_SOURCES

@@ -17,15 +17,25 @@ import sqlite3
 
 import pytest
 
-from beacon.assurance import AutonomyLevel, IntentMandate, Money, State
+from beacon.assurance import (
+    AutonomyLevel,
+    EdgeKind,
+    EvidenceClass,
+    IntentMandate,
+    Money,
+    State,
+)
 from beacon.peoplepay import (
     ConditionalGrant,
+    PeoplePayNodeKind,
     Permission,
+    SourceType,
     Transaction,
     TransactionType,
 )
 from transaction.sqlite_store import (
     SCHEMA_VERSION,
+    EvidenceIntegrityError,
     LedgerIntegrityError,
     SqliteTransactionStore,
 )
@@ -212,6 +222,42 @@ class TestDurability:
         db.put(tx)
         assert db.get(tx.transaction_id).transaction_type is TransactionType.TRANSPORT
 
+    def test_evidence_graph_survives_with_provenance_and_edges(self, db):
+        tx = _seeded()
+        observation = tx.observation(
+            field_name="price_minor",
+            value=499900,
+            source="merchant.example",
+            source_type=SourceType.PRIMARY_SOURCE,
+            evidence_class=EvidenceClass.VERIFIED,
+            source_url="https://merchant.example/item/1",
+        )
+        price_id = tx.add_evidence(
+            PeoplePayNodeKind.PRICE_OBSERVATION,
+            actor="market-adapter",
+            source="merchant.example",
+            source_type=SourceType.PRIMARY_SOURCE,
+            observations=(observation,),
+        )
+        product_id = tx.add_evidence(
+            PeoplePayNodeKind.PRODUCT,
+            actor="catalog-adapter",
+            source="merchant.example",
+            source_type=SourceType.PRIMARY_SOURCE,
+            payload={"sku": "sku-1"},
+        )
+        tx.graph.link(price_id, product_id, EdgeKind.SUPPORTS)
+
+        db.put(tx)
+        back = db.get(tx.transaction_id)
+
+        assert len(back.graph.nodes) == 3  # intent + price + product
+        assert len(back.graph.edges) == 1
+        restored = back.graph.get(price_id).observations[0]
+        assert restored.value == 499900
+        assert restored.evidence_class is EvidenceClass.VERIFIED
+        assert restored.provenance.source_url == "https://merchant.example/item/1"
+
 
 class TestLedgerReplay:
     """Events are the source of truth, and they are re-verified on load."""
@@ -366,6 +412,34 @@ class TestTamperDetection:
         assert not issubclass(LedgerIntegrityError, TransactionNotFound)
         reopened.close()
 
+    def test_editing_evidence_is_detected_on_load(self, tmp_path):
+        path = tmp_path / "txn.db"
+        store = SqliteTransactionStore(path)
+        tx = _seeded()
+        tx.add_evidence(
+            PeoplePayNodeKind.PRODUCT,
+            actor="catalog-adapter",
+            source="merchant.example",
+            source_type=SourceType.PRIMARY_SOURCE,
+            payload={"sku": "sku-1"},
+        )
+        store.put(tx)
+        store.close()
+
+        conn = sqlite3.connect(str(path))
+        conn.execute(
+            "UPDATE evidence_nodes SET payload_json = '{\"sku\": \"changed\"}' "
+            "WHERE transaction_id = ? AND kind = 'PRODUCT'",
+            (tx.transaction_id,),
+        )
+        conn.commit()
+        conn.close()
+
+        reopened = SqliteTransactionStore(path)
+        with pytest.raises(EvidenceIntegrityError, match="tampered node"):
+            reopened.get(tx.transaction_id)
+        reopened.close()
+
 
 class TestQueries:
     def test_get_missing_raises_transaction_not_found(self, db):
@@ -412,6 +486,8 @@ class TestQueries:
         db.put(_seeded())
         stats = db.stats()
         assert stats["transactions"] == 1
+        assert stats["evidence_nodes"] == 1
+        assert stats["evidence_edges"] == 0
         assert "checked_at" in stats
 
 

@@ -6,6 +6,10 @@
 [`phase-1-4-report.md`](phase-1-4-report.md) for measured results and
 [`licensing-blockers.md`](licensing-blockers.md) for B1.
 
+**Current execution plan:** [`build-sequence.md`](build-sequence.md) maps every
+identified product risk to an implementation phase, release gate and current
+status. It supersedes the older phase ordering in section 7 below.
+
 > **Phase 1–4 as built.** The plan below was followed, with these concrete
 > outcomes:
 >

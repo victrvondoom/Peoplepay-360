@@ -240,6 +240,7 @@ class TestPropertyJoinsTheOneTransaction:
         txn = _txn()
         result = _live(monkeypatch, GIS_BODY).location_intelligence(address=ADDRESS)
         node_id = attach_capability_result(txn, result)
+        assert node_id is not None
         assert txn.graph.get(node_id).payload["risk_is_model_generated"] is True
 
     def test_property_evidence_carries_an_official_record_source_type(
@@ -248,6 +249,7 @@ class TestPropertyJoinsTheOneTransaction:
         txn = _txn()
         result = _live(monkeypatch, GIS_BODY).location_intelligence(address=ADDRESS)
         node_id = attach_capability_result(txn, result)
+        assert node_id is not None
         assert txn.graph.get(node_id).payload["source_type"] == str(
             SourceType.OFFICIAL_RECORD
         )

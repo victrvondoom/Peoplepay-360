@@ -20,7 +20,7 @@ What is deliberately *not* here:
 *   No migration framework.  One ``CREATE TABLE IF NOT EXISTS`` script, plus a
     ``schema_version`` row so a future change detects an old file rather than
     silently misreading it.
-*   No ORM.  Two tables and explicit SQL are easier to audit than a mapping
+*   No ORM.  Explicit SQL is easier to audit than a mapping
     layer, and this file is on the path money decisions are recorded through.
 *   No subsystem data.  Per spec Sec. 38 we keep a correlation reference and let
     Rumi, InflationForge, InHeir and PROXY keep their own stores.
@@ -35,7 +35,17 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from beacon.assurance.evidence import utcnow
+from beacon.assurance.evidence import (
+    EdgeKind,
+    EvidenceClass,
+    EvidenceEdge,
+    EvidenceNode,
+    NodeKind,
+    Observation,
+    Provenance,
+    content_hash,
+    utcnow,
+)
 from beacon.assurance.ledger import EventKind, LedgerEvent
 from beacon.assurance.money import Money
 from beacon.assurance.policy import AutonomyLevel
@@ -47,12 +57,18 @@ from beacon.peoplepay.authority import (
     PermissionSet,
     TransactionType,
 )
+from beacon.peoplepay.nodes import PeoplePayNodeKind
 from beacon.peoplepay.transaction import Transaction
 from transaction.store import TransactionNotFound
 
-__all__ = ["SCHEMA_VERSION", "LedgerIntegrityError", "SqliteTransactionStore"]
+__all__ = [
+    "SCHEMA_VERSION",
+    "EvidenceIntegrityError",
+    "LedgerIntegrityError",
+    "SqliteTransactionStore",
+]
 
-SCHEMA_VERSION = 1
+SCHEMA_VERSION = 2
 
 _SCHEMA = """
 CREATE TABLE IF NOT EXISTS meta (
@@ -92,6 +108,32 @@ CREATE TABLE IF NOT EXISTS ledger_events (
     event_hash     TEXT NOT NULL,
     PRIMARY KEY (transaction_id, seq)
 );
+
+CREATE TABLE IF NOT EXISTS evidence_nodes (
+    transaction_id  TEXT NOT NULL,
+    node_id         TEXT NOT NULL,
+    kind            TEXT NOT NULL,
+    actor           TEXT NOT NULL,
+    created_at      TEXT NOT NULL,
+    payload_json    TEXT NOT NULL,
+    observations_json TEXT NOT NULL,
+    confidence      REAL,
+    node_hash       TEXT NOT NULL,
+    record_hash     TEXT NOT NULL,
+    PRIMARY KEY (transaction_id, node_id)
+);
+
+CREATE TABLE IF NOT EXISTS evidence_edges (
+    transaction_id TEXT NOT NULL,
+    edge_id        TEXT NOT NULL,
+    src            TEXT NOT NULL,
+    dst            TEXT NOT NULL,
+    kind           TEXT NOT NULL,
+    created_at     TEXT NOT NULL,
+    note           TEXT NOT NULL,
+    record_hash    TEXT NOT NULL,
+    PRIMARY KEY (transaction_id, edge_id)
+);
 """
 
 
@@ -107,6 +149,16 @@ class LedgerIntegrityError(RuntimeError):
         self.transaction_id = transaction_id
         super().__init__(
             f"stored ledger for {transaction_id} failed verification: {message}"
+        )
+
+
+class EvidenceIntegrityError(RuntimeError):
+    """Raised when stored evidence was altered or references missing nodes."""
+
+    def __init__(self, transaction_id: str, message: str) -> None:
+        self.transaction_id = transaction_id
+        super().__init__(
+            f"stored evidence for {transaction_id} failed verification: {message}"
         )
 
 
@@ -223,6 +275,33 @@ def _permissions_from_json(text: str) -> PermissionSet:
         conditional=tuple(grants),
         autonomy=AutonomyLevel(raw.get("autonomy", str(AutonomyLevel.HUMAN_PRESENT))),
     )
+
+
+def _observation_from_dict(raw: dict[str, Any]) -> Observation:
+    provenance = raw["provenance"]
+    return Observation(
+        field=raw["field"],
+        value=raw.get("value"),
+        normalized_value=raw.get("normalized_value"),
+        evidence_class=EvidenceClass(raw["evidence_class"]),
+        note=raw.get("note", ""),
+        provenance=Provenance(
+            source=provenance["source"],
+            retrieved_at=_parse_dt(provenance["retrieved_at"]),
+            source_url=provenance.get("source_url"),
+            raw_reference=provenance.get("raw_reference"),
+            raw_hash=provenance.get("raw_hash"),
+            adapter=provenance.get("adapter"),
+            sandbox=bool(provenance.get("sandbox", False)),
+        ),
+    )
+
+
+def _node_kind(value: str) -> NodeKind | PeoplePayNodeKind:
+    try:
+        return NodeKind(value)
+    except ValueError:
+        return PeoplePayNodeKind(value)
 
 
 class SqliteTransactionStore:
@@ -351,6 +430,68 @@ class SqliteTransactionStore:
                         event.event_hash,
                     ),
                 )
+            stored_nodes = {
+                row["node_id"]
+                for row in self._conn.execute(
+                    "SELECT node_id FROM evidence_nodes WHERE transaction_id = ?",
+                    (tx.transaction_id,),
+                ).fetchall()
+            }
+            for node in tx.graph.nodes:
+                if node.node_id in stored_nodes:
+                    continue
+                self._conn.execute(
+                    """
+                    INSERT INTO evidence_nodes (
+                        transaction_id, node_id, kind, actor, created_at,
+                        payload_json, observations_json, confidence, node_hash,
+                        record_hash
+                    ) VALUES (?,?,?,?,?,?,?,?,?,?)
+                    """,
+                    (
+                        node.transaction_id,
+                        node.node_id,
+                        str(node.kind),
+                        node.actor,
+                        _iso(node.created_at),
+                        json.dumps(node.payload, default=str),
+                        json.dumps(
+                            [item.to_dict() for item in node.observations],
+                            default=str,
+                        ),
+                        node.confidence,
+                        node.node_hash,
+                        content_hash(node.to_dict()),
+                    ),
+                )
+            stored_edges = {
+                row["edge_id"]
+                for row in self._conn.execute(
+                    "SELECT edge_id FROM evidence_edges WHERE transaction_id = ?",
+                    (tx.transaction_id,),
+                ).fetchall()
+            }
+            for edge in tx.graph.edges:
+                if edge.edge_id in stored_edges:
+                    continue
+                self._conn.execute(
+                    """
+                    INSERT INTO evidence_edges (
+                        transaction_id, edge_id, src, dst, kind, created_at, note,
+                        record_hash
+                    ) VALUES (?,?,?,?,?,?,?,?)
+                    """,
+                    (
+                        edge.transaction_id,
+                        edge.edge_id,
+                        edge.src,
+                        edge.dst,
+                        str(edge.kind),
+                        _iso(edge.created_at),
+                        edge.note,
+                        content_hash(edge.to_dict()),
+                    ),
+                )
             self._conn.commit()
 
     # --- reading --------------------------------------------------------
@@ -368,9 +509,23 @@ class SqliteTransactionStore:
                 "SELECT * FROM ledger_events WHERE transaction_id = ? ORDER BY seq",
                 (transaction_id,),
             ).fetchall()
-        return self._rebuild(row, events)
+            nodes = self._conn.execute(
+                "SELECT * FROM evidence_nodes WHERE transaction_id = ?",
+                (transaction_id,),
+            ).fetchall()
+            edges = self._conn.execute(
+                "SELECT * FROM evidence_edges WHERE transaction_id = ? ORDER BY created_at",
+                (transaction_id,),
+            ).fetchall()
+        return self._rebuild(row, events, nodes, edges)
 
-    def _rebuild(self, row: sqlite3.Row, events: list[sqlite3.Row]) -> Transaction:
+    def _rebuild(
+        self,
+        row: sqlite3.Row,
+        events: list[sqlite3.Row],
+        nodes: list[sqlite3.Row],
+        edges: list[sqlite3.Row],
+    ) -> Transaction:
         tx = Transaction(
             transaction_id=row["transaction_id"],
             user_id=row["user_id"],
@@ -409,6 +564,76 @@ class SqliteTransactionStore:
         ok, message = tx.ledger.verify_chain()
         if not ok:
             raise LedgerIntegrityError(tx.transaction_id, message)
+        restored_nodes: dict[str, EvidenceNode] = {}
+        for item in nodes:
+            payload = json.loads(item["payload_json"])
+            observations = tuple(
+                _observation_from_dict(raw)
+                for raw in json.loads(item["observations_json"])
+            )
+            kind = _node_kind(item["kind"])
+            expected_hash = content_hash(
+                {
+                    "kind": str(kind),
+                    "payload": payload,
+                    "observations": [obs.to_dict() for obs in observations],
+                }
+            )
+            if item["node_hash"] != expected_hash:
+                raise EvidenceIntegrityError(
+                    tx.transaction_id, f"tampered node {item['node_id']}"
+                )
+            node = EvidenceNode(
+                node_id=item["node_id"],
+                transaction_id=item["transaction_id"],
+                kind=kind,  # type: ignore[arg-type]
+                actor=item["actor"],
+                created_at=_parse_dt(item["created_at"]),
+                payload=payload,
+                observations=observations,
+                confidence=item["confidence"],
+                node_hash=item["node_hash"],
+            )
+            if node.transaction_id != tx.transaction_id:
+                raise EvidenceIntegrityError(
+                    tx.transaction_id, f"node {node.node_id} belongs to another transaction"
+                )
+            if item["record_hash"] != content_hash(node.to_dict()):
+                raise EvidenceIntegrityError(
+                    tx.transaction_id,
+                    f"tampered node record {node.node_id}",
+                )
+            restored_nodes[node.node_id] = node
+
+        restored_edges: list[EvidenceEdge] = []
+        for item in edges:
+            if item["src"] not in restored_nodes or item["dst"] not in restored_nodes:
+                raise EvidenceIntegrityError(
+                    tx.transaction_id,
+                    f"edge {item['edge_id']} references a missing node",
+                )
+            edge = EvidenceEdge(
+                edge_id=item["edge_id"],
+                transaction_id=item["transaction_id"],
+                src=item["src"],
+                dst=item["dst"],
+                kind=EdgeKind(item["kind"]),
+                created_at=_parse_dt(item["created_at"]),
+                note=item["note"],
+            )
+            if edge.transaction_id != tx.transaction_id:
+                raise EvidenceIntegrityError(
+                    tx.transaction_id,
+                    f"edge {edge.edge_id} belongs to another transaction",
+                )
+            if item["record_hash"] != content_hash(edge.to_dict()):
+                raise EvidenceIntegrityError(
+                    tx.transaction_id,
+                    f"tampered edge record {edge.edge_id}",
+                )
+            restored_edges.append(edge)
+        tx.graph._nodes = restored_nodes  # noqa: SLF001 - rehydration boundary
+        tx.graph._edges = restored_edges  # noqa: SLF001 - rehydration boundary
         return tx
 
     def exists(self, transaction_id: str) -> bool:
@@ -492,7 +717,7 @@ class SqliteTransactionStore:
         for transaction_id in ids:
             try:
                 self.get(transaction_id)
-            except LedgerIntegrityError as exc:
+            except (EvidenceIntegrityError, LedgerIntegrityError) as exc:
                 broken[transaction_id] = str(exc)
         return broken
 
@@ -505,10 +730,18 @@ class SqliteTransactionStore:
             events = self._conn.execute(
                 "SELECT COUNT(*) AS n FROM ledger_events"
             ).fetchone()["n"]
+            evidence_nodes = self._conn.execute(
+                "SELECT COUNT(*) AS n FROM evidence_nodes"
+            ).fetchone()["n"]
+            evidence_edges = self._conn.execute(
+                "SELECT COUNT(*) AS n FROM evidence_edges"
+            ).fetchone()["n"]
         return {
             "path": str(self.path),
             "schema_version": SCHEMA_VERSION,
             "transactions": int(transactions),
             "ledger_events": int(events),
+            "evidence_nodes": int(evidence_nodes),
+            "evidence_edges": int(evidence_edges),
             "checked_at": utcnow().isoformat(),
         }

@@ -268,6 +268,7 @@ class TestResolutionJoinsTheOneTransaction:
         node_id = attach_capability_result(
             txn, _live(monkeypatch, RUN_BODY).run_case(case_id=CASE_ID)
         )
+        assert node_id is not None
         payload = txn.graph.get(node_id).payload
         assert payload["artifacts_are_drafts"] is True
         assert payload["requires_human_review"] is True
