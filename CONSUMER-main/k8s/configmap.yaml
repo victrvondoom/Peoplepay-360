@@ -1,0 +1,18 @@
+# Non-secret configuration only. API keys, DB passwords, and the Supabase
+# JWT secret belong in a Secret (see secret.example.yaml), never here --
+# ConfigMaps are not encrypted at rest by default and are visible to anyone
+# who can `kubectl get configmap` in this namespace.
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: proxy-config
+  namespace: proxy
+data:
+  ENVIRONMENT: "production"
+  LLM_PROVIDER: "nvidia"
+  VECTOR_STORE_BACKEND: "qdrant"
+  GRAPH_STORE_BACKEND: "neo4j"
+  QDRANT_URL: "http://qdrant:6333"
+  NEO4J_URI: "bolt://neo4j:7687"
+  REDIS_URL: "redis://redis:6379/0"
+  RATE_LIMIT_PER_MINUTE: "60"

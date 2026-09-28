@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: inflationforge
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.12.8
+      - key: DEPLOYMENT_ENVIRONMENT
+        value: render-production
+      - key: PRICE_SYNC_MIN_INTERVAL_S
+        value: 900
+      - key: INFLATIONFORGE_OTEL_EXPORTER
+        value: local
+      - key: OTEL_SERVICE_NAME
+        value: inflationforge
+      - key: SIGNOZ_UI_URL
+        value: http://localhost:8080/logs-explorer
+      - key: BRIGHT_DATA_API_TOKEN
+        sync: false
+      - key: BRIGHT_DATA_ZONE
+        value: serp_api1
+      - key: PORT_CLIENT_ID
+        sync: false
+      - key: PORT_CLIENT_SECRET
+        sync: false
+      - key: PORT_API_TOKEN
+        sync: false
+      - key: PORT_API_URL
+        value: https://api.port.io/v1
+      # Set this only when the self-hosted collector has a public TLS endpoint.
+      - key: OTEL_EXPORTER_OTLP_ENDPOINT
+        sync: false

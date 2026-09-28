@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d0c">
+  <title>InflationForge — City by city. Item by item.</title>
+  <meta name="description" content="Track real item-level price changes across American cities, powered by live web data and archived evidence.">
+  <meta property="og:title" content="InflationForge — City by city. Item by item.">
+  <meta property="og:description" content="Compare real everyday prices across 16 American cities and see what changed since last year.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://inflationforge.onrender.com">
+  <meta property="og:image" content="https://inflationforge.onrender.com/social-preview.png">
+  <meta property="og:image:width" content="1983">
+  <meta property="og:image:height" content="793">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="InflationForge — City by city. Item by item.">
+  <meta name="twitter:description" content="A real map-first inflation tracker and software factory for price intelligence.">
+  <meta name="twitter:image" content="https://inflationforge.onrender.com/social-preview.png">
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/leaflet.css">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="InflationForge home">
+      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <strong>INFLATION<span>FORGE</span></strong>
+    </a>
+    <div class="year-context">
+      <span id="header-previous-year">—</span><i></i><b>YEAR OVER YEAR</b><i></i><span id="header-current-year">—</span>
+    </div>
+    <div class="top-actions">
+      <a href="https://app.port.io" target="_blank" rel="noreferrer">PORT ↗</a>
+      <a id="signoz-link" href="https://signoz.io" target="_blank" rel="noreferrer">SIGNOZ ↗</a>
+      <button id="open-factory">MANAGE ITEMS <span>＋</span></button>
+      <span class="live-state"><i></i> REAL DATA</span>
+    </div>
+  </header>
+
+  <main class="tracker-shell">
+    <aside class="item-rail">
+      <div class="rail-heading">
+        <span class="eyebrow">TRACKED BASKET</span>
+        <h1>What<br>costs more?</h1>
+        <p>Start with the whole basket, then open any everyday item to see its city story.</p>
+      </div>
+      <div class="basket-summary">
+        <span><b id="active-item-count">—</b> ITEMS</span>
+        <span><b id="city-count">—</b> CITIES</span>
+        <span><b id="observation-count">—</b> READS</span>
+      </div>
+      <nav id="item-list" class="item-list" aria-label="Tracked price items"></nav>
+      <button id="rail-add-item" class="add-item"><span>＋</span><b>ADD AN ITEM TO THE MAP</b></button>
+      <div class="rail-proof">
+        <span class="eyebrow">SOURCE PIPELINE</span>
+        <b id="provider-mode">WAITING FOR LIVE SYNC</b>
+        <small>Current web observation + same-season archive capture</small>
+      </div>
+    </aside>
+
+    <section class="map-stage" aria-label="Item inflation map">
+      <div id="map"></div>
+      <div class="map-vignette" aria-hidden="true"></div>
+
+      <div class="map-title">
+        <span id="map-eyebrow" class="eyebrow">DERIVED CITY BASKET · NOT OFFICIAL CPI</span>
+        <div class="map-item-heading"><span id="map-item-icon" aria-hidden="true">🧺</span><h2 id="map-item-name">LOADING PRICES</h2></div>
+        <p><span id="map-item-unit">—</span> · <b id="map-median">—</b> <span id="map-median-label">median annual change</span></p>
+      </div>
+
+      <button id="sync-prices" class="sync-button" aria-label="Sync live prices">
+        <i>↻</i><span><small>REFRESH EVIDENCE</small><b>SYNC LIVE PRICES</b></span>
+      </button>
+
+      <div class="map-legend">
+        <span><i class="expensive"></i><b id="legend-high">HIGHEST INFLATION</b></span>
+        <span><i class="mid"></i><b id="legend-mid">MID RANGE</b></span>
+        <span><i class="affordable"></i><b id="legend-low">LOWEST INFLATION</b></span>
+      </div>
+
+      <div class="map-status">
+        <div><span class="eyebrow">LAST VERIFIED</span><b id="last-sync">NOT YET SYNCED</b></div>
+        <div><span class="eyebrow">CURRENT SOURCE</span><b id="current-source">LIVE PUBLIC WEB</b></div>
+        <div><span class="eyebrow">HISTORY</span><b>INTERNET ARCHIVE</b></div>
+        <div><span class="eyebrow">TRACE</span><b id="trace-id">NO TRACE</b></div>
+      </div>
+    </section>
+
+    <aside class="city-inspector">
+      <div class="city-head">
+        <div><span class="eyebrow">SELECTED CITY</span><h2 id="city-name">—</h2></div>
+        <button id="reset-map" title="Show every city" aria-label="Show every city">⌗</button>
+      </div>
+
+      <section class="price-hero">
+        <span id="inspector-item-icon" class="inspector-item-icon" aria-hidden="true">🧺</span>
+        <span id="current-year-label">THIS YEAR</span>
+        <strong id="current-price">—</strong>
+        <small id="selected-unit">—</small>
+        <div id="change-badge" class="change-badge" data-direction="FLAT">—</div>
+        <div class="price-tier"><i></i><b id="price-tier-label">CITY PRICE POSITION</b></div>
+      </section>
+
+      <section class="year-compare">
+        <div><span id="previous-year-label">LAST YEAR</span><b id="previous-price">—</b></div>
+        <i>→</i>
+        <div><span id="change-label">CHANGE</span><b id="dollar-change">—</b></div>
+      </section>
+
+      <section class="city-ranking">
+        <div class="section-head"><span>CITY COMPARISON</span><b id="ranking-context">HIGHEST PRICE FIRST</b></div>
+        <div id="ranking-list" class="ranking-list"></div>
+      </section>
+
+      <section class="source-proof">
+        <div class="section-head"><span>PRICE RECEIPTS</span><b id="receipt-count">2 OBSERVATIONS</b></div>
+        <a id="current-receipt" href="#" target="_blank" rel="noreferrer"><i></i><span><small id="receipt-current-year">CURRENT</small><b id="receipt-current-title">LIVE CITY PRICE TABLE</b></span><em>↗</em></a>
+        <a id="archive-receipt" href="#" target="_blank" rel="noreferrer"><i></i><span><small id="receipt-previous-year">PRIOR</small><b id="receipt-previous-title">ARCHIVED CITY PRICE TABLE</b></span><em>↗</em></a>
+        <p id="raw-source-note">Select a city marker to inspect its exact source rows and unit conversion.</p>
+      </section>
+    </aside>
+  </main>
+
+  <aside id="factory-drawer" class="factory-drawer" aria-hidden="true">
+    <div class="drawer-scrim" data-close-factory></div>
+    <div class="drawer-panel">
+      <header class="drawer-head">
+        <div><span class="eyebrow">CAPABILITY FACTORY</span><h2>TRACK ANOTHER<br>EVERYDAY PRICE.</h2></div>
+        <button data-close-factory aria-label="Close item factory">×</button>
+      </header>
+      <p class="drawer-intro">Choose a row discovered from the live city source. InflationForge validates the binding, versions the item, and adds it to every city on the next sync—no code change.</p>
+      <div class="factory-counts">
+        <span><b id="factory-active">—</b> ACTIVE</span>
+        <span><b id="factory-retired">—</b> RETIRED</span>
+        <span><b id="factory-source-count">—</b> DISCOVERED</span>
+      </div>
+      <form id="item-form" class="item-form">
+        <div class="form-heading"><span>01</span><b>DEFINE ITEM CAPABILITY</b><small>LIVE SOURCE BINDING REQUIRED</small></div>
+        <label>LIVE SOURCE ROW
+          <select name="source_label" id="source-label-select" required></select>
+        </label>
+        <div class="form-grid">
+          <label>DISPLAY NAME<input name="name" minlength="2" maxlength="80" placeholder="e.g. Apples" required></label>
+          <label>CATEGORY<select name="category"><option>GROCERIES</option><option>HOUSING</option><option>TRANSPORT</option><option>DINING</option><option>UTILITIES</option><option>OTHER</option></select></label>
+          <label>CANONICAL UNIT<input name="unit" placeholder="e.g. 1 lb" required></label>
+          <label>CONVERSION ×<input name="conversion_multiplier" type="number" min="0.0001" max="100" step="0.0001" value="1" required></label>
+        </div>
+        <input type="hidden" name="owner" value="inflation-research">
+        <button id="create-item" type="submit"><span>＋</span><b>VALIDATE + START TRACKING</b><i>→</i></button>
+      </form>
+      <section class="item-inventory">
+        <div class="section-head"><span>ITEM INVENTORY</span><b>SOFT RETIRE · HISTORY PRESERVED</b></div>
+        <div id="factory-item-list"></div>
+      </section>
+      <footer class="drawer-foot">
+        <span><i></i> <b id="factory-port-mode">PORT</b></span>
+        <span><i></i> VERSIONED MANIFESTS</span>
+        <span><i></i> SIGNOZ TRACES</span>
+      </footer>
+    </div>
+  </aside>
+
+  <div id="loading-layer" class="loading-layer" hidden>
+    <div class="loading-signal"><i></i><i></i><i></i></div>
+    <span id="loading-title">READING THE REAL WORLD</span>
+    <p id="loading-detail">Current city pages → archived pages → normalized comparisons</p>
+  </div>
+  <div id="toast" class="toast" role="status"></div>
+
+  <script src="/static/leaflet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>

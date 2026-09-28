@@ -1,0 +1,9 @@
+{
+  "identifier": "inflationforge_item_coverage",
+  "title": "Inflation Item Coverage",
+  "levels": [{"title": "Retired", "color": "red"}, {"title": "Tracked", "color": "green"}],
+  "rules": [{
+    "identifier": "active_item", "title": "Item is actively collected", "level": "Tracked",
+    "query": {"combinator": "and", "conditions": [{"property": "status", "operator": "=", "value": "ACTIVE"}]}
+  }]
+}

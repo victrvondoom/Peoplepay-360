@@ -1,0 +1,17 @@
+node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.env
+.env.local
+dist/
+build/
+.next/
+*.db
+*.sqlite3
+uploads/
+.DS_Store

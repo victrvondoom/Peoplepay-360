@@ -1,0 +1,484 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: >
+  Beacon - AI-powered log triage for AWS using Cordon and Amazon Nova
+
+Parameters:
+
+  # --- Required ---
+
+  LogGroupPatterns:
+    Type: CommaDelimitedList
+    Description: >
+      Log group names or prefix patterns (comma-separated).
+      Use trailing * for prefix matching: /aws/lambda/* watches all Lambda functions.
+      Exact names work too: /my-app/api-server
+
+  NotificationEmail:
+    Type: String
+    Description: Email address for SNS alert notifications
+
+  # --- Container ---
+
+  ImageUri:
+    Type: String
+    Description: ECR container image URI for the Beacon Lambda function
+
+  # --- Triggers (enable any combination) ---
+
+  EnableSchedule:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Enable periodic scheduled scans of all configured log groups
+
+  ScheduleExpression:
+    Type: String
+    Default: "rate(1 hour)"
+    Description: EventBridge schedule expression (when EnableSchedule is true)
+
+  EnableAlarmTrigger:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Trigger analysis when specific CloudWatch Alarms enter ALARM state
+
+  AlarmNamePrefix:
+    Type: String
+    Default: ""
+    Description: >
+      Only react to alarms whose name starts with this prefix.
+      Leave empty to match all alarms (not recommended).
+
+  EnableSubscription:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Attach a CloudWatch Logs subscription filter for real-time triggering
+
+  SubscriptionLogGroup:
+    Type: String
+    Default: ""
+    Description: Log group for the subscription filter (defaults to first in LogGroupPatterns)
+
+  SubscriptionFilterPattern:
+    Type: String
+    Default: "?ERROR ?FATAL ?CRITICAL"
+    Description: CloudWatch Logs filter pattern for the subscription filter
+
+  # --- Analysis ---
+
+  LookbackMinutes:
+    Type: Number
+    Default: 30
+    MinValue: 1
+    MaxValue: 1440
+    Description: Minutes of logs to pull when triggered
+
+  TokenBudget:
+    Type: Number
+    Default: 0
+    Description: Max input tokens for analysis (0 = use model context window)
+
+  CordonWindowSize:
+    Type: Number
+    Default: 4
+    MinValue: 2
+    MaxValue: 50
+
+  CordonKNeighbors:
+    Type: Number
+    Default: 5
+    MinValue: 1
+    MaxValue: 50
+
+  BedrockRegion:
+    Type: String
+    Default: us-east-1
+
+  # --- Lambda tuning ---
+
+  LambdaMemoryMB:
+    Type: Number
+    Default: 1024
+    MinValue: 512
+    MaxValue: 10240
+
+  LambdaTimeoutSeconds:
+    Type: Number
+    Default: 300
+    MinValue: 60
+    MaxValue: 900
+
+  LambdaArchitecture:
+    Type: String
+    Default: x86_64
+    AllowedValues: [x86_64, arm64]
+    Description: Must match the host that built the container image (make deploy detects it)
+
+  # --- Incidents / remediation (tables live in the remediation stack) ---
+
+  IncidentsEnabled:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Store incidents in DynamoDB (beacon-incidents-<stack>) without needing Connect
+
+  ApplyEnabled:
+    Type: String
+    Default: "true"
+    AllowedValues: ["true", "false"]
+    Description: Kill switch for the Sleep Contract auto-remediation path in this function
+
+  DashboardUrl:
+    Type: String
+    Default: ""
+    Description: Console URL included in notifications (set after make deploy-console)
+
+  RemediableEcsServices:
+    Type: String
+    Default: ""
+    Description: >
+      cluster/service pairs (comma-separated) Beacon may force-redeploy. Diagnostics
+      report their health with exact ids; ecs.force_redeploy is refused for any other service.
+
+  # --- Voice (set by voice stack, not by user) ---
+
+  ConnectEnabled:
+    Type: String
+    Default: "false"
+    AllowedValues: ["true", "false"]
+    Description: Set to true when the voice stack is deployed
+
+  OncallPhone:
+    Type: String
+    Default: ""
+    Description: On-call engineer phone number (E.164 format)
+
+  WebhookUrl:
+    Type: String
+    Default: ""
+    NoEcho: true
+    Description: Slack-compatible incoming webhook; every page/resolve/escalation/undo/morning report is posted there with a deep link (blank = off)
+
+  PagerDutyRoutingKey:
+    Type: String
+    Default: ""
+    NoEcho: true
+    Description: PagerDuty Events v2 routing key; pages open an incident keyed by the Beacon incident id and resolutions close it (blank = off)
+
+Conditions:
+  ScheduleEnabled: !Equals [!Ref EnableSchedule, "true"]
+  AlarmEnabled: !Equals [!Ref EnableAlarmTrigger, "true"]
+  AlarmPrefixProvided: !Not [!Equals [!Ref AlarmNamePrefix, ""]]
+  IncidentsOn: !Equals [!Ref IncidentsEnabled, "true"]
+  SubscriptionEnabled: !Equals [!Ref EnableSubscription, "true"]
+  SubscriptionLogGroupProvided: !Not [!Equals [!Ref SubscriptionLogGroup, ""]]
+
+Resources:
+
+  # --- SNS ---
+
+  BeaconSNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      TopicName: !Sub "beacon-alerts-${AWS::StackName}"
+
+  BeaconEmailSubscription:
+    Type: AWS::SNS::Subscription
+    Properties:
+      TopicArn: !Ref BeaconSNSTopic
+      Protocol: email
+      Endpoint: !Ref NotificationEmail
+
+  # --- IAM ---
+
+  BeaconFunctionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: lambda.amazonaws.com
+            Action: sts:AssumeRole
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole
+      Policies:
+        - PolicyName: BeaconCloudWatchLogsRead
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - logs:DescribeLogGroups
+                  - logs:FilterLogEvents
+                  - logs:GetLogEvents
+                  - logs:DescribeLogStreams
+                Resource: !Sub "arn:aws:logs:${AWS::Region}:${AWS::AccountId}:log-group:*"
+        - PolicyName: BeaconBedrockInvoke
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - bedrock:InvokeModel
+                Resource:
+                  - "arn:aws:bedrock:*::foundation-model/amazon.nova-*"
+                  - !Sub "arn:aws:bedrock:*:${AWS::AccountId}:inference-profile/*amazon.nova-*"
+        - PolicyName: BeaconSNSPublish
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - sns:Publish
+                Resource: !Ref BeaconSNSTopic
+        - PolicyName: BeaconVoicePermissions
+          PolicyDocument:
+            Version: "2012-10-17"
+            Statement:
+              - Effect: Allow
+                Action:
+                  - dynamodb:PutItem
+                  - dynamodb:UpdateItem
+                  - dynamodb:GetItem
+                  - dynamodb:Query
+                  - dynamodb:Scan
+                Resource:
+                  - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/beacon-incidents-*"
+                  - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/beacon-approvals-*"
+                  - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/beacon-contracts-*"
+                  - !Sub "arn:aws:dynamodb:${AWS::Region}:${AWS::AccountId}:table/beacon-changes-*"
+              - Effect: Allow
+                Action: states:StartExecution
+                Resource: !Sub "arn:aws:states:${AWS::Region}:${AWS::AccountId}:stateMachine:beacon-remediate-${AWS::StackName}"
+              - Effect: Allow
+                Action: cloudtrail:LookupEvents
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - xray:PutTraceSegments
+                  - xray:PutTelemetryRecords
+                Resource: "*"
+              - Effect: Allow
+                Action:
+                  - connect:StartOutboundVoiceContact
+                Resource: !Sub "arn:aws:connect:${AWS::Region}:${AWS::AccountId}:instance/*/contact/*"
+              - Effect: Allow
+                Action:
+                  - ssm:GetParameter
+                Resource: !Sub "arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/beacon/*"
+              - Effect: Allow
+                Action:
+                  - ec2:Describe*
+                  - ecs:Describe*
+                  - ecs:List*
+                  - rds:Describe*
+                  - rds:List*
+                  - lambda:Get*
+                  - lambda:List*
+                  - cloudwatch:Get*
+                  - cloudwatch:List*
+                  - cloudwatch:Describe*
+                  - elasticloadbalancing:Describe*
+                  - autoscaling:Describe*
+                  - cloudformation:Describe*
+                  - cloudformation:Get*
+                  - cloudformation:List*
+                  - tag:GetResources
+                  - tag:GetTagKeys
+                Resource: "*"
+
+  # --- Lambda ---
+
+  BeaconLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub "/beacon/${AWS::StackName}/triage"
+      RetentionInDays: 14
+
+  BeaconFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      FunctionName: !Sub "beacon-${AWS::StackName}"
+      PackageType: Image
+      Architectures:
+        - !Ref LambdaArchitecture
+      Code:
+        ImageUri: !Ref ImageUri
+      Role: !GetAtt BeaconFunctionRole.Arn
+      MemorySize: !Ref LambdaMemoryMB
+      Timeout: !Ref LambdaTimeoutSeconds
+      LoggingConfig:
+        LogFormat: JSON
+        LogGroup: !Ref BeaconLogGroup
+      Environment:
+        Variables:
+          LOG_GROUP_PATTERNS: !Join [",", !Ref LogGroupPatterns]
+          SNS_TOPIC_ARN: !Ref BeaconSNSTopic
+          LOOKBACK_MINUTES: !Ref LookbackMinutes
+          BEDROCK_REGION: !Ref BedrockRegion
+          CORDON_WINDOW_SIZE: !Ref CordonWindowSize
+          CORDON_K_NEIGHBORS: !Ref CordonKNeighbors
+          TOKEN_BUDGET: !Ref TokenBudget
+          CONNECT_ENABLED: !Ref ConnectEnabled
+          ONCALL_PHONE: !Ref OncallPhone
+          INCIDENTS_TABLE_NAME: !Sub "beacon-incidents-${AWS::StackName}"
+          INCIDENTS_ENABLED: !Ref IncidentsEnabled
+          APPLY_ENABLED: !Ref ApplyEnabled
+          DASHBOARD_URL: !Ref DashboardUrl
+          WEBHOOK_URL: !Ref WebhookUrl
+          PAGERDUTY_ROUTING_KEY: !Ref PagerDutyRoutingKey
+          APPROVALS_TABLE_NAME: !Sub "beacon-approvals-${AWS::StackName}"
+          CONTRACTS_TABLE_NAME: !Sub "beacon-contracts-${AWS::StackName}"
+          CHANGES_TABLE_NAME: !Sub "beacon-changes-${AWS::StackName}"
+          STATE_MACHINE_ARN: !Sub "arn:aws:states:${AWS::Region}:${AWS::AccountId}:stateMachine:beacon-remediate-${AWS::StackName}"
+          GOLDEN_SG_PARAM: !Sub "/beacon/${AWS::StackName}/golden-sg"
+          REMEDIABLE_ECS_SERVICES: !Ref RemediableEcsServices
+          CONNECT_CONFIG_PARAM: !Sub "/beacon/${AWS::StackName}/connect-config"
+          LITELLM_LOCAL_MODEL_COST_MAP: "True"
+
+  # --- Paging: a broken triage function must not fail silently at 3 AM ---
+
+  BeaconErrorsAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub "beacon-${AWS::StackName}-triage-errors"
+      AlarmDescription: Beacon triage Lambda raised; check the /beacon log group
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions:
+        - Name: FunctionName
+          Value: !Ref BeaconFunction
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 1
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+      AlarmActions:
+        - !Ref BeaconSNSTopic
+
+  # --- Schedule Trigger ---
+
+  BeaconScheduleRule:
+    Type: AWS::Events::Rule
+    Condition: ScheduleEnabled
+    Properties:
+      ScheduleExpression: !Ref ScheduleExpression
+      State: ENABLED
+      Targets:
+        - Arn: !GetAtt BeaconFunction.Arn
+          Id: BeaconScheduleTarget
+
+  BeaconSchedulePermission:
+    Type: AWS::Lambda::Permission
+    Condition: ScheduleEnabled
+    Properties:
+      FunctionName: !Ref BeaconFunction
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt BeaconScheduleRule.Arn
+
+  # --- Morning report: 07:00 IST (01:30 UTC), the night just ended, via SNS ---
+
+  BeaconMorningReportRule:
+    Type: AWS::Events::Rule
+    Condition: IncidentsOn
+    Properties:
+      Description: Beacon morning report for last night
+      ScheduleExpression: cron(30 1 * * ? *)
+      State: ENABLED
+      Targets:
+        - Arn: !GetAtt BeaconFunction.Arn
+          Id: BeaconMorningReport
+          Input: '{"mode": "morning_report"}'
+
+  BeaconMorningReportPermission:
+    Type: AWS::Lambda::Permission
+    Condition: IncidentsOn
+    Properties:
+      FunctionName: !Ref BeaconFunction
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt BeaconMorningReportRule.Arn
+
+  # --- Alarm Trigger ---
+
+  BeaconAlarmRule:
+    Type: AWS::Events::Rule
+    Condition: AlarmEnabled
+    Properties:
+      EventPattern: !If
+        - AlarmPrefixProvided
+        - source:
+            - aws.cloudwatch
+          detail-type:
+            - "CloudWatch Alarm State Change"
+          detail:
+            alarmName:
+              - prefix: !Ref AlarmNamePrefix
+            state:
+              value:
+                - ALARM
+        - source:
+            - aws.cloudwatch
+          detail-type:
+            - "CloudWatch Alarm State Change"
+          detail:
+            state:
+              value:
+                - ALARM
+      State: ENABLED
+      Targets:
+        - Arn: !GetAtt BeaconFunction.Arn
+          Id: BeaconAlarmTarget
+
+  BeaconAlarmPermission:
+    Type: AWS::Lambda::Permission
+    Condition: AlarmEnabled
+    Properties:
+      FunctionName: !Ref BeaconFunction
+      Action: lambda:InvokeFunction
+      Principal: events.amazonaws.com
+      SourceArn: !GetAtt BeaconAlarmRule.Arn
+
+  # --- Subscription Filter Trigger ---
+
+  BeaconSubscriptionPermission:
+    Type: AWS::Lambda::Permission
+    Condition: SubscriptionEnabled
+    Properties:
+      FunctionName: !Ref BeaconFunction
+      Action: lambda:InvokeFunction
+      Principal: !Sub "logs.${AWS::Region}.amazonaws.com"
+
+  BeaconSubscriptionFilter:
+    Type: AWS::Logs::SubscriptionFilter
+    Condition: SubscriptionEnabled
+    DependsOn: BeaconSubscriptionPermission
+    Properties:
+      LogGroupName: !If
+        - SubscriptionLogGroupProvided
+        - !Ref SubscriptionLogGroup
+        - !Select [0, !Ref LogGroupPatterns]
+      FilterPattern: !Ref SubscriptionFilterPattern
+      DestinationArn: !GetAtt BeaconFunction.Arn
+
+Outputs:
+  BeaconFunctionArn:
+    Description: Beacon Lambda function ARN
+    Value: !GetAtt BeaconFunction.Arn
+
+  BeaconSNSTopicArn:
+    Description: SNS topic ARN for Beacon alerts
+    Value: !Ref BeaconSNSTopic
+
+  ActiveTriggers:
+    Description: Which trigger modes are enabled
+    Value: !Sub
+      - "schedule=${Schedule}, alarm=${Alarm}, subscription=${Subscription}"
+      - Schedule: !Ref EnableSchedule
+        Alarm: !Ref EnableAlarmTrigger
+        Subscription: !Ref EnableSubscription

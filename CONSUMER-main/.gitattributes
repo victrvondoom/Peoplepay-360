@@ -1,0 +1,5 @@
+
+# Force LF regardless of platform -- a shell script checked out with CRLF
+# (e.g. from a Windows core.autocrlf setting) breaks its own shebang line
+# when run inside a Linux container, which is exactly where this runs.
+*.sh text eol=lf

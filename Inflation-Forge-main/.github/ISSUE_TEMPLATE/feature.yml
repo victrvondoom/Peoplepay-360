@@ -1,0 +1,26 @@
+name: Factory capability
+description: Propose a city, item, source adapter, or governed factory capability.
+title: "[Capability]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Real-world need
+      description: What changing price surface should InflationForge monitor?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Candidate evidence source
+      description: Link the current and historical source surfaces if known.
+    validations:
+      required: true
+  - type: textarea
+    id: contract
+    attributes:
+      label: Unit and normalization contract
+      description: What canonical unit should the factory produce?
+    validations:
+      required: true

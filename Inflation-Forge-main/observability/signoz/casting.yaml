@@ -1,0 +1,22 @@
+apiVersion: v1alpha1
+kind: Installation
+metadata:
+  name: routepulse-signoz
+spec:
+  deployment:
+    flavor: compose
+    mode: docker
+  signoz:
+    spec:
+      env:
+        SIGNOZ_TOKENIZER_JWT_SECRET: ${SIGNOZ_TOKENIZER_JWT_SECRET}
+        SIGNOZ_USER_ROOT_ENABLED: "true"
+        SIGNOZ_USER_ROOT_EMAIL: ${SIGNOZ_ROOT_EMAIL}
+        SIGNOZ_USER_ROOT_PASSWORD: ${SIGNOZ_ROOT_PASSWORD}
+        SIGNOZ_USER_ROOT_ORG_NAME: ${SIGNOZ_ROOT_ORG_NAME}
+  ingester:
+    spec:
+      config:
+        data:
+          opamp.yaml: |
+            server_endpoint: ws://routepulse-signoz-signoz-0:4320/v1/opamp

@@ -1,0 +1,25 @@
+.env
+.env.*
+!.env.example
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+node_modules/
+dist/
+build/
+coverage/
+.next/
+*.tsbuildinfo
+.DS_Store
+*.log
+backend/.venv/
+.venv/
+# Vector/graph store JSONL data files are tracked via git-lfs (see
+# .gitattributes) so a deployed instance actually ships with real data
+# instead of an empty vector store -- only the runtime lock files (created
+# by JsonlVectorStore's cross-process file lock) are excluded.
+**/datasets/vector_embeddings/*.jsonl.lock
+.claude/
+k8s/secret.yaml

@@ -1,0 +1,27 @@
+from fastapi import APIRouter
+from app.api.routes import agents, appeals, auth, case_ai, case_workflow_aliases, cases, domains, graph, intelligence, knowledge, reports, search, timeline, upload, ws, banking, airlines, telecom, ecommerce, government, housing, healthcare
+
+api_router = APIRouter()
+api_router.include_router(auth.router, prefix="/auth", tags=["auth"])
+api_router.include_router(domains.router, prefix="/domains", tags=["domains"])
+api_router.include_router(cases.router, prefix="/cases", tags=["cases"])
+api_router.include_router(case_ai.router, prefix="/case", tags=["case ai"])
+api_router.include_router(case_workflow_aliases.router, tags=["case workflow"])
+api_router.include_router(upload.router, prefix="/upload", tags=["upload"])
+api_router.include_router(search.router, prefix="/search", tags=["search"])
+api_router.include_router(graph.router, prefix="/graph", tags=["knowledge graph"])
+api_router.include_router(intelligence.router, prefix="/intelligence", tags=["enterprise intelligence"])
+api_router.include_router(knowledge.router, prefix="/knowledge", tags=["knowledge ingestion"])
+api_router.include_router(banking.router, prefix="/banking", tags=["banking"])
+api_router.include_router(airlines.router, prefix="/airlines", tags=["airlines"])
+api_router.include_router(telecom.router, prefix="/telecom", tags=["telecom"])
+api_router.include_router(ecommerce.router, prefix="/ecommerce", tags=["ecommerce"])
+api_router.include_router(government.router, prefix="/government", tags=["government"])
+api_router.include_router(housing.router, prefix="/housing", tags=["housing"])
+api_router.include_router(healthcare.router, prefix="/healthcare", tags=["healthcare"])
+api_router.include_router(agents.router, prefix="/agents", tags=["agents"])
+api_router.include_router(appeals.router, prefix="/appeals", tags=["appeals"])
+api_router.include_router(reports.router, prefix="/reports", tags=["reports"])
+api_router.include_router(timeline.router, prefix="/timeline", tags=["timeline"])
+api_router.include_router(ws.router, prefix="/ws", tags=["websockets"])
+

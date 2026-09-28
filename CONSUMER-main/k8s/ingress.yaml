@@ -1,0 +1,29 @@
+# Requires an ingress controller (e.g. ingress-nginx) already installed in
+# the cluster. Replace proxy.example.com with the real domain and point its
+# DNS at the ingress controller's external IP/load balancer before applying.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: proxy-ingress
+  namespace: proxy
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "20m"
+spec:
+  rules:
+    - host: proxy.example.com
+      http:
+        paths:
+          - path: /api
+            pathType: Prefix
+            backend:
+              service:
+                name: proxy-api
+                port:
+                  number: 8000
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: proxy-frontend
+                port:
+                  number: 3000

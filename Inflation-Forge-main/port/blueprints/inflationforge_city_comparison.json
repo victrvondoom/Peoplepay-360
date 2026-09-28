@@ -1,0 +1,22 @@
+{
+  "identifier": "inflationforge_city_comparison",
+  "title": "InflationForge City Price Comparison",
+  "icon": "Map",
+  "schema": {
+    "properties": {
+      "city": {"type": "string", "title": "City"},
+      "state": {"type": "string", "title": "State"},
+      "item_id": {"type": "string", "title": "Item ID"},
+      "previous_price_usd": {"type": "number", "title": "Previous Price USD"},
+      "current_price_usd": {"type": "number", "title": "Current Price USD"},
+      "change_pct": {"type": "number", "title": "YoY Change %"},
+      "direction": {"type": "string", "title": "Direction", "enum": ["UP", "DOWN", "FLAT"]}
+    },
+    "required": ["city", "state", "item_id", "previous_price_usd", "current_price_usd", "change_pct", "direction"]
+  },
+  "mirrorProperties": {}, "calculationProperties": {}, "aggregationProperties": {},
+  "relations": {
+    "snapshot": {"title": "Price Snapshot", "target": "inflationforge_price_snapshot", "required": true, "many": false},
+    "item": {"title": "Tracked Item", "target": "inflationforge_item", "required": true, "many": false}
+  }
+}

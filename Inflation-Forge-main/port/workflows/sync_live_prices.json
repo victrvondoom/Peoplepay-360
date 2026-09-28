@@ -1,0 +1,45 @@
+{
+  "title": "Sync live inflation prices",
+  "icon": "Refresh",
+  "description": "Collect current and prior-year prices across all InflationForge cities, generate a versioned snapshot, and publish tracked items and city comparisons to Port.",
+  "category": "InflationForge",
+  "allowAnyoneToViewRuns": false,
+  "connections": [
+    {"sourceIdentifier": "trigger", "targetIdentifier": "sync_prices"}
+  ],
+  "nodes": [
+    {
+      "identifier": "trigger",
+      "title": "Run InflationForge sync",
+      "config": {
+        "type": "SELF_SERVE_TRIGGER",
+        "userInputs": {"properties": {}, "required": [], "order": []},
+        "published": true,
+        "permissions": {"roles": ["Member"]}
+      },
+      "variables": {},
+      "links": [],
+      "verbose": false
+    },
+    {
+      "identifier": "sync_prices",
+      "title": "Queue live price collection",
+      "icon": "Refresh",
+      "description": "Queues a real InflationForge collection and returns immediately with a durable job identifier.",
+      "config": {
+        "type": "WEBHOOK",
+        "url": "{{ .secrets[\"INFLATIONFORGE_URL\"] }}/api/prices/sync-async?force=true",
+        "agent": false,
+        "synchronized": true,
+        "method": "POST",
+        "headers": {"Accept": "application/json", "Content-Type": "application/json"},
+        "body": {},
+        "onTimeout": "fail",
+        "onFailure": "terminate"
+      },
+      "variables": {},
+      "links": ["https://inflationforge.onrender.com"],
+      "verbose": true
+    }
+  ]
+}
