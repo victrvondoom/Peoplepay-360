@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(1.51 MB)",
+  "parent_title": "TRAI Internet and Broadband",
+  "category": "broadband_regulations",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Consultation%20Paper%20AGR%20Internet%20services%20final%202812.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/internet-broadband",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-09/Consultation%20Paper%20AGR%20Internet%20services%20final%202812.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/trai/trai_internet_broadband_04_download_1_51_mb.pdf",
+  "sha256": "9ebc9b792989344d063847c4c07526b4f28130f3b9ff876eee978c3b856bb3c1",
+  "bytes": 1585913,
+  "fetched_at": "2026-07-06T13:58:29.896839+00:00"
+}

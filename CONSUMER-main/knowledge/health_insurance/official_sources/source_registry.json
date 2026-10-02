@@ -1,0 +1,104 @@
+{
+  "domain": "health_insurance",
+  "policy": {
+    "only_official_sources": true,
+    "allowed_domains": [
+      "irdai.gov.in",
+      "policyholder.gov.in",
+      "who.int",
+      "medlineplus.gov"
+    ],
+    "notes": "Insurer policy wordings, claim forms, and network hospital lists must be added only from official insurer websites. Do not ingest blogs, aggregators, or random PDFs."
+  },
+  "sources": [
+    {
+      "id": "irdai_document_library",
+      "priority": 5,
+      "category": "regulations_circulars",
+      "title": "IRDAI Document Library",
+      "url": "https://irdai.gov.in/document-detail",
+      "authority": "IRDAI",
+      "purpose": "Insurance rules, circulars, regulations, and official document discovery"
+    },
+    {
+      "id": "irdai_health_department",
+      "priority": 5,
+      "category": "health_guidelines",
+      "title": "IRDAI Health Department FAQs and Guidelines",
+      "url": "https://irdai.gov.in/health-dept",
+      "authority": "IRDAI",
+      "purpose": "Health insurance definitions, waiting periods, claims timelines, portability, moratorium, and policyholder rules"
+    },
+    {
+      "id": "irdai_health_master_circular_2024",
+      "priority": 5,
+      "category": "health_regulation",
+      "title": "Master Circular on IRDAI Insurance Products Regulations 2024 - Health Insurance",
+      "url": "https://irdai.gov.in/document-detail?documentId=4942918",
+      "authority": "IRDAI",
+      "purpose": "Authoritative health insurance product and claim rule reference"
+    },
+    {
+      "id": "irdai_consolidated_regulations",
+      "priority": 5,
+      "category": "regulations",
+      "title": "IRDAI Consolidated and Gazette Notified Regulations",
+      "url": "https://irdai.gov.in/consolidated-gazette-notified-regulations",
+      "authority": "IRDAI",
+      "purpose": "Regulatory backing for insurance product and policyholder arguments"
+    },
+    {
+      "id": "irdai_circulars",
+      "priority": 5,
+      "category": "circulars",
+      "title": "IRDAI Circulars",
+      "url": "https://irdai.gov.in/circulars",
+      "authority": "IRDAI",
+      "purpose": "Latest official circular discovery for health insurance and claims"
+    },
+    {
+      "id": "policyholder_portal",
+      "priority": 5,
+      "category": "consumer_rights",
+      "title": "IRDAI Policyholder Portal",
+      "url": "https://policyholder.gov.in/",
+      "authority": "IRDAI Policyholder Portal",
+      "purpose": "Consumer rights, insurance complaints, FAQs, and grievance process"
+    },
+    {
+      "id": "who_health_topics",
+      "priority": 4,
+      "category": "medical_knowledge",
+      "title": "WHO Health Topics",
+      "url": "https://www.who.int/health-topics",
+      "authority": "World Health Organization",
+      "purpose": "High-level disease and treatment background for medical understanding"
+    },
+    {
+      "id": "medlineplus_health_topics",
+      "priority": 4,
+      "category": "medical_knowledge",
+      "title": "MedlinePlus Health Topics",
+      "url": "https://medlineplus.gov/healthtopics.html",
+      "authority": "U.S. National Library of Medicine",
+      "purpose": "Patient-friendly disease, treatment, and procedure explanations"
+    }
+  ],
+  "insurer_source_requirements": [
+    {
+      "category": "policy_wording_pdfs",
+      "purpose": "Coverage, exclusions, waiting periods, sub-limits, claims conditions",
+      "rule": "Use only product pages or PDF downloads hosted on official insurer domains."
+    },
+    {
+      "category": "claim_forms",
+      "purpose": "Claim submission workflow and required documents",
+      "rule": "Use only claim/download pages hosted on official insurer domains."
+    },
+    {
+      "category": "network_hospital_lists",
+      "purpose": "Cashless hospital eligibility and TPA/network evidence",
+      "rule": "Use only network-hospital pages hosted on official insurer domains."
+    }
+  ]
+}

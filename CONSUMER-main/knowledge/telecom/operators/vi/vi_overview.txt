@@ -1,0 +1,1586 @@
+Vodafone Idea - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Indian telecommunications company
+This article is about the current Indian mobile telecommunications company supported by
+Vodafone
+. For the predecessor company, see
+Vodafone India
+and
+Idea Cellular
+.
+Vodafone Idea Limited
+Trade name
+Vi
+Type
+Public
+Traded as
+BSE
+:
+532822
+NSE
+:
+IDEA
+ISIN
+INE669E01016
+Industry
+Telecommunications
+Predecessor
+Vodafone India
+Idea Cellular
+Founded
+31
+August 2018
+;
+7 years ago
+(
+2018-08-31
+)
+Headquarters
+Gandhinagar
+,
+India
+Area served
+India
+Key people
+Ravinder Takkar
+(
+Chairman
+)
+Abhijit Kishore
+(
+CEO
+)
+Kumar Mangalam Birla
+(
+Non-executive director
+)
+[
+1
+]
+[
+2
+]
+Products
+Mobile telephony
+Wireless broadband
+Internet
+Revenue
+₹
+45,414 crore
+(US$4.8
+billion)
+[
+3
+]
+(2026)
+Operating income
+₹
+19,003 crore
+(US$2.0
+billion)
+[
+3
+]
+(2026)
+Net income
+₹
+34,552 crore
+(US$3.6
+billion)
+[
+3
+]
+(2026)
+Total assets
+₹
+191,638 crore
+(US$20
+billion)
+[
+4
+]
+(2026)
+Total equity
+{{increase}}
+₹
+35,758 crore
+(US$3.7
+billion)
+[
+4
+]
+(2026)
+Owners
+Government of India
+(48.99%)
+[
+5
+]
+Vodafone Group
+(16.07%)
+Aditya Birla Group
+(9.50%)
+Public float
+(25.44%)
+Members
+192.80 million
+(March 2026)
+[
+6
+]
+Number of employees
+9,670 (2025)
+[
+7
+]
+Website
+vodafoneidea
+.com
+Vodafone Idea
+(
+d/b/a
+Vi
+, pronounced
+/
+ˈ
+v
+iː
+/
+ⓘ
+and stylized as
+V!
+) is an Indian
+telecommunications
+company headquartered in
+Gandhinagar
+.
+[
+8
+]
+[
+9
+]
+[
+10
+]
+It is an all-India integrated
+GSM
+operator
+offering
+mobile telephony
+services.
+As of 2026, Vi has a subscriber base of 192.80 million,
+[
+11
+]
+making it
+third largest mobile telecommunications network in India
+and
+12th largest mobile telecommunications network in the world
+.
+[
+12
+]
+Vodafone Idea was created on 31 August 2018 by the
+merger
+of
+Vodafone India
+and
+Idea Cellular
+.
+[
+13
+]
+On 20 September 2020, the two separate brands Vodafone India and Idea Cellular
+rebranded
+as Vodafone Idea (Vi).
+[
+14
+]
+[
+15
+]
+[
+16
+]
+History
+[
+edit
+]
+In March 2017, it was announced that
+Vodafone India
+and
+Idea Cellular
+would
+merge
+.
+The merger got approval from the
+Department of Telecommunications
+in July 2018. On 30 August 2018,
+National Company Law Tribunal
+gave the final nod to the Vodafone-Idea merger.
+[
+17
+]
+It was completed on 31 August 2018, and the new entity was named Vodafone Idea.
+[
+18
+]
+[
+19
+]
+[
+12
+]
+Under the terms of the deal, the
+Vodafone
+held a 45.2% stake in the combined entity, the
+Aditya Birla Group
+held 26% and the remaining
+shares
+were to be held by the public.
+[
+12
+]
+Vodafone Idea lost a significant number of gross and active subscribers in the month of August 2020.
+[
+20
+]
+Until 7 September 2020, Vodafone Idea operated two separate brands:
+[
+21
+]
+Vodafone India and Idea Cellular who both operated
+pre-paid
+and
+post-paid
+GSM
+service.
+[
+22
+]
+[
+23
+]
+On 3 February 2023, the
+Government of India
+ordered the
+company
+to convert its
+interest
+dues worth 161.33 billion
+Indian Rupees
+($1.96 billion) to
+equity
+at the rate of 10 rupees per share face value (well over then market value ~8.5), thus making the government the single biggest
+shareholder
+in the company.
+[
+24
+]
+In March 2025, the Government of India further raised its stake to 48.99% by acquiring additional shares worth ₹36,950 crore ($4.5 billion).
+[
+25
+]
+Network
+[
+edit
+]
+Spectrum frequency holding summary
+[
+edit
+]
+Vodafone Idea owns spectrum in 900
+MHz, 1800
+MHz, 2100
+MHz, 2300
+MHz, 2500
+MHz, 3500
+MHz and 26
+GHz bands across the
+country
+.
+[
+26
+]
+Telecom circle
+coverage
+E-GSM
+/
+LTE-FDD
+900
+MHz
+Band 8
+GSM
+/ LTE-FDD
+1800
+MHz
+Band 3
+UMTS
+/
+LTE-FDD
+2100
+MHz
+Band 1
+LTE-FDD
+2300
+MHz
+Band 40
+TD-LTE
+2500
+MHz
+Band 41
+NR-TDD
+3500
+MHz
+Band n78
+NR-TDD
+26
+GHz
+Band n258
+Delhi
+Mumbai
+Kolkata
+Andhra Pradesh
+&
+Telangana
+Gujarat
+Karnataka
+Maharashtra
+&
+Goa
+Tamil Nadu
+Haryana
+Kerala
+Madhya Pradesh
+&
+Chhattisgarh
+Punjab
+Rajasthan
+Uttar Pradesh (East)
+Uttar Pradesh (West)
+West Bengal
+Assam
+Bihar
+&
+Jharkhand
+Himachal Pradesh
+Jammu and Kashmir
+&
+Ladakh
+North East
+Odisha
+This table contains Vodafone Idea radio frequency details because they had integrated their networks with each other and using one anchor network for both brands in all respective telecom circles. For example, Idea has started 4G services in
+Delhi
+and
+Kolkata
+telecom circle from May 2018 where the Vodafone is anchor network vice versa Vodafone has Started 4G services in
+Madhya Pradesh
+&
+Chhattisgarh
+,
+Bihar
+&
+Jharkhand
+,
+Andhra Pradesh
+&
+Telangana
+,
+Himachal Pradesh
+and
+Jammu and Kashmir
+telecom Circle's where Idea is Anchor network.
+[
+27
+]
+[
+28
+]
+In March 2025, Vodafone Idea (Vi) launched its 5G services in Mumbai.
+[
+29
+]
+Network consolidation
+[
+edit
+]
+By March 2019, Vodafone Idea announced its network consolidation across major circles, easing network issues faced by consumers and also enhancing its 4G coverage. Announcements of Network Consolidation were made as below:
+Enhanced Unified (2G, 3G, and 4G) coverage details
+State
+No of Towns Covered
+No of Villages Covered
+Coverage area
+%/km
+Haryana
+[
+30
+]
+145
+6520
+99.5%
+ROWB
+[
+31
+]
+878
+37585
+97%
+Madhya Pradesh & Chhattisgarh
+[
+32
+]
+664
+53130
+60%
+Jammu and Kashmir
+[
+33
+]
+110
+3301
+AP & Telangana
+[
+34
+]
+391
+19700
+92.5%
+Bihar & Jharkhand
+[
+35
+]
+431
+43503
+79%
+HP
+[
+36
+]
+59
+11929
+NESA & Assam
+[
+37
+]
+439
+17850
+41%
+Enhanced (4G) coverage details
+State
+No of Towns Covered
+No of districts Covered
+No of Villages Covered
+Population
+%
+Haryana
+[
+30
+]
+137
+22
+76.08%
+ROWB
+[
+31
+]
+838
+27
+78%
+Madhya Pradesh & Chhattisgarh
+[
+32
+]
+633
+77
+52%
+Jammu and Kashmir
+[
+33
+]
+48
+9
+526
+23.6%
+AP & Telangana
+[
+34
+]
+381
+23
+8500
+67%
+Bihar & Jharkhand
+[
+35
+]
+343
+56
+19931
+45.3%
+HP
+[
+36
+]
+45
+8
+6082
+43%
+NESA & Assam
+[
+37
+]
+340
+83
+4200
+70%
+Punjab
+[
+38
+]
+227
+24
+10162
+90%
+Over The Top (OTT)
+[
+edit
+]
+Vi Movies & TV
+formerly known as (
+Vodafone Play and Idea Movies & TV
+) it was launched in 2016 it is currently available for Vi subscribers on
+Android
+(
+5.1
+and above versions) and
+IOS
+devices (
+10.0
+and above versions).
+[
+39
+]
+See also
+[
+edit
+]
+Wikimedia Commons has media related to
+Vodafone Idea
+.
+American Tower
+Belvedere Towers metro station
+List of mobile network operators
+You Broadband
+Portals
+:
+Companies
+India
+Telecommunications
+References
+[
+edit
+]
+↑
+Livemint (3 August 2022).
+"Vodafone Idea names Ravinder Takkar as Chairman, Himanshu Kapania to step down"
+.
+mint
+. Retrieved
+12 September
+2022
+.
+↑
+"Kumar Mangalam Birla back as non-executive director of Vodafone Idea, 2 years after his exit"
+.
+moneycontrol.com
+. 20 April 2023
+. Retrieved
+20 April
+2023
+.
+1
+2
+3
+"Vodafone Idea Limited Consolidated Profit & Loss account, Vodafone Idea Limited Financial Statement & Accounts"
+(PDF)
+.
+www.bseindia.com
+. Retrieved
+16 May
+2024
+.
+1
+2
+"Vodafone Idea Limited Consolidated Balance Sheet, Vodafone Idea Limited Financial Statement & Accounts"
+(PDF)
+.
+www.bseindia.com
+. Retrieved
+16 May
+2024
+.
+↑
+Thakur 16, Tanay Singh.
+"Vodafone Idea: Who Owns How Much Stake in the Company Now"
+.
+{{
+cite web
+}}
+:  CS1 maint: numeric names: authors list (
+link
+)
+↑
+"Telecom Subscription Reports"
+.
+TELECOM REGULATORY AUTHORITY OF INDIA
+.
+↑
+"Annual Reports
+|
+Vi (Vodafone Idea Limited)"
+.
+MYVI
+.
+↑
+"Overview | Vodafone Idea Limited"
+.
+www.vodafoneidea.com
+. Retrieved
+24 July
+2019
+.
+↑
+"India's Idea Cellular Will Use Nokia's Cloud Core"
+.
+SDxCentral
+. Retrieved
+4 September
+2018
+.
+↑
+"Vodafone Mini Stores in Mumbai Will Now Facilitate Tata Power Bill Payments via M-Pesa e-wallet - MySmartPrice News"
+.
+MySmartPrice
+. 8 August 2018. Archived from
+the original
+on 4 September 2018
+. Retrieved
+4 September
+2018
+.
+↑
+"Q4-Report-FY 2023 By Vodafone Idea Limited"
+. 6 August 2020.
+1
+2
+3
+"Disclosure under Regulation 30 of SEBI (LODR) Regulations, 2015"
+(PDF)
+.
+BSE
+. Retrieved
+31 August
+2018
+.
+[
+permanent dead link
+]
+↑
+"VIL Press Release - 31st August.pdf"
+(PDF)
+.
+www.vodafoneidea.com
+. Retrieved
+24 July
+2019
+.
+↑
+"Vodafone Idea re-brands itself 'Vi'
+"
+.
+The Indian Express
+. 7 September 2020
+. Retrieved
+7 September
+2020
+.
+↑
+"New brand Press Release_Media .pdf"
+(PDF)
+.
+www.vodafoneidea.com
+. Retrieved
+3 October
+2020
+.
+↑
+"Vodafone Idea rebrands itself, to go by brand name Vi"
+.
+Zee News
+. 7 September 2020
+. Retrieved
+7 September
+2020
+.
+↑
+Parbat, Kalyan; Sengupta, Devina (31 August 2018).
+"NCLT gives go-ahead to Idea-Vodafone merger"
+.
+The Economic Times
+. Retrieved
+1 September
+2018
+.
+↑
+Guha, Romit (20 March 2017).
+"Idea approves merger with Vodafone India, to create India's largest telco"
+.
+The Economic Times
+. Retrieved
+20 March
+2017
+.
+↑
+Kurup, Rajesh (20 March 2017).
+"Idea Cellular board approves merger with Vodafone India; shares tank 9%"
+.
+The Hindu Business Line
+. Retrieved
+20 March
+2017
+.
+↑
+"Bharti Airtel, Reliance Jio Add Subscribers In August, Vi Lags"
+.
+BloombergQuint
+. 12 November 2020. Archived from
+the original
+on 13 November 2020
+. Retrieved
+17 November
+2020
+.
+↑
+Staff Writer (7 September 2020).
+"Vodafone and Idea are now 'Vi'
+"
+.
+Livemint
+. Retrieved
+7 September
+2020
+.
+↑
+"Vodafone idea postpaid services consolidated"
+.
+The Economics time Telecom
+. Retrieved
+22 July
+2020
+.
+↑
+"Vodafone idea will drop idea brand from postpaid service's"
+.
+The Economics time
+. Retrieved
+7 February
+2020
+.
+↑
+"India asks Vodafone Idea to convert nearly $2 bln in govt dues into equity"
+.
+Reuters
+. 3 February 2023
+. Retrieved
+26 March
+2023
+.
+↑
+"Govt to raise stake in Vodafone Idea to 49% with fresh acquisitions worth Rs 37,000 crore"
+.
+The Indian Express
+. Retrieved
+2 April
+2025
+.
+↑
+Pan India Telecom Spectrum holding chart 2022 (updated)
+, Only Tech, 25 March 2020
+, retrieved
+7 October
+2022
+↑
+Idea Cellular 4G Services Now Live in Delhi With Vodafone Network
+, Telecom Talk
+, retrieved
+15 July
+2018
+↑
+Idea to launch VoLTE in March, inks 4G ICR agreement with Vodafone
+, ET Telecom
+, retrieved
+15 July
+2018
+↑
+"Vodafone Idea (Vi) 5G Service Goes Live in Mumbai: Check Plans"
+.
+Gadgets 360
+. 18 March 2025
+. Retrieved
+18 March
+2025
+.
+1
+2
+www.ETTelecom.com.
+"Vodafone Idea completes radio network consolidation in Haryana - ET Telecom"
+.
+ETTelecom.com
+. Retrieved
+13 June
+2019
+.
+1
+2
+www.ETTelecom.com.
+"Vodafone Idea completes radio network consolidation in rest of West Bengal - ET Telecom"
+.
+ETTelecom.com
+. Retrieved
+13 June
+2019
+.
+1
+2
+"Vodafone Idea Successfully Completes Radio Network Consolidation In Madhya Pradesh And Chhattisgarh"
+.
+Communications Today
+. 8 March 2019
+. Retrieved
+13 June
+2019
+.
+1
+2
+"Vodafone Idea completes network integration in J&K"
+.
+The Economic Times
+. 2 March 2019
+. Retrieved
+13 June
+2019
+.
+1
+2
+"Vodafone Idea completes radio network consolidation in AP & Telangana"
+.
+@businessline
+. 19 February 2019
+. Retrieved
+13 June
+2019
+.
+1
+2
+Dua, Priyanka (24 February 2019).
+"Vodafone Idea radio network integration in Bihar, Jharkhand"
+.
+Gizbot
+. Retrieved
+13 June
+2019
+.
+1
+2
+www.ETTelecom.com.
+"Vodafone Idea completes radio network consolidation in Punjab - ET Telecom"
+.
+ETTelecom.com
+. Retrieved
+13 June
+2019
+.
+1
+2
+www.ETTelecom.com.
+"Vodafone Idea completes radio network consolidation in NESA & Assam - ET Telecom"
+.
+ETTelecom.com
+. Retrieved
+4 February
+2019
+.
+↑
+"Radio Network Consolidation In Punjab"
+(PDF)
+.
+Vodafoneidea.com
+. Retrieved
+28 May
+2019
+.
+↑
+"Vi Movies & TV: Watch Live TV, TV Shows & Movies Online"
+.
+External links
+[
+edit
+]
+Official website
+Links to related articles
+v
+t
+e
+Aditya Birla Group
+Companies
+Grasim Industries
+Hindalco Industries
+Novelis
+Aleris
+UltraTech Cement
+Vodafone Idea
+Applause Entertainment
+Aditya Birla Fashion and Retail
+Tarun Tahiliani
+Sabyasachi
+Previous companies
+Idea Cellular
+Minacs
+More (retail)
+Foreign subsidiaries
+Aleris
+Novelis
+Domsjö Fabriker
+School and institutes
+Aditya Birla Public School, Renukoot
+Aditya Birla Public School, Renusagar
+Birla Institute of Technology and Science, Pilani
+Notable people
+Kumar Mangalam Birla
+Baldeo Das Birla
+G. D. Birla
+Krishna Kumar Birla
+Madhav Prasad Birla
+Rameshwar Das Birla
+Shobhana Bhartia
+Aditya Vikram Birla
+Others
+Birla Mandir
+v
+t
+e
+Vodafone
+Subsidiaries
+and divisions
+Albania
+Czech Republic
+Egypt
+Germany
+Ghana
+Greece
+Ireland
+Jordan
+Northern Cyprus
+Portugal
+Romania
+Turkey
+United Kingdom
+Vodafone Global Enterprise
+Vodafone Deutschland
+Vodafone Automotive
+Vodafone Towers
+(
+INWIT
+)
+Shareholdings
+Australia
+(50%)
+India
+(45.2%)
+Safaricom
+(40%)
+Kenya
+Ethiopia
+Netherlands
+(50%)
+Vodafone Netherlands
+Ziggo
+Ziggo Sport
+Ziggo Sport Totaal
+Ziggo TV
+Vodacom
+(65%)
+South Africa
+DR Congo
+Lesotho
+Mozambique
+Nigeria
+Tanzania
+VodafoneThree
+(51%)
+Partners
+Austria
+Azerbaijan
+Belgium
+Bosnia and Herzegovina
+Bulgaria
+Canada
+Chile
+Croatia
+Denmark
+Dominican Republic
+Estonia
+Fiji
+Finland
+France
+French Polynesia
+Georgia
+Ghana
+Hungary
+Iceland
+Italy
+Kiribati
+Luxembourg
+Montenegro
+North Macedonia
+New Zealand
+Oman
+Papua New Guinea
+Peru
+Qatar
+Samoa
+Ser
+bia
+Slovenia
+Spain
+Switzerland
+Taiwan
+Ukraine
+United States
+Vanuatu
+Products and services
+M-Pesa
+Betavine
+Corporate
+directors
+Gerard Kleisterlee
+(Chairman)
+Vittorio Colao
+(CEO)
+Andy Halford
+(CFO)
+Steve Pusey
+(CTO)
+Michel Combes
+(CEO Europe Region)
+John Buchanan
+Alan Jebson
+Samuel Jonah
+Nick Land
+Anne Lauvergeon
+Simon Murray
+Nick Read
+Luc Vandevelde
+Tony Watson
+Philip Yea
+Sponsorships
+Beşiktaş J.K.
+(2014–2020)
+England cricket team
+(1996–2010)
+Kaizer Chiefs
+(Vodacom)
+(2012–)
+Loftus Versfeld Stadium
+(Vodacom)
+(2005–)
+Orlando Pirates
+(Vodacom)
+(2012–)
+Manchester United F.C.
+(2000–2006)
+Shelby Can-Am
+(Vodacom)
+(2000–2005)
+South African Football Association
+(Vodacom)
+(2012–)
+South Africa national soccer team
+South Africa women's national soccer team
+South Africa national rugby union team
+(Vodacom)
+(1994–2017)
+Team Vodafone
+(2007–12)
+Vodacom Blue Bulls
+(Vodacom)
+(1998–)
+Vodacom Challenge
+(Vodacom)
+(1999–2011)
+Vodacom Championship
+(Vodacom)
+(2001–2010)
+Vodacom Cup
+(Vodacom)
+(1998–2015)
+Vodacom League
+(Vodacom)
+(1998–2012)
+Vodacom Players Championship
+(Vodacom)
+(1998–2002)
+Vodacom Soccer Spectacular
+(Vodacom Lesotho)
+(2008–2011)
+Vodacom Tower
+(Vodacom)
+(2009–)
+Vodafone McLaren Mercedes
+(2007–13)
+Vodafone Ghana Music Awards
+(2000–)
+Vodafone Park
+(2013–2023)
+Vodafone Ski Resort
+(2005–)
+Vodafone Warriors
+(1999–)
+Other
+AirTouch
+Arcor
+Cable & Wireless Worldwide
+Cheeka
+ihug
+Mannesmann
+Verizon
+Vodafone live!
+ZooZoo
+v
+t
+e
+Members of the Asia Mobility Initiative
+Celcom
+DTAC
+M1
+Sun Cellular
+Telstra
+Vodafone Idea
+XLSmart
+v
+t
+e
+Telecommunication companies of India
+Mobile
+operators
+Active
+Airtel
+GoI
+DoT
+BSNL
+BSNL Mobile
+MTNL
+Vodafone Idea
+Jio
+MVNOs
+Aerovoyce
+Defunct
+Aircel
+Essar
+Etisalat (Cheers Mobile)
+!dea
+Loop
+MTS
+Orange
+RCom
+S Tel
+spice
+Tata DoCoMo
+T24
+Virgin
+Telenor
+Tulip Telecom
+Videocon
+Vodafone
+Internet
+providers
+ACT Fibernet
+Airtel
+APSFL
+Asianet Digital
+BSNL
+BSNL Broadband
+MTNL
+InCablenet
+Jio
+DEN Networks
+Hathway
+Railtel
+Reliance
+Sify
+SPECTRA
+Tata Teleservices
+Tikona
+Excitel Broadband
+DTH operators
+ABS Free Dish
+Airtel digital TV
+Digiana
+DD Free Dish
+Dish TV
+d2h
+Zing Digital
+Grand TV
+Hathway
+Independent TV
+Siti Networks
+Sun Direct
+Tata Play
+Infrastructure providers
+GAILTEL
+POWERTEL
+Bharti Infratel
+Indus Towers
+HughesNet
+American Tower
+Datacenter providers
+National Informatics Centre
+ESDS
+GPX
+Netmagic
+NxtGen
+Nxtra Data
+Yotta
+Tata Communications
+Global Cloud Xchange
+Internet exchanges
+Mumbai IX
+National Internet Exchange of India
+AMR IX
+Extreme IX
+AMS-IX
+Equipment manufacturers
+HFCL
+Sterlite Technologies
+Vindhya Telelinks
+Tejas Networks
+Indian Telephone Industries Limited
+REIT India
+Policies
+Digital India
+Bharat Broadband Network
+Agencies
+Department of Telecommunications
+Ministry of Electronics and Information Technology
+Ministry of Communications (India)
+Centre for Development of Advanced Computing
+Telecom Regulatory Authority of India
+Telecom Disputes Settlement and Appellate Tribunal
+Associations
+Cellular Operators Association of India
+Related links
+Internet in India
+Telecommunications in India
+Net neutrality in India
+v
+t
+e
+Major
+telecommunications companies
+Companies with an annual revenue of over US$10 billion
+América Móvil
+Telmex
+AT&T
+Axiata
+Bell Canada
+Bharti Airtel
+Bridge Alliance
+BT Group
+China Mobile
+CMHK
+China Telecommunications Corporation
+China Telecom
+China Unicom
+Chunghwa Telecom
+CK Hutchison Holdings
+Three
+Hutchison Asia Telecom
+Comcast
+Deutsche Telekom
+T-Mobile
+Digicel
+GoI
+Vodafone Idea
+DoT
+BSNL
+MTNL
+Globe
+Jio
+KDDI
+KPN
+KT Corporation
+Liberty Global
+Liberty LA
+Liberty PR
+FLOW
+Lumen Technologies
+MTN
+MTS
+NTT
+NTT DoCoMo
+Oi
+Ooredoo
+Orange
+PCCW
+PLDT
+Rogers
+Singtel
+SK Telecom
+SoftBank Mobile
+Spark
+Swisscom
+Tata Teleservices
+Telefónica
+Movistar
+O2
+Vivo
+Telenor
+Telkom Indonesia
+Telstra
+Telus
+TIM
+TPG Telecom
+Trilogy International Partners
+True
+Türk Telekom
+VEON
+Verizon
+Viettel
+Vodafone
+Vodacom
+v
+t
+e
+NIFTY 200 companies
+NIFTY
+200
+NIFTY
+100
+NIFTY
+50
+Adani Enterprises
+Adani Ports
+Apollo Hospitals
+Asian Paints
+Axis Bank
+Bajaj Auto
+Bajaj Finance
+Bajaj Finserv
+BEL
+Bharti Airtel
+Cipla
+Coal India
+Dr. Reddy's Labs
+Eicher
+Eternal
+Grasim
+HCLTech
+HDFC Bank
+HDFC Life
+Hindalco
+HUL
+ICICI Bank
+IndiGo
+Infosys
+ITC
+Jio Financial
+JSW Steel
+Kotak Mahindra
+L&T
+M&M
+Maruti Suzuki
+Max Healthcare
+NTPC
+Nestlé
+ONGC
+Power Grid
+Reliance
+SBI Life
+SBI
+Shriram Finance
+Sun Pharma
+Tata Consultancy Services
+Tata Consumer Products
+Tata Motors
+Tata Steel
+Tech Mahindra
+Titan
+Trent
+UltraTech Cement
+Wipro
+NIFTY
+Next 50
+Adani Energy Solutions
+Adani Green Energy
+Adani Power
+Ambuja Cements
+Bank of Baroda
+Bharat Petroleum
+Britannia
+Canara Bank
+CG Power
+Cholamandalam
+Divi's Labs
+DLF
+DMart
+GAIL
+Godrej Consumer Products
+HAL
+Havells
+Hindustan Zinc
+Hyundai
+ICICI Lombard
+Indian Hotels
+Indian Oil
+Info Edge
+IRFC
+Jindal Steel
+JSW Energy
+LIC
+Lodha
+LTIMindtree
+Mazagon Dock Shipbuilders
+Pidilite
+Power Finance
+PNB
+REC
+Samvardhana Motherson
+Shree Cement
+Tata Power
+Torrent Pharma
+TVS Motors
+United Spirits
+Varun Beverages
+Vedanta
+Zydus Lifesciences
+360 One WAM
+ACC
+Alkem Labs
+Ashok Leyland
+Astral
+AU SFB
+Aurobindo Pharma
+Bank of India
+Bharat Dynamics
+Bharat Forge
+BHEL
+Biocon
+Blue Star
+BSE
+Cochin Shipyard
+Coforge
+Container Corp
+Coromandel
+Dabur
+Dixon
+Exide
+Federal Bank
+Fortis Healthcare
+Glenmark
+GMR Airports
+Godfrey Phillips
+Godrej Properties
+Hero MotoCorp
+Hindustan Petroleum
+HUDCO
+IDFC First Bank
+Indian Bank
+Indraprastha Gas
+Indus Towers
+IndusInd Bank
+IRB Infrastructure
+IRCTC
+IREDA
+ITC Hotels
+Jubilant FoodWorks
+Kalyan Jewellers
+KPIT
+LIC Housing Finance
+Lupin
+M&M Finance
+Mankind Pharma
+Marico
+Max Financial Services
+Motilal Oswal
+Mphasis
+MRF
+Muthoot Finance
+NALCO
+NHPC
+NMDC
+Nykaa
+Oil India
+Oracle FSS
+Page Industries
+Patanjali Foods
+Paytm
+Persistent Systems
+Policybazaar
+Polycab
+Prestige Estates
+RVNL
+SAIL
+SBI Card
+SRF
+Supreme Industries
+Suzlon
+Swiggy
+Tata Communications
+Tata Technologies
+Torrent Power
+Tube Investments
+Union Bank
+UPL
+Vodafone Idea
+Voltas
+Yes Bank
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Vodafone_Idea&oldid=1363134591
+"
+Categories
+:
+Companies based in Mumbai
+Telecommunications companies of India
+Aditya Birla Group
+Mobile phone companies of India
+Private equity portfolio companies
+Providence Equity Partners companies
+Internet service providers of India
+Indian companies established in 2018
+Telecommunications companies established in 2018
+Indian brands
+Companies listed on the National Stock Exchange of India
+Companies listed on the Bombay Stock Exchange
+Vodafone
+Indian subsidiaries of foreign companies
+2018 mergers and acquisitions
+Hidden categories:
+Articles with short description
+Short description matches Wikidata
+Use dmy dates from September 2020
+Use Indian English from September 2020
+All Wikipedia articles written in Indian English
+CS1 maint: numeric names: authors list
+Pages using the Phonos extension
+Pages including recorded pronunciations
+All articles with dead external links
+Articles with dead external links from November 2023
+Articles with permanently dead external links
+Commons category link from Wikidata
+Search
+Search
+Vodafone Idea
+8 languages
+Add topic

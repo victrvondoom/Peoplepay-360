@@ -266,9 +266,7 @@ class TestProductTruthPassport:
             field_name="price_minor",
             value=value,
             source=source,
-            source_type=(
-                SourceType.SANDBOX if sandbox else SourceType.PRIMARY_SOURCE
-            ),
+            source_type=(SourceType.SANDBOX if sandbox else SourceType.PRIMARY_SOURCE),
             evidence_class=evidence_class,
             sandbox=sandbox,
         )
@@ -276,9 +274,7 @@ class TestProductTruthPassport:
             PeoplePayNodeKind.PRICE_OBSERVATION,
             actor="market",
             source=source,
-            source_type=(
-                SourceType.SANDBOX if sandbox else SourceType.PRIMARY_SOURCE
-            ),
+            source_type=(SourceType.SANDBOX if sandbox else SourceType.PRIMARY_SOURCE),
             observations=(observation,),
             sandbox=sandbox,
         )
@@ -536,6 +532,4 @@ class TestConsentAndCommunityPrivacy:
         assert aggregator.aggregate("chair-1")["status"] == "AVAILABLE"
 
         ledger.revoke(receipts[0].consent_id)
-        assert aggregator.aggregate("chair-1")["status"] == (
-            "SUPPRESSED_SMALL_COHORT"
-        )
+        assert aggregator.aggregate("chair-1")["status"] == ("SUPPRESSED_SMALL_COHORT")

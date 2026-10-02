@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(17.79 KB)",
+  "parent_title": "TRAI Complaint Redressal",
+  "category": "complaint_redressal",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/TCCR_Regulations_1stAmendment_12jan12.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/complaint-redressal",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-10/TCCR_Regulations_1stAmendment_12jan12.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/complaints/trai_complaint_redressal_02_download_17_79_kb.pdf",
+  "sha256": "8df92e160d343c62442cd72247a8d27af1e8edd391a19aa79553a49b58871575",
+  "bytes": 18221,
+  "fetched_at": "2026-07-06T13:58:58.485784+00:00"
+}

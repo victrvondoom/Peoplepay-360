@@ -10,3 +10,20 @@ os.environ["DISABLE_EXTERNAL_LLM"] = "true"
 # 1024-dim NVIDIA embeddings) — pinning tests to it too keeps the hash-fallback
 # dimension used in test mode consistent with what's actually indexed.
 os.environ.setdefault("LLM_PROVIDER", "nvidia")
+
+
+import tempfile
+
+import pytest
+
+
+@pytest.fixture(scope="session", autouse=True)
+def isolated_working_directory():
+    """Relative fallback stores must never write into bundled datasets."""
+    with tempfile.TemporaryDirectory(prefix="proxy-tests-") as directory:
+        patches = pytest.MonkeyPatch()
+        patches.chdir(directory)
+        try:
+            yield
+        finally:
+            patches.undo()

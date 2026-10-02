@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "NCDRC",
+  "title": "NCDRC History",
+  "category": "consumer_commission",
+  "source_url": "https://ncdrc.nic.in/history.html",
+  "final_url": "https://ncdrc.nic.in/history.html",
+  "type": "html_text",
+  "raw_chars": 6158,
+  "stored_path": "knowledge/ecommerce/official/ncdrc/ncdrc_history.txt",
+  "sha256": "c622a3bd70dfd72552723c98884bdf71e4302c15fba77a0ae03e43c155fd0515",
+  "bytes": 6186,
+  "fetched_at": "2026-07-07T12:47:11.318911+00:00",
+  "official_source": true
+}

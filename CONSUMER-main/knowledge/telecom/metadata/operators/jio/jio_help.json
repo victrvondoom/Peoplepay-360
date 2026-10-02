@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "Jio",
+  "title": "Jio Help and Support",
+  "category": "complaint_process",
+  "source_url": "https://www.jio.com/help/home",
+  "final_url": "https://www.jio.com/help/home",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 3061,
+  "stored_path": "knowledge/telecom/operators/jio/jio_help.txt",
+  "sha256": "e8ed5f71d2c44e050386a81b3dcdd7fd4a1e162cfe938e5c381c5cb8036cd666",
+  "bytes": 3067,
+  "fetched_at": "2026-07-06T13:59:36.031782+00:00"
+}

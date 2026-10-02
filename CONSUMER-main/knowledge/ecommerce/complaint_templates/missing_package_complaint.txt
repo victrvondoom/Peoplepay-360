@@ -1,0 +1,17 @@
+TO: The Grievance Officer
+[Marketplace Name]
+
+SUBJECT: Non-Delivery Despite Delivery Confirmation — Order ID: [ORDER_ID]
+
+My order (Order ID: [ORDER_ID]) is marked as "Delivered" on [Date], but I
+have NOT received the package. The delivery OTP was not shared with me and
+no delivery was attempted at my address.
+
+Under Section 86 (Product Liability) of the Consumer Protection Act 2019,
+you are liable. I demand:
+
+1. CCTV / GPS proof of delivery attempt.
+2. Re-delivery or full refund within 48 hours.
+3. Courier partner escalation report.
+
+[Customer Name] | [Delivery Address] | [Contact]

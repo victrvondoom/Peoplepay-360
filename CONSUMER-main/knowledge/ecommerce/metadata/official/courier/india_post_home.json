@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "India Post",
+  "title": "India Post Home",
+  "category": "postal_complaints",
+  "source_url": "https://www.indiapost.gov.in/",
+  "final_url": "https://www.indiapost.gov.in/",
+  "type": "html_text",
+  "raw_chars": 5984,
+  "stored_path": "knowledge/ecommerce/official/courier/india_post_home.txt",
+  "sha256": "74a055e302e4b8e3568f5f7a7aba926c1c8e2f7c14a16885c9f7ab4ebff86a2e",
+  "bytes": 6010,
+  "fetched_at": "2026-07-07T12:49:07.383161+00:00",
+  "official_source": true
+}

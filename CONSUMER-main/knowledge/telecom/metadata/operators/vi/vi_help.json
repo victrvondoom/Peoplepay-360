@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "Vi",
+  "title": "Vi Help and Support",
+  "category": "complaint_process",
+  "source_url": "https://www.myvi.in/help-support/faqs",
+  "final_url": "https://www.myvi.in/help-support/faqs",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 2985,
+  "stored_path": "knowledge/telecom/operators/vi/vi_help.txt",
+  "sha256": "cc037ead0770f5c5be8c16f0819300667676bfaf05f73a06e1a810278ec56a49",
+  "bytes": 2988,
+  "fetched_at": "2026-07-06T14:33:17.593610+00:00"
+}

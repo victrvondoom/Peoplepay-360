@@ -1,0 +1,2214 @@
+National Payments Corporation of India - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Umbrella organisation for operating retail payments and settlement systems in India
+National Payments Corporation of India
+Type
+Section 8
+Industry
+Payments
+Founded
+19
+December 2008
+;
+17 years ago
+(
+2008-12-19
+)
+Headquarters
+Mumbai
+,
+Maharashtra
+,
+India
+[
+1
+]
+Key people
+Ajay Kumar Choudhary
+(Non-Exe Chairman)
+[
+2
+]
+Dilip Asbe
+(MD & CEO)
+[
+3
+]
+[
+4
+]
+[
+5
+]
+Products
+Aadhaar Enabled Payment System
+Bharat Connect
+BHIM
+Cheque Truncation System
+Digital Rupee
+Immediate Payment Service
+National Automated Clearing House
+National Common Mobility Card
+National Financial Switch
+NUUP Services
+Query Service on Aadhaar Mapper (*99*99#)
+RuPay
+Unified Payments Interface
+BharatQR
+UPI Lite
+UPI 123
+Website
+npci.org.in
+National Payments Corporation of India
+(
+NPCI
+) is an Indian
+government sector company
+that operates retail payments and settlement systems in India. The organization is an initiative of the
+Reserve Bank of India
+(RBI) and the
+Indian Banks' Association
+(IBA) under the provisions of the Payment and Settlement Systems Act, 2007, for creating a robust
+payment and settlement
+infrastructure in India.
+[
+6
+]
+[
+7
+]
+Organisation
+[
+edit
+]
+Founded in December 2008, the NPCI is a government organisation registered under Section 8 of the
+Companies Act 2013
+, established by the
+Reserve Bank of India
+and the
+Indian Banks' Association
+. The organisation is owned by
+a Government of India,
+[
+8
+]
+and has been promoted by the country's central bank, the
+Reserve Bank of India
+.
+The NPCI was incorporated in December 2008 and the Certificate of Commencement of Business was issued in April 2009. The authorised capital has been pegged at
+₹
+3 billion
+(US$31
+million)
+and paid-up capital is
+₹
+1 billion
+(US$10
+million)
+.
+Initially, there were ten promoter banks viz.
+State Bank of India
+,
+Punjab National Bank
+,
+Canara Bank
+,
+Bank of Baroda
+,
+Union Bank of India
+,
+Bank of India
+,
+ICICI Bank
+,
+HDFC Bank
+,
+Citibank
+and
+HSBC
+. In 2016, the shareholding was diluted to include 13 additional public sector banks, 15 additional private sector banks, 1 additional foreign bank, 10 multi-state co-operative banks and 7 regional rural banks. The Board consists of Biswamohan Mahapatra as the Non Executive Chairman, Nominees from the
+Reserve Bank of India
+and Nominees from ten core promoter banks.
+[
+9
+]
+Dilip Asbe is the current managing director and chief executive officer of the NPCI after
+A. P. Hota
+, who retired from the post on 10 August 2017.
+[
+10
+]
+NPCI International Payments Limited (NIPL)
+[
+edit
+]
+NPCI has created a separate subsidiary to take its product to the global market. The organization is getting offers from nations around
+Asia
+,
+Africa
+and the
+Middle East
+to improve their payment infrastructure. Internationalization of
+RuPay
+and
+Unified Payment Interface
+(UPI) are the primary focus of the NPCI International Payments Limited (NIPL).
+[
+11
+]
+[
+12
+]
+In 2021, Malaysian company
+Merchantrade Asia
+partnered with NIPL to send remittances to India through UPI infrastructure.
+[
+13
+]
+To make it easier for UPI payments to be accepted in France, NPCI International Payments (NIPL) has teamed up with Lyra, a proximity payments and e-commerce firm based in France. Starting with the Eiffel Tower, the strategic partnership guarantees a smooth integration of the UPI payment method.
+[
+14
+]
+NIPL and the
+Central Reserve Bank of Peru
+will collaborate to establish a quick payments infrastructure in the South American nation that is akin to UPI. A key component of this collaboration has been the Reserve Bank of India's backing. Through the agreement, the Central Reserve Bank of Peru is able to set up a fast and effective real-time payments infrastructure for the nation and individuals as well as businesses.
+[
+15
+]
+,.
+NPCI Bharat BillPay Limited (NBBL)
+[
+edit
+]
+As from April 2024, NPCI created a new subsidiary for
+Bharat Bill Payment System
+(BBPS) to increase growth especially in business to consumer segment for small businesses. This is done in view of growing traffic and workload from UPI, IMPS, Aadhaar Enabled Payment System and National Electronic Toll Collections. NBBL is a public company registered in December 2020.
+[
+16
+]
+[
+17
+]
+Services
+[
+edit
+]
+The corporation's current and future service portfolio includes:
+Aadhaar Enabled Payment System (AePS)
+[
+edit
+]
+Main article:
+Aadhaar
+A network of Micro ATMs using
+Aadhaar
+authentication. National Payments Corporation of India (NPCI) announced the transactions of Aadhaar Enabled Payment System (AePS) for the month of July 2019 have crossed the milestone number of 200 million. AePS is a bank-led model which allows basic interoperable banking transactions at PoS (MicroATM) through the Business correspondent of any bank by using Aadhaar authentication.
+[
+18
+]
+AePS had a transaction value of
+₹
+22,350.88
+crore
+and a volume of 8.396 crore in January 2024.
+[
+19
+]
+Bharat Bill Payment System (BBPS)
+[
+edit
+]
+Main article:
+Bharat Bill Payment System
+The Bharat Bill Payment System is a Reserve Bank of India (RBI) conceptualised system driven by the NPCI. It is a one-stop ecosystem for payment of all bills, providing an interoperable and accessible "Anytime Anywhere" bill payment service to all customers across India with certainty, reliability and safety. Bharat BillPay has multiple modes of payment and provides instant confirmation of payment via an SMS or receipt. It offers myriad bill collection categories like electricity, telecom, DTH, gas, water bills etc. through a single window. More categories may be added in the future, to include insurance premium, mutual funds, school fees, institution fees, credit cards, local taxes, invoice payments, etc. An effective mechanism for handling consumer complaints has also been put in place. Bharat BillPay transactions can be initiated through multiple payment channels like Internet,
+Internet Banking
+, Mobile, Mobile-Banking, POS (Point of Sale terminal), Mobile Wallets, MPOS (Mobile Point of Sale terminal), Kiosk, ATM, Bank Branch, Agents and Business Correspondents. Bharat BillPay supports multiple payment modes. This includes Cards (Credit, Debit and Prepaid),
+NEFT
+Internet Banking
+, UPI, Wallets,
+Aadhaar
+based Payments and Cash.
+[
+20
+]
+BharatQR
+[
+edit
+]
+Main article:
+BharatQR
+A common QR code developed by NPCI in collaboration with
+American Express
+,
+Mastercard
+and
+Visa
+for ease of payments and interoperability.
+[
+21
+]
+BHIM
+[
+edit
+]
+Main article:
+BHIM
+BHIM
+is a
+mobile app
+to act as
+Client
+software for the
+Unified Payments Interface
+.
+[
+22
+]
+BHIM Aadhaar Pay
+[
+edit
+]
+Main articles:
+Aadhaar
+and
+BHIM
+BHIM Aadhaar pay is an
+Aadhaar
+based payments interface which allows real time payments to Merchants using Aadhaar number of Customer & authenticating them through their biometrics.
+[
+23
+]
+Cheque Truncation System (CTS)
+[
+edit
+]
+Main article:
+Cheque Truncation System
+CTS is based on a
+cheque truncation
+or online image-based cheque clearing system where cheque images and
+magnetic ink character recognition
+(MICR) data are captured at the collecting bank branch and transmitted electronically.
+[
+24
+]
+Digital Rupee
+[
+edit
+]
+Main article:
+Digital Rupee
+The Digital Rupee (e₹) or eINR or E-Rupee is a tokenised digital version of the Indian Rupee, to be issued by the Reserve Bank of India (RBI) as a central bank digital currency (CBDC). The Digital Rupee was proposed in January 2017 and will be launched in the 2022-23 financial year. The plan is to incorporate distributed ledger into Digital Rupee.
+Like banknotes it will be uniquely identifiable and regulated by Central Bank. Liability lies with RBI. Plans include online and offline accessibility. RBI will launch Digital Rupee for Wholesale (e₹-W) catering to financial institutions for interbank settlements and Digital Rupee for Retail (e₹-R) for consumer and business transactions. CBDC will remove ₹4,984.80 crore security printing cost borne by the general public, businesses, banks, and RBI on physical currency.
+Immediate Payment Service (IMPS)
+[
+edit
+]
+Main article:
+Immediate Payment Service
+Immediate Payment Service
+is a real time inter bank payment system.
+[
+25
+]
+Mobile number & MMID:
+Send money to bank accounts mapped using mobile number.
+Account number & IFSC:
+Send money to bank accounts.
+National Automated Clearing House
+[
+edit
+]
+Main article:
+National Automated Clearing House
+A centralised clearing service that aims at providing interbank high volume, low value transactions that are repetitive and periodic in nature.
+[
+26
+]
+National Common Mobility Card - Rupay Contactless
+[
+edit
+]
+Main article:
+National Common Mobility Card
+Rupay Contactless
+is a
+contactless payment
+technology that allows cardholders to wave their card in front of contactless payment terminals without the need to physically swipe or insert the card into a point-of-sale device.
+[
+27
+]
+National Electronic Toll Collection
+[
+edit
+]
+Main article:
+FASTag
+FASTag
+is a device that employs
+Radio Frequency Identification (RFID)
+technology for making toll payments directly while the vehicle is in motion. FASTag (RFID Tag) is affixed on the windscreen of the vehicle and enables a customer to make the toll payments directly from the account which is linked to FASTag. The latest version 2.0 can also be used to buy fuel. IDFC First Bank has become the first one to get an approval from the RBI.
+[
+28
+]
+The
+Ministry of Road Transport and Highways (MoRTH)
+has declared that all lanes at all toll plazas on national highways across the country will be dedicated Fastag lanes from 1 December 2019.
+[
+29
+]
+National Financial Switch
+[
+edit
+]
+Main article:
+National Financial Switch
+Network of shared
+automated teller machines
+in India.
+[
+30
+]
+RuPay
+[
+edit
+]
+Main article:
+RuPay
+RuPay
+is a domestic
+card scheme
+of India. The card has
+Magnetic stripe
+(for
+Backward compatibility
+) and an
+EMV
+chip. RuPay cards are now accepted at all
+ATMs
+,
+Point-of-Sale terminals
+and most online merchants in the country. More than 300
+cooperative banks
+and
+Regional Rural Banks
+(RRBs) in the country have also issued RuPay ATM cards.
+[
+31
+]
+Unified Payments Interface (UPI)
+[
+edit
+]
+Main article:
+Unified Payments Interface
+Unified Payments Interface
+is a real-time interbank payment system for sending or receiving money. It is integrated with more than 358 banks in India. Consumers can participate in P2P transfer as long as they both have an account in one of the registered banks. To initiate fund transfer, users have to use any UPI supporting Android or iOS app, link their bank accounts and generate BHIM UPI PIN. Funds can be transferred via the following methods:
+Virtual Payment Address (VPA):
+Send or request money from/to bank account mapped using VPA.
+Account number & IFSC:
+Send money to bank account.
+QR code:
+Send money by scanning QR code with enclosed VPA or Account number & IFSC.
+Mobile number:
+Send or request money from/to the bank account mapped using mobile number.
+Aadhaar:
+Send money to the bank account mapped using Aadhaar number.
+Once the fund transfer is initiated, money is debited from payer's bank account and deposited in the recipient's bank account in real-time. This system works 24x7, including weekends and bank holidays.
+[
+32
+]
+Project Nexus
+The
+Bank for International Settlements
+signed an agreement with
+Central Bank of Malaysia
+,
+Bank of Thailand
+,
+Bangko Sentral ng Pilipinas
+,
+Monetary Authority of Singapore
+, and the
+Reserve Bank of India
+on 30 June 2024 as founding member of
+Project Nexus
+, a multilateral international initiative to enable retail cross-border payments.
+Bank Indonesia
+involved as a special observer. The platform, which is expected to go live by 2026, will interlink domestic fast payment systems of the member countries.
+[
+33
+]
+*99# USSD
+[
+edit
+]
+An
+USSD
+channel service for UPI mobile banking launched in November 2012. Only public sector telecom service provider
+Bharat Sanchar Nigam Limited BSNL
+and
+Mahanagar Telephone Nigam Limited MTNL
+are offering this service. It uses quick codes for transactions and doesn't require smartphone and access to internet. The interface is developed by
+National Unified USSD Platform (NUUP)
+to overcome the problem of poor internet connectivity in rural areas with 12 regional languages. This service is being currently offered by 51 banks.
+BHIM
+app also supports USSD features. Understanding the importance of mobile banking in financial inclusion in general and of *99# in particular, various regulatory/trade bodies came together to ensure on boarding of all TSPs on *99# (USSD 1.0). With the wider ecosystem (11 TSPs), *99# was launched by Prime minister
+Narendra Modi
+on 28 August 2014, as part of
+Pradhan Mantri Jan Dhan Yojna
+.
+[
+34
+]
+UPI 123PAY
+[
+edit
+]
+It a 3-step method to initiate and execute UPI services for feature phone users without the use of
+internet connection
+or
+USSD
+channel. It is based on
+Interactive voice response (IVR)
+technology which is good specially for rural and urban areas. It is launched by RBI on 10 March 2022.
+[
+35
+]
+Digital Payments Score
+[
+edit
+]
+A Digital Payments Score (DPS) will be developed by NPCI with the intention of bolstering the nation's credit scoring system and fostering increased productivity and expansion. When determining criteria, DPS may consider things like a person's financial stability, which includes timely payments, regular bill payments, and whether or not the person regularly transacts for high-value commodities and has the income to support them.
+[
+36
+]
+Recent awards and recognition
+[
+edit
+]
+The NPCI was awarded Golden Peacock Innovative Product/Service Award for the year 2018 for
+BHIM UPI
+.
+[
+37
+]
+The NPCI won Policy Change Agent of the Year 2018 by
+Economics Times
+.
+[
+38
+]
+List of MD & CEO of NPCI
+[
+edit
+]
+See also
+[
+edit
+]
+Aadhaar
+– Indian national identification number
+Bharat Bill Payment System
+– Integrated bill payment system in India
+Pages displaying short descriptions of redirect targets
+Bharat Interface for Money
+– Indian mobile payments app
+Pages displaying short descriptions of redirect targets
+Digital India
+– Online infrastructure in India
+Immediate Payment Service
+– Electronic funds transfer system in India
+India Stack
+– Indian digital public infrastructure branding
+Indian passport
+– Passport of the Republic of India issued to Indian citizens
+Indian ration card
+Merchant account
+– Type of business bank account for accepting payments
+Permanent account number
+– Code that acts as an identification for individuals, families and corporates
+RuPay
+– Indian multinational card payment service
+Unified Payments Interface
+– Indian instant payment system
+List of financial supervisory authorities by country
+References
+[
+edit
+]
+↑
+"National Payments Corporation of India"
+. Npci.org.in.
+Archived
+from the original on 5 December 2018
+. Retrieved
+16 March
+2011
+.
+↑
+"Board of Directors"
+.
+NPCI
+.
+Archived
+from the original on 28 April 2021
+. Retrieved
+4 April
+2021
+.
+↑
+"NPCI reappoints Dilip Asbe as MD and CEO for 5 years"
+.
+The Hindu BusinessLine
+. 23 September 2022
+. Retrieved
+26 October
+2025
+.
+↑
+"Management Team"
+.
+NPCI
+.
+Archived
+from the original on 11 January 2022
+. Retrieved
+11 January
+2022
+.
+↑
+"Mobile money transfer fee cut to 10p"
+.
+The Indian Express
+. 15 March 2011.
+Archived
+from the original on 10 April 2011
+. Retrieved
+16 March
+2011
+.
+↑
+"About NPCI - Enabling digital payments in India
+|
+NPCI"
+.
+Archived
+from the original on 29 October 2020
+. Retrieved
+1 November
+2020
+.
+↑
+"About NPCI - Enabling digital payments in India | NPCI"
+.
+www.npci.org.in
+.
+Archived
+from the original on 29 October 2020
+. Retrieved
+1 November
+2020
+.
+↑
+"Watal Report, December 2016"
+(PDF)
+.
+Ministry of Finance
+. Archived from
+the original
+(PDF)
+on 18 May 2017
+. Retrieved
+14 January
+2017
+.
+↑
+"B Sambamurthy appointed as NPCI interim Board chairman"
+. Economic Times. 21 September 2017.
+Archived
+from the original on 20 September 2018
+. Retrieved
+24 October
+2017
+.
+↑
+"NPCI names Dilip Asbe as interim CEO, AP Hota retires"
+.
+Business Standard News
+. 14 August 2017.
+Archived
+from the original on 15 March 2019
+. Retrieved
+9 October
+2017
+.
+↑
+"NPCI launches a new subsidiary to promote its international business"
+.
+Moneycontrol
+.
+Archived
+from the original on 4 February 2022
+. Retrieved
+20 August
+2020
+.
+↑
+Nandi, Shreya (19 August 2020).
+"NPCI launches international unit to expand reach of UPI"
+.
+Livemint
+.
+Archived
+from the original on 30 September 2020
+. Retrieved
+20 August
+2020
+.
+↑
+"Merchantrade Asia, NPCI offer real-time remittances to India"
+.
+The Star
+.
+Archived
+from the original on 4 August 2021
+. Retrieved
+4 August
+2021
+.
+↑
+"Now, Indian tourists can use UPI for their Eiffel Tower visit"
+.
+The Economic Times
+. 3 February 2024
+. Retrieved
+15 December
+2024
+.
+↑
+Shetty, Mayur (5 June 2024).
+"NPCI arm to help bring UPI-like payments to Peru"
+.
+The Times of India
+.
+ISSN
+0971-8257
+. Retrieved
+6 June
+2024
+.
+↑
+Bhasin, Tinesh (1 April 2021).
+"NPCI hives off bill payments platform into a separate subsidiary"
+.
+mint
+.
+Archived
+from the original on 4 February 2022
+. Retrieved
+3 April
+2021
+.
+↑
+Manikandan, Ashwin.
+"NPCI transfers automatic bill payments business to new subsidiary"
+.
+The Economic Times
+.
+Archived
+from the original on 2 April 2021
+. Retrieved
+3 April
+2021
+.
+↑
+"Aadhaar enabled payment system transactions cross 200 million in July 2019, confirms NPCI"
+.
+Zee Business
+. 12 August 2019.
+Archived
+from the original on 26 August 2019
+. Retrieved
+26 August
+2019
+.
+↑
+"UPI transactions touches Rs 18.41 lakh crore in January, shows NPCI data"
+.
+Moneycontrol
+. 2 February 2024
+. Retrieved
+4 February
+2024
+.
+↑
+Bharat Bill Payment System in India's Perspective
+. KPMG. 2018.
+↑
+"BHARAT QR CODE | Ministry of Electronics and Information Technology, Government of India"
+.
+www.meity.gov.in
+.
+Archived
+from the original on 18 March 2020
+. Retrieved
+1 April
+2020
+.
+↑
+"Everything you need to know about NCPI's BHIM app for Android and iOS"
+.
+The Indian Express
+. 11 May 2019.
+Archived
+from the original on 1 January 2020
+. Retrieved
+1 April
+2020
+.
+↑
+www.ETtech.com.
+"Major Indian banks yet to enable Aadhaar payments on BHIM app - ETtech"
+.
+The Economic Times
+. Retrieved
+1 April
+2020
+.
+↑
+"What is Cheque Truncation System? CTS Benefits and Highlights of CTS Check. | Nelito | Blog"
+.
+www.nelito.com
+.
+Archived
+from the original on 11 August 2020
+. Retrieved
+1 April
+2020
+.
+↑
+nitinbhatia121 (20 April 2015).
+"What is IMPS - Immediate Payment Service?"
+.
+nitinbhatia.in
+.
+Archived
+from the original on 9 August 2020
+. Retrieved
+1 April
+2020
+.
+{{
+cite web
+}}
+:  CS1 maint: numeric names: authors list (
+link
+)
+↑
+Jose, Tojo (22 October 2017).
+"What is National Automated Clearing House (NACH)?"
+.
+Indian Economy
+.
+Archived
+from the original on 19 September 2020
+. Retrieved
+1 April
+2020
+.
+↑
+"One Nation One Card: All you need to know about the National Common Mobility Card launched by PM Modi"
+.
+The Financial Express
+. 7 March 2019.
+Archived
+from the original on 21 July 2019
+. Retrieved
+1 April
+2020
+.
+↑
+Das, Mamuni (30 July 2019).
+"Now, use Fastag 2.0 to pay for fuel on highways"
+.
+@businessline
+.
+Archived
+from the original on 21 August 2019
+. Retrieved
+21 August
+2019
+.
+↑
+"Fastags to be mandatory at all toll plazas from December 2019"
+.
+CarWale
+. 22 July 2019.
+Archived
+from the original on 21 August 2019
+. Retrieved
+21 August
+2019
+.
+↑
+"100 banks join National Financial Switch network as direct members"
+.
+The Economic Times
+. 7 December 2016.
+Archived
+from the original on 1 May 2023
+. Retrieved
+1 April
+2020
+.
+↑
+"What is the difference between RuPay Card, VISA Card and MasterCard?"
+.
+Jagranjosh.com
+. 9 July 2018.
+Archived
+from the original on 24 October 2020
+. Retrieved
+1 April
+2020
+.
+↑
+"How UPI Works? Unified Payments Interface Explained"
+.
+Feedough
+. 5 February 2019.
+Archived
+from the original on 23 September 2020
+. Retrieved
+1 April
+2020
+.
+↑
+Kawale, Ajinkya (1 July 2024).
+"RBI, four Asean countries tie up for cross-border payments platform"
+.
+Business Standard
+. Retrieved
+2 July
+2024
+.
+↑
+"NUUP: Dial *99# and make easy payments without using internet by any featured phone through a new USSD based technology"
+.
+The Financial Express
+. 9 December 2016.
+Archived
+from the original on 21 August 2019
+. Retrieved
+21 August
+2019
+.
+↑
+"Feature phones get 'UPI Pay123' tech"
+.
+The Times of India
+. 9 March 2022.
+ISSN
+0971-8257
+. Retrieved
+10 February
+2024
+.
+↑
+Kawale, Ajinkya (7 February 2024).
+"NPCI working on Digital Payments Score to scale up credit economy in India"
+.
+Business Standard
+. Retrieved
+10 February
+2024
+.
+↑
+"NPCI wins Golden Peacock Award for BHIM UPI"
+(PDF)
+.
+Archived
+(PDF)
+from the original on 16 November 2018
+. Retrieved
+16 November
+2018
+.
+↑
+"ET Awards 2018 for Policy Change Agent of the Year: NPCI"
+.
+The Economic Times
+. 7 September 2018.
+Archived
+from the original on 16 November 2018
+. Retrieved
+16 November
+2018
+.
+External links
+[
+edit
+]
+Official site
+v
+t
+e
+Banking in India
+Institutes
+Central bank
+v
+t
+e
+Reserve Bank of India
+Regulation
+Reserve Bank of India Act, 1934
+Monetary Policy Committee
+People
+Governor of the Reserve Bank of India
+Deputy governor of the Reserve Bank of India
+Buildings
+Reserve Bank of India Staff College
+RBI Monetary Museum
+Subsidiaries
+Bharatiya Reserve Bank Note Mudran
+Security Printing and Minting Corporation of India
+Think tanks
+BBB
+BCSBI
+NPCI
+IBA
+IDRBT
+Speciality banks
+IFCI
+All India Financial Institutions
+:
+Exim Bank of India
+NABARD
+NHB
+SIDBI
+Other
+BIFR
+IBBI
+IBPS
+Deposit Insurance (DICGC)
+Public-sector
+banks (PSB)
+Bank of Baroda
+Bank of India
+Bank of Maharashtra
+Canara Bank
+Central Bank of India
+Indian Bank
+Indian Overseas Bank
+Jammu & Kashmir Bank
+Punjab & Sind Bank
+Punjab National Bank
+State Bank of India
+UCO Bank
+Union Bank of India
+State-sector bank:
+Jammu & Kashmir Bank
+Private-sector
+banks
+Bandhan Bank
+CSB
+City Union Bank
+DCB
+Dhanlaxmi Bank
+Federal Bank
+IndusInd Bank
+Karnataka Bank
+Karur Vysya Bank
+Kotak Mahindra Bank
+Nainital Bank
+RBL
+South Indian Bank
+Tamilnad Mercantile Bank
+Yes Bank
+Previous development banks:
+HDFC Bank
+ICICI Bank
+Privatised banks:
+Axis Bank
+IDBI
+IDFC First Bank
+Foreign banks
+Foreign bank branches
+Abu Dhabi Commercial Bank
+ANZ Bank
+Bank of America
+BBK
+Bank of Ceylon
+Barclays
+Credit Suisse
+CTBC Bank
+Hana Bank
+HSBC
+Maybank
+MUFJ
+Rabobank
+Scotiabank
+SMBC
+Standard Chartered
+Wholly owned subsidiary (WOS)
+DBS
+Emirates NBD
+State Bank of Mauritius
+SMBC
+UBS
+Wound / closed / sold (or in process)
+Antwerp Diamond Bank
+Citibank
+Deutsche Bank
+Royal Bank of Scotland
+Small finance
+banks
+Capital
+ESAF
+Equitas
+Jana
+Slice
+Suryoday
+Ujjivan
+Unity
+In-principle approval to become universal bank
+AU
+Fincare
+Payments banks
+Airtel
+India Post
+Fino
+Jio
+NSDL
+Quasi Public Sector Units
+National Securities Depository
+India Post
+Surrendered licencees or wound up
+Aditya Birla
+Vodafone M-Pesa
+Tech Mahindra
+Cooperative
+banks
+Abhyudaya Co-operative Bank
+.
+Buldana Urban Cooperative Credit Society
+Cosmos Co-operative Bank
+Dombivli Nagari Sahakari Bank
+Kerala Bank
+Mizoram Co-operative Apex Bank
+Punjab and Maharashtra Co-operative Bank
+Repco Bank
+Saraswat Bank
+Shamrao Vithal Co-operative Bank
+TNSC Bank
+Thane Janata Sahakari Bank
+Regional rural
+bank
+Assam Gramin Vikash Bank
+Bangiya Gramin Vikash Bank
+Karnataka Gramin Bank
+Mizoram Rural Bank
+Paschim Banga Gramin Bank
+Puduvai Bharathiar Grama Bank
+Tamil Nadu Grama Bank
+Rajasthan Gramin Bank
+Uttar Bihar Gramin Bank
+Uttarakhand Gramin Bank
+Vananchal Gramin Bank
+Andhra
+Andhra Pradesh Grameena Vikas Bank
+Kerala
+Kerala Gramin Bank
+Amalgamated:
+North Malabar Gramin Bank
+South Malabar Gramin Bank
+Uttar Pradesh
+Allahabad UP Gramin Bank
+Gramin Bank of Aryavart
+Sarva UP Gramin Bank
+Defunct banks
+Merged
+PSB
+New Bank of India
+Dena Bank
+Vijaya Bank
+Allahabad Bank
+Andhra Bank
+Corporation Bank
+Oriental Bank of Commerce
+United Bank of India
+Syndicate Bank
+SBI
+Bank of Bombay
+Bank of Calcutta
+Bank of Madras
+Imperial Bank of India
+State Bank of Bikaner & Jaipur
+State Bank of Hyderabad
+State Bank of Indore
+State Bank of Mysore
+State Bank of Patiala
+State Bank of Saurashtra
+State Bank of Travancore
+Bharatiya Mahila Bank
+Krishnaram Baldeo Bank
+Kashinath Seth Bank
+Rescued
+Global Trust Bank
+(OBC)
+Lakshmi Vilas Bank
+(DBS)
+Nedungadi Bank
+(PNB)
+United Western Bank
+(IDBI)
+United Industrial Bank
+(Allahabad Bank)
+Punjab and Maharashtra Co-operative Bank
+(Unity SFB)
+Acquired
+Bank of Madura
+Bank of Rajasthan
+Bengal Central Bank
+Centurion Bank of Punjab
+Chartered Bank of India, Australia and China
+Grindlays Bank
+National Bank of India
+ING Vysya Bank
+Mercantile Bank of India, London and China
+Lord Krishna Bank
+Suvarna Sahakari Bank
+Times Bank
+Vysya Bank
+PSB
+Bharat Overseas Bank
+Pandyan Bank
+Wound up
+Bank of Chettinad
+Dass Bank
+Failed
+Alliance Bank of Simla
+Arbuthnot & Co
+Commercial Bank of India
+Exchange Bank of India & Africa
+(New) Oriental Bank Corporation
+Oudh Commercial Bank
+Madhavpura Mercantile Cooperative Bank
+Liquidated
+Bengal Bank (1784)
+Bank of Bombay (1720)
+Bank of Hindostan
+General Bank of India
+General Bank of Bengal and Bihar
+Nath Bank
+Palai Central Bank
+The Commercial Bank (1819)
+The Calcutta Bank (1824)
+The Union Bank (1828)
+The Government Savings Bank (1833)
+The Bank of Mirzapore (1835)
+Travancore National and Quilon Bank
+Networks
+Interbank networks
+Cirrus
+NFS
+PLUS
+ATM networks
+BANCS
+Cashnet
+CashTree
+MITR
+Cards
+Mastercard
+Debit Mastercard
+Maestro
+RuPay
+Visa
+Visa Debit
+Visa Electron
+Online transfers
+AEPS
+BBPS
+BHIM
+IMPS
+NEFT
+RTGS
+UPI
+Payment service
+providers
+Atom
+BHIM
+BillDesk
+CCAvenue
+Juspay
+Paytm
+Wibmo
+Sarvatra Technologies
+Zeta India
+Digital wallets
+Amazon Pay
+BharatPe
+Freecharge
+Google Pay
+Mobikwik
+Oxigen Services
+Payoneer
+PayU
+PhonePe
+Related topics
+ATM usage fees
+Bank run
+Black money
+Counterfeit money
+De-materialisation (de-mat)
+Demonetisation
+2016
+Low denomination coins
+Foreign exchange (ForEx)
+Lists:
+List of banks
+List of oldest banks in India
+Protocol
+and codes
+Bharat Bill Payment System (BBPS)
+Indian Financial System Code (IFSC)
+National Unified USSD Platform (NUUP)
+Prepaid Payment Instruments
+Structured Financial Messaging System (SFMS)
+Rates &
+ratios
+Rates
+Bank rate
+Mumbai Inter-Bank Bid Rate - MIBID/Mumbai Inter-Bank Offer Rate - MIBOR
+Mumbai Interbank Forward Offer Rate - MIFOR
+Ratios
+Capital Adequacy Ratio - CAR
+Statutory Liquidity Ratio - SLR
+Cash Reserve Ratio - CRR
+Regulators
+Insurance - IRDAI
+Banking - RBI
+Securities - SEBI
+Bankruptcy - IBBI
+Insolvency,
+bankruptcy and
+reconstruction
+Boards
+BIFR
+IBBI
+CERSAI
+Legislation
+IBC
+SARFESI Act
+Companies
+Asset Reconstruction Company of India Limited
+Edelweiss Asset Reconstruction Company
+IIFCL Asset Management Company Limited
+Legislation
+Banking Regulation Act, 1949
+Government Securities Act, 2006
+IBC, 2016
+National Bank for Financing Infrastructure and Development Bill, 2021
+RBI Act, 1934
+SARFESI Act, 2002
+Income-tax Act, 1961
+Companies Act, 2013
+Insurance Act, 1938
+FEMA, 1999
+Recovery of Debts Due to Banks and Financial Institutions (RDDBFI) Act, 1993
+Tribunals
+Company Law - NCLT
+Appellate - NCLAT
+Debt Recovery - DRT/Appellate - DRAT
+Measures
+Prompt Corrective Action
+Other
+Institute of Banking Personnel Selection
+Mumbai Consensus
+v
+t
+e
+Financial services in India
+Banking
+Commercial
+banking
+Scheduled
+banks
+Commercial
+Private
+Axis
+Bandhan
+CSB
+City Union
+DCB
+Dhanlaxmi
+Federal
+HDFC
+ICICI
+IDBI
+IDFC First
+IndusInd
+Karnataka
+Karur Vysya
+Kotak Mahindra
+Nainital
+RBL
+South Indian
+Tamilnad Mercantile
+Yes
+PSBs
+Bank of Baroda
+Bank of India
+Canara Bank
+Central Bank of India
+Indian Bank
+Indian Overseas Bank
+Jammu & Kashmir Bank
+Punjab & Sind Bank
+Punjab National Bank
+State Bank of India
+UCO Bank
+Union Bank of India
+Foreign
+Branches
+ABN AMRO
+Abu Dhabi Commercial Bank
+Antwerp Diamond Bank
+ANZ
+Bank Maybank Indonesia
+Bank of America
+Bank of Bahrain and Kuwait
+Bank of Ceylon
+Barclays
+Citibank
+Credit Suisse
+Deutsche Bank
+HSBC
+MUFG Bank
+Rabobank
+Royal Bank of Scotland
+Scotiabank
+Standard Chartered
+Subsidiaries
+DBS Bank
+State Bank of Mauritius
+RRBs
+Andhra Pradesh Grameena Vikas Bank
+Assam Gramin Vikash Bank
+Bangiya Gramin Vikash Bank
+Kerala Gramin Bank
+North Malabar Gramin Bank
+Mizoram Rural Bank
+Pallavan Grama Bank
+Pandyan Grama Bank
+Paschim Banga Gramin Bank
+South Malabar Gramin Bank
+Uttar Bihar Gramin Bank
+Uttarakhand Gramin Bank
+Vananchal Gramin Bank
+Cooperative
+District Co-operative Central Bank
+Buldhana Urban
+Cosmos Bank
+Mizoram Co-operative Apex Bank
+Rajkot Nagrik Sahakari Bank
+Repco Bank
+Saraswat Bank
+Shamrao Vithal Co-operative Bank
+TNSC Bank
+Chennai Central Cooperative Bank
+Uttar Pradesh
+Allahabad UP Gramin Bank
+Gramin Bank of Aryavart
+Sarva UP Gramin Bank
+Niche
+banks
+SFBs
+AU
+Capital
+ESAF
+Equitas
+Fincare
+Jana
+North East
+Suryoday
+Ujjivan
+Payments
+banks
+Airtel
+Fino
+NSDL Payments Bank Limited
+India Post
+Jio
+Paytm
+Surrendered licencees
+Sun Pharmaceuticals
+Tech Mahindra
+Wound up
+Aditya Birla
+Defunct
+banks
+Merged
+PSB
+New Bank of India
+Dena Bank
+Vijaya Bank
+Allahabad Bank
+Andhra Bank
+Corporation Bank
+Oriental Bank of Commerce
+United Bank of India
+Syndicate Bank
+SBI
+Bank of Bombay
+Bank of Calcutta
+Bank of Madras
+Imperial Bank of India
+State Bank of Bikaner & Jaipur
+State Bank of Hyderabad
+State Bank of Indore
+State Bank of Mysore
+State Bank of Patiala
+State Bank of Saurashtra
+State Bank of Travancore
+Bharatiya Mahila Bank
+Rescued
+Global Trust Bank
+Lakshmi Vilas Bank
+Nedungadi Bank
+United Western Bank
+United Industrial Bank
+Acquired
+Bank of Madura
+Bank of Rajasthan
+Bengal Central Bank
+Centurion Bank of Punjab
+Chartered Bank of India, Australia and China
+Grindlays Bank
+National Bank of India
+ING Vysya Bank
+Mercantile Bank of India, London and China
+Lord Krishna Bank
+PSB
+Bharat Overseas Bank
+Pandyan Bank
+Wound up
+Bank of Chettinad
+Dass Bank
+Failed
+Alliance Bank of Simla
+Arbuthnot & Co
+Commercial Bank of India
+Exchange Bank of India & Africa
+(New) Oriental Bank Corporation
+Oudh Commercial Bank
+Madhavpura Mercantile Cooperative Bank
+Liquidated
+Bank of Hindostan
+Nath Bank
+Palai Central Bank
+Networks
+Interbank networks
+Cirrus
+NFS
+PLUS
+ATM networks
+BANCS
+Cashnet
+CashTree
+MITR
+Financial
+technology
+Online transfers
+BBPS
+IMPS
+NEFT
+RTGS
+UPI
+AEPS
+BHIM
+Cards
+MasterCard
+Debit MasterCard
+Maestro
+RuPay
+Visa
+Visa Debit
+Visa Electron
+Visa payWave
+Payment service
+Atom
+BHIM
+BillDesk
+CCAvenue
+Google Pay
+Zeta India
+Digital wallets
+Amazon Pay
+Freecharge
+Mobikwik
+Payoneer
+Paytm
+PayU
+PhonePe
+Other
+ATM usage fees
+De-Materialisation (De-Mat)
+Foreign Exchange (ForEx)
+Indian Financial System Code (IFSC)
+List of banks
+National Unified USSD Platform (NUUP)
+Protocol
+BBPS
+Structured Financial Messaging System (SFMS)
+Investment
+banking
+A.K. Capital Services Ltd.
+Ambit Corporate Finance Pvt.Ltd.
+Anand Rathi Advisors Ltd.
+Ashika Capital Ltd.
+Avendus Capital Pvt.Ltd.
+Axis Bank Ltd.
+Axis Capital Ltd.
+Barclays Bank Plc
+Bcb Brokerage Pvt.Ltd.
+Birla Capital & Financial Services Ltd.
+BNP Paribas
+Bob Capital Markets Ltd.
+Boi Merchant Bankers Ltd.
+Canara Bank
+Central Bank Of India
+Centrum Capital Ltd.
+Chartered Finance Management Ltd.
+Choice Capital Advisors Pvt.Ltd.
+Citigroup Global Markets India Pvt.Ltd.
+Credit Suisse Securities (India) Pvt.Ltd.
+Deutsche Equities India Pvt.Ltd.
+DSP Merrill Lynch Ltd.
+Edelweiss Financial Services Ltd.
+Ernst & Young Merchant Banking Services Pvt.Ltd.
+HDFC Bank Ltd.
+HSBC Securities & Capital Markets (India) Pvt.Ltd.
+ICICI Securities Ltd.
+IDBI Capital Market Services Ltd.
+IDFC Securities Ltd.
+IIFL Holdings Ltd.
+Il&Fs Capital Advisors Ltd.
+Indian Overseas Bank
+Inga Capital Pvt.Ltd.
+Jefferies India Pvt.Ltd.
+JM Financial Institutional Securities Ltd.
+JP Morgan India Pvt.Ltd.
+Karvy Investor Services Ltd.
+Keynote Corporate Services Ltd.
+KJMC Corporate Advisors (India) Ltd.
+Kotak Mahindra Capital Co.Ltd.
+Lazard India Pvt.Ltd.
+Morgan Stanley India Co.Pvt.Ltd.
+Motilal Oswal Investment Advisors Pvt. Ltd.
+Munoth Financial Services Ltd.
+Pantomath Capital Advisors Pvt.Ltd.
+Religare Capital Markets Ltd.
+Rothschild (India) Pvt.Ltd.
+Saffron Capital Advisors Pvt.Ltd.
+SBI Capital Markets Ltd.
+SMC Capitals Ltd.
+Trust Investment Advisors Pvt.Ltd.
+UBS Securities India Pvt.Ltd.
+Union Bank Of India
+Vivro Financial Services Pvt.Ltd.
+Yes Bank Ltd.
+Institutions
+SIDBI
+NABARD
+EXIM
+IFCI
+Asset management
+Hedge funds
+True Beacon
+Mutual funds
+Axis
+Baroda Pioneer
+BNP Paribas
+BOI AXA
+Canara Robeco
+PGIM
+DHFL Pramerica
+DSP
+Edelweiss
+Escorts
+Franklin Templeton Investments
+Goldman Sachs
+HDFC AMC
+HSBC Global
+ICICI Prudential
+IDBI
+IDFC
+IIFCL Asset Management
+IIFL
+IL & FS Infra
+Indiabulls
+JM Financial
+Kotak
+LIC Nomura
+Mirae
+Nippon India
+Motilal Oswal
+Peerless
+PPFAS
+Quantum
+Religare
+Sahara
+SBI
+Shriram
+Sundaram
+Tata
+Taurus
+Union KBC
+Unit Trust of India
+InvITs
+REITs
+Brookfield Real Estate Trust
+Mindspace Business Parks REIT
+IIFL Real Estate Investment Trust
+Embassy Office Parks REIT
+Other
+Telecom
+Digital Fibre Infrastructure Trust
+Tower Infrastructure Trust
+Energy
+India Grid Trust
+India Infrastructure Trust
+POWERGRID Infrastructure Investment Trust
+Roads
+Indian Highway Concessions Trust
+IndInfravit Trust
+IRB Infrastructure
+IRB InvIT Fund
+MEP Infrastructure Investment Trust
+National Highways Infra Trust
+Oriental InfraTrust
+Roadstar Infra Investment Trust
+Shrem Invit
+Insurance
+Companies
+Agriculture
+Agriculture Insurance Company of India
+General
+Private
+Cholamandalam MS
+Edelweiss Group
+HDFC ERGO
+Future Generali
+ICICI Lombard
+Niva Bupa
+Kotak Mahindra
+Reliance
+Royal Sundaram
+SBI General
+TATA AIG
+Govt
+National Insurance
+New India Assurance
+Oriental Insurance
+United India
+Employees State Insurance (ESI)
+Life
+Canara HSBC OBC Life
+Edelweiss Group
+Exide Life
+HDFC Life
+ICICI Prudential
+LIC
+Max Life
+Peerless Group
+PNB MetLife
+Reliance
+Kotak
+SBI Life
+Shriram Life Insurance
+Tata AIA
+Reinsurance
+GIC-Re
+Repository
+CDSL
+NSDL
+Policy
+Agricultural insurance in India
+National Health Policy
+Pradhan Mantri  Fasal Bima Yojana
+Pradhan Mantri Suraksha Bima Yojana
+Pradhan Mantri Jeevan Jyoti Bima Yojana
+Ayushman Bharat Yojana
+Rashtriya Swasthya Bima Yojana
+Biju Swastya Kalyan Yojana
+Other
+CISR
+Insurance Institute of India
+Financial markets
+Stock
+exchanges
+Functional
+Bombay Stock Exchange
+BSE
+National Stock Exchange
+NSE
+India International Exchange
+India INX
+NSE International Exchange
+NSE IX
+Other exchanges
+United Stock Exchange
+Metropolitan Stock Exchange
+De-recognized
+Ahmedabad
+Bangalore
+Calcutta
+Delhi
+Cochin
+Coimbatore
+Inter-connected
+Madhya Pradesh
+Madras
+Magadh
+Mangalore
+Saurashtra Kutch
+Bhubaneswar
+Gauhati
+Jaipur
+Ludhiana
+OTC
+Pune
+UP
+Vadodara
+Meerut
+Capital
+Commodity
+exchanges
+India International Bullion Exchange
+Bharat Diamond Bourse
+Indian Energy Exchange
+International Pepper Exchange
+Multi Commodity Exchange
+National Commodity and Derivatives Exchange
+National Spot Exchange
+Surat Diamond Bourse
+Universal Commodity Exchange
+Brokerages
+Online
+Angel
+Dhani
+FundsIndia
+Geogit
+HDFC
+India Infoline
+Kuvera.in
+Motilal Oswal
+Reliance
+Sharekhan
+Other
+Darashaw
+Depositories
+NSDL
+CDSL
+StockHolding Corporation of India
+Karvy Corporate
+Rating
+agencies
+For companies
+Acuite/SMERA
+Brickworks
+CARE Ratings
+CRISIL (S&P)
+Hunter (Experian)
+ICRA (Moody's)
+India Ratings & Research (Fitch)
+Infomerics Valuation
+ONICRA
+For individuals
+Equifax
+Experian
+Highmark
+TransUnion CIBIL
+Financial
+crime
+Events
+1992 Indian stock market scam
+People
+Harshad Mehta
+Abdul Karim Telgi
+Ramalinga Raju
+Hasan Ali Khan
+Ketan Parekh
+Other
+CAMS
+CERSAI
+Alternative financial services
+Digital lending
+Hero FinCorp
+Housing finance
+Aavas Financiers
+DHFL
+Home First Finance
+HUDCO
+HDFC
+LIC Housing Finance
+National Housing Bank
+Odisha Rural Housing & Development Corporation
+PNB Housing Finance
+Chit funds
+Saradha Group financial scandal
+Rose Valley financial scandal
+Microfinance
+Bandhan Bank
+BASIX (India)
+Bharat Financial Inclusion
+ESAF Small Finance Bank
+Grama Vidiyal
+National Bank for Agriculture and Rural Development
+Satin Creditcare Network Limited
+Other
+Peer-to-peer lending
+Kitty party
+Angel investment, venture capital & private equity
+Angel investments
+Indian Angel Network
+Venture capital
+Chiratae Ventures
+Embassy Group
+Indian Angel Network
+Unitus Seed Fund
+Private equity
+Kotak Private Equity
+Chrys Capital
+India Value Fund - True North
+Motilal Oswal Private Equity
+IDFC Private Equity Fund
+ICICI Venture Fund
+CX Partners
+Premji Invest
+Kedaara Capital
+JM Financial Private Equity
+Legislation & regulation
+Banking
+Authorities
+& boards
+Central bank
+Reserve Bank of India
+Other
+IFSCA
+BBB
+BCSBI
+NPCI
+IBA
+IDRBT
+Legislation
+In force
+Reserve Bank of India Act, 1934
+Government Securities Act, 2006
+The State Bank of India Act, 1955
+The Banking Companies (Acquisition And Transfer Of Undertakings) Act, 1970
+Banking Regulation Act, 1949
+International Financial Services Centres Authority Act, 2019
+Repealed
+Public Debt Act, 1944
+Asset
+management
+Legislation
+The Unit Trust of India Act, 1963
+Indian Registration Act, 1908
+Other regulations
+SEBI (Mutual Funds) Regulations, 1993
+Insurance
+Authorities & boards
+IRDAI
+Insurance Association of India
+Life Insurance Council
+General Insurance Council
+Legislation
+In force
+Insurance Act, 1938
+Industrial Policy Resolution of 1956
+Life Insurance Corporation Act, 1956
+Insurance Regulatory and Development Authority Act, 1999
+The General Insurance Business (Nationalisation) Act, 1972
+Repealed
+The British Insurance Act, 1870
+Financial
+markets
+Authorities & boards
+SEBI
+Securities commission
+Forward Markets Commission
+Legislation
+In force
+SEBI, Act 1992
+Forward Contracts (Regulation) Act, 1952
+The Securities Contracts (Regulation) Act, 1956
+Alternative
+financial
+services
+Authorities & boards
+NHB
+Legislation
+Microfinance
+Tamil Nadu Money-Lenders Act, 1957
+The Bombay Money-Lenders Act, 1946
+The Karnataka Money-Lenders Act, 1961
+The Kerala Money-Lenders Act, 1958
+Bengal Money-Lenders Act, 1940
+The Rajasthan Money-Lenders Act, 1963
+Other
+Multi-State Cooperative Legislation Act, 2002
+Mutually Aided Cooperative Acts
+The National Housing Bank Act, 1987
+The Chit Funds Act, 1982
+Alternative
+investment
+funds
+Authorities & boards
+Indian Association of Alternative Investment Funds (IAAIF)
+Legislation
+Indian Trusts Act, 1882
+Regulations
+SEBI (Venture Capital Funds) Regulations, 1996
+SEBI AIF Regulations, 2012
+SEBI (Investment Advisers) Regulations 2013
+v
+t
+e
+Digital payment providers
+Active
+2C2P
+Adyen
+Airtel Payments Bank
+Alipay
+Amazon Pay
+Ant Group
+Apple
+Card
+Pay
+Wallet
+Atlantic Money
+Bancomat Pay
+bKash
+BillDesk
+bit
+Bizum
+Blik
+Block
+Afterpay
+Square
+Cash App
+Boku, Inc.
+BPAY
+Bunq
+Carta Worldwide
+CDS Global
+Chase Paymentech
+WePay
+Circle
+Cred
+Dwolla
+Easypaisa
+Elavon
+EnStream
+Ensygnia
+EServGlobal
+Freecharge
+GCash
+Global Payments
+Google Pay
+Google Pay app
+Google Wallet
+iDEAL
+Ingenico
+Interac e-Transfer
+JazzCash
+Jumio
+KakaoPay
+Klarna
+Line Pay
+Maya
+Mir
+Mir Pay
+MobiKwik
+NTT Data Payment Services
+Mobile Suica
+MobilePay
+M-Pesa
+Mi-Pay
+MintChip
+MMQR
+Nagad
+RBI
+RTGS
+NPCI
+IMPS
+UPI
+BBPS
+BHIM
+IDRBT
+NEFT
+Naver Pay
+Nexi
+Nexgo
+Novalnet
+Nuvei
+Orange Money
+Osaifu-Keitai
+Passport
+PAX Technology
+Paya
+Payanywhere
+PayBox
+PayMate
+PayMe
+Paymentwall
+PayNow
+Payoneer
+PayPal
+Braintree
+Zettle
+Venmo
+Xoom
+PayPay
+PayPoint
+Paysafe
+Neteller
+Openbucks
+PaysafeCard
+Skrill
+Payzone
+Paytm
+PayU
+Paze
+Pepper
+PhonePe
+Pine Labs
+Pix
+POLi Payments
+QRIS
+Red Dot Payment
+Remita
+Revolut
+Samsung Pay
+Samsung Wallet
+Sarvatra Technologies
+SberPay
+SBPay
+Sezzle
+Shift4
+Shop Pay
+Skaleet
+Spice Money
+Stripe
+Swish
+Tata Neu
+Tencent
+Touch 'n Go eWallet
+TWINT
+UnionPay app
+Veem
+Verifi
+Verifone
+Versapay
+Vipps
+VugaPay
+Wave Money
+WebMoney
+WeChat Pay
+Wero
+WiPay
+Wizzit
+Worldline SA
+Worldpay, Inc.
+Yandex Pay
+Yape
+YooMoney
+Zelle
+Zeta
+Ziina
+Defunct
+AirTag
+Bell ID
+Billpoint
+C2it
+Clinkle
+Flattr
+Fortumo
+Google Wallet (2011–2018)
+Kuapay
+Lemon Wallet
+LG Pay
+Merchant Customer Exchange
+Microsoft Pay
+Mozido
+PayDirect
+Paym
+Pingit
+Powa Technologies
+Qiwi
+Quahl
+Sage Pay
+Simpay
+Softcard
+Tez
+vcash
+Paydiant
+Ukash
+Wirecard
+Worldpay Group
+Zong
+Remittance
+CurrencyFair
+MoneyGram
+Nium
+OFX
+Remitly
+Rewire
+Ria Money Transfer
+Transfast
+TransferMate
+Travelex
+Western Union
+Wise
+WorldRemit
+XE
+Related
+Digital currency
+Digital wallet
+Mobile payment
+Payment service provider
+List of online payment service providers
+European Mobile Payment Systems Association
+European Payments Initiative
+Category
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=National_Payments_Corporation_of_India&oldid=1359613940
+"
+Categories
+:
+2008 establishments in Maharashtra
+Financial services companies established in 2008
+Payment systems organizations
+Interbank networks in India
+Non-profit organisations based in India
+Banking in India
+Financial services companies based in Mumbai
+Financial services companies of India
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use Indian English from February 2017
+All Wikipedia articles written in Indian English
+Use dmy dates from July 2020
+CS1 maint: numeric names: authors list
+Pages displaying short descriptions of redirect targets via Module:Annotated link
+Search
+Search
+National Payments Corporation of India
+11 languages
+Add topic

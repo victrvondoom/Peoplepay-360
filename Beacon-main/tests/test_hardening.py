@@ -17,9 +17,9 @@ def test_passcode_check_is_constant_time_and_rejects_empty(monkeypatch: Any) -> 
     assert _passcode_ok({"x-beacon-passcode": "nightshif"}) is False
     assert _passcode_ok({}) is False
     monkeypatch.setenv("PASSCODE", "")
-    assert _passcode_ok({}) is False, (
-        "an unset passcode must fail closed on a public URL"
-    )
+    assert (
+        _passcode_ok({}) is False
+    ), "an unset passcode must fail closed on a public URL"
 
 
 def test_turn_rejects_oversized_text_and_bad_ids(monkeypatch: Any) -> None:
@@ -170,9 +170,9 @@ def test_image_requirement_pins_match_the_tested_environment() -> None:
             installed = version(pkg)
             # Same major, and never older than the pin: a fresh install may resolve
             # a newer minor (litellm ships minors weekly); the image stays pinned.
-            assert installed.split(".")[0] == pinned.split(".")[0], (
-                f"{name}: {pkg} pinned {pinned}, env {installed}; bump the pin"
-            )
+            assert (
+                installed.split(".")[0] == pinned.split(".")[0]
+            ), f"{name}: {pkg} pinned {pinned}, env {installed}; bump the pin"
             key = lambda v: tuple(int(x) for x in v.split("+")[0].split(".")[:3])  # noqa: E731
             assert key(installed) >= key(pinned), f"{name}: {pkg} env older than pin"
 
@@ -209,16 +209,16 @@ def test_triage_entry_points_do_not_import_powertools() -> None:
                         todo.append(f"beacon.{alias.name}")
                 elif base.startswith("beacon"):
                     todo.append(base)
-                assert not base.startswith("aws_lambda_powertools"), (
-                    f"{mod} imports Powertools"
-                )
+                assert not base.startswith(
+                    "aws_lambda_powertools"
+                ), f"{mod} imports Powertools"
             elif isinstance(node, ast.Import):
                 for alias in node.names:
-                    assert not alias.name.startswith("aws_lambda_powertools"), (
-                        f"{mod} imports Powertools"
-                    )
+                    assert not alias.name.startswith(
+                        "aws_lambda_powertools"
+                    ), f"{mod} imports Powertools"
                     if alias.name.startswith("beacon"):
                         todo.append(alias.name)
-    assert not (seen & forbidden), (
-        f"triage reaches Powertools-dependent modules: {seen & forbidden}"
-    )
+    assert not (
+        seen & forbidden
+    ), f"triage reaches Powertools-dependent modules: {seen & forbidden}"

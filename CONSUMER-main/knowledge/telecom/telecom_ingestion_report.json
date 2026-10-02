@@ -1,0 +1,329 @@
+{
+  "domain": "telecom",
+  "generated_at": "2026-07-07T16:50:18.051051+00:00",
+  "official_sources": [
+    {
+      "authority": "TRAI",
+      "title": "TRAI Quality of Service",
+      "url": "https://www.trai.gov.in/telecom/qos",
+      "folder": "trai",
+      "category": "quality_of_service",
+      "slug": "trai_qos",
+      "max_linked_pdfs": 8
+    },
+    {
+      "authority": "TRAI",
+      "title": "TRAI Internet and Broadband",
+      "url": "https://www.trai.gov.in/telecom/internet-broadband",
+      "folder": "trai",
+      "category": "broadband_regulations",
+      "slug": "trai_internet_broadband",
+      "max_linked_pdfs": 8
+    },
+    {
+      "authority": "TRAI",
+      "title": "TRAI Mobile Number Portability",
+      "url": "https://www.trai.gov.in/telecom/mobile-number-portability",
+      "folder": "mnp",
+      "category": "mnp",
+      "slug": "trai_mnp",
+      "max_linked_pdfs": 8
+    },
+    {
+      "authority": "TRAI",
+      "title": "TRAI Consumer Protection",
+      "url": "https://www.trai.gov.in/telecom/consumer-protection",
+      "folder": "customer_rights",
+      "category": "consumer_protection",
+      "slug": "trai_consumer_protection",
+      "max_linked_pdfs": 8
+    },
+    {
+      "authority": "TRAI",
+      "title": "TRAI Complaint Redressal",
+      "url": "https://www.trai.gov.in/telecom/complaint-redressal",
+      "folder": "complaints",
+      "category": "complaint_redressal",
+      "slug": "trai_complaint_redressal",
+      "max_linked_pdfs": 8
+    },
+    {
+      "authority": "TRAI",
+      "title": "TRAI Value Added Services",
+      "url": "https://www.trai.gov.in/telecom/vas",
+      "folder": "mobile",
+      "category": "vas",
+      "slug": "trai_vas",
+      "max_linked_pdfs": 6
+    },
+    {
+      "authority": "TRAI",
+      "title": "TRAI Telecom FAQs",
+      "url": "https://www.trai.gov.in/consumer-info/telecom/faq-category-listing",
+      "folder": "faqs",
+      "category": "faq",
+      "slug": "trai_telecom_faq",
+      "max_linked_pdfs": 4
+    },
+    {
+      "authority": "TRAI",
+      "title": "TRAI Consolidated Telecom Regulations",
+      "url": "https://www.trai.gov.in/release-publication/consolidated-regulation/telecom",
+      "folder": "regulations",
+      "category": "regulations",
+      "slug": "trai_consolidated_telecom_regulations",
+      "max_linked_pdfs": 10
+    },
+    {
+      "authority": "DoT",
+      "title": "DoT National Digital Communications Policy 2018",
+      "url": "https://www.dot.gov.in/national-digital-communications-policy-2018",
+      "folder": "dot",
+      "category": "policy",
+      "slug": "dot_national_digital_communications_policy_2018",
+      "max_linked_pdfs": 1
+    },
+    {
+      "authority": "DoT",
+      "title": "DoT Home and Consumer Links",
+      "url": "https://www.dot.gov.in/",
+      "folder": "dot",
+      "category": "consumer_advisory",
+      "slug": "dot_home",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "DoT",
+      "title": "DoT Access Services",
+      "url": "https://www.dot.gov.in/access-services",
+      "folder": "dot",
+      "category": "licensing",
+      "slug": "dot_access_services",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "NCH",
+      "title": "National Consumer Helpline",
+      "url": "https://consumerhelpline.gov.in/public/",
+      "folder": "complaints",
+      "category": "complaint_guidance",
+      "slug": "national_consumer_helpline",
+      "max_linked_pdfs": 3
+    },
+    {
+      "authority": "Airtel",
+      "title": "Airtel Terms and Conditions",
+      "url": "https://www.airtel.in/terms-and-conditions",
+      "folder": "operators/airtel",
+      "category": "terms",
+      "slug": "airtel_terms",
+      "max_linked_pdfs": 3
+    },
+    {
+      "authority": "Airtel",
+      "title": "Airtel Prepaid Plans",
+      "url": "https://www.airtel.in/prepaid/all-prepaid-plans",
+      "folder": "operators/airtel",
+      "category": "mobile_plans",
+      "slug": "airtel_prepaid_plans",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "Airtel",
+      "title": "Airtel Broadband",
+      "url": "https://www.airtel.in/airtel-broadband",
+      "folder": "operators/airtel",
+      "category": "broadband",
+      "slug": "airtel_broadband",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "Airtel",
+      "title": "Airtel Xstream Fiber",
+      "url": "https://www.airtel.in/airtel-xstream-fiber",
+      "folder": "operators/airtel",
+      "category": "fiber",
+      "slug": "airtel_fiber",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "Airtel",
+      "title": "Airtel Help and Support",
+      "url": "https://www.airtel.in/help",
+      "folder": "operators/airtel",
+      "category": "complaint_process",
+      "slug": "airtel_help",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "Jio",
+      "title": "Jio Terms and Conditions",
+      "url": "https://www.jio.com/en-in/terms-and-conditions",
+      "folder": "operators/jio",
+      "category": "terms",
+      "slug": "jio_terms",
+      "max_linked_pdfs": 3
+    },
+    {
+      "authority": "Jio",
+      "title": "Jio Prepaid Plans",
+      "url": "https://www.jio.com/en-in/mobile/prepaid-plans",
+      "folder": "operators/jio",
+      "category": "mobile_plans",
+      "slug": "jio_prepaid_plans",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "Jio",
+      "title": "JioFiber Plans",
+      "url": "https://www.jio.com/en-in/jiofiber",
+      "folder": "operators/jio",
+      "category": "fiber",
+      "slug": "jio_fiber",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "Jio",
+      "title": "Jio Help and Support",
+      "url": "https://www.jio.com/help/home",
+      "folder": "operators/jio",
+      "category": "complaint_process",
+      "slug": "jio_help",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "Vi",
+      "title": "Vi Terms and Conditions",
+      "url": "https://www.myvi.in/terms-of-use",
+      "folder": "operators/vi",
+      "category": "terms",
+      "slug": "vi_terms",
+      "max_linked_pdfs": 1
+    },
+    {
+      "authority": "Vi",
+      "title": "Vi Prepaid Plans",
+      "url": "https://www.myvi.in/prepaid/all-prepaid-plans",
+      "folder": "operators/vi",
+      "category": "mobile_plans",
+      "slug": "vi_prepaid_plans",
+      "max_linked_pdfs": 2
+    },
+    {
+      "authority": "Vi",
+      "title": "Vi Help and Support",
+      "url": "https://www.myvi.in/help-support/faqs",
+      "folder": "operators/vi",
+      "category": "complaint_process",
+      "slug": "vi_help",
+      "max_linked_pdfs": 1
+    },
+    {
+      "authority": "BSNL",
+      "title": "BSNL Mobile Services",
+      "url": "https://bsnl.co.in/mobile/recharge",
+      "folder": "operators/bsnl",
+      "category": "mobile_plans",
+      "slug": "bsnl_mobile_recharge",
+      "max_linked_pdfs": 1
+    },
+    {
+      "authority": "BSNL",
+      "title": "BSNL Broadband",
+      "url": "https://bsnl.co.in/",
+      "folder": "operators/bsnl",
+      "category": "broadband",
+      "slug": "bsnl_home_broadband",
+      "max_linked_pdfs": 1
+    },
+    {
+      "authority": "BSNL",
+      "title": "BSNL FTTH",
+      "url": "https://bsnl.co.in/sim-order",
+      "folder": "operators/bsnl",
+      "category": "fiber",
+      "slug": "bsnl_sim_mnp",
+      "max_linked_pdfs": 1
+    }
+  ],
+  "download_results": [
+    {
+      "source": {
+        "authority": "DoT",
+        "title": "DoT National Digital Communications Policy 2018",
+        "url": "https://www.dot.gov.in/national-digital-communications-policy-2018",
+        "folder": "dot",
+        "category": "policy",
+        "slug": "dot_national_digital_communications_policy_2018",
+        "max_linked_pdfs": 1
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.dot.gov.in/national-digital-communications-policy-2018",
+          "error": "too little text extracted: 0 chars"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "DoT",
+        "title": "DoT Home and Consumer Links",
+        "url": "https://www.dot.gov.in/",
+        "folder": "dot",
+        "category": "consumer_advisory",
+        "slug": "dot_home",
+        "max_linked_pdfs": 2
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.dot.gov.in/",
+          "error": "too little text extracted: 0 chars"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "DoT",
+        "title": "DoT Access Services",
+        "url": "https://www.dot.gov.in/access-services",
+        "folder": "dot",
+        "category": "licensing",
+        "slug": "dot_access_services",
+        "max_linked_pdfs": 2
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.dot.gov.in/access-services",
+          "error": "too little text extracted: 0 chars"
+        }
+      ]
+    }
+  ],
+  "chunk_preview_count": 897,
+  "graph_seed_entities": 26,
+  "graph_seed_relationships": 13,
+  "local_corpus": {
+    "files_total": 67,
+    "chunks_total": 799,
+    "bytes_total": 33219901,
+    "extension_counts": {
+      ".pdf": 49,
+      ".txt": 18
+    },
+    "authority_counts": {
+      "BSNL": 3,
+      "Jio": 4,
+      "NCH": 1,
+      "TRAI": 53,
+      "Vi": 6
+    },
+    "chunk_file": "knowledge/telecom/chunks/telecom_chunks.jsonl",
+    "manifest_file": "knowledge/telecom/telecom_corpus_manifest.json"
+  }
+}

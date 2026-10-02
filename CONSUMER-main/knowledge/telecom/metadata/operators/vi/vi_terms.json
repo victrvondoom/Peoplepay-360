@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "Vi",
+  "title": "Vi Terms and Conditions",
+  "category": "terms",
+  "source_url": "https://www.myvi.in/terms-of-use",
+  "final_url": "https://www.myvi.in/terms-of-use",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 27462,
+  "stored_path": "knowledge/telecom/operators/vi/vi_terms.txt",
+  "sha256": "90f184204fbeddfb3fd8b7e84db517a3fbc17b009d755ca279bcb6495a4b2061",
+  "bytes": 27561,
+  "fetched_at": "2026-07-06T14:33:16.391272+00:00"
+}

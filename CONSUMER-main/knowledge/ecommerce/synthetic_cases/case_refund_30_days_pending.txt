@@ -1,0 +1,5 @@
+CASE: Refund Pending 30 Days — Amazon India
+Customer cancelled an order for a refrigerator (INR 32,000) via UPI.
+Refund not received for 30 days despite multiple chat interactions.
+Resolution: Customer initiated UPI chargeback via bank app + NCH complaint.
+Amazon credited full refund within 48 hours.

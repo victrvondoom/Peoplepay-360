@@ -1,0 +1,506 @@
+Telecom Regulatory Authority of India - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Indian telecommunications regulator
+"TRAI" redirects here. For other uses, see
+TRAI (disambiguation)
+.
+This article
+may contain
+original research
+.
+Please
+improve it
+by
+verifying
+the claims made and adding
+inline citations
+. Statements consisting only of original research should be removed.
+(
+March 2012
+)
+(
+Learn how and when to remove this message
+)
+Telecom Regulatory Authority of India
+भारतीय दूरसंचार विनियामक प्राधिकरण
+TRAI Logo
+TRAI complete 25 year logo
+Regulatory agency overview
+Formed
+20
+February 1997
+;
+29 years ago
+(
+1997-02-20
+)
+Jurisdiction
+Department of Telecommunications
+,
+Ministry of Communications
+,
+Government of India
+Headquarters
+4th, 5th, 6th & 7th Floor, Tower-F, World Trade Centre, Nauroji Nagar, New Delhi: 110029
+[
+1
+]
+Regulatory agency executives
+Anil Kumar Lahoti,
+IRSE
+,
+Chairperson
+Atul Chaudhary,
+ITS
+,
+Secretary
+Key document
+The TRAI Act, 1997
+Website
+trai
+.gov
+.in
+The
+Telecom Regulatory Authority of India
+(
+TRAI
+) is a
+regulatory body
+set up by the
+Government of India
+under section 3 of the Telecom Regulatory Authority of India Act, 1997. It is the
+regulator
+of the
+telecommunications sector in India
+.
+[
+2
+]
+It consists of a chairperson and not more than two full-time members and not more than two part-time members. The TRAI Act was amended by an ordinance, effective from 24 January 2000, establishing a
+Telecom Disputes Settlement and Appellate Tribunal
+to take over the adjudicatory and disputes functions from TRAI.
+History
+[
+edit
+]
+Telecom Regulatory Authority of India was established on 20 February 1997 by an
+Act of Parliament
+to regulate
+telecom
+services and tariffs in India. Before this, regulation of telecom services and tariffs was overseen by the
+Central Government
+.
+TRAI's mission is to create and nurture conditions for the growth of
+telecommunications in India
+to enable the country to have a leading role in the emerging global information society.
+[
+3
+]
+One of its main objectives is to provide a fair and transparent environment that promotes a level playing field and facilitates fair competition in the market. TRAI regularly issues orders and directions on various subjects such as
+tariffs
+, interconnections, quality of service,
+direct to home
+services and
+mobile number portability
+.
+In January 2016, TRAI introduced an important change in
+telecommunication
+to the benefit of consumers, where they would be compensated
+₹
+1
+(equivalent to
+₹
+1.00
+or
+1.0¢
+US in 2023)
+for every dropped call, subject to a maximum of three dropped calls in a day.
+[
+4
+]
+In May 2016, this regulation was revoked by the
+Supreme Court
+on the grounds of being "unreasonable, arbitrary and unconstitutional".
+[
+5
+]
+Secretariat
+[
+edit
+]
+TRAI is administered through a
+secretariat
+headed by a secretary. All proposals are processed by the secretary, who organises the agenda for authority meetings (consulting with the chairperson), prepares the minutes and issues regulations in accordance to the meetings. The secretary is assisted by
+advisors
+. These include Mobile Network,
+Interconnection
+and FixeNetwork,
+BroadBand
+and Policy Analysis, Quality of Service,
+Broadcasting
+&
+Cable Services
+, Economic Regulation, Financial Analysis & IFA, Legal, Consumer Affairs & International Relation and Administration & Personnel. Officers are selected from the
+Indian Telecommunications Service
+and the
+Indian Administrative Service
+(IAS).
+[
+6
+]
+List of Chairpersons (Telecom Regulatory Authority of India)
+[
+edit
+]
+List of Chairpersons:
+[
+7
+]
+No.
+Name
+Tenure
+1
+Justice (Retd.) S. S. Sodhi
+1997
+2000
+2
+M. S. Verma
+2000
+2003
+3
+Pradip Baijal
+2003
+2006
+4
+Nripendra Misra
+2006
+2009
+5
+Dr. J. S. Sarma
+2009
+2012
+6
+Rahul Khullar
+2012
+2015
+7
+Ram Sewak Sharma
+2015
+2020
+8
+Dr. P. D. Vaghela
+2020
+2023
+9
+Anil Kumar Lahoti,
+IRSE
+2024
+2028
+TRAI Mobile Apps
+[
+edit
+]
+On 6 June 2017, TRAI launched three new apps and a web portal to highlight the telecom services that are being offered to the users.
+The Mycall, MySpeed, and Do Not Disturb (DND 2.0) apps can be used to ensure that there is transparency between what consumers are paying for and what telecom operators are promising to provide at a certain rate.
+In December 2018, TRAI released another app called TRAI Channel Selector. Using this app, they can add, remove and manage their channels.
+Recent TRAI initiatives
+[
+edit
+]
+In order to increase broadband penetration in India, TRAI has proposed WANI (
+Wi-Fi Access Network Interface
+) architecture. If implemented, it may lead to set up of Public Data Offices (PDOs) where Wi-FI Internet would be available on demand. TRAI relates the same with PCOs which were used to do the voice calls and were very popular hotspots before the mobile phones or home landlines became the ultimate mode of communication.
+[
+8
+]
+TRAI reports
+[
+edit
+]
+To increase transparency and give a data-based overview of Indian Telecom Industry at regular intervals, TRAI publishes multiple reports under Release/Publication "Reports" section on its website.
+Controversies and Criticism
+[
+edit
+]
+Jio
+[
+edit
+]
+The TRAI has been accused of bending its rules multiple times to let
+Jio
+, a subsidiary of
+Reliance Industries Limited
+, become a market leader in the span of a few years. Jio was allowed to "test" its services for a much longer period and with a much larger subscriber base than was the industrial norm. In a letter to the telecom department, Rajan Mathews of the
+Cellular Operators Association of India
+wrote that Reliance's offers were "full-blown and full-fledged services masquerading as tests, which bypass regulations and can potentially game policy features." TRAI was also accused of modifying its definition of "significant market power" so as to exclude Jio from strict scrutiny. Whilst initially the definition of market power was based on total network activity, the parameters were changed to subscriber share and gross revenue. Jio qualified as a significant market power according to the first definition, but not the second.
+[
+9
+]
+Airport Wi-fi Access Regulations
+[
+edit
+]
+The TRAI has been criticized for making Wi-Fi difficult to access at airports across India. As per several TRAI officials, Wi-Fi access across airports, that requires a pin through phone numbers, has been cited due to security reasons and KYC (know your customer) requirements, and limited accessibility for 45 minutes.
+[
+10
+]
+The system has been slammed by several domestic and international travelers due to inconvenience to international passengers, limited timeframe to use and complicated access.
+[
+11
+]
+Despite criticism and negative reviews posted by travelers on
+Skytrax
+and
+Tripadvisor
+, the TRAI and
+Airports Authority of India
+have consistently refused to change the rules and justified citing security, which have affected ratings of both domestic and international airports across the country when compared to other nations.
+[
+12
+]
+See also
+[
+edit
+]
+Telecommunications in India
+The Telecom Commercial Communication Customer Preference Regulations, 2010
+TRAI Sim closure fraud
+References
+[
+edit
+]
+↑
+"Contact Us"
+.
+Telecom Regulatory Authority of India
+. 29 January 2015
+. Retrieved
+2 October
+2024
+.
+↑
+"The Telecom Regulatory Authority of India Act, 1997 — The Centre for Internet and Society"
+. Cis-india.org
+. Retrieved
+18 August
+2016
+.
+↑
+"Dropped calls may earn you Re 1 compensation - The Economic Times"
+. Economictimes.indiatimes.com. 16 October 2015
+. Retrieved
+18 August
+2016
+.
+↑
+"All telcos meet key call quality benchmarks in Delhi NCR: Trai - ET Telecom"
+.
+ETTelecom.com
+.
+↑
+"SC strikes down 'arbitrary, unconstitutional' call drop penalty"
+. Moneycontrol.com. 11 May 2016
+. Retrieved
+18 August
+2016
+.
+↑
+"TRAI Manual"
+(PDF)
+.
+↑
+"A Twenty Year Odyssey 1997-2017"
+(PDF)
+.
+www.trai.gov.in
+.
+↑
+"WANI Network Architecture Proposal for TRAI Public Data Office (PDO) - Techplayon"
+.
+Techplayon
+. 7 August 2017
+. Retrieved
+13 September
+2018
+.
+↑
+Block, Daniel.
+"How Reliance Jio is monopolising the telecom sector"
+.
+The Caravan
+. Retrieved
+21 May
+2019
+.
+↑
+"Grievances pour in from int'l flyers over difficulty in accessing Free Airport Wi-fi"
+.
+The Times of India
+. 28 April 2023.
+↑
+"Free Wi-Fi still out of reach for many international flyers"
+.
+The Times of India
+. 20 February 2018.
+↑
+"No WiFi at Kolkata airport for 7 months:Flyers land in digital dead zone; I couldn't even book an uber, Says uk returned student"
+.
+External links
+[
+edit
+]
+Media related to
+Telecom Regulatory Authority of India
+at Wikimedia Commons
+Official website
+v
+t
+e
+Ministry of Communications (India)
+Department of Telecommunications
+Statutory bodies
+Telecom Disputes Settlement and Appellate Tribunal
+(TDSAT)
+Telecom Regulatory Authority of India
+(TRAI)
+Attached offices
+Controller General of Communication Accounts (CGCA)
+Director General Telecom (DGT)
+Telecommunication Engineering Centre
+(TEC)
+Universal Service Obligation Fund (USOF)
+Subordinate offices
+National Centre for Communication Security (NCCS)
+Wireless Monitoring Organisation
+(WMO)
+Field offices
+Controller of Communication Accounts (CCA)
+Autonomous bodies
+Centre for Development of Telematics
+(C-DOT)
+Training institutes
+National Telecommunications Institute for Policy Research Innovation Training (NTIPRIT)
+National Institute of Communication Finance (NICF)
+Others
+Centre for Excellence in Telecom Technology and Management
+Digital Communications Commission
+Telecom Enforcement Resource and Monitoring
+(TERM)
+Telephone Advisory Committees
+(TAC)
+Wireless Planning & Coordination Wing
+(WPC)
+PSUs
+Bharat Broadband Network Limited
+(BBNL)
+Bharat Sanchar Nigam Limited
+(BSNL)
+Indian Telephone Industries Limited
+(ITI)
+Mahanagar Telephone Nigam Limited
+(MTNL)
+Telecommunications Consultants India Limited
+(TCIL)
+Civil service
+Indian Telecommunication Service
+Indian Radio Regulatory Service
+Department of posts
+Army Postal Service
+India Post
+India Post Payments Bank
+Legislations
+The Indian Telegraph Act, 1885
+The Indian Wireless Telegraphy Act, 1940
+The Indian Post Office Act, 1898
+The Telecom Regulatory Authority of India Act, 1997
+Ministers
+Rafi Ahmed Kidwai
+Amrit Kaur
+Jagjivan Ram
+Raj Bahadur
+Lal Bahadur Shastri
+S. K. Patil
+Jawaharlal Nehru
+P. Subbarayan
+Ashoke Kumar Sen
+Satya Narayan Sinha
+Ram Subhag Singh
+Indira Gandhi
+Sher Singh
+Hemvati Nandan Bahuguna
+Kasu Brahmananda Reddy
+Shankar Dayal Sharma
+Morarji Desai
+Parkash Singh Badal
+George Fernandes
+Brij Lal Varma
+Charan Singh
+Shyam Nandan Mishra
+Bhishma Narain Singh
+C. M. Stephen
+Anant Prasad Sharma
+Rajiv Gandhi
+V. N. Gadgil
+Arjun Singh
+Vasant Sathe
+Bir Bahadur Singh
+V. P. Singh
+K. P. Unnikrishnan
+Chandra Shekhar
+Atal Bihari Vajpayee
+Beni Prasad Verma
+Buta Singh
+Sushma Swaraj
+Jagmohan
+Ram Vilas Paswan
+Pramod Mahajan
+Arun Shourie
+Dayanidhi Maran
+A. Raja
+Manmohan Singh
+Kapil Sibal
+Ravi Shankar Prasad
+Ashwini Vaishnaw
+(incumbent)
+Ministers of state
+Manoj Sinha
+Sanjay Shamrao Dhotre
+Devusinh Jesingbhai Chauhan
+(incumbent)
+Preceding ministry:
+Ministry of Communications and Information Technology
+Authority control databases
+International
+ISNI
+VIAF
+National
+United States
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Telecom_Regulatory_Authority_of_India&oldid=1355505083
+"
+Categories
+:
+Government agencies established in 1997
+1997 establishments in India
+Telecommunications authorities of India
+Telecommunications regulatory authorities
+Government agencies of India
+Regulatory agencies of India
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use dmy dates from September 2019
+Articles that may contain original research from March 2012
+All articles that may contain original research
+Use Indian English from July 2016
+All Wikipedia articles written in Indian English
+Articles containing Hindi-language text
+Pages using infobox mapframe with missing coordinates
+Commons category link from Wikidata
+Official website different in Wikidata and Wikipedia
+Search
+Search
+Telecom Regulatory Authority of India
+9 languages
+Add topic

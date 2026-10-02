@@ -92,10 +92,10 @@ class CaseAnalysisWorkflow:
         graph.add_node("research", run_research_agent)
         graph.add_node("evidence", run_evidence_agent)
         graph.add_node("graph", run_graph_agent)
-        graph.add_node("strategy", run_strategy_agent)
+        graph.add_node("strategy_agent", run_strategy_agent)
         graph.add_node("negotiation", run_negotiation_agent)
         graph.add_node("review", run_review_agent)
-        graph.add_node("final_report", run_final_report_agent)
+        graph.add_node("final_report_agent", run_final_report_agent)
         graph.add_node("done", self._done)
 
         # Define edges â€” linear pipeline, except review can send the case
@@ -104,15 +104,15 @@ class CaseAnalysisWorkflow:
         graph.add_edge("init", "research")
         graph.add_edge("research", "evidence")
         graph.add_edge("evidence", "graph")
-        graph.add_edge("graph", "strategy")
-        graph.add_edge("strategy", "negotiation")
+        graph.add_edge("graph", "strategy_agent")
+        graph.add_edge("strategy_agent", "negotiation")
         graph.add_edge("negotiation", "review")
         graph.add_conditional_edges(
             "review",
-            lambda state: "strategy" if state.get("review_should_retry") else "final_report",
-            {"strategy": "strategy", "final_report": "final_report"},
+            lambda state: "strategy_agent" if state.get("review_should_retry") else "final_report_agent",
+            {"strategy_agent": "strategy_agent", "final_report_agent": "final_report_agent"},
         )
-        graph.add_edge("final_report", "done")
+        graph.add_edge("final_report_agent", "done")
         graph.add_edge("done", END)
 
         return graph.compile()

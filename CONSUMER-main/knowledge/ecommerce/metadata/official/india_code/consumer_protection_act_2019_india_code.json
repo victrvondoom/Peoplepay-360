@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "India Code",
+  "title": "Consumer Protection Act 2019",
+  "category": "consumer_protection",
+  "source_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+  "final_url": "https://www.indiacode.nic.in/handle/123456789/15256",
+  "type": "html_text",
+  "raw_chars": 9567,
+  "stored_path": "knowledge/ecommerce/official/india_code/consumer_protection_act_2019_india_code.txt",
+  "sha256": "7e310fb1ada4d43b6534db6c398492eaf67f90044556fad39edd45151649880f",
+  "bytes": 9673,
+  "fetched_at": "2026-07-07T12:50:46.031525+00:00",
+  "official_source": true
+}

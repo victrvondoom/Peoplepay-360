@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "Myntra",
+  "title": "Myntra Terms of Use",
+  "category": "terms",
+  "source_url": "https://www.myntra.com/termsofuse",
+  "final_url": "https://www.myntra.com/termsofuse",
+  "type": "html_text",
+  "raw_chars": 6217,
+  "stored_path": "knowledge/ecommerce/marketplaces/myntra/myntra_terms_official.txt",
+  "sha256": "4f7642da55b812340cee624399e48bc7908045300da195b1c376d16c2712191a",
+  "bytes": 6345,
+  "fetched_at": "2026-07-07T12:47:23.230359+00:00",
+  "official_source": true
+}

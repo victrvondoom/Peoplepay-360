@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(89.95 KB)",
+  "parent_title": "TRAI Quality of Service",
+  "category": "quality_of_service",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Mobile_BankingRegulations17042012.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/qos",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-09/Mobile_BankingRegulations17042012.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/trai/trai_qos_06_download_89_95_kb.pdf",
+  "sha256": "5fda08783037f245d591229ff8690817161fcfe0409f996fa8c2ddc892be9662",
+  "bytes": 92105,
+  "fetched_at": "2026-07-06T13:58:19.182050+00:00"
+}

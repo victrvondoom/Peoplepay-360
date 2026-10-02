@@ -1,0 +1,1090 @@
+{
+  "domain": "ecommerce",
+  "generated_at": "2026-07-07T12:49:08.871285+00:00",
+  "official_sources": [
+    {
+      "authority": "NCH",
+      "title": "National Consumer Helpline Home",
+      "url": "https://consumerhelpline.gov.in/public/",
+      "folder": "official/nch",
+      "category": "complaint_redressal",
+      "slug": "nch_home",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NCH",
+      "title": "National Consumer Helpline About and Complaint Process",
+      "url": "https://consumerhelpline.gov.in/public/about",
+      "folder": "official/nch",
+      "category": "complaint_redressal",
+      "slug": "nch_about",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NCH",
+      "title": "National Consumer Helpline Knowledge Base",
+      "url": "https://consumerhelpline.gov.in/public/knowledgebase",
+      "folder": "official/nch",
+      "category": "consumer_knowledge_base",
+      "slug": "nch_knowledge_base",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NCDRC",
+      "title": "NCDRC Home and Jurisdiction",
+      "url": "https://ncdrc.nic.in/",
+      "folder": "official/ncdrc",
+      "category": "consumer_commission",
+      "slug": "ncdrc_home",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NCDRC",
+      "title": "NCDRC History",
+      "url": "https://ncdrc.nic.in/history.html",
+      "folder": "official/ncdrc",
+      "category": "consumer_commission",
+      "slug": "ncdrc_history",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "e-Jagriti",
+      "title": "e-Jagriti Online Filing Portal",
+      "url": "https://e-jagriti.gov.in/",
+      "folder": "official/e_jagriti",
+      "category": "online_filing",
+      "slug": "e_jagriti_home",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Consumer Protection Acts and Rules",
+      "url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+      "folder": "official/consumer_affairs",
+      "category": "consumer_protection",
+      "slug": "consumer_affairs_consumer_protection",
+      "max_linked_pdfs": 4
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Legal Metrology Act",
+      "url": "https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009",
+      "folder": "official/consumer_affairs",
+      "category": "legal_metrology",
+      "slug": "legal_metrology_act",
+      "max_linked_pdfs": 3
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Misleading Advertisements Guidance",
+      "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf",
+      "folder": "official/consumer_affairs",
+      "category": "misleading_advertisements",
+      "slug": "misleading_advertisements",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Direct Selling Guidelines",
+      "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf",
+      "folder": "official/consumer_affairs",
+      "category": "direct_selling",
+      "slug": "direct_selling_guidelines",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "BIS",
+      "title": "Bureau of Indian Standards",
+      "url": "https://www.bis.gov.in/",
+      "folder": "official/standards",
+      "category": "standards",
+      "slug": "bis_home",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "India Post",
+      "title": "India Post Home",
+      "url": "https://www.indiapost.gov.in/",
+      "folder": "official/courier",
+      "category": "postal_complaints",
+      "slug": "india_post_home",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NPCI",
+      "title": "NPCI UPI",
+      "url": "https://www.npci.org.in/what-we-do/upi/product-overview",
+      "folder": "official/payment",
+      "category": "upi",
+      "slug": "npci_upi_overview",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NPCI",
+      "title": "NPCI UPI Dispute Redressal",
+      "url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism",
+      "folder": "official/payment",
+      "category": "upi_disputes",
+      "slug": "npci_upi_disputes",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "RuPay",
+      "title": "RuPay Contactless and Cardholder Info",
+      "url": "https://www.rupay.co.in/",
+      "folder": "official/payment",
+      "category": "card_payments",
+      "slug": "rupay_home",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Amazon",
+      "title": "Amazon India Returns",
+      "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7",
+      "folder": "marketplaces/amazon",
+      "category": "returns",
+      "slug": "amazon_returns_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Amazon",
+      "title": "Amazon A-to-z Guarantee",
+      "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV",
+      "folder": "marketplaces/amazon",
+      "category": "marketplace_guarantee",
+      "slug": "amazon_a_to_z_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Amazon",
+      "title": "Amazon Refunds",
+      "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=201117590",
+      "folder": "marketplaces/amazon",
+      "category": "refunds",
+      "slug": "amazon_refunds_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Amazon",
+      "title": "Amazon Conditions of Use",
+      "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM",
+      "folder": "marketplaces/amazon",
+      "category": "terms",
+      "slug": "amazon_conditions_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Flipkart",
+      "title": "Flipkart Return and Cancellation Policy",
+      "url": "https://www.flipkart.com/pages/returnpolicy",
+      "folder": "marketplaces/flipkart",
+      "category": "returns",
+      "slug": "flipkart_return_policy_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Flipkart",
+      "title": "Flipkart Terms of Use",
+      "url": "https://www.flipkart.com/pages/terms",
+      "folder": "marketplaces/flipkart",
+      "category": "terms",
+      "slug": "flipkart_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Myntra",
+      "title": "Myntra Terms of Use",
+      "url": "https://www.myntra.com/termsofuse",
+      "folder": "marketplaces/myntra",
+      "category": "terms",
+      "slug": "myntra_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Myntra",
+      "title": "Myntra FAQ",
+      "url": "https://www.myntra.com/faq",
+      "folder": "marketplaces/myntra",
+      "category": "faq",
+      "slug": "myntra_faq_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Meesho",
+      "title": "Meesho Terms and Conditions",
+      "url": "https://www.meesho.com/legal/terms-conditions",
+      "folder": "marketplaces/meesho",
+      "category": "terms",
+      "slug": "meesho_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Meesho",
+      "title": "Meesho Privacy Policy",
+      "url": "https://www.meesho.com/legal/privacy",
+      "folder": "marketplaces/meesho",
+      "category": "privacy",
+      "slug": "meesho_privacy_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "JioMart",
+      "title": "JioMart Terms and Conditions",
+      "url": "https://www.jiomart.com/terms-and-conditions",
+      "folder": "marketplaces/jiomart",
+      "category": "terms",
+      "slug": "jiomart_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "JioMart",
+      "title": "JioMart Cancellation Return Refund",
+      "url": "https://www.jiomart.com/cancellation-return-refund-policy",
+      "folder": "marketplaces/jiomart",
+      "category": "returns_refunds",
+      "slug": "jiomart_returns_refunds_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Blinkit",
+      "title": "Blinkit Terms",
+      "url": "https://blinkit.com/terms",
+      "folder": "marketplaces/blinkit",
+      "category": "terms",
+      "slug": "blinkit_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Swiggy",
+      "title": "Swiggy Terms and Conditions",
+      "url": "https://www.swiggy.com/terms-and-conditions",
+      "folder": "marketplaces/swiggy_instamart",
+      "category": "terms",
+      "slug": "swiggy_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "BigBasket",
+      "title": "BigBasket Terms and Conditions",
+      "url": "https://www.bigbasket.com/terms-and-conditions/",
+      "folder": "marketplaces/bigbasket",
+      "category": "terms",
+      "slug": "bigbasket_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Zepto",
+      "title": "Zepto Terms",
+      "url": "https://www.zeptonow.com/terms-of-use",
+      "folder": "marketplaces/zepto",
+      "category": "terms",
+      "slug": "zepto_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "AJIO",
+      "title": "AJIO Selfcare",
+      "url": "https://www.ajio.com/selfcare",
+      "folder": "marketplaces/ajio",
+      "category": "returns_refunds",
+      "slug": "ajio_selfcare_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Delhivery",
+      "title": "Delhivery Terms and Conditions",
+      "url": "https://www.delhivery.com/terms-and-conditions",
+      "folder": "courier/delhivery",
+      "category": "courier_terms",
+      "slug": "delhivery_terms_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Blue Dart",
+      "title": "Blue Dart Contact",
+      "url": "https://www.bluedart.com/contactus",
+      "folder": "courier/bluedart",
+      "category": "courier_support",
+      "slug": "bluedart_contact_official",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "DTDC",
+      "title": "DTDC Contact Us",
+      "url": "https://www.dtdc.in/contact-us.asp",
+      "folder": "courier/dtdc",
+      "category": "courier_support",
+      "slug": "dtdc_contact_official",
+      "max_linked_pdfs": 0
+    }
+  ],
+  "download_results": [
+    {
+      "source": {
+        "authority": "NCH",
+        "title": "National Consumer Helpline Home",
+        "url": "https://consumerhelpline.gov.in/public/",
+        "folder": "official/nch",
+        "category": "complaint_redressal",
+        "slug": "nch_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/nch/nch_home.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "NCH",
+        "title": "National Consumer Helpline About and Complaint Process",
+        "url": "https://consumerhelpline.gov.in/public/about",
+        "folder": "official/nch",
+        "category": "complaint_redressal",
+        "slug": "nch_about",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/nch/nch_about.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "NCH",
+        "title": "National Consumer Helpline Knowledge Base",
+        "url": "https://consumerhelpline.gov.in/public/knowledgebase",
+        "folder": "official/nch",
+        "category": "consumer_knowledge_base",
+        "slug": "nch_knowledge_base",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/nch/nch_knowledge_base.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "NCDRC",
+        "title": "NCDRC Home and Jurisdiction",
+        "url": "https://ncdrc.nic.in/",
+        "folder": "official/ncdrc",
+        "category": "consumer_commission",
+        "slug": "ncdrc_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/ncdrc/ncdrc_home.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "NCDRC",
+        "title": "NCDRC History",
+        "url": "https://ncdrc.nic.in/history.html",
+        "folder": "official/ncdrc",
+        "category": "consumer_commission",
+        "slug": "ncdrc_history",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/ncdrc/ncdrc_history.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "e-Jagriti",
+        "title": "e-Jagriti Online Filing Portal",
+        "url": "https://e-jagriti.gov.in/",
+        "folder": "official/e_jagriti",
+        "category": "online_filing",
+        "slug": "e_jagriti_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/e_jagriti/e_jagriti_home.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Department of Consumer Affairs",
+        "title": "Consumer Protection Acts and Rules",
+        "url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+        "folder": "official/consumer_affairs",
+        "category": "consumer_protection",
+        "slug": "consumer_affairs_consumer_protection",
+        "max_linked_pdfs": 4
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+          "error": "HTTPSConnectionPool(host='consumeraffairs.nic.in', port=443): Max retries exceeded with url: /acts-and-rules/consumer-protection (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Department of Consumer Affairs",
+        "title": "Legal Metrology Act",
+        "url": "https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009",
+        "folder": "official/consumer_affairs",
+        "category": "legal_metrology",
+        "slug": "legal_metrology_act",
+        "max_linked_pdfs": 3
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009",
+          "error": "HTTPSConnectionPool(host='consumeraffairs.nic.in', port=443): Max retries exceeded with url: /acts-and-rules/legal-metrology/the-legal-metrology-act-2009 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Department of Consumer Affairs",
+        "title": "Misleading Advertisements Guidance",
+        "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf",
+        "folder": "official/consumer_affairs",
+        "category": "misleading_advertisements",
+        "slug": "misleading_advertisements",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf",
+          "error": "HTTPSConnectionPool(host='consumeraffairs.nic.in', port=443): Max retries exceeded with url: /sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Department of Consumer Affairs",
+        "title": "Direct Selling Guidelines",
+        "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf",
+        "folder": "official/consumer_affairs",
+        "category": "direct_selling",
+        "slug": "direct_selling_guidelines",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf",
+          "error": "HTTPSConnectionPool(host='consumeraffairs.nic.in', port=443): Max retries exceeded with url: /sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "BIS",
+        "title": "Bureau of Indian Standards",
+        "url": "https://www.bis.gov.in/",
+        "folder": "official/standards",
+        "category": "standards",
+        "slug": "bis_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/standards/bis_home.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "India Post",
+        "title": "India Post Home",
+        "url": "https://www.indiapost.gov.in/",
+        "folder": "official/courier",
+        "category": "postal_complaints",
+        "slug": "india_post_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/courier/india_post_home.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "NPCI",
+        "title": "NPCI UPI",
+        "url": "https://www.npci.org.in/what-we-do/upi/product-overview",
+        "folder": "official/payment",
+        "category": "upi",
+        "slug": "npci_upi_overview",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.npci.org.in/what-we-do/upi/product-overview",
+          "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/upi/product-overview"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "NPCI",
+        "title": "NPCI UPI Dispute Redressal",
+        "url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism",
+        "folder": "official/payment",
+        "category": "upi_disputes",
+        "slug": "npci_upi_disputes",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism",
+          "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "RuPay",
+        "title": "RuPay Contactless and Cardholder Info",
+        "url": "https://www.rupay.co.in/",
+        "folder": "official/payment",
+        "category": "card_payments",
+        "slug": "rupay_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.rupay.co.in/",
+          "error": "403 Client Error: Forbidden for url: https://www.rupay.co.in/"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Amazon",
+        "title": "Amazon India Returns",
+        "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7",
+        "folder": "marketplaces/amazon",
+        "category": "returns",
+        "slug": "amazon_returns_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/amazon/amazon_returns_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Amazon",
+        "title": "Amazon A-to-z Guarantee",
+        "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV",
+        "folder": "marketplaces/amazon",
+        "category": "marketplace_guarantee",
+        "slug": "amazon_a_to_z_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/amazon/amazon_a_to_z_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Amazon",
+        "title": "Amazon Refunds",
+        "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=201117590",
+        "folder": "marketplaces/amazon",
+        "category": "refunds",
+        "slug": "amazon_refunds_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/amazon/amazon_refunds_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Amazon",
+        "title": "Amazon Conditions of Use",
+        "url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GLSBYFE9MGKKQXXM",
+        "folder": "marketplaces/amazon",
+        "category": "terms",
+        "slug": "amazon_conditions_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/amazon/amazon_conditions_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Flipkart",
+        "title": "Flipkart Return and Cancellation Policy",
+        "url": "https://www.flipkart.com/pages/returnpolicy",
+        "folder": "marketplaces/flipkart",
+        "category": "returns",
+        "slug": "flipkart_return_policy_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/flipkart/flipkart_return_policy_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Flipkart",
+        "title": "Flipkart Terms of Use",
+        "url": "https://www.flipkart.com/pages/terms",
+        "folder": "marketplaces/flipkart",
+        "category": "terms",
+        "slug": "flipkart_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/flipkart/flipkart_terms_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Myntra",
+        "title": "Myntra Terms of Use",
+        "url": "https://www.myntra.com/termsofuse",
+        "folder": "marketplaces/myntra",
+        "category": "terms",
+        "slug": "myntra_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/myntra/myntra_terms_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Myntra",
+        "title": "Myntra FAQ",
+        "url": "https://www.myntra.com/faq",
+        "folder": "marketplaces/myntra",
+        "category": "faq",
+        "slug": "myntra_faq_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/myntra/myntra_faq_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Meesho",
+        "title": "Meesho Terms and Conditions",
+        "url": "https://www.meesho.com/legal/terms-conditions",
+        "folder": "marketplaces/meesho",
+        "category": "terms",
+        "slug": "meesho_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.meesho.com/legal/terms-conditions",
+          "error": "403 Client Error: Forbidden for url: https://www.meesho.com/legal/terms-conditions"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Meesho",
+        "title": "Meesho Privacy Policy",
+        "url": "https://www.meesho.com/legal/privacy",
+        "folder": "marketplaces/meesho",
+        "category": "privacy",
+        "slug": "meesho_privacy_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.meesho.com/legal/privacy",
+          "error": "403 Client Error: Forbidden for url: https://www.meesho.com/legal/privacy"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "JioMart",
+        "title": "JioMart Terms and Conditions",
+        "url": "https://www.jiomart.com/terms-and-conditions",
+        "folder": "marketplaces/jiomart",
+        "category": "terms",
+        "slug": "jiomart_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/jiomart/jiomart_terms_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "JioMart",
+        "title": "JioMart Cancellation Return Refund",
+        "url": "https://www.jiomart.com/cancellation-return-refund-policy",
+        "folder": "marketplaces/jiomart",
+        "category": "returns_refunds",
+        "slug": "jiomart_returns_refunds_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/jiomart/jiomart_returns_refunds_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Blinkit",
+        "title": "Blinkit Terms",
+        "url": "https://blinkit.com/terms",
+        "folder": "marketplaces/blinkit",
+        "category": "terms",
+        "slug": "blinkit_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/blinkit/blinkit_terms_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Swiggy",
+        "title": "Swiggy Terms and Conditions",
+        "url": "https://www.swiggy.com/terms-and-conditions",
+        "folder": "marketplaces/swiggy_instamart",
+        "category": "terms",
+        "slug": "swiggy_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/swiggy_instamart/swiggy_terms_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "BigBasket",
+        "title": "BigBasket Terms and Conditions",
+        "url": "https://www.bigbasket.com/terms-and-conditions/",
+        "folder": "marketplaces/bigbasket",
+        "category": "terms",
+        "slug": "bigbasket_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/marketplaces/bigbasket/bigbasket_terms_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Zepto",
+        "title": "Zepto Terms",
+        "url": "https://www.zeptonow.com/terms-of-use",
+        "folder": "marketplaces/zepto",
+        "category": "terms",
+        "slug": "zepto_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.zeptonow.com/terms-of-use",
+          "error": "404 Client Error: Not Found for url: https://www.zepto.com:443/terms-of-use"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "AJIO",
+        "title": "AJIO Selfcare",
+        "url": "https://www.ajio.com/selfcare",
+        "folder": "marketplaces/ajio",
+        "category": "returns_refunds",
+        "slug": "ajio_selfcare_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.ajio.com/selfcare",
+          "error": "403 Client Error: Forbidden for url: https://www.ajio.com/selfcare"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Delhivery",
+        "title": "Delhivery Terms and Conditions",
+        "url": "https://www.delhivery.com/terms-and-conditions",
+        "folder": "courier/delhivery",
+        "category": "courier_terms",
+        "slug": "delhivery_terms_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/courier/delhivery/delhivery_terms_official.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Blue Dart",
+        "title": "Blue Dart Contact",
+        "url": "https://www.bluedart.com/contactus",
+        "folder": "courier/bluedart",
+        "category": "courier_support",
+        "slug": "bluedart_contact_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.bluedart.com/contactus",
+          "error": "404 Client Error: Not Found for url: https://www.bluedart.com/contactus"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "DTDC",
+        "title": "DTDC Contact Us",
+        "url": "https://www.dtdc.in/contact-us.asp",
+        "folder": "courier/dtdc",
+        "category": "courier_support",
+        "slug": "dtdc_contact_official",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.dtdc.in/contact-us.asp",
+          "error": "404 Client Error: Not Found for url: https://www.dtdc.com/contact-us.asp"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Department of Consumer Affairs",
+        "title": "Consumer Protection Acts and Rules",
+        "url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+        "folder": "official/consumer_affairs",
+        "category": "consumer_protection",
+        "slug": "consumer_affairs_consumer_protection",
+        "max_linked_pdfs": 4
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+          "error": "403 Client Error: Forbidden for url: https://consumeraffairs.nic.in/acts-and-rules/consumer-protection"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Department of Consumer Affairs",
+        "title": "Legal Metrology Act",
+        "url": "https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009",
+        "folder": "official/consumer_affairs",
+        "category": "legal_metrology",
+        "slug": "legal_metrology_act",
+        "max_linked_pdfs": 3
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009",
+          "error": "403 Client Error: Forbidden for url: https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Department of Consumer Affairs",
+        "title": "Misleading Advertisements Guidance",
+        "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf",
+        "folder": "official/consumer_affairs",
+        "category": "misleading_advertisements",
+        "slug": "misleading_advertisements",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf",
+          "error": "403 Client Error: Forbidden for url: https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Department of Consumer Affairs",
+        "title": "Direct Selling Guidelines",
+        "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf",
+        "folder": "official/consumer_affairs",
+        "category": "direct_selling",
+        "slug": "direct_selling_guidelines",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf",
+          "error": "403 Client Error: Forbidden for url: https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "BIS",
+        "title": "Bureau of Indian Standards",
+        "url": "https://www.bis.gov.in/",
+        "folder": "official/standards",
+        "category": "standards",
+        "slug": "bis_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/standards/bis_home.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "India Post",
+        "title": "India Post Home",
+        "url": "https://www.indiapost.gov.in/",
+        "folder": "official/courier",
+        "category": "postal_complaints",
+        "slug": "india_post_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/courier/india_post_home.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "NPCI",
+        "title": "NPCI UPI",
+        "url": "https://www.npci.org.in/what-we-do/upi/product-overview",
+        "folder": "official/payment",
+        "category": "upi",
+        "slug": "npci_upi_overview",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.npci.org.in/what-we-do/upi/product-overview",
+          "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/upi/product-overview"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "NPCI",
+        "title": "NPCI UPI Dispute Redressal",
+        "url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism",
+        "folder": "official/payment",
+        "category": "upi_disputes",
+        "slug": "npci_upi_disputes",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism",
+          "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "RuPay",
+        "title": "RuPay Contactless and Cardholder Info",
+        "url": "https://www.rupay.co.in/",
+        "folder": "official/payment",
+        "category": "card_payments",
+        "slug": "rupay_home",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.rupay.co.in/",
+          "error": "403 Client Error: Forbidden for url: https://www.rupay.co.in/"
+        }
+      ]
+    }
+  ],
+  "sources_attempted_this_run": 9,
+  "sources_downloaded_this_run": 2,
+  "files_saved_this_run": 2
+}

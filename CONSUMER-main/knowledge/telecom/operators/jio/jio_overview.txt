@@ -1,0 +1,2605 @@
+Jio - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Indian multinational telecommunications company
+Not to be confused with
+Reliance Communications
+or
+Jio Platforms
+.
+Reliance Jio Infocomm Limited
+Headquarters in Reliance Corporate Park,
+Navi Mumbai
+Trade name
+Jio
+Type
+Subsidiary
+Industry
+Telecommunications
+Founded
+15
+February 2007
+;
+19 years ago
+(
+2007-02-15
+)
+Founder
+Mukesh Ambani
+Headquarters
+Reliance Corporate Park, Ghansoli, Navi Mumbai, Maharashtra
+,
+India
+Area served
+India
+Key people
+Akash Ambani
+(Chairman)
+[
+1
+]
+Isha Ambani
+(Managing Director)
+Products
+Landline
+Fixed-line telephone
+Mobile telephony
+Wireless broadband
+Internet services
+Mobile phones
+OTT services
+Revenue
+₹
+172,317 crore
+(US$18
+billion) (2026)
+Operating income
+₹
+76,255 crore
+(US$8.0
+billion) (2026)
+[
+2
+]
+Net income
+₹
+30,053 crore
+(US$3.1
+billion) (2026)
+[
+3
+]
+Total assets
+₹
+487,405 crore
+(US$51
+billion) (2024)
+[
+4
+]
+Total equity
+₹
+236,369 crore
+(US$25
+billion) (2024)
+[
+5
+]
+Owner
+Reliance Industries
+Members
+52.4
+crore
+(524 million)
+(June 2026)
+Parent
+Jio Platforms
+[
+6
+]
+Subsidiaries
+LYF
+Website
+jio
+.com
+Reliance Jio Infocomm Limited
+(
+d/b/a
+Jio
+) is an Indian
+telecommunications
+company, a
+subsidiary
+of
+Jio Platforms
+. The company is headquartered in
+Navi Mumbai
+. It operates a national
+LTE
+network with coverage across all 22
+telecom circles
+. Jio offers
+4G
+,
+4G+
+and
+5G NR
+services all over India. Its
+6G
+service is in the works.
+[
+7
+]
+[
+8
+]
+[
+9
+]
+[
+10
+]
+Jio was soft launched on 27 December 2015 with a beta for partners and employees,
+[
+11
+]
+[
+12
+]
+and became publicly available on 5 September 2016. It is the
+largest mobile network operator in India
+and the
+third largest mobile network operator in the world
+with over 52.4
+crore
+(524 million) subscribers.
+[
+13
+]
+[
+14
+]
+History
+Prime Minister
+Narendra Modi
+visits the stall of Jio with
+Ashwini Vaishnaw
+, Minister of Railways and Communications along with
+Mukesh Ambani
+and Akash Ambani on October 1, 2022.
+The company was registered in
+Ambawadi
+, Ahmedabad, Gujarat, on 15 February 2007 as Infotel Broadband Services Limited (IBSL). In June 2010,
+Reliance Industries
+(RIL) bought a 95% stake in IBSL for
+₹
+4,800 crore
+(US$500
+million)
+. Although unlisted, IBSL was the only company that won broadband spectrum in all 22 circles in India in the 4G auction that took place earlier that year.
+[
+15
+]
+Later continuing as RIL's telecom subsidiary, Infotel Broadband Services Limited was renamed as Reliance Jio Infocomm Limited (RJIL) in January 2013.
+[
+16
+]
+In June 2015, Jio announced that it would start its operations throughout the country by the end of 2015.
+[
+17
+]
+However, four months later in October, the company postponed the launch to the first quarter of the financial year 2016–2017.
+[
+18
+]
+Later, in July 2015, a
+PIL
+filed in the
+Supreme Court
+by an NGO called the
+Centre for Public Interest Litigation
+, through
+Prashant Bhushan
+, challenged the grant of a pan-India license to Jio by the
+Government of India
+. The PIL also alleged that the firm was being allowed to provide voice telephony along with its
+4G data service
+, by paying an additional fee of just
+₹
+165.8 crore
+(US$17
+million)
+which was arbitrary and unreasonable, and contributed to a loss of
+₹
+2,284.2 crore
+(US$240
+million)
+to the exchequer.
+[
+19
+]
+[
+20
+]
+The Indian
+Department of Telecommunications
+(DoT), however, explained that the rules for 3G and BWA spectrum didn't restrict BWA winners from providing voice telephony. As a result, the PIL was revoked, and the accusations were dismissed.
+[
+21
+]
+The 4G services were launched internally on 27 December 2015.
+[
+22
+]
+The company commercially launched its 4G services on 5 September 2016,
+[
+11
+]
+offering free data and voice services until 31 December,
+[
+23
+]
+which was later extended until 31 March 2017.
+[
+24
+]
+[
+25
+]
+Within the first month, Jio announced that it had acquired 1.6 crore (16 million) subscribers
+[
+26
+]
+and has crossed 5 crore (50 million) subscriber mark in 83 days since its launch,
+[
+27
+]
+subsequently crossing 100 million subscribers on 22 February 2017.
+[
+28
+]
+By October 2017
+[
+update
+]
+, it had about 13 crore (130 million) subscribers.
+[
+29
+]
+On 5 October 2022, it has launched 5G services to
+Delhi
+,
+Mumbai
+,
+Kolkata
+and
+Chennai
+.
+[
+30
+]
+As of March 2023, Jio 5G service was available in 365 cities across India.
+[
+31
+]
+As of April 2023, 5G service was available across 2,500+ cities in India.
+[
+32
+]
+In August 2023, it was announced that Jio had completed its rollout of 5G services nationwide, ahead of schedule.
+[
+33
+]
+Network
+Spectrum frequency holding summary
+A
+cell tower
+carrying antennas of Jio cellular network in
+West Bengal
+, India
+Jio owns spectrum in 850
+MHz and 1,800
+MHz bands in India's 22
+circles
+, and also owns pan-India licensed 2,300
+MHz spectrum. The spectrum is valid until 2035.
+[
+34
+]
+Jio also picked up pan-India licenses in the 700
+MHz, 3,500
+MHz and 26
+GHz spectrum bands in the DoT's 2022 5G auction.
+[
+35
+]
+Telecom circle
+coverage
+FD-
+NR
+700
+MHz
+Band n28
+FD-
+LTE
+850
+MHz
+Band 5
+FD-
+LTE
+1800
+MHz
+Band 3
+TD-
+LTE
+2300
+MHz
+Band 40
+TD-
+NR
+3500
+MHz
+Band n78
+TD-
+NR
+26
+GHz
+Band n258
+Delhi
+Mumbai
+Kolkata
+Andhra Pradesh
+&
+Telangana
+Gujarat
+Karnataka
+Maharashtra
+&
+Goa
+Tamil Nadu
+Haryana
+Kerala
+Madhya Pradesh
+&
+Chhattisgarh
+Punjab
+Rajasthan
+Uttar Pradesh (East)
+Uttar Pradesh (West)
+West Bengal
+Assam
+Bihar
+&
+Jharkhand
+Himachal Pradesh
+Jammu and Kashmir
+&
+Ladakh
+North East
+Odisha
+Partnerships
+Logo of Jio True 5G
+Jio shares spectrum with
+Reliance Communications
+. The sharing deal is for 800
+MHz band across seven circles other than the 10 circles for which Jio already owns.
+[
+36
+]
+Sep 2014 – Acquired undisclosed stake in
+Airspan Networks
+for US$5 mn.
+[
+37
+]
+[
+38
+]
+Deploys Airspan's small cells throughout the network roll out phase.
+[
+39
+]
+[
+40
+]
+Sep 2016 – Jio signed a pact with
+BSNL
+for intra-circle roaming which would enable users of the operators to use each other's 4G and 2G spectrum in
+national roaming
+mode.
+[
+41
+]
+Feb 2017 – Jio announced a partnership with
+Samsung
+to work on LTE – Advanced Pro and 5G.
+[
+42
+]
+Feb 2017 – Partnered with
+Ciena
+to deploy transport
+SDN
+architecture.
+[
+43
+]
+[
+44
+]
+Reliance Jio also partnered with several OSS (
+Operations Support Systems
+) & BSS (
+Business Support System
+) companies for the deployment of services, like:
+SAP
+,
+HP
+,
+IBM
+,
+Ericsson
+,
+Rancore
+, Estel Technologies,
+Subex
+and Intec Telecom Systems. However, the finalized OSS firms were Ericsson, HP and Friendly Technologies.
+[
+45
+]
+[
+46
+]
+Sep 2020 – Partners with
+Cisco Systems
+for
+5G
+deployment.
+[
+47
+]
+Sep 2020 – Announces partnership with HFCL to deploy
+Fiber-optic communication
+to support the rollout of
+FTTx
+services.
+[
+48
+]
+Oct 2022 – Contracts with
+Nokia
+&
+Ericsson
+for supplying standalone
+5G
+network equipment.
+[
+49
+]
+Summit Digitel Infrastructure
+Summit Digitel Infrastructure (formerly known as Reliance Jio Infratel Private Limited) operates 136,000 telecom sites. This division has been divested to Tower Infrastructure Trust, which is owned by
+Brookfield Asset Management
+, for a consideration of
+₹
+25,215 crore
+(US$2.6
+billion)
+.
+[
+50
+]
+Products and services
+Mobile broadband
+The company launched its 4G broadband services throughout India in September 2016.
+[
+18
+]
+It was slated to be released in December 2015 after some reports said that the company was waiting to receive final permits from the government.
+[
+17
+]
+Jio offers fourth-generation (4G) data and voice services, along with peripheral services like instant messaging and streaming movies and music.
+[
+51
+]
+On 5 October 2022, it launched 5G services to
+Delhi
+,
+Mumbai
+,
+Kolkata
+,
+Chennai
+,
+Varanasi
+,
+Siliguri
+,
+Bangalore
+,
+Hyderabad
+and
+Nagpur
+.
+[
+30
+]
+JioFiber
+In August 2018, Jio began to test a new
+triple play
+fiber to the home
+service known tentatively as Jio GigaFiber, including
+broadband internet
+with speeds ranging from 100 to 1000
+Mbit/s, as well as television and landline telephone services.
+[
+52
+]
+[
+53
+]
+In August 2019, it was announced that the service would officially launch on 5 September 2019 as JioFiber, in honour of the company's third anniversary.
+[
+54
+]
+[
+55
+]
+[
+56
+]
+Jio also announced plans to offer streaming of films still in theatres ("First Day First Show") to eligible JioFiber subscribers.
+[
+57
+]
+[
+58
+]
+In the year 2015, the company has a network of more than
+250,000
+km (160,000
+mi)
+of
+fiber optic cables
+in the country, over which it will be partnering with local cable operators to get broader connectivity for its broadband services.
+[
+59
+]
+JioBusiness
+In March 2021, the company launched connectivity solutions for businesses bundled with services provided by
+Jio Platforms
+,
+Reliance Retail
+, and
+Office 365
+.
+[
+60
+]
+[
+61
+]
+JioAirFiber
+In August 2023, in the Reliance AGM, the chairman of Reliance announced that the JioAirFiber eliminates the need for the last mile fiber cable connectivity by making use of the Jio 5G wireless network, and the product was made available for purchase from 19 September 2023.
+[
+62
+]
+[
+63
+]
+The company has started installing JioAirFiber devices from 1 October 2023.
+[
+citation needed
+]
+Jio SpaceFiber
+On 27 October 2023, Jio launched its satellite-based GigaFiber internet service in India.
+[
+64
+]
+Jio Branded Devices
+LYF smartphones
+Main article:
+LYF
+An image of LYF Water 2 phone with
+IPS
+display
+[
+65
+]
+In June 2015, Jio entered into an agreement with domestic handset maker
+Intex
+to supply 4G handsets capable of voice over LTE (VoLTE).
+[
+66
+]
+However, in October 2015, Jio announced that it would be launching its own mobile handset brand named
+LYF
+.
+[
+67
+]
+[
+68
+]
+[
+69
+]
+On 25 January 2016, the company launched its LYF smartphone
+[
+70
+]
+series starting with Water 1, through its chain of electronic retail outlets,
+Reliance Retail
+.
+[
+71
+]
+Three more handset models have been released so far, namely Water 2,
+[
+72
+]
+Earth 1,
+[
+73
+]
+and Flame 1.
+[
+74
+]
+[
+75
+]
+Jio Phone
+Main articles:
+JioPhone
+and
+JioPhone 2
+Illustration of a JioPhone
+JioPhone
+is a line of
+feature phones
+marketed by Jio. The first model, released in August 2017 (with public pre-orders beginning 24 August 2017), was positioned as an "affordable" LTE-compatible feature phone. It runs on the
+KaiOS
+platform (derived from the defunct
+Firefox OS
+), and includes a 2.4-inch display, a dual-core processor, 4
+GB of internal storage,
+near-field communication
+support, a suite of Jio-branded apps (including the
+voice assistant
+HelloJio), and a Jio-branded
+application store
+. It also supports a "TV cable" accessory for output to an external display.
+[
+76
+]
+[
+77
+]
+[
+78
+]
+In July 2018, the company unveiled the
+JioPhone 2
+, an updated model in a
+keyboard bar
+form factor with a QWERTY keyboard and horizontal display. Jio also announced that
+Facebook
+,
+WhatsApp
+, and
+YouTube
+apps would become available for the two phones.
+[
+79
+]
+JioPhone Next
+The JioPhone Next is a fully-featured
+Android
+smartphone co-developed with
+Google
+as part of Jio's long-term partnership. It was announced on 24 June 2021, by
+Mukesh Ambani
+. The budget smartphone was launched in India on 4 November 2021.
+[
+80
+]
+[
+81
+]
+[
+82
+]
+[
+83
+]
+The JioPhone Next will be run by the indigenously built Pragati OS based on the
+Android Go
+operating system. This phone is classified as an entry-level phone and is aimed at replacing
+feature phones
+and providing basic
+smartphone
+services efficiently at low specifications.
+[
+84
+]
+Jio Bharat
+Reliance Jio
+has introduced a budget-friendly
+4G phone
+called Jio Bharat at an affordable price of ₹999. The phone's sales commenced on 7 July 2023, and
+Reliance Jio
+aims to eliminate 2G technology from India through the widespread adoption of this device. The Jio Bharat Phone is specifically targeted towards individuals who are unable to afford expensive smartphones but still rely on basic features.
+[
+85
+]
+[
+86
+]
+JioFi
+JioFi is a portable broadband device brought by
+Reliance Digital
+. The JioFi device allows multiple users and mobile devices to access Jio's 4G high-speed internet connectivity and create a personal
+Wi-Fi hotspot
+.
+[
+citation needed
+]
+JioDive
+Reliance Jio
+has unveiled its JioDive
+virtual reality
+(VR) headset in India, to help
+IPL
+fans watch a match in 360-degree stadium view while sitting in front of a 100-inch screen. A smartphone-based virtual reality headset for
+entertainment
+,
+learning
+,
+gaming
+, and
+wellness
+.
+[
+87
+]
+JioTag
+JioTag, an affordable
+object tracker
+, was introduced by
+Reliance Jio
+in India. By utilizing
+Bluetooth 5.1
+technology and the JioThings app, JioTag assists in locating lost items and alerts you when you inadvertently leave your connected device behind.
+[
+88
+]
+JioTag Air
+This tracking device was launched in July 2024 by Reliance Jio, as a successor to JioTag. It features
+Bluetooth 5.3
+technology. It supports both iOS (
+iOS 14
+and above) and Android (version 9 and above) platforms.
+[
+89
+]
+[
+90
+]
+Jionet Wi-Fi
+Prior to its pan-India launch of 4G data and telephony services, the firm has started providing free
+Wi-Fi
+hotspot services in cities throughout India including
+Surat
+,
+Ahmedabad
+in
+Gujarat
+, and
+Visakhapatnam
+in
+Andhra Pradesh
+,
+[
+91
+]
+Indore
+,
+Jabalpur
+,
+Dewas
+and
+Ujjain
+[
+92
+]
+in
+Madhya Pradesh
+, select locations of
+Mumbai
+in
+Maharashtra
+,
+[
+93
+]
+Kolkata
+in
+West Bengal
+,
+[
+94
+]
+Lucknow
+in
+Uttar Pradesh
+,
+[
+95
+]
+Bhubaneswar
+in
+Odisha
+,
+[
+96
+]
+Mussoorie
+in
+Uttarakhand
+,
+[
+97
+]
+[
+unreliable source?
+]
+Collectorate's Office in
+Meerut
+,
+[
+98
+]
+and at MG Road in
+Vijayawada
+[
+99
+]
+among others.
+In March 2016, Jio started providing free
+Wi-Fi
+internet to spectators at six cricket stadiums hosting the
+2016 ICC World Twenty20
+matches.
+[
+100
+]
+Jio apps
+Jio sim card pouch as distributed by Reliance Jio Infocomm
+In May 2016, Jio launched a bundle of multimedia apps on
+Google Play
+as part of its upcoming 4G services. While the apps are available to download for everyone, a user will require a Jio
+SIM card
+to use some of them. Notable apps include:
+MyJio
+– manage Jio account and digital services associated with it
+JioSphere
+(formerly JioPages)
+– a web browser for
+Android
+device with VPN
+[
+101
+]
+[
+102
+]
+JioChat
+– instant messaging app
+[
+103
+]
+JioCinema
+– OTT platform
+[
+104
+]
+JioCloud
+– cloud-based backup tool
+[
+105
+]
+JioHealthHub
+– health services app
+JioNews
+– e-reader for news
+[
+106
+]
+JioMeet
+– video-conferencing platform
+[
+107
+]
+JioMoney
+– online payments/wallet app
+[
+108
+]
+JioSaavn
+– for online and offline music streaming in English and Indian languages
+JioSecurity
+– security app
+[
+citation needed
+]
+JioTV
+– TV Channels streaming service
+JioCall
+– VoLTE phone simulator
+[
+109
+]
+JioMart
+– online shopping app
+[
+110
+]
+JioGames
+– gaming platform
+[
+citation needed
+]
+JioHome
+– home entertainment
+[
+citation needed
+]
+JioThings
+– device tracking
+[
+citation needed
+]
+JioGate
+– housing society solutions
+[
+citation needed
+]
+JioPOS Lite
+– platform for partners to earn
+[
+citation needed
+]
+Controversies
+Issue with incumbents
+In September 2016, the
+Telecom Regulatory Authority of India
+(TRAI) summoned Jio and the country's existing telecom operators like
+Airtel
+,
+Vodafone
+, and
+Idea Cellular
+to meet and discuss an issue regarding the interconnection between the operators. This was a result of Jio complaining to TRAI and
+Department of Telecom
+(DoT) about other operators not honoring their commercial agreements to let Jio use their network resources. The company further added that the operators are trying to sabotage its entry into the telecom scene. However, DoT dismissed the request and directed TRAI to help settle the dispute amicably. Moreover, the
+Cellular Operators Association of India
+(COAI) requested TRAI to include all the operators in the discussion instead of the three.
+[
+111
+]
+The incumbent operators had previously approached the country's
+PMO
+to reiterate their stance that they "
+are in no way obliged or in any position to entertain Jio's requests for interconnection points as they do not have either the network or the financial resources to terminate the latter's humongous volumes of potentially asymmetric voice traffic.
+" Responding to this, Mukesh Ambani, owner of Jio, said, "
+All operators have publicly said last week that they will provide this (interconnect and MNP). So, we are waiting. These are all great companies. They have their own reputations to protect. I am confident they won't violate the law.
+" Commenting about number portability, he added, "The number belongs to the consumer. No operator can cause trouble if they want to change operators."
+[
+112
+]
+However, on 12 September 2016, Idea Cellular agreed to allow Jio to use 196 of its interconnection access points.
+[
+113
+]
+Subscriber data breach
+On 10 July 2017, Jio's customer data was allegedly leaked on the website magicapk.com.
+[
+114
+]
+The website was suspended shortly after the news of the breach broke out.
+[
+115
+]
+Farmers' boycott
+During the
+2020–2021 Indian Farmers' Protest
+, farmers across multiple states in northern part of India boycotted and vandalized Jio's towers owing to allegations of Reliance Industries's support to controversial farm laws of India.
+[
+116
+]
+Jio blamed its competitors Airtel and Vodafone for spreading rumours of "Reliance being an undue beneficiary in the farm bills", an allegation both the companies denied.
+[
+117
+]
+The company saw a loss of around 25 lakh (2.5 million) subscribers in Punjab and Haryana between November and December 2020.
+[
+118
+]
+Bird deaths
+See also:
+5G misinformation
+In January 2021, several social media posts started circulating linking bird deaths to Jio's 5G network trials. The claims were found to be fake as 5G trials were not yet permitted. The cause of the death of the birds is determined as due to an outbreak of
+bird flu
+.
+[
+119
+]
+See also
+Jio Payments Bank
+JioSaavn
+List of telecom companies in India
+List of mobile network operators
+Reliance Foundation
+Reliance Industries Limited
+Telecommunications in India
+References
+↑
+"Mukesh Ambani steps down as Reliance Jio director, Akash Ambani appointed as chairman"
+.
+Moneycontrol
+. Money control. 28 June 2022.
+Archived
+from the original on 28 June 2022
+. Retrieved
+28 June
+2022
+.
+↑
+"Reliance Jio Infocomm Limited Standalone Financial Statements 2023–24"
+(PDF)
+.
+Reliance Industries Limited
+. Retrieved
+21 April
+2024
+.
+↑
+"Reliance Jio Infocomm Limited Standalone Financial Statements 2023–24"
+(PDF)
+.
+Reliance Industries Limited
+. Retrieved
+21 April
+2024
+.
+↑
+"Reliance Jio Infocomm Limited Standalone Financial Statements 2023–24"
+(PDF)
+.
+Reliance Industries Limited
+. Retrieved
+21 April
+2024
+.
+↑
+"Reliance Jio Infocomm Limited Standalone Financial Statements 2023–24"
+(PDF)
+.
+Reliance Industries Limited
+. Retrieved
+21 April
+2024
+.
+↑
+"RIL's new digital unit christened Jio Platforms Ltd"
+.
+Archived
+from the original on 3 February 2021
+. Retrieved
+22 April
+2020
+.
+↑
+Reliance Jio Infocomm Limited
+,
+Cellular Operators Association of India
+, archived from
+the original
+on 24 August 2019
+, retrieved
+19 November
+2015
+↑
+Reliance Jio Infocomm plans to launch pan-India LTE
+, RCR Wireless News, 16 June 2015,
+archived
+from the original on 24 August 2019
+, retrieved
+21 October
+2015
+↑
+"Reliance Jio completes 5G planning for 1,000 cities in India"
+.
+RCR Wireless News
+. 25 January 2022.
+Archived
+from the original on 16 February 2022
+. Retrieved
+15 February
+2022
+.
+↑
+"Indian Telecom Jio partners with University of Oulu over development of 6G technology"
+,
+indianexpress
+, 21 January 2022,
+archived
+from the original on 31 October 2022
+, retrieved
+31 October
+2022
+1
+2
+"Jio opens Mobile Number Portability, urges incumbent telcos to fulfil regulatory obligations"
+.
+India Today
+. 3 September 2016.
+Archived
+from the original on 3 September 2016
+. Retrieved
+3 September
+2016
+.
+↑
+"Reliance Jio Infocomm launches 4G services for its employees"
+,
+The Economic Times
+, 27 December 2015,
+archived
+from the original on 30 December 2015
+, retrieved
+29 December
+2015
+↑
+"Reliance Jio Q2 Results: ARPU rises to ₹211.40, subscriber base tops 500 million - CNBC TV18"
+.
+CNBCTV18
+. 17 October 2025
+. Retrieved
+20 October
+2025
+.
+↑
+Cite error: The named reference
+Q4-FY-2024-25
+was invoked but never defined (see the
+help page
+).
+↑
+"Reliance Industries buys 95% stake in Infotel Broadband for Rs 4,800 cr"
+.
+The Economic Times
+. 12 June 2010.
+Archived
+from the original on 16 March 2021
+. Retrieved
+14 April
+2021
+.
+↑
+"RIL's Infotel Broadband renamed Reliance Jio Infocomm"
+,
+The Times of India
+,
+The Times of India
+Business Line, 31 January 2013,
+archived
+from the original on 9 September 2016
+, retrieved
+27 October
+2015
+1
+2
+"Reliance Jio to launch commercial operations by December; to alter telecom industry landscape, say experts"
+,
+The Economic Times
+, 13 June 2015,
+archived
+from the original on 21 August 2016
+, retrieved
+26 October
+2015
+1
+2
+Reliance Jio likely to delay its December pan-India launch
+,
+Live Mint
+, 19 October 2015,
+archived
+from the original on 8 June 2016
+, retrieved
+21 October
+2015
+↑
+"Petition against 4G licence to Reliance Jio: Apex court seeks Centre's reply"
+.
+The Hindu
+. 9 May 2014.
+Archived
+from the original on 11 May 2014
+. Retrieved
+10 June
+2014
+.
+↑
+"Reliance Jio goes for the kill"
+.
+Rediff.com
+. 17 January 2014.
+Archived
+from the original on 28 September 2018
+. Retrieved
+10 June
+2014
+.
+↑
+"DoT refutes CAG's charges of favoring Reliance Jio by allowing it to convert its ISP permit into a unified license"
+.
+The Economic Times
+. Archived from
+the original
+on 7 July 2014
+. Retrieved
+4 July
+2014
+.
+↑
+"Now Reliance employees can refer friends, family for Jio 4G services"
+.
+Zee Business
+. 5 May 2016.
+Archived
+from the original on 24 July 2020
+. Retrieved
+24 July
+2020
+.
+↑
+Bhushan, Kul (1 September 2016).
+"Reliance Jio Welcome Offer launched, offers free access to its Jio services till December 31, 2016"
+.
+BGR India
+.
+Archived
+from the original on 24 July 2020
+. Retrieved
+24 July
+2020
+.
+↑
+Mudgill, Amit.
+"Jio welcome offer extended: Mukesh Ambani extends Reliance Jio freebies, RIL shares up 1.28 per cent to Rs 1005.50"
+.
+The Economic Times
+.
+Archived
+from the original on 2 April 2022
+. Retrieved
+24 July
+2020
+.
+↑
+"How Reliance Jio's Entry Tied Regulatory Knots Around India's Telecom Ecosystem"
+.
+thewire.in
+.
+Archived
+from the original on 25 July 2020
+. Retrieved
+24 July
+2020
+.
+↑
+"Reliance Jio creates world record: 16 million subscribers in one month"
+.
+The Indian Express
+. 9 October 2016.
+Archived
+from the original on 10 October 2016
+. Retrieved
+9 October
+2016
+.
+↑
+"Reliance Jio crosses 50 million subscriber mark in 83 days"
+. 29 November 2016.
+Archived
+from the original on 30 November 2016
+. Retrieved
+30 November
+2016
+.
+↑
+Doval, Pankaj (22 February 2017).
+"Reliance Jio crosses 100 million users within 6 months"
+.
+The Times of India
+. Bennett, Coleman & Co. Ltd.
+Archived
+from the original on 21 February 2017
+. Retrieved
+22 February
+2017
+.
+↑
+"Dirt-cheap mobile data is a thrill for Indian consumers"
+.
+The Economist
+. 5 October 2017.
+Archived
+from the original on 6 October 2017
+. Retrieved
+6 October
+2017
+.
+1
+2
+"Jio 5G rollout will begin today, but only for limited users"
+.
+India Today
+. 4 October 2022.
+Archived
+from the original on 20 October 2022
+. Retrieved
+20 October
+2022
+.
+↑
+"Jio's True 5G services now available in 365 cities – ET Telecom"
+.
+Archived
+from the original on 20 March 2023
+. Retrieved
+20 March
+2023
+.
+↑
+"Jio 5G is now available in 2,691 cities"
+.
+Archived
+from the original on 23 April 2023
+. Retrieved
+23 April
+2023
+.
+↑
+"Indian telco Jio reaches nationwide 5G target ahead of schedule"
+. 16 August 2023.
+Archived
+from the original on 16 August 2023
+. Retrieved
+16 August
+2023
+.
+↑
+Pan India Telecom Spectrum holding chart 2022 (updated)
+, Only Tech, August 2022,
+archived
+from the original on 8 October 2022
+, retrieved
+7 October
+2022
+↑
+"DoT completes USD19bn 5G auction"
+.
+Telegeography
+.
+Archived
+from the original on 7 October 2022
+. Retrieved
+7 October
+2022
+.
+↑
+Reliance Jio to share RCom spectrum in seven circles
+,
+The Hindu
+Business Line, 16 October 2015,
+archived
+from the original on 4 July 2023
+, retrieved
+27 October
+2015
+↑
+"Rel Jio ties with Israel's Airspan for 4G equipment"
+.
+ETTelecom.com
+.
+Archived
+from the original on 2 April 2022
+. Retrieved
+10 March
+2021
+.
+↑
+"Everything to know about companies acquired by RIL to complement Jio's operations – Airspan Networks"
+.
+ETTelecom.com
+.
+Archived
+from the original on 7 July 2022
+. Retrieved
+10 March
+2021
+.
+↑
+Biswas, Rudradeep.
+"Reliance Jio's deployment of 150,000 small cells is largest in the world: Senior VP of Wireless networks"
+.
+Telecomtalk
+.
+Archived
+from the original on 28 July 2021
+. Retrieved
+10 March
+2021
+.
+↑
+"Airspan Partners with Jio for Deployment of Ultra-Dense Heterogeneous LTE-Advanced"
+.
+Airspan.com
+.
+Archived
+from the original on 4 March 2021
+. Retrieved
+10 March
+2021
+.
+↑
+"Reliance Jio Signs Deal With BSNL to Address One of Its Potential Pain Points"
+. 13 September 2016.
+Archived
+from the original on 13 September 2016
+. Retrieved
+13 September
+2016
+.
+↑
+"Reliance Jio ties up with Samsung to 'bring' 5G in India"
+.
+Gadget Now
+.
+Archived
+from the original on 9 May 2017
+. Retrieved
+9 May
+2017
+.
+↑
+"Jio transforms one of the world's largest self-healing optical networks with Ciena – Ciena"
+.
+www.ciena.com
+.
+Archived
+from the original on 25 February 2021
+. Retrieved
+10 March
+2021
+.
+↑
+"Reliance Jio, Ciena partner to make optical network future ready"
+.
+ETTelecom.com
+.
+Archived
+from the original on 7 July 2022
+. Retrieved
+10 March
+2021
+.
+↑
+"Reliance Jio teams up with 20 tech firms for OSS/BSS"
+.
+TeleAnalysis
+. 22 April 2014
+. Retrieved
+26 January
+2021
+.
+↑
+"Ericsson successfully deploys OSS fulfillment suite for Jio in India"
+.
+Ericsson
+. March 2017.
+Archived
+from the original on 14 August 2020
+. Retrieved
+26 January
+2021
+.
+↑
+"Telecom news India, Airtel news, Jio news, Vodafone idea news"
+.
+www.communicationstoday.co.in
+. 25 September 2020.
+Archived
+from the original on 2 July 2022
+. Retrieved
+10 March
+2021
+.
+↑
+"HFCL deploying Jio FTTH network across 300 cities: Report"
+.
+ETTelecom.com
+.
+Archived
+from the original on 2 June 2021
+. Retrieved
+10 March
+2021
+.
+↑
+"Reliance Jio to deploy 5G gear from Nokia & Ericsson"
+.
+currentaffairs.adda247.com
+.
+Archived
+from the original on 20 October 2022
+. Retrieved
+20 October
+2022
+.
+↑
+"RIL Says Brookfield Infrastructure's Rs 25,215 Investment In Tower Infrastructure Trust Has Been Completed"
+.
+Moneycontrol
+. September 2020.
+Archived
+from the original on 1 November 2020
+. Retrieved
+10 March
+2021
+.
+↑
+"Reliance to launch Jio by Dec, set to kick off pricing war"
+,
+Business Standard
+, 13 June 2015,
+archived
+from the original on 21 June 2016
+, retrieved
+26 October
+2015
+↑
+"Reliance Jio Fiber broadband plans announced: Check tariffs, speed, offers"
+.
+LiveMint
+. 5 September 2019.
+Archived
+from the original on 10 January 2020
+. Retrieved
+12 September
+2019
+.
+↑
+Agarwal, Nikhil (21 August 2018).
+"Reliance Jio GigaFiber broadband preview offer launched. It is free for 3 months"
+.
+LiveMint
+.
+Archived
+from the original on 5 January 2019
+. Retrieved
+12 September
+2019
+.
+↑
+"JioFiber now available: Here's how you can book new connection, get free TV and 4K Set Top Box"
+.
+India Today
+. 10 September 2019.
+Archived
+from the original on 3 December 2019
+. Retrieved
+12 September
+2019
+.
+↑
+"Reliance JioGigaFiber unveils on September 5: A comparison with BSNL, ACT, Airtel Fiber broadband plans"
+.
+The Indian Express
+. 21 August 2019.
+Archived
+from the original on 13 March 2020
+. Retrieved
+21 August
+2019
+.
+↑
+Amritanshu Mukherjee (14 August 2019).
+"Jio has changed name of GigaFiber broadband to JioFiber but why"
+.
+India Today
+.
+Archived
+from the original on 29 November 2019
+. Retrieved
+8 June
+2020
+.
+↑
+"Mukesh Ambani unveils Jio Fiber & the mother of all set top boxes"
+.
+The Economic Times
+. 14 August 2019.
+Archived
+from the original on 14 August 2020
+. Retrieved
+21 August
+2019
+.
+↑
+Jio Set Top Box Demo | Zero Latency 4K Online Gaming
+, 12 August 2019,
+archived
+from the original on 3 September 2019
+, retrieved
+21 August
+2019
+↑
+Reliance Jio looking to partner local cable firms in broadband push
+,
+Livemint
+, 29 October 2015,
+archived
+from the original on 1 September 2016
+, retrieved
+5 November
+2015
+↑
+"Reliance Jio introduces new fiber broadband plans for small, medium businesses"
+.
+mint
+. 9 March 2021.
+Archived
+from the original on 10 March 2021
+. Retrieved
+10 March
+2021
+.
+↑
+"Reliance Jio launches Jio Business services to tap 50 million MSMBs in India"
+.
+ETTelecom.com
+.
+Archived
+from the original on 10 March 2021
+. Retrieved
+10 March
+2021
+.
+↑
+"What is Jio AirFiber? When will it be available and what are the charges?"
+.
+www.jio.com
+. Retrieved
+28 August
+2023
+.
+↑
+"Jio AirFiber announced: Launch date confirmed, price, availability, benefits and everything you need to know"
+.
+India Today
+. 28 August 2023.
+Archived
+from the original on 28 August 2023
+. Retrieved
+28 August
+2023
+.
+↑
+"Reliance Jio Launches Jio SpaceFiber- India's First Satellite-based GigaFiber Internet Service"
+.
+News18
+. 27 October 2023.
+Archived
+from the original on 27 October 2023
+. Retrieved
+27 October
+2023
+.
+↑
+"Water 2 Smartphone"
+,
+MyLYF.com
+, 11 May 2016, archived from
+the original
+on 10 April 2016
+, retrieved
+11 May
+2016
+↑
+"Intex ties up with Reliance Jio to supply 4G handsets"
+,
+The Indian Express
+, 24 September 2015,
+archived
+from the original on 31 May 2016
+, retrieved
+26 October
+2015
+↑
+"Reliance Retail to sell 4G smartphones under 'LYF' Brand"
+,
+The Economic Times
+, 17 October 2015,
+archived
+from the original on 8 February 2016
+, retrieved
+11 February
+2016
+↑
+Reliance Jio Unveiled A 4G Device Under Lyf Brand
+,
+Gizmodo
+– India, 10 January 2016, archived from
+the original
+on 13 February 2016
+, retrieved
+10 February
+2016
+↑
+"Reliance Jio unveils low-cost 4G mobile phones LYF"
+,
+The Financial Express
+, 8 January 2017,
+archived
+from the original on 15 February 2016
+, retrieved
+10 February
+2016
+↑
+"LYF smartphone"
+.
+Archived
+from the original on 6 March 2016
+. Retrieved
+1 March
+2016
+.
+↑
+Reliance Jio LYF Water 1 Launched in India for rs. 14,999
+, Maktech, 7 February 2016, archived from
+the original
+on 5 March 2016
+, retrieved
+9 February
+2016
+↑
+Reliance's LYF Water 2 Goes Official in India: specifications, features, price and availability
+, GSM Insider, 9 February 2016, archived from
+the original
+on 16 February 2016
+, retrieved
+10 February
+2016
+↑
+Lyf Earth 1 Price, Specifications, Features
+, Digit, 1 February 2016,
+archived
+from the original on 16 February 2016
+, retrieved
+10 February
+2016
+↑
+Singh, Saurabh (27 January 2016),
+"Reliance Jio's Lyf Earth 1, Water 1 & Water 2 phones listed online, prices start at Rs.14,690"
+,
+India Today
+,
+archived
+from the original on 16 February 2016
+, retrieved
+10 February
+2016
+↑
+Reliance Lyf Flame 1 vs Xiaomi Redmi 2 vs Coolpad Note 3 Lite
+,
+TechRadar
+– India, 10 February 2016,
+archived
+from the original on 10 February 2016
+, retrieved
+10 February
+2016
+↑
+"JioPhone announced: A quick look at price, features, plans and availability"
+.
+TechRadar
+.
+Archived
+from the original on 22 July 2017
+. Retrieved
+21 July
+2017
+.
+↑
+"jio phone launch: Reliance Jio 4G feature phone: Here's all you want to know about it"
+.
+The Economic Times
+. 21 July 2017.
+Archived
+from the original on 28 July 2017
+. Retrieved
+21 July
+2017
+.
+↑
+"Jio Phone Plans Start at Rs. 153 Per Month, Jio Phone TV-Cable Announced"
+.
+NDTV Gadgets 360
+. 21 July 2017.
+Archived
+from the original on 3 June 2019
+. Retrieved
+11 September
+2019
+.
+↑
+"JioPhone 2 announced, comes with these features"
+.
+The Economic Times
+. 16 August 2018.
+Archived
+from the original on 21 December 2020
+. Retrieved
+11 September
+2019
+.
+↑
+"Jio Phone Next Price in India, Specifications, Comparison (30th October 2021)"
+.
+NDTV Gadgets 360
+.
+Archived
+from the original on 30 October 2021
+. Retrieved
+30 October
+2021
+.
+↑
+"Google and Jio reveal a low-cost smartphone that's 'made for India'
+"
+.
+Engadget
+. 24 June 2021.
+Archived
+from the original on 24 June 2021
+. Retrieved
+24 June
+2021
+.
+↑
+Singh, Jagmeet (24 June 2021).
+"Jio Google Smartphone Launches September 10: Mukesh Ambani"
+.
+NDTV Gadgets 360
+.
+Archived
+from the original on 25 June 2021
+. Retrieved
+25 June
+2021
+.
+↑
+Singh, Saurabh (24 June 2021).
+"JioPhone Next: A quick first look at Jio's first 4G smartphone, features, availability and other details"
+.
+The Financial Express
+.
+Archived
+from the original on 25 June 2021
+. Retrieved
+25 June
+2021
+.
+↑
+Sarkar, Debashis (25 October 2021).
+"jio: What is Pragati OS that will power Reliance JioPhone Next"
+.
+The Times of India
+.
+Archived
+from the original on 30 October 2021
+. Retrieved
+30 October
+2021
+.
+↑
+Singh, Manish (3 July 2023).
+"India's richest man unveils $12 4G phone with digital pay and streaming"
+.
+TechCrunch
+.
+Archived
+from the original on 10 August 2023
+. Retrieved
+8 August
+2023
+.
+↑
+Jacob, Charmaine (6 July 2023).
+"A $12 phone is opening doors for rural India to get on the internet"
+.
+CNBC
+. Retrieved
+8 August
+2023
+.
+↑
+"JioDive VR Headset - Enjoy Movies, TV Shows, VR Games, & YouTube 360 videos"
+.
+www.jio.com
+. Retrieved
+24 June
+2025
+.
+↑
+"JioTag launched: What is it and how is it different from Apple's AirTag?"
+.
+The Indian Express
+. 9 June 2023. Archived from
+the original
+on 9 June 2023
+. Retrieved
+8 August
+2023
+.
+↑
+"Reliance Jio launches new gadget: Price, features and other details"
+.
+The Times of India
+. 14 July 2024.
+ISSN
+0971-8257
+.
+Archived
+from the original on 14 July 2024
+. Retrieved
+14 July
+2024
+.
+↑
+"Reliance Jio launches JioTag Air | India Infoline"
+.
+www.indiainfoline.com
+.
+Archived
+from the original on 22 July 2024
+. Retrieved
+14 July
+2024
+.
+↑
+Reliance Jio offers strategic Wi-Fi hotspot free services to increase user base
+, Mobiletor, 21 May 2014,
+archived
+from the original on 29 December 2017
+, retrieved
+23 October
+2015
+↑
+Beguwala, Esmail (19 December 2015).
+"Reliance Jio launches high-speed Wi-Fi service 'Jionet' in 55 locations across Indore"
+.
+Telecom Talk
+.
+Archived
+from the original on 29 December 2017
+. Retrieved
+29 December
+2017
+.
+↑
+"Reliance Jio launches unlimited free WiFi in Mumbai for Ganesh Utsav"
+,
+The Indian Express
+, 16 September 2015,
+archived
+from the original on 4 September 2016
+, retrieved
+23 October
+2015
+↑
+Reliance Jio Introduces Free Public Wifi in Kolkata, How to Use Jionet Wifi
+?
+, Telecom Talk,
+archived
+from the original on 24 August 2016
+, retrieved
+23 October
+2015
+↑
+Reliance Jio launches free Wi-Fi service in Lucknow's Hazratganj
+,
+The Economic Times
+– Telecom,
+archived
+from the original on 10 February 2017
+, retrieved
+23 October
+2015
+↑
+Reliance Jio Launches 4G Wi-Fi Internet Service in Bhubaneswar
+, Gadgets 360, 31 August 2015,
+archived
+from the original on 22 August 2016
+, retrieved
+23 October
+2015
+↑
+"Mussoorie, the First Hill Station to receive Reliance Jio's Wi-Fi Service"
+,
+Reliance News
+, 4 September 2015, archived from
+the original
+on 24 November 2015
+↑
+"Reliance Jio to offer free 4G-backed WiFi service at Meerut Collectorate"
+,
+The Economic Times
+,
+archived
+from the original on 8 December 2015
+, retrieved
+27 November
+2015
+↑
+"Reliance Jio rolls out wi-fi service at MG Road in Vijayawada"
+,
+The Times of India
+, 11 January 2016,
+archived
+from the original on 22 May 2018
+, retrieved
+12 January
+2016
+↑
+"T20 World Cup 2016: Free unlimited Wi-Fi at 6 stadiums, courtesy Reliance Jio"
+.
+The Times of India
+. 7 March 2016.
+Archived
+from the original on 13 April 2016
+. Retrieved
+8 March
+2016
+.
+↑
+"Jio launches made-in-India JioPages browser: Features, other details here"
+. Live Mint. 21 October 2020.
+Archived
+from the original on 10 November 2020
+. Retrieved
+10 November
+2020
+.
+↑
+"Jio Browser Rebranded as JioPages with improved design and more features"
+. TechPP. 21 October 2020.
+Archived
+from the original on 2 November 2020
+. Retrieved
+10 November
+2020
+.
+↑
+Abbas, Muntazir (16 October 2015).
+"Jio Chat crosses 2 million users in less than six months"
+.
+The Economic Times
+.
+Archived
+from the original on 22 April 2016
+. Retrieved
+20 May
+2016
+.
+↑
+"Reliance to launch Jio On Demand with over 450 TV channels"
+. Indian Television. 19 February 2016.
+Archived
+from the original on 8 September 2016
+. Retrieved
+20 May
+2016
+.
+↑
+"Exclusive First look at Jio Drive
+: India's answer to Google drive and One drive, to offer 100 GB storage"
+.
+Telecom Talk
+. 5 December 2014.
+Archived
+from the original on 12 September 2016
+. Retrieved
+20 May
+2016
+.
+↑
+"Exclusive First look at Reliance Jio Mags: Jio's answer to Google's Play Newsstand"
+.
+Telecom Talk
+. 8 December 2014.
+Archived
+from the original on 2 September 2016
+. Retrieved
+20 May
+2016
+.
+↑
+Cruze, Danny Cyril D. (1 May 2020).
+"Jio to launch video conferencing platform JioMeet to take on Google Meet, Zoom"
+.
+Livemint
+.
+Archived
+from the original on 2 August 2020
+. Retrieved
+19 June
+2020
+.
+↑
+Bendre, Ritesh (12 May 2016),
+"Reliance JioMoney Wallet app first impressions: Good potential, needs design overhaul"
+,
+Boy Genius Report
+,
+archived
+from the original on 18 May 2016
+, retrieved
+20 May
+2016
+↑
+"Jio Join app: First look and comprehensive feature review"
+.
+Telecom Talk
+. 16 March 2016.
+Archived
+from the original on 6 September 2016
+. Retrieved
+20 May
+2016
+.
+↑
+"JioMart goes live in 200 cities after Mumbai pilot"
+.
+The Times of India
+. 25 May 2020.
+Archived
+from the original on 20 October 2022
+. Retrieved
+20 October
+2022
+.
+↑
+Mankotia, Anandita Singh.
+"Truce insight? Trai summons Airtel, Vodafone, and Idea to settle a fight with Reliance Jio – The Economic Times"
+.
+The Economic Times
+.
+Archived
+from the original on 10 September 2016
+. Retrieved
+8 September
+2016
+.
+↑
+Deva, Pranati.
+"You can't hold off Reliance Jio for long, Mukesh Ambani tells rivals – The Economic Times"
+.
+The Economic Times
+.
+Archived
+from the original on 10 September 2016
+. Retrieved
+8 September
+2016
+.
+↑
+Jain, Upasana (12 September 2016).
+"Idea agrees to give Reliance Jio interconnection points"
+.
+Archived
+from the original on 13 September 2016
+. Retrieved
+13 September
+2016
+.
+↑
+"Reliance Jio data breached: Why it matters, what it means for you, and everything to know"
+.
+The Indian Express
+. 10 July 2017.
+Archived
+from the original on 10 July 2017
+. Retrieved
+10 July
+2017
+.
+↑
+"Reliance Jio probing claims of alleged data breach of millions of subscribers"
+.
+Hindustan Times
+. 10 July 2017.
+Archived
+from the original on 10 July 2017
+. Retrieved
+10 July
+2017
+.
+↑
+"Reliance Jio Faces More Trouble As Farmers Target 1,300 4G Towers In Punjab"
+.
+Inc42 Media
+. 28 December 2020.
+Archived
+from the original on 17 January 2021
+. Retrieved
+10 March
+2021
+.
+↑
+"Tower damage case: Airtel, VIL say Jio's charges against them baseless, false"
+.
+The Financial Express
+. 2 January 2021.
+Archived
+from the original on 22 January 2021
+. Retrieved
+18 March
+2021
+.
+↑
+"Effect of Farmers' Protest: Jio Loses Subscribers in Punjab and Haryana"
+.
+NewsClick
+. 20 February 2021.
+Archived
+from the original on 5 March 2021
+. Retrieved
+18 March
+2021
+.
+↑
+Kundu, Chayan (13 January 2021).
+"Fact Check: Conspiracy theory on bird flu linking bird deaths to Jio 5G trial goes viral"
+.
+India Today
+.
+Archived
+from the original on 18 February 2021
+. Retrieved
+14 April
+2021
+.
+External links
+Wikimedia Commons has media related to
+Jio
+.
+Official website
+Reliance Jio companies
+grouped at
+OpenCorporates
+v
+t
+e
+Reliance Industries
+Energy
+Reliance Petroleum
+Jamnagar Refinery
+Reliance Industrial Infrastructure
+Reliance Solar
+Renewable Energy Corporation
+Jio Platforms
+Haptik
+Jio
+JioTV
+JioCinema
+JioSaavn
+Radisys
+Reliance Retail
+Reliance Digital
+LYF
+AJIO
+JioMart
+Urban Ladder
+Hamleys
+Justdial
+Financial services
+Jio Financial Services
+Jio Payments Bank
+Media
+Network18 Group
+Viacom18
+DEN Networks
+Hathway
+Firstpost
+Others
+Alok Industries
+SkyTran
+Former holdings
+East West Gas Pipeline (India)
+Education
+Dhirubhai Ambani International School
+Sports
+Mumbai Indians
+Mumbai Indians (WPL)
+MI Cape Town
+MI London
+MI Emirates
+MI New York
+Football Sports Development Limited
+Indian Super League
+Reliance Foundation Development League
+Reliance Foundation Youth Sports
+Reliance Stadium
+Healthcare
+Relicord
+Reliance Institute of Life Sciences
+Sir H. N. Reliance Foundation Hospital
+Covid-19 Hospital in Mumbai
+Philanthropy
+Reliance Foundation
+People
+Current
+Mukesh Ambani
+Alok  Agarwal
+PMS Prasad
+Y. P. Trivedi
+Dipak  C. Jain
+Raghunath  A. Mashelkar
+Adil  Zainulbhai
+Nita Ambani
+Arundhati Bhattacharya
+K.  V. Chowdary
+Parimal Nathwani
+Anand Jain
+Former
+Dhirubhai Ambani
+Ashish Chauhan
+Urjit Patel
+Vivek Lall
+see also:
+Template:Reliance Anil Dhirubhai Ambani Group
+v
+t
+e
+Telecommunication companies of India
+Mobile
+operators
+Active
+Airtel
+GoI
+DoT
+BSNL
+BSNL Mobile
+MTNL
+Vodafone Idea
+Jio
+MVNOs
+Aerovoyce
+Defunct
+Aircel
+Essar
+Etisalat (Cheers Mobile)
+!dea
+Loop
+MTS
+Orange
+RCom
+S Tel
+spice
+Tata DoCoMo
+T24
+Virgin
+Telenor
+Tulip Telecom
+Videocon
+Vodafone
+Internet
+providers
+ACT Fibernet
+Airtel
+APSFL
+Asianet Digital
+BSNL
+BSNL Broadband
+MTNL
+InCablenet
+Jio
+DEN Networks
+Hathway
+Railtel
+Reliance
+Sify
+SPECTRA
+Tata Teleservices
+Tikona
+Excitel Broadband
+DTH operators
+ABS Free Dish
+Airtel digital TV
+Digiana
+DD Free Dish
+Dish TV
+d2h
+Zing Digital
+Grand TV
+Hathway
+Independent TV
+Siti Networks
+Sun Direct
+Tata Play
+Infrastructure providers
+GAILTEL
+POWERTEL
+Bharti Infratel
+Indus Towers
+HughesNet
+American Tower
+Datacenter providers
+National Informatics Centre
+ESDS
+GPX
+Netmagic
+NxtGen
+Nxtra Data
+Yotta
+Tata Communications
+Global Cloud Xchange
+Internet exchanges
+Mumbai IX
+National Internet Exchange of India
+AMR IX
+Extreme IX
+AMS-IX
+Equipment manufacturers
+HFCL
+Sterlite Technologies
+Vindhya Telelinks
+Tejas Networks
+Indian Telephone Industries Limited
+REIT India
+Policies
+Digital India
+Bharat Broadband Network
+Agencies
+Department of Telecommunications
+Ministry of Electronics and Information Technology
+Ministry of Communications (India)
+Centre for Development of Advanced Computing
+Telecom Regulatory Authority of India
+Telecom Disputes Settlement and Appellate Tribunal
+Associations
+Cellular Operators Association of India
+Related links
+Internet in India
+Telecommunications in India
+Net neutrality in India
+v
+t
+e
+Major
+telecommunications companies
+Companies with an annual revenue of over US$10 billion
+América Móvil
+Telmex
+AT&T
+Axiata
+Bell Canada
+Bharti Airtel
+Bridge Alliance
+BT Group
+China Mobile
+CMHK
+China Telecommunications Corporation
+China Telecom
+China Unicom
+Chunghwa Telecom
+CK Hutchison Holdings
+Three
+Hutchison Asia Telecom
+Comcast
+Deutsche Telekom
+T-Mobile
+Digicel
+GoI
+Vodafone Idea
+DoT
+BSNL
+MTNL
+Globe
+Jio
+KDDI
+KPN
+KT Corporation
+Liberty Global
+Liberty LA
+Liberty PR
+FLOW
+Lumen Technologies
+MTN
+MTS
+NTT
+NTT DoCoMo
+Oi
+Ooredoo
+Orange
+PCCW
+PLDT
+Rogers
+Singtel
+SK Telecom
+SoftBank Mobile
+Spark
+Swisscom
+Tata Teleservices
+Telefónica
+Movistar
+O2
+Vivo
+Telenor
+Telkom Indonesia
+Telstra
+Telus
+TIM
+TPG Telecom
+Trilogy International Partners
+True
+Türk Telekom
+VEON
+Verizon
+Viettel
+Vodafone
+Vodacom
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Jio&oldid=1362356429
+"
+Categories
+:
+Jio
+Reliance Industries subsidiaries
+Navi Mumbai
+Telecommunications companies of India
+Internet service providers of India
+Mobile phone companies of India
+Indian companies established in 2007
+Indian brands
+2007 establishments in Maharashtra
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Wikipedia pages semi-protected against vandalism
+Use Indian English from September 2019
+All Wikipedia articles written in Indian English
+Use dmy dates from February 2021
+Articles containing potentially dated statements from October 2017
+All articles containing potentially dated statements
+All articles with unsourced statements
+Articles with unsourced statements from September 2024
+Articles with unsourced statements from December 2024
+All articles lacking reliable references
+Articles lacking reliable references from May 2017
+Articles with unsourced statements from November 2025
+Commons category link from Wikidata
+Official website different in Wikidata and Wikipedia
+OpenCorporates groupings
+Pages with reference errors
+Search
+Search
+Jio
+26 languages
+Add topic

@@ -1,0 +1,106 @@
+{
+  "domain": "health_insurance",
+  "policy": {
+    "only_official_sources": true,
+    "max_pages_per_insurer": 35,
+    "max_pdfs_per_insurer": 40,
+    "notes": "Download only from official insurer domains. Do not ingest brokers, marketplaces, blogs, or aggregator mirrors."
+  },
+  "document_categories": {
+    "policy_wording": ["policy wording", "policy-wording", "wording", "policy document", "prospectus", "terms and conditions", "terms-condition"],
+    "product_brochure": ["brochure", "product brochure", "leaflet"],
+    "claim_procedure": ["claim", "claims", "claim form", "claim procedure", "claim process", "reimbursement", "cashless"],
+    "coverage_details": ["coverage", "benefit", "benefits", "cover", "sum insured"],
+    "exclusions": ["exclusion", "exclusions", "not covered"],
+    "waiting_period": ["waiting period", "waiting-period", "pre-existing", "ped", "moratorium"],
+    "add_on_rider": ["add-on", "addon", "rider", "optional cover", "optional-cover"],
+    "faq": ["faq", "faqs", "frequently asked"]
+  },
+  "insurers": [
+    {
+      "id": "star_health",
+      "name": "Star Health and Allied Insurance",
+      "allowed_domains": ["starhealth.in", "www.starhealth.in"],
+      "seed_urls": [
+        "https://www.starhealth.in/",
+        "https://www.starhealth.in/downloads/",
+        "https://www.starhealth.in/health-insurance/",
+        "https://www.starhealth.in/policy-prospectus-and-wordings"
+      ]
+    },
+    {
+      "id": "hdfc_ergo",
+      "name": "HDFC ERGO",
+      "allowed_domains": ["hdfcergo.com", "www.hdfcergo.com"],
+      "seed_urls": ["https://www.hdfcergo.com/", "https://www.hdfcergo.com/download", "https://www.hdfcergo.com/health-insurance"]
+    },
+    {
+      "id": "niva_bupa",
+      "name": "Niva Bupa",
+      "allowed_domains": ["nivabupa.com", "www.nivabupa.com"],
+      "seed_urls": ["https://www.nivabupa.com/", "https://www.nivabupa.com/health-insurance-plans.html", "https://www.nivabupa.com/customer-service/downloads.html"]
+    },
+    {
+      "id": "icici_lombard",
+      "name": "ICICI Lombard",
+      "allowed_domains": ["icicilombard.com", "www.icicilombard.com"],
+      "seed_urls": [
+        "https://www.icicilombard.com/",
+        "https://www.icicilombard.com/health-insurance",
+        "https://www.icicilombard.com/downloads",
+        "https://www.icicilombard.com/health-insurance/download-policy-wordings"
+      ]
+    },
+    {
+      "id": "care_health",
+      "name": "Care Health Insurance",
+      "allowed_domains": ["careinsurance.com", "www.careinsurance.com"],
+      "seed_urls": [
+        "https://www.careinsurance.com/",
+        "https://www.careinsurance.com/health-insurance/",
+        "https://www.careinsurance.com/downloads.html",
+        "https://www.careinsurance.com/health-insurance/product-brochures.html"
+      ]
+    },
+    {
+      "id": "aditya_birla_health",
+      "name": "Aditya Birla Health Insurance",
+      "allowed_domains": ["adityabirlacapital.com", "www.adityabirlacapital.com", "healthinsurance.adityabirlacapital.com"],
+      "seed_urls": ["https://www.adityabirlacapital.com/healthinsurance/", "https://www.adityabirlacapital.com/healthinsurance/health-insurance-plans", "https://www.adityabirlacapital.com/healthinsurance/downloads"]
+    },
+    {
+      "id": "tata_aig",
+      "name": "Tata AIG",
+      "allowed_domains": ["tataaig.com", "www.tataaig.com"],
+      "seed_urls": ["https://www.tataaig.com/", "https://www.tataaig.com/health-insurance", "https://www.tataaig.com/downloads"]
+    },
+    {
+      "id": "bajaj_allianz",
+      "name": "Bajaj Allianz General Insurance",
+      "allowed_domains": ["bajajallianz.com", "www.bajajallianz.com"],
+      "seed_urls": [
+        "https://www.bajajallianz.com/",
+        "https://www.bajajallianz.com/health-insurance-plans.html",
+        "https://www.bajajallianz.com/download-documents.html",
+        "https://www.bajajallianz.com/documents/health-insurance.html"
+      ]
+    },
+    {
+      "id": "reliance_general",
+      "name": "Reliance General Insurance",
+      "allowed_domains": ["reliancegeneral.co.in", "www.reliancegeneral.co.in"],
+      "seed_urls": [
+        "https://www.reliancegeneral.co.in/",
+        "https://www.reliancegeneral.co.in/Insurance/Health-Insurance.aspx",
+        "https://www.reliancegeneral.co.in/downloads",
+        "https://www.reliancegeneral.co.in/Insurance/Health-Insurance/Downloads.aspx"
+      ]
+    },
+    {
+      "id": "united_india",
+      "name": "United India Insurance",
+      "allowed_domains": ["uiic.co.in", "www.uiic.co.in"],
+      "seed_urls": ["https://uiic.co.in/", "https://uiic.co.in/en/downloads", "https://uiic.co.in/en/product/health-insurance"]
+    }
+  ]
+}

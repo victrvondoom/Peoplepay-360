@@ -1,0 +1,19 @@
+CONSUMER-main/backend/datasets/knowledge_graph/neo4j_fallback.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_airlines.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_airlines_v1_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_banking.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_banking_v1_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_ecommerce.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_ecommerce_v1_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_government.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_government_v1_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_health_insurance.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_health_insurance_v1_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_healthcare_v1_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_healthcare_v2_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_housing_v1_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_telecom.jsonl filter=lfs diff=lfs merge=lfs -text
+CONSUMER-main/backend/datasets/vector_embeddings/proxy_telecom_v1_nvidia_1024.jsonl filter=lfs diff=lfs merge=lfs -text
+
+# Preserve recovered source PDF bytes and avoid text diffs.
+*.pdf binary

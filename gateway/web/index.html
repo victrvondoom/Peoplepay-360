@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>PeoplePay Workspace</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <strong>PeoplePay</strong><span id="connection">Connecting</span
+      ><button id="refresh">Refresh</button>
+    </header>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <div class="workspace">
+      <aside>
+        <h2>Transactions</h2>
+        <form id="create">
+          <label
+            >Purchase request<textarea
+              name="raw_utterance"
+              required
+              placeholder="Office chair under Rs 10000"
+            ></textarea></label
+          ><button>Create transaction</button>
+        </form>
+        <label>Search<input id="search" type="search" /></label>
+        <div id="transactions"></div>
+        <details>
+          <summary>Account connection</summary>
+          <form id="account">
+            <label>Local user<input name="user" required /></label
+            ><label
+              >Bearer token<input
+                name="token"
+                type="password"
+                autocomplete="off" /></label
+            ><button>Connect</button>
+          </form>
+        </details>
+      </aside>
+      <main>
+        <div id="empty">
+          <h1>Your workspace</h1>
+          <p>No transaction selected.</p>
+        </div>
+        <section id="detail" hidden>
+          <h1 id="title"></h1>
+          <p id="status"></p>
+          <nav aria-label="Transaction views">
+            <button data-tab="plan">Plan</button
+            ><button data-tab="cart">Cart</button
+            ><button data-tab="order">Order</button
+            ><button data-tab="evidence">Evidence</button
+            ><button data-tab="integrations">Integrations</button>
+          </nav>
+          <section id="plan" class="view">
+            <h2>Purchase plan</h2>
+            <form id="plan-form">
+              <label>Summary<input name="summary" required /></label
+              ><label>Steps<textarea name="steps" required></textarea></label>
+              <div class="row">
+                <label
+                  >Estimate<input
+                    name="amount"
+                    inputmode="decimal"
+                    required
+                    value="0.00" /></label
+                ><label
+                  >Currency<select name="currency">
+                    <option>INR</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                  </select></label
+                >
+              </div>
+              <button>Save plan</button>
+            </form>
+            <div class="actions">
+              <button id="validate">Validate evidence</button
+              ><button id="cancel">Cancel transaction</button>
+            </div>
+            <pre id="validation"></pre>
+          </section>
+          <section id="cart" class="view" hidden>
+            <h2>Cart <small>Self-reported prices</small></h2>
+            <form id="cart-form">
+              <div id="items"></div>
+              <button type="button" id="add-item">Add item</button>
+              <div class="row">
+                <label
+                  >Currency<select name="currency">
+                    <option>INR</option>
+                    <option>USD</option>
+                    <option>EUR</option>
+                    <option>GBP</option>
+                  </select></label
+                ><label
+                  >Shipping<input
+                    name="shipping"
+                    value="0.00"
+                    required
+                    inputmode="decimal" /></label
+                ><label
+                  >Tax<input
+                    name="tax"
+                    value="0.00"
+                    required
+                    inputmode="decimal"
+                /></label>
+              </div>
+              <p id="total"></p>
+              <button>Save cart</button>
+            </form>
+            <hr />
+            <p>Sandbox checkout: no payment or merchant order is sent.</p>
+            <label class="check"
+              ><input id="confirm" type="checkbox" />I confirm the saved cart
+              for sandbox checkout.</label
+            ><button id="checkout">Place sandbox order</button>
+            <p>Live payments: not configured</p>
+          </section>
+          <section id="order" class="view" hidden>
+            <h2>Order record</h2>
+            <pre id="order-summary"></pre>
+            <form id="delivery">
+              <label>Delivery status<select name="status"></select></label
+              ><label
+                >Update note<textarea
+                  name="note"
+                  required
+                  maxlength="2000"
+                ></textarea></label
+              ><button>Record update</button>
+            </form>
+            <h2>Dispute draft</h2>
+            <form id="dispute">
+              <label
+                >Issue<textarea
+                  name="issue"
+                  required
+                  maxlength="4000"
+                ></textarea></label
+              ><label
+                >Requested resolution<textarea
+                  name="remedy"
+                  required
+                  maxlength="1000"
+                ></textarea></label
+              ><button>Prepare draft</button>
+            </form>
+            <pre id="draft"></pre>
+            <button id="download-draft">Download draft</button>
+          </section>
+          <section id="evidence" class="view" hidden>
+            <h2>Evidence and activity</h2>
+            <button id="export">Export record</button>
+            <pre id="evidence-data"></pre>
+          </section>
+          <section id="integrations" class="view" hidden>
+            <h2>Integration status</h2>
+            <div id="health"></div>
+            <form id="capability">
+              <label
+                >Capability<select name="name">
+                  <option value="market">Market prices</option>
+                  <option value="property">Property location</option>
+                  <option value="resolution">Resolution question</option>
+                  <option value="spatial">Spatial room JSON</option>
+                </select></label
+              ><label
+                >Query / address / question / room JSON<textarea
+                  name="query"
+                  required
+                ></textarea></label
+              ><button>Request evidence</button>
+            </form>
+            <pre id="capability-result"></pre>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

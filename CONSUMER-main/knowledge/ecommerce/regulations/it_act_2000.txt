@@ -1,0 +1,1138 @@
+Information Technology Act, 2000 - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Act of the Parliament of India
+Information Technology Act, 2000
+Parliament of India
+Long title
+An Act to provide legal recognition for transactions carried out by means of electronic data interchange and other means of electronic communication, commonly referred to as "electronic commerce", which involves the use of alternatives to paper-based methods of communication and storage of information, to facilitate electronic filing of documents with the Government agencies and further to amend the Indian Penal Code, the Indian Evidence Act, 1872, the Bankers' Books Evidence Act, 1891 and the Reserve Bank of India Act, 1934 and for matters connected therewith or incidental thereto. The Act is based on the principles of E-commerce Model Law created by the UNCITRAL, that is, United Nations Commission on International Trade Law.
+Citation
+Information Technology Act, 2000
+Enacted
+by
+Parliament of India
+Enacted
+9 June 2000
+Assented
+to
+9 June 2000
+Signed
+9 May 2000
+Commenced
+17 October 2000
+Introduced by
+Pramod Mahajan
+Minister of Communications and Information Technology
+Amended by
+IT (Amendment) Act 2008
+Related legislation
+IT Rules 2021
+Status:
+Amended
+The
+Information Technology Act, 2000
+(also known as
+ITA-2000
+or the
+IT Act
+) is an Act of the
+Indian Parliament
+(#21 of 2000) notified on 17 October 2000. It is the primary law in India dealing with
+financial data safety
+,
+cybercrime
+and
+electronic commerce
+.
+[
+1
+]
+Secondary or subordinate legislation
+to the IT Act includes the Intermediary Guidelines Rules 2011 and the
+Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021
+.
+Background
+[
+edit
+]
+The bill was passed in the budget session of 2000 and signed by President
+K. R. Narayanan
+on 9 May 2000. The bill was finalised  by a group of officials headed by the then
+Minister of Information Technology
+,
+Pramod Mahajan
+.
+[
+2
+]
+After passing the IT Act, 2000, India became 12th nation in the world to have its own separate legislation on IT.
+Summary
+[
+edit
+]
+The original Act contained 94 sections, divided into 13 chapters and 4
+schedules
+, out of which the third and fourth schedule were omitted later. The law applies to the whole of India. If a crime involves a computer or network located in India, persons of other nationalities can also be indicted under the law.
+[
+3
+]
+The Act provides a legal framework for electronic governance by giving recognition to
+electronic records
+and
+digital signatures
+. It also defines cyber crimes and prescribes penalties for the civil wrongs. The Act directed the formation of a Controller of Certifying Authorities to regulate the issuance of digital signatures. It also established a Cyber Appellate Tribunal to resolve disputes rising from this new law. Subsequentl, the Cyber Appellate Tribunal is merged with the Telecom Dispute Settlement Appellate Tribunal.
+[
+3
+]
+The Act also amended various sections of the
+Indian Penal Code, 1860
+, the
+Indian Evidence Act, 1872
+, the Banker's Books Evidence Act, 1891, and the
+Reserve Bank of India Act, 1934
+to make them compliant with new technologies. In 2023, the Parliament of India passed the three statutes and brought in to force new criminal laws, instead of the old IPC, Evidence Act and Criminal Procedure Code. Now the Bharatiya Nyay Sanhita defines the offences and provides for the punishments, the. Bharatiya Sakshya Adhiniyam deals with the provisions relating to Evidence and the Bharatiya Nagrik Suraksha Sanhita deals with the procedure in the court and investigation.
+[
+3
+]
+The Parliament of India has passed the Digital Personal Data Protection Act, 2022 for protecting the privacy and individual data with the provisions for informed consent.
+Amendments
+[
+edit
+]
+A major amendment was made in 2008. It introduced Section 66A which penalized sending "offensive messages". It also introduced Section 69, which gave authorities the power of "interception or monitoring or decryption of any information through any computer resource". Additionally, it introduced provisions addressing
+pornography
+,
+child porn
+,
+cyber terrorism
+and
+voyeurism
+. The amendment was passed on 22 December 2008 without any debate in Lok Sabha. The next day, it was passed by the Rajya Sabha. It was signed into law by the then President
+Pratibha Patil
+, on 5 February 2009. The amendment of 2009 brought in 6 different offences under Section 66, which are incorporated with Section 66 A to 66F.
+[
+4
+]
+[
+5
+]
+[
+6
+]
+[
+7
+]
+Offences
+[
+edit
+]
+The Information Technology Act, 2000 provides for the offences under Chapter 11 under Section 65 to 74. Following is a list of offences and the corresponding penalties under the 2000 Act:
+[
+8
+]
+[
+9
+]
+Section
+Offence
+Penalty
+65
+Tampering with computer
+source documents
+Imprisonment up to three years, or/and  fine up to ₹2,00,000
+66
+Hacking
+with computer system
+Imprisonment up to three years, or/and  fine up to ₹5,00,000
+66B
+Receiving stolen computer or communication device
+Imprisonment up to three years, or/and  fine up to ₹1,00,000
+66C
+Using password of another person
+Imprisonment up to three years, or/and  fine up to ₹1,00,000
+66D
+Cheating using computer resource
+Imprisonment up to three years, or/and  fine up to ₹1,00,000
+66E
+Publishing
+private images
+of others
+Imprisonment up to three years, or/and  fine up to ₹2,00,000
+66F
+Acts of
+cyberterrorism
+Imprisonment up to life.
+67
+Publishing information which is
+obscene
+in electronic form.
+Imprisonment up to five years, or/and  fine up to ₹10,00,000
+67A
+Publishing images containing
+sexual acts
+Imprisonment up to seven years, or/and  fine up to ₹10,00,000
+67C
+Failure to maintain records
+Imprisonment up to three years, or/and  fine.
+68
+Failure/refusal to comply with orders
+Imprisonment up to 2 years, or/and  fine up to ₹1,00,000
+69
+Failure/refusal to
+decrypt data
+Imprisonment up to seven years and possible fine.
+70
+Securing access or attempting to secure access to a protected system
+Imprisonment up to ten years, or/and  fine.
+71
+Misrepresentation
+Imprisonment up to 2 years, or/and  fine up to ₹1,00,000
+72
+Breach of confidentiality and privacy
+Imprisonment up to 2 years, or/and  fine up to ₹1,00,000
+72A
+Disclosure of information in breach of lawful contract
+Imprisonment up to 3 years, or/and  fine up to ₹5,00,000
+73
+Publishing electronic signature certificate false in certain particulars
+Imprisonment up to 2 years, or/and  fine up to ₹1,00,000
+74
+Publication for fraudulent purpose
+Imprisonment up to 2 years, or/and  fine up to ₹1,00,000
+Notable cases
+[
+edit
+]
+Section 66
+[
+edit
+]
+In February 2001, in one of the first cases, the Delhi police arrested two men running a
+web-hosting
+company. The company had shut down a website over non-payment of dues. The owner of the site had claimed that he had already paid and complained to the police. The Delhi police had charged the men for hacking under Section 66 of the IT Act and breach of trust under Section 408 of the
+Indian Penal Code
+. The two men had to spend 6 days in
+Tihar jail
+waiting for bail.
+[
+10
+]
+In February 2017, a Delhi based e-commerce portal made a complaint with Hauz Khas Police Station against some hackers from different cities accusing them of IT Act / Theft / Cheating / Misappropriation / Criminal Conspiracy / Criminal Breach of Trust / Cyber Crime of Hacking / Snooping / Tampering with Computer source documents and the website and extending the threats of dire consequences to employees. As a result, four hackers were arrested by South Delhi Police for Digital Shoplifting.
+[
+11
+]
+Section 66A
+[
+edit
+]
+In September 2012, a freelance
+cartoonist
+Aseem Trivedi
+was arrested under the Section 66A of the IT Act, Section 2 of
+Prevention of Insults to National Honour Act, 1971
+and for
+sedition
+under the Section 124 of the
+Indian Penal Code
+.
+[
+12
+]
+His cartoons depicting widespread corruption in India were considered offensive.
+[
+13
+]
+[
+14
+]
+On 12 April 2012, a Chemistry professor from
+Jadavpur University
+, Ambikesh Mahapatra, was arrested for sharing a cartoon of
+West Bengal
+Chief Minister
+Mamata Banerjee
+and the then
+Railway Minister
+Mukul Roy
+.
+[
+15
+]
+The email was sent from the email address of a housing society. Subrata Sengupta, the secretary of the housing society, was also arrested. They were charged under Section 66A and 66B of the IT Act, for defamation under Section 500, for obscene gesture to a woman under Section 509, and for abetting a crime under Section 114 of the Indian Penal Code.
+[
+16
+]
+On 30 October 2012, a
+Puducherry
+businessman Ravi Srinivasan was arrested under Section 66A. He had posted a tweet accusing
+Karti Chidambaram
+, son of the then
+Finance Minister
+P. Chidambaram
+, of corruption. Karti Chidambaram had complained to the police.
+[
+17
+]
+On 19 November 2012, a 21-year-old girl was arrested from
+Palghar
+for posting a message on Facebook criticising the shutdown in Mumbai for the funeral of
+Bal Thackeray
+. Another 20-year-old girl was arrested for "liking" the post. They were initially charged under Section 295A of the Indian Penal Code (hurting religious sentiments) and Section 66A of the IT Act. Later, Section 295A was replaced by Section 505(2) (promoting enmity between classes).
+[
+18
+]
+A group of
+Shiv Sena
+workers vandalised a hospital run by the uncle of one of the girls.
+[
+19
+]
+On 31 January 2013, a local court dropped all charges against the girls.
+[
+20
+]
+On 18 March 2015, a teenaged boy was arrested from
+Bareilly
+,
+Uttar Pradesh
+, for making a post on Facebook insulting politician
+Azam Khan
+. The post allegedly contained hate speech against a community and was falsely attributed to Azam Khan by the boy. He was charged under Section 66A of the IT Act, and Sections 153A (promoting enmity between different religions), 504 (intentional insult with intent to provoke breach of peace) and 505 (public mischief) of the
+Indian Penal Code
+. After Section 66A was struck down by the Supreme Court on 24 March 2015, the state government said that they would continue the prosecution under the remaining charges. The Supreme Court in the case of Shreya Singhal v. Union of India held that the provision under Sec. 66 A is violative of Article 19 of the Constitution of India and is operating against the fundamental right of freedom of speech and expression.
+[
+21
+]
+[
+22
+]
+Section 69A
+[
+edit
+]
+On 29 June 2020, the
+Indian Government
+banned 59
+Chinese
+mobile apps
+, most notably
+TikTok
+, supported by Section 69A and citing national security interests.
+[
+23
+]
+[
+24
+]
+On 24 November 2020, another 43 Chinese mobile apps were banned supported by the same reasoning, most notably
+AliExpress
+.
+[
+25
+]
+[
+26
+]
+54 more apps, including popular video game
+Garena Free Fire
+, were banned on 14 February 2022 under the same section.
+[
+27
+]
+There are diverse opinions about the power of the executive under Sec 69 A amongst the legal experts.
+Section 79
+[
+edit
+]
+Asian News International vs. Wikimedia Foundation
+[
+28
+]
+[
+29
+]
+[
+30
+]
+[
+31
+]
+Criticisms
+[
+edit
+]
+Section 66A  and restriction of free speech
+[
+edit
+]
+From its establishment as an amendment to the original act in 2008, Section 66A attracted controversy over its unconstitutional nature:
+Section
+Offence
+Description
+Penalty
+66A
+Publishing offensive, false or threatening information
+Any person who sends by any means of a computer resource any information that is grossly offensive or has a menacing character; or any information which he knows to be false, but for the purpose of causing annoyance, inconvenience, danger, obstruction, insult shall be punishable with imprisonment for a term which may extend to three years and with fine.
+Imprisonment up to three years, with fine.
+In December 2012,
+P Rajeev
+, a
+Rajya Sabha
+member from Kerala, tried to pass a resolution seeking to amend Section 66A. He was supported by D. Bandyopadhyay,
+Gyan Prakash Pilania
+,
+Basavaraj Patil Sedam
+, Narendra Kumar Kashyap, Rama Chandra Khuntia and
+Baishnab Charan Parida
+. P Rajeev pointed out that the cartoons and editorials allowed in the traditional media were being censored in the new media. He also said that the law was barely debated before being passed in December 2008.
+[
+32
+]
+Rajeev Chandrasekhar
+suggested that 66A should only apply to person-to-person communication pointing to a similar section under the Indian Post Office Act, 1898.
+Shantaram Naik
+opposed any changes, saying that the misuse of law was insufficient to warrant changes. The then
+Minister for Communications and Information Technology
+,
+Mr Kapil Sibal
+, defended the existing law, saying that similar laws existed in the US and the UK. He also said that a similar provision existed under the Indian Post Office Act, 1898. However, P Rajeev said that the UK law dealt only with communication from person to person.
+[
+32
+]
+Petitions challenging constitutionality
+[
+edit
+]
+In November 2012, IPS officer Amitabh Thakur and his wife, social activist Nutan Thakur, filed a petition in the
+Lucknow
+bench of the
+Allahabad High Court
+claiming that Section 66A violated the freedom of speech guaranteed under Article 19(1)(a) of the
+Constitution of India
+. They said that the section was vaguely worded and frequently misused.
+[
+33
+]
+In November 2012, a Delhi-based law student,
+Shreya Singhal
+, filed a
+Public Interest Litigation
+(PIL) in the
+Supreme Court of India
+. She argued that Section 66A was vaguely phrased, and as a result, it violated Article 14, 19 (1)(a) and Article 21 of the Constitution. The PIL was accepted on 29 November 2012.
+[
+34
+]
+[
+35
+]
+In August 2014, the Supreme Court asked the central government to respond to petitions filed by the
+Internet and Mobile Association of India
+(IAMAI) which claimed that the IT Act gave the government power to arbitrarily remove user-generated content.
+[
+36
+]
+Revocation by the Supreme Court
+[
+edit
+]
+On 24 March 2015, the Supreme Court of India gave the verdict that Section 66A is unconstitutional in entirety.
+[
+37
+]
+The court said that Section 66A of IT Act 2000 "arbitrarily, excessively and disproportionately invades the right of free speech" provided under
+Article 19(1)
+of the
+Constitution of India
+. But the Court turned down a plea to strike down sections 69A and 79 of the Act, which deal with the procedure and safeguards for blocking certain websites.
+[
+38
+]
+[
+39
+]
+Despite this, as per a research paper by Abhinav Sekhri and Apar Gupta, Section 66A of the Information Technology Act 2000 continues to be used by police departments across India in prosecutions.
+[
+40
+]
+Strict data privacy rules
+[
+edit
+]
+The
+data privacy
+rules introduced in the Act in 2011 have been described as too strict by some Indian and US firms. The rules require firms to obtain written permission from customers before collecting and using their personal data. This has affected US firms which outsource to Indian companies. However, some companies have welcomed the strict rules, saying it will remove fears of outsourcing to Indian companies.
+[
+41
+]
+Section 69 and mandatory decryption
+[
+edit
+]
+See also:
+Mandatory decryption
+Section 69 allows intercepting any information and ask for information decryption. To refuse decryption is an offence. The
+Indian Telegraph Act, 1885
+allows the government to tap phones. But according to a 1996 Supreme Court verdict, the government can tap phones only in case of a "public emergency". But there is no such restriction on Section 69.
+[
+5
+]
+On 20 December 2018, the
+Ministry of Home Affairs
+cited Section 69 in the issue of an order authorising ten central agencies to intercept, monitor, and decrypt “any information generated, transmitted, received or stored in any computer.”
+[
+42
+]
+While some claim this to be a violation of the fundamental
+right to privacy
+, the Ministry of Home Affairs has claimed its validity on the grounds of national security.
+[
+43
+]
+[
+44
+]
+Section 69A and banning of mobile apps
+[
+edit
+]
+The bans on Chinese apps based on Section 69A has been criticized for possibly being in conflict with Article 19(1)(a) of the
+Constitution of India
+ensuring freedom of speech and expression to all, as well as possibly in conflict with
+WTO
+agreements.
+[
+45
+]
+[
+46
+]
+The
+Internet Freedom Foundation
+has criticized the ban for not following the required protocols and thus lacking transparency and disclosure.
+[
+47
+]
+Future changes
+[
+edit
+]
+On 2 April 2015, the then Chief Minister of
+Maharashtra
+,
+Devendra Fadnavis
+revealed to the state assembly that a new law was being framed to replace the repealed Section 66A. Fadnavis was replying to a query by
+Shiv Sena
+leader Neelam Gorhe. Gorhe had said that the repeal of the law would encourage online miscreants and asked whether the state government would frame a law in this regard. Fadnavis said that the previous law had resulted in no convictions, so the law would be framed such that it would be strong and result in convictions.
+[
+48
+]
+On 13 April 2015, it was announced that the
+Ministry of Home Affairs
+would form a committee of officials from the
+Intelligence Bureau
+,
+Central Bureau of Investigation
+,
+National Investigation Agency
+,
+Delhi Police
+and the ministry itself to produce a new legal framework. This step was reportedly taken after complaints from intelligence agencies that they were no longer able to counter online posts that involved national security matter or incited people to commit an offence, such as online recruitment for
+ISIS
+.
+[
+49
+]
+[
+50
+]
+Former Minister of State with the Ministry of Information Technology,
+Milind Deora
+has supported a new "unambiguous section to replace 66A".
+[
+51
+]
+In 2022, it was reported
+[
+52
+]
+that there has been a proposal to replace the Information Technology Act with a more comprehensive and updated Digital India Act, which would cover a wider range of information technology issues and concerns. This law could ostensibly have focal areas around privacy, social media regulation, regulation of over-the-top platforms, internet intermediaries, introducing additional contraventions or offences, and governance of new technologies.
+[
+53
+]
+Importance of the Information Technology Act
+[
+edit
+]
+The Indian government closely connects data to citizens'
+privacy
+and this is demonstrated when Shiv Shankar Singh states, "Each person must be able to exercise a substantial degree of control over that data and its use. Data protection is legal safeguard to prevent misuse of information about individual person on a medium including computers."
+[
+54
+]
+Secondary legislation
+[
+edit
+]
+The
+Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021
+suppresses India's Intermediary Guidelines Rules 2011.
+[
+55
+]
+See also
+[
+edit
+]
+Personal Data Protection Bill 2019
+Broadcasting Services (Regulation) Bill, 2023
+Chilling effect
+Mouthshut.com v. Union of India
+Save Your Voice
+References
+[
+edit
+]
+↑
+https://www.indiacode.nic.in/bitstream/123456789/13116/1/it_act_2000_updated.pdf
+Provisions of the Act
+↑
+"IT Act to come into force from August 15"
+.
+Rediff
+. 9 August 2000
+. Retrieved
+14 April
+2015
+.
+1
+2
+3
+Sujata Pawar; Yogesh Kolekar (23 March 2015).
+Essentials of Information Technology Law
+. Notion Press. pp.
+296–
+306.
+ISBN
+978-93-84878-57-3
+. Retrieved
+14 April
+2015
+.
+↑
+"Section 66A of the Information Technology Act"
+.
+Centre for Internet and Society (India)
+. Retrieved
+14 April
+2015
+.
+1
+2
+"Yes, snooping's allowed"
+.
+The Indian Express
+. 6 February 2009
+. Retrieved
+14 April
+2015
+.
+↑
+"Deaf, Dumb & Dangerous - 21 Minutes: That was the time our MPs spent on Section 66A. How they played"
+.
+The Telegraph (India)
+. 26 March 2015
+. Retrieved
+6 May
+2015
+.
+{{
+cite news
+}}
+:  CS1 maint: deprecated archival service (
+link
+)
+↑
+"Amended IT Act to prevent cyber crime comes into effect"
+.
+The Hindu
+. 27 October 2015
+. Retrieved
+8 May
+2015
+.
+Vishal rintu -journalists of the new era
+↑
+"The Information Technology (Amendment) Act, 2008"
+. Retrieved
+7 May
+2017
+.
+↑
+"Chapter 11: Offences Archives - Information Technology Act"
+.
+Information Technology Act
+.
+↑
+Ganapati, Priya (19 February 2001).
+"Cyber crime that wasn't?"
+.
+rediff.com
+. Retrieved
+5 June
+2022
+.
+↑
+"Four Hackers Arrested in Delhi, Cyber Crime, Gift Vouchers, Hacking, Section 65 / 66 of IT Act, GYFTR"
+.
+Information Technology Act
+. 10 February 2010
+. Retrieved
+7 May
+2017
+.
+↑
+"
+'If Speaking The Truth Is Sedition, Then I Am Guilty'
+"
+.
+Outlook India
+. 10 September 2010
+. Retrieved
+14 April
+2015
+.
+↑
+"Indian cartoonist Aseem Trivedi jailed after arrest on sedition charges"
+.
+The Guardian
+. 10 September 2010
+. Retrieved
+14 April
+2015
+.
+↑
+Section 66A: Punishment for sending offensive messages through communication service, etc.
+↑
+"Professor arrested for poking fun at Mamata"
+.
+Hindustan Times
+. 14 April 2012. Archived from
+the original
+on 2 July 2014
+. Retrieved
+14 April
+2015
+.
+↑
+"Cartoon a conspiracy, prof an offender: Mamata"
+.
+Hindustan Times
+. 13 April 2012. Archived from
+the original
+on 18 May 2015
+. Retrieved
+14 April
+2015
+.
+↑
+"Arrest over tweet against Chidambaram's son propels 'mango man' Ravi Srinivasan into limelight"
+.
+India Today
+. 2 November 2012
+. Retrieved
+14 April
+2015
+.
+↑
+"Mumbai shuts down due to fear, not respect"
+.
+The Hindu
+. 19 November 2012
+. Retrieved
+23 April
+2015
+.
+↑
+"FB post: 10 Sainiks arrested for hospital attack"
+.
+The Hindu
+. 20 November 2012
+. Retrieved
+23 April
+2015
+.
+↑
+"Facebook row: Court scraps charges against Palghar girls"
+.
+The Hindu
+. 31 January 2013
+. Retrieved
+23 April
+2015
+.
+↑
+"Teen arrested for Facebook post attributed to Azam Khan gets bail"
+.
+The Times of India
+. 19 March 2015
+. Retrieved
+6 May
+2015
+.
+↑
+"UP tells SC that prosecution on boy for post against Azam Khan will continue"
+.
+The Indian Express
+. 24 April 2015
+. Retrieved
+6 May
+2015
+.
+↑
+"Government Bans 59 mobile apps which are prejudicial to sovereignty and integrity of India, defence of India, security of state and public order"
+.
+pib.gov.in
+. Retrieved
+24 November
+2020
+.
+↑
+Soni, Aayush (6 July 2020).
+"Can Chinese apps appeal India's ban? Section 69A of IT Act has the answer"
+.
+ThePrint
+. Retrieved
+24 November
+2020
+.
+↑
+"Government of India blocks 43 mobile apps from accessing by users in India"
+.
+www.pib.gov.in
+. Retrieved
+24 November
+2020
+.
+↑
+"Indian government bans 43 apps: Here's the list"
+.
+Hindustan Times Tech
+. 24 November 2020
+. Retrieved
+24 November
+2020
+.
+↑
+"Garena Free Fire, 53 other 'Chinese' apps banned: Full list of banned apps"
+.
+The Indian Express
+. 16 February 2022
+. Retrieved
+16 February
+2022
+.
+↑
+Thapliyal, Nupur (9 July 2024).
+"ANI Files Rs 2 Crore Defamation Suit Against Wikipedia Before Delhi High Court, Summons Issued"
+.
+LiveLaw.in
+. Retrieved
+10 October
+2024
+.
+↑
+"Delhi HC Issues Notice To Wikipedia After ANI's Plea"
+.
+Outlook India
+. 9 July 2024
+. Retrieved
+10 October
+2024
+.
+↑
+Lobo, Simone (10 October 2024).
+"ANI case: How Delhi HC's Wikipedia ban threat affects India"
+.
+MediaNama
+. Retrieved
+10 October
+2024
+.
+↑
+Parasnis, Sharveya (10 July 2024).
+"ANI Sues Wikipedia for Defamation, Demands INR 2 Crore"
+.
+MediaNama
+. Retrieved
+10 October
+2024
+.
+1
+2
+"Section 66A of IT Act undemocratic: RS MPs"
+.
+The Times of India
+. 15 December 2012
+. Retrieved
+6 May
+2015
+.
+↑
+"After Mumbai FB case, writ filed in Lucknow to declare section 66A, IT Act 2000 as ultra-vires"
+.
+The Times of India
+. 21 November 2012
+. Retrieved
+14 April
+2015
+.
+↑
+"SC accepts PIL challenging Section 66A of IT Act"
+.
+The Times of India
+. 29 November 2012
+. Retrieved
+23 April
+2015
+.
+↑
+"Shreya Singhal: The student who took on India's internet laws"
+.
+BBC News
+. 24 March 2015
+. Retrieved
+6 May
+2015
+.
+↑
+"SC seeks govt reply on PIL challenging powers of IT Act"
+.
+Live Mint
+. 30 August 2015
+. Retrieved
+6 May
+2015
+.
+↑
+Shrivastava, Prachi (30 March 2015).
+"Behind the scenes of the fight against Section 66A"
+.
+mint
+. Retrieved
+29 July
+2022
+.
+↑
+"SC strikes down 'draconian' Section 66A"
+.
+The Hindu
+. 25 March 2015
+. Retrieved
+23 April
+2015
+.
+↑
+"SC quashes Section 66A of IT Act: Key points of court verdict"
+.
+The Times of India
+. 24 March 2015
+. Retrieved
+6 May
+2015
+.
+↑
+Gupta, Apar; Sekhri, Abhinav (4 November 2018).
+"The ghosts of laws past: on the application of Section 66A of IT Act"
+.
+The Hindu
+.
+ISSN
+0971-751X
+. Retrieved
+29 July
+2022
+.
+↑
+"India data privacy rules may be too strict for some U.S. companies"
+.
+The Washington Post
+. 21 May 2011
+. Retrieved
+23 April
+2015
+.
+↑
+"All computers can now be monitored by govt. agencies"
+.
+The Hindu
+. 21 December 2018.
+ISSN
+0971-751X
+. Retrieved
+27 December
+2018
+.
+↑
+"A spy state? Home ministry's blanket surveillance order must be tested against fundamental right to privacy"
+.
+Times of India Blog
+. 24 December 2018
+. Retrieved
+27 December
+2018
+.
+↑
+"Government's surveillance order key to national security: MHA officials"
+.
+Hindustan Times
+. 27 December 2018
+. Retrieved
+27 December
+2018
+.
+↑
+"India Takes a Tough Stand on Neighbouring Apps"
+.
+The National Law Review
+. Retrieved
+24 November
+2020
+.
+↑
+"Chinese apps ban – legality in domestic and international law"
+. 30 May 2022.
+↑
+"59 Chinese apps banned | Is it legal? Here's what the Indian Information Technology Act says"
+.
+Moneycontrol
+. 30 June 2020
+. Retrieved
+24 November
+2020
+.
+↑
+"Centre working on new law similar to Section 66A: Devendra Fadnavis"
+.
+The Times of India
+. 2 April 2015
+. Retrieved
+6 May
+2015
+.
+↑
+"Section 66A of the IT Act likely to be back in softer avatar"
+.
+The Economic Times
+. 14 April 2015. Archived from
+the original
+on 18 April 2015
+. Retrieved
+6 May
+2015
+.
+↑
+"New panel to work on Section 66A alternative"
+.
+Hindustan Times
+. 14 April 2015. Archived from
+the original
+on 15 April 2015
+. Retrieved
+6 May
+2015
+.
+↑
+"Former IT minister Milind Deora: Why we need a new Section 66A"
+.
+Rediff
+. 2 April 2015
+. Retrieved
+6 May
+2015
+.
+↑
+"Comprehensive legal framework is in the works: Ashwini Vaishnaw"
+. LiveMint. 4 August 2022
+. Retrieved
+25 August
+2022
+.
+↑
+Avasarala, Sameer.
+"Advent of a new-era Digital India Act – Key aspects to look out"
+. Lakshmikumaran & Sridharan Attorneys
+. Retrieved
+25 August
+2022
+.
+↑
+Shankar Singh, Shiv (2011).
+"Privacy and Data Protection in India: A Critical Assessment"
+.
+Journal of the Indian Law Institute
+.
+53
+(4): 671.
+JSTOR
+45148583
+.
+↑
+Dalmia, Vijay Pal (4 March 2021).
+"Information Technology (Guidelines For Intermediaries And Digital Media Ethics Code) Rules, 2021"
+.
+www.mondaq.com
+. Retrieved
+5 March
+2021
+.
+Further reading
+[
+edit
+]
+Shreya Singhal v. Union of India
+(
+Supreme Court of India
+24 March 2015),
+Text
+.
+David Rizk (10 June 2011).
+"New Indian Internet Intermediary Regulations Pose Serious Threats to Net Users' Freedom of Expression"
+.
+Electronic Frontier Foundation
+.
+External links
+[
+edit
+]
+"Information Technology Act, 2000 with 2008 amendments"
+.
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Information_Technology_Act,_2000&oldid=1362543067
+"
+Categories
+:
+Computing legislation
+Acts of the Parliament of India 2000
+2000 in Indian law
+Vajpayee administration
+Information technology in India
+Censorship in India
+Internet in India
+Manmohan Singh administration
+2008 in Indian law
+Medical privacy legislation
+Computer security in India
+Internet censorship in India
+Hidden categories:
+Articles with short description
+Short description matches Wikidata
+Use dmy dates from August 2016
+Use Indian English from August 2011
+All Wikipedia articles written in Indian English
+CS1 maint: deprecated archival service
+Search
+Search
+Information Technology Act, 2000
+8 languages
+Add topic

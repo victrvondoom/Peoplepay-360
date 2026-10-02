@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "Vi",
+  "title": "Vi Prepaid Plans",
+  "category": "mobile_plans",
+  "source_url": "https://www.myvi.in/prepaid/all-prepaid-plans",
+  "final_url": "https://www.myvi.in/prepaid/all-prepaid-plans",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 2240,
+  "stored_path": "knowledge/telecom/operators/vi/vi_prepaid_plans.txt",
+  "sha256": "8fbd3cab9091c94146bc9d235744cf020ffac958f3b3d74ec2350d4afc6fe0fc",
+  "bytes": 2242,
+  "fetched_at": "2026-07-06T14:33:17.021595+00:00"
+}

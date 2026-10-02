@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "NCH",
+  "title": "National Consumer Helpline Knowledge Base",
+  "category": "consumer_knowledge_base",
+  "source_url": "https://consumerhelpline.gov.in/public/knowledgebase",
+  "final_url": "https://consumerhelpline.gov.in/public/knowledgebase",
+  "type": "html_text",
+  "raw_chars": 4664,
+  "stored_path": "knowledge/ecommerce/official/nch/nch_knowledge_base.txt",
+  "sha256": "c348d8e25666bf76871a221d831de7446ba3acc11646ccdd8a4a6495cd4d22b2",
+  "bytes": 4682,
+  "fetched_at": "2026-07-07T12:47:10.272370+00:00",
+  "official_source": true
+}

@@ -1,0 +1,423 @@
+Chargeback - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Return of money
+This article is about the return of funds to consumers. For charging IT costs back to the departments whose usage generates those costs, see
+IT chargeback and showback
+.
+This article has multiple issues.
+Please help
+improve it
+or discuss these issues on the
+talk page
+.
+(
+Learn how and when to remove these messages
+)
+This article
+needs
+more citations
+.
+Please help
+improve this article
+by
+adding citations to reliable sources
+. Unsourced material may be challenged and
+removed
+.
+Find sources:
+"Chargeback"
+–
+news
+·
+newspapers
+·
+books
+·
+scholar
+·
+JSTOR
+(
+March 2011
+)
+(
+Learn how and when to remove this message
+)
+The examples and perspective in this article
+may not represent a
+worldwide view
+of the subject
+.
+You may
+improve this article
+, discuss the issue on the
+talk page
+, or
+create a new article
+, as appropriate.
+(
+April 2014
+)
+(
+Learn how and when to remove this message
+)
+(
+Learn how and when to remove this message
+)
+A
+chargeback
+is a return of money to a
+payer
+of a transaction, especially a
+credit card
+transaction. Most commonly the payer is a
+consumer
+. The chargeback reverses a
+money transfer
+from the consumer's
+bank account
+,
+line of credit
+, or credit card. The chargeback is ordered by the bank that
+issued
+the consumer's
+payment card
+, typically to settle a
+credit card dispute
+. In the distribution industry, a chargeback occurs when the supplier sells a product at a higher price to the distributor than the price they have set with the end user. The distributor submits a chargeback to the supplier so they can recover the money lost in the transaction. 45% of chargebacks are fraud-related, with first-party at 23% and third-party at 22%
+[
+1
+]
+United States overview
+[
+edit
+]
+The chargeback mechanism exists primarily for
+consumer protection
+. Holders of credit cards issued in the United States are afforded reversal rights by Regulation Z of the
+Truth in Lending Act
+. United States debit card holders are guaranteed reversal rights by Regulation E of the
+Electronic Fund Transfer Act
+. Similar rights extend globally, pursuant to the rules established by the corresponding
+card association
+or bank network.
+A consumer may initiate a chargeback by contacting their issuing bank and filing a substantiated complaint regarding one or more debit items on their statement. The threat of forced reversal of funds provides merchants with an incentive to provide quality products, helpful customer service, and timely refunds as appropriate. Chargebacks provide a means for reversal of unauthorized transfers due to
+identity theft
+.  Chargebacks can also occur as a result of
+friendly fraud
+, where the transaction was authorized by the consumer but the consumer later attempts to fraudulently reverse the charges. Card association chargeback rules are available online for public inspection and review.
+[
+2
+]
+They comprise a system for adjudicating transaction disputes between cardholders and merchants, primarily where the issues can be resolved based on documentary evidence incident to the transaction. The rules provide for arbitration of issues by the card association. This may occur where the card issuer generates a second (or "arbitration") chargeback against the merchant, after receiving the merchant's response to the initial chargeback. Normally this would require the cardholder to rebut elements of the merchant's response. The second chargeback results in a second crediting of the cardholder's account for the disputed funds, after having been credited back to the merchant with its response to the initial chargeback. The merchant's only recourse after the second chargeback is to initiate arbitration of the dispute by the card association. The fee for this is on the order of $250, and the arbitration loser is obligated to pay the costs of the arbitration.
+Reason codes
+[
+edit
+]
+With each chargeback the issuer selects and submits a numeric reason code. This feedback may help the merchant and acquirer diagnose errors and improve customer satisfaction. Reason codes vary by bank network, but fall in four general categories:
+Technical: Expired authorization,
+non-sufficient funds
+, or bank processing error.
+Clerical: Duplicate billing, incorrect amount billed, or refund never issued.
+Quality: Consumer claims to have never received the goods as promised at the time of purchase.
+Fraud: Consumer claims they did not authorize the purchase or was a victim of
+identity theft
+.
+One of the most common reasons for a chargeback is a fraudulent transaction. In this case, a credit card is used without the consent or proper authorization of the card holder. In some cases, a merchant is responsible for charges fraudulently imposed on a customer. Fraudulent card transactions often originate with criminals who gain access to secure payment card data and set up schemes to exploit the data. In cases of
+card not present transactions
+the merchant is usually responsible for the chargeback and associated fees. After the adoption of
+EMV
+(cards with a chip in them), merchants who have not upgraded to EMV technology usually become liable for chargebacks received (unless others in the payment chain have also not upgraded) even in cases where prior to EMV adoption the merchant would not have been liable.
+Chargebacks can result from not receiving credit for returned merchandise, not receiving items they have paid for, or if the items were not what they expected.  In these examples, the merchant is responsible for issuing credit to its customer and would be subject to a chargeback.  Other reasons include charging the consumer twice for a single
+transaction
+or charging an account after the bank declined the transaction.
+Merchant recourse
+[
+edit
+]
+For transactions where the original invoice was signed by the consumer, the merchant may dispute a chargeback with the assistance of the merchant's
+acquiring bank
+. The acquirer and issuer mediate in the dispute process, following rules set forth by the corresponding bank network or
+card association
+. If the acquirer prevails in the dispute, the funds are returned to the acquirer, and then to the merchant. Only 21% of chargebacks lodged globally are decided in favour of the merchant. The 2014 Cybersource Fraud Benchmark Report found that only 60% of chargebacks are disputed by merchants, and that merchants have a success rate of about 41% with those they do re-present.
+To address these more effectively, technology companies have written code and built algorithms that help merchants determine if chargebacks are legitimate or fraudulent.
+Merchant penalties
+[
+edit
+]
+The merchant's acquiring bank accepts the risk that the merchant will remain
+solvent
+over time as during a chargeback it has to return the funds to the cardholder, and that sum then has to be received back from the merchant, and thus has an incentive to take a keen interest in the merchant's products and business practices. Reducing consumer chargebacks is crucial to this endeavor. To encourage compliance, acquirers may charge merchants a penalty for each chargeback received.
+Payment service providers
+, such as
+PayPal
+, have a similar policy.
+[
+3
+]
+PayPal Merchant charges $20 for each chargeback, when the transaction is not covered by seller protection (regardless of whether or not it is the first) plus it will retain the original transaction fee.
+[
+4
+]
+In addition,
+Visa
+and
+MasterCard
+may levy severe penalties against acquiring banks that retain merchants with high chargeback frequency. Acquirers typically pass such fines directly to the merchant. Merchants whose ratios stray too far out of compliance may trigger
+card association
+fines of $100 or more per chargeback.
+[
+5
+]
+Merchant service providers may ultimately decline to provide an account for businesses with too high of a chargeback ratio.
+Other types
+[
+edit
+]
+Accounts may also incur credit reversals in other forms.  ATM reversals occur when an ATM deposit envelope is found to have fewer funds than represented by the depositor.  A chargeback is made to correct the error. This could result due to a counting error or intentional fraud by the account holder, or the envelope or its contents could have been lost or stolen.
+Chargebacks also occur when a bank error credits an account with more funds than intended.  The bank makes a chargeback to correct the error. If an overdraft results and it cannot be covered in time, the bank could sue or press criminal charges. When a direct deposit is made to the wrong account holder or in a greater amount than intended a chargeback is made to correct the error.  Finally, chargebacks occur when an account holder deposits a check or money order and the deposited item is returned due to
+non-sufficient funds
+, a closed account, or being discovered to be counterfeit, stolen, altered, or forged.
+Banks may sue account holders or press criminal charges when chargebacks are required due to fraudulent activity and insufficient funds are in the account to cover the chargebacks.
+Negative database
+[
+edit
+]
+Merchants sometimes maintain a record of customers who chargeback regularly, in a "negative database".
+[
+6
+]
+A "negative database" in the context of merchants and payments refers to a list or database that contains information about customers who have a history of problematic behavior, such as frequent chargebacks, fraud, or payment disputes. Merchants use these databases to identify and potentially block or scrutinize transactions from high-risk customers.
+[
+7
+]
+The concept of the negative database was notably implemented by Jason Doongoos and Mario Rossi in the late 1990s, specifically in November 1997.
+[
+citation needed
+]
+See also
+[
+edit
+]
+Card security code
+Chargeback insurance
+References
+[
+edit
+]
+↑
+"The Chargeback Window of Opportunity Trend Report 2025"
+. Retrieved
+2026-01-06
+.
+↑
+"Chargeback Fraud: What It Is and How to Prevent It"
+.
+DataDome
+. Retrieved
+2025-12-15
+.
+↑
+PayPal user agreement
+Section 4.5 lists chargeback info. Section 8 lists chargeback fees.
+↑
+PayPal Merchant Fees - Current Rates for All Merchant Products
+Archived
+2015-01-08 at the
+Wayback Machine
+, retrieved June 2012
+↑
+"Visa International Operating Regulations"
+(PDF)
+. 15 October 2010. Archived from
+the original
+(PDF)
+on 2011-08-16
+. Retrieved
+2009-02-12
+.
+↑
+"Avoiding Chargebacks"
+(PDF)
+. 2011. Archived from
+the original
+(PDF)
+on 2020-07-27.
+↑
+"Card-Not-Present (CNP) Fraud Mitigation Techniques"
+(PDF)
+.
+U.S. Payments Forum
+. July 2020. p.
+24
+. Retrieved
+29 October
+2025
+.
+v
+t
+e
+Credit
+,
+charge
+and
+debit cards
+Major cards
+American Express
+Mastercard
+Debit
+Maestro
+UnionPay
+Visa
+Debit
+Cash
+Regional and
+specialty cards
+Americas
+Capital One
+Discover
+Diners Club
+Elo
+Interac
+Europe
+Bancomat
+BankAxept
+CB
+Dankort
+EC
+Forbrugsforeningen
+Girocard
+Mir
+MobilePay
+Swish
+Wero
+Vipps
+V Pay
+Asia
+West Asia
+ArCa
+AzeriCard
+Altyn Asyr
+Isracard
+Jaywan
+Mada
+Troy
+South Asia
+LankaPay
+PayPak
+RuPay
+TakaPay
+East Asia
+BC Card
+Electronic Payment Services (EPS)
+Hyundai Card
+JCB
+Southeast Asia
+BCA Card
+GPN
+MEPS
+NETS
+Africa
+Meeza
+Verve
+Oceania
+eftpos
+Other/specialist
+Cabcharge
+UATP
+Defunct cards
+Access
+Bankcard
+Carte Blanche
+Carte Bleue
+Chipknip
+Choice
+enRoute
+Eurocheque
+Eurocard
+Everything
+Laser
+Mondex
+Rail Travel Card
+Revolution Card
+Solo
+Switch
+PIN
+Proton
+Visa Electron
+Accounts
+Payment card number
+Card association
+Credit card balance transfer
+Credit limit
+Installment loan
+Revolving account
+Deposit account
+Current/checking account
+Savings account
+ATM card
+Fees
+Debt
+Cash advance
+Charge-off
+Debt-lag
+Interest
+Grace period
+Introductory rate
+Universal default
+Payment
+Card not present transaction
+Chargeback
+Controlled payment number
+Dispute
+Interchange
+Fee
+Surcharge
+Card scheme
+Interbank networks
+Cirrus
+Interac
+Pulse
+Plus
+Security
+3-D Secure
+Card security code
+Chargeback fraud
+Credit card fraud
+Credit card hijacking
+Technology
+Automated teller machine
+Contactless payment
+Credit card imprinter
+EMV
+Hardware security module
+Interbank network
+Magnetic stripe card
+Payment terminal
+Personal identification number
+Secure cryptoprocessor
+Smart card
+Banking
+Issuing bank
+Acquiring bank
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Chargeback&oldid=1345947281
+"
+Category
+:
+Merchant services
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Articles needing additional references from March 2011
+All articles needing additional references
+Articles with limited geographic scope from April 2014
+Articles with multiple maintenance issues
+Webarchive template wayback links
+All articles with unsourced statements
+Articles with unsourced statements from October 2025
+Search
+Search
+Chargeback
+7 languages
+Add topic

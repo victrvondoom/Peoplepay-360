@@ -1,0 +1,854 @@
+Swiggy - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Indian online food delivery company
+Swiggy Limited
+Type
+Public
+Traded as
+NSE
+:
+SWIGGY
+BSE
+:
+544289
+ISIN
+INE00H001014
+Industry
+Food delivery
+Q-commerce
+Founded
+26
+December 2013
+;
+12 years ago
+(
+2013-12-26
+)
+[
+1
+]
+Founders
+Sriharsha Majety
+Nandan Reddy
+Rahul Jaimini
+Headquarters
+Bengaluru
+, Karnataka, India
+Area served
+700 cities (2025)
+Key people
+Sriharsha Majety (
+CEO
+)
+Rohit Kapoor (CEO – Food)
+Phani Kishan Addepalli (CEO – Instamart)
+Rahul Bothra (
+CFO
+)
+Madhusudhan Rao (
+CTO
+)
+Services
+Online food ordering
+Online grocery
+Revenue
+₹
+163.33 billion
+(US$1.7
+billion) (2025)
+Operating income
+₹
+−19.1 billion
+(US$−200
+million) (2025)
+Net income
+₹
+−31.07 billion
+(US$−330
+million) (2025)
+Owners
+Prosus
+(25.4%)
+SoftBank
+(7.6%)
+Accel
+(5.4%)
+Sriharsha Majety (4.9%)
+[
+2
+]
+Number of employees
+6,000 (2023)
+[
+3
+]
+Subsidiaries
+Dineout
+Website
+swiggy
+.com
+Footnotes
+Financials as of 31
+March
+2025
+[
+update
+]
+.
+[
+4
+]
+Swiggy Limited
+is an Indian
+online food ordering
+and
+delivery
+company, headquartered in
+Bengaluru
+.
+As of 2025
+[
+update
+]
+, it operates food delivery services in more than 700 Indian cities,
+[
+5
+]
+and
+quick-commerce
+services under the name Instamart in 100 cities.
+[
+6
+]
+The company was incorporated in 2013.
+Swiggy competes primarily with
+Zomato
+in food delivery.
+[
+7
+]
+In quick-commerce, Instamart ranks behind competitors
+Blinkit
+and
+Zepto
+in terms of market share.
+[
+8
+]
+[
+9
+]
+History
+[
+edit
+]
+In 2013, Sriharsha Majety and Nandan Reddy designed an
+e-commerce
+website called Bundl to facilitate courier service and shipping within India.
+[
+10
+]
+Bundl was halted in 2014 and rebranded to enter the food delivery market.
+[
+11
+]
+Majety and Reddy approached Rahul Jaimini, formerly with
+Myntra
+, and launched Swiggy in August 2014.
+[
+12
+]
+[
+10
+]
+[
+11
+]
+By 2015, Swiggy expanded its food delivery operations from just Bengaluru to eight
+Tier 1 cities
+across India.
+[
+13
+]
+[
+14
+]
+At the time, the food delivery sector was in turmoil as several notable startups, such as
+Foodpanda
+(later acquired by
+Ola Cabs
+), TinyOwl (later acquired by
+Zomato
+) and Ola Cafe (later closed) were struggling.
+[
+10
+]
+[
+11
+]
+In January 2017, Swiggy started its
+cloud kitchen
+chain called "The Bowl Company".
+[
+15
+]
+In November 2017, Swiggy started a
+kitchen incubator
+business called Swiggy Access, opening a network of ready-to-occupy kitchens for its restaurant partners.
+[
+16
+]
+By 2019, over 1,000 Swiggy Access kitchens were operational, according to a
+TechCrunch
+report.
+[
+17
+]
+In mid-2018, Swiggy was operational in 16 Indian cities,
+[
+18
+]
+which increased to 500 cities in 2019, matching the scale of rival
+Zomato
+.
+[
+19
+]
+In early 2019, Swiggy expanded into general product deliveries under the name Swiggy Stores, sourcing items from local stores.
+[
+20
+]
+[
+21
+]
+[
+22
+]
+In September 2019, Swiggy launched Swiggy Go, a
+package delivery
+service.
+[
+23
+]
+[
+24
+]
+In April 2020, it rebranded Swiggy Go as Swiggy Genie.
+[
+25
+]
+During the
+COVID-19 pandemic in India
+, it began doorstep delivery of
+alcohol
+in the states of
+Jharkhand
+,
+West Bengal
+and
+Odisha
+.
+[
+26
+]
+[
+27
+]
+In May 2020, Swiggy laid off 1,100 employees during the COVID-19 pandemic.
+[
+28
+]
+The pandemic also resulted in the shut down of more than three-fourths of its cloud kitchens.
+[
+29
+]
+A Swiggy delivery partner
+swapping the battery
+of his electric scooter
+In August 2020, Swiggy launched its instant grocery delivery service called Instamart using a network of
+dark stores
+.
+[
+30
+]
+[
+31
+]
+In early 2021, the company closed Swiggy Stores and expanded its operations under Instamart.
+[
+32
+]
+In 2022, Swiggy acquired the dining and table reservation platform Dineout from
+Times Internet
+in an all-stock deal valued at $120 million.
+[
+33
+]
+In 2023, it sold Swiggy Access kitchens to Kitchens@ in a
+share-swap deal
+.
+[
+34
+]
+In January 2024, Swiggy laid off 400 employees, or 6% of its workforce, ahead of IPO.
+[
+35
+]
+[
+36
+]
+In April 2024, Swiggy converted itself into a
+public limited company
+[
+37
+]
+and confidentially filed for an
+initial public offering
+.
+[
+38
+]
+Swiggy launched its
+initial public offering
+(IPO) in November 2024 at
+₹
+390
+(US$4.10)
+per share, valuing the company at $11.3 billion.
+[
+39
+]
+In December 2024, Swiggy launched an events and ticketing service called Scenes.
+[
+40
+]
+In May 2025, it shut down its same-day package delivery service Genie.
+[
+41
+]
+In July 2025, Swiggy expanded its quick-commerce business Instamart to 127 cities across India and added 41 new dark stores as part of its growth strategy amid increasing competition in the sector.
+[
+42
+]
+References
+[
+edit
+]
+↑
+"Swiggy Limited"
+(PDF)
+. Swiggy
+. Retrieved
+30 November
+2025
+.
+↑
+"Swiggy - Pre-IPO shareholders' lock-in expiry to weigh on stock performance"
+(PDF)
+.
+Business Standard
+. JM Financial
+. Retrieved
+24 July
+2025
+.
+↑
+"Swiggy planning fresh layoffs; may cut 8-10% from 6000-strong workforce"
+.
+Business Standard
+. 19 January 2023
+. Retrieved
+27 February
+2023
+.
+↑
+"Shareholders' Letter Q4FY25"
+(PDF)
+. Swiggy Limited
+. Retrieved
+14 May
+2025
+.
+↑
+"Swiggy–Kearney Report Projects $125 Billion Food Market by 2030"
+.
+Entrepreneur
+. Retrieved
+7 May
+2024
+.
+↑
+Acharya, Disha (19 March 2025).
+"Is Swiggy Instamart's expansion to 100 cities a high-risk bet?"
+.
+The Morning Context
+. Retrieved
+30 November
+2025
+.
+↑
+Madhav Chanchani (17 March 2019).
+"Online food delivery wars are moving from India to Bharat"
+.
+The Times of India
+. Retrieved
+13 August
+2019
+.
+↑
+"India - Internet Sector Research Report (16 June 2025)"
+(PDF)
+.
+JM Financial
+. Retrieved
+30 November
+2025
+.
+↑
+"Zepto surpasses Swiggy Instamart in daily orders, closes in on Blinkit"
+.
+Financial Express
+. Retrieved
+30 November
+2025
+.
+1
+2
+3
+"How Swiggy Became India's Fastest Unicorn"
+.
+Livemint
+. 27 June 2018
+. Retrieved
+31 August
+2019
+.
+1
+2
+3
+"Swiggy Timeline: From a Bootstrapped Venture to India's Fastest Growing Unicorn (Infographic)"
+.
+Entrepreneur
+. 23 December 2018
+. Retrieved
+31 August
+2019
+.
+↑
+Kanth, K. Rajani.
+"A start-up by IIM, IIT grads to quickly deliver food from restaurants!"
+.
+Rediff
+. Retrieved
+27 February
+2023
+.
+↑
+"Bengaluru's food delivery start-up Swiggy expands operations to Pune"
+.
+The Economic Times
+. 21 July 2015
+. Retrieved
+2 April
+2024
+.
+↑
+"Online food ordering platform Swiggy raises $7 mn"
+.
+Techcircle
+. 10 May 2016
+. Retrieved
+2 April
+2024
+.
+↑
+"Swiggy sets up cloud kitchen 'The Bowl Company' in Bengaluru"
+.
+The Times of India
+. 19 January 2017
+. Retrieved
+27 February
+2023
+.
+↑
+"Swiggy launches ready-to-occupy kitchens 'Swiggy Access'
+"
+.
+The Times of India
+. 14 November 2017
+. Retrieved
+27 February
+2023
+.
+↑
+Singh, Manish (20 November 2019).
+"India's Swiggy bets big on cloud kitchens"
+.
+TechCrunch
+. Retrieved
+27 February
+2023
+.
+↑
+Bansal, Varsha (1 July 2019).
+"Food delivery fight grips small-town India"
+.
+mint
+. Retrieved
+2 April
+2024
+.
+↑
+"Swiggy now in 500 Indian cities, targets 100 more this year"
+.
+mint
+. 7 October 2019
+. Retrieved
+2 April
+2024
+.
+↑
+Jon Russell (February 2019).
+"India's Swiggy goes beyond food to offer product delivery from local stores"
+.
+TechCrunch
+. Retrieved
+13 August
+2019
+.
+↑
+Abhinav Singh (27 April 2019).
+"How food aggregator apps like Swiggy, Zomato, are trying innovative business methods"
+.
+The Week
+. Retrieved
+13 August
+2019
+.
+↑
+Deepti Chaudhary (15 March 2019).
+"Can Swiggy take more orders?"
+.
+Fortune
+. Retrieved
+13 August
+2019
+.
+↑
+"India's Swiggy has a new service that will deliver just about anything"
+.
+TechCrunch
+. 4 September 2019
+. Retrieved
+2 March
+2020
+.
+↑
+"Swiggy launches instant pick up and drop service 'Swiggy Go'
+"
+.
+Livemint
+. 4 September 2019.
+↑
+Singh, Jitendra (9 April 2020).
+"Swiggy expands grocery delivery service to more cities; rebrands Swiggy Go"
+.
+Entrackr
+. Retrieved
+25 January
+2022
+.
+↑
+"Swiggy starts home delivery of alcohol with new verification feature in Ranchi, plans to extend it to more cities soon"
+.
+The Times of India
+. 21 May 2020
+. Retrieved
+14 March
+2023
+.
+↑
+Bhalla, Kritti (24 April 2021).
+"Zomato Exits Alcohol Delivery Due To Cashburn Even As Swiggy Stays Put"
+.
+Inc42
+. Retrieved
+14 March
+2023
+.
+↑
+"Swiggy lays off 1,100 employees as Covid-19 derails Cloud kitchens"
+.
+The Economic Times
+. 19 May 2020
+. Retrieved
+20 May
+2020
+.
+↑
+"COVID forced us to shut three-fourths of cloud kitchens: Swiggy CEO"
+.
+Business Today
+. 26 November 2021
+. Retrieved
+27 February
+2023
+.
+↑
+Upadhyay, Harsh (10 August 2020).
+"Swiggy launches 45-min grocery and essentials delivery service via Instamart"
+.
+Entrackr
+. Retrieved
+15 November
+2021
+.
+↑
+Sil, Debarghya (11 August 2020).
+"Swiggy Launches InstaMart; Promises To Deliver Groceries Within 45 Minutes"
+.
+Entrepreneur
+.
+↑
+"Swiggy Ends Grocery Marketplace Experiment As Focus Turns To Dark Stores"
+.
+Inc42 Media
+. 20 January 2021
+. Retrieved
+15 November
+2021
+.
+↑
+"Swiggy buys Dineout from Times Internet in $120 million all-stock deal"
+.
+The Economic Times
+. Retrieved
+3 January
+2023
+.
+↑
+Bhushan, Kul (2 March 2023).
+"Swiggy sells Access Kitchens business to Kitchens@"
+.
+Entrackr
+. Retrieved
+2 March
+2023
+.
+↑
+"Swiggy to fire 400 employees in the fresh round of layoffs: Story in 5 points"
+.
+India Today
+. Retrieved
+9 March
+2024
+.
+↑
+Saha, Soumyajit (26 January 2024).
+"Swiggy to lay off 6% of workforce impacting 400 jobs ahead of IPO"
+.
+The Economic Times
+.
+↑
+"Swiggy converts to public limited company ahead of IPO"
+.
+The Economic Times
+. 9 April 2024
+. Retrieved
+7 May
+2024
+.
+↑
+C, Priyamvada (26 April 2024).
+"Swiggy makes confidential filing for IPO"
+.
+Mint
+. Retrieved
+7 May
+2024
+.
+↑
+"Swiggy IPO sees 3.6x subscription"
+.
+The Times of India
+. 8 November 2024
+. Retrieved
+15 November
+2024
+.
+↑
+Ranipeta, Shilpa (14 December 2024).
+"Swiggy launches 'Scenes' for live events, takes on Zomato's 'District'
+"
+.
+CNBCTV18
+. Retrieved
+9 February
+2025
+.
+↑
+"Swiggy shuts down hyperlocal delivery arm Genie"
+.
+Moneycontrol
+. 5 May 2025
+. Retrieved
+14 May
+2025
+.
+↑
+Kasthuril, Vaeshnavi (30 July 2025).
+"Swiggy Q1 results in focus as rival Zomato pulls ahead in quick commerce | Company Business News"
+.
+mint
+. Retrieved
+10 June
+2026
+.
+External links
+[
+edit
+]
+Official website
+v
+t
+e
+Online food ordering
+services
+Meal delivery
+Bolt Food
+Coupang Eats
+Delivery.com
+Delivery Hero
+Baedal Minjok
+Foodora
+Foodpanda
+Glovo
+PedidosYa
+Talabat
+Yemeksepeti
+DiDi Food
+DoorDash
+Deliveroo
+Wolt
+EatStreet
+ele.me
+Fantuan Delivery
+Foodhub
+Foodi
+GoFood
+GrabFood
+Grubhub
+Seamless
+iFood
+Just Eat Takeaway.com
+Just Eat
+Skip
+Lezzoo
+Meituan
+Pathao Foods
+PickMe
+Rappi
+ShopeeFood
+Swiggy
+Uber Eats
+Postmates
+Waiter.com
+Yandex.Eda
+Zomato
+Zesta
+Meal kits
+Blue Apron
+Goodfood
+Gousto
+Hungryroot
+HelloFresh
+Home Chef
+Mindful Chef
+Purple Carrot
+Tovala
+Online grocery delivery
+Amazon Fresh
+Blinkit
+Chaldal.com
+Crowd Cow
+Favor
+Foodimart
+FreshDirect
+Flink
+Getir
+GoMart
+Gopuff
+Gorillas
+GrabMart
+Instacart
+JioMart
+Milkrun
+Ocado
+PC Express
+Peapod
+PickMe
+Robomart
+Samokat
+Shipt
+Zepto
+Reservations
+Eat App
+OpenTable
+Resy
+TheFork
+Bookatable
+Yelp
+Defunct
+ASAP
+Delivery Dudes
+Baidu Waimai
+Foodler
+Hello Curry
+Hungryhouse
+Menulog
+Munchery
+OrderAhead
+OrderUp
+Plated
+Tapingo
+Software
+Brightloom
+Chowbus
+ChowNow
+OpenRest
+Slice
+Toast POS
+Upserve
+Category
+Food portal
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Swiggy&oldid=1360522815
+"
+Categories
+:
+Online marketplaces of India
+Indian companies established in 2013
+Retail companies established in 2013
+Transport companies established in 2013
+Internet properties established in 2013
+Online food ordering
+Companies based in Bengaluru
+2013 establishments in Karnataka
+Companies listed on the National Stock Exchange of India
+Companies listed on the Bombay Stock Exchange
+2024 initial public offerings
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Use Indian English from December 2019
+All Wikipedia articles written in Indian English
+Use dmy dates from May 2020
+Articles containing potentially dated statements from March 2025
+All articles containing potentially dated statements
+Articles containing potentially dated statements from 2025
+Search
+Search
+Swiggy
+16 languages
+Add topic

@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "TRAI Value Added Services",
+  "category": "vas",
+  "source_url": "https://www.trai.gov.in/telecom/vas",
+  "final_url": "https://www.trai.gov.in/telecom/vas",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 13414,
+  "stored_path": "knowledge/telecom/mobile/trai_vas.txt",
+  "sha256": "f7fa629e299411e6a9127845862c1ed606811f87ce29a32c506a7cc9e9c1ec34",
+  "bytes": 13487,
+  "fetched_at": "2026-07-06T13:59:08.713151+00:00"
+}

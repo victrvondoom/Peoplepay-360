@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(45.5 KB)",
+  "parent_title": "TRAI Quality of Service",
+  "category": "quality_of_service",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/modified_regulations_210812.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/qos",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-09/modified_regulations_210812.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/trai/trai_qos_04_download_45_5_kb.pdf",
+  "sha256": "46a164a499c5a4619cde62811017e94d7f26c7e7634b4f0cd0efd24b7a26250b",
+  "bytes": 46593,
+  "fetched_at": "2026-07-06T13:58:17.298689+00:00"
+}

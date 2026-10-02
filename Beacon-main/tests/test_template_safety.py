@@ -120,9 +120,9 @@ def test_remediator_sg_action_has_tag_condition_and_rule_statement(
 ) -> None:
     role = remediation["Resources"]["BeaconRemediatorRole"]
     sg_statements = [s for s in _statements(role) if action in _actions(s)]
-    assert len(sg_statements) == 2, (
-        "need one tagged security-group statement and one security-group-rule statement"
-    )
+    assert (
+        len(sg_statements) == 2
+    ), "need one tagged security-group statement and one security-group-rule statement"
     by_resource = {_sub_text(s["Resource"]): s for s in sg_statements}
     group_stmt = next(
         s for r, s in by_resource.items() if r.endswith("security-group/*")
@@ -253,9 +253,10 @@ def test_every_traced_function_role_can_write_xray(
                 else str(role_ref).split(".")[0]
             )
             actions = _all_actions(resources[role_name])
-            assert {"xray:PutTraceSegments", "xray:PutTelemetryRecords"} <= actions, (
-                f"{name} is traced but {role_name} lacks X-Ray grants"
-            )
+            assert {
+                "xray:PutTraceSegments",
+                "xray:PutTelemetryRecords",
+            } <= actions, f"{name} is traced but {role_name} lacks X-Ray grants"
 
 
 # -------------------------------------------- triage role (positive grants)
@@ -283,9 +284,9 @@ def test_triage_role_has_the_grants_the_contract_path_needs(
         "beacon-changes-",
     ):
         assert table in resources
-    assert {a for a in actions if _is_write(a)} == set(), (
-        "the triage role must not hold remediation write actions"
-    )
+    assert {
+        a for a in actions if _is_write(a)
+    } == set(), "the triage role must not hold remediation write actions"
 
 
 def test_no_role_anywhere_has_wildcard_write(
@@ -297,9 +298,9 @@ def test_no_role_anywhere_has_wildcard_write(
                 continue
             for stmt in _statements(res):
                 for action in _actions(stmt):
-                    assert action != "*" and not action.endswith(":*"), (
-                        f"{name} grants {action}"
-                    )
+                    assert action != "*" and not action.endswith(
+                        ":*"
+                    ), f"{name} grants {action}"
 
 
 def test_every_iam_resource_is_an_arn_or_wildcard(

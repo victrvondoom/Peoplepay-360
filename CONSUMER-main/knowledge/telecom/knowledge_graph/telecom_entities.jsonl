@@ -1,0 +1,26 @@
+{"domain": "telecom", "label": "Telecom Operator", "name": "Telecom Operator"}
+{"domain": "telecom", "label": "Customer", "name": "Customer"}
+{"domain": "telecom", "label": "SIM Card", "name": "SIM Card"}
+{"domain": "telecom", "label": "Mobile Number", "name": "Mobile Number"}
+{"domain": "telecom", "label": "Broadband Connection", "name": "Broadband Connection"}
+{"domain": "telecom", "label": "Fiber Connection", "name": "Fiber Connection"}
+{"domain": "telecom", "label": "Recharge", "name": "Recharge"}
+{"domain": "telecom", "label": "Billing Cycle", "name": "Billing Cycle"}
+{"domain": "telecom", "label": "Invoice", "name": "Invoice"}
+{"domain": "telecom", "label": "Plan", "name": "Plan"}
+{"domain": "telecom", "label": "Data Pack", "name": "Data Pack"}
+{"domain": "telecom", "label": "Voice Pack", "name": "Voice Pack"}
+{"domain": "telecom", "label": "SMS Pack", "name": "SMS Pack"}
+{"domain": "telecom", "label": "VAS Service", "name": "VAS Service"}
+{"domain": "telecom", "label": "Complaint", "name": "Complaint"}
+{"domain": "telecom", "label": "Refund", "name": "Refund"}
+{"domain": "telecom", "label": "Tower", "name": "Tower"}
+{"domain": "telecom", "label": "Signal", "name": "Signal"}
+{"domain": "telecom", "label": "Network", "name": "Network"}
+{"domain": "telecom", "label": "Call Drop", "name": "Call Drop"}
+{"domain": "telecom", "label": "Portability (MNP)", "name": "Portability (MNP)"}
+{"domain": "telecom", "label": "TRAI Regulation", "name": "TRAI Regulation"}
+{"domain": "telecom", "label": "DoT Guideline", "name": "DoT Guideline"}
+{"domain": "telecom", "label": "Consumer Right", "name": "Consumer Right"}
+{"domain": "telecom", "label": "Appeal", "name": "Appeal"}
+{"domain": "telecom", "label": "Resolution", "name": "Resolution"}

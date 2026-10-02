@@ -1,0 +1,8269 @@
+Amazon (company) - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+American multinational technology conglomerate
+This article
+may require
+copy editing
+for grammar, punctuation, phrasing, inconsistent structure
+.
+You can assist by
+editing it
+.
+(
+May 2026
+)
+(
+Learn how and when to remove this message
+)
+Amazon.com, Inc.
+Doppler
+, home to Amazon's corporate headquarters
+Trade name
+Amazon
+Formerly
+Cadabra, Inc. (1994–1995)
+Type
+Public
+Traded as
+Nasdaq
+:
+AMZN
+Nasdaq-100
+component
+DJIA
+component
+S&P 100
+component
+S&P 500
+component
+ISIN
+US0231351067
+Industry
+Conglomerate
+Founded
+July
+5, 1994
+;
+32 years ago
+(
+1994-07-05
+)
+, in
+Bellevue, Washington
+, U.S.
+Founder
+Jeff Bezos
+Headquarters
+Seattle
+, Washington, and
+Arlington County, Virginia
+,
+U.S.
+Area served
+Worldwide
+Key people
+Jeff Bezos
+(
+executive chairman
+)
+Andy Jassy
+(
+president
+and
+CEO
+)
+Products
+Echo
+Fire Tablet
+Fire TV
+Fire OS
+Kindle
+Services
+Amazon.com
+Amazon Alexa
+Amazon Luna
+Amazon Music
+Amazon Pay
+Amazon Prime
+Amazon Prime Video
+Amazon MGM Studios
+Amazon Robotics
+Amazon Web Services
+MGM+
+One Medical
+Ring
+Twitch
+Revenue
+US$716.9
+billion
+(2025)
+Operating income
+US$79.98
+billion
+(2025)
+Net income
+US$77.67
+billion
+(2025)
+Total assets
+US$818.0
+billion
+(2025)
+Total equity
+US$411.1
+billion
+(2025)
+Owner
+Jeff Bezos (8.8%)
+Number of employees
+1,576,000
+(2025)
+Subsidiaries
+List
+AbeBooks
+Amazon.com
+Amazon Air
+Amazon Books
+Amazon Fresh
+Amazon Games
+Amazon Lab126
+Amazon Leo
+Amazon Logistics
+Amazon Pharmacy
+Amazon Publishing
+Amazon Robotics
+Amazon MGM Studios
+AWS
+Audible
+Blink
+Body Labs
+Brilliance Audio
+Eero LLC
+Goodreads
+IMDb
+PillPack
+Ring
+Shopbop
+Twitch Interactive
+Whole Foods Market
+Woot
+Zappos
+Zoox
+Website
+amazon.com
+Footnotes
+[
+1
+]
+[
+2
+]
+[
+3
+]
+[
+4
+]
+Amazon.com, Inc.
+[
+1
+]
+(
+doing business as
+Amazon
+)
+[
+a
+]
+is an American multinational technology company engaged in
+e-commerce
+,
+cloud computing
+,
+online advertising
+,
+digital streaming
+,
+entertainment
+, and
+artificial intelligence
+.
+[
+5
+]
+Founded in 1994 by
+Jeff Bezos
+in
+Bellevue, Washington
+,
+[
+6
+]
+the company originally started as an online marketplace for books but gradually expanded its offerings to include a wide range of product categories, referred to as "The Everything Store".
+[
+7
+]
+Amazon has been described as a
+Big Tech
+company.
+[
+8
+]
+It is best known as the world's biggest online shopping
+retailer
+and
+marketplace
+, offering a wide range of products and services. Amazon sells
+books
+,
+electronics
+,
+pharmaceuticals
+,
+car parts
+,
+video games
+,
+dining
+products,
+jewelry
+,
+food
+,
+music
+, and
+sports equipment
+.
+[
+9
+]
+The company has multiple subsidiaries, including
+Amazon Web Services
+(AWS), which provides cloud computing;
+Zoox
+, a
+self-driving car
+division;
+Kuiper Systems
+, a satellite Internet provider; and
+Amazon Lab126
+, a computer hardware
+R&D
+provider. Other subsidiaries include
+Ring
+,
+Twitch
+,
+IMDb
+, and
+Whole Foods Market
+. Its acquisition of Whole Foods in August 2017 for
+US$
+13.4
+billion substantially increased its market share and its presence as a
+physical retailer
+.
+[
+10
+]
+Amazon also distributes a variety of downloadable and streaming content through its
+Amazon Prime Video
+,
+MGM+
+,
+Amazon Music
+, Twitch,
+Audible
+, and
+Wondery
+[
+11
+]
+units. It publishes books through its publishing arm,
+Amazon Publishing
+; produces and distributes film and television content through
+Amazon MGM Studios
+, including the
+Metro-Goldwyn-Mayer
+studio it acquired in March 2022; and owns Brilliance Audio and Audible, which produce and distribute
+audiobooks
+, respectively. Amazon also produces consumer electronics, most notably
+Kindle
+e-readers,
+Echo
+devices,
+Fire
+tablets, and
+Fire
+TVs.
+Amazon has a reputation as a disruptor of industries through technological innovation and aggressive reinvestment of profits into capital expenditures.
+[
+12
+]
+[
+13
+]
+[
+14
+]
+[
+15
+]
+As of 2023
+[
+update
+]
+, it is the world's largest
+online retailer
+and
+marketplace
+,
+smart speaker
+provider, cloud computing service provider through AWS,
+[
+16
+]
+live-streaming
+service provider through Twitch, and
+Internet company
+as measured by revenue and market share.
+[
+17
+]
+In 2021, it surpassed
+Walmart
+as the world's largest retailer outside of China, driven in large part by its paid subscription plan,
+Amazon Prime
+, which has 200
+million subscribers worldwide.
+[
+18
+]
+[
+19
+]
+It is the
+second-largest private employer in the United States
+[
+20
+]
+and the
+second-largest company in the world
+and
+the United States
+by revenue
+as of 2024
+[
+update
+]
+(after Walmart).
+[
+21
+]
+As of October
+2024
+[
+update
+]
+, Amazon is the
+12th-most visited website in the world
+, and 84% of its traffic comes from the United States.
+[
+22
+]
+[
+23
+]
+Amazon has been criticized
+for its business practices, including
+surveillance
+partnerships, poor working conditions,
+anti-union
+efforts,
+environmental harm
+,
+anticompetitive behavior
+,
+censorship
+controversies, and exploitative treatment of small businesses and suppliers.
+History
+Main article:
+History of Amazon
+1994–2009
+Jeff Bezos's home in
+Bellevue, Washington
+, where the company was founded in 1994
+On July 5, 1994, Amazon was founded as "Cadabra" by
+Jeff Bezos
+, after he relocated from
+New York City
+to
+Bellevue, Washington
+, near
+Seattle
+, to operate an online bookstore. Bezos chose the Seattle area for its abundance of technical talent from
+Microsoft
+and the
+University of Washington
+, as well as its smaller population for
+sales tax
+purposes and the proximity to a major book distribution warehouse in
+Roseburg, Oregon
+. Other options Bezos considered included
+Portland, Oregon
+, and
+Boulder, Colorado
+.
+[
+24
+]
+A few months later, in November 1994, Cadabra, which had been founded in the converted garage of Bezos's house for symbolic reasons, was renamed to Amazon.
+[
+25
+]
+On July 16, 1995, the Amazon website launched for public sales, initially sourcing its books directly from wholesalers and publishers.
+[
+24
+]
+[
+26
+]
+Bezos retained the URL www.relentless.com, which he purchased when considering a name for the company; it redirects to the Amazon homepage.
+[
+27
+]
+In May 1997, Amazon went
+public
+.
+[
+28
+]
+[
+29
+]
+In 1998, Amazon began selling music and videos, and began international operations by acquiring online sellers of books in the United Kingdom and Germany. In the subsequent year, it initiated the sale of a diverse range of products, including music, video games, consumer electronics, home improvement items, software, games, and toys.
+[
+28
+]
+[
+29
+]
+In 2002, the company launched
+Amazon Web Services
+(AWS), which initially focused on providing APIs for web developers to build
+web applications
+on top of Amazon's e
+-
+commerce platform.
+[
+30
+]
+[
+31
+]
+In 2004, AWS was expanded to provide website popularity statistics and web crawler data from the Alexa Web Information Service.
+[
+32
+]
+AWS later shifted toward providing enterprise services with
+Simple Storage Service
+(S3) in 2006,
+[
+33
+]
+and
+Elastic Compute Cloud
+(EC2) in 2008, allowing companies to rent data storage and computing power from Amazon.
+[
+34
+]
+In 2006, Amazon launched the
+Fulfillment by Amazon
+program, which allowed individuals and small companies (called "third-party sellers") to sell products through Amazon's warehouses and fulfillment infrastructure.
+[
+35
+]
+2010–present
+Amazon purchased the
+Whole Foods Market
+supermarket chain in 2017.
+[
+36
+]
+It is the leading e-retailer in the United States with approximately US$178 billion
+net sales
+in 2017. It has over 300 million active customer accounts globally.
+[
+37
+]
+Amazon saw large growth during the
+COVID-19 pandemic
+, hiring more than 100,000 staff in the
+United States
+and
+Canada
+.
+[
+38
+]
+Some Amazon workers in the US, France, and Italy protested the company's decision to "run normal shifts" due to COVID-19's ease of spread in warehouses.
+[
+39
+]
+[
+40
+]
+In Spain, the company faced legal complaints over its policies,
+[
+41
+]
+while a group of US Senators wrote an open letter to Bezos expressing concerns about workplace safety.
+[
+42
+]
+On February 2, 2021, Bezos announced that he would step down as CEO to become executive chair of Amazon's board. The transition officially took place on July 5, 2021, with former CEO of AWS
+Andy Jassy
+replacing him as CEO.
+[
+43
+]
+[
+44
+]
+In January 2023, Amazon cut over 18,000 jobs, primarily in consumer retail and its human resources division in an attempt to cut costs.
+[
+45
+]
+On November 8, 2023, a plan was adopted for
+Jeff Bezos
+to sell approximately 50 million
+shares
+of the company over the next year with a deadline of January 31, 2025. The first step was the sale of 12 million shares for about $2 billion.
+[
+46
+]
+On February 26, 2024, Amazon became a component of the
+Dow Jones Industrial Average
+.
+[
+47
+]
+On December 19, 2024, Amazon workers, led by the
+International Brotherhood of Teamsters
+labor union, went on
+strike
+against Amazon in at least four US states, with workers in other facilities in the United States being welcomed to join the strike as well.
+[
+48
+]
+[
+49
+]
+On October 28, 2025, the company announced plans to reduce its corporate workforce by 14,000 positions, which has been reported as the largest round of job cuts by Amazon since 2022.
+[
+50
+]
+As part of this plan, Amazon is expected to fire about 370 people from its European headquarters in Luxembourg in December 2025 to early 2026.
+[
+51
+]
+In January 2026, Amazon announced a second round of large-scale layoffs, affecting approximately 16,000 corporate employees. This followed the earlier reduction of 14,000 positions in October 2025. According to company statements and news reports, the layoffs were part of a broader effort to streamline operations, reduce
+bureaucracy
+, and adapt to changing business conditions, including the adoption of
+artificial intelligence
+technologies. Affected employees were offered severance packages and support for internal job placement.
+[
+52
+]
+[
+53
+]
+[
+54
+]
+In January 2025, Amazon filed an objection to Saks Global’s bankruptcy financing plan. Amazon invested $475 million into Saks’ acquisition of Neiman Marcus, and is now worried that Saks declaring bankruptcy would harm creditors and push the tech company further down the repayment pecking order.
+[
+55
+]
+In January 2026, Amazon entered talks with OpenAI to invest up to $50 billion.
+[
+56
+]
+Amazon historically has a deep strategic partnership with Anthropic, OpenAI's competitor.
+[
+57
+]
+In January 2026, Amazon also laid off 16,000 employees in what is Amazon's second round of large-scale job reductions in three months due to
+AI
+.
+[
+58
+]
+In March 2026, Amazon signed an energy pledge at the White House which required it to bear the cost of new electricity generation to power its data centers.
+[
+59
+]
+Amazon launched Amazon Supply Chain Services in May 2026.
+[
+60
+]
+Products and services
+Main article:
+List of Amazon products and services
+Amazon.com
+amazon.com
+Logo since November 2024
+Screenshot
+Homepage
+Type of site
+E-commerce
+Available
+in
+Arabic
+Chinese
+Dutch
+English
+French
+German
+Hindi
+Italian
+Japanese
+Polish
+Portuguese
+Spanish
+Swedish
+Turkish
+Owner
+Amazon
+URL
+amazon
+.com
+(original US site)
+Commercial
+Yes
+Registration
+Optional
+Launched
+1995
+;
+31
+years ago
+(
+1995
+)
+Current
+status
+Active
+Written
+in
+C++
+and
+Java
+[
+61
+]
+Amazon.com is an e-commerce platform that sells many product lines, including media (
+books
+, movies, music, and software), apparel, baby products,
+consumer electronics
+,
+beauty products
+, gourmet food, groceries, health and personal care products, industrial & scientific supplies, kitchen items,
+jewelry
+, watches, lawn and garden items, musical instruments,
+sporting goods
+, tools, automotive items, toys and games, and farm
+supplies
+[
+62
+]
+and
+consulting services
+.
+[
+63
+]
+Amazon websites are country-specific (for example, amazon.com for the US and amazon.co.uk for UK) though some offer international shipping.
+[
+64
+]
+Visits to
+amazon.com
+grew from 615
+million annual visitors in 2008,
+[
+65
+]
+to more than 2 billion per month in 2022.
+[
+66
+]
+The e-commerce platform is the 12th most visited website in the world.
+[
+23
+]
+In February 2024, Amazon announced its first chatbot, "Rufus", for use in the US; in July it was widely available to all customers in the US.
+[
+67
+]
+"Rufus" is now available in the US, India and the UK which helps the shoppers get product recommendations, get shopping list advice, compare products and see what other customers have responded to regarding their specific questions.
+[
+68
+]
+Results generated by Amazon's search engine are partly determined by promotional fees.
+[
+69
+]
+The company's
+localized
+storefronts, which differ in selection and prices, are differentiated by
+top-level domain
+and
+country code
+:
+Amazon Marketplaces worldwide
+Top-Level Domain
+Served by neighboring Domain
+Sales by country (2023)
+[
+70
+]
+Country
+share
+United States
+69.3%
+Germany
+6.5%
+United Kingdom
+5.8%
+Japan
+4.8%
+Other
+13.6%
+Region
+Country
+Domain name
+Since
+Languages
+Notes
+Africa
+Egypt
+amazon
+.eg
+September 2021
+Arabic, English
+Formerly known as
+Souq.com
+Egypt
+South Africa
+amazon.co
+.za
+May 2024
+English
+Americas
+Brazil
+amazon.com
+.br
+December 2012
+Portuguese
+Canada
+amazon
+.ca
+June 2002
+English, French
+Mexico
+amazon.com
+.mx
+August 2013
+Spanish
+United States
+amazon
+.com
+July 1995
+English, Spanish, Arabic, German, Hebrew, Korean, Portuguese, Chinese (Simplified), Chinese (Traditional)
+International customers without a localized Amazon website may purchase eBooks from the
+Kindle Store
+on Amazon US.
+[
+71
+]
+Asia
+China
+amazon
+.cn
+September 2004
+Chinese (Simplified)
+Formerly known as
+Joyo.com
+CHN
+India
+amazon
+.in
+June 2013
+English, Hindi, Tamil, Telugu, Kannada, Malayalam, Bengali, Marathi
+Japan
+amazon.co
+.jp
+November 2000
+Japanese, English, Chinese (Simplified)
+Saudi Arabia
+amazon
+.sa
+June 2020
+Arabic, English
+Formerly known as
+Souq.com
+KSA
+Singapore
+amazon
+.sg
+July 2017
+English
+Turkey
+amazon.com
+.tr
+September 2018
+Turkish
+United Arab Emirates
+amazon
+.ae
+May 2019
+Arabic, English
+Formerly known as
+Souq.com
+UAE
+Europe
+Belgium
+amazon.com
+.be
+October 2022
+Dutch, French, English
+France
+amazon
+.fr
+August 2000
+French, English
+Germany
+amazon
+.de
+October 1998
+German, English, Czech, Dutch, Polish, Turkish
+Also serves Austria,
+[
+72
+]
+Denmark
+[
+73
+]
+and Switzerland
+[
+74
+]
+Ireland
+amazon
+.ie
+March 2025
+English
+Italy
+amazon
+.it
+November 2010
+Italian, English
+Netherlands
+amazon
+.nl
+November 2014
+Dutch, English
+Initially only books & e-books, full shop opened March 2020
+[
+75
+]
+Poland
+amazon
+.pl
+March 2021
+Polish
+Spain
+amazon
+.es
+September 2011
+Spanish, Portuguese, English
+Also serves Portugal
+[
+76
+]
+Sweden
+amazon
+.se
+October 2020
+Swedish, English
+United Kingdom
+amazon.co
+.uk
+October 1998
+English
+Oceania
+Australia
+amazon.com
+.au
+November 2017
+English
+Also serves New Zealand
+[
+77
+]
+Merchant partnerships
+In 2000, US toy retailer
+Toys "R" Us
+entered into a 10-year agreement with Amazon, valued at $50
+million per year plus a cut of sales, under which Toys "R" Us would be the exclusive supplier of toys and baby products on the service, and the chain's website would redirect to Amazon's Toys & Games category. In 2004, Toys "R" Us sued Amazon, claiming that because of a perceived lack of variety in Toys "R" Us stock, Amazon had knowingly allowed third-party sellers to offer items on the service in categories that Toys "R" Us had been granted exclusivity. In 2006, a court ruled in favor of Toys "R" Us, giving it the right to unwind its agreement with Amazon and establish its independent e-commerce website. The company was later awarded $51 million in damages.
+[
+78
+]
+[
+79
+]
+[
+80
+]
+In 2001, Amazon entered into a similar agreement with
+Borders
+, under which Amazon would comanage Borders.com as a co-branded service.
+[
+81
+]
+Borders pulled out of the arrangement in 2007, with plans to also launch its own online store.
+[
+82
+]
+On October 18, 2011, Amazon.com announced a partnership with
+DC Comics
+for the exclusive digital rights to many popular comics, including
+Superman
+,
+Batman
+,
+Green Lantern
+,
+Sandman
+, and
+Watchmen
+. The partnership has caused well-known bookstores like
+Barnes & Noble
+to remove these titles from its shelves.
+[
+83
+]
+In November 2013, Amazon announced a partnership with the
+United States Postal Service
+to begin delivering orders on Sundays. The service, included in Amazon's standard shipping rates, initiated in metropolitan areas of
+Greater Los Angeles
+and
+New York
+because of the high-volume and inability to deliver in a timely way, with plans to expand into
+Dallas
+,
+Houston
+,
+New Orleans
+and
+Phoenix
+by 2014.
+[
+84
+]
+In June 2017,
+Nike
+agreed to sell products through Amazon in exchange for better policing of counterfeit goods.
+[
+85
+]
+[
+86
+]
+This proved unsuccessful and Nike withdrew from the partnership in November 2019.
+[
+86
+]
+[
+87
+]
+Companies including
+IKEA
+and
+Birkenstock
+also stopped selling through Amazon around the same time, citing similar frustrations over business practices and counterfeit goods.
+[
+88
+]
+In September 2017, Amazon ventured with one of its sellers JV Appario Retail owned by Patni Group which has recorded a total income of US$104.44
+million (
+₹
+759
+crore
+) in financial year 2017–2018.
+[
+89
+]
+As of October
+11,
+2017
+[
+update
+]
+,
+Amazon Fresh
+sold a range of
+Booths
+branded products for home delivery in selected areas.
+[
+90
+]
+In November 2018, Amazon reached an agreement with
+Apple Inc.
+to sell selected products through the service, via the company and selected Apple Authorized Resellers. As a result of this partnership, only Apple Authorized Resellers may sell Apple products on Amazon effective January 4, 2019.
+[
+91
+]
+[
+92
+]
+On November 7, 2024, Amazon is reportedly discussing a second multi-billion dollar investment in AI startup
+Anthropic
+, following its initial $4 billion investment.
+[
+93
+]
+On 8 October 2025, Amazon launched prescription vending machines at One Medical clinics in Los Angeles. The machines are operated by Amazon Pharmacy and are able to prescribe a range of common medications, such as antibiotics, inhalers and blood pressure treatments.
+[
+94
+]
+Private-label products
+Main article:
+List of Amazon brands
+Amazon Basics USB cable
+Amazon sells many products under its
+own brand names
+, including phone chargers, batteries, and diaper wipes. The AmazonBasics brand was introduced in 2009, and now features hundreds of product lines, including smartphone cases, computer mice, batteries, dumbbells, and dog crates. Amazon owned 34 private-label brands
+as of 2019
+[
+update
+]
+. These brands account for 0.15% of Amazon's global sales, whereas the average for other large retailers is 18%.
+[
+95
+]
+Other Amazon retail brands include Presto!, Mama Bear, and Amazon Essentials.
+[
+96
+]
+Third-party sellers
+Amazon derives many of its sales (around 40% in 2008) from third-party sellers who sell products on Amazon.
+[
+97
+]
+Some other large e-commerce sellers use Amazon to sell their products in addition to selling them through their websites. The sales are processed through Amazon.com and end up at individual sellers for processing and order fulfillment and Amazon leases space for these retailers. Small sellers of used and new goods go to Amazon Marketplace to offer goods at a fixed price.
+[
+98
+]
+Affiliate program
+Publishers can sign up as affiliates and receive a commission for referring customers to Amazon by placing links to Amazon on their websites if the referral results in a sale. Worldwide, Amazon has "over 900,000 members" in its affiliate programs.
+[
+99
+]
+As of mid-2014, the Amazon Affiliate Program was used by 1.2% of all websites and was the second most popular advertising network after
+Google Ads
+.
+[
+100
+]
+[
+needs update
+]
+It is frequently used by websites and non-profits to provide a way for supporters to earn them a commission.
+[
+101
+]
+Associates can access the Amazon catalog directly on their websites by using the
+Amazon Web Services
+(AWS)
+XML
+service. A new
+[
+when?
+]
+affiliate product, aStore, allows Associates to embed a subset of Amazon products within another website, or linked to another website. In June 2010, Amazon Seller Product Suggestions was launched to provide more transparency to sellers by recommending specific products to third-party sellers to sell on Amazon. Products suggested are based on customers' browsing history.
+[
+102
+]
+Product reviews
+See also:
+Criticism of Amazon §
+Amazon reviews
+Amazon allows users to submit reviews to the web page of each product. Reviewers must rate the product on a
+rating scale
+from one to five stars. Amazon provides a badging option for reviewers that indicates the real name of the reviewer (based on confirmation of a credit card account) or that indicates that the reviewer is one of the top reviewers by popularity.
+As of 16
+December
+2020
+[
+update
+]
+, Amazon removed the ability of sellers and customers to comment on product reviews and purged their websites of all posted product review comments. In an email to sellers, Amazon gave its rationale for removing this feature: "...the comments feature on customer reviews was rarely used." The remaining review response options are to indicate whether the reader finds the review helpful or to report that it violates Amazon policies (abuse). If a review is given enough "helpful" hits, it appears on the front page of the product. In 2010, Amazon was reported as being the largest single source of Internet consumer reviews.
+[
+103
+]
+When publishers asked Bezos why Amazon would publish negative reviews, he defended the practice by claiming that Amazon.com was "taking a different approach...we want to make every book available—the good, the bad and the ugly...to let truth loose".
+[
+104
+]
+There have been cases of positive reviews being written and posted by
+public relations
+companies on behalf of their clients
+[
+105
+]
+and instances of writers using pseudonyms to leave negative reviews of their rivals' works.
+Amazon sales rank
+The Amazon sales rank (ASR) indicates the popularity of a product sold on any Amazon locale. It is a relative indicator of popularity that is updated hourly. Effectively, it is a "best sellers list" for the millions of products stocked by Amazon.
+[
+106
+]
+While the ASR has no direct effect on the sales of a product, it is used by Amazon to determine which products to include in its bestsellers lists.
+[
+106
+]
+Products that appear in these lists enjoy additional exposure on the Amazon website and this may lead to an increase in sales. In particular, products that experience large jumps (up or down) in their sales ranks may be included within Amazon's lists of "movers and shakers"; such a listing provides additional exposure that might lead to an increase in sales.
+[
+107
+]
+For competitive reasons, Amazon does not release actual sales figures to the public. However, Amazon has now begun to release
+point of sale
+data via the
+BookScan
+service to verified authors.
+[
+108
+]
+While the ASR has been the source of much speculation by publishers, manufacturers, and marketers, Amazon itself does not release the details of its sales rank calculation algorithm. Some companies have analyzed Amazon sales data to generate sales estimates based on the ASR,
+[
+109
+]
+though Amazon states:
+Please keep in mind that our sales rank figures are simply meant to be a guide of general interest for the customer and not definitive sales information for publishers—we assume you have this information regularly from your distribution sources
+—
+Amazon.com Help
+[
+110
+]
+Physical stores
+Amazon Fresh
+store in
+Sevenoaks
+,
+United Kingdom
+In November 2015, Amazon opened a physical
+Amazon Books
+store in
+University Village
+in
+Seattle
+. The store was 5,500 square feet and prices for all products matched those on its website.
+[
+111
+]
+Amazon opened its tenth physical bookstore in 2017;
+[
+112
+]
+media speculation at the time suggested that Amazon planned to eventually roll out 300 to 400 bookstores around the country.
+[
+111
+]
+All of its locations were closed in 2022 along with other retail locations under the "Amazon 4-Star" brand.
+[
+113
+]
+In July 2016, the company announced that it was opening a
+1,100,000
+ft (335,280.0
+m)
+square foot facility in
+Palmer Township
+in the
+Lehigh Valley
+region of eastern
+Pennsylvania
+.
+As of 2024
+[
+update
+]
+, Amazon is the Lehigh Valley region's third-largest employer.
+[
+114
+]
+[
+115
+]
+In August 2019, Amazon applied to have a liquor store in
+San Francisco
+, as a means to ship beer and alcohol within the city.
+[
+116
+]
+In 2020,
+Amazon Fresh
+opened several physical stores in the US and the
+United Kingdom
+.
+[
+117
+]
+In January 2026, Amazon announced it would close all of its Amazon Go and Amazon Fresh stores to shift focus to its online same-day delivery service and expand its Whole Foods Market business. The closure affects 57 Fresh stores and 15 Amazon Go locations, some of which will be converted into Whole Foods stores.
+[
+118
+]
+Hardware and services
+Amazon Fire
+tablet
+Amazon has a number of products and services available, including its digital assistant
+Alexa
+,
+Amazon Music
+, and
+Prime Video
+for music and videos respectively, the
+Amazon Appstore
+for Android apps, the
+Kindle
+line of
+electronic paper
+e-readers,
+Fire
+and
+Fire HD
+color
+LCD
+tablets.
+Audible
+provides audiobooks for purchase and listening.
+In September 2021, Amazon announced the launch of
+Astro
+, its first household robot, powered by its Alexa smart home technology. This can be remote-controlled when not at home, to check on pets, people, or home security. It will send owners a notification if it detects something unusual.
+[
+119
+]
+In January 2023, Amazon announced the launch of RXPass, a prescription drug delivery service. It allows U.S.
+Amazon Prime
+members to pay a $5 monthly fee for access to 60 medications. The service was launched immediately after the announcement except in states with specific prescription delivery requirements. Beneficiaries of government healthcare programs such as
+Medicare
+and
+Medicaid
+will not be able to sign up for RXPass.
+[
+120
+]
+Subsidiaries
+See also:
+List of mergers and acquisitions by Amazon
+Amazon owns over 100 subsidiaries, including
+Amazon Web Services
+,
+Audible
+,
+Diapers.com
+,
+Goodreads
+,
+IMDb
+, Kiva Systems (now
+Amazon Robotics
+),
+One Medical
+,
+Shopbop
+, Teachstreet,
+Twitch
+,
+Zappos
+, and
+Zoox
+.
+[
+121
+]
+Bezos separately owns
+The Washington Post
+(through Nash Holdings, LLC),
+Blue Origin
+,
+Bezos Expeditions
+,
+Altos Labs
+, and other companies.
+Amazon Live
+Amazon Inspire
+Type of site
+Online video platform
+Headquarters
+Seattle
+, Washington
+,
+United States
+Owner
+Amazon Inc.
+Industry
+E-commerce
+Live streaming
+Parent
+Amazon Inc.
+Launched
+2019
+;
+7
+years ago
+(
+2019
+)
+Amazon Live is a video
+e-commerce
+live-streaming service created to compete with live-streaming services. The service allows users to stream live videos promoting or sponsoring products.
+[
+122
+]
+Users (mainly celebrities or
+Internet influencers
+) have the option to livestream on Amazon and add tags to additionally add context to the products they're selling or promoting. Other users can join in and type in messages to send to a global chat on the livestream.
+[
+122
+]
+In 2019 Amazon launched an integrated platform into the Amazon website and
+application
+. In 2023 roughly a billion total viewers watch Amazon Live across the United States and India. The platform has also been integrated into
+Amazon Freevee
+and
+Amazon Prime Video
+.
+[
+123
+]
+Amazon Web Services
+Amazon Web Services
+,
+HOU-14
+Main article:
+Amazon Web Services
+Amazon Web Services (AWS) is a subsidiary of Amazon that provides
+on-demand
+cloud computing
+platforms
+and
+APIs
+to individuals, companies, and governments, on a metered pay-as-you-go basis. These cloud computing
+web services
+provide
+distributed computing
+processing capacity and software tools via AWS
+server farms
+.
+As of 2021 Q4
+[
+update
+]
+, AWS has 33% market share for cloud infrastructure while the next two competitors
+Microsoft Azure
+and
+Google Cloud
+have 21%, and 10% respectively, according to
+Synergy Group
+.
+[
+124
+]
+Audible
+Main article:
+Audible (service)
+Audible is a seller and producer of spoken audio entertainment, information, and educational programming on the Internet. Audible sells digital
+audiobooks
+,
+radio
+and
+television programs
+, and audio versions of magazines and newspapers. Through its production arm, Audible Studios, Audible has also become the world's largest producer of downloadable audiobooks. On January 31, 2008, Amazon announced it would buy Audible for about $300
+million. The deal closed in March 2008 and Audible became a subsidiary of Amazon.
+[
+125
+]
+Goodreads
+Main article:
+Goodreads
+Goodreads
+is a "
+social cataloging
+" website founded in December 2006 and launched in January 2007 by Otis Chandler, a software engineer, and entrepreneur, and Elizabeth Khuri. The website allows individuals to freely search Goodreads' extensive user-populated database of books, annotations, and reviews. Users can sign up and register books to generate library catalogs and reading lists. They can also create their groups of book suggestions and discussions. In December 2007, the site had over 650,000 members, and over a million books had been added. Amazon bought the company in March 2013.
+[
+126
+]
+Ring
+Main article:
+Ring (company)
+Ring is a
+home automation
+company founded by Jamie Siminoff in 2013. It is primarily known for its
+Wi-Fi
+powered
+smart doorbells
+, but manufactures other devices such as security cameras. Amazon bought Ring for US$1
+billion in 2018.
+[
+127
+]
+Twitch
+Main article:
+Twitch (service)
+Twitch
+at the
+Electronic Entertainment Expo
+Twitch
+is a
+live streaming
+platform for video, primarily oriented towards video gaming content. Twitch was acquired by Amazon in August 2014 for $970
+million.
+[
+128
+]
+The site's rapid growth had been boosted primarily by the prominence of major
+esports
+competitions on the service, leading
+GameSpot
+senior esports editor Rod Breslau to have described the service as "the
+ESPN
+of esports".
+[
+129
+]
+As of 2015
+[
+update
+]
+, the service had over 1.5
+million broadcasters and 100
+million monthly viewers.
+[
+130
+]
+Whole Foods Market
+Whole Foods Market
+store in
+Ann Arbor, Michigan
+Whole Foods Market
+is an American
+supermarket
+chain
+exclusively featuring foods without artificial preservatives, colors, flavors, sweeteners, and hydrogenated fats.
+[
+131
+]
+Amazon acquired Whole Foods for $13.7 billion in August 2017.
+[
+132
+]
+[
+133
+]
+[
+10
+]
+Since acquiring Whole Foods, the company has launched its own chain of
+Fresh
+supermarkets and taken steps to integrate its online and physical grocery operations.
+Other
+Other Amazon subsidiaries include:
+A9.com
+, a company focused on researching and building innovative technology; it has been a subsidiary since 2003.
+[
+134
+]
+Amazon Academy
+, formerly JEE Ready, is an online learning platform for engineering students to prepare for competitive exams like the Joint Entrance Examination (JEE), launched by Amazon India on January 13, 2021
+Amazon Maritime
+, Inc. holds a
+Federal Maritime Commission
+license to operate as a
+non-vessel-owning common carrier
+(NVOCC), which enables the company to manage its shipments from China into the United States.
+[
+135
+]
+Amazon Pharmacy
+is an online delivery service dedicated to prescription drugs, launched in November 2020. The service provides discounts up to 80% for generic drugs and up to 40% for branded drugs for Prime subscribe users. The products can be purchased on the company's website or at over 50,000 bricks-and-mortar pharmacies in the United States.
+[
+136
+]
+Annapurna Labs
+, an Israel-based microelectronics company reputedly for US$350–370M acquired by
+Amazon Web Services
+in January 2015 .
+[
+137
+]
+[
+138
+]
+[
+139
+]
+Beijing Century Joyo Courier Services
+, which applied for a
+freight forwarding
+license with the
+US Maritime Commission
+. Amazon is also building out its logistics in
+trucking
+and
+air freight
+to potentially compete with
+UPS
+and
+FedEx
+.
+[
+140
+]
+[
+141
+]
+Brilliance Audio
+, an audiobook publisher founded in 1984 by Michael Snodgrass in
+Grand Haven, Michigan
+.
+[
+142
+]
+The company produced its first eight audio titles in 1985.
+[
+142
+]
+The company was purchased by Amazon in 2007 for an undisclosed amount.
+[
+143
+]
+[
+144
+]
+At the time of the acquisition, Brilliance was producing 12–15 new titles a month.
+[
+144
+]
+It operates as an independent company within Amazon. In 1984, Brilliance Audio invented a technique for recording twice as much on the same cassette.
+[
+145
+]
+The technique involved recording on each of the two channels of each stereo track.
+[
+145
+]
+It has been credited with revolutionizing the burgeoning audiobook market in the mid-1980s since it made unabridged books affordable.
+[
+145
+]
+ComiXology
+, a
+cloud
+-based digital comics platform with over 200
+million comic downloads
+as of September
+2013
+[
+update
+]
+. It offers a selection of more than 40,000 comic books and graphic novels across Android, iOS, Fire OS and Windows 8 devices and over a web browser. Amazon bought the company in April 2014.
+[
+146
+]
+CreateSpace
+, which offers self-publishing services for independent content creators, publishers, film studios, and music labels, became a subsidiary in 2009.
+[
+147
+]
+[
+148
+]
+eero
+, an electronics company specializing in mesh-networking
+Wi-Fi
+founded as a startup in 2014 by Nick Weaver, Amos Schallich, and Nate Hardison to simplify and innovate the smart home.
+[
+149
+]
+Eero was acquired by Amazon in 2019 for US$97
+million.
+[
+150
+]
+Eero has continued to operate under its banner and advertises its commitment to privacy despite early concerns from the company's acquisition.
+[
+151
+]
+Health Navigator
+is a startup developing
+APIs
+for online health services acquired in October 2019. The startup will form part of Amazon Care, which is the company's employee healthcare service. This follows the 2018 purchase of
+PillPack
+for under $1
+billion, which has also been included into Amazon Care.
+[
+152
+]
+Junglee
+, a former online shopping service provided by Amazon that enabled customers to search for products from online and offline retailers in India. Junglee started as a virtual database that was used to extract information from the Internet and deliver it to enterprise applications. As it progressed, Junglee started to use its database technology to create a single window marketplace on the Internet by making every item from every supplier available for purchase. Web shoppers could locate, compare and transact millions of products from across the Internet shopping mall through one window.
+[
+153
+]
+Amazon acquired Junglee in 1998, and the website Junglee.com was launched in India in February 2012
+[
+154
+]
+as a comparison-shopping website. It curated and enabled searching for a diverse variety of products such as clothing, electronics, toys, jewelry, and video games, among others, across thousands of online and offline sellers. Millions of products are browsable, the client selects a price, and then they are directed to a seller. In November 2017, Amazon closed down Junglee.com and the former domain currently redirects to Amazon India.
+[
+155
+]
+Kuiper Systems
+, a subsidiary of Amazon, set up to deploy a
+broadband
+satellite internet constellation
+with an announced 3,236
+Low Earth orbit
+satellites
+to provide satellite based Internet connectivity.
+[
+156
+]
+[
+157
+]
+[
+158
+]
+Lab126
+, developers of integrated consumer electronics such as the
+Kindle
+, became a subsidiary in 2004.
+[
+159
+]
+Shelfari
+, a former
+social cataloging
+website for books. Shelfari users built virtual bookshelves of the titles which they owned or had read and they could rate, review,
+tag
+and discuss their books. Users could also create groups that other members could join, create discussions and talk about books, or other topics. Recommendations could be sent to friends on the site for what books to read. Amazon bought the company in August 2008.
+[
+126
+]
+Shelfari continued to function as an independent book social network within the Amazon until January 2016, when Amazon announced that it would be merging Shelfari with
+Goodreads
+and closing down Shelfari.
+[
+160
+]
+[
+161
+]
+Souq
+, the former largest
+e-commerce
+platform in the
+Arab world
+. The company launched in 2005 in
+Dubai
+,
+United Arab Emirates
+and served multiple areas across the Middle East.
+[
+162
+]
+On March 28, 2017, Amazon acquired Souq.com for $580
+million.
+[
+163
+]
+The company was re-branded as Amazon and its infrastructure was used to expand Amazon's online platform in the Middle East.
+[
+164
+]
+Zoox
+, Amazon's self-driving subsidiary, operates in the US and expects to start charging passengers for rides in Las Vegas in early 2026.
+[
+165
+]
+Amazon also has investments in renewable energy, including plans to fund four
+small nuclear reactors
+at the
+Xe-100 reactor site
+in Eastern
+Washington
+, and plans to expand its position into the Canadian market through an investment in a new plant in
+Alberta
+.
+[
+166
+]
+Operations
+Headquarters
+Amazon's former headquarters in the
+Pacific Medical Center
+building in
+Beacon Hill, Seattle
+Amazon's global headquarters are in more than 40 owned and leased buildings spread across Seattle's adjacent
+South Lake Union
+,
+Denny Triangle
+, and
+Downtown
+neighborhoods. The first 14 buildings Amazon occupied in South Lake Union were developed primarily by
+Vulcan, Inc.
+from 2008 onward, the first 11 of which were acquired from Vulcan in 2012 at a cost of $1.16 billion.
+[
+167
+]
+[
+168
+]
+The company was previously headquartered in rented space within the
+Pacific Medical Center
+, located in the city's
+Beacon Hill
+neighborhood, from 1998 to 2011.
+[
+169
+]
+[
+170
+]
+Amazon built a four tower, four low-rise, complex in Seattle's
+Denny Triangle
+neighborhood to serve as the company's primary headquarters, though it retained many of the earlier purchased buildings to house its more than 45,000 corporate employees in the Seattle area.
+[
+171
+]
+The plan for the new campus, designed by
+NBBJ
+and named "Rufus 2.0" after a dog who was a fixture of the company in its early days,
+[
+172
+]
+[
+173
+]
+was approved by the city of Seattle in 2012, with construction commencing the following year.
+[
+174
+]
+[
+175
+]
+The first of the towers, nicknamed
+Doppler
+, opened on December 14, 2015.
+[
+176
+]
+[
+177
+]
+Other major campuses
+Amazon's European headquarters are in Luxembourg's capital,
+Luxembourg
+.
+[
+178
+]
+Its UK headquarters are at
+Principal Place
+,
+Shoreditch
+, London.
+[
+179
+]
+On November 13, 2018, Amazon announced that it would divide the planned
+HQ2
+between
+New York City
+and
+Northern Virginia
+.
+[
+180
+]
+On February 14, 2019, Amazon canceled its plan for the HQ2 location in New York City. Amazon is also in the process of
+[
+needs update
+]
+building a retail hub of operations center in Nashville, Tennessee.
+On August 21, 2019, Amazon opened its largest campus in the world at
+Nanakramguda
+in
+Hyderabad
+, India. It is the first Amazon-owned campus located outside the United States and features the single largest Amazon-owned building in the world. The 9.5-acre campus houses over 15,000 employees.
+[
+181
+]
+[
+182
+]
+In 2021, construction began on the
+Riverlands
+mixed-use development in
+Cape Town
+, South Africa. The 14-hectare site includes the headquarters of Amazon Africa. The company began using its new HQ in December 2023.
+[
+183
+]
+Amazon plans to build a major campus in
+Bellevue, Washington
+, a suburb of
+Seattle
+, that will host 15,000 employees by 2025.
+[
+needs update
+]
+[
+184
+]
+The company opened its first Bellevue office in 2017, marking a return to the city since the company was founded there in 1995.
+[
+185
+]
+[
+186
+]
+Amazon's largest building in the city is Sonic, a 42-story building developed by
+Vulcan Real Estate
+with
+1
+million square feet (93,000
+m
+2
+)
+of office space. It opened in 2024.
+[
+187
+]
+The Bellevue campus will include the 43-story
+Bellevue 600
+tower, which is planned to be the tallest building in the city and the tallest to be developed by Amazon.
+[
+188
+]
+Global corporate offices
+Amazon in Amman, Jordan
+While much of Amazon's software development occurs in Seattle, the company employs software developers in centers across the globe. Some of these sites are run by an Amazon subsidiary called A2Z Development.
+[
+189
+]
+Retail
+Amazon has operated various retail store brands. Most of the stores are located inside of the United States, but Whole Foods also operates stores in Canada and the United Kingdom, while Amazon Go has six locations in London under the Amazon Fresh name.
+[
+190
+]
+[
+191
+]
+Whole Foods Market
+(557 locations as of June 2026)
+[
+192
+]
+Amazon Books
+(24
+[
+needs update
+]
+)
+Amazon Go
+(30
+[
+needs update
+]
+)
+Amazon Go Grocery (1
+[
+needs update
+]
+)
+Amazon Fresh
+(24
+[
+needs update
+]
+)
+[
+190
+]
+[
+193
+]
+Amazon 4-Star
+(31
+[
+needs update
+]
+) - a collection of new and trending items from Amazon.com that are rated four stars or higher.
+[
+194
+]
+[
+195
+]
+[
+196
+]
+[
+197
+]
+Amazon Pop-Up (7
+[
+needs update
+]
+) - small kiosks which sell Amazon devices such as Echo speakers, Kindle e-readers, Fire tablets, and Fire TV devices,
+Facebook Portal Plus
+and
+Oculus Quest
+are also found; usually housed in malls.
+[
+198
+]
+[
+199
+]
+All 87 were closed in May 2019 with 5 initially reopening later on.
+[
+197
+]
+[
+200
+]
+365 by Whole Foods Market
+(12
+[
+needs update
+]
+) - In January 2019, it was announced that the 365 by Whole Foods Market concept would be discontinued; all existing stores would be converted into regular Whole Foods stores.
+[
+201
+]
+[
+202
+]
+Logistics
+Amazon Transportation Services truck at an Amazon Logistics delivery station
+Amazon Logistics Delivery Service Partner company vehicles in
+Florida
+Amazon uses many different transportation services to deliver packages. Amazon-branded services include:
+Amazon Air
+, a cargo airline for bulk transport, with last-mile delivery handled either by Amazon Flex, Amazon Logistics, or the U.S. Postal Service.
+Amazon Flex, a
+smartphone app
+that enables individuals to act as independent contractors, delivering packages to customers from personal vehicles without uniforms. Deliveries include one or two hours
+Prime Now
+, same or next day
+Amazon Fresh
+groceries, and standard Amazon.com orders, in addition to orders from local stores that contract with Amazon.
+[
+203
+]
+Amazon Freight
+, a
+freight brokerage
+and logistics service
+[
+204
+]
+Amazon Logistics, in which Amazon contracts with small businesses (which it calls "Delivery Service Partners") to perform deliveries to customers. Each business has a fleet of approximately 20–40 Amazon-branded vans, and employees of the contractors wear Amazon uniforms.
+As of December
+2020
+[
+update
+]
+, it operates in the United States, Canada, Italy, Germany, Spain, and the United Kingdom.
+[
+205
+]
+Amazon Prime Air
+is an experimental drone delivery service that delivers packages via drones to Amazon Prime subscribers in select cities.
+Amazon directly employs people to work at its warehouses, bulk distribution centers, staffed "Amazon Hub Locker+" locations, and delivery stations where drivers pick up packages.
+As of December
+2020
+[
+update
+]
+, it is not hiring delivery drivers as employees.
+[
+206
+]
+Rakuten Intelligence
+estimated that in 2020 in the United States, the proportion of last-mile deliveries was 56% by Amazon's directly contracted services (mostly in urban areas), 30% by the
+United States Postal Service
+(mostly in rural areas), and 14% by
+UPS
+.
+[
+207
+]
+In April 2021, Amazon reported to investors it had increased its in-house delivery capacity by 50% in the last 12 months (which included the first year of the
+COVID-19 pandemic in the United States
+).
+[
+208
+]
+Pickup points
+In addition to
+Amazon Lockers
+, Amazon has around 30 staffed pickup points in the United States and over 800 independent ones in India. The US locations have large sets of Amazon Lockers and an area for customers to make returns.
+[
+209
+]
+The India locations are in existing retailers and have customers wait for a store employee to retrieve their package.
+[
+210
+]
+Supply chain
+Amazon first launched its distribution network in 1997 with two fulfillment centers in Seattle and
+New Castle, Delaware
+. Amazon has several types of distribution facilities consisting of cross-dock centers, fulfillment centers, sortation centers, delivery stations, Prime now hubs, and Prime air hubs. There are 75 fulfillment centers and 25 sortation centers with over 125,000 employees.
+[
+211
+]
+[
+212
+]
+Employees are responsible for five basic tasks: unpacking and inspecting incoming goods; placing goods in storage and recording their location; picking goods from their computer recorded locations to make up an individual shipment; sorting and packing orders; and shipping. A computer that records the location of goods and maps out routes for pickers plays a key role: employees carry hand-held computers which communicate with the central computer and monitor their rate of progress. Some warehouses are partially automated with systems built by
+Amazon Robotics
+.
+[
+213
+]
+In September 2006, Amazon launched a program called FBA (Fulfillment By Amazon) whereby it could handle storage, packing and distribution of products and services for small sellers.
+[
+35
+]
+Amazon
+fulfillment centers
+are large facilities with hundreds of employees, sometimes thousands. Employees are responsible for five basic tasks: unpacking and inspecting incoming goods; placing goods in storage and recording their location; picking goods from their computer recorded locations to make up an individual shipment; sorting and packing orders; and shipping. A computer that records the location of goods and maps out routes for pickers plays a key role: employees carry hand-held computers which communicate with the central computer and monitor their rate of progress. A picker may walk 10 or more miles a day.
+In newer fulfillment centers, items are stored on pods and brought to pickers by robots (
+Amazon Robotics
+). In the United Kingdom, initial staffing was provided by
+Randstad NV
+and other temporary employment agencies. In the United States, many workers are hired as Amazon employees and granted shares of stock or sign-on bonuses, while others are offered temporary seasonal positions. "When we have permanent positions available, we look to the top-performing temporary associates to fill them," said an Amazon spokesperson.
+[
+214
+]
+Amazon acquired
+Kiva Systems
+, a warehouse automation company, in 2012.
+Amazon fulfillment centers can also provide warehousing and order-fulfillment for third-party sellers, for an extra fee.
+[
+215
+]
+Third-party sellers can use Fulfillment by Amazon (FBA) to ship for other platforms as well, such as
+eBay
+or their own websites.
+[
+216
+]
+On March 20, 2020, Amazon agreed to remove metal detectors from its warehouses after a warehouse worker tested positive for
+COVID-19
+.
+[
+217
+]
+In addition to removing metal detectors, Amazon enacted a "6 feet rule", which enforced a six-feet distance between warehouse employees.
+[
+217
+]
+The Federal Public Health Emergency (PHE) for COVID-19 (which included social distancing) declared under Section 319 of the Public Health Service (PHS) Act, expired at the end of the day on May 11, 2023.
+[
+218
+]
+Amazon.fr fulfillment center in
+Lauwin-Planque
+,
+France
+Amazon.es fulfillment center in
+San Fernando de Henares
+,
+Spain
+Amazon.co.uk fulfillment center in
+Glenrothes
+,
+Scotland
+,
+UK
+Amazon.de fulfillment center in
+Graben
+,
+Germany
+Amazon.co.jp fulfillment center in
+Ichikawa
+,
+Japan
+Amazon.co fulfillment center in
+Baltimore
+, Maryland,
+US
+featuring
+Amazon Robotics
+Corporate affairs
+Board of directors
+Amazon founder
+Jeff Bezos
+in 2019
+As of August
+2025
+[
+update
+]
+, Amazon's board of directors were:
+[
+219
+]
+Jeff Bezos
+, executive chairman, Amazon.com, Inc.
+Andy Jassy
+, president and CEO, Amazon.com, Inc.
+Keith B. Alexander
+, CEO of IronNet Cybersecurity, former
+NSA director
+Edith W. Cooper, co-founder of Medley and former EVP of
+Goldman Sachs
+Jamie Gorelick
+, partner,
+Wilmer Cutler Pickering Hale and Dorr
+Daniel Huttenlocher
+,
+dean
+of the
+MIT Schwarzman College of Computing
+.
+Andrew Ng
+, co-founder,
+Coursera
+Indra Nooyi
+, former CEO,
+PepsiCo
+Jon Rubinstein
+, former chairman and CEO,
+Palm, Inc.
+Brad D. Smith
+, president,
+Marshall University
+Patty Stonesifer
+, president and CEO,
+Martha's Table
+Wendell Weeks
+, chairman, president and CEO,
+Corning Inc.
+Ownership
+The 10 largest shareholders of Amazon at the end of October 2025:
+[
+70
+]
+Shareholder name
+Percentage
+Jeff Bezos
+9.04%
+The Vanguard Group
+7.96%
+BlackRock
+4.93%
+State Street Corporation
+3.5%
+Fidelity Investments
+3.22%
+Geode Capital Management
+2.03%
+JP Morgan Investment Management
+1.81%
+Eaton Vance
+1.5%
+T. Rowe Price
+1.48%
+BlackRock Life Ltd.
+1.45%
+Others
+63.04%
+Finances
+Sales by business (2023)
+[
+70
+]
+Business
+share
+Online Stores
+40.3%
+Third-party Seller Services
+24.4%
+Amazon Web Services
+15.8%
+Advertising
+8.2%
+Subscription Services
+7.0%
+Physical Stores
+3.5%
+Other
+0.9%
+Amazon.com is primarily a retail site with a sales revenue model; Amazon takes a small percentage of the sale price of each item that is sold through its website while also allowing companies to advertise their products by paying to be listed as featured products.
+[
+220
+]
+As of 2018
+[
+update
+]
+, Amazon.com is ranked eighth on the
+Fortune 500
+rankings of the largest United States corporations by total revenue.
+[
+221
+]
+In
+Forbes Global 2000
+2023 Amazon ranked 36th.
+[
+222
+]
+For the fiscal year 2021, Amazon reported earnings of US$33.36
+billion, with an annual revenue of US$469.82
+billion, an increase of 21.7% over the previous fiscal cycle. Since 2007 sales increased from 14.835
+billion to 469.822
+billion, due to continued business expansion.
+[
+223
+]
+Amazon's market capitalization went over US$1
+trillion again in early February 2020 after the announcement of the fourth quarter 2019 results.
+[
+224
+]
+Year
+Revenue
+[
+225
+]
+Net income
+Total Assets
+Employees
+in million US$
+1995
+[
+226
+]
+0.5
+−0.3
+1.1
+1996
+[
+226
+]
+16
+−6
+8
+1997
+[
+226
+]
+148
+−28
+149
+614
+1998
+[
+227
+]
+610
+−124
+648
+2,100
+1999
+[
+227
+]
+1,639
+−720
+2,466
+7,600
+2000
+[
+227
+]
+2,761
+−1,411
+2,135
+9,000
+2001
+[
+227
+]
+3,122
+−567
+1,638
+7,800
+2002
+[
+227
+]
+3,932
+−149
+1,990
+7,500
+2003
+[
+228
+]
+5,263
+35
+2,162
+7,800
+2004
+[
+228
+]
+6,921
+588
+3,248
+9,000
+2005
+[
+228
+]
+8,490
+359
+3,696
+12,000
+2006
+[
+228
+]
+10,711
+190
+4,363
+13,900
+2007
+[
+228
+]
+14,835
+476
+6,485
+17,000
+2008
+[
+229
+]
+19,166
+645
+8,314
+20,700
+2009
+[
+230
+]
+24,509
+902
+13,813
+24,300
+2010
+[
+231
+]
+34,204
+1,152
+18,797
+33,700
+2011
+[
+232
+]
+48,077
+631
+25,278
+56,200
+2012
+[
+233
+]
+61,093
+−39
+32,555
+88,400
+2013
+[
+234
+]
+74,452
+274
+40,159
+117,300
+2014
+[
+235
+]
+88,988
+−241
+54,505
+154,100
+in billion US$
+2015
+[
+236
+]
+107.0
+0.59
+64.7
+230,800
+2016
+[
+237
+]
+135.9
+2.3
+83.4
+341,400
+2017
+[
+238
+]
+177.8
+3.0
+131.3
+566,000
+2018
+[
+239
+]
+232.8
+10.0
+162.6
+647,500
+2019
+[
+240
+]
+280.5
+11.5
+225.2
+798,000
+2020
+[
+241
+]
+386.0
+21.3
+321.1
+1,298,000
+2021
+[
+242
+]
+469.8
+33.3
+420.5
+1,608,000
+2022
+[
+242
+]
+513.9
+−2.7
+462.6
+1,541,000
+2023
+[
+243
+]
+574.7
+30.4
+527.8
+1,525,000
+2024
+[
+1
+]
+637.9
+59.2
+624.8
+1,556,000
+2025
+[
+244
+]
+716.9
+77.7
+818.0
+1,576,000
+Corporate culture
+During his tenure, Jeff Bezos had become renowned for his annual shareholder letters, which have gained similar notability to those of
+Warren Buffett
+.
+[
+245
+]
+These annual letters gave an "invaluable window" into the famously "secretive" company, and revealed Bezos's perspectives and strategic focus.
+[
+245
+]
+[
+246
+]
+A common theme of these letters is Bezos's desire to instill customer-centricity (in his words, "customer obsession") at all levels of Amazon, notably by making all senior executives field customer support queries for a short time at Amazon call centers. He also read many emails addressed by customers to his public email address.
+[
+247
+]
+One of Bezos's most well-known internal memos was his mandate for "all teams" to "expose their data and functionality" through service interfaces "designed from the ground up to be externalizable". This process, commonly known as a
+service-oriented architecture
+(SOA), resulted in mandatory
+dogfooding
+of services that would later be commercialized as part of AWS.
+[
+248
+]
+Amazon has used internal recognition programs such as the Just Do It Award
+[
+249
+]
+[
+250
+]
+[
+251
+]
+to encourage employee initiative and experimentation.
+Lobbying
+Amazon lobbies the United States federal government and state governments on multiple issues such as the enforcement of sales taxes on online sales, transportation safety, privacy and
+data protection
+and intellectual property. According to regulatory filings, Amazon.com focuses its lobbying on the
+United States Congress
+, the
+Federal Communications Commission
+and the
+Federal Reserve
+. Amazon.com spent roughly $3.5
+million, $5
+million and $9.5
+million on lobbying, in 2013, 2014 and 2015, respectively.
+[
+252
+]
+In 2019, it spent $16.8
+million and had a team of 104 lobbyists.
+[
+253
+]
+Amazon.com was a corporate member of the
+American Legislative Exchange Council
+(ALEC) until it dropped membership following protests at its shareholders' meeting on May 24, 2012.
+[
+254
+]
+In 2014, Amazon expanded its lobbying practices as it prepared to lobby the
+Federal Aviation Administration
+to approve its drone delivery program, hiring the
+Akin Gump Strauss Hauer & Feld
+lobbying firm in June.
+[
+255
+]
+Amazon and its lobbyists have visited with Federal Aviation Administration officials and aviation committees in Washington, D.C. to explain its plans to deliver packages.
+[
+256
+]
+In September 2020 this moved one step closer with the granting of a critical certificate by the FAA.
+[
+257
+]
+During the second Trump Administration, Amazon donated several times to various events and aspects of his presidency. Along with several other major companies, Amazon donated $1 million to Trump's inaugural fund.
+[
+258
+]
+In April 2025, Amazon was a corporate sponsor of the
+White House Easter Egg Roll
+, after Donald Trump solicited corporate sponsors for the event for the first time.
+[
+259
+]
+[
+260
+]
+In October 2025, Amazon was listed among the donors funding the construction of the
+White House State Ballroom
+.
+[
+261
+]
+Amazon lobbies on climate policy internationally. In the US, following Trump’s 2025 inauguration, Amazon began frequent engagements with the executive branch to advocate for permitting reform and energy development to support data center growth. In July 2025, Amazon joined policymakers at the Pennsylvania Energy and Innovation Summit, where it supported the development of nuclear energy to meet growing electricity demand, and lobbied for permitting reform to support grid development nationwide.
+[
+262
+]
+[
+263
+]
+Amazon sponsored the Conservative Coalition for Climate Solutions’ (C3) Energy Summit in Washington D.C. in December 2025, which brought together administration officials and industry representatives to discuss meeting the country’s growing electricity demand through modernization of the permitting process, investment in energy infrastructure, and scaling new technologies.
+[
+264
+]
+A December 2025 DeSmog article reported that the company’s sponsorship came alongside several organizations that had supported climate change denial, and a continued role for fossil fuels to meet growing energy demand.
+[
+265
+]
+[
+266
+]
+Criticism and controversies
+Main article:
+Criticism of Amazon
+A sticker expressing an anti-Amazon message is pictured on the back of a street sign in Seattle
+Amazon has attracted criticism for its actions, including supplying law enforcement with facial recognition surveillance tools;
+[
+267
+]
+forming cloud computing partnerships with the
+CIA
+;
+[
+268
+]
+leading customers away from bookshops;
+[
+269
+]
+adversely impacting the environment;
+[
+270
+]
+placing a low priority on warehouse conditions for workers;
+[
+271
+]
+[
+272
+]
+actively opposing unionization efforts;
+[
+273
+]
+remotely deleting content purchased by Amazon Kindle users; taking public subsidies; seeking to patent its
+1-Click
+technology; engaging in anti-competitive actions and
+price discrimination
+;
+[
+274
+]
+[
+275
+]
+and reclassifying
+LGBTQ
+books as adult content.
+[
+276
+]
+[
+277
+]
+Criticism has also concerned various decisions over whether to censor or publish content such as the
+WikiLeaks
+website, works containing
+libel
+, anti-LGBT merchandise, and material facilitating
+dog fighting
+,
+cockfighting
+, or
+pedophile
+activities.
+An article published by
+Time
+in the wake of social media website
+Parler
+'s termination of service by Amazon Web Service highlights the power companies like Amazon now have over the internet.
+[
+278
+]
+In December 2011, Amazon faced a backlash from small businesses for running a one-day deal to promote its new Price Check app. Shoppers who used the app to check prices in a brick-and-mortar store were offered a 5% discount to purchase the same item from Amazon.
+[
+279
+]
+Companies like
+Groupon
+,
+eBay
+and Taap have countered Amazon's promotion by offering $10 off from its products.
+[
+280
+]
+[
+281
+]
+The company has also faced accusations of putting undue pressure on suppliers to maintain and extend its profitability. One effort to squeeze the most vulnerable book publishers was known within the company as the Gazelle Project, after Bezos suggested, according to
+Brad Stone
+, "that Amazon should approach these small publishers the way a cheetah would pursue a sickly gazelle."
+[
+69
+]
+In July 2014, the
+Federal Trade Commission
+launched a lawsuit against the company alleging it was promoting in-app purchases to children, which were being transacted without parental consent.
+[
+282
+]
+In 2019, Amazon banned selling
+skin-lightening
+products after pushback from
+Minnesota
+health and
+environmental activists.
+[
+283
+]
+In 2022, a lawsuit filed by state attorney-general
+Letitia James
+was dismissed by the New York state court of appeals.
+[
+284
+]
+After the
+COVID-19 pandemic
+, Amazon faced criticism for complying, under pressure from the
+Biden Administration
+, to "reduce the visibility" of books critical of the
+COVID-19 vaccine
+,
+[
+285
+]
+[
+286
+]
+which was revealed after Rep.
+Jim Jordan
+(acting on behalf of the
+House Judiciary Committee
+) subpoenaed emails between the company and the Biden Administration.
+[
+287
+]
+An Amazon Prime truck blocking a bike lane in Washington, D.C.
+Amazon Prime has been criticized for its vehicles systemically
+double parking
+, blocking
+bike lanes
+, and otherwise violating traffic laws while dropping off packages, contributing to
+traffic congestion
+and endangering other road users.
+[
+288
+]
+[
+289
+]
+[
+290
+]
+[
+291
+]
+Jane Friedman
+[
+292
+]
+discovered six listings of books fraudulently using her name, on Amazon and
+Goodreads
+. Amazon and Goodreads resisted removing the fraudulent titles until the author's complaints went viral on social media, in a blog post titled "I Would Rather See My Books Get Pirated Than This (Or: Why Goodreads and Amazon Are Becoming Dumpster Fires)."
+[
+293
+]
+[
+294
+]
+[
+295
+]
+[
+296
+]
+In 2024, following years of criticism for providing law enforcement footage in the custody of
+Ring
+(a home security company owned by Amazon) without a warrant, Ring has halted this practice.
+[
+297
+]
+It received cautious praise from privacy-focused organizations such as the
+Electronic Frontier Foundation
+for this change.
+[
+297
+]
+In February 2025,
+Sky
+accused Amazon of not doing enough to prevent the piracy of its sports rights via "jailbroken" Fire Sticks.
+[
+298
+]
+Project Nimbus
+is a contract by which Amazon and Google provide
+Israel
+and
+its military
+with artificial intelligence, machine learning, and other cloud-computing services.
+[
+299
+]
+[
+300
+]
+The contract has been criticized by shareholders and employees concerned that the project may lead to abuses of
+Palestinian
+human rights in the
+Israeli–Palestinian conflict
+.
+[
+301
+]
+In October 2025, Amazon suspended an employee who posted messages to the company's Slack and wrote a letter to Andy Jassy criticizing Nimbus.
+[
+302
+]
+[
+303
+]
+On July 22, 2025, Amazon announced its plan to acquire
+San Francisco
+-based startup Bee AI. Bee produces a wristband, similar to most modern
+smartwatches
+, equipped with AI and microphones. The wristband is capable of providing summaries of conversations and reminders of tasks, effectively serving as a 24/7 note taker. News outlets criticize the fact that the devices saves transcripts, potentially utilizing it to train generative AI models which require vast quantities of data.
+[
+304
+]
+In January 2026, Amazon sent a notice out to cloud staffers in an apparent error acknowledging “organizational changes” at the company. The note also mentioned a "Project Dawn" which was cancelled, although it is unclear what the project is about.
+[
+305
+]
+See also
+Internet portal
+Companies portal
+Technology portal
+Amazon Breakthrough Novel Award
+– Literary award
+Amazon Pay
+– Online purchase processing system
+Amazon Standard Identification Number
+(
+ASIN
+)
+– Alphanumeric unique identifier
+Amazon Storywriter
+– Cloud-based screenwriting app by Amazon
+Camelcamelcamel
+– A website that tracks the prices of products sold on Amazon.com
+Criticism of Amazon
+History of Amazon
+Internal carbon pricing
+List of book distributors
+Statistically improbable phrases
+– Amazon.com's phrase extraction technique for indexing books
+References
+↑
+/
+ˈ
+æ
+m
+ə
+z
+ɒ
+n
+/
+ⓘ
+,
+AM
+-ə-zon
+;
+UK
+also
+/
+ˈ
+æ
+m
+ə
+z
+ə
+n
+/
+,
+AM
+-ə-zən
+1
+2
+3
+"Amazon.com, Inc. 2024 Form 10-K Annual Report"
+.
+US Securities and Exchange Commission
+. February 7, 2025.
+Archived
+from the original on February 7, 2025
+. Retrieved
+February 7,
+2025
+.
+↑
+"California Secretary of State Business Search"
+.
+Secretary of State of California
+. Archived from
+the original
+on February 23, 2018
+. Retrieved
+October 26,
+2018
+.
+↑
+"Amazon.com, Inc. 2026 Proxy Statement"
+.
+US Securities and Exchange Commission
+. April 9, 2026
+. Retrieved
+June 21,
+2026
+.
+{{
+cite web
+}}
+:  CS1 maint: url-status (
+link
+)
+↑
+Reuter, Dominick (July 30, 2021).
+"1 out of every 153 American workers is an Amazon employee"
+.
+Business Insider
+.
+Archived
+from the original on February 3, 2022
+. Retrieved
+February 4,
+2022
+.
+↑
+"Amazon Empire: The Rise and Reign of Jeff Bezos"
+.
+PBS
+.
+Archived
+from the original on January 16, 2020
+. Retrieved
+February 15,
+2020
+.
+↑
+Guevara, Natalie (November 17, 2020).
+"Amazon's John Schoettler has helped change how we think of corporate campuses"
+.
+Puget Sound Business Journal
+. Archived from
+the original
+on April 17, 2021
+. Retrieved
+March 9,
+2021
+.
+↑
+Kakutani, Michiko (October 28, 2013).
+"Selling as Hard as He Can"
+.
+The New York Times
+.
+ISSN
+0362-4331
+.
+Archived
+from the original on October 29, 2013
+. Retrieved
+December 20,
+2021
+.
+↑
+"Big Tech"
+.
+sdialliance.org
+. Retrieved
+December 29,
+2025
+.
+↑
+"Amazon: From Books to Everything"
+. June 17, 2024.
+Archived
+from the original on January 2, 2026
+. Retrieved
+January 17,
+2026
+.
+1
+2
+"Amazon and Whole Foods Market Announce Acquisition to Close This Monday, Will Work Together to Make High-Quality, Natural and Organic Food Affordable for Everyone"
+.
+Business Wire
+(Press release). August 24, 2017.
+Archived
+from the original on September 13, 2021
+. Retrieved
+September 13,
+2021
+.
+↑
+Carman, Ashley (December 30, 2020).
+"Amazon buys Wondery, setting itself up to compete against Spotify for podcast domination"
+.
+The Verge
+.
+Archived
+from the original on September 29, 2023
+. Retrieved
+March 16,
+2024
+.
+↑
+Furth, John F. (May 18, 2018).
+"Why Amazon and Jeff Bezos Are So Successful at Disruption"
+.
+Entrepreneur
+.
+Archived
+from the original on August 26, 2022
+. Retrieved
+May 16,
+2019
+.
+↑
+Bylund, Per (August 29, 2017).
+"Amazon's Lesson About Disruption: Rattle Any Market You Can"
+.
+Entrepreneur
+.
+Archived
+from the original on March 28, 2022
+. Retrieved
+May 16,
+2019
+.
+↑
+"How to compete with Amazon"
+.
+Fortune
+.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+"Reinvesting for Growth – Why Amazon.com, Inc. (NASDAQ:AMZN) is Undervalued Even in this Market"
+.
+Yahoo Finance
+.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+"Microsoft Cloud Revenues Leap; Amazon is Still Way Out in Front"
+.
+Reno, Nevada
+: Synergy Research Group. October 29, 2014.
+Archived
+from the original on May 4, 2019
+. Retrieved
+July 2,
+2015
+.
+↑
+Jopson, Barney (July 12, 2011).
+"Amazon urges California referendum on online tax"
+.
+Financial Times
+.
+Archived
+from the original on July 14, 2011
+. Retrieved
+August 4,
+2011
+.
+↑
+"Amazon Prime now has 200 million members, jumping 50 million in one year"
+.
+Yahoo News
+. April 15, 2021.
+Archived
+from the original on January 22, 2022
+. Retrieved
+December 20,
+2021
+.
+↑
+Spangler, Todd (April 15, 2021).
+"Amazon Prime Tops 200 Million Members, Jeff Bezos Says"
+.
+Variety
+.
+Archived
+from the original on April 15, 2021
+. Retrieved
+February 14,
+2022
+.
+↑
+Cheng, Evelyn (September 23, 2016).
+"Amazon climbs into list of top five largest US stocks by market cap"
+. CNBC.
+Archived
+from the original on May 10, 2019
+. Retrieved
+February 20,
+2019
+.
+↑
+"Fortune Global 500"
+.
+Fortune
+.
+Archived
+from the original on January 14, 2026
+. Retrieved
+August 19,
+2024
+.
+↑
+"Top Websites Ranking"
+.
+Similarweb
+.
+Archived
+from the original on February 10, 2022
+. Retrieved
+December 1,
+2021
+.
+1
+2
+"amazon.com"
+.
+similarweb
+.com
+.
+Archived
+from the original on October 24, 2022
+. Retrieved
+January 8,
+2024
+.
+1
+2
+Romano, Benjamin (June 29, 2019).
+"Amazon at 25: The magic that changed everything"
+.
+The Seattle Times
+.
+Archived
+from the original on July 8, 2024
+. Retrieved
+July 7,
+2024
+.
+↑
+Spector, Robert (April 16, 2000).
+"Homegrown Amazon"
+.
+The Seattle Times
+. Retrieved
+July 7,
+2024
+.
+↑
+Perez, Elizabeth (June 28, 2019).
+"Store on internet is open book — Amazon.com boasts more than 1 million titles on web"
+.
+The Seattle Times
+. p.
+E1.
+Archived
+from the original on July 8, 2024
+. Retrieved
+July 7,
+2024
+.
+↑
+Lebowitz, Shana.
+"Amazon is celebrating its 25th birthday. Here's how the e-commerce giant got its name"
+.
+Business Insider
+.
+Archived
+from the original on June 11, 2021
+. Retrieved
+August 16,
+2025
+.
+1
+2
+Anders, George; Tessler, Joelle (June 8, 1999).
+"Amazon.com Steps Into World Of Online, Downloadable Music"
+.
+The Wall Street Journal
+.
+ISSN
+0099-9660
+.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+1
+2
+Anders, George (July 13, 1999).
+"Amazon.com Unveils Plans to Open Two More 'Stores' on Its Web Site"
+.
+The Wall Street Journal
+.
+ISSN
+0099-9660
+.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+"Amazon.com Launches Web Services; Developers Can Now Incorporate Amazon.com Content and Features into Their Own Web Sites; Extends
+Welcome Mat
+for Developers"
+(Press release). Amazon.com Press Center. July 16, 2002.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+"Amazon.com Web Services Announces Trio of Milestones - New Tool Kit, Enhanced Web Site and 25,000 Developers in the Program"
+(Press release). Amazon.com Press Center. March 19, 2003.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+"New Amazon Web Services Offerings Give Developers Unprecedented Access to Amazon Product Data and Technology, and First-Ever Access to Data Compiled by Alexa Internet"
+(Press release). Amazon.com Press Center. October 4, 2004.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+"Amazon Web Services Launches"
+(Press release). Amazon.com Press Center. March 14, 2006.
+Archived
+from the original on December 16, 2025
+. Retrieved
+September 27,
+2022
+.
+↑
+"Amazon Web Services Launches Amazon EC2 for Windows"
+(Press release). Amazon.com Press Center. October 23, 2008.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+Additionally, AWS today announced that Amazon EC2 is now Generally Available, having successfully exited its beta period and now offers a Service Level Agreement (SLA)
+1
+2
+"Amazon Launches New Services to Help Small and Medium-Sized Businesses Enhance Their Customer Offerings by Accessing Amazon's Order Fulfillment, Customer Service, and Website Functionality"
+(Press release). Amazon.com Press Center. September 19, 2006.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+"Amazon.com - History & Facts"
+.
+Encyclopedia Britannica
+.
+Archived
+from the original on June 8, 2019
+. Retrieved
+January 3,
+2019
+.
+↑
+Schmidt, Gordon B. (2020),
+"Amazon"
+,
+The SAGE International Encyclopedia of Mass Media and Society
+, Thousand Oaks, California: SAGE Publications, Inc.,
+doi
+:
+10.4135/9781483375519.n28
+,
+ISBN
+978-1-4833-7551-9
+,
+S2CID
+240656642
+, retrieved
+May 1,
+2023
+↑
+Otto, Ben (September 14, 2020).
+"Amazon to Hire 100,000 in US and Canada"
+.
+Wall Street Journal
+.
+Archived
+from the original on December 13, 2020
+. Retrieved
+December 15,
+2020
+.
+↑
+"Amazon hiring spree as orders surge under lockdown"
+. BBC News. April 14, 2020.
+Archived
+from the original on July 7, 2020
+. Retrieved
+April 14,
+2020
+.
+↑
+"Amazon workers protest over normal shifts despite Covid-19 cases"
+.
+Financial Times
+. March 19, 2020.
+Archived
+from the original on December 10, 2022
+. Retrieved
+March 19,
+2020
+.
+↑
+"Amazon workers strike over virus protection"
+. BBC News. March 31, 2020.
+Archived
+from the original on December 11, 2020
+. Retrieved
+March 31,
+2020
+.
+↑
+Dzieza, Josh (March 30, 2020).
+"Amazon warehouse workers walk out in rising tide of COVID-19 protests"
+.
+The Verge
+.
+Archived
+from the original on July 12, 2020
+. Retrieved
+March 31,
+2020
+.
+↑
+"Amazon founder Jeff Bezos will step down as CEO"
+.
+Fox8
+. Associated Press. February 2, 2021.
+Archived
+from the original on February 8, 2021
+. Retrieved
+February 2,
+2021
+.
+↑
+Haselton, Todd (February 2, 2021).
+"Jeff Bezos to step down as Amazon CEO, Andy Jassy to take over in Q3"
+. CNBC.
+Archived
+from the original on November 4, 2021
+. Retrieved
+February 2,
+2021
+.
+↑
+"Amazon to shed over 18,000 jobs as it cuts costs, CEO says"
+. BBC News. January 5, 2023.
+Archived
+from the original on January 5, 2023
+. Retrieved
+January 5,
+2023
+.
+↑
+"Jeff Bezos sells roughly $2 billion of Amazon shares"
+.
+The Economic Times
+. February 11, 2024. Archived from
+the original
+on February 25, 2024
+. Retrieved
+February 25,
+2024
+.
+↑
+"Amazon Set to Join Dow Jones Industrial Average and Uber to Join Dow Jones Transportation Average"
+(PDF)
+(Press release).
+S&P Dow Jones Indices
+. February 20, 2024.
+Archived
+(PDF)
+from the original on February 26, 2024
+. Retrieved
+February 26,
+2024
+.
+↑
+"Teamsters Launch Strike Against Amazon In American"
+. International Brotherhood of Teamsters. December 19, 2024.
+Archived
+from the original on December 19, 2024
+. Retrieved
+December 19,
+2024
+.
+↑
+Lenthang, Marlene (December 19, 2024).
+"Teamsters announce strike against Amazon amid holiday delivery rush"
+. NBC News
+. Retrieved
+December 19,
+2024
+.
+↑
+McLain, Sean (October 27, 2025).
+"Amazon Lays Off 14,000 Corporate Workers"
+.
+The Wall Street Journal
+.
+Archived
+from the original on October 28, 2025
+. Retrieved
+October 28,
+2025
+.
+↑
+"Amazon European hub in Luxembourg braces for record job cuts"
+.
+The Business Times
+. December 16, 2025.
+Archived
+from the original on December 18, 2025
+. Retrieved
+December 18,
+2025
+.
+↑
+Bishop, Taylor Soper, Todd (January 28, 2026).
+"Amazon confirms 16,000 more corporate job cuts, bringing total to 30,000 since October"
+.
+GeekWire
+.
+Archived
+from the original on February 1, 2026
+. Retrieved
+January 31,
+2026
+.
+{{
+cite web
+}}
+:  CS1 maint: multiple names: authors list (
+link
+)
+↑
+español, KELVIN CHAN Leer en (January 28, 2026).
+"Amazon cuts about 16,000 corporate jobs in the latest round of layoffs"
+.
+AP News
+.
+Archived
+from the original on January 31, 2026
+. Retrieved
+January 31,
+2026
+.
+↑
+"Amazon axes 16,000 jobs as it pushes AI and efficiency"
+.
+↑
+Palmer, Gabrielle Fonrouge,Annie (January 15, 2026).
+"Amazon threatens 'drastic' action after Saks bankruptcy, says $475M stake is now worthless"
+.
+CNBC
+. Retrieved
+January 16,
+2026
+.
+{{
+cite web
+}}
+:  CS1 maint: multiple names: authors list (
+link
+)
+↑
+Palmer, Ashley Capoot,Kate Rooney,Annie (January 29, 2026).
+"Amazon could invest up to $50 billion in OpenAI in coming weeks, source says"
+.
+CNBC
+.
+Archived
+from the original on January 30, 2026
+. Retrieved
+January 30,
+2026
+.
+{{
+cite web
+}}
+:  CS1 maint: multiple names: authors list (
+link
+)
+↑
+"Amazon considers another multibillion-dollar investment in Anthropic, FT reports"
+.
+Reuters
+. July 10, 2025.
+↑
+Valinsky, Jordan (January 28, 2026).
+"Amazon is laying off 16,000 employees as AI battle intensifies | CNN Business"
+.
+CNN
+. Retrieved
+March 12,
+2026
+.
+↑
+Renshaw and Kearney, Jarrett and Laila (March 4, 2026).
+"Tech Giants sign energy pledge at white house ahead of midterms"
+.
+Reuters
+.
+↑
+Esch, Patrick van; Cui, Yuanyuan Gina (May 25, 2026).
+"You've been trying to get around Amazon – but it's not that easy"
+.
+The Conversation
+. Retrieved
+June 9,
+2026
+.
+↑
+Lextrait, Vincent (January 2010).
+"The Programming Languages Beacon, v10.0"
+. Archived from
+the original
+on March 17, 2010
+. Retrieved
+March 14,
+2010
+.
+↑
+"All Departments"
+. Amazon.
+Archived
+from the original on September 28, 2022
+. Retrieved
+September 28,
+2022
+.
+↑
+Rai (2021).
+"Amazon Tries to Crack India's Produce Market by Wooing Farmers"
+.
+Bloomberg News
+.
+Archived
+from the original on September 27, 2021
+. Retrieved
+September 20,
+2022
+.
+↑
+"Amazon.com, Form 10-K, Annual Report, Filing Date Jan 30, 2013"
+(PDF)
+. SEC database.
+Archived
+(PDF)
+from the original on October 9, 2022
+. Retrieved
+February 26,
+2013
+.
+↑
+SnapShot of amazon.com, amazonsellers.com, walmart.com
+Archived
+May 16, 2010, at the
+Wayback Machine
+. Retrieved April 12, 2008.
+↑
+"Web visitor traffic to amazon.com 2023"
+.
+Statista
+. Retrieved
+April 12,
+2026
+.
+↑
+"Amazon launches AI assistant 'Rufus' in India"
+.
+The Economic Times
+. August 27, 2024.
+ISSN
+0013-0389
+.
+Archived
+from the original on December 6, 2024
+. Retrieved
+November 19,
+2024
+.
+↑
+"The weird way AI assistants get their names"
+. BBC. October 31, 2024.
+Archived
+from the original on November 16, 2024
+. Retrieved
+November 19,
+2024
+.
+1
+2
+Packer, George
+(February 17, 2014).
+"Cheap Words"
+.
+newyorker.com
+.
+Archived
+from the original on June 25, 2014
+. Retrieved
+March 22,
+2014
+.
+1
+2
+3
+"Amazon.com, Inc.: Shareholders Board Members Managers and Company Profile | US0231351067"
+.
+MarketScreener
+.
+Archived
+from the original on August 1, 2023
+. Retrieved
+October 28,
+2025
+.
+↑
+"Amazon.ae: Kindle Store"
+. Amazon.ae.
+Archived
+from the original on December 4, 2023
+. Retrieved
+November 30,
+2023
+.
+↑
+"Amazon's impact on Austria's society, sustainable development and economy"
+. Amazon. June 18, 2021.
+Archived
+from the original on July 22, 2023
+. Retrieved
+July 22,
+2023
+.
+↑
+"About Deliveries to Denmark"
+. Amazon.de
+. Retrieved
+July 22,
+2023
+.
+↑
+"About Deliveries to Switzerland"
+. Amazon.de.
+Archived
+from the original on August 17, 2021
+. Retrieved
+July 22,
+2023
+.
+↑
+"(Dutch) Amazon.nl officieel van start"
+.
+Ecommerce News Netherlands
+. March 10, 2020.
+Archived
+from the original on November 29, 2021
+. Retrieved
+November 29,
+2021
+.
+(Translated) Amazon has officially launched their Dutch (Netherlands) store front Amazon.nl. Instead of only books, e-books and e-readers, the e-commerce-giant now sells numerous products.
+↑
+"Amazon Prime now available to customers in Portugal"
+. aboutamazon.eu. May 25, 2021.
+Archived
+from the original on July 22, 2023
+. Retrieved
+July 22,
+2023
+.
+↑
+"Customers in New Zealand can now shop millions of products on Amazon.com.au"
+. Amazon.com.au. June 6, 2021.
+Archived
+from the original on July 22, 2023
+. Retrieved
+July 22,
+2023
+.
+↑
+Griswold, Alison (September 18, 2017).
+"Toys R Us bankruptcy: A dot-com-era deal with Amazon marked the beginning of the end"
+.
+Quartz
+.
+Archived
+from the original on November 19, 2018
+. Retrieved
+November 11,
+2018
+.
+↑
+"Toys R Us wins Amazon lawsuit"
+.
+BBC News
+. March 3, 2006.
+Archived
+from the original on January 29, 2009
+. Retrieved
+December 1,
+2012
+.
+↑
+Metz, Rachel (June 12, 2009).
+"Amazon to pay Toys R Us $51M to settle suit"
+.
+USA Today
+.
+Associated Press
+.
+Archived
+from the original on January 2, 2021
+. Retrieved
+December 1,
+2012
+.
+↑
+"Amazon/Borders form online partnership"
+.
+CNN Money
+. April 11, 2001. Archived from
+the original
+on October 16, 2018
+. Retrieved
+November 11,
+2018
+.
+↑
+Evangelista, Benny (July 13, 2015).
+"How 'Amazon factor' killed retailers like Borders, Circuit City"
+.
+SFGate
+.
+Archived
+from the original on November 11, 2018
+. Retrieved
+November 11,
+2018
+.
+↑
+Streitfeld, David (October 18, 2011).
+"Bookstores Drop Comics After Amazon Deal With DC"
+.
+The New York Times
+.
+ISSN
+0362-4331
+.
+Archived
+from the original on October 18, 2011
+. Retrieved
+February 20,
+2019
+.
+↑
+Barr, Alistair (November 11, 2013).
+"Amazon starts Sunday delivery with US Postal Service"
+.
+USA Today
+.
+Archived
+from the original on November 21, 2013
+. Retrieved
+November 25,
+2013
+.
+↑
+"Nike confirms 'pilot' partnership with Amazon"
+.
+Engadget
+. June 30, 2017.
+Archived
+from the original on July 2, 2017
+. Retrieved
+July 3,
+2017
+.
+1
+2
+Cosgrove, Elly; Thomas, Lauren (November 13, 2019).
+"Nike won't sell directly to Amazon anymore"
+.
+CNBC
+.
+Archived
+from the original on September 14, 2021
+. Retrieved
+September 14,
+2021
+.
+↑
+Zimmerman, Ben.
+"Council Post: Why Nike Cut Ties With Amazon And What It Means For Other Retailers"
+.
+Forbes
+.
+↑
+Muldowney, Decca (August 23, 2021).
+"As demand for bikes surged, Amazon got in the way"
+.
+The Verge
+.
+Archived
+from the original on September 14, 2021
+. Retrieved
+September 14,
+2021
+.
+↑
+Bhumika, Khatri (September 27, 2018).
+"Amazon's JV Appario Retail Clocks In $104.4 Mn For FY18"
+.
+Inc42 Media
+.
+Archived
+from the original on October 1, 2018
+. Retrieved
+October 1,
+2018
+.
+↑
+Armstrong, Ashley (October 11, 2017).
+"Booths teams up with Amazon to sell down South for the first time"
+.
+Telegraph
+.
+Archived
+from the original on January 10, 2022
+. Retrieved
+October 11,
+2017
+.
+↑
+"Amazon strikes deal with Apple to sell new iPhones and iPads"
+.
+The Verge
+.
+Archived
+from the original on November 10, 2018
+. Retrieved
+November 11,
+2018
+.
+↑
+"Apple pumps up its Amazon listings with iPhones, iPads and more"
+.
+CNET
+. November 10, 2018.
+Archived
+from the original on November 10, 2018
+. Retrieved
+November 11,
+2018
+.
+↑
+"Amazon mulls new multi-billion dollar investment in Anthropic, the Information reports"
+.
+Reuters
+. November 8, 2024.
+↑
+Palmer, Annie (October 8, 2025).
+"Amazon launches prescription vending machines at One Medical clinics in Los Angeles"
+.
+CNBC
+. Retrieved
+January 29,
+2026
+.
+↑
+Dulaney, Chelsey (November 30, 1999).
+"Amazon's Private-Label Brands Could Deliver a $1 Billion Profit Boost"
+.
+The Wall Street Journal
+.
+ISSN
+0099-9660
+.
+Archived
+from the original on September 25, 2022
+. Retrieved
+September 25,
+2022
+.
+↑
+Bensinger, Greg (May 15, 2016).
+"Amazon to Expand Private-Label Offerings—From Food to Diapers"
+.
+The Wall Street Journal
+.
+ISSN
+0099-9660
+.
+Archived
+from the original on September 28, 2022
+. Retrieved
+September 25,
+2022
+.
+↑
+"Amazon Enters the Cloud Computing Business"
+(PDF)
+.
+Archived
+(PDF)
+from the original on October 9, 2022
+. Retrieved
+May 29,
+2013
+.
+↑
+"Help"
+. Amazon.
+Archived
+from the original on January 13, 2019
+. Retrieved
+December 16,
+2011
+.
+↑
+"Amazon.co.uk Associates: The web's most popular and successful Affiliate Program"
+. Affiliate-program.amazon.co.uk. July 9, 2010. Archived from
+the original
+on August 26, 2008
+. Retrieved
+August 29,
+2010
+.
+↑
+"Usage of advertising networks for websites"
+.
+W3Techs.com
+. July 22, 2014.
+Archived
+from the original on August 13, 2023
+. Retrieved
+July 22,
+2014
+.
+↑
+"14 Easy Fundraising Ideas for Non-Profits"
+.
+blisstree.com
+. Archived from
+the original
+on December 22, 2015
+. Retrieved
+November 24,
+2014
+.
+↑
+"Amazon Seller Product Suggestions"
+. Amazonservices.com. Archived from
+the original
+on December 5, 2010
+. Retrieved
+August 29,
+2010
+.
+↑
+"2010 Social Shopping Study Reveals Changes in Consumers' Online Shopping Habits and Usage of Customer Reviews"
+.
+Business Wire
+(Press release). May 3, 2010.
+Archived
+from the original on January 26, 2013
+. Retrieved
+January 31,
+2013
+.
+↑
+Spector, Robert (2002).
+Amazon.com
+. p.
+132.
+↑
+"BEACON SPOTLIGHT: Amazon.com rave book reviews – too good to be true?"
+.
+The Cincinnati Beacon
+. May 25, 2010. Archived from
+the original
+on May 2, 2014
+. Retrieved
+January 31,
+2013
+.
+1
+2
+"Amazon FAQ"
+. Amazon.
+Archived
+from the original on February 25, 2013
+. Retrieved
+September 5,
+2011
+.
+↑
+"Amazon.com Movers and shakers"
+. Amazon.
+Archived
+from the original on September 7, 2011
+. Retrieved
+September 5,
+2011
+.
+↑
+"Amazon.com Author Central"
+.
+Archived
+from the original on September 8, 2011
+. Retrieved
+September 5,
+2011
+.
+↑
+"Amazon Sales Estimator"
+. Jungle Scout. May 15, 2017.
+Archived
+from the original on March 17, 2016
+. Retrieved
+March 17,
+2016
+.
+↑
+"Frequently Asked Questions about Amazon.com"
+. Amazon.
+Archived
+from the original on February 25, 2013
+. Retrieved
+September 6,
+2012
+.
+1
+2
+Bensinger, Greg (February 2, 2016).
+"Amazon Plans Hundreds of Brick-and-Mortar Bookstores, Mall CEO Says"
+.
+The Wall Street Journal
+.
+ISSN
+0099-9660
+.
+Archived
+from the original on February 12, 2019
+. Retrieved
+February 20,
+2019
+.
+↑
+Rey, Jason Del (March 8, 2017).
+"Amazon just confirmed its tenth bookstore, signaling this is way more than an experiment"
+.
+Recode
+.
+Archived
+from the original on March 23, 2017
+. Retrieved
+May 12,
+2017
+.
+↑
+Rosenblatt, Lauren (March 2, 2022).
+"Turning the page on a bookstore push launched in Seattle, Amazon ditches dozens of brick-and-mortar shops"
+.
+The Seattle Times
+.
+Archived
+from the original on March 22, 2024
+. Retrieved
+March 21,
+2024
+.
+↑
+"Amazon opening new Lehigh Valley facility, creating over 500 new jobs"
+Archived
+February 17, 2024, at the
+Wayback Machine
+, Lehigh Valley Economic Development
+↑
+"Lehigh Valley's Largest Private-Sector Employers"
+Archived
+December 29, 2023, at the
+Wayback Machine
+, Lehigh Valley Economic Development
+↑
+Leskin, Paige.
+"Amazon is looking to open a brick-and-mortar liquor store in San Francisco"
+.
+Business Insider
+.
+Archived
+from the original on August 29, 2019
+. Retrieved
+August 29,
+2019
+.
+↑
+Soper, Taylor (August 27, 2020).
+"Amazon opens first Fresh grocery store, debuts high-tech shopping cart in retail expansion"
+.
+GeekWire
+.
+Archived
+from the original on February 17, 2021
+. Retrieved
+September 28,
+2022
+.
+↑
+Avila, Kate King, Sean McLain and Joseph De (January 27, 2026).
+"Amazon to Shut Down All Amazon Go and Amazon Fresh Stores"
+.
+The Wall Street Journal
+.
+Archived
+from the original on January 27, 2026
+. Retrieved
+January 27,
+2026
+.
+{{
+cite web
+}}
+:  CS1 maint: multiple names: authors list (
+link
+)
+↑
+Molloy, David (September 28, 2021).
+"Amazon announces Astro the home robot"
+. BBC News.
+Archived
+from the original on September 29, 2021
+. Retrieved
+September 29,
+2021
+.
+↑
+Meyersohn, Nathaniel (January 24, 2023).
+"Amazon launches $5-a-month unlimited prescription plan"
+. CNN.
+Archived
+from the original on February 9, 2023
+. Retrieved
+January 26,
+2023
+.
+↑
+"Amazon Jobs – Work for a Subsidiary"
+. Archived from
+the original
+on August 1, 2014
+. Retrieved
+October 27,
+2014
+.
+1
+2
+"Amazon Live"
+. Amazon.
+Archived
+from the original on April 19, 2024
+. Retrieved
+April 20,
+2024
+.
+↑
+"Amazon Live introduces an interactive and shoppable channel on Prime Video and Amazon Freevee"
+.
+aboutamazon.com
+. Amazon Staff. April 16, 2024.
+Archived
+from the original on April 20, 2024
+. Retrieved
+April 20,
+2024
+.
+↑
+Panettieri, Joe (August 3, 2020).
+"Cloud Market Share 2020: Amazon AWS, Microsoft Azure, Google, IBM"
+.
+ChannelE2E
+.
+Archived
+from the original on January 10, 2021
+. Retrieved
+October 12,
+2020
+.
+↑
+Sayer, Peter (January 31, 2008).
+"Amazon buys Audible for US$300 million"
+.
+PC World
+.
+Archived
+from the original on May 30, 2017
+. Retrieved
+August 24,
+2017
+.
+1
+2
+Kaufman, Leslie (March 28, 2013).
+"Amazon to Buy Social Site Dedicated to Sharing Books"
+.
+The New York Times
+.
+ISSN
+0362-4331
+.
+Archived
+from the original on March 29, 2013
+. Retrieved
+February 20,
+2019
+.
+↑
+Montag, Ali (February 27, 2018).
+"Amazon buys Ring, a former 'Shark Tank' reject"
+. CNBC.
+Archived
+from the original on February 12, 2019
+. Retrieved
+February 20,
+2019
+.
+↑
+Welch, Chris (August 25, 2014).
+"Amazon, not Google, is buying Twitch for $970 million"
+.
+The Verge
+.
+Archived
+from the original on July 19, 2016
+. Retrieved
+August 8,
+2017
+.
+↑
+Popper, Ben (September 30, 2013).
+"Field of streams: how Twitch made video games a spectator sport"
+.
+The Verge
+.
+Archived
+from the original on July 8, 2017
+. Retrieved
+August 8,
+2017
+.
+↑
+Needleman, Sarah E. (January 29, 2015).
+"Twitch's Viewers Reach 100 Million a Month"
+.
+The Wall Street Journal
+.
+Archived
+from the original on August 9, 2017
+. Retrieved
+February 20,
+2019
+.
+↑
+"Quality Standards"
+. Whole Foods Market.
+Archived
+from the original on December 21, 2017
+. Retrieved
+November 4,
+2017
+.
+↑
+Kelleher, Kevin (August 28, 2017).
+"Amazon closes Whole Foods acquisition. Here's what's next"
+.
+VentureBeat
+.
+Archived
+from the original on September 19, 2021
+. Retrieved
+September 13,
+2021
+.
+↑
+Thomas, Lauren (August 24, 2017).
+"Amazon says Whole Foods deal will close Monday, with discounts to begin then"
+.
+CNBC
+.
+Archived
+from the original on September 13, 2021
+. Retrieved
+September 13,
+2021
+.
+↑
+McCracken, Harry (September 29, 2006).
+"Amazon's A9 Search as We Knew It: Dead!"
+.
+PC World
+. Archived from
+the original
+on July 16, 2011
+. Retrieved
+September 6,
+2012
+.
+↑
+Steele, B.,
+Amazon is now managing its own ocean freight
+Archived
+January 29, 2017, at the
+Wayback Machine
+,
+engadget.com
+, January 27, 2017, accessed January 29, 2017
+↑
+Harry Dempsey (November 17, 2020).
+"Amazon launches online pharmacy in challenge to traditional retailers"
+.
+Financial Times
+. Archived from
+the original
+on December 10, 2022
+. Retrieved
+November 17,
+2020
+.
+↑
+"Amazon to buy Israeli start-up Annapurna Labs"
+. Reuters. January 22, 2015.
+Archived
+from the original on September 15, 2015
+. Retrieved
+January 24,
+2015
+.
+↑
+Whitwam, Ryan (January 23, 2015).
+"Amazon buys secretive chip maker Annapurna Labs for $350 million"
+.
+ExtremeTech
+.
+Archived
+from the original on December 14, 2020
+. Retrieved
+January 24,
+2015
+.
+↑
+Hirschauge, Orr (January 22, 2015).
+"Amazon to Acquire Israeli Chip Maker Annapurna Labs"
+.
+The Wall Street Journal
+.
+ISSN
+0099-9660
+. Retrieved
+October 20,
+2020
+.
+↑
+Schreiber, Zvi (January 29, 2016).
+"Is Logistics About To Get Amazon'ed?"
+.
+TechCrunch
+.
+Archived
+from the original on June 22, 2017
+. Retrieved
+June 25,
+2017
+.
+↑
+David Z. Morris (January 14, 2016).
+"Amazon China Has Its Ocean Shipping License – Fortune"
+.
+Fortune
+.
+Archived
+from the original on February 5, 2016
+. Retrieved
+January 30,
+2016
+.
+1
+2
+"Company Overview"
+. Brilliance Audio. Archived from
+the original
+on February 9, 2014
+. Retrieved
+February 14,
+2014
+.
+↑
+"amazon.com Acquires Brilliance Audio"
+.
+Taume News
+. May 27, 2007. Archived from
+the original
+on July 4, 2007
+. Retrieved
+May 28,
+2007
+.
+1
+2
+Staci D. Kramer (May 23, 2007).
+"Amazon Acquires Audiobook Indie Brilliance Audio"
+.
+Gigaom
+. Archived from
+the original
+on February 22, 2014
+. Retrieved
+February 14,
+2014
+.
+1
+2
+3
+Virgil L. P. Blake (1990). "Something New Has Been Added: Aural Literacy and Libraries".
+Information Literacies for the Twenty-First Century
+. G. K. Hall & Co. pp.
+203–
+218.
+↑
+Stone, Brad (April 11, 2014).
+"Amazon Buys ComiXology, Takes Over Digital Leadership"
+.
+Bloomberg BusinessWeek
+. Archived from
+the original
+on April 11, 2014.
+↑
+"Independent Publishing with CreateSpace"
+.
+CreateSpace: An Amazon Company
+. Archived from
+the original
+on November 26, 2013
+. Retrieved
+January 22,
+2017
+.
+↑
+"About CreateSpace
+: History"
+.
+CreateSpace: An Amazon Company
+. Archived from
+the original
+on July 6, 2017
+. Retrieved
+January 22,
+2017
+.
+↑
+Novet, Jordan (February 11, 2019).
+"Amazon is acquiring home Wi-Fi start-up Eero"
+.
+CNBC Tech
+.
+Archived
+from the original on January 6, 2022
+. Retrieved
+January 6,
+2022
+.
+↑
+Kraus, Rachel (April 5, 2019).
+"How Amazon's $97 million Eero acquisition screwed employees and minted millionaires"
+.
+Mashable
+.
+Archived
+from the original on January 6, 2022
+. Retrieved
+January 6,
+2022
+.
+↑
+Whittaker, Zack (February 12, 2019).
+"What Amazon's purchase of Eero means for your privacy"
+.
+TechCrunch
+.
+Archived
+from the original on January 6, 2022
+. Retrieved
+January 6,
+2022
+.
+↑
+Shu, Catherine (October 24, 2019).
+"Amazon acquires Health Navigator for Amazon Care, its pilot employee healthcare program"
+.
+Tech Crunch
+.
+Archived
+from the original on October 31, 2019
+. Retrieved
+October 31,
+2019
+.
+↑
+Rajghatta, Chidanand.
+"Junglee boys strike gold on the net"
+.
+Indian Express
+. Archived from
+the original
+on December 17, 2013.
+↑
+"Amazon Launches Online Shopping Service In India"
+. Reuters. February 2, 2012. Archived from
+the original
+on August 2, 2020
+. Retrieved
+July 5,
+2021
+.
+↑
+"Amazon brings the curtains down on Junglee.com, finally"
+.
+vccircle.com
+.
+Archived
+from the original on January 4, 2018
+. Retrieved
+February 1,
+2018
+.
+↑
+Sheetz, Michael (April 4, 2019).
+"Amazon wants to launch thousands of satellites so it can offer broadband internet from space"
+.
+CNBC
+.
+Archived
+from the original on April 4, 2019
+. Retrieved
+April 4,
+2019
+.
+↑
+Henry, Caleb (April 4, 2019).
+"Amazon planning 3,236-satellite constellation for internet connectivity"
+.
+SpaceNews
+.
+Archived
+from the original on April 5, 2022
+. Retrieved
+April 5,
+2019
+.
+↑
+Brodkin, Jon (July 8, 2019).
+"Amazon plans nationwide broadband—with both home and mobile service"
+.
+ars Technica
+.
+Archived
+from the original on July 8, 2019
+. Retrieved
+July 9,
+2019
+.
+Kuiper is wholly owned by Amazon, and its president is Rajeev Badyal, a former SpaceX vice president who was reportedly fired because SpaceX CEO Elon Musk was unsatisfied with his company's satellite-broadband progress.
+↑
+Avalos, George (September 19, 2012).
+"Amazon research unit Lab 126 agrees to big lease that could bring Sunnyvale 2,600 new workers"
+.
+The Mercury News
+.
+Archived
+from the original on December 24, 2019
+. Retrieved
+February 20,
+2019
+.
+↑
+"Amazon Kills Shelfari"
+.
+The Reader's Room
+. January 13, 2016.
+Archived
+from the original on February 22, 2019
+. Retrieved
+February 20,
+2019
+.
+↑
+Holiday, J.D. (January 13, 2016).
+"Shelfari Is Closing! BUT, You Can Merge Your Account with Goodreads!"
+.
+The Book Marketing Network
+. Archived from
+the original
+on February 6, 2016
+. Retrieved
+January 20,
+2016
+.
+↑
+"Amazon reaches deal to acquire Middle East e-commerce site Souq.com"
+. CNBC. March 28, 2017.
+Archived
+from the original on October 16, 2021
+. Retrieved
+October 16,
+2021
+.
+↑
+"Document"
+. Securities and Exchange Commission.
+Archived
+from the original on December 25, 2018
+. Retrieved
+February 3,
+2019
+.
+↑
+"Amazon launches new Middle East marketplace, and rebrands Souq, the company it bought for $580 million in 2017"
+. CNBC. April 30, 2019.
+Archived
+from the original on October 16, 2021
+. Retrieved
+October 16,
+2021
+.
+↑
+Gerut, Amanda.
+"Amazon robotaxi service Zoox to start charging for rides in 2026, with 'laser focus' on transporting people, not deliveries, says cofounder"
+.
+Fortune
+.
+Archived
+from the original on December 9, 2025
+. Retrieved
+December 9,
+2025
+.
+↑
+"Amazon unveils plan for a major solar power project in southern Alberta"
+.
+Archived
+from the original on May 7, 2021
+. Retrieved
+May 21,
+2021
+.
+↑
+Martinez, Amy; Pryne, Eric (October 5, 2012).
+"Amazon gobbles up campus for $1 billion"
+.
+The Seattle Times
+.
+Archived
+from the original on January 5, 2016
+. Retrieved
+December 14,
+2015
+.
+↑
+Pryne, Eric (December 21, 2012).
+"Amazon's billion-dollar South Lake Union deal closes"
+.
+The Seattle Times
+.
+Archived
+from the original on December 10, 2015
+. Retrieved
+December 14,
+2015
+.
+↑
+Pryne, Eric (December 22, 2007).
+"Amazon to make giant move to South Lake Union"
+.
+The Seattle Times
+.
+Archived
+from the original on January 5, 2016
+. Retrieved
+December 14,
+2015
+.
+↑
+Pryne, Eric (September 28, 2012).
+"PacMed Center lease bites dust"
+.
+The Seattle Times
+.
+Archived
+from the original on January 5, 2016
+. Retrieved
+December 14,
+2015
+.
+↑
+"45,000 and counting"
+.
+US Day One Blog
+. March 8, 2018
+. Retrieved
+December 17,
+2018
+.
+↑
+p
+Pryne, Eric (June 8, 2012).
+"Amazon's 3-block complex has a timetable — and a name"
+.
+The Seattle Times
+.
+Archived
+from the original on December 15, 2015
+. Retrieved
+December 14,
+2015
+.
+↑
+"Amazon at Denny Triangle: Work Global, Live Local"
+.
+NBBJ
+.
+Archived
+from the original on December 7, 2015
+. Retrieved
+December 14,
+2015
+.
+↑
+Kirk Johnson; Nick Wingfield (August 25, 2013).
+"As Amazon Stretches, Seattle's Downtown Is Reshaped"
+.
+The New York Times
+.
+Archived
+from the original on August 26, 2013
+. Retrieved
+August 26,
+2013
+.
+↑
+Cohen, Aubrey (November 30, 2012).
+"Seattle OKs Amazon towers"
+.
+Seattle Post-Intelligencer
+.
+Archived
+from the original on December 8, 2015
+. Retrieved
+December 14,
+2015
+.
+↑
+Greene, Jay (December 14, 2015).
+"Workers move in to the first of Amazon's downtown towers"
+.
+The Seattle Times
+.
+Archived
+from the original on January 5, 2016
+. Retrieved
+December 14,
+2015
+.
+↑
+Demmitt, Jacob (December 14, 2015).
+"Amazon launches new era with opening of first tower at new Seattle campus"
+.
+GeekWire
+.
+Archived
+from the original on December 22, 2015
+. Retrieved
+December 14,
+2015
+.
+↑
+Roland, Denise (January 16, 2015).
+"Here's why the EU thinks Luxembourg is helping Amazon avoid tax"
+.
+The Telegraph
+.
+Archived
+from the original on December 23, 2015
+. Retrieved
+December 14,
+2015
+.
+↑
+"Principal Place"
+. Buildington.
+Archived
+from the original on October 10, 2022
+. Retrieved
+October 10,
+2022
+.
+↑
+Kaya Yurieff.
+"Amazon picks New York, Northern Virginia for second headquarters"
+.
+CNN
+. Retrieved
+November 13,
+2018
+.
+↑
+"Amazon Opens Its Largest Campus in the World in Hyderabad"
+.
+NDTV Gadgets 360
+. Retrieved
+August 21,
+2019
+.
+↑
+"7 things you should know about Amazon's newest campus"
+.
+Amazon India
+. May 22, 2020
+. Retrieved
+September 22,
+2021
+.
+↑
+Hanno Labuschagne (December 12, 2024).
+"Amazon's new home in Cape Town"
+. MyBroadband
+. Retrieved
+July 4,
+2026
+.
+↑
+Romano, Benjamin (February 6, 2020).
+"Amazon plans for 15,000 employees in Bellevue"
+.
+The Seattle Times
+. p.
+A1
+. Retrieved
+February 7,
+2020
+.
+↑
+Morris, Chris (February 6, 2020).
+"Amazon is going on a hiring spree on its home turf"
+.
+Fortune
+. Retrieved
+February 7,
+2020
+.
+↑
+Levy, Nat (April 27, 2017).
+"Amazon makes a 'regional play' with surprise Bellevue expansion — and it could be just the start"
+.
+GeekWire
+. Retrieved
+February 7,
+2020
+.
+↑
+Stiles, Marc (July 14, 2024).
+"Amazon's new Bellevue tower seeks to evoke 'a journey through nature'
+"
+.
+Puget Sound Business Journal
+. Retrieved
+May 5,
+2026
+.
+↑
+Romano, Benjamin (July 2, 2019).
+"Amazon plans its tallest tower, marking growing presence in Bellevue"
+.
+The Seattle Times
+. Retrieved
+February 7,
+2020
+.
+↑
+Woo, Stu (July 1, 2011).
+"California Online Tax Law Pressures Amazon"
+.
+The Wall Street Journal
+.
+Archived
+from the original on August 18, 2017
+. Retrieved
+February 25,
+2012
+.
+1
+2
+"Amazon physical stores locations"
+. Amazon
+. Retrieved
+September 22,
+2021
+.
+↑
+"Amazon Fresh stores. Now open in London"
+. Amazon Europe
+. Retrieved
+September 22,
+2021
+.
+↑
+"Fast Facts"
+.
+Whole Foods Market
+. Retrieved
+June 23,
+2026
+.
+↑
+"Amazon Quietly Began Building a Grocery Chain During Pandemic"
+.
+Bloomberg
+. March 11, 2021
+. Retrieved
+September 22,
+2021
+.
+↑
+"Amazon 4-Star brings online retail giant's best-reviewed items to SoHo"
+.
+WABC-TV
+. October 12, 2018. Archived from
+the original
+on October 13, 2018
+. Retrieved
+October 13,
+2018
+.
+↑
+Howland, Daphne (November 1, 2018).
+"Amazon 4-star opens 2nd store"
+.
+Retail Dive
+. Industry Dive
+. Retrieved
+November 3,
+2018
+.
+↑
+Amazon.
+"Amazon Physical Retail"
+.
+Amazon
+. Retrieved
+January 20,
+2019
+.
+1
+2
+Weise, Karen (March 6, 2019).
+"Amazon Is Closing Pop-Up Stores, as Its Retail Strategy Evolves"
+.
+The New York Times
+. Retrieved
+November 21,
+2019
+.
+↑
+Kim, Eugene (September 9, 2016).
+"Amazon is doubling down on retail stores with plans to have up to 100 pop-up stores in US shopping malls"
+.
+Business Insider
+. Retrieved
+October 13,
+2018
+.
+↑
+Addady, Michal (September 9, 2016).
+"Here's How Many Pop-Up Stores Amazon Plans to Open"
+.
+Fortune
+. Retrieved
+October 13,
+2018
+.
+↑
+"Amazon's newest retail format is…"
+. January 24, 2020
+. Retrieved
+September 22,
+2021
+.
+↑
+"Exclusive: Whole Foods drops small-format 365 store name"
+. February 25, 2019
+. Retrieved
+September 22,
+2021
+.
+↑
+"Whole Foods Kills Its Millennial-Pandering 365 Stores"
+. February 27, 2019
+. Retrieved
+September 22,
+2021
+.
+↑
+"Frequently asked questions about Amazon Flex"
+.
+Archived
+from the original on January 4, 2021
+. Retrieved
+December 31,
+2020
+.
+↑
+Kim, Eugene (April 30, 2019).
+"Amazon Freight, 'Uber for trucking' service, running since last year"
+.
+CNBC
+.
+Archived
+from the original on December 24, 2025
+. Retrieved
+December 23,
+2025
+.
+↑
+"Amazon Logistics / Frequently Asked Questions"
+.
+Archived
+from the original on February 4, 2021
+. Retrieved
+December 31,
+2020
+.
+↑
+"Find jobs by job category"
+.
+Archived
+from the original on November 29, 2020
+. Retrieved
+December 31,
+2020
+.
+↑
+"Prime Day, early holiday sales create new potential for USPS ballot delivery tie-ups"
+.
+The Washington Post
+.
+Archived
+from the original on December 25, 2020
+. Retrieved
+December 31,
+2020
+.
+↑
+Palmer, Annie (April 30, 2021).
+"Amazon is spending big to take on UPS and FedEx"
+.
+Archived
+from the original on September 22, 2021
+. Retrieved
+September 22,
+2021
+.
+↑
+Levy, Nat (June 26, 2018).
+"Amazon opens package pickup location in Seattle, increasing brick and mortar footprint"
+.
+GeekWire
+. Retrieved
+October 13,
+2018
+.
+↑
+Jain, Varun (April 17, 2015).
+"Amazon expands Pickup Service to 45 cities across the country"
+.
+India Times
+. Retrieved
+October 13,
+2018
+.
+↑
+Routley, Nick (September 8, 2018).
+"Amazon's Massive Distribution Network in One Giant Visualization"
+.
+Archived
+from the original on July 7, 2019
+. Retrieved
+July 7,
+2019
+.
+↑
+"9 facts about Amazon's unprecedented warehouse empire"
+. November 21, 2017. Archived from
+the original
+on July 7, 2019
+. Retrieved
+July 7,
+2019
+.
+↑
+"Amazon announces 2 new ways it's using robots to assist employees and deliver for customers"
+.
+US About Amazon
+. October 18, 2023.
+Archived
+from the original on October 22, 2023
+. Retrieved
+October 22,
+2023
+.
+↑
+Sarah O'Connor (February 8, 2013).
+"Amazon unpacked: The online giant is creating thousands of UK jobs, so why are some employees less than happy?"
+.
+Financial Times
+.
+Archived
+from the original on February 8, 2013
+. Retrieved
+February 8,
+2013
+.
+↑
+Fulfillment by Amazon
+Archived
+August 28, 2010, at the
+Wayback Machine
+from the company's website
+↑
+[FBA - Multi-Channel Fulfillment FBM or FBA] Retrieved April 16, 2015.
+1
+2
+Hamilton, Isabel Asher (March 20, 2020).
+"Big staff shortages, the 6-feet rule, and no more metal detectors: Inside Amazon warehouses during the coronavirus outbreak"
+. Business Insider UK
+. Retrieved
+March 20,
+2020
+.
+↑
+"Fact Sheet: End of the COVID-19 Public Health Emergency"
+. May 9, 2023. Archived from
+the original
+on May 10, 2023.
+↑
+"Officers & Directors"
+. Amazon.
+Archived
+from the original on August 13, 2025
+. Retrieved
+August 13,
+2025
+.
+↑
+"SWOT Analysis Amazon"
+. Archived from
+the original
+on December 3, 2011
+. Retrieved
+December 17,
+2011
+.
+↑
+"Fortune 500 Companies 2018: Who Made the List"
+.
+Fortune
+. Archived from
+the original
+on November 10, 2018
+. Retrieved
+November 9,
+2018
+.
+↑
+Murphy, Andrea; Tucker, Hank, eds. (June 8, 2023).
+"The Global 2000 2023"
+.
+Forbes
+. Archived from
+the original
+on January 29, 2024
+. Retrieved
+February 7,
+2024
+.
+↑
+"Amazon Revenue 2012–2025"
+.
+MacroTrends
+. Retrieved
+April 12,
+2026
+.
+↑
+Streitfeld, David (January 30, 2020).
+"Amazon Powers Ahead With Robust Profit"
+.
+The New York Times
+.
+Archived
+from the original on January 30, 2020
+. Retrieved
+February 2,
+2020
+.
+↑
+"Amazon.com, Inc. Common Stock (AMZN)"
+.
+Nasdaq
+.
+Archived
+from the original on July 20, 2021
+. Retrieved
+June 21,
+2021
+.
+1
+2
+3
+"1997 Annual Report"
+(PDF)
+. Amazon 1997 10K.
+Archived
+(PDF)
+from the original on October 9, 2022
+. Retrieved
+May 17,
+2022
+.
+1
+2
+3
+4
+5
+"2002 Amazon 10K"
+(PDF)
+.
+Archived
+(PDF)
+from the original on October 9, 2022
+. Retrieved
+May 17,
+2022
+.
+1
+2
+3
+4
+5
+"2007 Annual Report"
+.
+Ir.aboutamazon.com
+. Archived from
+the original
+on January 13, 2019.
+↑
+"2008 Annual Report"
+.
+Ir.aboutamazon.com
+. Archived from
+the original
+on January 13, 2019.
+↑
+"2009 Annual Report"
+.
+Ir.aboutamazon.com
+. Archived from
+the original
+on January 13, 2019.
+↑
+"2010 Annual Report"
+.
+Ir.aboutamazon.com
+. Archived from
+the original
+on November 11, 2018.
+↑
+"2011 Annual Report"
+.
+Ir.aboutamazon.com
+. Archived from
+the original
+on November 11, 2018.
+↑
+"2012 Annual Report"
+.
+Ir.aboutamazon.com
+. Archived from
+the original
+on January 13, 2019.
+↑
+"2013 Annual Report"
+.
+Ir.aboutamazon.com
+. Archived from
+the original
+on January 13, 2019.
+↑
+Neate, Rupert (January 29, 2015).
+"Amazon reports $89bn in sales last year as shares jump 11% after hours"
+.
+The Guardian
+.
+Archived
+from the original on August 16, 2020
+. Retrieved
+November 7,
+2018
+.
+↑
+Roettgers, Janko (January 28, 2016).
+"Amazon Clocks $107 Billion In Revenue In 2015"
+.
+Variety
+.
+Archived
+from the original on November 30, 2020
+. Retrieved
+November 7,
+2018
+.
+↑
+"Amazon sales hit $136B in 2016; dollar hurts overseas business"
+.
+The Seattle Times
+. February 2, 2017.
+Archived
+from the original on October 25, 2020
+. Retrieved
+November 7,
+2018
+.
+↑
+"Amazon 2017 sales jump by nearly a third"
+. BBC News. February 1, 2018.
+Archived
+from the original on September 16, 2020
+. Retrieved
+November 7,
+2018
+.
+↑
+"2018 Annual Report"
+(PDF)
+. Archived from
+the original
+(PDF)
+on November 27, 2020
+. Retrieved
+January 12,
+2021
+.
+↑
+"2019 Annual Report"
+(PDF)
+.
+Archived
+(PDF)
+from the original on October 9, 2022.
+↑
+"Amazon.com Announces Fourth Quarter Results"
+.
+ir.aboutamazon.com
+.
+Archived
+from the original on February 2, 2021
+. Retrieved
+February 10,
+2021
+.
+1
+2
+"Amazon.com, Inc. 2022 Form 10-K Annual Report"
+.
+US Securities and Exchange Commission
+. February 3, 2022.
+Archived
+from the original on February 3, 2023
+. Retrieved
+February 3,
+2023
+.
+↑
+"Amazon.com, Inc. 2023 Form 10-K Annual Report"
+.
+US Securities and Exchange Commission
+. February 2, 2024.
+Archived
+from the original on February 3, 2024
+. Retrieved
+February 3,
+2024
+.
+↑
+"Amazon.com Announces Fourth Quarter Results"
+.
+ir.aboutamazon.com
+. Retrieved
+March 10,
+2026
+.
+1
+2
+Gregg, Tricia; Groysberg, Boris (May 17, 2019).
+"Amazon's Priorities Over the Years, Based on Jeff Bezos's Letters to Shareholders"
+.
+Harvard Business Review
+.
+ISSN
+0017-8012
+.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+Manjoo, Farhad (August 10, 2016).
+"Think Amazon's Drone Delivery Idea Is a Gimmick? Think Again"
+.
+The New York Times
+.
+ISSN
+0362-4331
+.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+Ritson, Mark (February 3, 2021).
+"Jeff Bezos's success at Amazon is down to one thing: focusing on the customer"
+.
+Marketing Week
+.
+Archived
+from the original on September 27, 2022
+. Retrieved
+September 27,
+2022
+.
+↑
+Kanter, Zack (May 14, 2017).
+"Why Amazon is eating the world"
+.
+TechCrunch
+. Retrieved
+April 12,
+2026
+.
+↑
+"Jeff Bezos, The Post's incoming owner, known for a demanding management style at Amazon"
+.
+The Washington Post
+. August 8, 2013.
+ISSN
+0190-8286
+.
+Archived
+from the original on August 10, 2022
+. Retrieved
+February 4,
+2026
+.
+↑
+"How Amazon is built to try and learn"
+.
+McKinsey & Company
+.
+Archived
+from the original on November 9, 2025
+. Retrieved
+February 4,
+2026
+.
+↑
+"Maximize Experimentation | Stanford eCorner"
+.
+Stanford Technology Ventures Program
+. November 3, 2010.
+Archived
+from the original on September 7, 2025
+. Retrieved
+February 4,
+2026
+.
+↑
+"Amazon's Lobbying Expenditures"
+.
+Opensecrets.org
+.
+Archived
+from the original on December 7, 2020
+. Retrieved
+August 9,
+2021
+.
+↑
+"Client Profile: Amazon.com"
+. Centre for Responsive Politics.
+Archived
+from the original on December 7, 2020
+. Retrieved
+February 4,
+2020
+.
+↑
+Parkhurst, Emily (May 24, 2012).
+"Amazon shareholders met by protesters, company cuts ties with ALEC"
+.
+Bizjournals.com
+.
+Archived
+from the original on July 27, 2020
+. Retrieved
+May 29,
+2012
+.
+↑
+Romm, Tony (August 6, 2014).
+"In Amazon's shopping cart: D.C. influence"
+.
+Politico
+.
+Archived
+from the original on July 29, 2020
+. Retrieved
+August 7,
+2014
+.
+↑
+Kang, Cecilia (December 27, 2015).
+"F.A.A. Drone Laws Start to Clash With Stricter Local Rules"
+.
+The New York Times
+.
+ISSN
+0362-4331
+.
+Archived
+from the original on December 28, 2015
+. Retrieved
+February 20,
+2019
+.
+↑
+Matt McFarland.
+"Amazon gets closer to drone delivery with FAA approval"
+. CNN.
+Archived
+from the original on September 27, 2020
+. Retrieved
+September 4,
+2020
+.
+↑
+Kamisar, Ben (April 21, 2025).
+"Major corporate interests and megadonors gave $239 million to fund Trump's inauguration"
+. NBC News.
+Archived
+from the original on April 25, 2025
+. Retrieved
+April 29,
+2025
+.
+↑
+Wise, Alana (April 19, 2025).
+"White House solicits corporate sponsors for its Easter Egg Roll event"
+. NPR.
+Archived
+from the original on April 23, 2025
+. Retrieved
+April 24,
+2025
+.
+↑
+Johansen, Ben (April 19, 2025).
+"Companies vying for Trump's attention are sponsoring the Easter Egg Roll"
+.
+Politico
+. Retrieved
+April 24,
+2025
+.
+↑
+Maher, Kit; Tapper, Jake; Jaramillo, Alejandra.
+"White House releases list of donors for Trump's multi-million-dollar ballroom"
+.
+CNN
+. Archived from
+the original
+on October 23, 2025
+. Retrieved
+October 23,
+2025
+.
+↑
+Staff, Amazon (July 15, 2025).
+"How Amazon is helping power America's AI future"
+.
+Amazon News
+. Retrieved
+March 23,
+2026
+.
+↑
+"LobbyMap: Amazon"
+.
+lobbymap.org
+. Retrieved
+March 23,
+2026
+.
+↑
+"C3 Energy Summit - Dec 15, 2025"
+.
+C3 Energy Summit
+. Retrieved
+March 23,
+2026
+.
+↑
+Takver, Rei (December 18, 2025).
+"Amazon Sponsors AI Energy Summit Featuring Climate Deniers"
+.
+DeSmog
+. Retrieved
+March 23,
+2026
+.
+↑
+"LobbyMap: Amazon"
+.
+lobbymap.org
+. Retrieved
+March 23,
+2026
+.
+↑
+Dwoskin, Elizabeth (May 22, 2018).
+"Amazon is selling facial recognition to law enforcement — for a fistful of dollars"
+.
+Archived
+from the original on October 15, 2020
+. Retrieved
+August 18,
+2018
+.
+↑
+Jeong, May (August 13, 2018).
+"
+'Everybody immediately knew that it was for Amazon': Has Bezos become more powerful in DC than Trump?"
+.
+Vanity Fair
+.
+Archived
+from the original on August 21, 2018
+. Retrieved
+September 14,
+2018
+.
+↑
+Leiber, Nick (December 7, 2011).
+"Amazon Lure's Shoppers Away from Stores"
+.
+Bloomberg BusinessWeek
+. Archived from
+the original
+on December 8, 2011
+. Retrieved
+December 7,
+2011
+.
+↑
+Jean-Philippe Cavaillez (March 5, 2019).
+"Plateforme logistique Amazon
+: bras de fer dans l'Est lyonnais"
+.
+Le Progrès
+(in French). p.
+10.
+Archived
+from the original on October 24, 2020
+. Retrieved
+March 7,
+2019
+.
+↑
+Greene, Jay; Alcantara, Chris (June 1, 2021).
+"Amazon warehouse workers suffer serious injuries at higher rates than other firms"
+.
+The Washington Post
+.
+Archived
+from the original on March 31, 2022
+. Retrieved
+April 11,
+2022
+.
+↑
+Chakrabortty, Aditya (November 22, 2024).
+"Chronic pain and ravaged mental health: this is the brutal reality of Britain's new working class"
+.
+The Guardian
+.
+ISSN
+0261-3077
+.
+↑
+Matsakis, Louise (October 2, 2018).
+"Why Amazon Really Raised Its Minimum Wage to $15"
+.
+Wired
+.
+Archived
+from the original on October 30, 2018
+. Retrieved
+June 10,
+2019
+.
+↑
+Khan, Lina (January 2017).
+"Amazon's Antitrust Paradox"
+.
+Yale Law Journal
+.
+126
+(3):
+564–
+907.
+Archived
+from the original on April 5, 2017
+. Retrieved
+February 9,
+2020
+.
+↑
+Baum, Andrew (October 23, 2015).
+"Amazon Wins Ruling on Results for Searches on Brands It Doesn't Sell"
+.
+The National Law Review
+. Foley & Lardner.
+Archived
+from the original on July 27, 2020
+. Retrieved
+December 21,
+2015
+.
+↑
+Slatterly, Brennon (April 13, 2009).
+"Amazon 'Glitch' Yanks Sales Rank of Hundreds of LGBT Books"
+.
+PC World
+.
+Archived
+from the original on July 28, 2012
+. Retrieved
+July 28,
+2012
+.
+↑
+Armstrong, Paul (April 14, 2009).
+"Amazon: 'Glitch' caused gay censorship error"
+. CNN.
+Archived
+from the original on October 24, 2020
+. Retrieved
+May 17,
+2020
+.
+↑
+Fitzpatrick, Alex (January 21, 2021).
+"Why Amazon's Move to Drop Parler Is a Big Deal for the Future of the Internet"
+.
+Time
+.
+Archived
+from the original on November 28, 2023
+. Retrieved
+November 26,
+2023
+.
+↑
+Raice, Shayndi (December 20, 2011).
+"Groupon Launches Anti-Amazon Promotion of Sorts"
+.
+The Wall Street Journal
+.
+Archived
+from the original on July 25, 2020
+. Retrieved
+February 20,
+2019
+.
+↑
+"Focus on Mobile Commerce – While some still cry, others fight back"
+.
+Internet Retailer
+.
+Archived
+from the original on March 27, 2016
+. Retrieved
+February 1,
+2012
+.
+↑
+"What can retailers learn from Amazon, Groupon and eBay? – Mobile Commerce Daily – Multichannel retail support"
+.
+Mobile Commerce Daily
+. December 20, 2011. Archived from
+the original
+on February 7, 2012
+. Retrieved
+February 1,
+2012
+.
+↑
+"Complaint, Federal Trade Commission v. Amazon.com, Inc"
+(PDF)
+.
+PacerMonitor
+.
+Archived
+(PDF)
+from the original on October 9, 2022
+. Retrieved
+June 16,
+2016
+.
+↑
+"Amazon pulls "racist" skin-lightening products"
+. CBS News. November 22, 2019.
+Archived
+from the original on July 25, 2020
+. Retrieved
+November 24,
+2019
+.
+↑
+Stempel, Jonathan (May 10, 2022).
+"Amazon.com wins dismissal of NY attorney general lawsuit over worker safety"
+.
+Reuters
+. Reuters.
+Archived
+from the original on May 10, 2022
+. Retrieved
+May 10,
+2022
+.
+↑
+Miller, Parker (February 8, 2024).
+"The Amazon Files: Biden likes banning books too, you hypocrites - Washington Examiner"
+.
+Archived
+from the original on February 14, 2024
+. Retrieved
+February 14,
+2024
+.
+↑
+Ferrechio, Susan (February 13, 2024).
+"Biden administration pressured Amazon to censor books that questioned COVID vaccines - Washington Times"
+.
+The Washington Times
+. Archived from
+the original
+on February 13, 2024
+. Retrieved
+February 14,
+2024
+.
+↑
+Jordan, Jim [@Jim_Jordan] (February 5, 2024).
+"Amazon Files Thread"
+(
+Tweet
+).
+Archived
+from the original on February 14, 2024
+. Retrieved
+February 14,
+2024
+–
+via
+X (formerly Twitter)
+.
+↑
+Haag, Matthew; Hu, Winnie (October 27, 2019).
+"1.5 Million Packages a Day: The Internet Brings Chaos to N.Y. Streets"
+.
+The New York Times
+.
+Archived
+from the original on January 28, 2021
+. Retrieved
+December 13,
+2024
+.
+↑
+Dungca, Nicole (November 21, 2019).
+"Seeing Red: Ride-hailing, deliveries add traffic to Boston's crowded streets"
+.
+The Boston Globe
+.
+Archived
+from the original on December 12, 2024
+. Retrieved
+December 13,
+2024
+.
+↑
+Bergmann, Joy (January 28, 2019).
+"Locals Decry 'Total Madness' of Delivery Truck Parking; Proposed City Council Bill May Help"
+.
+West Side Rag
+.
+Archived
+from the original on December 13, 2024
+. Retrieved
+December 13,
+2024
+.
+↑
+Caldwell, Christopher (August 17, 2023).
+"Something Has Changed on City Streets, and Amazon Is to Blame"
+.
+The New York Times
+.
+Archived
+from the original on December 13, 2024
+. Retrieved
+December 13,
+2024
+.
+↑
+"Books by Jane Friedman"
+.
+Jane Friedman.com
+.
+Archived
+from the original on August 10, 2023
+. Retrieved
+August 9,
+2023
+.
+↑
+Friedman, Jane (August 7, 2023).
+"I Would Rather See My Books Get Pirated Than This (Or: Why Goodreads and Amazon Are Becoming Dumpster Fires)"
+.
+Jane Friedman
+.
+Archived
+from the original on August 9, 2023
+. Retrieved
+August 9,
+2023
+.
+↑
+Edwards, Benj (August 8, 2023).
+"Author discovers AI-generated counterfeit books written in her name on Amazon"
+.
+Ars Technica
+.
+Archived
+from the original on August 8, 2023
+. Retrieved
+August 9,
+2023
+.
+↑
+Roscoe, Jules (June 28, 2023).
+"AI-Generated Books of Nonsense Are All Over Amazon's Bestseller Lists"
+.
+Vice
+.
+Archived
+from the original on August 8, 2023
+. Retrieved
+August 9,
+2023
+.
+↑
+O'Donovan, Caroline (July 2, 2023).
+"Goodreads was the future of book reviews. Then Amazon bought it"
+.
+Washington Post
+.
+Archived
+from the original on August 28, 2023
+. Retrieved
+August 9,
+2023
+.
+1
+2
+"Ring will no longer allow police to request users' doorbell camera footage"
+.
+NPR
+. Associated Press. January 27, 2024. Archived from
+the original
+on January 27, 2024
+. Retrieved
+February 3,
+2024
+.
+↑
+Dalleres, Frank (February 26, 2025).
+"Sky accuses Amazon of failing to prevent piracy on Fire Sticks"
+.
+City AM
+.
+Archived
+from the original on February 26, 2025
+. Retrieved
+February 27,
+2025
+.
+↑
+Kwet, Michael.
+"How US Big Tech supports Israel's AI-powered genocide and apartheid"
+.
+Al Jazeera
+.
+Archived
+from the original on July 16, 2025
+. Retrieved
+July 17,
+2025
+.
+↑
+Grant, Nico (August 30, 2022).
+"Google Employee Who Played Key Role in Protest of Contract With Israel Quits"
+.
+The New York Times
+.
+ISSN
+0362-4331
+.
+Archived
+from the original on May 31, 2024
+. Retrieved
+July 17,
+2025
+.
+↑
+"We are Google and Amazon workers. We condemn Project Nimbus"
+.
+The Guardian
+. October 12, 2021.
+ISSN
+0261-3077
+.
+Archived
+from the original on May 18, 2023
+. Retrieved
+July 17,
+2025
+.
+↑
+Palmer, Annie (September 11, 2025).
+"Amazon suspends engineer who protested company's work with Israeli government"
+.
+CNBC
+.
+Archived
+from the original on October 14, 2025
+. Retrieved
+October 17,
+2025
+.
+↑
+Hays, Kali.
+"Amazon fires engineer after internal message critical of company's work with Israeli government"
+.
+Of Interest
+. Retrieved
+October 17,
+2025
+.
+↑
+Nguyen, Nicole (July 23, 2025).
+"Why Amazon Wants an AI Bracelet That Records Everything You Say"
+.
+WSJ
+.
+Archived
+from the original on July 24, 2025
+. Retrieved
+July 25,
+2025
+.
+↑
+Palmer, Annie (January 28, 2026).
+"Amazon inadvertently announces cloud unit layoffs in email to employees"
+.
+CNBC
+.
+Archived
+from the original on February 1, 2026
+. Retrieved
+February 13,
+2026
+.
+Further reading
+Brandt, Richard L. (2011).
+One Click: Jeff Bezos and the Rise of Amazon.com
+. New York: Portfolio Penguin.
+ISBN
+978-1-59184-375-7
+.
+Daisey, Mike
+(2002).
+21 Dog Years
+. Free Press.
+ISBN
+0-7432-2580-5
+.
+Friedman, Mara (2004).
+Amazon.com for Dummies
+. Wiley Publishing.
+ISBN
+0-7645-5840-4
+.
+Marcus, James (2004).
+Amazonia: Five Years at the Epicenter of the Dot.Com Juggernaut
+. W. W. Norton.
+ISBN
+1-56584-870-5
+.
+Spector, Robert (2000).
+Amazon.com – Get Big Fast: Inside the Revolutionary Business Model That Changed the World
+. HarperCollins.
+ISBN
+0-06-662041-4
+.
+Stone, Brad
+(2013).
+The Everything Store: Jeff Bezos and the Age of Amazon
+. New York: Little Brown and Co.
+ISBN
+978-0-316-21926-6
+.
+OCLC
+856249407
+.
+External links
+Wikimedia Commons has media related to
+Amazon.com
+.
+Official website
+Amazon
+on
+OpenSecrets
+, a website that tracks and publishes data on campaign finance and lobbying
+Amazon (company) companies
+grouped at
+OpenCorporates
+Business data for Amazon.com, Inc.:
+Google
+SEC filings
+Yahoo!
+v
+t
+e
+Amazon
+People
+Current
+Jeff Bezos
+(Founder and Executive Chairman)
+Andy Jassy
+(President and CEO)
+Werner Vogels
+(CTO)
+Former
+Rick Dalzell
+Paul Davis
+Tony Hsieh
+Christopher North
+Ram Shriram
+Tom Szkutak
+Brian Valentine
+Facilities
+Doppler
+Day 1
+HQ2
+Principal Place
+Spheres
+Bellevue 600
+Products and
+services
+Subsidiaries
+AbeBooks
+Amazon Game Studios
+Amazon Lab126
+Amazon Leo
+Amazon Pharmacy
+PillPack
+Amazon Robotics
+Amazon University Esports
+Annapurna Labs
+Audible
+Blink Home
+Body Labs
+BookFinder
+Fresh
+Goodreads
+Goodreads Choice Awards
+Graphiq
+IMDb
+Box Office Mojo
+IMDbPro
+One Medical
+Ring
+Neighbors
+Shopbop
+Twitch
+IGDB
+Woot.com
+Zappos
+Zoox
+Cloud
+computing
+Web Services
+AMI
+Amazon Aurora
+Beanstalk
+CloudFront
+DynamoDB
+EBS
+EC2
+EFS
+ElastiCache
+EMR
+Glacier
+Glue
+Lambda
+Lightsail
+MTurk
+Neptune
+Product Advertising API
+RDS
+Redshift
+Rekognition
+Route 53
+S3
+SageMaker
+SES
+SNS
+SimpleDB
+SQS
+VPC
+Services
+Amazon.com
+China
+Alexa
+Appstore
+Digital Game Store
+Fire OS
+Kindle Store
+Luna
+Payments
+Prime
+Amazon miniTV
+MX Player
+Key
+Prime Music
+Prime Now
+Prime Pantry
+Prime Video
+Sports
+Marketplace
+Music
+(
+Wondery
+)
+Silk
+Wireless
+Devices
+Astro
+Echo
+Show
+Echo Buds
+Fire
+Fire HD
+Fire HDX
+Fire TV
+Stick
+Kindle
+Technology
+1-Click
+Amazon One
+Dynamo
+Obidos
+Lumberyard
+Media
+Amazon Games
+Amazon Publishing
+Breakthrough Novel Award
+Best Books of the Year
+Amazon MGM Studios
+Metro-Goldwyn-Mayer
+United Artists
+Orion Pictures
+American International Pictures
+MGM+
+Kindle Direct Publishing
+YES Network
+(15%)
+Retail
+Whole Foods Market
+Logistics
+Amazon Freight
+Amazon Air
+Amazon Prime Air
+Former
+43 Things
+A9.com
+Askville
+Alexa Internet
+Amapedia
+Amazon Books
+Amazon Clinic
+Amazon Fresh
+Amazon Go
+Amie Street
+(
+Songza
+)
+Book Depository
+CDNow
+ComiXology
+Dash buttons
+Dash wand
+Diapers.com
+Digital Photography Review
+Double Helix Games
+Drive
+Endless.com
+Fire Phone
+Freevee
+Lexcycle
+Liquavista
+LivingSocial
+LoveFilm
+MGM Holdings
+Mobipocket
+PlanetAll
+Reflexive Entertainment
+Sellaband
+Shelfari
+Souq.com
+TenMarks
+Treasure Truck
+Withoutabox
+Litigation
+Perfect 10, Inc. v. Amazon.com, Inc.
+Amazon.com, Inc. v. Barnesandnoble.com, Inc.
+Amazon.com Inc v Canada (Commissioner of Patents)
+FTC v. Amazon
+Other
+Amazon Light
+ASIN
+Community Banana Stand
+Criticism
+(
+tax
+)
+Fishbowl
+History of Amazon
+LibraryThing
+List of Amazon brands
+List of Amazon products and services
+List of mergers and acquisitions by Amazon
+Locker
+MacKenzie Scott
+Statistically improbable phrase
+Vine
+Worker organization
+List of fatalities
+Edwardsville Amazon warehouse collapse
+Unions
+Congress of Essential Workers
+Amazon Labor Union
+Amazon worker organization
+2024 strike
+Category
+v
+t
+e
+Jeff Bezos
+Organizations
+Amazon
+Amazon Web Services
+Alexa
+Amazon Appstore
+Amazon Luna
+Amazon Music
+Amazon Pay
+Amazon Prime
+Amazon Prime Video
+Ring
+Amazon Robotics
+Twitch
+Blue Origin
+Bezos Expeditions
+Bezos Family Foundation
+Washington Post
+Family
+Ted Jorgensen
+Miguel Bezos
+Jackie Bezos
+Mark Bezos
+MacKenzie Scott
+Lauren Sánchez
+Related
+Koru
+Billionaire space race
+The Everything Store
+The Space Barons
+Phone hacking incident
+Links to related articles
+v
+t
+e
+List of NASDAQ-100 companies
+Adobe
+ADP
+AMD
+Airbnb
+Alnylam Pharmaceuticals
+Alphabet
+Amazon
+AEP
+Amgen
+Analog Devices
+Apple
+Applied Materials
+AppLovin
+Arm
+ASML
+Astera Labs
+Autodesk
+Axon
+Baker Hughes
+Booking Holdings
+Broadcom
+Cadence
+Cintas
+Cisco
+Coca-Cola Europacific Partners
+Comcast
+Constellation Energy
+Copart
+CoreWeave
+Costco
+CrowdStrike
+CSX
+Datadog
+Dexcom
+Diamondback Energy
+DoorDash
+Electronic Arts
+Exelon
+Fastenal
+Ferrovial
+Fortinet
+GE HealthCare
+Gilead Sciences
+Honeywell Aerospace
+Honeywell Technologies
+Idexx Laboratories
+Intel
+Intuit
+Intuitive Surgical
+Keurig Dr Pepper
+KLA
+Kraft Heinz
+Lam Research
+Linde
+Lumentum
+Marriott International
+Marvell
+Mercado Libre
+Meta
+Microchip
+Micron
+Microsoft
+MicroStrategy
+Mondelez International
+Monolithic Power Systems
+Monster Beverage
+Nebius Group
+Netflix
+Nvidia
+NXP
+O'Reilly Auto Parts
+Old Dominion
+Paccar
+Palantir
+Palo Alto Networks
+Paychex
+PayPal
+PDD Holdings
+PepsiCo
+Qualcomm
+Regeneron
+Rocket Lab
+Roper Technologies
+Ross Stores
+Sandisk
+Seagate Technology
+Shopify
+SpaceX
+Starbucks
+Synopsys
+T-Mobile US
+Take-Two Interactive
+Teradyne
+Tesla
+Texas Instruments
+Thomson Reuters
+Vertex
+Walmart
+Warner Bros. Discovery
+Western Digital
+Workday
+Xcel Energy
+v
+t
+e
+Components of the
+Dow Jones Industrial Average
+3M
+Alphabet
+Amazon
+American Express
+Amgen
+Apple
+Boeing
+Caterpillar
+Chevron
+Cisco
+Coca-Cola
+Disney
+Goldman Sachs
+Home Depot
+Honeywell Technologies
+IBM
+Johnson & Johnson
+JPMorgan Chase
+McDonald's
+Merck
+Microsoft
+Nike
+Nvidia
+Procter & Gamble
+Salesforce
+Sherwin-Williams
+Travelers
+UnitedHealth
+Visa
+Walmart
+v
+t
+e
+S&P 500 companies
+Energy
+APA Corporation
+Baker Hughes
+Chevron Corporation
+ConocoPhillips
+Devon Energy
+Diamondback Energy
+EOG Resources
+EQT Corporation
+Expand Energy
+ExxonMobil
+Halliburton
+Kinder Morgan
+Marathon Petroleum
+Occidental Petroleum
+Oneok
+Phillips 66
+SLB
+Targa Resources
+Texas Pacific Land Corporation
+Valero Energy
+Williams Companies
+Materials
+Air Products
+Albemarle Corporation
+Amcor
+Avery Dennison
+Ball Corporation
+CF Industries
+Corteva
+CRH plc
+Dow Chemical Company
+DuPont
+Ecolab
+Freeport-McMoRan
+International Flavors & Fragrances
+International Paper
+Linde plc
+LyondellBasell
+Martin Marietta Materials
+Newmont
+Nucor
+Packaging Corporation of America
+PPG Industries
+Sherwin-Williams
+Smurfit Westrock
+Steel Dynamics
+Vulcan Materials Company
+Industrials
+3M
+A. O. Smith
+Allegion
+Ametek
+Automatic Data Processing
+Axon Enterprise
+Boeing
+Broadridge Financial Solutions
+Builders FirstSource
+C.H. Robinson
+Carrier Global
+Caterpillar Inc.
+Cintas
+Comfort Systems USA
+Copart
+CSX Corporation
+Cummins
+Deere & Company
+Delta Air Lines
+Dover Corporation
+Eaton Corporation
+Emcor
+Emerson Electric
+Equifax
+Expeditors International
+Fastenal
+FedEx
+FedEx Freight
+Fortive
+GE Aerospace
+GE Vernova
+Generac
+General Dynamics
+Honeywell Aerospace
+Honeywell Technologies
+Howmet Aerospace
+Hubbell Incorporated
+Huntington Ingalls Industries
+IDEX Corporation
+Illinois Tool Works
+Ingersoll Rand
+J. B. Hunt
+Jacobs Solutions
+Johnson Controls
+L3Harris
+Leidos
+Lennox International
+Lockheed Martin
+Masco
+Nordson Corporation
+Norfolk Southern Railway
+Northrop Grumman
+Old Dominion Freight Line
+Otis Worldwide
+Paccar
+Parker Hannifin
+Paychex
+Pentair
+Quanta Services
+RTX Corporation
+Republic Services
+Rockwell Automation
+Rollins, Inc.
+Snap-on
+Southwest Airlines
+Stanley Black & Decker
+Textron
+Trane Technologies
+TransDigm Group
+Uber
+Union Pacific Corporation
+United Airlines
+United Parcel Service
+United Rentals
+Veralto
+Verisk Analytics
+Vertiv
+W. W. Grainger
+Wabtec
+Waste Management, Inc.
+Xylem Inc.
+Consumer
+discretionary
+Airbnb
+Amazon
+Aptiv
+AutoZone
+Best Buy
+Booking Holdings
+Carnival
+Carvana
+Chipotle Mexican Grill
+Darden Restaurants
+Deckers Brands
+Domino's
+DoorDash
+D. R. Horton
+eBay
+Expedia Group
+Ford Motor Company
+Garmin
+General Motors
+Genuine Parts Company
+Hasbro
+Hilton Worldwide
+Home Depot
+Las Vegas Sands
+Lennar
+Lowe's
+Lululemon
+Marriott International
+McDonald's
+MGM Resorts International
+Nike, Inc.
+Norwegian Cruise Line Holdings
+NVR, Inc.
+O'Reilly Auto Parts
+PulteGroup
+Ralph Lauren Corporation
+Ross Stores
+Royal Caribbean Group
+Starbucks
+Tapestry, Inc.
+Tesla, Inc.
+TJX
+Tractor Supply Company
+Ulta Beauty
+Williams-Sonoma, Inc.
+Wynn Resorts
+Yum! Brands
+Consumer
+staples
+Altria
+Archer Daniels Midland
+Brown-Forman
+Bunge Global
+Casey's
+Church & Dwight
+Clorox
+The Coca-Cola Company
+Colgate-Palmolive
+Constellation Brands
+Costco
+Dollar General
+Dollar Tree
+Estée Lauder Companies
+General Mills
+The Hershey Company
+Hormel Foods
+Kenvue
+Keurig Dr Pepper
+Kimberly-Clark
+Kraft Heinz
+Kroger
+McCormick & Company
+Molson Coors
+Mondelez International
+Monster Beverage
+PepsiCo
+Philip Morris International
+Procter & Gamble
+The J.M. Smucker Company
+Sysco
+Target Corporation
+Tyson Foods
+Walmart
+Health Care
+Abbott Laboratories
+AbbVie
+Agilent Technologies
+Align Technology
+Amgen
+Baxter International
+Becton Dickinson
+Bio-Techne
+Biogen
+Boston Scientific
+Bristol Myers Squibb
+Cardinal Health
+Cencora
+Centene Corporation
+Charles River Laboratories
+The Cigna Group
+Cooper Companies
+CVS Health
+Danaher Corporation
+DaVita
+Dexcom
+Edwards Lifesciences
+Elevance Health
+GE HealthCare
+Gilead Sciences
+HCA Healthcare
+Henry Schein
+Humana
+Idexx Laboratories
+Incyte
+Insulet Corporation
+Intuitive Surgical
+IQVIA
+Johnson & Johnson
+Labcorp
+Eli Lilly and Company
+McKesson Corporation
+Medtronic
+Merck & Co.
+Mettler Toledo
+Moderna
+Pfizer
+Quest Diagnostics
+Regeneron Pharmaceuticals
+ResMed
+Revvity
+Solventum
+Steris
+Stryker Corporation
+Thermo Fisher Scientific
+UnitedHealth Group
+Universal Health Services
+Veeva Systems
+Vertex Pharmaceuticals
+Viatris
+Waters Corporation
+West Pharmaceutical Services
+Zimmer Biomet
+Zoetis
+Financials
+Aflac
+Allstate
+American Express
+American International Group
+Ameriprise Financial
+Aon
+Apollo Global Management
+Arch Capital Group
+Ares Management
+Arthur J. Gallagher & Co.
+Assurant
+Bank of America
+Berkshire Hathaway
+BlackRock
+Blackstone Inc.
+Block, Inc.
+BNY
+Brown & Brown
+Capital One
+Cboe Global Markets
+Charles Schwab Corporation
+Chubb Limited
+Cincinnati Financial
+Citigroup
+Citizens Financial Group
+CME Group
+Coinbase
+Corpay
+Erie Indemnity
+Everest Group
+FactSet
+FIS
+Fifth Third Bank
+Fiserv
+Franklin Resources
+Global Payments
+Globe Life
+Goldman Sachs
+The Hartford
+Huntington Bancshares
+Interactive Brokers
+Intercontinental Exchange
+Invesco
+Jack Henry & Associates
+JPMorgan Chase
+KeyBank
+KKR & Co.
+Loews Corporation
+M&T Bank
+Marsh McLennan
+Mastercard
+MetLife
+Moody's Corporation
+Morgan Stanley
+MSCI
+Nasdaq, Inc.
+Northern Trust
+PayPal
+PNC Financial Services
+Principal Financial Group
+Progressive Corporation
+Prudential Financial
+Raymond James Financial
+Regions Financial Corporation
+Robinhood Markets
+S&P Global
+State Street Corporation
+Synchrony Financial
+T. Rowe Price
+The Travelers Companies
+Truist
+U.S. Bancorp
+Visa Inc.
+W. R. Berkley Corporation
+Wells Fargo
+Willis Towers Watson
+Information
+technology
+Accenture
+Adobe Inc.
+Akamai Technologies
+AMD
+Amphenol
+Analog Devices
+Apple Inc.
+Applied Materials
+AppLovin
+Arista Networks
+Autodesk
+Broadcom
+Cadence Design Systems
+CDW
+Ciena
+Cisco
+Cognizant
+Coherent Corp.
+Corning Inc.
+CrowdStrike
+Datadog
+Dell Technologies
+F5, Inc.
+FICO
+First Solar
+Flex Ltd.
+Fortinet
+Gartner
+Gen Digital
+GoDaddy
+Hewlett Packard Enterprise
+HP Inc.
+IBM
+Intel
+Intuit
+Jabil
+Keysight
+KLA Corporation
+Lam Research
+Lumentum
+Marvell Technology
+Microchip Technology
+Micron Technology
+Microsoft
+Monolithic Power Systems
+Motorola Solutions
+NetApp
+Nvidia
+NXP Semiconductors
+onsemi
+Oracle Corporation
+Palantir
+Palo Alto Networks
+PTC Inc.
+Qualcomm
+Qnity Electronics
+Roper Technologies
+Salesforce
+Sandisk
+Seagate Technology
+ServiceNow
+Skyworks Solutions
+Supermicro
+Synopsys
+TE Connectivity
+Teledyne Technologies
+Teradyne
+Texas Instruments
+Trimble Inc.
+Tyler Technologies
+Verisign
+Western Digital
+Workday, Inc.
+Zebra Technologies
+Communication
+services
+Alphabet Inc.
+AT&T
+Charter Communications
+Comcast
+EchoStar
+Electronic Arts
+Fox Corporation
+Live Nation Entertainment
+Meta Platforms
+Netflix
+News Corp
+Omnicom Group
+Paramount Skydance
+T-Mobile
+Take-Two Interactive
+TKO Group Holdings
+The Trade Desk
+Verizon
+The Walt Disney Company
+Warner Bros. Discovery
+Real estate
+Alexandria Real Estate Equities
+American Tower
+AvalonBay Communities
+BXP, Inc.
+Camden Property Trust
+CBRE Group
+CoStar Group
+Crown Castle
+Digital Realty
+Equinix
+Equity Residential
+Essex Property Trust
+Extra Space Storage
+Federal Realty Investment Trust
+Healthpeak Properties
+Host Hotels & Resorts
+Invitation Homes
+Iron Mountain
+Kimco Realty
+Mid-America Apartment Communities
+Prologis
+Public Storage
+Realty Income
+Regency Centers
+SBA Communications
+Simon Property Group
+UDR, Inc.
+Ventas
+Vici Properties
+Welltower
+Weyerhaeuser
+Utilities
+AES Corporation
+Alliant Energy
+Ameren
+American Electric Power
+American Water Works
+Atmos Energy
+CenterPoint Energy
+CMS Energy
+Consolidated Edison
+Constellation Energy
+Dominion Energy
+DTE Energy
+Duke Energy
+Edison International
+Entergy
+Evergy
+Eversource Energy
+Exelon
+FirstEnergy
+NextEra Energy
+NiSource
+NRG Energy
+Pacific Gas and Electric Company
+Pinnacle West Capital
+PPL Corporation
+Public Service Enterprise Group
+Sempra
+Southern Company
+Vistra Corp.
+WEC Energy Group
+Xcel Energy
+v
+t
+e
+Seattle-based corporations
+(within the
+Seattle metropolitan area
+)
+Seattle
+and
+SeaTac
+-based
+Fortune 1000
+corporations
+Alaska Airlines
+(#360)
+Amazon.com
+(#2)
+Expedia Group
+(#263)
+Expeditors International
+(#389)
+Nordstrom
+(#205)
+Starbucks
+(#114)
+Weyerhaeuser
+(#457)
+Puget Sound
+-based
+Fortune 1000
+corporations
+Companies listed above, plus:
+Costco Wholesale
+(#14)
+Microsoft
+(#21)
+Paccar
+(#118)
+Puget Sound Energy
+(#710)
+Major
+Seattle
+- and
+Puget Sound
+-based non-public
+or externally owned corporations
+Big Fish Games
+Bluesky
+Darigold
+Eddie Bauer
+Jones Soda
+Nash Holdings
+Nintendo of America
+QFC
+REI
+Safeco
+T-Mobile US
+v
+t
+e
+Ebooks
+Formats
+ePub
+FictionBook
+CBR/CBZ
+Kindle File Format
+Mobipocket
+PDF
+Plain text
+IBA
+Reading
+Devices
+Amazon Kindle
+Barnes & Noble Nook
+Bookeen
+Elonex ebook
+enTourage eDGe
+Hanlin eReader
+iPad
+iRiver Story
+Kobo eReader
+Onyx Boox
+Plastic Logic Reader
+PocketBook eReader
+Rocket eBook
+SoftBook
+Smartphones
+Tablets
+Software
+Adobe Acrobat
+Adobe Digital Editions
+Aldiko
+Apple Books
+(iBooks)
+Aquafadas
+Blio
+Bluefire Reader
+Calibre
+FBReader
+Foliate
+Google Play Books
+Kindle app
+Kitabu
+Kobo
+Lector
+Lektz
+Lucifox
+Microsoft Reader
+MuPDF
+Okular
+OverDrive Media Console
+Snapplify
+STDU Viewer
+Sumatra PDF
+Editing
+ABBYY FineReader
+AbiWord
+Adobe InDesign
+Adobe RoboHelp
+Aquafadas
+Atlantis Word Processor
+Booktype
+Calibre
+Calligra Author
+Collabora Online
+eXeLearning
+HelpNDoc
+iBooks Author
+iStudio Publisher
+LaTeX
+LibreOffice
+Oxygen XML Editor
+PagePlus
+Pages
+QuarkXPress
+Scrivener
+Sigil
+Writer2epub
+Vendors
+Commercial
+Apple Books Store
+Amazon Kindle Store
+Baen Free Library
+Barnes & Noble
+Booktrack
+BookWalker
+Feedbooks
+Google
+Google Play
+Google Books
+Jarir.com
+Kobo Bookstore
+Rokomari
+Sony Reader Store
+Smashwords
+Noncommercial
+Aozora Bunko
+Faded Page
+HathiTrust
+Internet Archive
+Project Gutenberg
+Australia
+Canada
+Standard Ebooks
+Wikisource
+Related
+Academic journal publishing reform
+Books
+Braille e-book
+Comparison of ebook readers
+Comparison of iOS ebook reader software
+Comparison of Android ebook reader software
+E-book lending
+Electronic publishing
+iBooks Author Conference
+International Digital Publishing Forum
+Kindle single
+OPDS
+Reflowable document
+Self-publishing
+Semantic publishing
+Timeline of ebooks
+v
+t
+e
+Amazon MGM Studios
+A subsidiary of
+Amazon
+Predecessors
+Metro Pictures
+Goldwyn Pictures
+Louis B. Mayer Productions
+MGM Holdings
+Key personnel
+Founders
+Marcus Loew
+Louis B. Mayer
+Chairwoman and CEO
+Jennifer Salke
+Motion Picture Group
+Metro-Goldwyn-Mayer
+United Artists
+Orion Pictures
+Orion Classics
+American International Pictures
+TV & Digital Group
+MGM Television
+Lightworkers Media
+MGM channels
+MGM+
+Joint ventures
+Telecine
+(13%)
+Operator
+Charge!
+Comet
+Miscellaneous
+MGM Home Entertainment
+MGM Music
+Leo the Lion
+(studio mascot)
+Former/defunct units
+G2 Films
+MGM HD
+MGM Interactive
+MGM Networks
+MGM Records
+United Artists Releasing
+MGM/UA Premiere Network
+MGM Animation/Visual Arts
+The Works
+MGM Animation
+MGM Camera 65
+v
+t
+e
+Music industry
+Major companies
+and organizations
+Representatives
+AMPROFON
+ARIA
+BVMI
+BPI
+Music Canada
+FIMI
+IFPI (worldwide)
+PMB
+PROMUSICAE
+RIAA
+SNEP
+Publishers
+BMG Rights Management
+Sony Music Publishing
+Universal Music Publishing Group
+Warner Chappell Music
+Disney Music Publishing
+Concord Music Publishing
+Allied Artists Music Group
+Believe Music
+Reservoir Media
+Nickel Shoe Music
+TVT Music Enterprises
+Century Media
+Shapiro, Bernstein & Co.
+Secretly Group
+Empire Distribution
+Create Music Group
+Record labels
+Major
+Sony
+Universal
+Warner
+Disney
+AAMG
+Independent
+Concord
+BMG
+Reservoir
+Secretly
+Big Machine
+PIAS
+Beggars
+Sub Pop
+Domino
+Glassnote
+Ninja Tune
+Empire
+ECR
+Create
+Independent UK record labels
+Notable independent record labels
+Retailers
+Amazon
+Digital music stores
+(
+iTunes Store
+)
+Fnac
+HMV
+Kaspien
+Virgin Megastores
+Live music
+CTS Eventim
+Live Nation
+LiveStyle
+Ticketmaster
+Major genres
+Blues
+Country
+Easy listening
+Electronic
+Experimental
+Folk
+Gospel
+Hip-hop
+Jazz
+Latin
+Metal
+New Age
+Pop
+Reggae
+Rhythm and blues
+Rock
+World
+Sectors
+and roles
+Album cover design
+Artists and repertoire (A&R)
+Disc jockey
+Distribution
+Entertainment law
+Music education
+Music executive
+Music and fashion
+Music journalism
+Music publisher
+Music store
+Music venue
+Musical instruments
+Professional audio store
+Promotion
+Radio promotion
+Record label
+Record shop
+Road crew
+Talent manager
+Tour promoter
+Production
+Arrangement
+Songwriter
+Composer
+Lyricist
+Conductor
+Disc jockey
+Hip-hop producer
+Horn section
+Record producer
+Rhythm section
+Orchestrator
+Session musician
+Backup singer
+Ghost singer
+Vocal coach
+Ghostwriter
+Sound engineer
+Release
+formats
+Single
+(
+Extended play (EP)
+,
+12" single
+,
+Cassette single
+,
+CD single
+,
+Maxi single
+)
+Album
+Double album
+,
+Mixtape
+,
+Surprise album
+Music video
+Visual album
+Promotional recording
+Phonograph record
+Eight-track
+Compact cassette
+CD
+DVD
+Airplay
+Music download
+Music streaming service
+Live shows
+Concert
+Concert tour
+Concert residency
+Music festival
+Music competition
+Charts
+ARIA Charts
+Billboard
+Hot 100
+Billboard
+Argentina Hot 100
+Billboard
+Brasil Hot 100
+Canadian Hot 100
+Circle Chart
+G-Music chart
+Irish Singles Chart
+Italian singles chart
+GfK Entertainment charts
+Entertainment Monitoring Africa
+Oricon charts
+New Zealand singles chart
+Rolling Stone
+Top 100
+Sino Chart
+TME Physical Album Sales Chart
+SNEP singles chart
+Sverigetopplistan
+UK singles chart
+Publications
+Billboard
+HitQuarters
+Hot Press
+Kerrang!
+Mojo
+Musica e dischi
+NME
+Q
+Rolling Stone
+Smash Hits
+Top of the Pops
+Television
+Channels
+Channel V
+CMT
+Fuse
+Mnet
+MTV
+MTV2
+Tr3s
+MuchMusic
+The Music Factory
+Viva
+VH1
+The Country Network
+Series
+Idol
+franchise
+Popstars
+Star Academy
+The Four
+The Voice
+The X Factor
+Rising Star
+Achievements
+Music award
+Best-selling music artists
+Girl Groups
+In:
+Brazil
+Finland
+Germany
+Japan
+United Kingdom
+(Females)
+United States
+Genre:
+Gospel
+Latin
+Nationality:
+Belgian
+Brazilian
+British
+Italian
+Swedish
+Best-selling albums
+by country
+Latin
+Best-selling singles
+by country
+Latin
+Highest-paid musicians
+Highest-grossing live music artists
+Highest-grossing concert tours
+by women
+Latin
+Highest-grossing concert residencies
+Highest-grossing benefit concerts
+Most-attended concert tours
+Most-attended concert residencies
+Most-attended concerts
+Global Recording Artist of the Year
+Wealthiest musical artists
+Other
+Album era
+Album-equivalent unit
+A-side and B-side
+Backmasking
+Bootleg recording
+Christian music industry
+Environmental impact
+Global Release Day
+Hidden track
+Japanese edition
+Largest music deals
+Largest recorded music markets
+Most expensive albums
+Most valuable records
+Music certification
+Parental Advisory
+Record sales
+White label
+Record production
+portal
+Category
+v
+t
+e
+Major
+mobile device
+companies
+Companies with an annual revenue of over US$3 billion
+Acer
+Advan
+Alba
+Amazon
+Apple
+Asus
+BlackBerry Limited
+BLU Products
+Bush
+Dell
+Alienware
+Foxconn
+FIH Mobile
+Sharp
+Dynabook
+Fujitsu
+Gionee
+Google
+(
+Fitbit
+)
+Haier
+Hisense
+HMD
+Nokia
+Honor
+HP
+HTC
+Huawei
+Intel
+Kyocera
+Lenovo
+Motorola Mobility
+LG
+Meizu
+Microsoft
+Lumia
+Nubia
+Onyx Boox
+Oppo
+OnePlus
+Realme
+Panasonic
+Pegatron
+Samsung
+Sony
+TCL
+Alcatel Mobile
+BlackBerry Mobile
+Palm
+RCA
+Toshiba
+Transsion
+Infinix
+Itel
+Tecno
+Tinno Mobile
+Wiko
+True
+Vaio
+VinSmart
+Vivo
+iQOO
+Xiaomi
+POCO
+Redmi
+ZTE
+See also
+Largest IT companies
+Category:Mobile technology companies
+Category:Mobile phone manufacturers
+v
+t
+e
+Electronics industry in the United States
+Companies
+Home appliances
+Apple
+Beats
+Belkin
+Bose
+Cisco
+Corsair
+Dell
+Alienware
+Element Electronics
+Emerson Radio
+GE Appliances
+Harman
+AMX
+Crown International
+dbx
+Harman Kardon
+Infinity Systems
+JBL
+Lexicon
+Mark Levinson Audio Systems
+Revel
+Honeywell
+HP
+InFocus
+iRobot
+JLab
+Jensen Electronics
+Kenmore
+Kingston
+Kimball
+Koss
+Lenovo
+Lexmark
+Logitech
+Magnavox
+Memorex
+Microsoft
+Monster
+Plantronics
+Planar Systems
+Razer
+Roku
+Sandisk
+Seagate
+SharkNinja
+Skullcandy
+Sonos
+Sony
+Techtronic
+Dirt Devil
+Hoover
+Tile
+Tsinghua Tongfang
+Seiki Digital
+Westinghouse Electronics
+Turtle Beach
+Valve
+ViewSonic
+Vizio
+Western Digital
+Westinghouse Electric Company
+Whirlpool
+Admiral
+Amana
+Jenn-Air
+KitchenAid
+Maytag
+Xerox
+Marantz
+Electronic components
+3M
+Achronix
+Analog Devices
+Maxim Integrated
+Amphenol
+Applied Materials
+Altera
+AVX
+Cirque
+Diodes Inc.
+Duracell
+Energizer
+Flex
+Foxconn
+Wisconsin
+Jabil
+KEMET
+Maxwell Technologies
+Sanmina
+Vishay
+Semiconductor devices
+AMD
+Ampere Computing
+Apple
+Broadcom
+Cypress Semiconductor
+GlobalFoundries
+IBM
+Intel
+Interlink
+KLA Corporation
+Lam Research
+Lattice
+Marvell Technology
+Microchip
+(
+Atmel
+)
+Micron
+NetApp
+Nimbus Data
+Nvidia
+Mellanox
+NXP
+onsemi
+Qualcomm
+Silicon Image
+Synaptics
+Texas Instruments
+TSMC
+Arizona
+Xilinx
+Zilog
+Mobile devices
+Amazon
+Apple
+BLU
+Garmin
+Google
+Fitbit
+Lenovo
+(
+Motorola Mobility
+)
+Other
+Cadence Design Systems
+Hewlett Packard Enterprise
+Cray
+GE
+RCA
+Motorola Solutions
+Oracle Corporation
+Synopsys
+Defunct
+Actel
+Atari Corporation
+Atari, Inc.
+Broadcom Corporation
+Commodore
+Compaq
+Fairchild
+Freescale
+Hewlett-Packard
+HGST
+LSI
+Microsemi
+Motorola
+National Semiconductor
+NeXT
+Palm
+Philco
+RCA
+Signetics
+Silicon Graphics
+Solectron
+Tabula
+TiVo Corporation
+TiVo Inc.
+Sun Microsystems
+Zenith Electronics
+v
+t
+e
+Major
+Internet
+companies
+Companies with an annual revenue of over US$4 billion
+Internet
+Adobe
+Alibaba
+Alphabet
+Google
+Amazon
+Apple
+Baidu
+IAC
+Kakao
+Meituan
+Meta
+Facebook
+Microsoft
+Naver
+NetEase
+Tencent
+Yandex
+Cloud computing
+Akamai
+Alibaba Cloud
+AWS
+Apple iCloud
+Google
+IBM
+Microsoft Azure
+Oracle Corporation
+Salesforce
+SAP
+ServiceNow
+E-commerce
+Amazon.com
+Apple
+Booking Holdings
+Coupang
+eBay
+Expedia
+Flipkart
+Groupon
+JD.com
+Lazada
+Mercado Libre
+Ozon
+PDD Holdings
+Rakuten
+Shopee
+Shopify
+Suning.com
+Trip.com
+Uber
+Wayfair
+Wildberries
+Zalando
+Media
+Bloomberg
+BuzzFeed
+ByteDance
+Disney Streaming
+Kuaishou
+Netflix
+Paramount Streaming
+Spotify
+Warner Bros. Discovery
+v
+t
+e
+Dot-com bubble
+People
+Daniel Aegerter
+Marc Andreessen
+Bob Bernard
+Jeff Bezos
+Henry Blodget
+James H. Clark
+Cynthia Cooper
+Bob Davis
+Bernard Ebbers
+David Filo
+Charlie Gasparino
+Richard Grasso
+Alan Greenspan
+Jack Grubman
+Josh Harris
+Jeff Hawkins
+Howard Jonas
+Gerry Kearby
+Timothy Koogle
+Kenneth Lay
+Arthur Levitt
+Mary Meeker
+PayPal Mafia
+Kevin O'Leary
+Jason Olim
+Stephan Paternot
+Jim Rutt
+Michael J. Saylor
+Jeffrey Skilling
+Eliot Spitzer
+Scott D. Sullivan
+Kaleil Isaza Tuzman
+Julie Wainwright
+Jerry Yang
+Companies
+3Com
+360networks
+AboveNet
+Actua Corporation
+Airspan Networks
+Akamai Technologies
+Alteon WebSystems
+Amazon
+America Online
+Arthur Andersen
+Ask Jeeves
+Blue Coat Systems
+Boo.com
+Books-A-Million
+Broadband Sports
+Broadcast.com
+CDNow
+Chemdex
+CMGI Inc.
+Cobalt Networks
+Commerce One
+Covad
+Cyberian Outpost
+CyberRebate
+Digex
+Digital Convergence Corporation
+Digital Insight
+Divine
+DoubleClick
+eBay
+eGain
+Egghead Software
+Enron
+Epidemic Marketing
+Excite
+Flooz.com
+Freei
+Gadzoox
+GeoCities
+Global Crossing
+govWorks
+Handspring
+Healtheon
+HomeGrocer
+HotBot
+Infoseek
+InfoSpace
+Inktomi
+Interactive Intelligence
+Internet America
+iVillage
+iWon
+Kozmo.com
+lastminute.com
+The Learning Company
+Liquid Audio
+LookSmart
+Lycos
+Angelfire
+Tripod
+MarchFirst
+Merrill Lynch
+MicroStrategy
+Net2Phone
+NetBank
+Netscape
+Network Solutions
+NorthPoint Communications
+OmniSky
+Palm, Inc.
+PayPal
+Pets.com
+PFSweb
+Pixelon
+PLX Technology
+Prodigy
+Pseudo.com
+Radvision
+Razorfish
+Redback Networks
+Register.com
+Ritmoteca.com
+Savvis
+Scout Electromedia
+modo
+Terra
+theGlobe.com
+Think Tools
+TIBCO Software
+Tradex Technologies
+Transmeta
+uBid
+United Online
+USinternetworking
+UUNET
+VA Linux Systems
+Verio
+VerticalNet
+Vignette Corporation
+WebChat Broadcasting System
+Websense
+Webvan
+WorldCom
+World Online
+Yahoo!
+History
+Enron scandal
+Irrational exuberance
+Sarbanes–Oxley Act
+Telecoms crash
+Trial of Kenneth Lay and Jeffrey Skilling
+WorldCom scandal
+Publications
+Blood on the Street
+Conspiracy of Fools
+The Industry Standard
+The PayPal Wars
+Broadcast media
+e-Dreams
+Enron: The Smartest Guys in the Room
+Startup.com
+Valley of the Boom
+Category
+Authority control databases
+International
+ISNI
+VIAF
+GND
+FAST
+National
+United States
+France
+BnF data
+Japan
+Czech Republic
+Spain
+Norway
+Latvia
+Sweden
+Poland
+Israel
+Catalonia
+Croatia
+Academics
+CiNii
+Other
+IdRef
+MusicBrainz label
+SNAC
+ELMCIP
+Yale LUX
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Amazon_(company)&oldid=1363194005
+"
+Categories
+:
+Companies in the Nasdaq-100
+Companies listed on the Nasdaq
+Amazon (company)
+1994 establishments in Washington (state)
+1997 initial public offerings
+American companies established in 1994
+Jeff Bezos
+Cloud computing providers
+Companies in the Dow Jones Global Titans 50
+Companies in the Dow Jones Industrial Average
+Companies involved in the Gaza war
+Ebook suppliers
+Internet properties established in 1994
+Logistics companies of the United States
+Multinational companies headquartered in the United States
+Online retailers of the United States
+Retail companies established in 1994
+Software companies based in Seattle
+Software companies established in 1994
+Software companies of the United States
+Technology companies established in 1994
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Wikipedia articles needing copy edit from May 2026
+All Wikipedia articles needing copy edit
+Wikipedia indefinitely semi-protected pages
+Use American English from February 2024
+All Wikipedia articles written in American English
+Use mdy dates from August 2025
+CS1 maint: url-status
+Pages using the Phonos extension
+Pages including recorded pronunciations
+Articles containing potentially dated statements from 2023
+All articles containing potentially dated statements
+Articles containing potentially dated statements from 2024
+Articles containing potentially dated statements from October 2024
+CS1 maint: multiple names: authors list
+Webarchive template wayback links
+Articles containing potentially dated statements from October 2017
+Articles containing potentially dated statements from 2019
+Wikipedia articles in need of updating from June 2026
+All Wikipedia articles in need of updating
+All articles with vague or ambiguous time
+Vague or ambiguous time from June 2026
+Articles containing potentially dated statements from December 2020
+Articles containing potentially dated statements from 2021
+Articles containing potentially dated statements from 2015
+Articles containing potentially dated statements from September 2013
+Wikipedia articles in need of updating from May 2026
+Articles containing potentially dated statements from August 2025
+Articles containing potentially dated statements from 2018
+CS1 French-language sources (fr)
+Commons category link from Wikidata
+OpenCorporates groupings
+Search
+Search
+Amazon (company)
+115 languages
+Add topic

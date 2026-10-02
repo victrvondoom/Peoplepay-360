@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "Myntra",
+  "title": "Myntra FAQ",
+  "category": "faq",
+  "source_url": "https://www.myntra.com/faq",
+  "final_url": "https://www.myntra.com/faq",
+  "type": "html_text",
+  "raw_chars": 7356,
+  "stored_path": "knowledge/ecommerce/marketplaces/myntra/myntra_faq_official.txt",
+  "sha256": "5881226f30fe16de6792f198bcf48acabfb535aa57c4f822d184b0dcd74ab64b",
+  "bytes": 7485,
+  "fetched_at": "2026-07-07T12:47:24.035495+00:00",
+  "official_source": true
+}

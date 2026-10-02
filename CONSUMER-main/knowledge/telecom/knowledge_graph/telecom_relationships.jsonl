@@ -1,0 +1,13 @@
+{"domain": "telecom", "source": "Customer", "relation": "USES", "target": "Plan"}
+{"domain": "telecom", "source": "Telecom Operator", "relation": "PROVIDES", "target": "Broadband Connection"}
+{"domain": "telecom", "source": "Telecom Operator", "relation": "PROVIDES", "target": "Fiber Connection"}
+{"domain": "telecom", "source": "Complaint", "relation": "REFERENCES", "target": "TRAI Regulation"}
+{"domain": "telecom", "source": "Recharge", "relation": "BELONGS_TO", "target": "Customer"}
+{"domain": "telecom", "source": "Invoice", "relation": "GENERATED_BY", "target": "Telecom Operator"}
+{"domain": "telecom", "source": "Refund", "relation": "FOLLOWS", "target": "Complaint"}
+{"domain": "telecom", "source": "Portability (MNP)", "relation": "INVOLVES", "target": "Telecom Operator"}
+{"domain": "telecom", "source": "Network", "relation": "AFFECTS", "target": "Customer"}
+{"domain": "telecom", "source": "Call Drop", "relation": "INDICATES", "target": "Network"}
+{"domain": "telecom", "source": "VAS Service", "relation": "REQUIRES_CONSENT_FROM", "target": "Customer"}
+{"domain": "telecom", "source": "Appeal", "relation": "REFERENCES", "target": "Consumer Right"}
+{"domain": "telecom", "source": "Resolution", "relation": "CLOSES", "target": "Complaint"}

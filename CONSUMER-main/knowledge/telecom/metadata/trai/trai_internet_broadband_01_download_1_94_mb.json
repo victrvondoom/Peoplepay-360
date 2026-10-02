@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(1.94 MB)",
+  "parent_title": "TRAI Internet and Broadband",
+  "category": "broadband_regulations",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Broadband_CP_20082020.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/internet-broadband",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-09/Broadband_CP_20082020.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/trai/trai_internet_broadband_01_download_1_94_mb.pdf",
+  "sha256": "1a822d632bfcab4f9e71ac7ecc3ed7a519781f66396d837416cf51a359cde2cb",
+  "bytes": 2029183,
+  "fetched_at": "2026-07-06T13:58:25.560842+00:00"
+}

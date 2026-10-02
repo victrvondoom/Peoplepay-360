@@ -58,7 +58,7 @@ class CaseWorkflow:
         graph.add_node("specialists", run_domain_specialists)
         graph.add_node("negotiator", run_negotiator_agent)
         graph.add_node("evidence", run_evidence_agent)
-        graph.add_node("strategy", run_strategy_agent)
+        graph.add_node("strategy_agent", run_strategy_agent)
         graph.add_node("appeal", run_negotiation_agent)
         graph.add_node("review", run_review_agent)
         graph.add_node("response", run_response_agent)
@@ -76,8 +76,8 @@ class CaseWorkflow:
             {"negotiator": "negotiator", "evidence": "evidence"},
         )
         graph.add_edge("negotiator", "evidence")
-        graph.add_edge("evidence", "strategy")
-        graph.add_edge("strategy", "appeal")
+        graph.add_edge("evidence", "strategy_agent")
+        graph.add_edge("strategy_agent", "appeal")
         graph.add_edge("appeal", "review")
         # Same hard gate as case_analysis_workflow.py: run_review_agent sets
         # review_should_retry when it finds a hallucinated claim or a
@@ -87,8 +87,8 @@ class CaseWorkflow:
         # planner-driven path too.
         graph.add_conditional_edges(
             "review",
-            lambda state: "strategy" if state.get("review_should_retry") else "response",
-            {"strategy": "strategy", "response": "response"},
+            lambda state: "strategy_agent" if state.get("review_should_retry") else "response",
+            {"strategy_agent": "strategy_agent", "response": "response"},
         )
         graph.add_edge("response", "supervisor_done")
         graph.add_edge("supervisor_done", END)

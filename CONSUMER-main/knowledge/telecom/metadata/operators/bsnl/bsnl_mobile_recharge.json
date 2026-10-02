@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "BSNL",
+  "title": "BSNL Mobile Services",
+  "category": "mobile_plans",
+  "source_url": "https://bsnl.co.in/mobile/recharge",
+  "final_url": "https://bsnl.co.in/mobile/recharge",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 1092,
+  "stored_path": "knowledge/telecom/operators/bsnl/bsnl_mobile_recharge.txt",
+  "sha256": "3ec18a99ba451b117eee46a71c55441bece6ffad8d939eddaaf0d28834c11513",
+  "bytes": 1111,
+  "fetched_at": "2026-07-06T14:33:36.224108+00:00"
+}

@@ -1,0 +1,1372 @@
+{
+  "source_repository": "https://github.com/rakeshselvaraj0108/Proxy",
+  "source_commit": "a8ccc5c62cd14875f5cd757df6edfc38b2ed55b2",
+  "recovered_on": "2026-10-02",
+  "note": "Restored upstream snapshot; not a certification of currency or authority. Existing files were not overwritten.",
+  "files": [
+    {
+      "path": "ecommerce/ccpa/ccpa_dark_patterns_guidelines_2023.pdf",
+      "sha256": "57ff1896e0a4d5a135ccea56442bd15b157935af648f54566f0d0509ad1058c5"
+    },
+    {
+      "path": "ecommerce/ccpa/ccpa_overview.txt",
+      "sha256": "28ff2fbc3ed645f1c9ec8e38073b762646693024825d56088730fabfaefdebb7"
+    },
+    {
+      "path": "ecommerce/chunks/ecommerce_chunks.jsonl",
+      "sha256": "d3e516407bc4de7f930014b1317df1eb89c9e88b753c01e2e26731b944e255da"
+    },
+    {
+      "path": "ecommerce/complaint_templates/consumer_court_filing_guide.txt",
+      "sha256": "3d67ea3aef081c7b3cb491f1d4fbaaee06151b2f4cc5b80170efa8690f56ef30"
+    },
+    {
+      "path": "ecommerce/complaint_templates/fake_product_complaint.txt",
+      "sha256": "583026837dc17d49e2bc68a3807d1aaad322748fa5244bae42b4e88014f15288"
+    },
+    {
+      "path": "ecommerce/complaint_templates/missing_package_complaint.txt",
+      "sha256": "6da440b519d5c79be74574c94dcc2ad603ed53410a14e7808867e342c90502c4"
+    },
+    {
+      "path": "ecommerce/complaint_templates/refund_delay_complaint.txt",
+      "sha256": "d27db9a0a002827306d76cd4fbd8285000693973ff7ce4225f7a0b0348b82b8d"
+    },
+    {
+      "path": "ecommerce/complaint_templates/warranty_claim_template.txt",
+      "sha256": "e9ef666d8ac2bf6c56c35763112a3fb5b4f385a8d7b1d524516ab48f98a956ae"
+    },
+    {
+      "path": "ecommerce/complaint_templates/wrong_product_complaint.txt",
+      "sha256": "87e4f7b8b00ed0c0dee45b47bdcad78cb1fc5b80e502f45f3fff0dca21b6493e"
+    },
+    {
+      "path": "ecommerce/consumer_protection/consumer_court_overview.txt",
+      "sha256": "15a4d4d79234db82c1d91b80eebbc39c306ed5750aadd57d1f1c6fff86050e6f"
+    },
+    {
+      "path": "ecommerce/consumer_protection/consumer_protection_act_1986.txt",
+      "sha256": "69dc8b9def157c2d57e14b5ba9bd2660f4ef1c5c1232e0b76f98fc3a42c0d313"
+    },
+    {
+      "path": "ecommerce/consumer_protection/consumer_protection_act_2019.txt",
+      "sha256": "ebc8c1ab73f4e6f76ad6be1fc6c367efb5df2d5a206483d9010dee3e992d8712"
+    },
+    {
+      "path": "ecommerce/consumer_protection/consumer_protection_act_2019_full_text.pdf",
+      "sha256": "17d66bb56a7ccd04f7e6a28b1cc5200fa32c78a9cdf6d65d3583e47f3a3d5816"
+    },
+    {
+      "path": "ecommerce/consumer_protection/ncdrc_overview.txt",
+      "sha256": "fc9e3a59479ba5ff305c9069b1363891675f2e04491689711a9b1e9590d44a22"
+    },
+    {
+      "path": "ecommerce/courier/bluedart_overview.txt",
+      "sha256": "39f42e6d128b46a85807298766997f44425d41e4bcbd36f6ac6a09fc1ef2b4e3"
+    },
+    {
+      "path": "ecommerce/courier/delhivery_overview.txt",
+      "sha256": "cf73c47fbadab90d6252aef3bc33ad2a45d0424d5147a40b625e64dd2f923244"
+    },
+    {
+      "path": "ecommerce/courier/dtdc_overview.txt",
+      "sha256": "0d871d3ebd54aa74f16d3235c5a473c74379778c20523c4ba19e0502f87b8ae1"
+    },
+    {
+      "path": "ecommerce/courier/india_post_overview.txt",
+      "sha256": "62d67e500b53e1a7a2fd391181246b44ad5896c0607783ecc9c340eba32dbc2e"
+    },
+    {
+      "path": "ecommerce/ecommerce_corpus_manifest.json",
+      "sha256": "236950db3ef7bfaac64ba41e9bddbbdbe0b57bd7e11d50163976e734b4cf8b60"
+    },
+    {
+      "path": "ecommerce/ecommerce_extra_official_download_report.json",
+      "sha256": "c3c768c3b15eb287addb0c0af43ae5e6d24d5db364cb4c8f487d1bdf0c116dcb"
+    },
+    {
+      "path": "ecommerce/ecommerce_official_download_report.json",
+      "sha256": "cef720e4faf21158785df6651c92d2da505f8752ca40065f1d634e52834ea285"
+    },
+    {
+      "path": "ecommerce/ecommerce_source_quality_report.json",
+      "sha256": "730703338ee0eeb8c51f39b4f695d45b0dc04d5c64f7e86ea31889a6449c0502"
+    },
+    {
+      "path": "ecommerce/faqs/national_consumer_helpline.txt",
+      "sha256": "f6333e410c3e08f52da678c87de040d6e6ac58257d18ddd8d97fd91496c52b78"
+    },
+    {
+      "path": "ecommerce/knowledge_graph/ecommerce_entities.jsonl",
+      "sha256": "0f27c18ef89fc2abffc08922088eb426e8b125fe79c256ca2a0a399c76a8b488"
+    },
+    {
+      "path": "ecommerce/knowledge_graph/ecommerce_relationships.jsonl",
+      "sha256": "1e17164d9ba71485a0cb5413b5c68f841b7015d717fb0d93579a6b018477ada3"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_a_to_z_guarantee.txt",
+      "sha256": "124965b2ea4b9ffb3b9e741a0bcecfff846b11c04e0852e63139ba8606b6f121"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_a_to_z_official.txt",
+      "sha256": "bccc259c63f0e5ba31414ffc70deb9e0c6171598cd6e205797a80121544b20f3"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_conditions_official.txt",
+      "sha256": "4027ca963bd43b589f7790d8ee368a2cd023bc06812724e1dc687a5c7c92ce35"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_grievance_redressal.txt",
+      "sha256": "ca294040ea45511cd8a3e0d67a9c7ae90d354d01eaf579a4b31d619b3ec3e071"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_overview.txt",
+      "sha256": "39c97b7e7affe0a3fa4d26182a8d7fdb6c1d219ac76b37af2858e19294eefa97"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_refunds.txt",
+      "sha256": "e3f11b81b8e280c4f3e516369c3dafbb79de7e7b7ca41d6cb8b809851c82e9c2"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_refunds_official.txt",
+      "sha256": "c492ae82eff2ac1d49886428bef6f0185598e9eb3e1e3bbe2003f76f85062455"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_returns.txt",
+      "sha256": "e3f11b81b8e280c4f3e516369c3dafbb79de7e7b7ca41d6cb8b809851c82e9c2"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_returns_official.txt",
+      "sha256": "c492ae82eff2ac1d49886428bef6f0185598e9eb3e1e3bbe2003f76f85062455"
+    },
+    {
+      "path": "ecommerce/marketplaces/amazon/amazon_shipping.txt",
+      "sha256": "e3f11b81b8e280c4f3e516369c3dafbb79de7e7b7ca41d6cb8b809851c82e9c2"
+    },
+    {
+      "path": "ecommerce/marketplaces/bigbasket/bigbasket_overview.txt",
+      "sha256": "50180b17c512ee6ad8d09f7ff3c48cb1adf11b48fa8fdd50ca439fdb0d555eb1"
+    },
+    {
+      "path": "ecommerce/marketplaces/bigbasket/bigbasket_terms.txt",
+      "sha256": "267cd1e56fd8bf06d2c6b7b475f9551ece8a791cb6a9c180ab07ccde51b958bd"
+    },
+    {
+      "path": "ecommerce/marketplaces/bigbasket/bigbasket_terms_official.txt",
+      "sha256": "1c90e713bd18c46c4acb236f96cae45b70d35194cd22057d305d14b9d768d6a9"
+    },
+    {
+      "path": "ecommerce/marketplaces/blinkit/blinkit_overview.txt",
+      "sha256": "dcbe3ccf8490093218694492253d5882aaafc65bdf18f8d0a1a4252e1bd9ff29"
+    },
+    {
+      "path": "ecommerce/marketplaces/blinkit/blinkit_terms.txt",
+      "sha256": "2e4df5003253a9fc07ab07f3b9ab0047277ff3b499e6b4b6b178c8eecf5f2107"
+    },
+    {
+      "path": "ecommerce/marketplaces/blinkit/blinkit_terms_official.txt",
+      "sha256": "1201c23ef6e0ab59430923bd3778625d37f1d40f998e2724d18df6f6392e6890"
+    },
+    {
+      "path": "ecommerce/marketplaces/flipkart/flipkart_overview.txt",
+      "sha256": "e7fbb6632512c290bc016c41a52f56006d46cb793d9f14473aa111bdf3f8e620"
+    },
+    {
+      "path": "ecommerce/marketplaces/flipkart/flipkart_return_policy_official.txt",
+      "sha256": "51b421aa2cfb23c45266994715fba4a5f82ecf9226e2f4392fb2cb50e8eb8235"
+    },
+    {
+      "path": "ecommerce/marketplaces/flipkart/flipkart_returns.txt",
+      "sha256": "359afaa9df55dc02c9191858a1828222a7b4c49e14e14d29d373feea19c0d53e"
+    },
+    {
+      "path": "ecommerce/marketplaces/flipkart/flipkart_terms_official.txt",
+      "sha256": "86b2fa06cdbe91c590b4a4b4e236586c8ea85902507439e43ee4df0df579f207"
+    },
+    {
+      "path": "ecommerce/marketplaces/jiomart/jiomart_overview.txt",
+      "sha256": "108acf72ba09e67714d1b62b12a859ad7b9d33b99216047bf9d2896241449fc4"
+    },
+    {
+      "path": "ecommerce/marketplaces/meesho/meesho_overview.txt",
+      "sha256": "b34d4f51922260f139a8cae38fed335d9ef711b4965c7afdd675fc9abe01fc7b"
+    },
+    {
+      "path": "ecommerce/marketplaces/myntra/myntra_faq_official.txt",
+      "sha256": "0cf3d645579877d42a33b6839ec56817a6d30a3e1093bcc54dd6e45f3f75a7ee"
+    },
+    {
+      "path": "ecommerce/marketplaces/myntra/myntra_overview.txt",
+      "sha256": "7d8951f6ef1dad76e208ff3d70a56fd09703082ef296e7029a4ec65e41fa68dc"
+    },
+    {
+      "path": "ecommerce/marketplaces/myntra/myntra_terms_official.txt",
+      "sha256": "40c29b695e88b8ab4c3eaf8e482bf92a36d4fba09a73f5c6f2ceb8f1a8f39bdf"
+    },
+    {
+      "path": "ecommerce/marketplaces/swiggy_instamart/swiggy_overview.txt",
+      "sha256": "cc43a33b015b1a311f4c2a6b46f90400d79e52aae501cf8ce90b273286a99c30"
+    },
+    {
+      "path": "ecommerce/marketplaces/zepto/zepto_overview.txt",
+      "sha256": "81d948f71e3f715bdcf98981a4ba2756bea03524359f4c2de655857bc9209308"
+    },
+    {
+      "path": "ecommerce/metadata/ccpa/ccpa_dark_patterns_guidelines_2023.json",
+      "sha256": "2d8362884bcc0ac8ec86739cbe23e503435904a173e4b937db89f79a139cfb01"
+    },
+    {
+      "path": "ecommerce/metadata/ccpa/ccpa_overview.json",
+      "sha256": "f05791bfb1ac97c65dd1f7630e07e776df0094d9c97a8781909a9a2fdede0239"
+    },
+    {
+      "path": "ecommerce/metadata/consumer_protection/consumer_court_overview.json",
+      "sha256": "c590f5c391f7d843f276fe4ff565dd39854b07c280790d588d438bb9e14d0f85"
+    },
+    {
+      "path": "ecommerce/metadata/consumer_protection/consumer_protection_act_1986.json",
+      "sha256": "84aa5e163b86534bf03845eb80fe2cb966c1b9a23f23ea10e5f062c463876d26"
+    },
+    {
+      "path": "ecommerce/metadata/consumer_protection/consumer_protection_act_2019.json",
+      "sha256": "5aee3b21af31a91f77eec66bf9d47b991b92c46b7cf9cac7b7828317b766ed76"
+    },
+    {
+      "path": "ecommerce/metadata/consumer_protection/consumer_protection_act_2019_full_text.json",
+      "sha256": "e56c60fe062a2472b86836dcd4339e0b7d11fb878a75b6335a01548c37323c76"
+    },
+    {
+      "path": "ecommerce/metadata/consumer_protection/ncdrc_overview.json",
+      "sha256": "8007b9063dab94db88dd9e0a880fcd73dc1410bc95c830c1913b51a5511cc6db"
+    },
+    {
+      "path": "ecommerce/metadata/courier/bluedart_overview.json",
+      "sha256": "df99ed1c6a881bfe4bb1b7e76f495ea50d288b20f9f261fe56802760301b5efe"
+    },
+    {
+      "path": "ecommerce/metadata/courier/delhivery_overview.json",
+      "sha256": "769974e63d89a4f032ac91fa8769a42a1db1ecb57bbee94636e3725ee0bfa08e"
+    },
+    {
+      "path": "ecommerce/metadata/courier/dtdc_overview.json",
+      "sha256": "5ef04f99b8c312d4d4c84031e80588a9cb122a43c9db9457b0b9d2af58d64682"
+    },
+    {
+      "path": "ecommerce/metadata/courier/india_post_overview.json",
+      "sha256": "130761e68f3c2a9221e293f4322451a5fbd3d19a9306bdeccc8e0f1989b46585"
+    },
+    {
+      "path": "ecommerce/metadata/faqs/national_consumer_helpline.json",
+      "sha256": "c1af5e68bb701d0573635559f17eb821e4e4328cfe99074834cb3df7c4e77502"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_a_to_z_guarantee.json",
+      "sha256": "1b6483d8cd0dc5f29c3299a7f09e51947ffa89d8db6066d4ead230055fc632e0"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_a_to_z_official.json",
+      "sha256": "13280a0598f81a7f2413375ebd2f4dd1b8309eedc9ef0ac0f4e09d783c2695d0"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_conditions_official.json",
+      "sha256": "0d900e27c860c3834ad41d2c797fb1d1ec0f505d7fbcf0711f7d963b0da1aba5"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_grievance_redressal.json",
+      "sha256": "39fdadf99d2e9dcb6f6ecfc0e9ecfd174efb927a0797bcbf72c221df6d2d1e08"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_overview.json",
+      "sha256": "d5709930acbcd17f6b78a04e7c80fdbce95150d812e7bb6b3908a8e59e1a453d"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_refunds.json",
+      "sha256": "846ae9024ae89bcfc3991fb6c116f24e74408e3a75c35f57e75ccb972808e019"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_refunds_official.json",
+      "sha256": "3b09da3dc87ca1ac90c5e699b6b5022d79cfa0fe5cb42f4a28940c7ff5262731"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_returns.json",
+      "sha256": "0b4c744ec2c49f79737f021f861b3c1d30f56dd7f75a33ce748b6147cb06a280"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_returns_official.json",
+      "sha256": "d8d58e636b2c77baa1b3bdf3a83cd1cfeaf62ef787ad682274692594229da300"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/amazon/amazon_shipping.json",
+      "sha256": "7262ec4d582fab8bbde02705940fb5ff264e0d22c2b96b89fafb89f333cbe707"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/bigbasket/bigbasket_overview.json",
+      "sha256": "7cb024486ef46ee74e63de238541b8e37d47598b0dfd848ff071d0a508ff8cf8"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/bigbasket/bigbasket_terms.json",
+      "sha256": "d0cd288480c32ad1b2d590f345fea3bb1457a5567755036c4dd3bf6770e88901"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/bigbasket/bigbasket_terms_official.json",
+      "sha256": "9cc8b0033aea0c460821f1179fea72d525681a2937b5d48d55dce6ae287cda08"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/blinkit/blinkit_overview.json",
+      "sha256": "34f3a1656a49f7e9e982155557b14b0026e10cc6d7adb84034a655fc788a505c"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/blinkit/blinkit_terms.json",
+      "sha256": "d980cf8b4b026a2c39d98e3c91e41fab52bc74acc9390c173984bd52129824c9"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/blinkit/blinkit_terms_official.json",
+      "sha256": "586320b236cb8277175e6f7322da49c102db892eaab783dd7a60416d92bbe913"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/flipkart/flipkart_overview.json",
+      "sha256": "6a9b49c0e83fbef37bdc9e5ee2c534a05582be023bb2616a30b01e42bb23f215"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/flipkart/flipkart_return_policy_official.json",
+      "sha256": "25054298a9c65e3452a026c9f1c4a440f8f940ac50435d26ed82b804909917b5"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/flipkart/flipkart_returns.json",
+      "sha256": "85505ac89f240d9a06d7f87337c33349ea62b5fcd34de368bc4e0b7f0e3d8cae"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/flipkart/flipkart_terms_official.json",
+      "sha256": "41f947812ebc688a4cf1bc483b4c22fc43fe214fdb727c9f386ad77ab733e42b"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/jiomart/jiomart_overview.json",
+      "sha256": "5adcbfdbed710c0169cc66b0fa95695d64bfbc200a625e5e9a0525675c49720f"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/meesho/meesho_overview.json",
+      "sha256": "b21b0f0348ac515d546ee29304df9c1f1458de5c4cfacbbe261426a0a32d945d"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/myntra/myntra_faq_official.json",
+      "sha256": "0b8b573003b044453cb66a73f8546c5d8ab517e6cbab35b90362ad0676ec534c"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/myntra/myntra_overview.json",
+      "sha256": "1af331dfe70cfd1f5475bd93293de44c218d27c67f0acced08521675a8d6dfd4"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/myntra/myntra_terms_official.json",
+      "sha256": "abfd16f2f7b02fea15b79620a56cb285f43efee1f280c405d7cd2ae8a7662d45"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/swiggy_instamart/swiggy_overview.json",
+      "sha256": "d12e326e6d75cc624ac6962f6ec964079dd641616a93809a8c10ad5e6b5c3760"
+    },
+    {
+      "path": "ecommerce/metadata/marketplaces/zepto/zepto_overview.json",
+      "sha256": "34557ecae08bc7be2d0533bc1c061f8c7093142c259ba5346b0fd476986f48c2"
+    },
+    {
+      "path": "ecommerce/metadata/official/courier/india_post_home.json",
+      "sha256": "db8d2ede85cc0e645686e6c6ec294329b3fcf48e3b17544aab4dee584be8da28"
+    },
+    {
+      "path": "ecommerce/metadata/official/india_code/consumer_protection_act_2019_india_code.json",
+      "sha256": "550adec4c92f058818663d6cb398e0a133696773db07c53788d0b47cc6c57cff"
+    },
+    {
+      "path": "ecommerce/metadata/official/ncdrc/ncdrc_history.json",
+      "sha256": "8c0025751ed859d6243d7f043082bb17bf833876771d4bda0956402235de31c0"
+    },
+    {
+      "path": "ecommerce/metadata/official/ncdrc/ncdrc_home.json",
+      "sha256": "6c3ff3172b358294b9301441df1c79acb263d33bb69eae26280431c9e504ef7c"
+    },
+    {
+      "path": "ecommerce/metadata/official/nch/nch_about.json",
+      "sha256": "dce39d1e4963900cd4c0afb0caf37d8761f0cc50e46caa9c97560279970d9af8"
+    },
+    {
+      "path": "ecommerce/metadata/official/nch/nch_contact.json",
+      "sha256": "d13e236ae9a71cd52d63b4ce144f4015a37a629685ddeba6241823246794499a"
+    },
+    {
+      "path": "ecommerce/metadata/official/nch/nch_home.json",
+      "sha256": "2c16f445fff3f06f3d1a3713961b03faa87709456750a5c0f10cf0ef49bc46ec"
+    },
+    {
+      "path": "ecommerce/metadata/official/nch/nch_knowledge_base.json",
+      "sha256": "bf0ade64fbf87c2b0158f86074874aa8776ea652c4b3cb7a34409b08fed32ecf"
+    },
+    {
+      "path": "ecommerce/metadata/official/nch/nch_privacy_policy.json",
+      "sha256": "c23b148cff165ce20d8f940a3589ef931b0a5403da06dcd9ed28a86630ce664a"
+    },
+    {
+      "path": "ecommerce/metadata/official/standards/bis_home.json",
+      "sha256": "f1a4d9b6f233dce35ba6b3b1ec7921c022b0c76e609b34042caea2247dc4b3a6"
+    },
+    {
+      "path": "ecommerce/metadata/ondc/ondc_learn_about.json",
+      "sha256": "048302848ecda67d7d171ef5f3b7683f87c60336ea01bff6697b5171225cbaca"
+    },
+    {
+      "path": "ecommerce/metadata/ondc/ondc_official_home.json",
+      "sha256": "9be62fbe8317b4e49f145485cafe6a9e4ee9c8b0142647b61cab4324a299e39b"
+    },
+    {
+      "path": "ecommerce/metadata/ondc/ondc_overview.json",
+      "sha256": "2158c0e3f38b965714937d1bfd21b8b15970aa79bfb5fd4f5cfba0fbbb0778f2"
+    },
+    {
+      "path": "ecommerce/metadata/payment/chargeback_rules.json",
+      "sha256": "d8d0fd697fcc56f26759cfdf56ee6a27065726e28bcb1626cae6070620c5cffa"
+    },
+    {
+      "path": "ecommerce/metadata/payment/digital_wallet_overview.json",
+      "sha256": "5c0406e88821dfbed211ec2ad37604ba294ed280966e6cecb9f7f703b71ca4fa"
+    },
+    {
+      "path": "ecommerce/metadata/payment/npci_overview.json",
+      "sha256": "c93d80edd3932151269f1bd2ebdb795c223db67a890d089341fef09c2947f3aa"
+    },
+    {
+      "path": "ecommerce/metadata/payment/upi_overview.json",
+      "sha256": "727e6e03522e8c8f5e23ce35df4da6b4a16c07f94186c10c11241b0d4424e2c8"
+    },
+    {
+      "path": "ecommerce/metadata/refunds/refund_law_overview.json",
+      "sha256": "aa094d821276f807463dde101f1d1d65b725b0aada17848e86632dc064e6d11e"
+    },
+    {
+      "path": "ecommerce/metadata/regulations/dpdp_act_2023.json",
+      "sha256": "f1b470e13a1c50964dbb9fe98afa56dc2065101fe5989788628b0d9c3907fab3"
+    },
+    {
+      "path": "ecommerce/metadata/regulations/dpiit_overview.json",
+      "sha256": "809963ead607cc112a054efbf1d18c41a7390375082e6b075e42eadc7f8302db"
+    },
+    {
+      "path": "ecommerce/metadata/regulations/ecommerce_india_overview.json",
+      "sha256": "08630e7580a421ad9a8b475c0fd7431033ebf460333a5eedf444daf83f92ca7e"
+    },
+    {
+      "path": "ecommerce/metadata/regulations/ecommerce_rules_2020_full_text.json",
+      "sha256": "56cdc9f434a265282075b69fad05b76f2c67bf2935fab4653771518674089312"
+    },
+    {
+      "path": "ecommerce/metadata/regulations/it_act_2000.json",
+      "sha256": "e68d4a53899eab93a71ff5bb5bd428918762d1c529118c0a70ca1d1a9841f5d8"
+    },
+    {
+      "path": "ecommerce/metadata/regulations/legal_metrology_packaged_commodities_rules_2011.json",
+      "sha256": "5d655cf43b1f5dc99f29df130f14c7368cebb1511d432f0a24b5aa42d28f6ad7"
+    },
+    {
+      "path": "ecommerce/metadata/regulations/product_liability.json",
+      "sha256": "7b1c86b2eb7d207ff56c9d5f8dff85640ddd20e0cbca76b712a0908f9f1dcfb4"
+    },
+    {
+      "path": "ecommerce/metadata/returns/lemon_law.json",
+      "sha256": "162f0e16ab706eb78191e9917b54fc7a6c8c4f6d1027b9b6c17d3d52f3629a99"
+    },
+    {
+      "path": "ecommerce/metadata/seller_policies/counterfeit_goods.json",
+      "sha256": "47c274121ac1a7cc6f4c48e77b4b74c7ceaed8e5ce52c7b34978c9eca9b65cac"
+    },
+    {
+      "path": "ecommerce/metadata/warranty/warranty_law_overview.json",
+      "sha256": "7c3c6fe494164883176138633fe6044728ce77ccdd0c7f06f8d7c6ffbd5c3a88"
+    },
+    {
+      "path": "ecommerce/official/courier/india_post_home.txt",
+      "sha256": "5c501e2b44dfeb84b2073363b888e27186bf6acf388d26af313c2269ffdf6ae4"
+    },
+    {
+      "path": "ecommerce/official/india_code/consumer_protection_act_2019_india_code.txt",
+      "sha256": "bb96f9136330fd799982bd3019951be36e8a0b1ea9e9c2baceaac71dddf02bd3"
+    },
+    {
+      "path": "ecommerce/official/ncdrc/ncdrc_history.txt",
+      "sha256": "0bb3fa853aea4257d36a04406bef77ad6ea0c3567ebc57355f6baec737e7fe51"
+    },
+    {
+      "path": "ecommerce/official/ncdrc/ncdrc_home.txt",
+      "sha256": "e6161729e3d4ba62759eff261ec5020be9f96ee2f33cf3d34317de5c85f70238"
+    },
+    {
+      "path": "ecommerce/official/nch/nch_about.txt",
+      "sha256": "dc6bdd765426374c7d301da1b381fc6f83b80c683823d51f900b09fd0a7b6705"
+    },
+    {
+      "path": "ecommerce/official/nch/nch_contact.txt",
+      "sha256": "02983db3c01065db4211784eb5f334a61f67b44498d03f01cb417e879a3f7c15"
+    },
+    {
+      "path": "ecommerce/official/nch/nch_home.txt",
+      "sha256": "1fa38c7f2918598c82d95bba599880d9fa610fedffa226caea43aacff895bc86"
+    },
+    {
+      "path": "ecommerce/official/nch/nch_knowledge_base.txt",
+      "sha256": "96b18bb5683df332884f35ba5465df9e9c895f4bb298e7ab6cfb683f0acf31b9"
+    },
+    {
+      "path": "ecommerce/official/nch/nch_privacy_policy.txt",
+      "sha256": "686622a459ef3835f3831426160cbb2236336f0e10d22472a875222b5d5ac583"
+    },
+    {
+      "path": "ecommerce/official/standards/bis_home.txt",
+      "sha256": "471d85660efd1fb6d5e718a8595fcb17916213b66e502dc09888c0f6205e2b58"
+    },
+    {
+      "path": "ecommerce/ondc/ondc_learn_about.txt",
+      "sha256": "1120ee3cf7fe8476aa4ecfa508dbe33e71e2e537dec8733cba4c93790985beea"
+    },
+    {
+      "path": "ecommerce/ondc/ondc_official_home.txt",
+      "sha256": "80adb72b64a4b5601908ff3523afdbfafe33bcae1a99e344e2d72ce003da84dc"
+    },
+    {
+      "path": "ecommerce/ondc/ondc_overview.txt",
+      "sha256": "5fe41facfaccc5350f05351404df7f631c7c0344294b06e4f22871427083a2a5"
+    },
+    {
+      "path": "ecommerce/payment/chargeback_rules.txt",
+      "sha256": "e6b780535de23b949ff0e25fa10530e4a8945fafc8d1b11fc54b968484d0bec0"
+    },
+    {
+      "path": "ecommerce/payment/digital_wallet_overview.txt",
+      "sha256": "0cb9dcba48058f043a697f2cf1f1ec553d9089d7877e3519014240144a1b26af"
+    },
+    {
+      "path": "ecommerce/payment/npci_overview.txt",
+      "sha256": "51dec2d0b596f55a21420eeedd6f313cb82ddbdffe9a35adeb2c53adbec6c2d4"
+    },
+    {
+      "path": "ecommerce/payment/upi_overview.txt",
+      "sha256": "122d19ffd8d681e94789df96506d8aef0faf03426d4e27c4e60442a4a50300d7"
+    },
+    {
+      "path": "ecommerce/refunds/refund_law_overview.txt",
+      "sha256": "c00a896cf0f1f0c433a2693fd2385c07a9d118aceffd750d75c0dde22d084572"
+    },
+    {
+      "path": "ecommerce/regulations/dpdp_act_2023.txt",
+      "sha256": "b10174ef99f0a16d38d5543568251a366f1cc5656bc140199498ea2b6dcb516e"
+    },
+    {
+      "path": "ecommerce/regulations/dpiit_overview.txt",
+      "sha256": "29e494e8a58c08504e261f203b8a2cad3e88fc2ec2c7138b1c4130d1795f8283"
+    },
+    {
+      "path": "ecommerce/regulations/ecommerce_india_overview.txt",
+      "sha256": "8aefdaa10ac0f6bb5cea7dca6ee7b725f656083c4c25b780d8211e1a6e096123"
+    },
+    {
+      "path": "ecommerce/regulations/ecommerce_rules_2020_full_text.pdf",
+      "sha256": "7fa4541a77d979e9d3cc6e9bc3e95f07958700bc5005315531e420a4ff356687"
+    },
+    {
+      "path": "ecommerce/regulations/it_act_2000.txt",
+      "sha256": "12b5829af16c188d473948dec47723d7bbfc2d25feaa8426b88158f9f2c45954"
+    },
+    {
+      "path": "ecommerce/regulations/legal_metrology_packaged_commodities_rules_2011.pdf",
+      "sha256": "3ab0040e56741ecd307ff3d88781336d867031d16662aa7358440b818adb63bd"
+    },
+    {
+      "path": "ecommerce/regulations/product_liability.txt",
+      "sha256": "05d0d2a85ed101f8443c5a85e07ce96b2e94de8c7a1f49b00a2ca0e0b2fdcdf3"
+    },
+    {
+      "path": "ecommerce/returns/lemon_law.txt",
+      "sha256": "39b93b319f426fa7a90227486d899ace6c6cdf71b234bc98f6704b341dba5287"
+    },
+    {
+      "path": "ecommerce/seller_policies/counterfeit_goods.txt",
+      "sha256": "5f5334050ce9bd74dc6d88ef588796474df2f644711f871489bb0a79abfdf966"
+    },
+    {
+      "path": "ecommerce/synthetic_cases/case_fake_branded_product.txt",
+      "sha256": "178822fd053ff8b68ade7b20bf0027b3c29fcc35c89156852dac4427583fe69b"
+    },
+    {
+      "path": "ecommerce/synthetic_cases/case_missing_blinkit.txt",
+      "sha256": "6262a8026fa978d722903b1071c24d3bf6c019441a57dfaa675fc4bc456a9587"
+    },
+    {
+      "path": "ecommerce/synthetic_cases/case_refund_30_days_pending.txt",
+      "sha256": "6fb0eb33c28402089ab03f6af92757022f3f692254b71b594a55956e87a6f595"
+    },
+    {
+      "path": "ecommerce/synthetic_cases/case_warranty_refused.txt",
+      "sha256": "5e2c66dd006221a25114a325ef90bb270d3206ffee8379e3922f688f2feb314d"
+    },
+    {
+      "path": "ecommerce/synthetic_cases/case_wrong_product.txt",
+      "sha256": "5e828230bb7c1f7cef2fed481f7f91b68ea1b7aed18bce193e4e76bcd505897f"
+    },
+    {
+      "path": "ecommerce/warranty/warranty_law_overview.txt",
+      "sha256": "1526f8038b4f756d905ce366c33430626cbb386e74d8fc3e817ae249df17f03c"
+    },
+    {
+      "path": "health_insurance/insurers/insurer_registry.json",
+      "sha256": "7b68a3e6165a590221f64fe2df121207bd371b4e3be74e2e7d5f5b8005cbd5cf"
+    },
+    {
+      "path": "health_insurance/official_sources/source_registry.json",
+      "sha256": "2e17783b457143a3e10c29e3044d1eff63d2b533ac7ad34ae9b08fa914132e12"
+    },
+    {
+      "path": "telecom/chunks/telecom_chunks.jsonl",
+      "sha256": "4e127181840980023182d23390c0b1593a7beea8d0a50329423d0a91e3d65967"
+    },
+    {
+      "path": "telecom/complaints/national_consumer_helpline.txt",
+      "sha256": "b39143cd2e0ad3ee8d12c3ce01c7abb293c26674e860c2665b204ac2398da0d0"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal.txt",
+      "sha256": "df16b0e6e0445fd7a6ffa46eb6c4b396b17c9e38c0e79ed0f8d8c24efe994656"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal_01_download_66_64_kb.pdf",
+      "sha256": "b80a1621a22f22a516e07a6b0dcfeabecc5fbae78565c08d8a9e470ce1cee8ce"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal_02_download_17_79_kb.pdf",
+      "sha256": "8df92e160d343c62442cd72247a8d27af1e8edd391a19aa79553a49b58871575"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal_03_download_98_22_kb.pdf",
+      "sha256": "65f95ccfb099b34ad78d0a3c4efb66e9c29786deadc68942b92736aabdf4285d"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal_04_download_18_12_mb.pdf",
+      "sha256": "3acbc938518dd493881075894a8e8b46e30073c5d3d2f5f063466f02d9f35116"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal_05_download_18_12_mb.pdf",
+      "sha256": "3acbc938518dd493881075894a8e8b46e30073c5d3d2f5f063466f02d9f35116"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal_06_download_127_66_kb.pdf",
+      "sha256": "0f808271b04825dde13e11cbd2706bfeaf8fcd0a07d45a779e35294bcba2ba7e"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal_07_download_250_74_kb.pdf",
+      "sha256": "3045160ce2c229623777c1f272ba07fbd9cad2adef4b52364e3913fe74c2686b"
+    },
+    {
+      "path": "telecom/complaints/trai_complaint_redressal_08_download_249_11_kb.pdf",
+      "sha256": "9686d132f730908e57605e9b99699cb519cc796b0ec235577d983741562ce750"
+    },
+    {
+      "path": "telecom/customer_rights/consumer_protection_act_2019.txt",
+      "sha256": "ebc8c1ab73f4e6f76ad6be1fc6c367efb5df2d5a206483d9010dee3e992d8712"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection.txt",
+      "sha256": "52ea932f3f30ed43c21c5e53f2706af0bc11999381b885d0aad64853c3d56c3f"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection_01_download_48_78_kb.pdf",
+      "sha256": "8928ca8d7921558668967a8021934623cb2efb679ef4d78868cdd66d62fb47b0"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection_02_download_198_67_kb.pdf",
+      "sha256": "85558efeb29cff906409f0fa87398c7db46726191ed01e085d6094bc2579141e"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection_03_download_387_71_kb.pdf",
+      "sha256": "94c985d771333f974d7d25f079d26162fe8f5dd2dbc020e36f631252e9f3f922"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection_04_download_3_61_mb.pdf",
+      "sha256": "043615de1994da41d24f353e124779beeff6c9f0512b9599a0e15169ebee4308"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection_05_download_3_56_mb.pdf",
+      "sha256": "cebb750857c0a7d8cc4bd7c6c286817eee5690308cf59114fc22d5053ac1027f"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection_06_download_1_2_mb.pdf",
+      "sha256": "03cb932186c7cd5d4a2275183ad855d85907b314ff946c4cff69ac8448b54edb"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection_07_download_227_74_kb.pdf",
+      "sha256": "22dfaf4128a3138819cd4c03d043556f9c63bf8838220649ac04e81ca0fa4c3d"
+    },
+    {
+      "path": "telecom/customer_rights/trai_consumer_protection_08_download_273_99_kb.pdf",
+      "sha256": "822b90ea97af67447c0773d4b6a67eaf8c54d11d051a547ecbaee30b903120e1"
+    },
+    {
+      "path": "telecom/dot/dot_overview.txt",
+      "sha256": "b127883e6d150ca668bd076feef7e60cc50e0ced08f49fc20a3f7d9d6cf88bd9"
+    },
+    {
+      "path": "telecom/faqs/trai_telecom_faq.txt",
+      "sha256": "0edb49c21eeda25ffea07366b7bc344640e9b3d73c6ce512dbe998d62b396974"
+    },
+    {
+      "path": "telecom/knowledge_graph/telecom_entities.jsonl",
+      "sha256": "c6354fe64f0693985fcde85f88a549fdf9e9d8fabc91898a5503ccbae47c5977"
+    },
+    {
+      "path": "telecom/knowledge_graph/telecom_relationships.jsonl",
+      "sha256": "669bfd8af9fa912c6a85d78f3ec3bd9c144e19a61871b479edd9eaa286fadc82"
+    },
+    {
+      "path": "telecom/metadata/complaints/national_consumer_helpline.json",
+      "sha256": "62bf647f5bef29e64860581cb5e80b054d9b6ce1847fd3016da280fb6b46045c"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal.json",
+      "sha256": "e412765d77dad4b0cd95b74fa4d3f356bc0af8fe54a997adfc1bb94db481868e"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal_01_download_66_64_kb.json",
+      "sha256": "9a828fa0a298894fa5eb0de109fc1866a698b0498e87b20173838702eccac3dd"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal_02_download_17_79_kb.json",
+      "sha256": "e804643fb5ca491e5db7390a23a7bf53b2845a4a3ceded7db75def2372c83f7a"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal_03_download_98_22_kb.json",
+      "sha256": "0cdad21b0754a5788a475136376440b93c4175ff2ab1c656012208bcfb84d203"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal_04_download_18_12_mb.json",
+      "sha256": "40239e332bb573676c9d3a2e21056ca7107f3649e0fce5b373bb442c162d49f6"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal_05_download_18_12_mb.json",
+      "sha256": "f19278cb0c3eb48d2217da202efe57e38605a1a640c46c51195bba5696301912"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal_06_download_127_66_kb.json",
+      "sha256": "ff1af826fd9c8e8d806227ecec1bdf957ffb4a87fee98f870101d73c51984f9d"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal_07_download_250_74_kb.json",
+      "sha256": "37df04eccd17c4ea7fe530513a0368aaa596ac4842efc865a6a025b26c4ad86b"
+    },
+    {
+      "path": "telecom/metadata/complaints/trai_complaint_redressal_08_download_249_11_kb.json",
+      "sha256": "42688ac43e760558d6c9ba2bf0e74f3353652e678f59d1e2699b722b5c0ed16b"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/consumer_protection_act_2019.json",
+      "sha256": "d4cea43babac16a26c15e6cdf995ea35a3f0d28c7ebd3288c8a1e40a563046e8"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection.json",
+      "sha256": "9c5dddc4f6facf5971d27a20da68246339e954858aac2c4d91cf2320b55c168b"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection_01_download_48_78_kb.json",
+      "sha256": "48dfcab31cbacc5243d5fdf22da6310c2c9f626684a96f9f018c475c647a0840"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection_02_download_198_67_kb.json",
+      "sha256": "abbc7305d5782901edd6a73fc984333ea78f919bdcb48f2ffa6eb41af527cfb2"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection_03_download_387_71_kb.json",
+      "sha256": "e6d5c3a7bd6b362052e3480539fe5bea19746bc8700832da55a1e9939996fa0c"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection_04_download_3_61_mb.json",
+      "sha256": "b79ebdec8c706340468e474967d6e0ce24cdc60837a097f57c8023e781cc74ee"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection_05_download_3_56_mb.json",
+      "sha256": "af820f7cf56f1a32d48e1b40e6991bb864d3b463345ffcdf813876e918ff5f37"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection_06_download_1_2_mb.json",
+      "sha256": "865df72cb624dab9e09b53400a3f7ae5037a585e7545e5cd6ca9ce8d0360c51d"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection_07_download_227_74_kb.json",
+      "sha256": "050ff12f1c9faac1f158700293749427c184973c5a9ab26e700ec88d17c5620b"
+    },
+    {
+      "path": "telecom/metadata/customer_rights/trai_consumer_protection_08_download_273_99_kb.json",
+      "sha256": "387b6c4f47f350976cd839e098ccf521748d31d71460e315285b3adc1ff65a1f"
+    },
+    {
+      "path": "telecom/metadata/dot/dot_overview.json",
+      "sha256": "f9f2a58c54e2cbaf008d81a98f58912449222c4744a8ffa02897a66b84faf6cc"
+    },
+    {
+      "path": "telecom/metadata/faqs/trai_telecom_faq.json",
+      "sha256": "c9bc05eb80af5c0cdbc58aa26d5eb04505975b349b717d0fca480dcf3b4fa8e5"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp.json",
+      "sha256": "fd2e8b2e1078255f167c16ef2d969e25b8be146337396352e1a0180c1f74a06f"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_01_download_426_53_kb.json",
+      "sha256": "e010547a140e080d7c7d87730ad05b87c67cf6c9b6e08879487f19df847684e7"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_02_download_282_09_kb.json",
+      "sha256": "319c962ff964195d6f57d6e575f4b01fa621a662d7fca736cc97aa19ae97ea1a"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_03_download_252_88_kb.json",
+      "sha256": "efc814001836f74d7c1f5912dab92cff6ebd42715473078d93ac00ba79bb56ce"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_04_download_814_29_kb.json",
+      "sha256": "7e9418c540959e06a820374edbf42d16ec829ee9e56c0e02ed409aaec8d68715"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_05_download_302_18_kb.json",
+      "sha256": "bd1dd324facb53f537673b36784da32368e8bc54263f92f02ca73627ea538f6b"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_06_download_1_36_mb.json",
+      "sha256": "b5d695e3a968766ef737047dbb3a4fca192134f41f4e8b2d9354340246aad4e2"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_07_download_334_7_kb.json",
+      "sha256": "d7ca75e9c223f35c21ba354171f45caa884724051615bbe7487a532c0f4c774f"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_08_download_33_11_kb.json",
+      "sha256": "352466f9bf3f2de6b08a5cd5277f17b0e572ab4744aea643a379d2c532089535"
+    },
+    {
+      "path": "telecom/metadata/mnp/trai_mnp_regulations_2009_full_text.json",
+      "sha256": "ec5929613bffdee229a0b432e4d17eb1af89724f935973ef1f08312fa6066b73"
+    },
+    {
+      "path": "telecom/metadata/mobile/trai_vas.json",
+      "sha256": "aadfdc4034df0da63c20726d1188990d9f16f18adc970243849038101160f015"
+    },
+    {
+      "path": "telecom/metadata/mobile/trai_vas_01_download_98_2_kb.json",
+      "sha256": "e10d971c59862e9bcad32c18d04c2a55da55f3c49a2af06f17f71aa878c4804f"
+    },
+    {
+      "path": "telecom/metadata/mobile/trai_vas_02_download_28_01_kb.json",
+      "sha256": "525d8bff7eb99db8c13d953b01e3449fa1ba50064fb482f1a42dcfcf319db10a"
+    },
+    {
+      "path": "telecom/metadata/mobile/trai_vas_03_download_2_51_mb.json",
+      "sha256": "2d71834ee0fe531f29d1e9453dbf1ebffbc615d25af9b79f7ac2d0008d7b219d"
+    },
+    {
+      "path": "telecom/metadata/mobile/trai_vas_04_download_65_67_kb.json",
+      "sha256": "f36278db49bbf89b57b367ec670fec5637863567e416fe69f3dd98b5f2ca12cd"
+    },
+    {
+      "path": "telecom/metadata/mobile/trai_vas_05_download_89_32_kb.json",
+      "sha256": "43e8a54eff3ac9db2716b5e0d0a301b4f8757d16aba16ce899eba6fcaf7d993d"
+    },
+    {
+      "path": "telecom/metadata/mobile/trai_vas_06_download_90_1_kb.json",
+      "sha256": "8e03caba4321c38233d5bec12b2be8f0643a5cefc2044b6073fc457473727546"
+    },
+    {
+      "path": "telecom/metadata/operators/airtel/airtel_overview.json",
+      "sha256": "53ba0925ddf7374724d6189b901530fa7681147796a8b9c785b6186c174e8a7d"
+    },
+    {
+      "path": "telecom/metadata/operators/bsnl/bsnl_home_broadband.json",
+      "sha256": "14cb77414553ca9066c37e225d7fd89eb6792b2424b2dce7e69d92fe4c1c14fa"
+    },
+    {
+      "path": "telecom/metadata/operators/bsnl/bsnl_mobile_recharge.json",
+      "sha256": "f771db0294bf8dd4a259482d2c77699b7c72e65381d73bab0c04895e5e6a5660"
+    },
+    {
+      "path": "telecom/metadata/operators/bsnl/bsnl_overview.json",
+      "sha256": "09074fb99bdf19346846c19913075bbf6304b8cf36e6cd8e496839fcb12fc957"
+    },
+    {
+      "path": "telecom/metadata/operators/bsnl/bsnl_sim_mnp.json",
+      "sha256": "a355ae4f5c33209231e1e1a78b85942f09baa7a28ae2533d679ad3078469022e"
+    },
+    {
+      "path": "telecom/metadata/operators/jio/jio_fiber.json",
+      "sha256": "656eaa75de8aec7525c861c8ee385b997753144c922698c7874511ef1bbdd442"
+    },
+    {
+      "path": "telecom/metadata/operators/jio/jio_help.json",
+      "sha256": "db1dbb13768e8cba8f06392fb1eeab320f8e1bf1790fca5c268ed73bd756ce23"
+    },
+    {
+      "path": "telecom/metadata/operators/jio/jio_overview.json",
+      "sha256": "bea065a4adc51cc5862ffc3d6fe1cc0160c7451f0e86a95df2d8ee57fb437bb8"
+    },
+    {
+      "path": "telecom/metadata/operators/jio/jio_prepaid_plans.json",
+      "sha256": "80c6b758902af5de2bf334e60d8668d0433e18c0ee7b5f9387745b449e6b3666"
+    },
+    {
+      "path": "telecom/metadata/operators/jio/jio_terms.json",
+      "sha256": "3b7c931b017da8011f07f20d7b18b8d4abdee74a2a830202176f245309fa5d1e"
+    },
+    {
+      "path": "telecom/metadata/operators/vi/vi_help.json",
+      "sha256": "6a2deff30af3f6b3706b9f752d4ef42522e59becf9cf67aba12a34b1a2b55d27"
+    },
+    {
+      "path": "telecom/metadata/operators/vi/vi_help_01_disaster_management.json",
+      "sha256": "16b09c0a3a769ad6e6fe278b6fc43a1f3328c2edec4b19497f1c09feccded393"
+    },
+    {
+      "path": "telecom/metadata/operators/vi/vi_overview.json",
+      "sha256": "c9952415810f1e3c35bf3a884c1520e180dc8624a15923582453b7b043e6e8ec"
+    },
+    {
+      "path": "telecom/metadata/operators/vi/vi_prepaid_plans.json",
+      "sha256": "b452849d7068a0659874129c8b0ad6d08226c6bc2125558f509ed0c3d524c54a"
+    },
+    {
+      "path": "telecom/metadata/operators/vi/vi_prepaid_plans_01_disaster_management.json",
+      "sha256": "7b98315449a96cc7d49bbbbf593d9f1f08e388da52eaab9541bd630275d94d66"
+    },
+    {
+      "path": "telecom/metadata/operators/vi/vi_terms.json",
+      "sha256": "d11eea3d789665e9819f1855a96542cbd9c57c313df13c4cd62de9338bcde372"
+    },
+    {
+      "path": "telecom/metadata/operators/vi/vi_terms_01_disaster_management.json",
+      "sha256": "f557a022ece7a230f739ed82d1dd8d62e87ee3182168640dbc9b1814c592ef49"
+    },
+    {
+      "path": "telecom/metadata/regulations/tdsat_overview.json",
+      "sha256": "868083d905053353fde5cc44e51a0fffa76ad4ef8c9a4b96485b4839d62ad2a0"
+    },
+    {
+      "path": "telecom/metadata/sanchar_saathi/sanchar_saathi_chakshu.json",
+      "sha256": "18c2dd165a6a24c68c957250fac2710b3bdc3c53c14a7be632eecea700f1cf2a"
+    },
+    {
+      "path": "telecom/metadata/sanchar_saathi/sanchar_saathi_home.json",
+      "sha256": "03c9ebe3c732152c8fa73979e34abf684b15731ddb5f7b2082184cde542864de"
+    },
+    {
+      "path": "telecom/metadata/trai/pib_tcccpr_amendment.json",
+      "sha256": "405772fa65722dbb7f1bd063c1a4bcdc86f211026c3587ba10e7cabcb456414b"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband.json",
+      "sha256": "c448402d035036e3ae393fd75b24c4c031e40195d2d1f35809089c16f352c521"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband_01_download_1_94_mb.json",
+      "sha256": "bdba804cadafed4dcacc5ec273beb7be009317684dd77d01334fd8b91fc99ede"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband_02_download_108_53_kb.json",
+      "sha256": "ce071a3f60224e3dc5674b29ef5af69886e6d036638c98bec4f6c21c82cbbe3e"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband_03_download_1_29_mb.json",
+      "sha256": "424865fae245162c8bc27ece44f3cf30172d6c69c99d69ddfa1e2e25721800ab"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband_04_download_1_51_mb.json",
+      "sha256": "13d2f2ba9bf372db6c53ae838e03150785c8ddd06bd3e888e5ca6a325e44fd05"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband_05_download_779_49_kb.json",
+      "sha256": "d0a1d45ae2721e369750fd79c494b355d82c84f41fae73785e1dc83625b8302c"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband_06_download_264_76_kb.json",
+      "sha256": "0162a41322296e7216a732721450246e73eda87c289001e5397b1a71cf19878a"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband_07_download_1_11_mb.json",
+      "sha256": "704cd1437ecf021545f87b62c920ef6857d6da047bac14f57948325b1dc25afc"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_internet_broadband_08_download_1_62_mb.json",
+      "sha256": "acf8095ed18754b3f3f51e58745d919fff0a8e9521b96ecf92503edcb5f7048a"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_overview.json",
+      "sha256": "78a77d82be2377ac0c55ce3c956277e55b92bc8d3867a8750cdc90a75c1430da"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_preference_registration.json",
+      "sha256": "088ec13eb54a86f07941f54f606417094724f13aaec1be0a1d25dc3c0a653fc5"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos.json",
+      "sha256": "2f1b9a879f2448d3dd4d0bd4b51bda6cf37e355f1c78addb0b236602248c0662"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_01_download_49_89_kb.json",
+      "sha256": "4d96c1297f56b509d6660e9c83fcac4b595e9d6567d6bd18ee445550831653ac"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_02_download_513_68_kb.json",
+      "sha256": "ebf830a9c30732130cbd78dc6ff9dd617550500e28e61a8af76c6a71a7686376"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_03_download_134_03_kb.json",
+      "sha256": "468f26fce805967a0dcf25df8cc671eaaeb70da5ae241196482516770b7c0cb6"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_04_download_45_5_kb.json",
+      "sha256": "5f938156b1c7c5d319fbac9999bbbe47407188d4a759540ce9f20bba8d450201"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_05_download_59_45_kb.json",
+      "sha256": "2929957353c3c0973ffcf43a8d221019a1379ea956f88ff2c7068dccbe7507b3"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_06_download_89_95_kb.json",
+      "sha256": "92e19f27b4c46595371871f9fb3d7c4d11e12e4e7b53894e5b6c2b13ffa773b3"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_07_download_2_54_mb.json",
+      "sha256": "0cade06bf06be07b5d9d39454900e0720f1631606620d02972098b95c7a00551"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_08_download_754_1_kb.json",
+      "sha256": "f16de61e6ec18d9dd07e5a6c199166d070292d208306f0dc2ef8d23e773802ed"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_basic_cellular_2009.json",
+      "sha256": "7da10a634f84b4518f7bea51baf610e86bb2d7a16e3be0c16a8b97e0ce0c7276"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_landing.json",
+      "sha256": "6287fbdcbf552491f3f0c8c6ddd0a412cb825466e9f11bfca6465779d438a73c"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_qos_metering_billing_2023.json",
+      "sha256": "ec5fc112efd64e1d09efdf8b4705e7f98f7900f809a50242c4c82a2ca8b8b3ab"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_regulations_index_2.json",
+      "sha256": "f7f3b401eaeaa259cf5e478456431ebdf8b0fdd507a7442e6e9405c1b0e12f3f"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_tariff_order_amendment_2022.json",
+      "sha256": "b063eb6cf685b24c4016e74f8d0b8cf0d81a6e77ffe6235ca13da42c61f9a5a5"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_tcccpr_2018_full_text.json",
+      "sha256": "726c2263a80b93855fb68a16b952fd19bdc5fdef4bcfdc8a281e12d591c83556"
+    },
+    {
+      "path": "telecom/metadata/trai/trai_tcccpr_page.json",
+      "sha256": "eb945b65c37d7a7c61bf29e05362fbb80e8121f73ec26b7fe9db43f42aed5e5f"
+    },
+    {
+      "path": "telecom/metadata/trai/wiki_dnd_registry.json",
+      "sha256": "edad3ac22f0320a313b4d019866d4a7a7f44e4128046dd6c2a78778dd3e40a5a"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp.txt",
+      "sha256": "2b55a2c3c6055e867c187abfffb1444fcd7f37da8d433e7fbb60acb9fec6f9a0"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_01_download_426_53_kb.pdf",
+      "sha256": "2ebd9d618eab67e00d40dbc3eb71d677ea40d65acc32ea3b8a4778a9e29fa1a1"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_02_download_282_09_kb.pdf",
+      "sha256": "af002f328051e8d5ef8a1b6b83b3e616b66c01336fce61155f15d5c9f3506975"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_03_download_252_88_kb.pdf",
+      "sha256": "953baba69176882959f0dfc37a14ac1a4139c725b7819a996c279849fb9a365f"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_04_download_814_29_kb.pdf",
+      "sha256": "10c11631fb788327644e5f2d34446a90fa06c016549c35c128879ed812540e85"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_05_download_302_18_kb.pdf",
+      "sha256": "a5e2de7b491f00b6a2d611f67641457ff75e29755d5e7de4c5042125259386a6"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_06_download_1_36_mb.pdf",
+      "sha256": "674a0e8ab913ea0f9724a7e41c2ea1d453d98b258a84addecacf4b4816be3bce"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_07_download_334_7_kb.pdf",
+      "sha256": "002080aa98e7400cdf29655bbb95defa67fe859c731367471fcd8a16ce6ac9d4"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_08_download_33_11_kb.pdf",
+      "sha256": "ad2f56bc0d2de2c7f1d7e5075a63590374bd991ecc813be1e71b0a20c63ec10a"
+    },
+    {
+      "path": "telecom/mnp/trai_mnp_regulations_2009_full_text.pdf",
+      "sha256": "a9c17f70498d5fcf24ed56b15125880824fbbf5c4ac37c4bf33f6b26297ef6dd"
+    },
+    {
+      "path": "telecom/mobile/trai_vas.txt",
+      "sha256": "e681fd712a251e8622e035a22b2e1cf1541f67da9363a938192094fc1654701a"
+    },
+    {
+      "path": "telecom/mobile/trai_vas_01_download_98_2_kb.pdf",
+      "sha256": "0ca9d80514919b2de2c19d22316a31d30c96caaf7d56ec99b7c588acb4e72ca3"
+    },
+    {
+      "path": "telecom/mobile/trai_vas_02_download_28_01_kb.pdf",
+      "sha256": "6a8e80a52e0b8fb1b8d46027ef28d3e40f4f25df97e36f3ace6e8b3eabff18ba"
+    },
+    {
+      "path": "telecom/mobile/trai_vas_03_download_2_51_mb.pdf",
+      "sha256": "0b8019fa9a123f28b129e088cd82733f8da1e66eee4d1e1771bb5b7a68fb464b"
+    },
+    {
+      "path": "telecom/mobile/trai_vas_04_download_65_67_kb.pdf",
+      "sha256": "ee3edae8608b1dfcf386196e3a52af22450dc524c33dbfd5fb056331f569f7aa"
+    },
+    {
+      "path": "telecom/mobile/trai_vas_05_download_89_32_kb.pdf",
+      "sha256": "ed93725e261fa28788651a37d1a315bb36116783f0c7e5ff549e205b2c693281"
+    },
+    {
+      "path": "telecom/mobile/trai_vas_06_download_90_1_kb.pdf",
+      "sha256": "3edea84398d08b76894af71cf0428ae0bd279910b3ce4dc1aa68f0df392e7b8f"
+    },
+    {
+      "path": "telecom/operators/airtel/airtel_overview.txt",
+      "sha256": "99296cf7ccbd3e4439097d4ad2fba5fd638adda6d00de6a57ebaf68280513742"
+    },
+    {
+      "path": "telecom/operators/bsnl/bsnl_home_broadband.txt",
+      "sha256": "ac14093aadbe08d7a0cc06d6d261a8dbeb56b1db3550089c8400faafaa2d3da1"
+    },
+    {
+      "path": "telecom/operators/bsnl/bsnl_mobile_recharge.txt",
+      "sha256": "ff3f8437e37617c2066702049abae68b89edf2470b1c0f821aa7d2dfc33c7b8c"
+    },
+    {
+      "path": "telecom/operators/bsnl/bsnl_overview.txt",
+      "sha256": "3f4e913a675a69716e307a2f2110b287b4b20c55115ee158b28759e061a529b0"
+    },
+    {
+      "path": "telecom/operators/bsnl/bsnl_sim_mnp.txt",
+      "sha256": "423dcfd68ef0cb66ab5cb854c785bce78fbd5bc47988fbc9d8e0638cd9e1c92e"
+    },
+    {
+      "path": "telecom/operators/jio/jio_fiber.txt",
+      "sha256": "59cc7c9a7fa2ca01489f8ca00c9aa699d845c31728b4d9424dcc9aff5b3c6e36"
+    },
+    {
+      "path": "telecom/operators/jio/jio_help.txt",
+      "sha256": "e670f55c70abc72b593c94cb9b7c66f855e9dbb7f180cc2f4b533b37c8babac5"
+    },
+    {
+      "path": "telecom/operators/jio/jio_overview.txt",
+      "sha256": "485fd70fde285b266f31f3a46c2d5d1e97d5004934d52c6e348c69b022b43347"
+    },
+    {
+      "path": "telecom/operators/jio/jio_prepaid_plans.txt",
+      "sha256": "59cc7c9a7fa2ca01489f8ca00c9aa699d845c31728b4d9424dcc9aff5b3c6e36"
+    },
+    {
+      "path": "telecom/operators/jio/jio_terms.txt",
+      "sha256": "59cc7c9a7fa2ca01489f8ca00c9aa699d845c31728b4d9424dcc9aff5b3c6e36"
+    },
+    {
+      "path": "telecom/operators/vi/vi_help.txt",
+      "sha256": "5fb520120562a0d22f816524993d660035fd18c7a7dec9cf52648614745d21b1"
+    },
+    {
+      "path": "telecom/operators/vi/vi_help_01_disaster_management.pdf",
+      "sha256": "c5ef44c991081d3a7d34fd0873b05082fa0c4543a28c6fa9de7024ec6b5d23da"
+    },
+    {
+      "path": "telecom/operators/vi/vi_overview.txt",
+      "sha256": "11f7319ed236459a3169b2edd9c5b5bc7796de60d0c32cc5606678546cac206b"
+    },
+    {
+      "path": "telecom/operators/vi/vi_prepaid_plans.txt",
+      "sha256": "f755f922b2bbf71ebda00a168ee5bc4d50839a247c727e376269d52894a6e0f0"
+    },
+    {
+      "path": "telecom/operators/vi/vi_prepaid_plans_01_disaster_management.pdf",
+      "sha256": "c5ef44c991081d3a7d34fd0873b05082fa0c4543a28c6fa9de7024ec6b5d23da"
+    },
+    {
+      "path": "telecom/operators/vi/vi_terms.txt",
+      "sha256": "2d01274bd3e456b49669e46f70b2a24c738117af134766b3572c4e24debc3d90"
+    },
+    {
+      "path": "telecom/operators/vi/vi_terms_01_disaster_management.pdf",
+      "sha256": "c5ef44c991081d3a7d34fd0873b05082fa0c4543a28c6fa9de7024ec6b5d23da"
+    },
+    {
+      "path": "telecom/regulations/tdsat_overview.txt",
+      "sha256": "45df7bed70e7c580b49fcb003f401841eaa669acd6eefb58c930fb0535009bcb"
+    },
+    {
+      "path": "telecom/sanchar_saathi/sanchar_saathi_chakshu.txt",
+      "sha256": "b5b607190537706fc4db191d6274fedfcd32d6f2d9cb55ee018cc660730c4857"
+    },
+    {
+      "path": "telecom/sanchar_saathi/sanchar_saathi_home.txt",
+      "sha256": "a55392a4d0d9ce578520d63b4b76228992312e5a47d216122d9a5be8fb64c1f8"
+    },
+    {
+      "path": "telecom/synthetic_cases/telecom_synthetic_cases.jsonl",
+      "sha256": "c3c18d5514afae6b059602a83dc7e89710e73c2e75d3dc9a79916c0e12d50025"
+    },
+    {
+      "path": "telecom/telecom_corpus_manifest.json",
+      "sha256": "5e82c0b785679112b8aa6d06d7bce57e0b5ef4c8942a723cab3b4c5a999dd234"
+    },
+    {
+      "path": "telecom/telecom_ingestion_report.json",
+      "sha256": "3fb4c11075dc44da98f6096d586a43d3263809a46601873751e356826ec78933"
+    },
+    {
+      "path": "telecom/telecom_source_registry.json",
+      "sha256": "1b3c5efaea130fa0dc12af1d44e619f3a7a01c16f9ef8a5c7eb1d0744511a9cf"
+    },
+    {
+      "path": "telecom/templates/mnp_failure_escalation.md",
+      "sha256": "f38b0fbc5fef13e79b998e5338b74d3d6c126975a297eec5207faf9a3a43a172"
+    },
+    {
+      "path": "telecom/templates/network_quality_complaint.md",
+      "sha256": "19cefd483540eefbbb59a3a4ada178dfd0f3b1d1c05ced3a08702d8d703b81c4"
+    },
+    {
+      "path": "telecom/templates/unauthorized_vas_refund.md",
+      "sha256": "3e78144585b0fa8ac3d47b52ae0cb7dc2728b96e8d6ef6db9486d2473f38d93f"
+    },
+    {
+      "path": "telecom/templates/wrong_bill_appeal.md",
+      "sha256": "297bc92da19a6a0554d71494bb3850c7afe39cfdeb84a54300f8246b15368b5f"
+    },
+    {
+      "path": "telecom/trai/pib_tcccpr_amendment.txt",
+      "sha256": "2b21d7e9426520cbeb630855d823f23fbdc30cdf224b2e73299951fd5b2f12d1"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband.txt",
+      "sha256": "f3dc04f4e2dd915df3034d03d948dad92b3213ddeef0026abf1102f3024a3cd2"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband_01_download_1_94_mb.pdf",
+      "sha256": "1a822d632bfcab4f9e71ac7ecc3ed7a519781f66396d837416cf51a359cde2cb"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband_02_download_108_53_kb.pdf",
+      "sha256": "4df5ccda618e22a4459a2749650c4a5b0e08679c86d8d5b9b3252254518aef11"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband_03_download_1_29_mb.pdf",
+      "sha256": "0df31b33e7e23090cdd9771ea3b661357442ddbde4c66f7d40bdfe1bd27bf5ee"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband_04_download_1_51_mb.pdf",
+      "sha256": "9ebc9b792989344d063847c4c07526b4f28130f3b9ff876eee978c3b856bb3c1"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband_05_download_779_49_kb.pdf",
+      "sha256": "b4f73bf45474152b2b58b334e060a30781b8534bcf7934ecf9a1ce01ace72c30"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband_06_download_264_76_kb.pdf",
+      "sha256": "07e6226708bf90cb049e470febaa78839ddc6c7641b098afc2771c0f39370b76"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband_07_download_1_11_mb.pdf",
+      "sha256": "379afede0615570953022194b12e9ed3441710df110268f747fab849d4f016c4"
+    },
+    {
+      "path": "telecom/trai/trai_internet_broadband_08_download_1_62_mb.pdf",
+      "sha256": "7e44d9395a4313d533caa4543c29873b84df6c24e57ce61447127347b38d8a48"
+    },
+    {
+      "path": "telecom/trai/trai_overview.txt",
+      "sha256": "575dec2cf96cbcb598201d767cfb93fcc978210f56d95c1b754a5e695a5934a2"
+    },
+    {
+      "path": "telecom/trai/trai_preference_registration.txt",
+      "sha256": "65cba316d9e07692904148713d48a31be491bcc12447c1543a5dd6427b58e302"
+    },
+    {
+      "path": "telecom/trai/trai_qos.txt",
+      "sha256": "b7b45df32cb84acf24cf7740379c3b1f8a69e6f5c836230e189374d43aa0c4ab"
+    },
+    {
+      "path": "telecom/trai/trai_qos_01_download_49_89_kb.pdf",
+      "sha256": "2f7ccd82b561882df3e819136f21b5d90b3ac343538098e59dbf6c778621c462"
+    },
+    {
+      "path": "telecom/trai/trai_qos_02_download_513_68_kb.pdf",
+      "sha256": "3d72970e98d9499658c9d9b9bc7a995bd53bd0958caea4506f94451b475ddce3"
+    },
+    {
+      "path": "telecom/trai/trai_qos_03_download_134_03_kb.pdf",
+      "sha256": "be5d6ad75636bb306d8825fbf0d6279adadcdcae385776ed81037370a433b971"
+    },
+    {
+      "path": "telecom/trai/trai_qos_04_download_45_5_kb.pdf",
+      "sha256": "46a164a499c5a4619cde62811017e94d7f26c7e7634b4f0cd0efd24b7a26250b"
+    },
+    {
+      "path": "telecom/trai/trai_qos_05_download_59_45_kb.pdf",
+      "sha256": "c4f4213a46368c9a3bbdbe2da9c39473e09b1b5cac127d4c9ac7b132ae1b384f"
+    },
+    {
+      "path": "telecom/trai/trai_qos_06_download_89_95_kb.pdf",
+      "sha256": "5fda08783037f245d591229ff8690817161fcfe0409f996fa8c2ddc892be9662"
+    },
+    {
+      "path": "telecom/trai/trai_qos_07_download_2_54_mb.pdf",
+      "sha256": "3f269a8e522cae9ae38a80cc11d8381fa1ced1c5067ffe7e2a8d0321128512a0"
+    },
+    {
+      "path": "telecom/trai/trai_qos_08_download_754_1_kb.pdf",
+      "sha256": "9c524c424eebb3d3ae8a41ce2b9e7c717284f14c024e58d901c9e7d7e7b788ba"
+    },
+    {
+      "path": "telecom/trai/trai_qos_basic_cellular_2009.pdf",
+      "sha256": "4c8ec715e0fd682080d3c6c3a2e5e5eac9d3737d166d575cadebdc9723691779"
+    },
+    {
+      "path": "telecom/trai/trai_qos_landing.txt",
+      "sha256": "0b0851652c37d30db3e7a7c431999aed4a494ed84ffd7da81bf22f2bf828cb21"
+    },
+    {
+      "path": "telecom/trai/trai_qos_metering_billing_2023.txt",
+      "sha256": "7376d2e33d335959d2b6e9af14186caf3dcdc141f33a22465d2063d963a5d80c"
+    },
+    {
+      "path": "telecom/trai/trai_regulations_index_2.txt",
+      "sha256": "b4b456f469829c19976ef7f0e42df38d1fc87d6acf80109848df049ec89f44d1"
+    },
+    {
+      "path": "telecom/trai/trai_tariff_order_amendment_2022.pdf",
+      "sha256": "b560085ea63f0c899a33098d94182bfe0b4c5e35a694ba2344a0df2026cf976c"
+    },
+    {
+      "path": "telecom/trai/trai_tcccpr_2018_full_text.pdf",
+      "sha256": "11670b3a67edd465620f68d5784ce30b6c2607d9084a4854e2857f651792fb5d"
+    },
+    {
+      "path": "telecom/trai/trai_tcccpr_page.txt",
+      "sha256": "fb6a305b4b2b93ec4d96138bafd3da2f6b1eb543b1ebe8b902ad68b82b37cf25"
+    },
+    {
+      "path": "telecom/trai/wiki_dnd_registry.txt",
+      "sha256": "2692a379fb796718cfcf65b459d868e639c73e9c373d0e0c63508b65761ac2af"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+{"domain": "telecom", "case_type": "wrong_bill", "facts": {"operator": "Airtel", "issue": "extra roaming charge after pack activation", "amount": "2499"}, "expected_agents": ["billing_disputes", "trai_regulatory"]}
+{"domain": "telecom", "case_type": "fiber_delay", "facts": {"operator": "Jio", "issue": "fiber installation delayed after payment", "days_pending": 18}, "expected_agents": ["network_quality", "general_telecom"]}
+{"domain": "telecom", "case_type": "mnp_failure", "facts": {"operator": "Vi", "issue": "port request rejected without reason", "days_pending": 9}, "expected_agents": ["mnp_portability", "trai_regulatory"]}
+{"domain": "telecom", "case_type": "unauthorized_vas", "facts": {"operator": "BSNL", "issue": "VAS activated and deducted balance", "amount": "99"}, "expected_agents": ["billing_disputes", "general_telecom"]}

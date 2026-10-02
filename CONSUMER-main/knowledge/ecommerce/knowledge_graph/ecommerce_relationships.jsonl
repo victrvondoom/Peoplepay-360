@@ -1,0 +1,25 @@
+{"domain":"ecommerce","source":"Customer","relation":"PLACES","target":"Order"}
+{"domain":"ecommerce","source":"Order","relation":"CONTAINS","target":"Product"}
+{"domain":"ecommerce","source":"Marketplace","relation":"HOSTS","target":"Seller"}
+{"domain":"ecommerce","source":"Seller","relation":"FULFILLS","target":"Order"}
+{"domain":"ecommerce","source":"Order","relation":"GENERATES","target":"Invoice"}
+{"domain":"ecommerce","source":"Order","relation":"PAID_BY","target":"Payment"}
+{"domain":"ecommerce","source":"Payment","relation":"CAN_ESCALATE_TO","target":"Chargeback"}
+{"domain":"ecommerce","source":"Payment","relation":"CAN_USE","target":"UPI Transaction"}
+{"domain":"ecommerce","source":"Payment","relation":"CAN_USE","target":"Wallet"}
+{"domain":"ecommerce","source":"Courier","relation":"DELIVERS","target":"Order"}
+{"domain":"ecommerce","source":"Delivery Attempt","relation":"BELONGS_TO","target":"Courier"}
+{"domain":"ecommerce","source":"Missing Package","relation":"AFFECTS","target":"Order"}
+{"domain":"ecommerce","source":"Wrong Product","relation":"AFFECTS","target":"Order"}
+{"domain":"ecommerce","source":"Defective Product","relation":"AFFECTS","target":"Product"}
+{"domain":"ecommerce","source":"Defective Product","relation":"MAY_TRIGGER","target":"Return Request"}
+{"domain":"ecommerce","source":"Return Request","relation":"MAY_RESULT_IN","target":"Refund"}
+{"domain":"ecommerce","source":"Return Request","relation":"MAY_RESULT_IN","target":"Replacement"}
+{"domain":"ecommerce","source":"Cancellation","relation":"MAY_RESULT_IN","target":"Refund"}
+{"domain":"ecommerce","source":"Product","relation":"MAY_HAVE","target":"Warranty"}
+{"domain":"ecommerce","source":"Consumer Complaint","relation":"REFERENCES","target":"Marketplace Policy"}
+{"domain":"ecommerce","source":"Consumer Complaint","relation":"REFERENCES","target":"Consumer Protection Act 2019"}
+{"domain":"ecommerce","source":"Consumer Complaint","relation":"CAN_BE_FILED_WITH","target":"National Consumer Helpline"}
+{"domain":"ecommerce","source":"Appeal","relation":"CAN_ESCALATE_TO","target":"NCDRC"}
+{"domain":"ecommerce","source":"Consumer Protection Act 2019","relation":"PROTECTS","target":"Consumer Right"}
+{"domain":"ecommerce","source":"BIS Standard","relation":"SUPPORTS","target":"Product"}

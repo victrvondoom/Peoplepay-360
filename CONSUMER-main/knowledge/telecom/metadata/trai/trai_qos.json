@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "TRAI Quality of Service",
+  "category": "quality_of_service",
+  "source_url": "https://www.trai.gov.in/telecom/qos",
+  "final_url": "https://www.trai.gov.in/telecom/qos",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 50391,
+  "stored_path": "knowledge/telecom/trai/trai_qos.txt",
+  "sha256": "ce80af890dae7df0bb919a031fd151567ac946b1b574b2d0a28c67b716063d9d",
+  "bytes": 50464,
+  "fetched_at": "2026-07-06T13:58:14.140447+00:00"
+}

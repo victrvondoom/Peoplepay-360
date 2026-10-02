@@ -528,9 +528,10 @@ def execution(incident_id: str) -> Response[str]:
             )
             for ev in history.get("events", []):
                 name = None
-                for key in ("stateEnteredEventDetails", "stateExitedEventDetails"):
-                    if key in ev:
-                        name = ev[key].get("name")
+                if "stateEnteredEventDetails" in ev:
+                    name = ev["stateEnteredEventDetails"].get("name")
+                if "stateExitedEventDetails" in ev:
+                    name = ev["stateExitedEventDetails"].get("name")
                 events.append(
                     {"t": ev.get("timestamp"), "type": ev.get("type"), "state": name}
                 )

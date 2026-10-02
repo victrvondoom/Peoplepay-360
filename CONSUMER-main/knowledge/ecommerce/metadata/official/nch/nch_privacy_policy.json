@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "NCH",
+  "title": "NCH Privacy Policy",
+  "category": "privacy",
+  "source_url": "https://consumerhelpline.gov.in/public/privacypolicy",
+  "final_url": "https://consumerhelpline.gov.in/public/privacypolicy",
+  "type": "html_text",
+  "raw_chars": 2065,
+  "stored_path": "knowledge/ecommerce/official/nch/nch_privacy_policy.txt",
+  "sha256": "9740081a1591e638bab8bedf7ad6ab95c1e208f1e78971ef36ae55e074bec25a",
+  "bytes": 2083,
+  "fetched_at": "2026-07-07T12:50:49.226812+00:00",
+  "official_source": true
+}

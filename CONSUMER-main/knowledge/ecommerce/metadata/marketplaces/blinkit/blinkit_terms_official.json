@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "Blinkit",
+  "title": "Blinkit Terms",
+  "category": "terms",
+  "source_url": "https://blinkit.com/terms",
+  "final_url": "https://blinkit.com/terms",
+  "type": "html_text",
+  "raw_chars": 121878,
+  "stored_path": "knowledge/ecommerce/marketplaces/blinkit/blinkit_terms_official.txt",
+  "sha256": "b7be3b447a10b41066442ae6cc2347fe0e39c733a43a9cd76556e58c94e6cb0e",
+  "bytes": 122353,
+  "fetched_at": "2026-07-07T12:47:28.234682+00:00",
+  "official_source": true
+}

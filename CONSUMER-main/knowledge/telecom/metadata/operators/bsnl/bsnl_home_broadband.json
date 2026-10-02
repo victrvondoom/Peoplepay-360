@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "BSNL",
+  "title": "BSNL Broadband",
+  "category": "broadband",
+  "source_url": "https://bsnl.co.in/",
+  "final_url": "https://bsnl.co.in/",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 5330,
+  "stored_path": "knowledge/telecom/operators/bsnl/bsnl_home_broadband.txt",
+  "sha256": "e1bcb004aec47eaa0e0eed95b8f940629c2ead1963b5e532db9babdca380281b",
+  "bytes": 5359,
+  "fetched_at": "2026-07-06T14:33:36.500484+00:00"
+}

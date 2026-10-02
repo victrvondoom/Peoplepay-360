@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "Vi",
+  "title": "Disaster Management",
+  "parent_title": "Vi Help and Support",
+  "category": "complaint_process",
+  "source_url": "https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/misc/Disaster_Management.pdf",
+  "parent_url": "https://www.myvi.in/help-support/faqs",
+  "final_url": "https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/misc/Disaster_Management.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/operators/vi/vi_help_01_disaster_management.pdf",
+  "sha256": "c5ef44c991081d3a7d34fd0873b05082fa0c4543a28c6fa9de7024ec6b5d23da",
+  "bytes": 175240,
+  "fetched_at": "2026-07-06T14:33:17.876804+00:00"
+}

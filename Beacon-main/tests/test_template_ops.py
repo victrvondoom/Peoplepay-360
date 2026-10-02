@@ -61,9 +61,9 @@ def test_public_and_privileged_functions_have_bounded_concurrency(
         limit = fn["Properties"].get("ReservedConcurrentExecutions")
         # Conditional: a reservation when the account quota allows it, NoValue otherwise
         # (new accounts have a 10-execution unreserved minimum; any reservation fails).
-        assert isinstance(limit, dict) and "Fn::If" in limit, (
-            "concurrency must be conditional"
-        )
+        assert (
+            isinstance(limit, dict) and "Fn::If" in limit
+        ), "concurrency must be conditional"
         cond, value, off = limit["Fn::If"]
         assert cond == "ReserveConcurrency"
         assert value == {"Fn::Ref": "ReservedConcurrency"}

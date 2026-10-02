@@ -10,7 +10,8 @@
     "test": "bun test",
     "convex:codegen": "convex codegen",
     "format": "prettier --write src shared convex tests docs *.ts *.js *.json *.html README.md",
-    "typecheck:shared": "tsc --noEmit -p tsconfig.shared.json"
+    "typecheck:shared": "tsc --noEmit -p tsconfig.shared.json",
+    "convex:codegen:offline": "convex codegen --system-udfs --url http://127.0.0.1:1 --admin-key offline-codegen --typecheck disable"
   },
   "dependencies": {
     "@ai-sdk/openai": "2.0.127",

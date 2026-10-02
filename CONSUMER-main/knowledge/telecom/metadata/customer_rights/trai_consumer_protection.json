@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "TRAI Consumer Protection",
+  "category": "consumer_protection",
+  "source_url": "https://www.trai.gov.in/telecom/consumer-protection",
+  "final_url": "https://www.trai.gov.in/telecom/consumer-protection",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 15374,
+  "stored_path": "knowledge/telecom/customer_rights/trai_consumer_protection.txt",
+  "sha256": "a7c07ab8451478d6bfc6fd848fa57770c5d0595e3f58392b531086623e76effb",
+  "bytes": 15447,
+  "fetched_at": "2026-07-06T13:58:44.749813+00:00"
+}

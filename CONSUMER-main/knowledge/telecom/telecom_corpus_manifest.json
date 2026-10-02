@@ -1,0 +1,705 @@
+{
+  "domain": "telecom",
+  "generated_at": "2026-07-07T16:50:18.051051+00:00",
+  "root": "knowledge/telecom",
+  "files_total": 67,
+  "chunks_total": 799,
+  "bytes_total": 33219901,
+  "extension_counts": {
+    ".pdf": 49,
+    ".txt": 18
+  },
+  "authority_counts": {
+    "BSNL": 3,
+    "Jio": 4,
+    "NCH": 1,
+    "TRAI": 53,
+    "Vi": 6
+  },
+  "folder_counts": {
+    "complaints": 10,
+    "customer_rights": 9,
+    "faqs": 1,
+    "mnp": 9,
+    "mobile": 7,
+    "operators": 13,
+    "trai": 18
+  },
+  "chunk_file": "knowledge/telecom/chunks/telecom_chunks.jsonl",
+  "graph_seed_files": [
+    "knowledge/telecom/knowledge_graph/telecom_entities.jsonl",
+    "knowledge/telecom/knowledge_graph/telecom_relationships.jsonl"
+  ],
+  "files": [
+    {
+      "path": "complaints/national_consumer_helpline.txt",
+      "bytes": 2018,
+      "sha256": "52e5eccc1e80490925a3e9f35637676e624875b54a6fe6775f9b82965bad9b00",
+      "chunks": 1,
+      "title": "National Consumer Helpline",
+      "authority": "NCH",
+      "category": "complaint_guidance",
+      "source_url": "https://consumerhelpline.gov.in/public/"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal.txt",
+      "bytes": 7444,
+      "sha256": "24fec5084c518d94163694104e05a8fa96cc1d80cdfaabdf17759807cf8c1e04",
+      "chunks": 3,
+      "title": "TRAI Complaint Redressal",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/telecom/complaint-redressal"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal_01_download_66_64_kb.pdf",
+      "bytes": 68239,
+      "sha256": "b80a1621a22f22a516e07a6b0dcfeabecc5fbae78565c08d8a9e470ce1cee8ce",
+      "chunks": 3,
+      "title": "Download(66.64 KB)",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/TCCR_Regulations_2ndAmendment_11Sep13.pdf"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal_02_download_17_79_kb.pdf",
+      "bytes": 18221,
+      "sha256": "8df92e160d343c62442cd72247a8d27af1e8edd391a19aa79553a49b58871575",
+      "chunks": 1,
+      "title": "Download(17.79 KB)",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/TCCR_Regulations_1stAmendment_12jan12.pdf"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal_03_download_98_22_kb.pdf",
+      "bytes": 100579,
+      "sha256": "65f95ccfb099b34ad78d0a3c4efb66e9c29786deadc68942b92736aabdf4285d",
+      "chunks": 16,
+      "title": "Download(98.22 KB)",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/TCCR_Regulations_05Jan2012.pdf"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal_04_download_18_12_mb.pdf",
+      "bytes": 700222,
+      "sha256": "3acbc938518dd493881075894a8e8b46e30073c5d3d2f5f063466f02d9f35116",
+      "chunks": 40,
+      "title": "Download(18.12 MB)",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2026-05/Regulation_07052026.pdf"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal_05_download_18_12_mb.pdf",
+      "bytes": 700222,
+      "sha256": "3acbc938518dd493881075894a8e8b46e30073c5d3d2f5f063466f02d9f35116",
+      "chunks": 40,
+      "title": "Download(18.12 MB)",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2026-05/Regulation_07052026_0.pdf"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal_06_download_127_66_kb.pdf",
+      "bytes": 130727,
+      "sha256": "0f808271b04825dde13e11cbd2706bfeaf8fcd0a07d45a779e35294bcba2ba7e",
+      "chunks": 7,
+      "title": "Download(127.66 KB)",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/201205301126154234041DraftRegulation10aug09%5B1%5D.pdf"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal_07_download_250_74_kb.pdf",
+      "bytes": 256758,
+      "sha256": "3045160ce2c229623777c1f272ba07fbd9cad2adef4b52364e3913fe74c2686b",
+      "chunks": 1,
+      "title": "Download(250.74 KB)",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2026-06/PR_No.68of2026_0.pdf"
+    },
+    {
+      "path": "complaints/trai_complaint_redressal_08_download_249_11_kb.pdf",
+      "bytes": 255087,
+      "sha256": "9686d132f730908e57605e9b99699cb519cc796b0ec235577d983741562ce750",
+      "chunks": 1,
+      "title": "Download(249.11 KB)",
+      "authority": "TRAI",
+      "category": "complaint_redressal",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2026-06/PR_No.68of2026_Hindi_0.pdf"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection.txt",
+      "bytes": 15447,
+      "sha256": "a7c07ab8451478d6bfc6fd848fa57770c5d0595e3f58392b531086623e76effb",
+      "chunks": 6,
+      "title": "TRAI Consumer Protection",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/telecom/consumer-protection"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection_01_download_48_78_kb.pdf",
+      "bytes": 49949,
+      "sha256": "8928ca8d7921558668967a8021934623cb2efb679ef4d78868cdd66d62fb47b0",
+      "chunks": 10,
+      "title": "Download(48.78 KB)",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/Consumer_Protection_Regulations%202012.pdf"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection_02_download_198_67_kb.pdf",
+      "bytes": 203442,
+      "sha256": "85558efeb29cff906409f0fa87398c7db46726191ed01e085d6094bc2579141e",
+      "chunks": 3,
+      "title": "Download(198.67 KB)",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-11/Draft_Regulation_24072023.pdf"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection_03_download_387_71_kb.pdf",
+      "bytes": 397016,
+      "sha256": "94c985d771333f974d7d25f079d26162fe8f5dd2dbc020e36f631252e9f3f922",
+      "chunks": 3,
+      "title": "Download(387.71 KB)",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/RegulationTCEPF27062018.pdf"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection_04_download_3_61_mb.pdf",
+      "bytes": 3780344,
+      "sha256": "043615de1994da41d24f353e124779beeff6c9f0512b9599a0e15169ebee4308",
+      "chunks": 7,
+      "title": "Download(3.61 MB)",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-12/Regulation_12th_23122024_0.pdf"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection_05_download_3_56_mb.pdf",
+      "bytes": 3738041,
+      "sha256": "cebb750857c0a7d8cc4bd7c6c286817eee5690308cf59114fc22d5053ac1027f",
+      "chunks": 5,
+      "title": "Download(3.56 MB)",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/Regulation_25072024.pdf"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection_06_download_1_2_mb.pdf",
+      "bytes": 1261776,
+      "sha256": "03cb932186c7cd5d4a2275183ad855d85907b314ff946c4cff69ac8448b54edb",
+      "chunks": 0,
+      "title": "Download(1.2 MB)",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/Regulation_14062024.pdf"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection_07_download_227_74_kb.pdf",
+      "bytes": 233203,
+      "sha256": "22dfaf4128a3138819cd4c03d043556f9c63bf8838220649ac04e81ca0fa4c3d",
+      "chunks": 8,
+      "title": "Download(227.74 KB)",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/Regulation_30092020.pdf"
+    },
+    {
+      "path": "customer_rights/trai_consumer_protection_08_download_273_99_kb.pdf",
+      "bytes": 280564,
+      "sha256": "822b90ea97af67447c0773d4b6a67eaf8c54d11d051a547ecbaee30b903120e1",
+      "chunks": 6,
+      "title": "Download(273.99 KB)",
+      "authority": "TRAI",
+      "category": "consumer_protection",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/Regulation_16012020.pdf"
+    },
+    {
+      "path": "faqs/trai_telecom_faq.txt",
+      "bytes": 4423,
+      "sha256": "fcab8917ca4379b7e7ffc3cd5efa4209826d321551a7fe8e5132e5a66790a842",
+      "chunks": 2,
+      "title": "TRAI Telecom FAQs",
+      "authority": "TRAI",
+      "category": "faq",
+      "source_url": "https://www.trai.gov.in/consumer-info/telecom/faq-category-listing"
+    },
+    {
+      "path": "mnp/trai_mnp.txt",
+      "bytes": 33850,
+      "sha256": "530094a2f9af60f6e70cbef4e5d052f9bead603bf8df9f4907a1ec382cbcaeb9",
+      "chunks": 13,
+      "title": "TRAI Mobile Number Portability",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/telecom/mobile-number-portability"
+    },
+    {
+      "path": "mnp/trai_mnp_01_download_426_53_kb.pdf",
+      "bytes": 436770,
+      "sha256": "2ebd9d618eab67e00d40dbc3eb71d677ea40d65acc32ea3b8a4778a9e29fa1a1",
+      "chunks": 28,
+      "title": "Download(426.53 KB)",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/RegulationsMNPEng13122018.pdf"
+    },
+    {
+      "path": "mnp/trai_mnp_02_download_282_09_kb.pdf",
+      "bytes": 288857,
+      "sha256": "af002f328051e8d5ef8a1b6b83b3e616b66c01336fce61155f15d5c9f3506975",
+      "chunks": 15,
+      "title": "Download(282.09 KB)",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Draft_MNP_Regulation_2019_16082019_0.pdf"
+    },
+    {
+      "path": "mnp/trai_mnp_03_download_252_88_kb.pdf",
+      "bytes": 258944,
+      "sha256": "953baba69176882959f0dfc37a14ac1a4139c725b7819a996c279849fb9a365f",
+      "chunks": 3,
+      "title": "Download(252.88 KB)",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Draft_MNP_Regulation_18122017.pdf"
+    },
+    {
+      "path": "mnp/trai_mnp_04_download_814_29_kb.pdf",
+      "bytes": 833829,
+      "sha256": "10c11631fb788327644e5f2d34446a90fa06c016549c35c128879ed812540e85",
+      "chunks": 3,
+      "title": "Download(814.29 KB)",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Draft_MNP_Regulation_7th_Amd_16082017.pdf"
+    },
+    {
+      "path": "mnp/trai_mnp_05_download_302_18_kb.pdf",
+      "bytes": 309434,
+      "sha256": "a5e2de7b491f00b6a2d611f67641457ff75e29755d5e7de4c5042125259386a6",
+      "chunks": 3,
+      "title": "Download(302.18 KB)",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Draft%20Regulation%20on%20Full%20MNP-23.01.2015.pdf"
+    },
+    {
+      "path": "mnp/trai_mnp_06_download_1_36_mb.pdf",
+      "bytes": 1431231,
+      "sha256": "674a0e8ab913ea0f9724a7e41c2ea1d453d98b258a84addecacf4b4816be3bce",
+      "chunks": 3,
+      "title": "Download(1.36 MB)",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/Regulation_MNP_01102019.pdf"
+    },
+    {
+      "path": "mnp/trai_mnp_07_download_334_7_kb.pdf",
+      "bytes": 342728,
+      "sha256": "002080aa98e7400cdf29655bbb95defa67fe859c731367471fcd8a16ce6ac9d4",
+      "chunks": 4,
+      "title": "Download(334.7 KB)",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/MNP_Regulation%20_Eng_31012018.pdf"
+    },
+    {
+      "path": "mnp/trai_mnp_08_download_33_11_kb.pdf",
+      "bytes": 33904,
+      "sha256": "ad2f56bc0d2de2c7f1d7e5075a63590374bd991ecc813be1e71b0a20c63ec10a",
+      "chunks": 2,
+      "title": "Download(33.11 KB)",
+      "authority": "TRAI",
+      "category": "mnp",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-11/MNP-Regulation8tjune12.pdf"
+    },
+    {
+      "path": "mobile/trai_vas.txt",
+      "bytes": 13487,
+      "sha256": "f7fa629e299411e6a9127845862c1ed606811f87ce29a32c506a7cc9e9c1ec34",
+      "chunks": 5,
+      "title": "TRAI Value Added Services",
+      "authority": "TRAI",
+      "category": "vas",
+      "source_url": "https://www.trai.gov.in/telecom/vas"
+    },
+    {
+      "path": "mobile/trai_vas_01_download_98_2_kb.pdf",
+      "bytes": 100553,
+      "sha256": "0ca9d80514919b2de2c19d22316a31d30c96caaf7d56ec99b7c588acb4e72ca3",
+      "chunks": 3,
+      "title": "Download(98.2 KB)",
+      "authority": "TRAI",
+      "category": "vas",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/direction_VAS_fina4-7-2011.pdf"
+    },
+    {
+      "path": "mobile/trai_vas_02_download_28_01_kb.pdf",
+      "bytes": 28683,
+      "sha256": "6a8e80a52e0b8fb1b8d46027ef28d3e40f4f25df97e36f3ace6e8b3eabff18ba",
+      "chunks": 4,
+      "title": "Download(28.01 KB)",
+      "authority": "TRAI",
+      "category": "vas",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/DirectionVAS.pdf"
+    },
+    {
+      "path": "mobile/trai_vas_03_download_2_51_mb.pdf",
+      "bytes": 2631960,
+      "sha256": "0b8019fa9a123f28b129e088cd82733f8da1e66eee4d1e1771bb5b7a68fb464b",
+      "chunks": 0,
+      "title": "Download(2.51 MB)",
+      "authority": "TRAI",
+      "category": "vas",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Direction_Value_Added_14112014.pdf"
+    },
+    {
+      "path": "mobile/trai_vas_04_download_65_67_kb.pdf",
+      "bytes": 67250,
+      "sha256": "ee3edae8608b1dfcf386196e3a52af22450dc524c33dbfd5fb056331f569f7aa",
+      "chunks": 2,
+      "title": "Download(65.67 KB)",
+      "authority": "TRAI",
+      "category": "vas",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/directions3dec10erdiv%5B1%5D.pdf"
+    },
+    {
+      "path": "mobile/trai_vas_05_download_89_32_kb.pdf",
+      "bytes": 91466,
+      "sha256": "ed93725e261fa28788651a37d1a315bb36116783f0c7e5ff549e205b2c693281",
+      "chunks": 4,
+      "title": "Download(89.32 KB)",
+      "authority": "TRAI",
+      "category": "vas",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Direction_04_Sept_2009.pdf"
+    },
+    {
+      "path": "mobile/trai_vas_06_download_90_1_kb.pdf",
+      "bytes": 92265,
+      "sha256": "3edea84398d08b76894af71cf0428ae0bd279910b3ce4dc1aa68f0df392e7b8f",
+      "chunks": 10,
+      "title": "Download(90.1 KB)",
+      "authority": "TRAI",
+      "category": "vas",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/direction27apr09.pdf"
+    },
+    {
+      "path": "operators/bsnl/bsnl_home_broadband.txt",
+      "bytes": 5359,
+      "sha256": "e1bcb004aec47eaa0e0eed95b8f940629c2ead1963b5e532db9babdca380281b",
+      "chunks": 2,
+      "title": "BSNL Broadband",
+      "authority": "BSNL",
+      "category": "broadband",
+      "source_url": "https://bsnl.co.in/"
+    },
+    {
+      "path": "operators/bsnl/bsnl_mobile_recharge.txt",
+      "bytes": 1111,
+      "sha256": "3ec18a99ba451b117eee46a71c55441bece6ffad8d939eddaaf0d28834c11513",
+      "chunks": 1,
+      "title": "BSNL Mobile Services",
+      "authority": "BSNL",
+      "category": "mobile_plans",
+      "source_url": "https://bsnl.co.in/mobile/recharge"
+    },
+    {
+      "path": "operators/bsnl/bsnl_sim_mnp.txt",
+      "bytes": 1086,
+      "sha256": "0cbf99209d6eb26e890f313a913bbd390553b0884c87ece6594cca49499629cd",
+      "chunks": 1,
+      "title": "BSNL FTTH",
+      "authority": "BSNL",
+      "category": "fiber",
+      "source_url": "https://bsnl.co.in/sim-order"
+    },
+    {
+      "path": "operators/jio/jio_fiber.txt",
+      "bytes": 2215,
+      "sha256": "f5cc892dec94f734a9d26c9257f25aba95965c4f54c49f244dbb5acbc28a714f",
+      "chunks": 1,
+      "title": "JioFiber Plans",
+      "authority": "Jio",
+      "category": "fiber",
+      "source_url": "https://www.jio.com/en-in/jiofiber"
+    },
+    {
+      "path": "operators/jio/jio_help.txt",
+      "bytes": 3067,
+      "sha256": "e8ed5f71d2c44e050386a81b3dcdd7fd4a1e162cfe938e5c381c5cb8036cd666",
+      "chunks": 1,
+      "title": "Jio Help and Support",
+      "authority": "Jio",
+      "category": "complaint_process",
+      "source_url": "https://www.jio.com/help/home"
+    },
+    {
+      "path": "operators/jio/jio_prepaid_plans.txt",
+      "bytes": 2215,
+      "sha256": "f5cc892dec94f734a9d26c9257f25aba95965c4f54c49f244dbb5acbc28a714f",
+      "chunks": 1,
+      "title": "Jio Prepaid Plans",
+      "authority": "Jio",
+      "category": "mobile_plans",
+      "source_url": "https://www.jio.com/en-in/mobile/prepaid-plans"
+    },
+    {
+      "path": "operators/jio/jio_terms.txt",
+      "bytes": 2215,
+      "sha256": "f5cc892dec94f734a9d26c9257f25aba95965c4f54c49f244dbb5acbc28a714f",
+      "chunks": 1,
+      "title": "Jio Terms and Conditions",
+      "authority": "Jio",
+      "category": "terms",
+      "source_url": "https://www.jio.com/en-in/terms-and-conditions"
+    },
+    {
+      "path": "operators/vi/vi_help.txt",
+      "bytes": 2988,
+      "sha256": "cc037ead0770f5c5be8c16f0819300667676bfaf05f73a06e1a810278ec56a49",
+      "chunks": 1,
+      "title": "Vi Help and Support",
+      "authority": "Vi",
+      "category": "complaint_process",
+      "source_url": "https://www.myvi.in/help-support/faqs"
+    },
+    {
+      "path": "operators/vi/vi_help_01_disaster_management.pdf",
+      "bytes": 175240,
+      "sha256": "c5ef44c991081d3a7d34fd0873b05082fa0c4543a28c6fa9de7024ec6b5d23da",
+      "chunks": 3,
+      "title": "Disaster Management",
+      "authority": "Vi",
+      "category": "complaint_process",
+      "source_url": "https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/misc/Disaster_Management.pdf"
+    },
+    {
+      "path": "operators/vi/vi_prepaid_plans.txt",
+      "bytes": 2242,
+      "sha256": "8fbd3cab9091c94146bc9d235744cf020ffac958f3b3d74ec2350d4afc6fe0fc",
+      "chunks": 1,
+      "title": "Vi Prepaid Plans",
+      "authority": "Vi",
+      "category": "mobile_plans",
+      "source_url": "https://www.myvi.in/prepaid/all-prepaid-plans"
+    },
+    {
+      "path": "operators/vi/vi_prepaid_plans_01_disaster_management.pdf",
+      "bytes": 175240,
+      "sha256": "c5ef44c991081d3a7d34fd0873b05082fa0c4543a28c6fa9de7024ec6b5d23da",
+      "chunks": 3,
+      "title": "Disaster Management",
+      "authority": "Vi",
+      "category": "mobile_plans",
+      "source_url": "https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/misc/Disaster_Management.pdf"
+    },
+    {
+      "path": "operators/vi/vi_terms.txt",
+      "bytes": 27561,
+      "sha256": "90f184204fbeddfb3fd8b7e84db517a3fbc17b009d755ca279bcb6495a4b2061",
+      "chunks": 11,
+      "title": "Vi Terms and Conditions",
+      "authority": "Vi",
+      "category": "terms",
+      "source_url": "https://www.myvi.in/terms-of-use"
+    },
+    {
+      "path": "operators/vi/vi_terms_01_disaster_management.pdf",
+      "bytes": 175240,
+      "sha256": "c5ef44c991081d3a7d34fd0873b05082fa0c4543a28c6fa9de7024ec6b5d23da",
+      "chunks": 3,
+      "title": "Disaster Management",
+      "authority": "Vi",
+      "category": "terms",
+      "source_url": "https://www.myvi.in/content/dam/vodafoneideadigital/StaticPages/consumerimages/misc/Disaster_Management.pdf"
+    },
+    {
+      "path": "trai/trai_internet_broadband.txt",
+      "bytes": 34992,
+      "sha256": "91c9d60ca3c9fa2d0fe4939a069cea0b1827b3b39e1d3ada44b346d474ce8831",
+      "chunks": 13,
+      "title": "TRAI Internet and Broadband",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/telecom/internet-broadband"
+    },
+    {
+      "path": "trai/trai_internet_broadband_01_download_1_94_mb.pdf",
+      "bytes": 2029183,
+      "sha256": "1a822d632bfcab4f9e71ac7ecc3ed7a519781f66396d837416cf51a359cde2cb",
+      "chunks": 65,
+      "title": "Download(1.94 MB)",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Broadband_CP_20082020.pdf"
+    },
+    {
+      "path": "trai/trai_internet_broadband_02_download_108_53_kb.pdf",
+      "bytes": 111135,
+      "sha256": "4df5ccda618e22a4459a2749650c4a5b0e08679c86d8d5b9b3252254518aef11",
+      "chunks": 2,
+      "title": "Download(108.53 KB)",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Draft%20Direction%2020.1.16.pdf"
+    },
+    {
+      "path": "trai/trai_internet_broadband_03_download_1_29_mb.pdf",
+      "bytes": 1351482,
+      "sha256": "0df31b33e7e23090cdd9771ea3b661357442ddbde4c66f7d40bdfe1bd27bf5ee",
+      "chunks": 48,
+      "title": "Download(1.29 MB)",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Consultation%20Paper%20on%20Broadband%2024Sep2014.pdf"
+    },
+    {
+      "path": "trai/trai_internet_broadband_04_download_1_51_mb.pdf",
+      "bytes": 1585913,
+      "sha256": "9ebc9b792989344d063847c4c07526b4f28130f3b9ff876eee978c3b856bb3c1",
+      "chunks": 17,
+      "title": "Download(1.51 MB)",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Consultation%20Paper%20AGR%20Internet%20services%20final%202812.pdf"
+    },
+    {
+      "path": "trai/trai_internet_broadband_05_download_779_49_kb.pdf",
+      "bytes": 798199,
+      "sha256": "b4f73bf45474152b2b58b334e060a30781b8534bcf7934ecf9a1ce01ace72c30",
+      "chunks": 60,
+      "title": "Download(779.49 KB)",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Internet%20and%20Broadband%20Consultation%20Paper%202003-11-28%20FINAL.pdf"
+    },
+    {
+      "path": "trai/trai_internet_broadband_06_download_264_76_kb.pdf",
+      "bytes": 271112,
+      "sha256": "07e6226708bf90cb049e470febaa78839ddc6c7641b098afc2771c0f39370b76",
+      "chunks": 7,
+      "title": "Download(264.76 KB)",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/QOS_8OCT.pdf"
+    },
+    {
+      "path": "trai/trai_internet_broadband_07_download_1_11_mb.pdf",
+      "bytes": 1165872,
+      "sha256": "379afede0615570953022194b12e9ed3441710df110268f747fab849d4f016c4",
+      "chunks": 0,
+      "title": "Download(1.11 MB)",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Adoption_of_e-KYC_service_17_05_2017_0.pdf"
+    },
+    {
+      "path": "trai/trai_internet_broadband_08_download_1_62_mb.pdf",
+      "bytes": 1696686,
+      "sha256": "7e44d9395a4313d533caa4543c29873b84df6c24e57ce61447127347b38d8a48",
+      "chunks": 70,
+      "title": "Download(1.62 MB)",
+      "authority": "TRAI",
+      "category": "broadband_regulations",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Broadband%3D17.04.2015.pdf"
+    },
+    {
+      "path": "trai/trai_qos.txt",
+      "bytes": 50464,
+      "sha256": "ce80af890dae7df0bb919a031fd151567ac946b1b574b2d0a28c67b716063d9d",
+      "chunks": 19,
+      "title": "TRAI Quality of Service",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/telecom/qos"
+    },
+    {
+      "path": "trai/trai_qos_01_download_49_89_kb.pdf",
+      "bytes": 51092,
+      "sha256": "2f7ccd82b561882df3e819136f21b5d90b3ac343538098e59dbf6c778621c462",
+      "chunks": 5,
+      "title": "Download(49.89 KB)",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/QoS_CodeofPractice_Regulation_Amend_order_16May2013.pdf"
+    },
+    {
+      "path": "trai/trai_qos_02_download_513_68_kb.pdf",
+      "bytes": 526009,
+      "sha256": "3d72970e98d9499658c9d9b9bc7a995bd53bd0958caea4506f94451b475ddce3",
+      "chunks": 17,
+      "title": "Download(513.68 KB)",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/QoS_CodeofPractice_Regulation_Amend_Guidelines_n_Checklist_16May2013_Final.pdf"
+    },
+    {
+      "path": "trai/trai_qos_03_download_134_03_kb.pdf",
+      "bytes": 137248,
+      "sha256": "be5d6ad75636bb306d8825fbf0d6279adadcdcae385776ed81037370a433b971",
+      "chunks": 3,
+      "title": "Download(134.03 KB)",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Draft_Regulations_03042023_0.pdf"
+    },
+    {
+      "path": "trai/trai_qos_04_download_45_5_kb.pdf",
+      "bytes": 46593,
+      "sha256": "46a164a499c5a4619cde62811017e94d7f26c7e7634b4f0cd0efd24b7a26250b",
+      "chunks": 5,
+      "title": "Download(45.5 KB)",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/modified_regulations_210812.pdf"
+    },
+    {
+      "path": "trai/trai_qos_05_download_59_45_kb.pdf",
+      "bytes": 60872,
+      "sha256": "c4f4213a46368c9a3bbdbe2da9c39473e09b1b5cac127d4c9ac7b132ae1b384f",
+      "chunks": 11,
+      "title": "Download(59.45 KB)",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/QoS_CodeofPractice_Regulation_Amend_25Mar13.pdf"
+    },
+    {
+      "path": "trai/trai_qos_06_download_89_95_kb.pdf",
+      "bytes": 92105,
+      "sha256": "5fda08783037f245d591229ff8690817161fcfe0409f996fa8c2ddc892be9662",
+      "chunks": 9,
+      "title": "Download(89.95 KB)",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Mobile_BankingRegulations17042012.pdf"
+    },
+    {
+      "path": "trai/trai_qos_07_download_2_54_mb.pdf",
+      "bytes": 2664037,
+      "sha256": "3f269a8e522cae9ae38a80cc11d8381fa1ced1c5067ffe7e2a8d0321128512a0",
+      "chunks": 126,
+      "title": "Download(2.54 MB)",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2026-06/Rating_Manual_09062026_2.pdf"
+    },
+    {
+      "path": "trai/trai_qos_08_download_754_1_kb.pdf",
+      "bytes": 772195,
+      "sha256": "9c524c424eebb3d3ae8a41ce2b9e7c717284f14c024e58d901c9e7d7e7b788ba",
+      "chunks": 27,
+      "title": "Download(754.1 KB)",
+      "authority": "TRAI",
+      "category": "quality_of_service",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Draft_Regulation_24022023.pdf"
+    }
+  ]
+}

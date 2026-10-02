@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "TRAI Telecom FAQs",
+  "category": "faq",
+  "source_url": "https://www.trai.gov.in/consumer-info/telecom/faq-category-listing",
+  "final_url": "https://www.trai.gov.in/consumer-info/telecom/faq-category-listing",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 4350,
+  "stored_path": "knowledge/telecom/faqs/trai_telecom_faq.txt",
+  "sha256": "fcab8917ca4379b7e7ffc3cd5efa4209826d321551a7fe8e5132e5a66790a842",
+  "bytes": 4423,
+  "fetched_at": "2026-07-06T13:59:19.359131+00:00"
+}

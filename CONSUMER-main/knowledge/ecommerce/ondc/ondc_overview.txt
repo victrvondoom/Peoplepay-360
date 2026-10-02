@@ -1,0 +1,3019 @@
+Open Network for Digital Commerce - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Indian public non-profit organisation
+Open Network for Digital Commerce
+Type
+Private non-profit
+Section 8
+company
+[
+1
+]
+Industry
+E-commerce
+Founded
+31
+December 2021
+;
+4 years ago
+(
+2021-12-31
+)
+Founder
+Department for Promotion of Industry and Internal Trade
+(DPIIT)
+Government of India
+Headquarters
+India
+Area served
+India
+Key people
+Adil Zainulbhai
+Anjali Bansal
+Anil Agrawal
+Arvind Gupta
+Dilip Asbe
+Kumar Rajagopalan
+Nandan Nilekani
+Praveen Khandelwal
+R. S. Sharma
+Suresh Sethi
+Products
+Open network for e-commerce
+Owner
+Department for Promotion of Industry and Internal Trade
+Website
+ondc
+.org
+Open Network for Digital Commerce
+(
+ONDC
+) is a
+state-owned
+technology
+, initiative launched by the
+Department for Promotion of Industry and Internal Trade
+(DPIIT),
+Government of India
+to foster
+decentralized
+open
+e-commerce
+model and is led by a private
+non-profit
+Section 8 company
+. It was incorporated on 31 December 2021 with initial investment from
+Quality Council of India
+and Protean eGov Technologies Limited (formerly NSDL e-Governance Infrastructure Limited).
+[
+2
+]
+History
+[
+edit
+]
+ONDC is not an application, an intermediary, or software, but a set of specifications designed to foster open interchange and connections between shoppers, technology platforms, and retailers.
+[
+3
+]
+ONDC was incorporated with the mission and vision of creating an inclusive ecosystem of e-commerce.
+[
+4
+]
+On 5 July 2021, a nine-member Advisory Council was constituted by
+Department for Promotion of Industry and Internal Trade
+(DPIIT). The
+Quality Council of India
+(QCI) was tasked with incubating ONDC using
+open source
+methodologies, open specifications, and
+network protocols
+. It incorporates inventory, logistics, and dispute resolution and plans to cover 25% of domestic digital commerce within two years of launch.
+[
+3
+]
+ONDC will unbundle delivery services so that customers can choose their own logistics provider.
+[
+5
+]
+Till 26 October 2021, QCI established a team of experts and on-boarded some small and medium size industries as volunteers for project execution while DPIIT approved ₹10 crore as initial investment.
+[
+6
+]
+From November 2021 to March 2022, various public and private sector entities invested
+seed money
+to become early promoters in ONDC. This includes
+Punjab National Bank
+(9.5% for ₹25 crore).
+[
+7
+]
+State Bank of India
+(7.84% for ₹10 crore).
+[
+8
+]
+Axis Bank
+(7.84%).
+[
+9
+]
+Kotak Mahindra Bank
+(7.84%).
+[
+10
+]
+BSE Investments (5.88%).
+[
+11
+]
+Central Depository Services
+(6.78%).
+[
+12
+]
+ICICI Bank
+(5.97% for ₹10 crore).
+[
+13
+]
+Small Industries Development Bank of India
+(7.84% for ₹10 crore).
+[
+14
+]
+On 23 March 2022,
+Common Service Centres
+(CSC) under
+Ministry of Electronics and Information Technology
+(MeitY) announced that it will promote ONDC for ecommerce and logictics in rural areas through 3 Lakh Grameen e-Stores.
+[
+10
+]
+[
+15
+]
+National Payment Corporation of India
+(NPCI) and
+National Stock Exchange of India
+(NSE) committed funding for ONDC as promoters.
+[
+16
+]
+On 31 August 2022,
+Ministry of Finance
+and
+Reserve Bank of India
+(RBI) cleared NPCI to acquire 10% stake at ONDC by investing ₹10 crore.
+[
+17
+]
+[
+18
+]
+Bank of India
+acquired 5.56% stake by investing ₹10 crore.
+[
+19
+]
+As of July 2022, more than 20 organisations have committed
+₹
+255 crore
+(US$27
+million)
+in investment to the project, including
+UCO Bank
+and
+HDFC Bank
+.
+Bank of Baroda
+etc.
+[
+20
+]
+[
+21
+]
+HDFC Bank acquired 7.84% stake of ONDC.
+[
+22
+]
+In April, ONDC had received ₹157.5 crore for the first stage of the project from 17 banks and financial institutions.
+[
+23
+]
+For the pilot project, eSamudaay will help in dealing with consumer facing interface, Gofrugal Technologies supplied
+enterprise resource planning
+software, GrowthFalcons for
+digital marketing
+and SellerApp will help sellers with automation and provide digital insight on sales.
+[
+21
+]
+On 9 August 2022,
+SIDBI
+signed
+memorandum of understanding
+(MoU) with ONDC to bring small industries on the network.
+[
+24
+]
+To make the transition to ONDC easier, Yes Bank is working with SellerApp for business enterprise customers.
+[
+25
+]
+As per Nandan Nilekani, the Account Aggregator Network (AAN) will work alongside ONDC which will allow everyone in the supply chain to access formal credit in an efficient manner.
+[
+26
+]
+[
+27
+]
+ONDC signed MoU with Jammu and Kashmir Trade Promotion Organization (JKTPO) on 25 August 2022 to increase eCommerce adaptation in
+Jammu and Kashmir
+.
+[
+28
+]
+Union government is planning to integrate One District One Product scheme with ONDC.
+[
+29
+]
+IDFC First Bank
+joined ONDC on 8 September 2022 and will push its current account holders to use the network for business transaction.
+[
+30
+]
+During talks at
+Stanford University
+,
+Piyush Goyal
+clarified that through ONDC India is interested in creating multiple unicorns instead of few trillion dollar eCommerce companies.
+[
+31
+]
+ONDC signed MoU with
+Government of Madhya Pradesh
+on 22 November 2022 to increase local adoption, sprint programming and software development.
+[
+32
+]
+ONDC will incorporate mobility, hospitality and travel sectors.
+[
+33
+]
+As per
+McKinsey & Company
+, by 2030, ONDC has the potential to increase digital consumption in India by $340 billion.
+[
+34
+]
+On 6 August 2024,
+Government of Nagaland
+and ONDC signed MoU for supporting digital sales of small companies, farmers, craftsmen, and entrepreneurs. Ilandlo Services has been appointed as the nodal agency.
+[
+35
+]
+DigiReady Certification
+[
+edit
+]
+The DigiReady Certification portal was launched on 8 February 2024, as announced by ONDC and the Quality Council of India. Through the use of this online self-assessment tool,
+small and medium-sized enterprises
+can determine how well-equipped they are to join the ONDC platform as vendors. The certification procedure assesses a number of digital readiness factors, such as the availability of the paperwork required for online operations, the user's familiarity with software and technology, the ability to integrate with current digital processes, and the effectiveness of order and catalog management. Participants will receive an e-certificate designating their company as DigiReady to onboard one of the network seller partners upon satisfactorily answering all critical questions. Anyone who answers a question wrong will be sent to a hand-holding tool to help them become more proficient in the appropriate module so they can answer questions correctly. Seller Applications will contact entities to make the on-boarding process easier for them when they are DigiReady and give their permission.
+[
+36
+]
+Build for Bharat hackathon
+[
+edit
+]
+The ONDC distributed equity capital of up to $250,000 for
+Antler
+as part of the initiative. Additionally, teams that can devise original solutions to challenging business issues in the nation's e-commerce environment will receive $100,000 in Google Cloud credits. There were 27,000 participants in all, including businesses, startups, and academic institutions from all around India.
+In cooperation with the Startup India platform,
+Google Cloud
+, Antler, Protean, and
+Paytm
+, the program was launched in December 2023. With experts, leaders, venture capitalists, and incubators present, it was held in over 50 cities. On 28 June 2024, the hackathon's second edition was introduced in three categories: foundation solutions, scalable solutions, and next-generation initiatives.
+[
+37
+]
+Reference application
+[
+edit
+]
+On September 11, 2024, ONDC and
+Bhashini
+jointly released Saarthi, a reference application meant to help companies build their own unique buyer-side applications. Saarthi helps ONDC network users create buyer apps with
+multilingual functionality
+. The app currently supports
+Hindi
+,
+English
+,
+Marathi
+,
+Bengali
+, and
+Tamil
+. The intention is to eventually support all
+22 languages
+. Saarthi's
+speech recognition
+,
+transliteration
+, and real-time
+AI
+-driven
+translation
+capabilities help businesses reach a wider audience, penetrate new markets, and attract more clients. Regular security upgrades for Saarthi were promised by ONDC. Scalability and simplicity of integration are key design considerations for the Saarthi reference application.
+[
+38
+]
+[
+39
+]
+Pilot phases
+[
+edit
+]
+The pilot phase was launched on 29 April 2022 in five cities;
+New Delhi
+,
+Bangalore
+,
+Bhopal
+,
+Shillong
+and
+Coimbatore
+.
+[
+40
+]
+[
+21
+]
+In April, Bengaluru based Woolly Farms received an order from buyer application Paytm. This was the first transaction on ONDC.
+[
+41
+]
+Restaurant management platform Petpooja partnered with marketing agency GrowthFalcons to onboard
+food and beverage
+brands on ONDC network. They help restaurants with discovery and demand analytics. On 5 May 2022, GrowthFalcons, Paytm and logistics company LoadShare successfully completed the first live cascaded transaction on ONDC. The delivery happened on Petpooja
+point of sale
+(PoS) terminal.
+[
+42
+]
+By August 2022 all systems will become operational. ONDC will start servicing 100 cities and will also open for wider public use in Bengaluru, New Delhi, Coimbatore, Bhopal and Shillong where pilot projects are ongoing. By the end of 2022, ONDC will go live at national level covering the entire country.
+[
+43
+]
+ONDC expanded to
+Noida
+,
+Faridabad
+,
+Lucknow
+,
+Bijnor
+,
+Bhopal
+,
+Chhindwara
+,
+Kolkata
+,
+Pune
+,
+Chennai
+,
+Kannur
+,
+Thrissur
+,
+Udupi
+,
+Kanchipura
+,
+Pollachi
+,
+Mannar
+and
+Ramnathpuram
+on 18 July 2022.
+[
+44
+]
+ONDC activated ecommerce in agriculture domain on 20 June 2022 with
+National Bank for Agriculture and Rural Development
+(NABARD). ONDC is attempting to integrate all
+Agri-tech
+and Non Agri-tech ecommerce platforms into common network while these companies build solutions that can further accelerate the adoption and establish market linkage for Farmer Producer Organizations.
+[
+45
+]
+Government of Uttar Pradesh
+started actively promoting
+One District One Product
+(ODOP) scheme on ONDC. DPIIT will initiate integration of
+Union Government Ministries
+and various departments under State Governments with ONDC. The platform will try to rectify issues registered with National Consumer Helpline like delivery of wrong, defective, damaged goods, non-delivery or delayed delivery, failed refunds or violation of service agreements.
+[
+46
+]
+Government is planning to leverage the incubators under Startup India Seed Fund Scheme (SISFS) to build applications for ONDC with
+vernacular language
+support for greater accessibility.
+[
+47
+]
+ONDC restricted referral commission of sending a buyer to a shopper at 3% compare to 30% in major eCommerce platforms.
+[
+3
+]
+From 21 cities, the pilot phase moved to 51 cities by third week of August.
+The Economic Times
+reported that ONDC is facing teething troubles with respect to address and geolocation
+APIs
+. From September, Bengaluru will become the first city to get all user access.
+[
+48
+]
+By 2024, ONDC is planning to bring 3
+crore
+sellers and 30 crore shoppers on the network.
+[
+41
+]
+On 31 August 2022, government announced that ONDC will move to beta-testing phase for general public.
+[
+49
+]
+ONDC will charge fee from sellers for maintenance and development of the network.
+[
+50
+]
+By allowing the integration of CSC's e-Grameen app on the ONDC network as a buyer application,
+Common Services Centers
+(CSCs), under the
+Ministry of Electronics and Information Technology
+(MEitY), have teamed with the ONDC to make e-commerce accessible to rural communities. During the initial stage, CSC will function as a buyer-side platform, enabling citizens who visit the center to place orders using the e-Grameen app. The sellers who have registered on the CSC platform will be able to accept orders over the ONDC network during the second phase.
+[
+51
+]
+Public Distribution System
+[
+edit
+]
+Main article:
+Public Distribution System (India)
+In
+Himachal Pradesh
+,
+Ministry of Consumer Affairs, Food and Public Distribution
+started a pilot program to add
+fair price stores
+to ONDC. The program is being funded as a pilot by the Department of Food and Public Distribution (DFPD) in collaboration with nStore, a technology partner, and MicroSave, a company that offers fair price shops assistance. On 6 February 2024, the first order was placed at 11 fair price stores to kick off the experimental program. The pilot helps fair price stores boost their usage and income from market goods while also giving customers in rural areas access to groceries and other necessities through ONDC. Fair pricing shops on ONDC now provide household groceries that were previously only available at regular
+kirana stores
+. These products are available for purchase using ONDC buyer apps, such as
+Paytm
+.
+[
+52
+]
+The National Cooperative Consumers' Federation (NCCF) operates fair price stores all over India. Other states will follow suit with the trial project's success.
+[
+53
+]
+Public beta
+[
+edit
+]
+The public beta was rolled out on 30 September 2022 in
+Bangalore Urban district
+.
+[
+54
+]
+On the first day, LoadShare processed 100 orders. Paytm app faced issue over missing order option. There is also one order cancellation from merchant side.
+[
+55
+]
+As per government, ONDC will charge 8–10% of the selling price of the product compare to 18–40% charged by Amazon and Flipkart. The commission rate is not fixed and will be decided by market forces.
+[
+56
+]
+Small retailers are also less to fear that the platform will open
+dark stores
+.
+[
+57
+]
+Restaurants will have access to customer data.
+[
+58
+]
+From 15 October 2022, ONDC initiated outreach program for restaurants and cloud kitchens in Bengaluru.
+[
+59
+]
+From December 2022, public beta will rollout in Delhi and Mumbai.
+[
+60
+]
+From March 2023, ONDC will start network-wide scoring of sellers. This network-wide rating will include elements of feedback regarding transactions and performance of the sellers including the extent of grievance resolution.
+[
+61
+]
+As of 16 January 2023, ONDC completed 4,000 successful transactions as part of beta testing.
+[
+62
+]
+NPCI
+Bharat Bill Payment System
+launched NOCS platform that will provide reconciliation and settlement services for ONDC transactions. It will be integrated with banks, fintechs and e-commerce players. Initially it will go live with
+AU Small Finance Bank
+,
+Axis Bank
+,
+HDFC Bank
+,
+IDFC First Bank
+, and
+YES Bank
+.
+[
+63
+]
+During
+Diwali
+week, ONDC recorded nearly 1.2 million transactions from 6 November to 13 November 2023 across 600+ cities.
+[
+64
+]
+In December 2023, ONDC touched 5.5 million transactions in a month of which 2.1 million is from retail category while 3.4 million from mobility category. Retail purchase has grown from 1,281 in January 2023 to 2.1 million in December 2023.
+[
+65
+]
+In an attempt to guarantee that consumers and sellers reap the benefits and that a strong e-commerce ecosystem is constructed to endure any disturbance in the physical market, the Indian government has started a feasibility study to integrate all of its associated platforms with ONDC. A test of this kind involves combining
+E-NAM
+with ONDC for agricultural commodities.
+[
+66
+]
+Over 59,000 of the 2.3 lakh sellers and service providers that have been on-boarded by different seller platforms are food and beverage suppliers, according to
+Som Parkash
+, Minister of State for
+Commerce and Industry
+. In order to educate its members about the advantages of the ONDC platform, ONDC collaborates closely with the
+National Restaurant Association of India
+(NRAI) and the Federation of Hotel & Restaurant Associations of India (FHRAI). In addition, ONDC is actively collaborating with the
+Ministry of Micro, Small, and Medium Enterprises
+to connect MSME-Mart, which has over 2 lakh MSMEs, with ONDC and to onboard MSMEs to the network through current seller applications. The "Feet on Street" initiative by ONDC assists Network Participants (NPs) in locating and instructing vendors regarding the advantages of ONDC and the process of joining through seller applications. It also provides handholding support to sellers during the onboarding process and in developing an entry-level basic catalogue. An additional project is the ONDC Academy, a collection of instructive and enlightening textual and video content that offers curated learning experiences, best practices, and advice for every member of the ONDC network to have a successful e-commerce journey.
+[
+67
+]
+In February 2024, ONDC fulfilled over 7.1 million orders in total. ONDC exceeded 6.75 million cumulative orders in January 2024. Of them, 3.56 million (or 52.8%) were orders related to mobility, and 3.19 million (or 47.2%) were non-mobility orders. Currently, over 370,000 vendors and service providers use ONDC. More than 800 cities have seen transaction fulfillment from ONDC. Additionally, ONDC has started a pilot program to onboard street food sellers in
+Lucknow
+and
+Delhi
+. 500 street food vendors will be added to the system in each of these cities, and more seller and buyer apps will be added as part of a national rollout.
+[
+68
+]
+8.9 million transactions were made in the retail and ride-hailing divisions, according to ONDC, which also saw a 23% increase in total transaction volume month over month. The retail category saw a record-breaking 200,000 retail transactions in a single day in May 2024, with 5 million orders placed, up from 3.59 million in April 2024. With 630,000 orders in the home and kitchen category, 330,000 orders in fashion, and 2 million orders in other retail subcategories, the grocery and food delivery categories each surpassed the one million order threshold for the first time. The food category made up only 20% of all retail orders, down from 76% in the previous year. In terms of Network orders, Delhi, Uttar Pradesh, and Maharashtra continued to be the top three states. Bihar recorded a 42% increase in orders, while Uttar Pradesh saw nearly twice as many.
+[
+69
+]
+Compared to 12.90 million transactions in September 2024, ONDC saw a 7.6 percent increase to 14 million transactions in the month of October 2024. 5.5 million came from the mobility category and 8.4 million from the non-mobility category. These numbers have increased by 10% and 7.6%, respectively. Groceries generated almost one million transactions, while the food and beverage category made the largest contribution in the non-mobility space with two million. The fashion section has recorded 11 million transactions, compared to 9 million in September. In October 2023, ONDC recorded just 4.5 million transactions, but year-over-year, its transactions have increased by 200 percent.
+[
+70
+]
+B2B e-commerce
+[
+edit
+]
+Main article:
+B2B e-commerce
+ONDC will start testing B2B commerce
+[
+71
+]
+from December 2022. Network participants initiated ONDC process integration from November.
+[
+72
+]
+ONDC Advisory Council
+[
+edit
+]
+The primary role of the advisory council is to watch over ONDC implementation in the country. The members were selected based on their experience in fields such as technology, finance, commerce etc. Members included
+Nandan Nilekani
+co-founder of
+Infosys
+, Anjali Bansal founder of Avaana Capital, R S Sharma Chief Executive Office
+National Health Authority
+,
+Adil Zainulbhai
+Chairman of
+Quality Council of India
+and Capacity Building Commission, Arvind Gupta Co-founder and Head of Digital India Foundation, Dilip Asbe Managing Director and chief executive officer at
+National Payment Corporation of India
+, Suresh Sethi Managing Director and chief executive officer at
+National Securities Depository Limited
+,
+Praveen Khandelwal
+Secretary-General of Confederation of All India Traders and Kumar Rajagopalan Chief Executive Office at
+Retailers Association of India
+.
+[
+73
+]
+Convener of the ONDC Advisory Council is Anil Agrawal Additional Secretary from Department for Promotion of Industry and Internal Trade under
+Ministry of Commerce and Industry
+.
+[
+74
+]
+Some of the members are volunteers of
+ISPIRT
+.
+[
+75
+]
+Supriyo Ghosh is the chief architect behind ONDC.
+[
+76
+]
+As per ONDC Advisory Council, a total of seven apps that include one from buyer side, five from seller side and one from logistics service provider side completed cascaded transactions in the pilot phase for grocery, food and beverage segment using Beckn Protocol as of 23 June 2022 in all the five cities. ONDC Advisory Council tasked to increase awareness and initiate a pilot phase among offline traders, handicraft artisans to prioritise their on-boarding.
+[
+46
+]
+From 24 June 2022, ONDC Advisory Council started working on network expansion, governance and upgrade for the platform before nationwide rollout.
+[
+74
+]
+Objectives
+[
+edit
+]
+The major objectives include:
+ending monopolies of the platforms
+[
+77
+]
+democratisation
+[
+77
+]
+and decentralisation
+[
+40
+]
+digitisation of the value chain
+[
+78
+]
+standardisation of operations
+[
+40
+]
+inclusivity and access for sellers, especially small and medium enterprises as well as local businesses
+[
+40
+]
+increased efficiency in logistics
+[
+40
+]
+more choices and independency for consumers
+[
+79
+]
+[
+40
+]
+ensured data privacy and confidentiality
+[
+80
+]
+decreased cost of operation
+[
+79
+]
+It is compared to
+Unified Payments Interface
+(UPI).
+[
+79
+]
+Structure
+[
+edit
+]
+The ONDC uses "free softwared methodology, open specifications and open network protocol".
+[
+81
+]
+On the ONDC, the consumers and merchants can transact goods and services independent of platform or application.
+[
+82
+]
+[
+77
+]
+Beckn will provide the technology and specification layer on which ONDC will design the network policies, network trust, network grievance handling and network reputation system.
+[
+83
+]
+ONDC plans on implementing dynamic pricing model, digitised inventory management and optimise the delivery cost to help reduce cost of doing business for everyone on the platform.
+[
+84
+]
+ONDC will work on a hyper local search engine model based on GPS proximity data as default setting. The buyer can independently select the seller and logistics partner to complete the order.
+[
+85
+]
+Beckn Protocol
+[
+edit
+]
+The
+backend
+of the ONDC is built on Beckn Protocol, an
+open and interoperable protocol
+for
+decentralised
+digital commerce. Beckn Gateways provides anonymised aggregated data generated from the network. The interoperability achieved by unbundling the packet transmission layer from the experience layer enables the core of commercial transactions — such as discovery, order booking, payment, delivery, and fulfilment — to occur in a standardised manner. It can be customised to the customer's and provider's requirements using a modular approach.
+[
+86
+]
+[
+87
+]
+Beckn is not ecommerce specific and can be used in other area of digital public infrastructure like healthcare, mobility etc.
+[
+3
+]
+Nandan Nilekani, Pramod Varma and Sujith Nair developed Beckn Protocol in partnership with
+ISPIRT
+.
+[
+75
+]
+The project is supported by Beckn Foundation.
+[
+88
+]
+[
+89
+]
+Beckn brand is owned by Open Shared Mobility Foundation in which Nandan Nilekani is the sole investor.
+[
+90
+]
+It facilitates the third layer of public digital infrastructure that is the digital transaction layer in an open digital ecosystem. This helps promote market competition and regulate anti-competitive behaviour. The development came after US standard bodies failed to set new standards, leaving it to
+Big Tech
+companies to solve the issue. Beckn Protocol is a substitute for, and compatible with, similar protocols developed by the US that are in use globally for transactions and for sending information between computers. The success of
+UPI
+gave further impetus to developing a more open-source ecosystem at the national scale in other areas.
+[
+75
+]
+[
+91
+]
+Industry Working Group
+[
+edit
+]
+Microsoft
+and
+Oracle Corporation
+are exploring a partnership to supply technology solutions that can enhance the ONDC base network and help companies scale up their operations. They are part of an industry working group developing a buyers, sellers, and logistics provider registry, a network reputation index, and an online dispute resolution framework. To ease the onboarding process, Microsoft started providing a seller toolkit. Oracle is designing a neutral, transparent reputation index for sellers.
+[
+92
+]
+Amazon is working with ONDC to digitise
+Kirana stores
+.
+[
+93
+]
+Sequoia Capital
+,
+SoftBank Group
+and Indian Venture Capital Association started pushing
+portfolio companies
+they invested in to actively take part in ONDC.
+[
+94
+]
+Microsoft announced that it will join ONDC to introduce
+social commerce
+in India and will also launch a shopping app for buyers to help them with price discovery.
+[
+95
+]
+From August 2022 to January 2024,
+PhonePe
+will invest $15 million in developing an e-commerce platform on the network.
+[
+96
+]
+Amazon
+is exploring how to integrate with the network.
+[
+97
+]
+Zoho Corporation
+will provide technical support and facilitate live chat among buyers and sellers.
+[
+98
+]
+To streamline the payment process for buyers, sellers, and logistics partners, Razorpay will integrate the payment reconciliation service on ONDC to provide a single view of all transactions.
+[
+99
+]
+It will be available to all network participants. It will validate every transaction with an audit trail for documentation. This is to resolve future disputes or discrepancies.
+[
+100
+]
+Mahindra Logistics will provide same-day and next-day intra-city and inter-city pick-up and delivery services to all sellers on ONDC.
+[
+101
+]
+Logistics company XpressBees will help ONDC offer pan-India delivery services to over 2,800 cities and 20,000 pincodes.
+[
+102
+]
+On 19 December 2023, ONDC announced two distinct partnerships with
+Google
+and
+Meta Platforms
+to increase platform awareness through the use of
+WhatsApp
+and
+Google Maps
+. It will help increase the number of monthly transactions between big businesses and retail customers on the platform.
+Kochi Metro
+will be integrated with Google Maps via ONDC, enabling customers to purchase tickets directly in the app using the ONDC framework. Meta plans to incorporate the ONDC framework into WhatsApp to expedite onboarding for small businesses. From 2024, Meta will concentrate on monetisation via the ONDC platform.
+[
+103
+]
+Additionally, Google Maps will integrate more public transportation options. To enable 500,000 micro
+small and medium-sized enterprises
+(
+MSMEs
+) to create conversational buyer and seller experiences on WhatsApp and move them onto the digital platform, Meta and ONDC will collaborate to develop digital skills.
+[
+104
+]
+[
+105
+]
+A Memorandum of Understanding (MoU) was signed by ONDC and Dhiway to collaboratively develop an interoperable distributed ledger network as a scoring repository called Confidex using CORD, an open-source, layer-one distributed ledger framework.
+[
+106
+]
+With the goal of making the entire e-commerce process—from on-boarding to payment reconciliation—simpler, Zoho Corporation introduced Vikra on September 25, 2024. Vikra enables businesses to generate product catalogues, sell through platforms like
+Paytm
+,
+Ola
+, and
+Snapdeal
+, and onboard employees more quickly.
+[
+107
+]
+[
+108
+]
+Concerns
+[
+edit
+]
+Industry is raising concerns about network participants' liability for consumer complaints and the implementation of e-commerce rules across various stakeholders. There are also pertinent questions regarding third-party network policy audits and whether they will include search algorithms. Experts are discussing how stakeholders can ensure that any entity developing both buyer- and seller-side apps on ONDC is not
+gaming the system
+. Companies and ONDC are also trying to resolve the issues of network-disruption liability and
+uptime
+guarantees. The private sector is waiting for traction before they make any significant, long-term investment in ONDC.
+[
+48
+]
+According to
+JM Financial
+, ONDC faces the challenge of obtaining data and algorithms on customer buying behaviour from larger e-commerce players. ONDC framework limits data usage and storage which affects interoperability.
+[
+109
+]
+As per CEO T Koshy, ONDC will not subsidize pricing for customers using shareholders money. Instead it will focus more on innovation and special value addition to product.
+[
+110
+]
+Government told ONDC to prepare detail report on grievance redressal mechanism and submit it by the end of September 2022. The system needs to be robust and competitive.
+[
+111
+]
+Third-party agency will handle Online Dispute Resolution (ODR) by checking the digital trail left by individual orders. Customers can check the complaint status and how many are resolved. It will be involved in the final rating of the merchants. ONDC will record all complaints filed against a merchant, which will be linked directly to the network-wide reputation index that tabulates percentages of complaints raised, resolved, or unresolved, as well as those that consumers may choose to take to
+consumer courts
+. The draft ODR policy will be published by an expert committee of
+NITI Aayog
+. The ONDC dashboard will publish monthly statistics of complaints received by seller-side apps. On 2 September 2022, ONDC invited public feedback on the Issue and Grievance Management Structure (IGMS), resolving buyer and seller complaints. The mechanism will be similar to what non-profit company Sahamati uses for their Account Aggregator Network, but much faster and traceable.
+[
+112
+]
+According to Consumer Affairs Secretary Rohit Kumar Singh, for customers to receive satisfactory service, ONDC must address the liability issue. Additionally, he alerted T Koshy, CEO of ONDC, of the problem, saying that without it, ONDC could not be able to serve customers.
+[
+113
+]
+Acceptance
+[
+edit
+]
+Buyer Apps
+[
+edit
+]
+Paytm
+Mystore
+Magicpin
+Khojle by Jagran
+Ola
+Spice Money
+Crafts Villa
+NobrokerHood
+Seller Apps
+[
+edit
+]
+Snapdeal
+Bitsila
+Mystore
+ideamasters
+GrowthFalcons
+Meesho
+DIGIIT
+UdyamWell
+Easy Pay
+Logistics
+[
+edit
+]
+Ekart
+Dunzo
+Delhivery
+Loadshare
+Porter
+As of 12 May 2022,
+Flipkart
+,
+Reliance Retail
+and
+Amazon
+started talks with ONDC officials. As Logistics Network Partners (LNP),
+Ekart
+and
+Dunzo
+joined ONDC.
+Paytm
+and PhonePe, which is in the advanced stage of integration, will act as Payment Network Partners (PNP) for ONDC. PhonePe is planning to join ONDC from both the buyer and seller sides.
+[
+114
+]
+Till 15 May 2022, 24 ecommerce platforms are joining ONDC.
+[
+115
+]
+Paytm Mall confirmed joining the ONDC network with a primary focus on exports.
+[
+116
+]
+As of July 6, 200 sellers are active in the grocery, food and beverage categories. To access ONDC, a seller has to join a seller platform.
+[
+117
+]
+After the success of
+Tez
+atop
+Unified Payment Interface
+(UPI),
+Google
+initiated talks with ONDC to integrate
+Google Shopping
+with the platform.
+[
+118
+]
+Ecom Express and Shiprocket are at the final stages of integration as LNP.
+[
+119
+]
+Paytm from the buyer side, GoFrugal, SellerApp, Growth Falcon, eSamudaay, Digiit from the seller side and LoadShare from the logistics side are successfully integrated with ONDC.
+[
+74
+]
+StoreHippo started testing of the ONDC-connected marketplace for
+small and medium-sized enterprises
+.
+[
+120
+]
+Grab integrated as LNP for hyperlocal intercity delivery on 1 August 2022.
+[
+121
+]
+As of August,
+Titan Company
+,
+Zoho Corporation
+, retail intelligence platform Bizom are on advance stages of integration with the network.
+IDBI Bank
+,
+India Post
+,
+Marico
+,
+Airtel
+are also interested in joining ONDC.
+[
+122
+]
+Dunzo for Business (D4B) has joined ONDC as LNP on 4 August to provide last mile delivery for
+business to business
+(B2B) transaction.
+[
+123
+]
+By the end of August, SellerApp will onboard 3,000+ retail stores from Bengaluru.
+[
+48
+]
+Innoviti Payment Solutions is integrating the seller-side app for small merchants on ONDC to publish their goods and offer credit to buyers.
+[
+124
+]
+Business banking solution provider Zyro joined ONDC from the seller side. They will help small retailers create digital stores on the network.
+[
+125
+]
+Blowhorn
+integrated itself with ONDC as logistics network partner to perform last mile delivery and is in final phase of testing. They will go live from the fourth week of September 2022.
+[
+126
+]
+Menson will onboard 11,500 restaurants on ONDC.
+[
+127
+]
+Crowdsourced third-party logistics platform Shadowfax integrated with ONDC on 19 October 2022.
+[
+128
+]
+Kochi Open Mobility Network (KOMN) will integrate with ONDC to make transporters in
+Kerala
+discoverable on the network.
+[
+129
+]
+On 23 November 2022, Meesho joined the network and started the pilot project in Bengaluru.
+[
+130
+]
+On 24 February 2023,
+Amazon
+announced integration of its logistics network and Smart Commerce Services with ONDC.
+[
+131
+]
+Within the first year of operations, 31,000 merchants with 37 lakh products are registered with the network. In the mobility space, 56,000 vehicles are registered with ONDC, with a daily average of 20,000 rides.
+[
+132
+]
+As of 24 April 2023, ONDC completed the milestone of 5,000 daily orders in the food & beverage and grocery categories and on average, 6,000 orders during weekends. It crossed the 10,000-order mark on 30 April 2023.
+[
+133
+]
+As of 24th May 2023, ONDC achieved a grand one-year milestone after completing 1 year of operation. It expanded to over 236 cities in India. Now, it has approximately 36,000 sellers and over 45 network participants. It has scaled its operations in more than eight categories. According to the Ministry of Commerce, ONDC is flourishing with weekly 13K+ retail orders (avg.) and 36k+ mobility rides per day.
+[
+134
+]
+As of 27 November 2023,
+DTDC
+is operational on ONDC.
+[
+135
+]
+On 12 January 2024, Hyperlocal Pharmacy Aggregator MedPay joined ONDC. Customers can now access its drugstore network via third-party buyer apps.
+[
+136
+]
+Senco Gold & Diamonds became the first jewellery brand to join ONDC.
+[
+137
+]
+Agribusiness
+[
+edit
+]
+On ONDC, 4,000 farmer-producer organisations (FPOs) have offered up to 3,100 different types of value-added agricultural products since April 2023. By the end of FY24, 6,000 FPOs are expected to be on ONDC.
+[
+138
+]
+FPO Rich Returns, situated in Rajasthan, sold ₹2,00,000 worth of millet based products, garlic
+papadam
+, and
+chickpea
+items through Mystore in November 2023. Aryahi Fed Farmers Producer Company, a collective of 673 farmers located in Uttar Pradesh, is among the first to sell more than ₹5,00,000 worth of honey and millet-based value-added products through Mystore within six months of joining the company. Using the Mystore online marketplace, the Odisha-based farmers' cooperative Daringbadi Farmers Producer Company supplied
+Geographically Indicated
+(GI)-tagged
+turmeric powder
+to customers in 11 states.
+To raise sales to ₹10 million by 2024, BASIX Krishi Samruddhi, a group that has assisted 59 FPOs in ONDC across Odisha, West Bengal, Bihar, and Uttar Pradesh, reported total sales of ₹4 million in 2023. Because of India Post's extensive network, FPOs leveraged its services to distribute their goods. Since then, more logistics partners have been recruited to ensure even faster product delivery to customers.
+[
+139
+]
+Under a central scheme launched in 2020 with a budgetary provision of ₹6,865 crore, nearly 5,000 out of 8,000 registered Farmer Producer Organisations (FPOs) have been onboarded on the ONDC portal for selling the produce online to consumers across the country, against the
+Ministry of Agriculture and Farmers' Welfare
+'s target of 10,000.
+[
+140
+]
+Retail
+[
+edit
+]
+Main article:
+Retailing in India
+Reliance Retail
+has started a pilot program on ONDC using the Fynd retail platform. The pilot is live in
+Madurai
+. Reliance Retail will scale it up to 5 locations if successful, and eventually to 100 outlets on ONDC. All of Reliance Retail's brands will gradually launch on ONDC.
+[
+141
+]
+On 30 July 2024, ONDC introduced an interoperable QR code to link online and offline vendors, regional craftspeople, and neighbourhood store owners with consumers. With ONDC-registered buyer apps like Magicpin and Paytm, merchants can create a unique QR code that customers can scan to access their online store on the ONDC platform.
+[
+142
+]
+Fast-moving consumer goods
+[
+edit
+]
+Fast-moving consumer goods
+(FMCG) companies and brands such as
+ITC Limited
+,
+Hindustan Unilever
+,
+Dabur
+and
+Nivea
+started talks on joining the network.
+Shopify
+also started showing interest in the ONDC platform.
+[
+84
+]
+Products with geographical indicator tags,
+Khadi
+and those made by
+Scheduled Tribes
+will be promoted on the platform for national-level market access and community development.
+[
+46
+]
+Snapdeal
+will go live on ONDC by end of August 2022.
+[
+143
+]
+It will deal on fashion, home and beauty, and personal care categories connecting 2,500 cities. The company will use LNP for last-mile delivery.
+[
+144
+]
+Livestream shopping
+platform Kiko Live will start operation from September 2022 starting with grocery, stationary items, medicine, gifts and novelty, flowers, fashion and cosmetics, electronics, electrical and hardware, dairy products and fresh meat.
+[
+145
+]
+Through its multi-brand direct-to-consumer platform, UShop,
+Hindustan Unilever
+became the first
+fast-moving consumer goods
+(FMCG) company to join ONDC in 2022. They will also help onboard nearly 1.3 million
+Kirana stores
+on the platform.
+[
+146
+]
+The Coca-Cola Company
+introduced Coke Shop to join the ONDC. For data-driven insights, market intelligence, and strategy, it also partnered with SellerApp.
+[
+147
+]
+UK based
+The Body Shop
+became the first international beauty and skincare brand to join the platform.
+[
+148
+]
+By November 2023, ONDC surpassed 1.5 million monthly e-commerce purchases, with food accounting for almost one-third of all orders placed by customers. As orders soar, retail sales expand beyond food to include fashion, beauty, and electronics.
+[
+149
+]
+ONDC has welcomed the
+Good Glamm Group
+. This conglomerate specialises in content creation, commerce, and community, as a direct seller on 12 December 2023. The company hopes to reach 100% more customers and enhance its revenue potential by 50%.
+[
+150
+]
+Finance
+[
+edit
+]
+The ONDC successfully tested a few personal loan transactions with Easy Pay and DMI Finance in January 2024. ONDC is constructing the framework for three major product categories:
+wealth management
+,
+insurance
+, and
+credit
+. The platform is currently undergoing various stages of integration with
+Aditya Birla Capital
+,
+Tata Capital
+, Canara Bank, Kotak Mahindra Bank,
+Bajaj Finserv
+,
+Bajaj Allianz
+and Aditya Birla Health. Enabling small business owners to transact loans is one of ONDC's primary goals. It is creating the framework for a financing product that is based on
+GST
+invoices. Additionally, efforts are being made to standardise the data format stored on buyer-side application platforms. The goal is to enable lenders and insurance providers to incorporate the data into their rule engines to identify the right clients. This will enable processing financial product purchases across several use cases. As of now, 85 enterprises have expressed interest in the credit segment; however, only 7 of them enrolled in the pilot program. Companies on the buyer side include
+Tata Digital
+, Paynearby, Easypay, and Rapidor. During the trial period, DMI Finance, Aditya Birla Finance, and
+Karnataka Bank
+are the lenders. ONDC will first offer health, auto, and marine insurance.
+[
+151
+]
+[
+152
+]
+Early adopters of buyer-side apps are anticipated to include
+Policybazaar
+(Marine), Cliniq 360 (Health), and Insurance Dekho (Marine, Health, and Motor). The insurers Aditya Birla Health (Health), Kotak General (Marine), and Bajaj Allianz (Marine, Motor) are anticipated to go operational initially. With a few chosen partners, ONDC is developing sachet maritime insurance solutions priced between ₹3 and ₹5 to cover supplies during transit and reduce the risk of doing business for smaller sellers. The first wealth management product would be sachet mutual fund investments, accessible to those at the bottom of the economic pyramid, for less than ₹100. MF Utilities is the first seller-side app that ONDC has onboarded. It enables a buyer-side app to trade mutual funds and display a single snapshot of an individual's holdings across platforms.
+[
+151
+]
+[
+152
+]
+On 24 June 2025, Bajaj Markets announced that it had integrated with the ONDC, allowing its customers to access and buy appliances and electronics directly through the Bajaj Markets website and app, in addition to its extensive range of financial services and goods.
+[
+153
+]
+Mobility
+[
+edit
+]
+Namma yatri (
+meaning: Our traveller
+)
+auto-rickshaw
+in Bangalore
+ONDC entered the urban mobility space in partnership with Namma Yatri, an auto rickshaw-hailing mobile application launched by Juspay Technologies.
+[
+154
+]
+In the Namma Yatri app, ONDC completed 25,000 daily rides.
+[
+155
+]
+Namma Yatri will operate on a zero-commission approach to link drivers and passengers seeking trips in
+Delhi
+. It is currently in use in
+Kolkata
+,
+Bangalore
+,
+Kochi
+, and
+Mysore
+. Over 10,000 drivers have been onboarded by Namma Yatri in Delhi, with over 50,000 drivers expected to join in the following three months.
+[
+156
+]
+In 2023, the drivers received
+₹
+330 crore on rides made via the app. As of 2023, Namma Yatri has over 1.7 lakh drivers on board and 40 lakh riders who have reserved 20 million rides using the application.
+[
+157
+]
+On 18 December 2023, the Hyderabad Auto & Taxi Drivers Association announced the launch of a new ride-hailing app that supports ONDC protocols. Yaary, headquartered in Hyderabad, developed the app. The firm has already onboarded more than 20,000 auto and taxi drivers in Hyderabad, and it is working with many other driver associations in other cities to introduce comparable mobility apps.
+[
+158
+]
+In
+Chennai
+, Namma Yatri made its debut on 29 January 2024.
+[
+159
+]
+As the first metro service in India to integrate with the ONDC,
+Chennai Metro
+enables users to easily purchase single and return travel tickets through a variety of ONDC network apps, including
+RedBus
+, Namma Yatri, and
+Rapido
+. Millions of Indian commuters will have easier access to urban transit as metro systems in Kochi,
+Kanpur
+,
+Pune
+, and other cities are set to follow Chennai's lead.
+[
+160
+]
+As part of its partnership with ONDC,
+Uber
+is looking into services including intercity bus and metro train ticket purchases in India.
+[
+161
+]
+On 18 June 2025,
+Mumbai Metro
+announced that
+Aqua Line
+will be linked to the ONDC, allowing users to purchase tickets using QR codes via
+EaseMyTrip
+,
+RedBus
+, OneTicket, Tummoc, Yatri-City Travel Guide, Highway Delite, and
+Telegram
+based Miles & Kilometres.
+[
+162
+]
+Tourism
+[
+edit
+]
+EaseMyTrip
+announced the signing of a Letter of Intent (LOI) to join the ONDC on 23 May 2024.
+[
+163
+]
+To provide travel services on the ONDC, EaseMyTrip has announced the launch of ScanMyTrip on 12 September 2024. By allowing them to offer their services—flights, hotels, and homestays—on the ONDC, ScanMyTrip seeks to empower MSMEs, homestays, and OTAs (Online Travel Agencies).
+[
+164
+]
+Hospitality industry
+[
+edit
+]
+Main article:
+Hospitality industry
+On 21 June 2022, the
+National Restaurant Association of India
+(NRAI) initiated talks with ONDC officials. Initially, some large and small restaurants will join the network as a pilot project and work on technology standardisation. Restaurant Network Partners (RNP) under ONDC will help in the onboarding process and act as an aggregator. Post onboarding, RNP will educate and train restaurants on the online delivery business, maintain packaging and hygiene norms, and ensure that food preparation is in accordance with service level agreements to protect consumer interests. Building consumer pipeline and delivery infrastructure will not come under RNP.
+[
+165
+]
+Indian Railway Catering and Tourism Corporation
+(IRCTC) is also engaging with ONDC to enable consumers to buy items during travel.
+[
+132
+]
+To de-risk online sales from food aggregators
+Zomato
+and
+Swiggy
+,
+Domino's
+gone live on ONDC in
+National Capital Region
+.
+[
+166
+]
+On 30 January 2024, the platform integration was finished and other cities will go live in phase manner.
+[
+167
+]
+Rebel Foods
+, a cloud kitchen, expanded its EatSure direct-to-consumer (D2C) platform to ONDC.
+[
+168
+]
+McDonald's
+restaurants offering
+à la carte
+and meal options for the Eastern and Northern regions of India joined ONDC.
+[
+169
+]
+At the ONDC Startup Mahotsav on 17 May 2024,
+EaseMyTrip
+signed a Letter of Intent to become a part of the ONDC Network.
+[
+170
+]
+From July 2024, the
+Bruhat Bengaluru Hoteliers Association
+(BBHA) and GrowthFalcons will collaborate to focus on the meal delivery industry. Bengaluru is currently placing at least 50,000–60,000 food delivery orders each day on ONDC using
+Ola Consumer
+as the buying app.
+[
+171
+]
+Automotive industry
+[
+edit
+]
+Main article:
+Automotive industry in India
+Hero MotoCorp
+joined ONDC and would provide products, accessories, and parts for two-wheelers. 'Hero Genuine Parts' will be made available for customers using any buyer app on the network, including Mystore and Paytm.
+[
+172
+]
+Entertainment
+[
+edit
+]
+Main article:
+Over-the-top media services in India
+On September 24, 2024, OTTplay by HT Media Labs announced its joining the ONDC network. OTTplay will offer its membership plans via gift cards starting at ₹249 per month, including popular packs like Jhakaas, Simply South, and Totally Sorted. With these gift cards accessible across the ONDC network, customers will have easy access. The membership options facilitate users' exploration and enjoyment of entertainment catered to their own interests.
+[
+173
+]
+It has become the first OTT platform to join ONDC.
+[
+174
+]
+International collaboration
+[
+edit
+]
+Cross-border trade
+[
+edit
+]
+The first successful international cross-border transaction was carried out by ONDC and the Singapore-based business-to-business network Proxtera on 10 January 2024.
+[
+175
+]
+Technology export to foreign nations
+[
+edit
+]
+Following the signing of a memorandum of understanding on digital development by
+Prime Minister
+Narendra Modi
+and
+President of Indonesia
+Prabowo Subianto
+in
+New Delhi
+on January 2025,
+[
+176
+]
+the technology partnership between India and Indonesia is supporting the development of Indonesia Open Network (ION). The ION framework is being guided by ONDC personnel, including previous and founding executives, in cooperation with Indonesian ministries and ecosystem partners.
+[
+177
+]
+[
+178
+]
+References
+[
+edit
+]
+↑
+Mishra, Asit Ranjan (27 October 2021).
+"Public non-profit to lead ONDC rollout"
+. Mint
+. Retrieved
+6 July
+2022
+.
+↑
+"PNB acquires 6% stake in e-commerce platform ONDC for Rs 10 cr"
+.
+Business Today
+. 2022-03-25
+. Retrieved
+2022-06-24
+.
+1
+2
+3
+4
+Salkever, Alex; Amla, Ismail; Wadhwa, Vivek (2 August 2022).
+"Why India could single-handedly shape the future of e-commerce this summer"
+.
+Fortune
+. Retrieved
+2022-08-03
+.
+↑
+"All About Open Network for Digital Commerce"
+.
+ONDC | Open Network for Digital Commerce
+. 2022-07-19
+. Retrieved
+2023-05-17
+.
+↑
+Bennett Rylah, Juliet (7 August 2022).
+"India's new ecommerce system, explained"
+.
+The Hustle
+. Retrieved
+8 August
+2022
+.
+↑
+"Quality Council of India sets up team of experts to execute proposed ONDC project"
+.
+The Economic Times
+. Retrieved
+2022-05-19
+.
+↑
+"PNB to pick up 9.5% stake in Open Network for Digital Commerce"
+.
+The Economic Times
+. 29 November 2021
+. Retrieved
+2022-06-23
+.
+↑
+"State Bank of India acquires 7.84% stake in Open Network for Digital Commerce for Rs10 crore; Stock up 1%"
+.
+IIFL Securities
+. 23 March 2022
+. Retrieved
+2022-06-23
+.
+↑
+"Axis Bank acquires 7.84% stake in Open Network for Digital Commerce; Stock under pressure"
+.
+IIFL Securities
+. 24 March 2022
+. Retrieved
+2022-06-23
+.
+1
+2
+Thathoo, Chetan (2022-03-23).
+"Banks Line Up To Invest In Govt's Ecommerce Project! SBI, Kotak, HDFC, Axis Pick Stakes In ONDC"
+.
+Inc42 Media
+. Retrieved
+2022-06-23
+.
+↑
+"BSE Investments stacks 5.88% stake in Open Network for Digital Commerce (ONDC)"
+.
+IIFL Securities
+. 25 March 2022
+. Retrieved
+2022-06-23
+.
+↑
+"CDSL acquires 6.78% stake in Open Network for Digital Commerce; stock skids ~1%"
+.
+IIFL Securities
+. 28 March 2022
+. Retrieved
+2022-06-23
+.
+↑
+"ICICI Bank to buy 10 lakh shares in open network e-commerce platform ONDC"
+.
+The Economic Times
+. 29 March 2022
+. Retrieved
+2022-06-23
+.
+↑
+"SIDBI acquires stake in ONDC to facilitate market access to MSMEs"
+.
+ETRetail
+. 26 March 2022
+. Retrieved
+2022-06-23
+.
+↑
+"CSC invests in ONDC to promote e-commerce and logistics in rural India – ET Retail"
+.
+ETRetail.com
+. 23 March 2022
+. Retrieved
+2022-06-23
+.
+↑
+Nandi, Shreya (2021-11-22).
+"SBI, NPCI, NSE likely promoters of 'open' e-platform for retailers"
+.
+Business Standard India
+. Retrieved
+2022-06-24
+.
+↑
+Singh, Ritu (2022-08-31).
+"NPCI cleared to acquire 10% stake in e-commerce network ONDC"
+.
+CNBCTV18
+. Retrieved
+2022-09-01
+.
+↑
+Mishra, Digbijay; Balakrishnan, Pranav (1 September 2022).
+"Exclusive: NPCI set to pick up 9–10% stake in government's e-commerce project ONDC"
+.
+The Economic Times
+. Retrieved
+2022-09-01
+.
+↑
+"Bank of India acquires over 5.5 per cent stake in ONDC"
+.
+The Economic Times
+. 27 September 2022
+. Retrieved
+2022-09-28
+.
+↑
+"India launches pilot phase of open network for digital commerce, ONDC aims to democratise e-commerce"
+.
+ThePrint
+. 2022-04-29
+. Retrieved
+2022-06-23
+.
+1
+2
+3
+"India launches pilot phase of UPI-type protocol ONDC in 5 cities"
+.
+Business Today
+. 29 April 2022
+. Retrieved
+2022-05-19
+.
+↑
+"HDFC Bank joins other lenders; acquires 7.84% stake in ONDC"
+.
+Business Today
+. 2022-03-23
+. Retrieved
+2022-08-03
+.
+↑
+D'Souza, Sharleen (2022-04-07).
+"E-commerce platform ONDC gets fund infusion of Rs 157.5 cr, more to follow"
+.
+Business Standard India
+. Retrieved
+2022-05-19
+.
+↑
+Bora, Garima (9 August 2022).
+"SIDBI, ONDC ink MoU to accelerate e-commerce for small industries"
+.
+The Economic Times
+. Retrieved
+2022-08-09
+.
+↑
+"Yes Bank partners with SellerApp to facilitate adoption of ONDC"
+.
+The Economic Times
+. 13 August 2022
+. Retrieved
+2022-08-16
+.
+↑
+Choudhury, Deepsekhar (16 August 2022).
+"Account aggregator and ONDC will together make supply chain more efficient: Nandan Nilekani"
+.
+Moneycontrol
+. Retrieved
+2022-08-17
+.
+↑
+"Know all about Account Aggregator Network- a financial data-sharing system"
+.
+Press Information Bureau
+. Ministry of Finance
+. Retrieved
+17 August
+2022
+.
+↑
+Anand, Ankita (25 August 2022).
+"ONDC inks MoU with J&K's trade promotion body to boost e-commerce adoption in UT"
+.
+Financial Express
+. Retrieved
+2022-08-28
+.
+↑
+"One District One Product initiative should be integrated with ONDC: Goyal"
+.
+Businessline
+. 2022-08-29
+. Retrieved
+2022-08-31
+.
+↑
+Goenka, Tushar (8 September 2022).
+"IDFC on board, ONDC set for Bengaluru launch"
+.
+Financial Express
+. Retrieved
+2022-09-09
+.
+↑
+Sinha, Saurabh (7 September 2022).
+"Open network for digital commerce to bring mom & pop stores in the works: Piyush Goyal"
+.
+The Times of India
+. Retrieved
+2022-09-09
+.
+↑
+P, Suraksha (22 November 2022).
+"ONDC to sign MoU with MP government on Tuesday"
+.
+The Economic Times
+. Retrieved
+2022-11-22
+.
+↑
+Ambwani, Meenakshi Verma; Sen, Amiti (2022-12-13).
+"ONDC may cover mobility, hospitality and travel sectors"
+.
+Businessline
+. Retrieved
+2022-12-15
+.
+↑
+"ONDC likely to increase digital consumption to $340 billion by 2030: Report"
+.
+The Economic Times
+. 2023-04-26.
+ISSN
+0013-0389
+. Retrieved
+2023-04-27
+.
+↑
+Ambrocia, Medolenuo (2024-08-07).
+"Nagaland govt partners with ONDC to boost digital commerce"
+.
+EastMojo
+. Retrieved
+2024-08-11
+.
+↑
+"QCI in collaboration with ONDC launches DigiReady certification portal for small retailers"
+.
+The Statesman
+. 2024-02-08
+. Retrieved
+2024-02-08
+.
+↑
+"$250K funding for ONDC hackathon topper firms"
+.
+The Economic Times
+. 2024-05-30.
+ISSN
+0013-0389
+. Retrieved
+2024-06-01
+.
+↑
+Vishwakarma, Sumit.
+"Indian govt-backed ONDC introduces Saarthi reference app for businesses to create multilingual buyer apps"
+.
+indianstartupnews.com
+. Retrieved
+2024-09-30
+.
+↑
+"ONDC launches Saarthi reference app with for businesses to create multilingual buyer apps"
+.
+The Hindu
+. 2024-09-11.
+ISSN
+0971-751X
+. Retrieved
+2024-09-30
+.
+1
+2
+3
+4
+5
+6
+"India launches pilot phase of open network for digital commerce, ONDC aims to democratise e-commerce"
+.
+ANI
+. ANI. 2022-04-29. Archived from
+the original
+on 2022-06-01
+. Retrieved
+2022-05-19
+.
+1
+2
+Meghani, Varsha (8 August 2022).
+"ONDC Goes Live Later This Month. What Will It Take For It To Succeed?"
+.
+Forbes India
+. Retrieved
+2022-08-08
+.
+↑
+"Petpooja and GrowthFalcons join hands to seamlessly onboard restaurants onto the ONDC for Digital Commerce"
+.
+Hotelier India
+. 23 June 2022
+. Retrieved
+23 June
+2022
+.
+↑
+Mishra, Digbijay; Balakrishnan, Pranav (12 May 2022).
+"Flipkart, RIL, Amazon may join India's open ecommerce network ONDC"
+.
+The Economic Times
+. Retrieved
+2022-06-23
+.
+↑
+D'Souza, Sharleen (2022-07-18).
+"ONDC adds 15 more cities, onboards Snapdeal for pan-Indian access"
+.
+Business Standard India
+. Retrieved
+2022-07-19
+.
+↑
+P, Suraksha (20 June 2022).
+"ONDC partners with NABARD to activate e-commerce in agri tech"
+.
+The Economic Times
+. Retrieved
+2022-06-23
+.
+1
+2
+3
+"Piyush Goyal chairs ONDC advisory council meeting"
+.
+The Economic Times
+. 24 June 2022
+. Retrieved
+2022-06-24
+.
+↑
+Thathoo, Chetan (2022-06-24).
+"Seven Companies Have Built ONDC-Compatible Apps So Far: Government"
+.
+Inc42 Media
+. Retrieved
+2022-06-24
+.
+1
+2
+3
+Variyar, Mugdha (16 August 2022).
+"Is ONDC ready to go live? Operational issues, legacy woes could mar its launch"
+.
+The Economic Times
+. Retrieved
+2022-08-16
+.
+↑
+Suneja, Kirtika (31 August 2022).
+"ONDC to start beta-testing with public users"
+.
+The Economic Times
+. Retrieved
+2022-09-01
+.
+↑
+Das, Shouvik (2022-12-16).
+"ONDC to charge 'small fee' from platforms after growth period: Koshy"
+.
+mint
+. Retrieved
+2022-12-20
+.
+↑
+"CSC partners with ONDC to make e-commerce accessible to rural India - ET Retail"
+.
+ETRetail.com
+. 14 February 2024
+. Retrieved
+2024-02-15
+.
+↑
+P, Suraksha (2024-02-08).
+"Government launches pilot in Himachal Pradesh to onboard fair price shops on ONDC"
+.
+The Economic Times
+.
+ISSN
+0013-0389
+. Retrieved
+2024-02-13
+.
+↑
+Kumar, Dhirendra; Das, Puja (2024-02-07).
+"Govt lists fair price shops on ONDC"
+.
+mint
+. Retrieved
+2024-02-13
+.
+↑
+"Govt launches ONDC, an alternative to Flipkart & Amazon, in Bengaluru"
+.
+The Economic Times
+. 30 September 2022
+. Retrieved
+2022-09-30
+.
+↑
+Goenka, Tushar (1 October 2022).
+"Day One of ONDC: Largely a hit and a few misses"
+.
+Financialexpress
+. Retrieved
+2022-10-01
+.
+↑
+Mondal, Dipak (4 October 2022).
+"ONDC to charge retailers one-fourth of Amazon, Flipkart"
+.
+The New Indian Express
+. Retrieved
+2022-10-05
+.
+↑
+Nahata, Pallavi (4 October 2022).
+"Tried ONDC Yet? No? We Did It For You!"
+.
+BQ Prime
+. Retrieved
+2022-10-05
+.
+↑
+Mondal, Dipak (6 October 2022).
+"Restaurants on ONDC to have access to data of customers"
+.
+The New Indian Express
+. Retrieved
+2022-10-06
+.
+↑
+"ONDC starts outreach to restaurants, cloud kitchens"
+.
+Businessline
+. 2022-10-15
+. Retrieved
+2022-10-19
+.
+↑
+Mathi, Sarvesh (2022-11-14).
+"ONDC to go live in Delhi and Mumbai this month, two months after beta testing in Bangalore"
+.
+MediaNama
+. Retrieved
+2022-11-17
+.
+↑
+Ambwani, Meenakshi Verma (2022-12-31).
+"ONDC to introduce network-wide scoring of sellers, add 7–8 new categories"
+.
+Businessline
+. Retrieved
+2023-01-01
+.
+↑
+Yadav, Monika (16 January 2023).
+"Government-backed ONDC completes 4,000 successful transactions"
+.
+The New Indian Express
+. Retrieved
+2023-01-30
+.
+↑
+"NPCI Bharat BillPay launches NOCS platform to process ONDC transactions"
+.
+Businessline.com
+. 2023-04-25
+. Retrieved
+2023-04-25
+.
+↑
+"ONDC clocks 1.2 million transactions during Diwali week"
+.
+Business Today
+. 2023-11-17
+. Retrieved
+2023-11-20
+.
+↑
+Choudhury, Deepsekhar (2024-01-04).
+"ONDC crosses 5 million transactions in a month for the first time in December"
+.
+Moneycontrol
+. Retrieved
+2024-01-05
+.
+↑
+Mishra, Prabhudatta; Ambwani, Meenakshi Verma (2024-01-26).
+"Govt conducting feasibility study on integrating e-NAM with ONDC"
+.
+BusinessLine
+. Retrieved
+2024-01-27
+.
+↑
+Kumar, P Krishna (12 December 2023).
+"Food and beverage sellers comprise over 25 percent of ONDC - ET HospitalityWorld"
+.
+ETHospitalityWorld.com
+. Retrieved
+2024-02-13
+.
+↑
+P, Suraksha (2024-03-05).
+"ONDC completes more than 7.1 million cumulative orders in February since inception a year ago"
+.
+The Economic Times
+.
+ISSN
+0013-0389
+. Retrieved
+2024-03-06
+.
+↑
+"ONDC Network records 5 million retail orders in May 2024"
+.
+India Retailing
+. 2024-06-04
+. Retrieved
+2024-06-05
+.
+↑
+Bhavya, Dilipkumar (5 November 2024).
+"ONDC records 14 mn transactions in Oct, marks 7.6% rise during festive season"
+.
+moneycontrol.com
+. Retrieved
+9 November
+2024
+.
+↑
+"ONDC launches B2B trade on its platform, now merchants can engage with other businesses"
+.
+ONDC | Open Network for Digital Commerce
+. 2023-06-07
+. Retrieved
+2025-07-29
+.
+↑
+Paul, Binu (17 November 2022).
+"ONDC set to launch B2B testing"
+.
+Financialexpress
+. Retrieved
+2022-11-17
+.
+↑
+"Government sets up Advisory Council for ONDC project"
+.
+Businessline
+. 2021-07-05
+. Retrieved
+2022-06-23
+.
+1
+2
+3
+Balakrishnan, Pranav (24 June 2022).
+"ONDC should be made available in regional languages: Piyush Goyal"
+.
+The Economic Times
+. Retrieved
+2022-06-25
+.
+1
+2
+3
+Chaudhuri, Zinnia Ray (2022-06-25).
+"
+'All about helping Rajni' — tech gurus at iSPIRT quietly power India's digital revolution"
+.
+ThePrint
+. Retrieved
+2022-06-25
+.
+↑
+Banerjee, Zinnia (2022-07-29).
+"Data Democratisation steals the show at ThoughtWorks XConf 2022"
+.
+Analytics India Magazine
+. Retrieved
+2022-08-10
+.
+1
+2
+3
+"Shri Piyush Goyal chaired Open Network for Digital Commerce (ONDC)"
+.
+pib.gov.in
+. Retrieved
+2022-05-18
+.
+↑
+Gupta, Arpit (2022-03-27).
+"ETGovernment Explained: What is Open Network Digital Commerce and how it enables MSMEs to sell worldwide"
+.
+ETGovernment.com
+. Retrieved
+2022-05-19
+.
+1
+2
+3
+"Open Network For Digital Commerce (ONDC), The UPI For E-Commerce Explained, In Photos"
+.
+News18
+. Retrieved
+2022-05-19
+.
+↑
+Suneja, Kirtika.
+"ONDC to end e-commerce monopolistic practices, ensure data privacy: Piyush Goyal"
+.
+The Economic Times
+. Retrieved
+2022-05-19
+.
+↑
+"ONDC Project"
+.
+pib.gov.in
+. Retrieved
+2022-05-19
+.
+↑
+"ONDC: All you need to know about govt initiative challenging Amazon, Flipkart"
+.
+Hindustan Times
+. 2021-08-14
+. Retrieved
+2022-05-19
+.
+↑
+Varma, Pramod (4 May 2022).
+"Centralized platforms to decentralized networks, Enabling equitable market access and trust"
+.
+World Bank
+. Retrieved
+2022-06-24
+.
+1
+2
+Choudhury, Deepsekhar (1 June 2022).
+"Exclusive | ITC, Unilever, Dabur in talks with ONDC; Shopify may join too"
+.
+Moneycontrol
+. Retrieved
+2022-06-23
+.
+↑
+Sarkar, John (27 June 2022).
+"ONDC eyes hyperlocal search engine model"
+.
+The Times of India
+. Retrieved
+2022-06-27
+.
+↑
+Vardhan, Jai (2020-08-05).
+"Nandan Nilekani launches UPI-like backend for mobility and commerce through Beckn"
+.
+Entrackr
+. Retrieved
+2022-05-19
+.
+↑
+Matthan, Rahul (2020-08-18).
+"The internet could regain the openness envisioned for it"
+.
+mint
+. Retrieved
+2022-06-24
+.
+↑
+Ananth, Venkat (15 August 2020).
+"A Bengaluru venture wants to replicate UPI's success in mobility, ecomm"
+.
+The Economic Times
+. Retrieved
+2022-06-24
+.
+↑
+Jain, Sunil (21 May 2022).
+"The West created monopolies, we democratised data: Nandan Nilekani, co-founder, Infosys"
+.
+Financial Express
+. Retrieved
+2022-06-24
+.
+↑
+Vardhan, Jai (2020-08-05).
+"Exclusive: Nandan Nilekani launches UPI-like backend for mobility and commerce through Beckn"
+.
+Entrackr
+. Retrieved
+2022-08-08
+.
+↑
+Mathi, Sarvesh (2022-01-13).
+"Why do we need ONDC and other open protocols? Beckn co-founder Pramod Varma answers"
+.
+MediaNama
+. Retrieved
+2022-06-24
+.
+↑
+P, Suraksha (23 June 2022).
+"ONDC sets up industry working groups to create building blocks for base network"
+.
+The Economic Times
+. Retrieved
+2022-06-27
+.
+↑
+Mundhra, Laxitha (2022-06-27).
+"Amazon India's Manish Tiwary Calls ONDC 'A Fascinating Idea'
+"
+.
+Inc42
+. Retrieved
+2022-06-27
+.
+↑
+Mishra, Digbijay; Balakrishnan, Pranav (20 July 2022).
+"SoftBank, Sequoia, other VCs push ONDC to portfolio firms"
+.
+The Economic Times
+. Retrieved
+2022-07-20
+.
+↑
+Ahaskar, Abhijit (2022-08-09).
+"Microsoft joins ONDC network, to launch a shopping app in India"
+.
+mint
+. Retrieved
+2022-08-09
+.
+↑
+Mishra, Digbijay; Bhalla, Tarush (17 August 2022).
+"How PhonePe is sharpening its ecommerce ambitions as it breaks away from Flipkart"
+.
+The Economic Times
+. Retrieved
+2022-08-18
+.
+↑
+S, Vidya (2022-09-14).
+"Amazon India is working closely with govt-backed e-platform ONDC, says company's top exec"
+.
+Business Today
+. Retrieved
+2022-09-14
+.
+↑
+Goenka, Tushar (27 October 2022).
+"Zoho to power tech for ONDC, likely to provide live chat too"
+.
+Financialexpress
+. Retrieved
+2022-10-29
+.
+↑
+Shetty, Mayur (2023-04-27).
+"Razorpay offers reconciliation services for ONDC members"
+.
+The Times of India
+.
+ISSN
+0971-8257
+. Retrieved
+2023-04-29
+.
+↑
+"Razorpay joins ONDC to offer payment reconciliation service for buyer, seller"
+.
+mint
+. 2023-04-28
+. Retrieved
+2023-04-29
+.
+↑
+"Mahindra Logistics launches services on ONDC network"
+.
+Indian Transport and Logistics News
+. 2023-11-09
+. Retrieved
+2023-11-20
+.
+↑
+"ONDC onboards logistics firm XpressBees on its network"
+.
+The Times of India
+. 2023-11-23.
+ISSN
+0971-8257
+. Retrieved
+2023-11-23
+.
+↑
+Das, Shouvik (2023-12-19).
+"ONDC partners with Google, Meta to reach small businesses"
+.
+mint
+. Retrieved
+2023-12-20
+.
+↑
+Jose, Bijin (2023-12-20).
+"Here is how Meta and ONDC are partnering to boost Indian small businesses"
+.
+The Indian Express
+. Retrieved
+2023-12-20
+.
+↑
+Gupta, Aryaman (19 December 2023).
+"ONDC, Meta partner to empower small biz, upskill 500k MSMEs in next 2 yrs"
+.
+Business Standard
+. Retrieved
+20 December
+2023
+.
+↑
+Mali, Krishna (2023-08-05).
+"ONDC and Dhiway Sign MoU To Develop Interoperable Distributed Ledger Network for Secure Digital Commerce"
+.
+TechGraph
+. Retrieved
+2024-02-01
+.
+↑
+Sannith, Jude (2024-09-25).
+"Zoho launches e-commerce seller app 'Vikra' targeted at MSMEs on ONDC marketplace"
+.
+CNBCTV18
+. Retrieved
+2024-09-30
+.
+↑
+Agarwal, Palak (2024-09-25).
+"Zoho joins ONDC network with Vikra seller app; launches IoT solutions"
+.
+Business Today
+. Retrieved
+2024-09-30
+.
+↑
+Abrar, Peerzada; Shinde, Shivani (2022-09-07).
+"Onboarding of e-commerce giants crucial to ensure success of ONDC"
+.
+Business Standard
+. Retrieved
+2022-09-09
+.
+↑
+Arora, Kritika (8 September 2022).
+"ONDC strategy will differ from e-comm firms for captive users: T Koshy, CEO, ONDC"
+.
+Financial Express
+. Retrieved
+2022-09-09
+.
+↑
+Nandi, Shreya (2022-09-13).
+"Prepare robust grievance redress system before beta test: Govt to ONDC"
+.
+Business Standard India
+. Retrieved
+2022-09-14
+.
+↑
+P, Suraksha (20 September 2022).
+"ONDC to publish dispute resolution draft"
+.
+The Economic Times
+. Retrieved
+2022-09-20
+.
+↑
+"ONDC have to address liability issue to build trust: Consumers Affairs secy"
+.
+Business Standard
+. 11 December 2023
+. Retrieved
+12 December
+2023
+.
+↑
+"Explained: The open e-commerce network ONDC that Flipkart, Amazon and others are planning to join"
+.
+Firstpost
+. 2022-05-12
+. Retrieved
+2022-06-23
+.
+↑
+Nandi, Shreya (15 May 2022).
+"Dunzo, PhonePe among 24 e-commerce firms joining India's open network"
+.
+Business Standard
+. Retrieved
+23 June
+2022
+.
+↑
+"Paytm Mall announces pivot to ONDC as its primary focus; to explore export opportunities"
+.
+The Economic Times
+. 15 May 2022
+. Retrieved
+2022-06-23
+.
+↑
+Khetarpal, Sonal (6 July 2022).
+"From six cities and seven companies, ONDC to become a fairly large network in the next six months, said its CBO Shireesh Joshi"
+.
+Financial Express
+. Retrieved
+2022-07-11
+.
+↑
+Vengattil, Munsif; Das, Krishna N.; Dave, Paresh (2022-05-27).
+"Google in talks to join India's open e-commerce network ONDC"
+.
+Reuters
+. Retrieved
+2022-06-23
+.
+↑
+Paul, Binu (2022-07-01).
+"EXCLUSIVE: ONDC to give public access by August; first round of fundraising nearly complete"
+.
+Business Today
+. Retrieved
+2022-07-20
+.
+↑
+"StoreHippo all set to launch Mystore to facilitate SMEs on the ONDC network"
+.
+The Statesman
+. 2022-08-01
+. Retrieved
+2022-08-03
+.
+↑
+Mittal, Apoorva (1 August 2022).
+"Logistics startup Grab.in integrates with government's ONDC"
+.
+The Economic Times
+. Retrieved
+2022-08-03
+.
+↑
+D'Souza, Sharleen (2022-08-01).
+"ONDC in advanced stage of integration with another 17 platforms"
+.
+Business Standard India
+. Retrieved
+2022-08-03
+.
+↑
+"Reliance-backed Dunzo's B2B logistics arm arrives on ONDC"
+.
+Business Insider
+. 4 August 2022. Archived from
+the original
+on 2022-12-31
+. Retrieved
+2022-08-05
+.
+↑
+Shetty, Mayur (5 August 2022).
+"Innoviti levels ground for small merchants onboard ONDC"
+.
+The Times of India
+. Retrieved
+2022-08-05
+.
+↑
+"Zyro joins Open Network for Digital Commerce project by the Ministry of Commerce and Industry"
+.
+ThePrint
+. 2022-09-15
+. Retrieved
+2022-09-16
+.
+↑
+Anand, Ankita (21 September 2022).
+"Exclusive: Logistics company Blowhorn joins govt's e-commerce network ONDC for last-mile delivery"
+.
+Financialexpress
+. Retrieved
+2022-09-21
+.
+↑
+"Menson partners with GrowthFalcons to onboard its 11,500 restaurants onto ONDC"
+.
+The Economic Times
+. 10 October 2022
+. Retrieved
+2022-10-10
+.
+↑
+"Shadowfax integrates with ONDC for hyperlocal and e-commerce deliveries – ET Retail"
+.
+ETRetail
+. 19 October 2022
+. Retrieved
+2022-10-19
+.
+↑
+"Kochi Open Mobility Network expands statewide into Kerala Open Mobility Network with a tie-up with ONDC to allow users discover transport operators"
+.
+Financialexpress
+. 2022-11-08
+. Retrieved
+2022-11-08
+.
+↑
+Mitter, Sohini (2022-11-23).
+"After Paytm, Meesho joins ONDC to take e-commerce far and wide"
+.
+Business Today
+. Retrieved
+2022-11-24
+.
+↑
+P, Suraksha (2023-02-24).
+"Amazon to integrate logistics network, SmartCommerce offerings with ONDC"
+.
+The Economic Times
+.
+ISSN
+0013-0389
+. Retrieved
+2023-02-24
+.
+1
+2
+Ramesh, M. (2023-04-23).
+"Over 30,000 merchants have joined ONDC"
+.
+Businessline.com
+. Retrieved
+2023-04-27
+.
+↑
+Choudhury, Deepsekhar (2023-05-02).
+"ONDC food and grocery orders double in a week to shoot past 10,000 a day"
+.
+Moneycontrol
+. Retrieved
+2023-05-02
+.
+↑
+"Open Network for Digital Commerce created to democratise the existing ecommerce ecosystem of the country: Shri Piyush Goyal"
+.
+pib.gov.in
+. Retrieved
+2023-05-24
+.
+↑
+"DTDC Express goes live on ONDC"
+.
+Indian Transport & Logistics News
+. 2023-11-27
+. Retrieved
+2023-12-03
+.
+↑
+"Hyperlocal Pharmacy Aggregator MedPay joins ONDC Network - ET HealthWorld"
+.
+ETHealthworld.com
+. 13 January 2024
+. Retrieved
+2024-01-16
+.
+↑
+Martins, Maverick (22 January 2024).
+"Senco Gold joins ONDC Network to expand its reach"
+.
+Fashion Network
+. Retrieved
+2024-01-22
+.
+↑
+Das, Sandip (2024-01-29).
+"ONDC to have 6,000 farmers' collectives on board by March-end"
+.
+Financialexpress
+. Retrieved
+2024-02-01
+.
+↑
+Das, Sandip (2023-12-25).
+"Farmer groups expand business outreach via ONDC"
+.
+Financialexpress
+. Retrieved
+2024-02-13
+.
+↑
+"Nearly 5000 farmer producer organizations registered on ONDC platform: Agriculture ministry"
+.
+ETGovernment.com
+. 1 March 2024
+. Retrieved
+2024-03-07
+.
+↑
+P, Suraksha (2024-05-31).
+"Reliance Retail starts ONDC pilot via retail platform Fynd"
+.
+The Economic Times
+.
+ISSN
+0013-0389
+. Retrieved
+2024-06-01
+.
+↑
+Banerjee, Nandini (30 July 2024).
+"How ONDC's Interoperable QR Code will Transform India's Retail Sector"
+.
+Indian Retailer
+. Retrieved
+2024-08-01
+.
+↑
+Giriprakash, K. (2022-08-22).
+"We will debut on ONDC platform this month: Snapdeal President Himanshu Chakrawarti"
+.
+Businessline
+. Retrieved
+2022-09-09
+.
+↑
+"Snapdeal's launch on ONDC next month to cover more than 2,500 cities and towns"
+.
+The Economic Times
+. 18 July 2022
+. Retrieved
+2022-07-19
+.
+↑
+"Kiko Live to Launch on ONDC in September"
+.
+Indian Retailer
+. 4 August 2022
+. Retrieved
+2022-08-05
+.
+↑
+Malviya, Sagar (2023-11-14).
+"HUL to help kiranas compete with bigger players via ONDC"
+.
+The Economic Times
+.
+ISSN
+0013-0389
+. Retrieved
+2023-11-20
+.
+↑
+"Coca-Cola joins ONDC, launches marketplace Coke Shop"
+.
+BusinessLine
+. 2023-11-24
+. Retrieved
+2023-12-03
+.
+↑
+"Retail India News: The Body Shop Expands Ethical Beauty Reach via ONDC Network"
+.
+Indian Retailer
+. Retrieved
+2024-01-16
+.
+↑
+Choudhury, Deepsekhar (2023-12-11).
+"ONDC sees retail purchases diversify beyond food as fashion, electronics orders surge"
+.
+Moneycontrol
+. Retrieved
+2024-02-13
+.
+↑
+"The Good Glamm Group joins ONDC network"
+.
+ETRetail.com
+. 12 December 2023
+. Retrieved
+2024-02-13
+.
+1
+2
+Choudhury, Deepsekhar (2024-01-30).
+"ONDC pilots finserv foray with personal loans; attracts big players for credit, insurance, MF offerings"
+.
+Moneycontrol
+. Retrieved
+2024-02-01
+.
+1
+2
+"Fintech players in various stages of onboarding: ONDC's Koshy"
+.
+The Economic Times
+. 2024-01-30.
+ISSN
+0013-0389
+. Retrieved
+2024-02-01
+.
+↑
+Sinha, Vishwas (2025-06-24).
+"Bajaj Markets joins ONDC to boost digital commerce"
+.
+Elets BFSI
+. Retrieved
+2025-06-28
+.
+↑
+R, Sethuraman N.; Ajith, Anisha (2023-03-23).
+"India govt's open e-commerce network ONDC expands into mobility"
+.
+Reuters
+. Retrieved
+2023-03-25
+.
+↑
+Choudhury, Deepsekhar (2023-04-26).
+"ONDC grows 25 times in 2 months to cross 5,000 food, grocery orders a day"
+.
+Moneycontrol
+. Retrieved
+2023-04-27
+.
+↑
+Bhatnagar, Rishabh (2024-01-16).
+"ONDC-Enabled Ride Hailing App Namma Yatri Launched In Delhi"
+.
+NDTV Profit
+. Retrieved
+2024-01-16
+.
+↑
+Choudhury, Deepsekhar (2024-01-16).
+"Namma Yatri goes live in Delhi via ONDC; says per trip cost has dropped 96%"
+.
+Moneycontrol
+. Retrieved
+2024-01-16
+.
+↑
+Kurmanath, K V (2023-12-18).
+"Yaary builds ride-hailing service on ONDC"
+.
+BusinessLine
+. Retrieved
+2024-02-13
+.
+↑
+"ONDC-linked ride-hailing app Namma Yatri rides into Chennai"
+.
+The Hindu
+. 2024-01-29.
+ISSN
+0971-751X
+. Retrieved
+2024-02-01
+.
+↑
+"Chennai metro first in India to become available on ONDC apps"
+.
+The New Indian Express
+. 2024-02-03
+. Retrieved
+2024-02-09
+.
+↑
+Sarkar, Indranil; Sriram, Akash (22 February 2024).
+"Uber explores metro, bus bookings in partnership with India's ONDC - source"
+.
+Reuters
+. Retrieved
+23 February
+2024
+.
+↑
+"Mumbai Metro's Line 3 now on Open Network for Digital Commerce; QR-based tickets to be available across apps"
+.
+The Indian Express
+. 2025-06-19
+. Retrieved
+2025-06-28
+.
+↑
+Karantzavelou, Vicky (2024-05-22).
+"EaseMyTrip Joins ONDC to Foster Digital Commerce in India"
+.
+TravelDailyNews Asia & Pacific
+. Retrieved
+2024-09-13
+.
+↑
+Singh, Rimjhim (12 September 2024).
+"EaseMyTrip launches ScanMyTrip, a first-of-its-kind travel platform on ONDC"
+.
+Business Standard
+. Retrieved
+13 September
+2024
+.
+↑
+Choudhury, Deepsekhar (21 June 2022).
+"Exclusive: Top restaurant body, ONDC in talks to end 'monopolisation' by Zomato, Swiggy"
+.
+Moneycontrol
+. Retrieved
+2022-06-23
+.
+↑
+Choudhury, Deepsekhar (2024-01-15).
+"Domino's goes live on ONDC in Delhi-NCR, visible on PhonePe's Pincode app"
+.
+Moneycontrol
+. Retrieved
+2024-01-16
+.
+↑
+"Domino's Pizza expands reach with ONDC entry"
+.
+The Economic Times
+. 2024-01-30.
+ISSN
+0013-0389
+. Retrieved
+2024-02-01
+.
+↑
+Ambwani, Meenakshi Verma (2024-01-22).
+"Cloud kitchen giant Rebel Foods integrates with ONDC, aiming for broader consumer reach"
+.
+BusinessLine
+. Retrieved
+2024-01-22
+.
+↑
+"McDonald's India North and East partners with ONDC"
+.
+India Retailing
+. 2024-03-15
+. Retrieved
+2024-03-15
+.
+↑
+"EaseMyTrip to join ONDC Network"
+.
+BusinessLine
+. 2024-05-21
+. Retrieved
+2024-08-11
+.
+↑
+T.R, Jahnavi (2024-09-08).
+"Over 300 hotels in Bengaluru join ONDC; 60,000 deliveries a day"
+.
+The Hindu
+.
+ISSN
+0971-751X
+. Retrieved
+2024-09-30
+.
+↑
+"Hero MotoCorp joins ONDC to provide accessible digital mode to customers"
+.
+The Economic Times
+. 2024-05-14.
+ISSN
+0013-0389
+. Retrieved
+2024-05-27
+.
+↑
+Sharma, Manisha.
+"OTTplay Joins ONDC Network, Expanding Its Reach Across India"
+.
+www.ciol.com
+. Retrieved
+2024-10-04
+.
+↑
+"OTTplay becomes one of the first OTT players in India to join ONDC Network"
+.
+mint
+. 24 September 2024
+. Retrieved
+5 October
+2024
+.
+↑
+Hector, Darlington Jose (2024-01-10).
+"Cross-border trades to be a game-changer for ONDC: CEO T Koshy"
+.
+mint
+. Retrieved
+2024-01-16
+.
+↑
+"List of Outcomes: State visit of President of Indonesia to India (January 23-26, 2025)"
+.
+Press Information Bureau
+. Prime Minister's Office, Government of India. 2025-01-25
+. Retrieved
+2026-06-24
+.
+↑
+"Indonesia Adopts Open Digital Commerce Approach, Drawing On India's ONDC Model"
+.
+BW Businessworld
+. 2026-02-05
+. Retrieved
+2026-06-24
+.
+↑
+Chaudhury, Dipanjan Roy (2026-02-09).
+"Taking cue from India, Indonesia adopts Open Digital Network"
+.
+The Economic Times
+.
+ISSN
+0013-0389
+. Retrieved
+2026-06-24
+.
+External links
+[
+edit
+]
+Official website
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Open_Network_for_Digital_Commerce&oldid=1360949647
+"
+Categories
+:
+2021 establishments in India
+Internet protocols
+E-commerce in India
+E-commerce websites
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Search
+Search
+Open Network for Digital Commerce
+Add languages
+Add topic

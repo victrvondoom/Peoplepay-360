@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(1.62 MB)",
+  "parent_title": "TRAI Internet and Broadband",
+  "category": "broadband_regulations",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Broadband%3D17.04.2015.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/internet-broadband",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-09/Broadband%3D17.04.2015.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/trai/trai_internet_broadband_08_download_1_62_mb.pdf",
+  "sha256": "7e44d9395a4313d533caa4543c29873b84df6c24e57ce61447127347b38d8a48",
+  "bytes": 1696686,
+  "fetched_at": "2026-07-06T13:58:34.862495+00:00"
+}

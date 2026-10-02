@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(513.68 KB)",
+  "parent_title": "TRAI Quality of Service",
+  "category": "quality_of_service",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/QoS_CodeofPractice_Regulation_Amend_Guidelines_n_Checklist_16May2013_Final.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/qos",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-09/QoS_CodeofPractice_Regulation_Amend_Guidelines_n_Checklist_16May2013_Final.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/trai/trai_qos_02_download_513_68_kb.pdf",
+  "sha256": "3d72970e98d9499658c9d9b9bc7a995bd53bd0958caea4506f94451b475ddce3",
+  "bytes": 526009,
+  "fetched_at": "2026-07-06T13:58:15.881518+00:00"
+}

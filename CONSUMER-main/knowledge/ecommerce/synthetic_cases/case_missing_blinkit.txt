@@ -1,0 +1,4 @@
+CASE: Missing Quick Commerce Order — Blinkit
+Order of groceries worth INR 850 marked delivered via OTP.
+Customer claims OTP was never shared; delivery agent cannot be traced.
+Resolution: Blinkit customer support issued credit equivalent to full order.

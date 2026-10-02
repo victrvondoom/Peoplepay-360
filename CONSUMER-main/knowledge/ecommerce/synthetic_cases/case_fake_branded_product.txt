@@ -1,0 +1,5 @@
+CASE: Counterfeit Product — Myntra
+Customer purchased a "Levi's" T-shirt for INR 1,800.
+Product had wrong stitching, faded logo, and no Levi's authenticity tag.
+Myntra refused to accept return post 30-day window.
+Resolution: CCPA complaint filed. Myntra issued refund and removed the listing.

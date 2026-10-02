@@ -1,0 +1,77 @@
+Do Not Disturb Registry - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Indian registry to limit telemarketing calls
+The
+National Customer Preference Register (NCPR)
+, formerly the
+National Do Not Call Registry (NDNC)
+, is intended to give Indian consumers an opportunity to limit the telemarketing calls they receive. The
+Telecom Regulatory Authority of India
+(TRAI) is the
+Indian
+governmental agency tasked with defining various policies and regulations for wireless communication service providers in India. As per TRAI regulation, every mobile service provider in India is required to set up a National Customer Preference Register (NCPR). In practice, various service providers refer to it as the
+Do Not Disturb (DND) registry
+.
+Telemarketers
+, after registration from TRAI, receive permission to access the NCPR.
+The customer preference portal on the TRAI website details the official rules regarding registry setup and the procedure for registering on the 'do not disturb' registry.
+[
+1
+]
+The actual administration of the registry is not done by TRAI, neither via this portal nor anywhere else, instead being left to individual service providers
+Introduction
+[
+edit
+]
+The Indian telecom Industry with nearly 900 million subscribers is the second largest wireless market in the world. Low tariffs and direct reach to consumers has made SMS and direct calling one of the most cost effective ways of selling services and products. However, telemarketing has brought with it serious issues of invasion of privacy and has become a major irritant to customers.
+To holistically curb this growing menace and effectively regulate unsolicited commercial Calls and messages, TRAI has notified
+the Telecom Commercial Communication Customer Preference Regulations, 2010
+. All the provisions of regulations come into force from 27 September 2011.
+The Telecom Commercial Communications Customer Preference Portal is a data base containing a variety of information prescribed in "The Telecom Commercial Communications Customer Preference Regulations, 2010".
+The NCPR status of any mobile subscriber can be verified online,
+[
+2
+]
+[
+3
+]
+[
+4
+]
+as TRAI maintains the records of all the requests coming from all mobile operators for NCPR registrations.
+References
+[
+edit
+]
+↑
+Telecom Commercial Communications Customer Preference Portal
+Archived
+2011-09-25 at the
+Wayback Machine
+, on TRAI website.
+↑
+"DND Status"
+. TRAI.
+↑
+"DND/NDNC Status"
+. Mobile Number Tracker.
+↑
+"Do Not Disturb"
+. Mobile Number Tracker India.
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Do_Not_Disturb_Registry&oldid=1328339596
+"
+Categories
+:
+Telemarketing
+Telecommunications in India
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Webarchive template wayback links
+Search
+Search
+Do Not Disturb Registry
+Add languages
+Add topic

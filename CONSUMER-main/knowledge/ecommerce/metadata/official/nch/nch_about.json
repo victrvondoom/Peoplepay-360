@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "NCH",
+  "title": "National Consumer Helpline About and Complaint Process",
+  "category": "complaint_redressal",
+  "source_url": "https://consumerhelpline.gov.in/public/about",
+  "final_url": "https://consumerhelpline.gov.in/public/about",
+  "type": "html_text",
+  "raw_chars": 6094,
+  "stored_path": "knowledge/ecommerce/official/nch/nch_about.txt",
+  "sha256": "b92895f9020b3bc20339c3e8f4dcee452a37836f9bab8af6f6b9660357f5a114",
+  "bytes": 6131,
+  "fetched_at": "2026-07-07T12:47:08.183642+00:00",
+  "official_source": true
+}

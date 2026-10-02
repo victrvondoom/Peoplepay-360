@@ -1,0 +1,1337 @@
+BSNL - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Indian central public sector undertaking
+Bharat Sanchar Nigam Limited (BSNL)
+BSNL Headquarters at
+New Delhi
+Type
+Central Public Sector Undertaking
+Industry
+Telecommunications
+Founded
+15
+September 2000
+;
+25 years ago
+(
+2000-09-15
+)
+Founder
+Government of India
+Headquarters
+New Delhi
+,
+India
+Area served
+India
+Nepal (as
+MTNL
+)
+Mauritius (as
+MTML
+)
+Key people
+Shri A. Robert J. Ravi,
+ITS
+(Chairman & MD)
+[
+1
+]
+Services
+FTTH
+Fixed line telephone
+Mobile telephony
+Broadband
+Internet services
+Streaming television
+IPTV
+Revenue
+₹
+23,427 crore
+(US$2.5
+billion) (2025)
+[
+2
+]
+Operating income
+₹
+20,841 crore
+(US$2.2
+billion) (2025)
+[
+2
+]
+Net income
+₹
+−
+2,247 crore
+(US$−240
+million) (2025)
+[
+2
+]
+Total assets
+₹
+167,086 crore
+(US$17
+billion) (2024)
+[
+2
+]
+Total equity
+₹
+106,626 crore
+(US$11
+billion) (2024)
+[
+2
+]
+Owner
+Department of Telecommunications
+,
+Ministry of Communications
+,
+Government of India
+Members
+9.2
+crore
+(91.95 million)
+(December 2025)
+[
+3
+]
+Number of employees
+51,145 (as on 30 June 2024, as per RTI)
+Divisions
+Bharat Fiber
+BSNL Broadband
+BSNL Mobile
+Bharat Net
+BSNL Towers
+[
+4
+]
+Subsidiaries
+Mahanagar Telephone Nigam Limited
+[
+5
+]
+Website
+bsnl
+.co
+.in
+Bharat Sanchar Nigam Limited
+(
+transl.
+India Telecom Corporation Limited
+), commonly known as BSNL is an Indian
+central public sector undertaking
+, under the
+ownership
+of
+Department of Telecommunications
+. It was established on 1st October 2000 by the Government of India. It provides mobile voice and internet services through its nationwide
+telecommunications
+network across India. It is the largest
+government-owned-wireless telecommunications service provider
+in India.
+[
+6
+]
+History
+[
+edit
+]
+BSNL logo used until October 2024
+Bharat Sanchar Nigam Limited is an Indian
+government enterprise
+and its history can be traced back to
+British Raj
+. The foundation of the telecommunications network in India was laid by the British sometime during the 19th century. During the British era, the first telegraph line was established between
+Kolkata
+and Diamond Harbour in 1850. The British
+East India Company
+started using the telegraph in 1851, and by 1854, telegraph lines were laid across the country. In 1854, the telegraph service was opened to the public, and the first telegram was sent from Mumbai to Pune. In 1885, the
+Indian Telegraph Act
+was passed by the
+British Imperial Legislative Council
+. After the bifurcation of the Post and Telegraph department in the 1980s, the creation of
+Department of Telecom
+eventually led to the emergence of the
+government owned telegraph and telephone enterprise
+, which led to the foundation of BSNL.
+[
+7
+]
+Until the early 2000s, BSNL was the only service provider for
+Indian Railways
+to control and administrative communication circuits. Later, they were separated as
+RailTel
+.
+For 160 years, BSNL had operated the public telegram service. In 2010, the telex network between its 182 offices was replaced with the "Web-Based Telegram Messaging System" which relied on internet connections rather than telex lines (which are more reliable where power outages are more common). This led to a decline in service, and the company applied the title "diminished service" to telegrams in 2010. Finally, on 15 July 2013, the public telegram service was shut down completely.
+[
+8
+]
+[
+9
+]
+BSNL also enjoys a part of revenue from the payments made for private players for recharge plans.
+Products and services
+[
+edit
+]
+Telephone and Mobile
+[
+edit
+]
+BSNL provides both
+fixed line telephones
+and
+mobile telephony
+services on the
+GSM
+platform.
+BSNL Mobile
+[
+edit
+]
+Main article:
+BSNL Mobile
+BSNL Mobile
+is a major provider of
+GSM
+network services under the brand names
+CellOne
+and BSNL all over India. It has a wide network coverage in both urban and rural areas of India. It has over 121.82 million customers across India.
+[
+6
+]
+BSNL Mobile offers
+prepaid
+,
+postpaid
+services and value-added services such as Free Phone Service (FPS), India Telephone Card (Prepaid card), Account Card Calling (ACC),
+Virtual Private Network
+(VPN), Tele-voting, Premium Rate Service (PRM). It also offers the
+IPTV
+, which enables customers to watch television through the Internet and Voice and Video Over Internet Protocol (VVoIP).
+[
+10
+]
+BSNL Landline
+[
+edit
+]
+BSNL Landline was launched in the early 1990s. It was the only fixed-line telephone service for the whole country before the New Telecom Policy was announced by the
+Department of Telecom
+in 1999. Only the Government-owned BSNL and MTNL were allowed to provide land-line phone services through
+copper wire
+in the country. BSNL Landline is the
+largest fixed-line telephony
+in India. It has over 9.55 million customers and 47.20% market share in the country as of 28 February 2021.
+[
+6
+]
+Internet
+[
+edit
+]
+BSNL is the
+fourth-largest ISP
+in India, having a presence throughout the country. It also has the largest Firebase telecom network in the country, around 7.5 lakh kilometers, among the four operators in the country.
+[
+11
+]
+BSNL Broadband
+[
+edit
+]
+Main article:
+BSNL Broadband
+BSNL Broadband provides telecom services to enterprise customers, including MPLS,
+P2P
+and Internet leased lines. It provides fixed-line services and landlines using
+CDMA
+technology and its own extensive optical fiber network. BSNL provides
+Internet access
+services through dial-up connections as prepaid,
+NetOne
+as postpaid, and
+DataOne
+as
+BSNL Broadband
+.
+[
+12
+]
+[
+13
+]
+BSNL Bharat Fiber
+[
+edit
+]
+BSNL Bharat Fiber (
+FTTH
+) was launched in February 2019. It offers
+TV over IP (IPTV)
+,
+Video On-Demand
+(VoD),
+Voice over IP
+(VoIP), Audio On-Demand (AoD),
+Bandwidth On-Demand
+(BoD),
+remote education
+,
+video conferencing
+services, interactive gaming, and Virtual Private LAN services. BSNL has said that its optic fiber network provides fixed access to deliver high-speed Internet up to 300 Mbit/s.
+[
+14
+]
+[
+15
+]
+[
+16
+]
+Bharat Net
+[
+edit
+]
+With effect to the government of India's policy decision to provide state-owned BSNL with another revival package worth 1.64 lakh crore rupees, the struggling PSU was merged with the Government's special purpose vehicle
+BBNL
+. This gave the struggling PSU a boost and an additional advantage of an additional 5.67 lakh kilometers of optical fiber, which has been laid across 1.85 lakh village panchayats in the country using the Universal Service Obligation Fund (USOF). Currently, it has an optical fibre cable network of over 6.83 lakh kilometres.
+BSNL 4G
+[
+edit
+]
+BSNL is the first telecom operator in India to start rolling out 4G service by using Mobile Broadband in 2009. In 2010 BWA auction, BSNL was allocated with 4G spectrum under 2300MHz Bandwidth (in all 20 telecom circles in India except Delhi & Mumbai because it is administered under MTNL network but MTNL also allocated with the same) which is also known as BWA or Broadband Wireless Access spectrum. It is initially used for WiMAX, and later the same is used for LTE service. BSNL was allocated the spectrum without participating in the BWA auction, because it is a state-owned entity, owing to which it has been provided with Auction Exception. So, in order to acquire the spectrum, BSNL has to pay the equivalent amount that private telecom players paid for the same Bandwidth in the Auction to the Government. So, BSNL has provided 8,500 crores to the Government for this spectrum. MTNL also provided 1120 crores to the Government for the same. In the meanwhile other telecom players were using LTE technology to provide 4G services, BSNL alone used WiMAX technology to provide 4G service. But WiMAX technology is not accepted globally due to which the technology got failed to prove. So BSNL returned back all the 4G WiMAX technologies to the Government and brought back the investment amount due to heavy financial debt incurred at the time.
+[
+17
+]
+Reason behind the financial burden is because of its Legacy Systems and increasing pension to retired employees. Later in 2017-18 period BSNL provided 4G services in Few areas of India under Spectrum Reframing despite being not a proper 4G service. Under Make in India initiative, C-DOT (
+Centre for Development of Telemarics
+) developed the 4G core network for India. But the assembly segment was developed by Tejas Network (which was later brought by
+TATA
+) and the Government owned entity ITI (
+Indian Telephone Industries Limited
+).
+BSNL started 4G service in some parts of India such as Bihar, Jharkhand, and Uttar Pradesh in January 2019, but it is limited to a few cities and towns. Most of its 4G services are currently available in Southern India. However, BSNL is trying to launch pan-India 4G services up to September 2022.
+[
+18
+]
+[
+19
+]
+The telecom minister said that BSNL will launch its 4G services all over India on the 75th Independence Day of India along with various other projects.
+[
+20
+]
+BSNL is using 700
+MHz and 2100
+MHz bands to roll out the 4G services which can be upgraded to 5G in the future. BSNL has installed more than 40,000 plus 4G enabled and 5G ready towers.
+[
+21
+]
+On September 27, 2025, PM Narendra Modi launched BSNL's Swadeshi 4G Network and commissioned 97500 towers developed indigenously.
+[
+22
+]
+[
+23
+]
+BSNL 5G
+[
+edit
+]
+On behalf of the government of India, the Minister of Communications
+Ashwini Vaishnaw
+announced that the State-Owned Telco would start its 5G operations by 15 August 2023. He also added that the 4G and 5G network of the state-owned
+BSNL
+would be a completely home-grown indigenous 4G and 5G network technology; thus, emphasizing more on Govt. of India's
+Atmanirbhar Bharat
+.
+[
+24
+]
+[
+25
+]
+[
+26
+]
+[
+27
+]
+Direct-to-Device
+[
+edit
+]
+In November 2024, BSNL introduced and made a trial of the new
+Direct-to-Device
+technology for the first time in India in partnership with VIASAT. This technology enables users to communicate without transversing a Base Station or Core Network. This technology is used in direct interaction between
+5G
+-enabled devices to connect seamlessly to both terrestrial and satellite coverage.
+[
+28
+]
+IP & cloud services
+[
+edit
+]
+BSNL Managed Cloud Services
+[
+edit
+]
+On 28 May 2013, BSNL launched "Internet Data Centre – Managed Cloud Services". This includes computation, software, data access and storage services for individuals as well as enterprises.
+[
+29
+]
+Services include:
+Cloud compute
+Cloud Storage
+Hosted Exchange
+Hosted Virtual Desktop Infra (VDI)
+Hosted Gateway
+Hosted Email filter
+Hosted web filter
+Hosted backup and restore
+Hosted DR
+Hosted communication Services
+Hosted Database
+BSNL Wing Services
+[
+edit
+]
+On 16 August 2018, BSNL launched "BSNL Wings Services" in
+22 telecom circles
+, in which there is no need for a
+SIM card
+or
+FTTH
+as it is a
+VoIP
+service through an app.
+[
+30
+]
+It offers unlimited free calling for one year throughout India.
+[
+31
+]
+Administrative units
+[
+edit
+]
+BSNL vertical divisions
+[
+edit
+]
+BSNL is primarily divided into three vertical divisions:
+BSNL — Consumer Fixed Access (CFA), wire line and broadband business.
+BSNL — Consumer Mobility (CM), wireless business, primarily 3G/4G GSM services, WLL-M services.
+WLL-M
+BSNL — Enterprise Business, Enterprise customers on turnkey basis.
+Other than these three vertical divisions, there are electrical wings and civil wings, which take care of real estate monetization.
+BSNL horizontal divisions
+[
+edit
+]
+Horizontally, BSNL is divided into several administrative units, variously known as telecom circles, metro districts, project circles and specialized units. It has 24 telecom circles, two metro districts, six project circles, four maintenance regions, five telecom factories, three training institutions and four specialized telecom units.
+[
+32
+]
+Each circle is headed by a Chief General Manager (CGM) who is an officer of Indian Telecom Service (ITS).
+The organizational structure of BSNL is as follows: Chief General Manager being the head of the Circle who is the officer of HAG+ level, assisted by three or four Principal General Manager (PGM) who are the officer of grade HAG. The districts over a circle is being headed by the designations as General Manager officer of grade of SAG who looks over around two to four districts, while where the connections are less and the smaller district is being headed by Telecom District Manager (TDM) Officer of the grade of JAG and Telecom Divisional Engineer (TDE) officer of STS grade, all the officers above the post of TDE (including TDE) are of Group A, and they are the officers of grade of Indian Telecom Service (ITS) directly or promotive. Then the Group B consists of Additional Divisional Engineer, Sub Divisional Engineer and Junior Telecom officer and then the organization has Group C and D employees.
+Merger and acquisitions
+[
+edit
+]
+On 24 October 2019, the Government of India announced a revival package for BSNL and
+MTNL
+which includes monetizing assets, raising funds,
+TD-LTE
+spectrum, and a voluntary retirement scheme for employees. Apart from the package, the
+Ministry of Communications
+has decided to merge MTNL with BSNL. Pending this, MTNL will be a wholly owned
+subsidiary
+of BSNL.
+[
+5
+]
+[
+33
+]
+[
+34
+]
+[
+35
+]
+On 24 October 2019, the Government of India announced a revival package for BSNL and has given its agreement to an in-principle merger (operational merger, i.e., only the operations of
+MTNL
+and BSNL would be merged, and they would be managed by BSNL) for MTNL and BSNL
+[
+36
+]
+On 27 July 2022, the Government of India announced another revival package for the state-owned BSNL, for providing 4G and 5G services making the
+PSU
+more viable and vibrant and turning it into a profit making organization; under this policy decision the government also merged
+BBNL
+with BSNL.
+[
+37
+]
+Controversies
+[
+edit
+]
+Website hacking
+[
+edit
+]
+In 2012
+Nikhil Thakur
+, a hacker and Internet activist, broke into the Madhya Pradesh BSNL website and later on hacked the India BSNL website.
+[
+38
+]
+[
+39
+]
+Cyberattack
+[
+edit
+]
+In July 2017, BSNL suffered a cyberattack, in
+Karnataka
+, when malware affected the telco's broadband network using modems with default passwords.
+[
+40
+]
+The virus reportedly affected 60,000 modems and blocked their internet connectivity. Later, BSNL issued an advisory notice to its broadband customers, urging them to change their default router username and passwords.
+[
+41
+]
+See also
+[
+edit
+]
+India portal
+Companies portal
+Government of India
+BSNL Broadband
+BSNL Mobile
+Mahanagar Telephone Nigam Limited
+Telecommunications in India
+List of telecom companies in India
+List of mobile network operators
+References
+[
+edit
+]
+↑
+"The government has appointed Robert Jerard Ravi as the new Chairman and Managing Director of Bharat Sanchar Nigam Limited (BSNL) effective July 15"
+.
+hindu business line
+. Retrieved
+15 July
+2024
+.
+1
+2
+3
+4
+5
+"FY25 Results"
+. usiness Standard. 27 May 2024
+. Retrieved
+28 May
+2025
+.
+↑
+"Telecom Subscription Reports"
+.
+TELECOM REGULATORY AUTHORITY OF INDIA
+.
+↑
+"Cabinet allows, BSNL to sell tower assets"
+.
+Economic Times
+. 18 September 2017.
+1
+2
+"MTNL to be a BSNL subsidiary"
+.
+The Hindu
+. 29 June 2019.
+1
+2
+3
+"Press Release on Telecom Subscription Data as on 30 November, 2019"
+(PDF)
+.
+Telecom Regulatory Authority of India
+. 30 November 2019. Archived from
+the original
+(PDF)
+on 29 February 2020
+. Retrieved
+16 January
+2020
+.
+↑
+"About us"
+. BSNL, LLC. 17 November 2019.
+↑
+"BSNL decides to discontinue 160-year-old telegram service"
+.
+The Times of India
+. 12 June 2013.
+Archived
+from the original on 15 June 2013
+. Retrieved
+13 June
+2013
+.
+↑
+Joshi, Sandeep (12 June 2013).
+"Dot, dash, full stop: Telegram service ends July 15"
+.
+The Hindu
+. Chennai, India
+. Retrieved
+13 June
+2013
+.
+↑
+"BSNL Launches VVoIP"
+. Techtree.com. Archived from
+the original
+on 13 December 2011
+. Retrieved
+17 September
+2012
+.
+↑
+"BSNL plans to monitise fibre network"
+.
+The Economic Times
+. 18 April 2019.
+↑
+BSNL Broadband
+Archived
+24 November 2009 at the
+Wayback Machine
+↑
+NetOne
+Archived
+3 May 2009 at the
+Wayback Machine
+↑
+"Bharat Fiber FTTH Overview"
+. BSNL, LLC. 17 February 2019.
+↑
+"BSNL Bharat Fiber FTTH, Everything you need to know"
+.
+India Today
+. 6 February 2019.
+↑
+"BSNL Broadband VOIP Configuration for Landline Phone Instrument"
+.
+www.bsnltariff.com
+. 31 August 2021.
+↑
+"BSNL and MTNL to get $1.8B refund for surrendering 4G spectrum"
+.
+VCCircle
+. Retrieved
+16 February
+2025
+.
+↑
+"BSNL has given September 2022 timeline for pan-India 4G rollout: MoS Telecom - ET Telecom"
+.
+ETTelecom.com
+. Retrieved
+1 December
+2021
+.
+↑
+"Too Soon? BSNL Will Roll Out 4G Services Across India Before September 2022"
+.
+India Times
+. 2 December 2021
+. Retrieved
+3 December
+2021
+.
+↑
+"BSNL & TCS Will Launch 4G On Independence Day? This Is What We Know So Far About BSNL 4G Launch"
+.
+Trak.in
+. 22 February 2022
+. Retrieved
+28 February
+2022
+.
+↑
+India, Aaj (1 December 2024).
+"BSNL Has 50,708 4G enabled, 5G-Ready Towers Across India"
+.
+Aaj India
+. Retrieved
+1 December
+2024
+.
+↑
+https://www.indiatoday.in/india/story/pm-modi-inaugurates-bsnls-swadeshi-4g-network-commissions-nearly-98000-mobile-4g-towers-from-odisha-2794310-2025-09-27
+↑
+https://timesofindia.indiatimes.com/business/infrastructure/indias-swadeshi-4g-push-pm-modi-launches-bsnls-indigenous-services-heres-all-you-need-to-know/articleshow/124179908.cms
+↑
+www.livemint.com (2 October 2022).
+"BSNL to roll out 5G in August 2023: Ashwini Vaishnaw"
+.
+www.livemint.com
+. Retrieved
+8 October
+2022
+.
+↑
+"TCS set to win $2-billion deal from BSNL for 4G and 5G roll-out"
+.
+www.business-standard.com
+. Retrieved
+8 October
+2022
+.
+↑
+"TCS set to win $2-billion deal from BSNL for 4G and 5G roll-out"
+.
+www.rediff.com
+. Retrieved
+8 October
+2022
+.
+↑
+"Going big BSNL set to buy 4G gear from TCS"
+.
+www.thehindubusinessline.com
+. 3 October 2022
+. Retrieved
+8 October
+2022
+.
+↑
+"Direct-to-device satellite services successfully trialed for first time in India by Viasat and BSNL"
+.
+viasat.com
+. 15 October 2024
+. Retrieved
+9 November
+2024
+.
+↑
+"Internet Data Center- Managed Cloud Services"
+.
+↑
+"BSNL offers wings services"
+.
+NDTV
+. 2 February 2019.
+↑
+"BSNL Wings Services launched in 22 telecom circles"
+.
+BSNL
+. 29 June 2019.
+↑
+"BSNL Units"
+. Archived from
+the original
+on 6 September 2012.
+↑
+"Government approves Revival package for BSNL, MTNL"
+.
+Economic Times
+. 23 October 2019.
+↑
+"BSNL, MTNL to be merged, along with special package"
+.
+India Today
+. 23 October 2019.
+↑
+"BSNL, MTNL to be merged, centre lines up rs 70000 crore revival package"
+.
+Times of India
+. 29 October 2019.
+↑
+"BSNL, MTNL to merge under Rs 69,000 cr revival plan, 4G spectrum, VRS part of scheme"
+.
+India Today
+. Retrieved
+8 October
+2022
+.
+↑
+"Cabinet clears BSNL-BBNL merger, approves revival package worth Rs 1.64 lakh cr"
+.
+The Economic Times
+.
+↑
+"BSNL Server Vulnerable To Hacking; Shows A 19 Yr Old"
+. 12 November 2012.
+↑
+"all india bsnl hacked"
+.
+hindustan times
+. Archived from
+the original
+on 8 November 2012.
+↑
+"BSNL asks 2000 users to change modem password after malware attack"
+.
+Indian Express
+. 28 July 2018
+. Retrieved
+9 February
+2018
+.
+↑
+"Malware affects thousands of BSNL broadband modems"
+.
+The Hindu
+. 17 July 2017
+. Retrieved
+18 November
+2021
+.
+External links
+[
+edit
+]
+Official website
+v
+t
+e
+Ministry of Communications (India)
+Department of Telecommunications
+Statutory bodies
+Telecom Disputes Settlement and Appellate Tribunal
+(TDSAT)
+Telecom Regulatory Authority of India
+(TRAI)
+Attached offices
+Controller General of Communication Accounts (CGCA)
+Director General Telecom (DGT)
+Telecommunication Engineering Centre
+(TEC)
+Universal Service Obligation Fund (USOF)
+Subordinate offices
+National Centre for Communication Security (NCCS)
+Wireless Monitoring Organisation
+(WMO)
+Field offices
+Controller of Communication Accounts (CCA)
+Autonomous bodies
+Centre for Development of Telematics
+(C-DOT)
+Training institutes
+National Telecommunications Institute for Policy Research Innovation Training (NTIPRIT)
+National Institute of Communication Finance (NICF)
+Others
+Centre for Excellence in Telecom Technology and Management
+Digital Communications Commission
+Telecom Enforcement Resource and Monitoring
+(TERM)
+Telephone Advisory Committees
+(TAC)
+Wireless Planning & Coordination Wing
+(WPC)
+PSUs
+Bharat Broadband Network Limited
+(BBNL)
+Bharat Sanchar Nigam Limited
+(BSNL)
+Indian Telephone Industries Limited
+(ITI)
+Mahanagar Telephone Nigam Limited
+(MTNL)
+Telecommunications Consultants India Limited
+(TCIL)
+Civil service
+Indian Telecommunication Service
+Indian Radio Regulatory Service
+Department of posts
+Army Postal Service
+India Post
+India Post Payments Bank
+Legislations
+The Indian Telegraph Act, 1885
+The Indian Wireless Telegraphy Act, 1940
+The Indian Post Office Act, 1898
+The Telecom Regulatory Authority of India Act, 1997
+Ministers
+Rafi Ahmed Kidwai
+Amrit Kaur
+Jagjivan Ram
+Raj Bahadur
+Lal Bahadur Shastri
+S. K. Patil
+Jawaharlal Nehru
+P. Subbarayan
+Ashoke Kumar Sen
+Satya Narayan Sinha
+Ram Subhag Singh
+Indira Gandhi
+Sher Singh
+Hemvati Nandan Bahuguna
+Kasu Brahmananda Reddy
+Shankar Dayal Sharma
+Morarji Desai
+Parkash Singh Badal
+George Fernandes
+Brij Lal Varma
+Charan Singh
+Shyam Nandan Mishra
+Bhishma Narain Singh
+C. M. Stephen
+Anant Prasad Sharma
+Rajiv Gandhi
+V. N. Gadgil
+Arjun Singh
+Vasant Sathe
+Bir Bahadur Singh
+V. P. Singh
+K. P. Unnikrishnan
+Chandra Shekhar
+Atal Bihari Vajpayee
+Beni Prasad Verma
+Buta Singh
+Sushma Swaraj
+Jagmohan
+Ram Vilas Paswan
+Pramod Mahajan
+Arun Shourie
+Dayanidhi Maran
+A. Raja
+Manmohan Singh
+Kapil Sibal
+Ravi Shankar Prasad
+Ashwini Vaishnaw
+(incumbent)
+Ministers of state
+Manoj Sinha
+Sanjay Shamrao Dhotre
+Devusinh Jesingbhai Chauhan
+(incumbent)
+Preceding ministry:
+Ministry of Communications and Information Technology
+v
+t
+e
+Telecommunication companies of India
+Mobile
+operators
+Active
+Airtel
+GoI
+DoT
+BSNL
+BSNL Mobile
+MTNL
+Vodafone Idea
+Jio
+MVNOs
+Aerovoyce
+Defunct
+Aircel
+Essar
+Etisalat (Cheers Mobile)
+!dea
+Loop
+MTS
+Orange
+RCom
+S Tel
+spice
+Tata DoCoMo
+T24
+Virgin
+Telenor
+Tulip Telecom
+Videocon
+Vodafone
+Internet
+providers
+ACT Fibernet
+Airtel
+APSFL
+Asianet Digital
+BSNL
+BSNL Broadband
+MTNL
+InCablenet
+Jio
+DEN Networks
+Hathway
+Railtel
+Reliance
+Sify
+SPECTRA
+Tata Teleservices
+Tikona
+Excitel Broadband
+DTH operators
+ABS Free Dish
+Airtel digital TV
+Digiana
+DD Free Dish
+Dish TV
+d2h
+Zing Digital
+Grand TV
+Hathway
+Independent TV
+Siti Networks
+Sun Direct
+Tata Play
+Infrastructure providers
+GAILTEL
+POWERTEL
+Bharti Infratel
+Indus Towers
+HughesNet
+American Tower
+Datacenter providers
+National Informatics Centre
+ESDS
+GPX
+Netmagic
+NxtGen
+Nxtra Data
+Yotta
+Tata Communications
+Global Cloud Xchange
+Internet exchanges
+Mumbai IX
+National Internet Exchange of India
+AMR IX
+Extreme IX
+AMS-IX
+Equipment manufacturers
+HFCL
+Sterlite Technologies
+Vindhya Telelinks
+Tejas Networks
+Indian Telephone Industries Limited
+REIT India
+Policies
+Digital India
+Bharat Broadband Network
+Agencies
+Department of Telecommunications
+Ministry of Electronics and Information Technology
+Ministry of Communications (India)
+Centre for Development of Advanced Computing
+Telecom Regulatory Authority of India
+Telecom Disputes Settlement and Appellate Tribunal
+Associations
+Cellular Operators Association of India
+Related links
+Internet in India
+Telecommunications in India
+Net neutrality in India
+v
+t
+e
+Public sector undertakings in India
+(
+list
+)
+Maharatna
+Energy
+Bharat Petroleum
+Coal India
+GAIL
+Hindustan Petroleum
+Indian Oil
+NTPC Limited
+ONGC
+Power Grid
+Financial services
+Power Finance Corporation
+REC
+Defence
+Hindustan Aeronautics
+Engineering
+BHEL
+Metals
+SAIL
+Navratna
+Defence
+Bharat Electronics
+Energy & metals
+National Aluminium Company
+National Mineral Development Corporation
+Neyveli Lignite Corporation
+Oil India
+Rashtriya Ispat Nigam
+EPC
+Engineers India
+National Buildings Construction Corporation
+Logistics
+Container Corporation of India
+Shipping Corporation of India
+Telecommunications
+Mahanagar Telephone Nigam
+Miniratna-I
+Energy, metals
+& mining
+Bharat Coking Coal
+Balmer Lawrie
+Central Coalfields
+Central Mine Planning and Design Institute
+Chennai Petroleum Corporation
+Hindustan Copper
+Indian Renewable Energy Development Agency
+Indian Rare Earths
+Kudremukh Iron Ore Company
+Mahanadi Coalfields
+MOIL
+Mangalore Refinery and Petrochemical
+Mineral Exploration Corporation
+National Hydroelectric Power Corporation
+Northern Coalfields
+North Eastern Electric Power Corporation
+Numaligarh Refinery
+SJVN
+South Eastern Coalfields
+THDC
+Western Coalfields
+Defence & space
+Antrix Corporation
+Bharat Dynamics
+Bharat Earth Movers
+Cochin Shipyard
+Garden Reach Shipbuilders and Engineers
+Goa Shipyard
+Mazagon Dock
+Mishra Dhatu Nigam
+Pawan Hans
+Media & telecom
+BSNL
+Hindustan Newsprint
+Hindustan Paper Corporation
+Railtel
+Telecommunications Consultants India
+Logistics & transport
+Airports Authority of India
+Central Warehousing Corporation
+EPC & infrastructure
+Bridge & Roof Company
+HUDCO
+Ircon International
+Kamarajar Port
+National Projects Construction Corporation
+Projects and Development India
+Rail Vikas Nigam
+RITES
+WAPCOS
+Trading
+Cotton Corporation of India
+India Trade Promotion Organisation
+Metals and Minerals Trading Corporation of India
+MSTC
+Tourism & hospitality
+HSCC (India)
+India Tourism Development Corporation
+IRCTC
+Agriculture
+National Fertilizers
+National Seed Corporation
+Rashtriya Chemicals & Fertilizers
+Other
+Educational Consultants India
+HLL Lifecare
+Indian Railway Finance Corporation
+National Small Industries Corporation
+Security Printing and Minting Corporation of India
+Miniratna-II
+Artificial Limbs Manufacturing Corporation of India
+Bharat Pumps & Compressors
+l
+Broadcast Engineering Consultants India
+Central Railside Warehouse Company
+Engineering Projects (India) Limited
+FCI Aravali Gypsum and Minerals (India)
+Ferro Scrap Nigam
+HMT Limited
+Indian Medicines and Pharmaceuticals Corporation
+MECON
+National Film Development Corporation of India
+Rajasthan Electronics and Instruments
+Finance
+Banks
+Bank of Baroda
+Bank of India
+Canara Bank
+Central Bank of India
+Indian Bank
+Indian Overseas Bank
+Punjab & Sind Bank
+Punjab National Bank
+State Bank of India
+UCO Bank
+Union Bank of India
+Insurance
+Agriculture
+Agriculture Insurance Company of India
+General
+National Insurance Company
+New India Assurance
+Oriental Insurance
+United India Insurance Company
+Life
+Life Insurance Corporation of India
+Health
+Employees' State Insurance
+Reinsurance
+GIC Re
+State govt.
+enterprises
+Kerala
+Tamil Nadu
+Jammu & Kashmir Bank
+Other
+Advanced Weapons and Equipment India
+Armoured Vehicles Nigam Limited
+BHAVINI
+Cement Corporation of India
+Dredging Corporation of India
+Electronics Corporation of India
+Food Corporation of India
+Gliders India Limited
+Hindustan Shipyard
+India Optel Limited
+Munitions India Limited
+Nuclear Power Corporation of India
+Troop Comforts Limited
+Uranium Corporation of India
+Yantra India Limited
+l - liquidated
+Information updated as of January, 2020 by Department of Public Enterprises •
+See also
+Public sector banks in India
+v
+t
+e
+Major
+telecommunications companies
+Companies with an annual revenue of over US$10 billion
+América Móvil
+Telmex
+AT&T
+Axiata
+Bell Canada
+Bharti Airtel
+Bridge Alliance
+BT Group
+China Mobile
+CMHK
+China Telecommunications Corporation
+China Telecom
+China Unicom
+Chunghwa Telecom
+CK Hutchison Holdings
+Three
+Hutchison Asia Telecom
+Comcast
+Deutsche Telekom
+T-Mobile
+Digicel
+GoI
+Vodafone Idea
+DoT
+BSNL
+MTNL
+Globe
+Jio
+KDDI
+KPN
+KT Corporation
+Liberty Global
+Liberty LA
+Liberty PR
+FLOW
+Lumen Technologies
+MTN
+MTS
+NTT
+NTT DoCoMo
+Oi
+Ooredoo
+Orange
+PCCW
+PLDT
+Rogers
+Singtel
+SK Telecom
+SoftBank Mobile
+Spark
+Swisscom
+Tata Teleservices
+Telefónica
+Movistar
+O2
+Vivo
+Telenor
+Telkom Indonesia
+Telstra
+Telus
+TIM
+TPG Telecom
+Trilogy International Partners
+True
+Türk Telekom
+VEON
+Verizon
+Viettel
+Vodafone
+Vodacom
+Authority control databases
+International
+ISNI
+VIAF
+National
+United States
+Other
+Yale LUX
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=BSNL&oldid=1360896342
+"
+Categories
+:
+Government-owned companies of India
+Indian companies established in 2000
+Companies based in New Delhi
+Telecommunications companies of India
+Internet service providers of India
+Telecommunications companies established in 2000
+Government-owned telecommunications companies
+2000 establishments in Delhi
+BSNL
+Hidden categories:
+Articles with short description
+Short description matches Wikidata
+Use dmy dates from September 2020
+Use Indian English from November 2019
+All Wikipedia articles written in Indian English
+Pages with non-numeric formatnum arguments
+Webarchive template wayback links
+Search
+Search
+BSNL
+19 languages
+Add topic

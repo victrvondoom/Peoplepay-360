@@ -1,0 +1,170 @@
+{
+  "domain": "ecommerce",
+  "generated_at": "2026-07-07T12:50:51.588396+00:00",
+  "official_sources": [
+    {
+      "authority": "India Code",
+      "title": "Consumer Protection Act 2019",
+      "url": "https://www.indiacode.nic.in/handle/123456789/15256",
+      "folder": "official/india_code",
+      "category": "consumer_protection",
+      "slug": "consumer_protection_act_2019_india_code",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Department of Financial Services",
+      "title": "Digital Payments",
+      "url": "https://financialservices.gov.in/beta/en/page/digital-payments",
+      "folder": "official/payment",
+      "category": "digital_payments",
+      "slug": "dfs_digital_payments",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "Cashless India",
+      "title": "Mobile Wallets",
+      "url": "http://cashlessindia.gov.in/mobile_wallets.html",
+      "folder": "official/payment",
+      "category": "digital_wallets",
+      "slug": "cashless_india_mobile_wallets",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NPCI",
+      "title": "IMPS Product Overview",
+      "url": "https://www.npci.org.in/what-we-do/imps/product-overview",
+      "folder": "official/payment",
+      "category": "imps",
+      "slug": "npci_imps_overview",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NCH",
+      "title": "NCH Privacy Policy",
+      "url": "https://consumerhelpline.gov.in/public/privacypolicy",
+      "folder": "official/nch",
+      "category": "privacy",
+      "slug": "nch_privacy_policy",
+      "max_linked_pdfs": 0
+    },
+    {
+      "authority": "NCH",
+      "title": "NCH Contact",
+      "url": "https://consumerhelpline.gov.in/public/contact",
+      "folder": "official/nch",
+      "category": "complaint_redressal",
+      "slug": "nch_contact",
+      "max_linked_pdfs": 0
+    }
+  ],
+  "download_results": [
+    {
+      "source": {
+        "authority": "India Code",
+        "title": "Consumer Protection Act 2019",
+        "url": "https://www.indiacode.nic.in/handle/123456789/15256",
+        "folder": "official/india_code",
+        "category": "consumer_protection",
+        "slug": "consumer_protection_act_2019_india_code",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/india_code/consumer_protection_act_2019_india_code.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "Department of Financial Services",
+        "title": "Digital Payments",
+        "url": "https://financialservices.gov.in/beta/en/page/digital-payments",
+        "folder": "official/payment",
+        "category": "digital_payments",
+        "slug": "dfs_digital_payments",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://financialservices.gov.in/beta/en/page/digital-payments",
+          "error": "404 Client Error: Not Found for url: https://financialservices.gov.in/beta/en/page/digital-payments"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "Cashless India",
+        "title": "Mobile Wallets",
+        "url": "http://cashlessindia.gov.in/mobile_wallets.html",
+        "folder": "official/payment",
+        "category": "digital_wallets",
+        "slug": "cashless_india_mobile_wallets",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "http://cashlessindia.gov.in/mobile_wallets.html",
+          "error": "HTTPConnectionPool(host='cashlessindia.gov.in', port=80): Max retries exceeded with url: /mobile_wallets.html (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x0000017E9D13DEA0>: Failed to resolve 'cashlessindia.gov.in' ([Errno 11001] getaddrinfo failed)\"))"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "NPCI",
+        "title": "IMPS Product Overview",
+        "url": "https://www.npci.org.in/what-we-do/imps/product-overview",
+        "folder": "official/payment",
+        "category": "imps",
+        "slug": "npci_imps_overview",
+        "max_linked_pdfs": 0
+      },
+      "status": "failed",
+      "saved": [],
+      "errors": [
+        {
+          "url": "https://www.npci.org.in/what-we-do/imps/product-overview",
+          "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/imps/product-overview"
+        }
+      ]
+    },
+    {
+      "source": {
+        "authority": "NCH",
+        "title": "NCH Privacy Policy",
+        "url": "https://consumerhelpline.gov.in/public/privacypolicy",
+        "folder": "official/nch",
+        "category": "privacy",
+        "slug": "nch_privacy_policy",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/nch/nch_privacy_policy.txt"
+      ],
+      "errors": []
+    },
+    {
+      "source": {
+        "authority": "NCH",
+        "title": "NCH Contact",
+        "url": "https://consumerhelpline.gov.in/public/contact",
+        "folder": "official/nch",
+        "category": "complaint_redressal",
+        "slug": "nch_contact",
+        "max_linked_pdfs": 0
+      },
+      "status": "ok",
+      "saved": [
+        "knowledge/ecommerce/official/nch/nch_contact.txt"
+      ],
+      "errors": []
+    }
+  ],
+  "sources_attempted": 6,
+  "sources_downloaded": 3,
+  "files_saved": 3
+}

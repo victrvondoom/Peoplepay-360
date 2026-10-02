@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(18.12 MB)",
+  "parent_title": "TRAI Complaint Redressal",
+  "category": "complaint_redressal",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2026-05/Regulation_07052026.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/complaint-redressal",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2026-05/Regulation_07052026.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/complaints/trai_complaint_redressal_04_download_18_12_mb.pdf",
+  "sha256": "3acbc938518dd493881075894a8e8b46e30073c5d3d2f5f063466f02d9f35116",
+  "bytes": 700222,
+  "fetched_at": "2026-07-06T13:59:00.700894+00:00"
+}

@@ -117,3 +117,23 @@ Include new environment variable names, sample-data requirements, and migration 
 Personal development uses `bunx convex dev`. `bunx convex deploy` targets production by default in a typical configured checkout; it is not the command for syncing your dev deployment. When a shared demo or production environment is needed, designate an owner or CI job to deploy reviewed `main`. Do not run production builds or production deployments unless explicitly requested.
 
 See the official [team workflow](https://docs.convex.dev/production/overview) and [deployment configuration](https://docs.convex.dev/production/project-configuration) documentation.
+
+
+## Offline verification without a deployment
+
+For this application's local tests, the locked Convex CLI can emit standard
+schema-derived bindings without selecting or contacting a deployment:
+
+```sh
+bun run convex:codegen:offline
+bun run typecheck
+bun run lint
+bun test
+```
+
+The offline command uses the installed CLI's system-UDF codegen path and does
+not deploy functions, alter schema or create connection settings. The loopback
+URL and admin-key value are placeholders for this local-only path. Keep the
+normal `convex:codegen` command for deployment-aware codegen; offline bindings
+do not verify deployed code or component configuration. Recheck this local
+command when upgrading Convex. Generated files remain ignored by Git.

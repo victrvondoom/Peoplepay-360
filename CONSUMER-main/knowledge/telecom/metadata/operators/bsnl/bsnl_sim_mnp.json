@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "BSNL",
+  "title": "BSNL FTTH",
+  "category": "fiber",
+  "source_url": "https://bsnl.co.in/sim-order",
+  "final_url": "https://bsnl.co.in/sim-order",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 1060,
+  "stored_path": "knowledge/telecom/operators/bsnl/bsnl_sim_mnp.txt",
+  "sha256": "0cbf99209d6eb26e890f313a913bbd390553b0884c87ece6594cca49499629cd",
+  "bytes": 1086,
+  "fetched_at": "2026-07-06T14:33:37.008121+00:00"
+}

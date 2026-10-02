@@ -1,0 +1,16 @@
+TO: The Customer Care / Warranty Department
+[Brand / Manufacturer Name]
+
+SUBJECT: Warranty Claim for Defective Product — Invoice No: [INVOICE_NO]
+
+I purchased [Product Name] (Model: [Model No]) on [Date] from [Marketplace].
+The product has developed the following defect within the warranty period
+of [X] months: [Describe defect clearly].
+
+As per the warranty card and Consumer Protection Act 2019 (Section 86 —
+Product Liability), I am entitled to a FREE repair or replacement.
+
+I request a service appointment or replacement unit within 7 working days.
+Failure to comply will lead to a consumer complaint at the District Forum.
+
+[Customer Name] | [Purchase Date] | [Serial Number]

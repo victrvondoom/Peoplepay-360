@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(2.54 MB)",
+  "parent_title": "TRAI Quality of Service",
+  "category": "quality_of_service",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2026-06/Rating_Manual_09062026_2.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/qos",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2026-06/Rating_Manual_09062026_2.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/trai/trai_qos_07_download_2_54_mb.pdf",
+  "sha256": "3f269a8e522cae9ae38a80cc11d8381fa1ced1c5067ffe7e2a8d0321128512a0",
+  "bytes": 2664037,
+  "fetched_at": "2026-07-06T13:58:21.153857+00:00"
+}

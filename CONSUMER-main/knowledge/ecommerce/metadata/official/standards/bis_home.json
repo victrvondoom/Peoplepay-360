@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "BIS",
+  "title": "Bureau of Indian Standards",
+  "category": "standards",
+  "source_url": "https://www.bis.gov.in/",
+  "final_url": "https://www.bis.gov.in/?lang=hi",
+  "type": "html_text",
+  "raw_chars": 31292,
+  "stored_path": "knowledge/ecommerce/official/standards/bis_home.txt",
+  "sha256": "3c24f2f8a7c0108ad3cfc7844b13506f2b0a64dcd866a4306d6703c0a7d81d92",
+  "bytes": 78632,
+  "fetched_at": "2026-07-07T12:49:04.813771+00:00",
+  "official_source": true
+}

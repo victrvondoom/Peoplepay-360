@@ -361,7 +361,10 @@ def _turn() -> Response[str]:
             logger.exception("agent turn failed")
             return _json(
                 502,
-                {"error": "the agent failed to complete this turn", "tool_events": ctx.tool_events},
+                {
+                    "error": "the agent failed to complete this turn",
+                    "tool_events": ctx.tool_events,
+                },
             )
         agent_ms = (time.perf_counter() - agent_started) * 1000
         reply_text = _extract_reply(agent, result, history_len)

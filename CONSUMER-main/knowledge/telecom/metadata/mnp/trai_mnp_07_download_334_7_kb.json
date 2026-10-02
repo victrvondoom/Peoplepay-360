@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(334.7 KB)",
+  "parent_title": "TRAI Mobile Number Portability",
+  "category": "mnp",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-10/MNP_Regulation%20_Eng_31012018.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/mobile-number-portability",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-10/MNP_Regulation%20_Eng_31012018.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/mnp/trai_mnp_07_download_334_7_kb.pdf",
+  "sha256": "002080aa98e7400cdf29655bbb95defa67fe859c731367471fcd8a16ce6ac9d4",
+  "bytes": 342728,
+  "fetched_at": "2026-07-06T13:58:42.990669+00:00"
+}

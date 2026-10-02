@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "NCH",
+  "title": "NCH Contact",
+  "category": "complaint_redressal",
+  "source_url": "https://consumerhelpline.gov.in/public/contact",
+  "final_url": "https://consumerhelpline.gov.in/public/contact",
+  "type": "html_text",
+  "raw_chars": 1751,
+  "stored_path": "knowledge/ecommerce/official/nch/nch_contact.txt",
+  "sha256": "f78c8b2de9224bbf6195077ff279db0f369d5e98a7241f3b11ba0b78a20e2862",
+  "bytes": 1772,
+  "fetched_at": "2026-07-07T12:50:51.332567+00:00",
+  "official_source": true
+}

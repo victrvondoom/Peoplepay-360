@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(98.2 KB)",
+  "parent_title": "TRAI Value Added Services",
+  "category": "vas",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/direction_VAS_fina4-7-2011.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/vas",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-09/direction_VAS_fina4-7-2011.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/mobile/trai_vas_01_download_98_2_kb.pdf",
+  "sha256": "0ca9d80514919b2de2c19d22316a31d30c96caaf7d56ec99b7c588acb4e72ca3",
+  "bytes": 100553,
+  "fetched_at": "2026-07-06T13:59:09.858983+00:00"
+}

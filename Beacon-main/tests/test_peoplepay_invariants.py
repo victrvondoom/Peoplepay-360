@@ -118,9 +118,7 @@ class TestInvariant3InferenceIsNotPreference:
     """Inference cannot silently become preference."""
 
     def test_they_are_different_node_kinds(self):
-        assert (
-            PeoplePayNodeKind.USER_PREFERENCE is not PeoplePayNodeKind.USER_INFERENCE
-        )
+        assert PeoplePayNodeKind.USER_PREFERENCE is not PeoplePayNodeKind.USER_INFERENCE
 
     def test_promotion_without_confirmation_is_refused(self):
         vault = MemoryVault("u")
@@ -383,7 +381,7 @@ class TestInvariant8PaymentAuthorizationIsExplicit:
         assert not grant.covers(Money.of("45001", "INR"))
 
     def test_a_capped_grant_does_not_cover_an_unknown_amount(self):
-        """"Buy if under 45,000" is not consent to buy at an unknown price."""
+        """ "Buy if under 45,000" is not consent to buy at an unknown price."""
         grant = ConditionalGrant(
             permission=Permission.PAYMENT, max_amount=Money.of("45000", "INR")
         )

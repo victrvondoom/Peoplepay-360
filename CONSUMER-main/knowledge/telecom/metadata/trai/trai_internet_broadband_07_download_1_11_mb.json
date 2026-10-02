@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(1.11 MB)",
+  "parent_title": "TRAI Internet and Broadband",
+  "category": "broadband_regulations",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/Adoption_of_e-KYC_service_17_05_2017_0.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/internet-broadband",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-09/Adoption_of_e-KYC_service_17_05_2017_0.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/trai/trai_internet_broadband_07_download_1_11_mb.pdf",
+  "sha256": "379afede0615570953022194b12e9ed3441710df110268f747fab849d4f016c4",
+  "bytes": 1165872,
+  "fetched_at": "2026-07-06T13:58:33.068314+00:00"
+}

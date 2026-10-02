@@ -1,0 +1,24 @@
+TO: The Grievance Officer / Nodal Officer
+[Marketplace Name]
+
+SUBJECT: Legal Notice — Sale of Counterfeit / Fake Product (Order ID: [ORDER_ID])
+
+Dear Sir/Madam,
+
+I ordered [Product Name] (Brand: [Brand]) from [Marketplace] on [Date].
+Upon receipt, I found the product is a counterfeit item. The packaging,
+build quality, and authenticity stickers clearly identify this as a fake.
+
+Under the Consumer Protection (E-Commerce) Rules, 2020 and the Consumer
+Protection Act, 2019, the marketplace is jointly and severally liable for
+products sold on its platform. I demand:
+
+1. Immediate full refund of INR [Amount].
+2. Removal of the fraudulent seller listing.
+3. A written response within 48 hours.
+
+Failing compliance, I will file a complaint on the National Consumer Helpline
+(1915) and approach the CCPA.
+
+Yours faithfully,
+[Customer Name] | [Order Date] | [Contact]

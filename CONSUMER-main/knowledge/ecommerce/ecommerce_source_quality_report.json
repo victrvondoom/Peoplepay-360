@@ -1,0 +1,177 @@
+{
+  "domain": "ecommerce",
+  "generated_at": "2026-07-07T12:59:55.347858+00:00",
+  "active_corpus": {
+    "files_total": 32,
+    "chunks_total": 295,
+    "bytes_total": 787231,
+    "authority_counts": {
+      "Amazon": 8,
+      "BIS": 1,
+      "BigBasket": 2,
+      "Blinkit": 2,
+      "Delhivery": 1,
+      "Flipkart": 3,
+      "India Code": 1,
+      "India Post": 1,
+      "JioMart": 2,
+      "Myntra": 2,
+      "NCDRC": 2,
+      "NCH": 5,
+      "Swiggy": 1,
+      "e-Jagriti": 1
+    },
+    "chunk_file": "knowledge/ecommerce/chunks/ecommerce_chunks.jsonl",
+    "wikipedia_excluded": true
+  },
+  "download_summary": {
+    "successful_sources": 27,
+    "blocked_or_failed_sources": 23,
+    "saved_files": 27
+  },
+  "blocked_sources": [
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Consumer Protection Acts and Rules",
+      "url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+      "error": "HTTPSConnectionPool(host='consumeraffairs.nic.in', port=443): Max retries exceeded with url: /acts-and-rules/consumer-protection (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))"
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Legal Metrology Act",
+      "url": "https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009",
+      "error": "HTTPSConnectionPool(host='consumeraffairs.nic.in', port=443): Max retries exceeded with url: /acts-and-rules/legal-metrology/the-legal-metrology-act-2009 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))"
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Misleading Advertisements Guidance",
+      "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf",
+      "error": "HTTPSConnectionPool(host='consumeraffairs.nic.in', port=443): Max retries exceeded with url: /sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))"
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Direct Selling Guidelines",
+      "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf",
+      "error": "HTTPSConnectionPool(host='consumeraffairs.nic.in', port=443): Max retries exceeded with url: /sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1007)')))"
+    },
+    {
+      "authority": "NPCI",
+      "title": "NPCI UPI",
+      "url": "https://www.npci.org.in/what-we-do/upi/product-overview",
+      "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/upi/product-overview"
+    },
+    {
+      "authority": "NPCI",
+      "title": "NPCI UPI Dispute Redressal",
+      "url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism",
+      "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism"
+    },
+    {
+      "authority": "RuPay",
+      "title": "RuPay Contactless and Cardholder Info",
+      "url": "https://www.rupay.co.in/",
+      "error": "403 Client Error: Forbidden for url: https://www.rupay.co.in/"
+    },
+    {
+      "authority": "Meesho",
+      "title": "Meesho Terms and Conditions",
+      "url": "https://www.meesho.com/legal/terms-conditions",
+      "error": "403 Client Error: Forbidden for url: https://www.meesho.com/legal/terms-conditions"
+    },
+    {
+      "authority": "Meesho",
+      "title": "Meesho Privacy Policy",
+      "url": "https://www.meesho.com/legal/privacy",
+      "error": "403 Client Error: Forbidden for url: https://www.meesho.com/legal/privacy"
+    },
+    {
+      "authority": "Zepto",
+      "title": "Zepto Terms",
+      "url": "https://www.zeptonow.com/terms-of-use",
+      "error": "404 Client Error: Not Found for url: https://www.zepto.com:443/terms-of-use"
+    },
+    {
+      "authority": "AJIO",
+      "title": "AJIO Selfcare",
+      "url": "https://www.ajio.com/selfcare",
+      "error": "403 Client Error: Forbidden for url: https://www.ajio.com/selfcare"
+    },
+    {
+      "authority": "Blue Dart",
+      "title": "Blue Dart Contact",
+      "url": "https://www.bluedart.com/contactus",
+      "error": "404 Client Error: Not Found for url: https://www.bluedart.com/contactus"
+    },
+    {
+      "authority": "DTDC",
+      "title": "DTDC Contact Us",
+      "url": "https://www.dtdc.in/contact-us.asp",
+      "error": "404 Client Error: Not Found for url: https://www.dtdc.com/contact-us.asp"
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Consumer Protection Acts and Rules",
+      "url": "https://consumeraffairs.nic.in/acts-and-rules/consumer-protection",
+      "error": "403 Client Error: Forbidden for url: https://consumeraffairs.nic.in/acts-and-rules/consumer-protection"
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Legal Metrology Act",
+      "url": "https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009",
+      "error": "403 Client Error: Forbidden for url: https://consumeraffairs.nic.in/acts-and-rules/legal-metrology/the-legal-metrology-act-2009"
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Misleading Advertisements Guidance",
+      "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf",
+      "error": "403 Client Error: Forbidden for url: https://consumeraffairs.nic.in/sites/default/files/file-uploads/consumer_information/MisleadingAdvertisements.pdf"
+    },
+    {
+      "authority": "Department of Consumer Affairs",
+      "title": "Direct Selling Guidelines",
+      "url": "https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf",
+      "error": "403 Client Error: Forbidden for url: https://consumeraffairs.nic.in/sites/default/files/file-uploads/direct-selling/Direct%20Selling%20Guidelines%20Final%20_0.pdf"
+    },
+    {
+      "authority": "NPCI",
+      "title": "NPCI UPI",
+      "url": "https://www.npci.org.in/what-we-do/upi/product-overview",
+      "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/upi/product-overview"
+    },
+    {
+      "authority": "NPCI",
+      "title": "NPCI UPI Dispute Redressal",
+      "url": "https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism",
+      "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/upi/dispute-redressal-mechanism"
+    },
+    {
+      "authority": "RuPay",
+      "title": "RuPay Contactless and Cardholder Info",
+      "url": "https://www.rupay.co.in/",
+      "error": "403 Client Error: Forbidden for url: https://www.rupay.co.in/"
+    },
+    {
+      "authority": "Department of Financial Services",
+      "title": "Digital Payments",
+      "url": "https://financialservices.gov.in/beta/en/page/digital-payments",
+      "error": "404 Client Error: Not Found for url: https://financialservices.gov.in/beta/en/page/digital-payments"
+    },
+    {
+      "authority": "Cashless India",
+      "title": "Mobile Wallets",
+      "url": "http://cashlessindia.gov.in/mobile_wallets.html",
+      "error": "HTTPConnectionPool(host='cashlessindia.gov.in', port=80): Max retries exceeded with url: /mobile_wallets.html (Caused by NameResolutionError(\"<urllib3.connection.HTTPConnection object at 0x0000017E9D13DEA0>: Failed to resolve 'cashlessindia.gov.in' ([Errno 11001] getaddrinfo failed)\"))"
+    },
+    {
+      "authority": "NPCI",
+      "title": "IMPS Product Overview",
+      "url": "https://www.npci.org.in/what-we-do/imps/product-overview",
+      "error": "403 Client Error: Forbidden for url: https://www.npci.org.in/what-we-do/imps/product-overview"
+    }
+  ],
+  "production_notes": [
+    "Active RAG chunks exclude Wikipedia-sourced documents and synthetic/template files.",
+    "Blocked sources are retained in this report for manual browser/API follow-up, not silently treated as ingested.",
+    "Backend local corpus endpoints read knowledge/ecommerce/ecommerce_corpus_manifest.json and knowledge/ecommerce/chunks/ecommerce_chunks.jsonl."
+  ]
+}

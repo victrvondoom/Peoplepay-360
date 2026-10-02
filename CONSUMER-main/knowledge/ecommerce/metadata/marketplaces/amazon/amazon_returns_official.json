@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "Amazon",
+  "title": "Amazon India Returns",
+  "category": "returns",
+  "source_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7",
+  "final_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GKM69DUUYKQWKWX7",
+  "type": "html_text",
+  "raw_chars": 3220,
+  "stored_path": "knowledge/ecommerce/marketplaces/amazon/amazon_returns_official.txt",
+  "sha256": "4ef157ff232ba9aba3be6f22c17cbf03d0a1a8db60aabb80fb526494db91b0a3",
+  "bytes": 3223,
+  "fetched_at": "2026-07-07T12:47:19.117764+00:00",
+  "official_source": true
+}

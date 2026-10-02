@@ -1,0 +1,260 @@
+[
+  {
+    "authority": "TRAI",
+    "title": "TRAI Quality of Service",
+    "url": "https://www.trai.gov.in/telecom/qos",
+    "folder": "trai",
+    "category": "quality_of_service",
+    "slug": "trai_qos",
+    "max_linked_pdfs": 8
+  },
+  {
+    "authority": "TRAI",
+    "title": "TRAI Internet and Broadband",
+    "url": "https://www.trai.gov.in/telecom/internet-broadband",
+    "folder": "trai",
+    "category": "broadband_regulations",
+    "slug": "trai_internet_broadband",
+    "max_linked_pdfs": 8
+  },
+  {
+    "authority": "TRAI",
+    "title": "TRAI Mobile Number Portability",
+    "url": "https://www.trai.gov.in/telecom/mobile-number-portability",
+    "folder": "mnp",
+    "category": "mnp",
+    "slug": "trai_mnp",
+    "max_linked_pdfs": 8
+  },
+  {
+    "authority": "TRAI",
+    "title": "TRAI Consumer Protection",
+    "url": "https://www.trai.gov.in/telecom/consumer-protection",
+    "folder": "customer_rights",
+    "category": "consumer_protection",
+    "slug": "trai_consumer_protection",
+    "max_linked_pdfs": 8
+  },
+  {
+    "authority": "TRAI",
+    "title": "TRAI Complaint Redressal",
+    "url": "https://www.trai.gov.in/telecom/complaint-redressal",
+    "folder": "complaints",
+    "category": "complaint_redressal",
+    "slug": "trai_complaint_redressal",
+    "max_linked_pdfs": 8
+  },
+  {
+    "authority": "TRAI",
+    "title": "TRAI Value Added Services",
+    "url": "https://www.trai.gov.in/telecom/vas",
+    "folder": "mobile",
+    "category": "vas",
+    "slug": "trai_vas",
+    "max_linked_pdfs": 6
+  },
+  {
+    "authority": "TRAI",
+    "title": "TRAI Telecom FAQs",
+    "url": "https://www.trai.gov.in/consumer-info/telecom/faq-category-listing",
+    "folder": "faqs",
+    "category": "faq",
+    "slug": "trai_telecom_faq",
+    "max_linked_pdfs": 4
+  },
+  {
+    "authority": "TRAI",
+    "title": "TRAI Consolidated Telecom Regulations",
+    "url": "https://www.trai.gov.in/release-publication/consolidated-regulation/telecom",
+    "folder": "regulations",
+    "category": "regulations",
+    "slug": "trai_consolidated_telecom_regulations",
+    "max_linked_pdfs": 10
+  },
+  {
+    "authority": "DoT",
+    "title": "DoT National Digital Communications Policy 2018",
+    "url": "https://www.dot.gov.in/national-digital-communications-policy-2018",
+    "folder": "dot",
+    "category": "policy",
+    "slug": "dot_national_digital_communications_policy_2018",
+    "max_linked_pdfs": 1
+  },
+  {
+    "authority": "DoT",
+    "title": "DoT Home and Consumer Links",
+    "url": "https://www.dot.gov.in/",
+    "folder": "dot",
+    "category": "consumer_advisory",
+    "slug": "dot_home",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "DoT",
+    "title": "DoT Access Services",
+    "url": "https://www.dot.gov.in/access-services",
+    "folder": "dot",
+    "category": "licensing",
+    "slug": "dot_access_services",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "NCH",
+    "title": "National Consumer Helpline",
+    "url": "https://consumerhelpline.gov.in/public/",
+    "folder": "complaints",
+    "category": "complaint_guidance",
+    "slug": "national_consumer_helpline",
+    "max_linked_pdfs": 3
+  },
+  {
+    "authority": "Airtel",
+    "title": "Airtel Terms and Conditions",
+    "url": "https://www.airtel.in/terms-and-conditions",
+    "folder": "operators/airtel",
+    "category": "terms",
+    "slug": "airtel_terms",
+    "max_linked_pdfs": 3
+  },
+  {
+    "authority": "Airtel",
+    "title": "Airtel Prepaid Plans",
+    "url": "https://www.airtel.in/prepaid/all-prepaid-plans",
+    "folder": "operators/airtel",
+    "category": "mobile_plans",
+    "slug": "airtel_prepaid_plans",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "Airtel",
+    "title": "Airtel Broadband",
+    "url": "https://www.airtel.in/airtel-broadband",
+    "folder": "operators/airtel",
+    "category": "broadband",
+    "slug": "airtel_broadband",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "Airtel",
+    "title": "Airtel Xstream Fiber",
+    "url": "https://www.airtel.in/airtel-xstream-fiber",
+    "folder": "operators/airtel",
+    "category": "fiber",
+    "slug": "airtel_fiber",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "Airtel",
+    "title": "Airtel Help and Support",
+    "url": "https://www.airtel.in/help",
+    "folder": "operators/airtel",
+    "category": "complaint_process",
+    "slug": "airtel_help",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "Jio",
+    "title": "Jio Terms and Conditions",
+    "url": "https://www.jio.com/en-in/terms-and-conditions",
+    "folder": "operators/jio",
+    "category": "terms",
+    "slug": "jio_terms",
+    "max_linked_pdfs": 3
+  },
+  {
+    "authority": "Jio",
+    "title": "Jio Prepaid Plans",
+    "url": "https://www.jio.com/en-in/mobile/prepaid-plans",
+    "folder": "operators/jio",
+    "category": "mobile_plans",
+    "slug": "jio_prepaid_plans",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "Jio",
+    "title": "JioFiber Plans",
+    "url": "https://www.jio.com/en-in/jiofiber",
+    "folder": "operators/jio",
+    "category": "fiber",
+    "slug": "jio_fiber",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "Jio",
+    "title": "Jio Help and Support",
+    "url": "https://www.jio.com/help/home",
+    "folder": "operators/jio",
+    "category": "complaint_process",
+    "slug": "jio_help",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "Vi",
+    "title": "Vi Terms and Conditions",
+    "url": "https://www.myvi.in/terms-of-use",
+    "folder": "operators/vi",
+    "category": "terms",
+    "slug": "vi_terms",
+    "max_linked_pdfs": 1
+  },
+  {
+    "authority": "Vi",
+    "title": "Vi Prepaid Plans",
+    "url": "https://www.myvi.in/prepaid/all-prepaid-plans",
+    "folder": "operators/vi",
+    "category": "mobile_plans",
+    "slug": "vi_prepaid_plans",
+    "max_linked_pdfs": 2
+  },
+  {
+    "authority": "Vi",
+    "title": "Vi Help and Support",
+    "url": "https://www.myvi.in/help-support/faqs",
+    "folder": "operators/vi",
+    "category": "complaint_process",
+    "slug": "vi_help",
+    "max_linked_pdfs": 1
+  },
+  {
+    "authority": "BSNL",
+    "title": "BSNL Mobile Services",
+    "url": "https://bsnl.co.in/mobile/recharge",
+    "folder": "operators/bsnl",
+    "category": "mobile_plans",
+    "slug": "bsnl_mobile_recharge",
+    "max_linked_pdfs": 1
+  },
+  {
+    "authority": "BSNL",
+    "title": "BSNL Broadband",
+    "url": "https://bsnl.co.in/",
+    "folder": "operators/bsnl",
+    "category": "broadband",
+    "slug": "bsnl_home_broadband",
+    "max_linked_pdfs": 1
+  },
+  {
+    "authority": "BSNL",
+    "title": "BSNL FTTH",
+    "url": "https://bsnl.co.in/sim-order",
+    "folder": "operators/bsnl",
+    "category": "fiber",
+    "slug": "bsnl_sim_mnp",
+    "max_linked_pdfs": 1
+  },
+
+  {"authority": "DoT", "title": "Sanchar Saathi Portal (Citizen Central Portal)", "url": "https://sancharsaathi.gov.in/", "folder": "sanchar_saathi", "category": "consumer_protection", "slug": "sanchar_saathi_home", "max_linked_pdfs": 0},
+  {"authority": "DoT", "title": "Sanchar Saathi - Chakshu Suspected Fraud Communication Reporting", "url": "https://sancharsaathi.gov.in/sfc/", "folder": "sanchar_saathi", "category": "fraud_reporting", "slug": "sanchar_saathi_chakshu", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "TCCCPR - Telecom Commercial Communications Customer Preference Regulations Page", "url": "https://trai.gov.in/tcccpr", "folder": "trai", "category": "spam_ucc", "slug": "trai_tcccpr_page", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "Telecom Commercial Communications Customer Preference Regulations, 2018 (Full Text)", "url": "https://www.trai.gov.in/sites/default/files/2024-09/RegulationUcc19072018.pdf", "folder": "trai", "category": "spam_ucc", "slug": "trai_tcccpr_2018_full_text", "type": "pdf", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "Quality of Service (Code of Practice for Metering and Billing Accuracy) Regulations, 2023", "url": "http://trai.gov.in/node/3194", "folder": "trai", "category": "billing_accuracy", "slug": "trai_qos_metering_billing_2023", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "TRAI Regulations Index", "url": "https://www.trai.gov.in/release-publication/regulations", "folder": "trai", "category": "regulations", "slug": "trai_regulations_index_2", "max_linked_pdfs": 0},
+  {"authority": "PIB", "title": "TRAI Strengthens Consumer Protection with Amendments to TCCCPR, 2018", "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2102413", "folder": "trai", "category": "spam_ucc", "slug": "pib_tcccpr_amendment", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "Customer Preference Registration Facility (NCPR / DND)", "url": "https://trai.gov.in/preference-registration", "folder": "trai", "category": "dnd_ncpr", "slug": "trai_preference_registration", "max_linked_pdfs": 0},
+  {"authority": "USOF", "title": "Universal Service Obligation Fund / Digital Bharat Nidhi", "url": "https://usof.gov.in/en/home", "folder": "usof", "category": "rural_connectivity", "slug": "usof_home", "max_linked_pdfs": 0},
+  {"authority": "Wikipedia", "title": "Do Not Disturb Registry", "url": "https://en.wikipedia.org/wiki/Do_Not_Disturb_Registry", "folder": "trai", "category": "dnd_ncpr", "slug": "wiki_dnd_registry", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "Telecommunication Mobile Number Portability Regulations, 2009 (Full Text)", "url": "https://www.trai.gov.in/sites/default/files/2024-10/201208081218350931511Regulation23sep09%5b1%5d.pdf", "folder": "mnp", "category": "mnp", "slug": "trai_mnp_regulations_2009_full_text", "type": "pdf", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "Telecommunication Tariff Order 1999 (Amendment, Jan 2022)", "url": "https://www.trai.gov.in/sites/default/files/2024-09/Regulation_27012022.pdf", "folder": "trai", "category": "tariff", "slug": "trai_tariff_order_amendment_2022", "type": "pdf", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "Standards of QoS of Basic Telephone (Wireline) and Cellular Mobile Telephone Service Regulations, 2009", "url": "https://www.trai.gov.in/sites/default/files/2024-09/201211091141353328813Regulation20mar09%20(1).pdf", "folder": "trai", "category": "quality_of_service", "slug": "trai_qos_basic_cellular_2009", "type": "pdf", "max_linked_pdfs": 0},
+  {"authority": "TRAI", "title": "TRAI Quality of Service Landing Page", "url": "http://www.trai.gov.in/telecom/qos", "folder": "trai", "category": "quality_of_service", "slug": "trai_qos_landing", "max_linked_pdfs": 0}
+]

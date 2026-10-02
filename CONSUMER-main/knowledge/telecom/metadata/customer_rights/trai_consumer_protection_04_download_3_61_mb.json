@@ -1,0 +1,16 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "Download(3.61 MB)",
+  "parent_title": "TRAI Consumer Protection",
+  "category": "consumer_protection",
+  "source_url": "https://www.trai.gov.in/sites/default/files/2024-12/Regulation_12th_23122024_0.pdf",
+  "parent_url": "https://www.trai.gov.in/telecom/consumer-protection",
+  "final_url": "https://www.trai.gov.in/sites/default/files/2024-12/Regulation_12th_23122024_0.pdf",
+  "type": "linked_pdf",
+  "official_source": true,
+  "stored_path": "knowledge/telecom/customer_rights/trai_consumer_protection_04_download_3_61_mb.pdf",
+  "sha256": "043615de1994da41d24f353e124779beeff6c9f0512b9599a0e15169ebee4308",
+  "bytes": 3780344,
+  "fetched_at": "2026-07-06T13:58:50.135944+00:00"
+}

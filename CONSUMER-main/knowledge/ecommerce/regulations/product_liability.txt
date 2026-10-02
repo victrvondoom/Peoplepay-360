@@ -1,0 +1,2415 @@
+Product liability - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Area of law in which product manufacturers are held responsible for damages caused
+Part of
+a series
+on
+Tort law
+(
+Outline
+)
+Trespass to the person
+Assault
+Battery
+False imprisonment
+Intentional infliction of emotional distress
+Property torts
+Trespass
+land
+chattels
+Conversion
+Dignitary torts
+Appropriation
+Defamation
+Unintentional
+False light
+Invasion of privacy
+Intrusion on seclusion
+Breach of confidence
+Abuse of process
+Malicious prosecution
+Sexual torts
+Alienation of affections
+Criminal conversation
+Seduction
+Breach of promise
+Principles of negligence
+Duty of care
+Trespassers
+Licensees
+Invitees
+Standard of care
+Reasonable person
+Proximate cause
+Res ipsa loquitur
+Restitutio ad integrum
+Rescue doctrine
+Duty to rescue
+Comparative responsibility
+Contributory negligence
+Attractive nuisance
+Negligent torts
+Negligent infliction of emotional distress
+Employment-related
+Entrustment
+Misrepresentation
+Malpractice
+Legal
+Medical
+Strict
+and
+absolute
+liability
+Product liability
+Ultrahazardous activity
+Deep pockets
+Nuisance
+Public nuisance
+Rylands v Fletcher
+Economic torts
+Conspiracy
+Restraint of trade
+Insurance bad faith
+(American law)
+Fraud
+Tortious interference
+Defences
+Assumption of risk
+Volenti non fit injuria
+Ex turpi causa non oritur actio
+Consent
+Necessity
+Statute of limitations
+Self-defense
+Defense of others
+Defence of property
+Shopkeeper's privilege
+Neutral reportage
+Liability
+Intentional torts
+Eggshell skull
+Vicarious liability
+Respondeat superior
+Joint and several liability
+Market share liability
+State liability
+Transferred intent
+Last clear chance
+(Defunct)
+Legal remedy
+Damages
+Punitive
+Special
+Incidental
+Injunction
+Tracing
+Detinue
+Replevin
+Trover
+Other topics in tort law
+Tort reform
+Non-economic damages caps
+Quasi-tort
+Delict
+(term used for torts in some
+civil
+and
+mixed legal systems
+)
+Conflict of tort laws
+Private attorney general
+Class action
+By jurisdiction
+Australia
+Canada
+China
+England and Wales
+European Union
+India
+Japan
+Taiwan
+United States
+Law
+portal
+Outline
+Lists
+Index
+Category
+v
+t
+e
+Product liability
+is the area of
+law
+in which
+manufacturers
+,
+distributors
+, suppliers,
+retailers
+, and others who make
+products
+available to the public are
+held responsible
+for the injuries those products cause. Although the word "product" has broad connotations, product liability as an area of law is traditionally limited to products in the form of
+tangible
+personal
+property
+.
+[
+1
+]
+Product liability by country
+[
+edit
+]
+The overwhelming majority of countries have strongly preferred to address product liability through legislative means.
+[
+2
+]
+In most countries, this occurred either by enacting a separate product liability act, adding product liability rules to an existing civil code, or including strict liability within a comprehensive Consumer Protection Act.
+[
+2
+]
+In the United States, product liability law was developed primarily through
+case law
+from
+state courts
+as well as the
+Restatements of the Law
+produced by the
+American Law Institute
+(ALI).
+[
+3
+]
+The United States and the European Union's product liability regimes are the two leading models for how to impose strict liability for defective products, meaning that "[v]irtually every product liability regime in the world follows one of these two models."
+[
+2
+]
+United States
+[
+edit
+]
+The United States was the birthplace of modern product liability law during the 20th century, due to the 1963
+Greenman
+decision which led to the emergence of product liability as a distinct field of private law.
+[
+3
+]
+[
+4
+]
+In 1993, it was reported that "[n]o other country can match the United States for the number and diversity of its product liability cases, nor for the prominence of the subject in the eyes of the general public and legal practitioners."
+[
+5
+]
+This was still true as of 2015: "In the United States, product liability continues to play a big role: litigation is much more frequent there than anywhere else in the world, awards are higher, and publicity is significant."
+[
+6
+]
+In the United States, the majority of product liability laws are determined at the state level and vary widely from state to state.
+[
+7
+]
+Each type of product liability claim requires proof of different elements in order to present a valid claim.
+History
+[
+edit
+]
+For a variety of complex historical reasons beyond the scope of this article,
+personal injury
+lawsuits in tort for monetary damages were virtually nonexistent before the
+Second Industrial Revolution
+of the 19th century.
+[
+8
+]
+As a subset of personal injury cases, product liability cases were extraordinarily rare, but it appears that in the few that were brought, the general rule at early common law was probably what modern observers would call no-fault or strict liability.
+[
+8
+]
+In other words, the plaintiff only needed to prove causation and damages.
+[
+8
+]
+Common law courts began to shift towards a no-liability regime for products (except for cases of fraud or breach of express warranty) by developing the doctrine of
+caveat emptor
+(buyer beware) in the early 1600s.
+[
+9
+]
+As personal injury and product liability claims began to slowly increase during the early
+First Industrial Revolution
+(due to increased mobility of both people and products), common law courts in both England and the United States in the 1840s erected further barriers to plaintiffs by requiring them to prove
+negligence
+on the part of the defendant (i.e., that the defendant was at fault because its conduct had failed to meet the standard of care expected of a reasonable person), and to overcome the defense of lack of
+privity of contract
+in cases where the plaintiff had not dealt directly with the manufacturer (as exemplified by
+Winterbottom v. Wright
+(1842)).
+[
+8
+]
+[
+9
+]
+[
+10
+]
+During the Second Industrial Revolution of the mid-to-late 19th century, consumers increasingly became several steps removed from the original manufacturers of products and the unjust effects of all these doctrines became widely evident.
+[
+8
+]
+[
+9
+]
+[
+10
+]
+State courts in the United States began to look for ways to ameliorate the harsh effects of such legal doctrines, as did the
+British Parliament
+.
+[
+9
+]
+For example, one method was to find implied warranties implicit in the nature of certain contracts; by the end of the 19th century, enough U.S. states had adopted an implied warranty of merchantable quality that this warranty was restated in statutory form in the U.S. Uniform Sales Act of 1906, which drew inspiration from the British
+Sale of Goods Act 1893
+.
+[
+9
+]
+[
+10
+]
+During the 1940s, 1950s, and 1960s, American law professors Fleming James Jr. and
+William Prosser
+published competing visions for the future of the nascent field of product liability.
+[
+11
+]
+[
+12
+]
+James acknowledged that traditional negligence and warranty law were inadequate solutions for the problems presented by defective products, but argued in 1955 those issues could be resolved by a modification of warranty law "tailored to meet modern needs," while Prosser argued in 1960 that strict liability in tort ought to be "declared outright" without "an illusory contract mask."
+[
+12
+]
+James's analysis was badly weakened by the fact that he did not actually understand how
+insurance
+works.
+[
+13
+]
+Ultimately, it was Prosser's view which prevailed.
+[
+12
+]
+Landmark legal cases
+[
+edit
+]
+The first step towards modern product liability law occurred in the landmark New York case of
+MacPherson v. Buick Motor Co.
+(1916), which demolished the privity bar to recovery in negligence actions.
+[
+8
+]
+[
+9
+]
+[
+12
+]
+By 1955, James was citing
+MacPherson
+to argue that "[t]he citadel of privity has crumbled," although Maine, the last holdout, would not adopt
+MacPherson
+until 1982.
+[
+9
+]
+The second step was the landmark New Jersey case of
+Henningsen v. Bloomfield Motors, Inc.
+(1960), which demolished the privity bar to recovery in actions for breach of implied warranty.
+[
+9
+]
+[
+12
+]
+Prosser cited
+Henningsen
+in 1960 as the "fall of the citadel of privity."
+[
+9
+]
+[
+12
+]
+The
+Henningsen
+court helped articulate the rationale for the imminent shift from breach of warranty (sounding in contract) to strict liability (sounding in tort) as the dominant theory in product liability cases, but did not actually impose strict liability for defective products.
+[
+12
+]
+The third step was the landmark
+[
+14
+]
+California case of
+Greenman v. Yuba Power Products, Inc.
+(1963), in which the
+Supreme Court of California
+openly articulated and adopted the doctrine of strict liability in tort for defective products.
+[
+9
+]
+[
+12
+]
+[
+15
+]
+Greenman
+heralded a fundamental shift in how Americans thought about product liability towards a theory of enterprise liability—instead of basing liability on the defendant's "fault" or "warranty", the defendant's liability should be predicated, as a matter of public policy, on the simple question of whether it was part of a business enterprise responsible for inflicting injuries on human beings.
+[
+12
+]
+The theoretical foundation for enterprise liability had been laid by James as well as another law professor,
+Leon Green
+.
+[
+16
+]
+As noted above, it was
+Greenman
+which led to the actual emergence of product liability as a distinct field of private law in its own right.
+[
+3
+]
+Before this point, products had appeared in case law and scholarly literature only in connection with the application of existing doctrines in contract and tort.
+[
+3
+]
+The
+Greenman
+majority opinion
+was authored by then-Associate Justice
+Roger J. Traynor
+, who cited to his own earlier
+concurring opinion
+in
+Escola v. Coca-Cola Bottling Co.
+(1944).  In
+Escola
+, now also widely recognized as a landmark case,
+[
+16
+]
+[
+17
+]
+[
+18
+]
+[
+19
+]
+Justice Traynor laid the foundation for
+Greenman
+with these words:
+Even if there is no negligence, however, public policy demands that responsibility be fixed wherever it will most effectively reduce the hazards to life and health inherent in defective products that reach the market. It is evident that the manufacturer can anticipate some hazards and guard against the recurrence of others, as the public cannot. Those who suffer injury from defective products are unprepared to meet its consequences. The cost of an injury and the loss of time or health may be an overwhelming misfortune to the person injured, and a needless one, for the risk of injury can be insured by the manufacturer and distributed among the public as a cost of doing business. It is to the public interest to discourage the marketing of products having defects that are a menace to the public. If such products nevertheless find their way into the market it is to the public interest to place the responsibility for whatever injury they may cause upon the manufacturer, who, even if he is not negligent in the manufacture of the product, is responsible for its reaching the market. However intermittently such injuries may occur and however haphazardly they may strike, the risk of their occurrence is a constant risk and a general one. Against such a risk there should be general and constant protection and the manufacturer is best situated to afford such protection.
+[
+20
+]
+Traynor's argument for imposing strict liability in
+Escola
+"has had an enormous impact on the way legal scholars have understood products liability and tort law more generally".
+[
+21
+]
+The year after
+Greenman
+, the Supreme Court of California proceeded to extend strict liability to
+all
+parties involved in the manufacturing, distribution, and sale of defective products (including retailers).
+[
+12
+]
+[
+22
+]
+[
+23
+]
+In 1969, the court then held that such defendants were liable not only to direct customers and users, but also to any innocent bystanders randomly injured by defective products.
+[
+22
+]
+[
+24
+]
+Nationwide adoption of product liability
+[
+edit
+]
+In turn, Prosser was able to propagate the
+Greenman
+holding to a nationwide audience because the American Law Institute had appointed him as the official reporter of the
+Restatement of Torts, Second
+.
+[
+12
+]
+The Institute approved the Restatement's final draft in 1964 and published it in 1965; the Restatement codified the
+Greenman
+doctrine in Section 402A.
+[
+12
+]
+[
+15
+]
+Greenman
+and Section 402A "spread like wildfire across America".
+[
+25
+]
+The
+highest courts
+of nearly all U.S. states and territories (and a few
+state legislatures
+) embraced this "bold new doctrine" during the late 1960s and 1970s.
+[
+9
+]
+By 1971, the doctrine had been adopted in 28 states; by 1976, it had been adopted in 41 states.
+[
+13
+]
+As of 2018, the five exceptions who have rejected strict liability are Delaware, Massachusetts, Michigan, North Carolina, and Virginia.
+[
+25
+]
+In four of those states, warranty law has been so broadly construed in favor of plaintiffs that only North Carolina truly lacks anything resembling strict liability in tort for defective products.
+[
+26
+]
+North Carolina's judiciary never attempted to adopt the doctrine, and the state legislature enacted a statute expressly banning strict liability for defective products in 1995.
+[
+26
+]
+[
+27
+]
+Before the product liability revolution, it was unheard of in American case law, for example, for a consumer to sue a ladder manufacturer after falling off a ladder or to sue a diving board manufacturer for diving injuries.
+[
+13
+]
+After the 1960s, these kinds of lawsuits became very common.
+[
+13
+]
+In a landmark 1986 decision,
+East River S. S. Corp. v. Transamerica Delaval Inc.
+, the U.S. Supreme Court also embraced strict liability for defective products by adopting it as part of
+federal admiralty law
+, holding that admiralty law "incorporates principles of product liability, including strict liability".
+[
+28
+]
+Factors behind nationwide adoption
+[
+edit
+]
+In the conventional narrative, there are two main factors that explain the rapid embrace of
+Greenman
+and Section 402A.
+[
+26
+]
+First, they came along just as Americans were coalescing around a consensus in favor of
+consumer protection
+, which would eventually cause Congress to enact several landmark federal product safety and vehicle safety statutes.
+[
+26
+]
+[
+29
+]
+Between 1960 and 1977, Congress passed at least forty-two laws dealing with consumer and worker safety.
+[
+30
+]
+Second, American academic experts in the field of
+law and economics
+developed new theories that helped to justify strict liability, such as those articulated by
+Guido Calabresi
+in
+The Costs of Accidents
+(1970).
+[
+26
+]
+[
+29
+]
+[
+31
+]
+[
+32
+]
+To this, Kyle Graham adds three more factors: (3) the rise of attorneys specializing exclusively in plaintiffs' personal injury cases and their professional associations like the organization now known as the
+American Association for Justice
+; (4) the ubiquity of so-called "bottle cases" (personal injury cases arising from broken
+glass bottles
+) before
+aluminum cans
+and
+plastic bottles
+displaced glass bottles as the primary beverage container during the 1970s; and (5) the resistance of the
+Uniform Commercial Code
+'s editorial board to extending warranties to bystander victims before 1966—in states whose legislatures had not already acted, state courts were more receptive to extending the common law to grant bystanders a strict liability tort claim.
+[
+26
+]
+Prosser inexplicably imposed in Section 402A a requirement that a product defect must be "unreasonably dangerous."
+[
+33
+]
+[
+34
+]
+Since the "unreasonably dangerous" qualifier implicitly connotes some sense of the idea of "fault" which Traynor was trying to exorcise from product liability,
+[
+34
+]
+it was subsequently rejected as incompatible with strict liability for defective products by Alaska, California, Georgia, New Jersey, New York, Puerto Rico and West Virginia.
+[
+33
+]
+The mass tort product liability explosion
+[
+edit
+]
+Early proponents of strict liability believed its economic impact would be minor because they were focused on manufacturing defects.
+[
+35
+]
+They failed to foresee the logical implications of applying the rule to other types of product defects.
+[
+35
+]
+Only in the late 1960s did Americans begin to draw a clear analytical distinction between manufacturing and design defects, and since the early 1980s, defective design claims "have formed the overwhelming bulk" of American product liability lawsuits.
+[
+29
+]
+It was "the unintended application of [Section] 402A to the design context" which resulted in the explosion of
+mass tort
+product liability cases during the 1980s throughout the United States.
+[
+29
+]
+In the
+federal judicial system
+, the number of product liability civil actions filed per year increased from 2,393 in 1975 to 13,408 in 1989, and product liability's percentage of all federal civil cases increased from 2.0% to 5.7% during the same period.
+[
+36
+]
+These numbers reflect only a small portion of the 1980s explosion in product liability cases; the vast majority of American lawsuits are heard in state courts and not federal courts.
+[
+37
+]
+The explosion in product liability cases was widely blamed for causing a 1986 crisis in the availability of
+liability insurance
+for American businesses.
+[
+13
+]
+Self-insurance
+costs as a proportion of total liability insurance expenditures had already skyrocketed from 4.9 percent in 1970 to 51.7 percent in 1979 (meaning that more and more companies were insuring themselves because no one else would).
+[
+13
+]
+American
+aircraft manufacturers
+blamed the liability insurance crisis for the collapse of
+general aviation
+in the United States during the 1980s.
+[
+13
+]
+In the decade after 1976, total aggregate liability payouts by aircraft manufacturers to crash victims skyrocketed by over 800% from the 1976 baseline number, even as the number of deaths each year in plane crashes continued to slowly decline.
+[
+13
+]
+In 1986, "liability insurance costs added $80,000 to the cost of each
+Beech aircraft
+and $75,000 to each
+Piper aircraft
+", and U.S. aircraft production declined from 17,048 planes in 1979 to 1,143 in 1988.
+[
+13
+]
+In subsequent decades, American federal judges began to heavily rely upon the
+multidistrict litigation
+(MDL) statute (
+28
+U.S.C.
+§
+1407
+) to manage an ever-increasing number of complex civil cases.
+[
+38
+]
+For the first time, by the end of 2018 more than half (51.9%) of all pending American federal civil cases had been centralized into MDLs, with 156,511 cases in 248 MDLs out of a total of 301,766 civil cases.
+[
+38
+]
+Product liability was the dominant category both in terms of percentage of total active MDLs (32.9%) and percentage of total civil cases centralized into MDLs (91%).
+[
+38
+]
+Among the factors which led to the large numbers of product liability cases seen today in the United States are relatively low fees for
+filing
+lawsuits, the availability of
+class actions
+, the strongest right to a
+jury trial
+in the world, the highest awards of monetary damages in the world (frequently in the millions of dollars for
+pain and suffering
+noneconomic damages and in rare cases soaring into the billions for
+punitive damages
+[
+39
+]
+), and the most extensive right to
+discovery
+in the world.
+[
+2
+]
+No other country has adopted the U.S. standard of disclosure of information that is "reasonably calculated to lead to the discovery of admissible evidence."
+[
+2
+]
+[
+40
+]
+American
+reported cases
+are replete with plaintiffs whose counsel artfully exploited this standard to obtain so-called "
+smoking gun
+" evidence of product defects and made defendants pay "a tremendous price" for their callous disregard for product safety.
+[
+2
+]
+Tort reform and the neo-conservative reaction
+[
+edit
+]
+In response to these developments, a
+tort reform
+movement appeared in the 1980s which persuaded many state legislatures to enact various limitations like
+damage caps
+and
+statutes of repose
+.
+[
+13
+]
+[
+41
+]
+However, the majority of states left untouched the basic rule of strict liability for defective products, and all efforts at the federal level to enact a uniform federal product liability regime were unsuccessful.
+[
+41
+]
+From the mid-1960s onward, state courts struggled for over four decades to develop a coherent test for design defects, either phrased in terms of consumer expectations or whether risks outweigh benefits or both (i.e., a hybrid test in which the first does not apply to defects that are too complex).
+[
+42
+]
+Risk-benefit analysis, of course, can be seen as a way of measuring the reasonableness of the defendant's conduct—or in other words, negligence.  A neo-conservative turn among many American courts
+[
+43
+]
+and tort scholars during the 1980s led to a recognition that liability in design defect and failure-to-warn cases had never been entirely strict,
+[
+44
+]
+or had been operating in some respects as a
+de facto
+fault-based regime all along,
+[
+41
+]
+and the American Law Institute expressly backed a return to tests associated with negligence for design and warning defects with the 1998 publication of the
+Restatement of Torts, Third: Products Liability
+.
+[
+44
+]
+[
+45
+]
+This attempt to resurrect negligence and to limit strict liability to its original home in manufacturing defects
+[
+45
+]
+[
+46
+]
+[
+47
+]
+"has been highly controversial among courts and scholars."
+[
+48
+]
+In arguing in 2018 that U.S. product liability law as restated in 1998 had come full circle back to where it started in 1964, two law professors also conceded that "some courts" continue to "tenaciously cling[] to the rationale and doctrine of [Section] 402A."
+[
+49
+]
+Types of liability
+[
+edit
+]
+Section 2 of the
+Restatement (Third) of Torts: Products Liability
+distinguishes between three major types of product liability claims:
+Manufacturing defect
+Design defect
+Failure to warn (also known as marketing defects)
+However, in most states, these are not legal claims in and of themselves, but are pleaded in terms of the legal theories mentioned above.  For example, a plaintiff might plead negligent failure to warn or strict liability for defective design.
+[
+50
+]
+The three types of product liability claims are defined as follows:
+Manufacturing defects are those that occur in the manufacturing process and usually involve poor-quality materials or shoddy
+workmanship
+.  In other words, the defective product differs from the others on the same assembly line and does not conform to the manufacturer's intended design.
+[
+46
+]
+Design defects occur where the product design is inherently dangerous or useless (and hence defective) no matter how carefully manufactured.  In other words, the defective product is the same as every other one on the same assembly line because it is exactly what the manufacturer designed and intended to build, but the plaintiff is contending that the design itself is defective.
+[
+46
+]
+The Third Restatement expressly prefers to measure defective design in terms of whether the product design's risks outweigh its benefits, and expressly deprecates the consumer expectations test associated with Section 402A of the Second Restatement. As noted above, state courts either use one test or the other or both.
+[
+42
+]
+The Third Restatement also places the burden of proof on the plaintiff to prove that risks outweigh benefits by proving the feasibility of a safer alternative design.
+[
+42
+]
+Failure-to-warn defects arise in products that carry inherent nonobvious dangers which can be mitigated through adequate warnings to the user, and which are present regardless of how well the product is manufactured and designed for its intended purpose. This class of defects also includes failure to provide relevant product instructions or sufficient product warnings.
+[
+51
+]
+Theories of liability
+[
+edit
+]
+In the United States, the claims most commonly associated with product liability are
+negligence
+,
+strict liability
+,
+breach of warranty
+, and various
+consumer protection
+claims.
+Breach of warranty
+[
+edit
+]
+Warranties are statements by a manufacturer or seller concerning a product during a commercial transaction.  Warranty claims historically required
+privity
+between the injured party and the manufacturer or seller; in
+plain English
+, they must be dealing directly with one another. As noted above, this requirement was demolished in the landmark
+Henningsen
+case.
+Breach of warranty-based product liability claims usually focus on one of three types:
+Breach of an
+express warranty
+,
+Breach of an
+implied warranty
+of merchantability, and
+Breach of an implied warranty of fitness for a particular purpose.
+Express warranty claims focus on express statements by the manufacturer or the seller concerning the product (e.g., "This chainsaw is useful to cut turkeys").
+The various implied warranties cover those expectations common to all products (e.g., that a tool is not unreasonably dangerous when used for its proper purpose), unless specifically disclaimed by the manufacturer or the seller.  They are implied by operation of law from the act of manufacturing, distributing, or selling the product. Claims involving real estate (especially mass-produced
+tract housing
+) may also be brought under a theory of implied warranty of habitability.
+Negligence
+[
+edit
+]
+A basic
+negligence
+claim consists of proof of
+a duty owed,
+a breach of that duty,
+the breach was the cause in fact of the plaintiff's injury (actual cause)
+the breach proximately caused the plaintiff's injury.
+and the plaintiff suffered actual quantifiable injury (damages).
+As demonstrated in cases such as
+Winterbottom v. Wright
+, the scope of the duty of care was limited to those with whom one was in privity. Later cases like
+MacPherson v. Buick Motor Co.
+broadened the duty of care to all who could be foreseeably injured by one's conduct.
+Over time, negligence concepts have arisen to deal with certain specific situations, including
+negligence
+per se
+(using a manufacturer's violation of a law or regulation, in place of proof of a duty and a breach) and
+res ipsa loquitur
+(an inference of negligence under certain conditions).
+Strict liability
+[
+edit
+]
+Main article:
+Strict liability
+Rather than focus on the behavior of the manufacturer (as in negligence), strict liability claims focus on the product itself.  Under strict liability, the manufacturer is liable if the product is defective, even if the manufacturer was not negligent in making that product defective.
+Under a strict liability theory, the plaintiff merely needs to prove:
+the defendant manufactured, distributed, or supplied a product;
+the product was defective;
+the defect caused injury to the plaintiff; and
+as a result, the plaintiff sustained damages.
+Consumer protection
+[
+edit
+]
+In addition to common law remedies, many states have enacted consumer protection statutes that provide specific remedies for certain specific types of product defects.  One reason for the appearance of such statutes is that under the "economic loss rule", strict liability in tort is unavailable for products that cause damage only to themselves.
+[
+52
+]
+In other words, strict liability is unavailable for defects that merely render the product unusable (or less useful), and hence cause only economic injury, but do not cause personal injury or damage to other property.
+[
+52
+]
+Breach of warranty actions governed by Article 2 of the Uniform Commercial Code also often fail to provide adequate remedies in such situations.
+[
+52
+]
+The best-known examples of consumer protection statutes for product defects are
+lemon laws
+, which provide protection to purchasers of defective new vehicles and, in a small number of states, used vehicles.
+[
+52
+]
+In the United States, "cars are typically the second most valuable asset most people own, outranked only by their home."
+[
+53
+]
+Europe
+[
+edit
+]
+Although European observers followed
+Greenman
+and Section 402A "with great interest", European countries did not initially adopt such a doctrine.
+[
+3
+]
+[
+54
+]
+For example, after the landmark case of
+Donoghue v Stevenson
+[1932] (which followed
+MacPherson
+), UK product liability law did not change any further for many decades, despite "trenchant academic criticism".
+[
+55
+]
+Strict liability for defective products finally came to Europe as a result of the
+thalidomide scandal
+[
+3
+]
+[
+54
+]
+and the victims' ensuing struggle during the 1960s to obtain adequate compensation, especially in the UK and West Germany.
+[
+56
+]
+The thalidomide scandal highlighted the need for a strict product liability claim sounding in tort because the affected infants were mere bystander victims, as distinguished from product buyers or users.
+[
+56
+]
+After the UK formed the
+National Health Service
+(NHS) in 1948, 80% of pharmaceuticals were provided to patients through the NHS.
+[
+56
+]
+By assuming financial responsibility for the provision of drugs, the government had thereby barred the majority of mothers (the actual product users) and their infants from bringing breach of warranty claims sounding in contract.
+[
+56
+]
+For such victims, their only possible claim was a negligence claim sounding in tort, but it is so difficult under English law to prove the standard of care of a reasonable drug manufacturer that as of late 1993, none had ever been held liable in an English court under a negligence theory (although there had been a number of out-of-court settlements).
+[
+56
+]
+The first international effort in Europe to harmonize product liability resulted in the
+Council of Europe
+Convention on Products Liability in regard to Personal Injury and Death
+(the
+Strasbourg Convention
+) in 1977, which never entered into force: while it was signed by Austria, Belgium, France and Luxembourg, it was ratified by none of them.
+[
+57
+]
+On July 25, 1985, the then-
+European Economic Community
+adopted the
+Product Liability Directive
+.  In language resembling what Traynor wrote in
+Escola
+and
+Greenman
+, the Directive's preface states that "liability without fault on the part of the producer is the sole means of adequately solving the problem, peculiar to our age of increasing technicality, of a fair apportionment of the risks inherent in modern technological production."  The Directive gave each member state the option of imposing a liability cap of 70 million
+euros
+per defect.  Unlike the United States, the Directive only imposed strict liability upon "producers"—that is, manufacturers of raw materials, component parts, and finished products, as well as importers—and deviated significantly from the American model by deciding not to impose strict liability on purely domestic distributors or retailers.
+[
+2
+]
+By using the 20-year-old Section 402A as their model, the Directive's drafters decided not to include a number of changes such as the subsequent differentiation between three major types of product defects used in the US.
+[
+2
+]
+As of 2003, on the one hand, product liability had expanded around the world within the past two decades to become a "global phenomenon," and therefore, "the United States is no longer the only country with tough product liability rules."
+[
+2
+]
+On the other hand, the picture looked very different when one "turn[ed] from the law on the books to the law in action."
+[
+2
+]
+In the real world, the actual protection afforded to consumers by product liability law "depends heavily on whether claims are realistically enforceable," and that depends upon whether the procedural law of the forum state is actually able to facilitate access to justice.
+[
+58
+]
+Traditionally, European courts have provided no discovery or rather minimal discovery (by American standards).
+[
+2
+]
+[
+40
+]
+[
+59
+]
+Where available, European discovery is rarely self-executing (that is, automatically effective by operation of law), meaning that the defendant and third parties have no obligation to disclose anything unless and until the plaintiff obtains a court order.
+[
+2
+]
+[
+59
+]
+Civil law countries
+strongly dislike and oppose the American principle of broad discovery in civil litigation.
+[
+60
+]
+[
+61
+]
+For example, since 1968, it has been a crime for a French company to produce commercial information in foreign legal proceedings without express authorization from a French court, and in turn, this has been raised as a defense to discovery by French defendants in American product liability cases.
+[
+62
+]
+[
+63
+]
+Since the defendant usually possesses most of the extant evidence of a product defect, in most European countries it is "very difficult, if not impossible, for a victim or her lawyer to investigate a product liability case."
+[
+2
+]
+Other obstacles—especially in civil law countries—include high filing fees, no right to a jury trial, low damages for pain and suffering, the unavailability of punitive damages, and the unavailability (before the 2010s) of class actions.
+[
+2
+]
+As of 2003, there was
+no
+country outside of the United States where plaintiffs were able to recover noneconomic damages above US$300,000 for even the most catastrophic injuries.
+[
+2
+]
+As of 2015, product liability in Europe "has remained a fairly minor field which generates fewer cases, more modest awards, and rarely makes it into the headlines" (in comparison to its American cousin).
+[
+6
+]
+In July 2018,
+European Commission
+staff reported that from 2000 to 2016, a total of only 798 product liability claims had been filed in the national courts of EU member states.
+[
+64
+]
+As of 2020, the much smaller number of cases in the UK meant that "English case law ha[d] barely begun to consider" many of the product liability issues already explored thoroughly by American courts, which therefore required an English legal treatise to cite to a "significant proportion" of American cases in order to illustrate where English product liability law could go in the future.
+[
+65
+]
+During the late 2010s, the comparative outcomes for consumers affected by the
+Volkswagen emissions scandal
+vividly highlighted the deficiencies of European civil procedure as applied to a defendant who had already publicly admitted to violations of
+U.S. environmental laws
+.
+[
+66
+]
+In the United States, Volkswagen quickly settled the consolidated consumer class action and agreed to pay US$11.2 billion directly to consumers affected by its allegedly defective diesel vehicles.
+[
+66
+]
+In contrast, consumers in Europe and elsewhere around the world had to fight much longer and harder for less compensation.
+[
+66
+]
+Many of them were unimpressed with Volkswagen's vigorous advocacy of legal defenses based on technical differences between different nations' environmental laws; from their perspective, they had paid for a "clean diesel" car, they did not get a "clean diesel" car, and did not understand why they deserved far less compensation than American consumers for what they perceived to be the same defect.
+[
+66
+]
+This embarrassed Germany into dropping its longstanding opposition to European
+collective redress
+proposals, and the country also made reforms to its domestic civil procedure.
+[
+66
+]
+As a result, on 25 November 2020, the European Parliament and Council adopted the Directive on Representative Actions.
+[
+66
+]
+Paragraph 1 of Article 1 of the Directive states that it is intended "to improve consumers' access to justice."
+[
+67
+]
+In 2024,
+Directive (EU) 2024/2853
+on the liability for defective products repealed Council Directive 85/374/EEC and provided an expanded scope on product liability, now including components of products as well as
+software
+.
+Other nations
+[
+edit
+]
+The legislatures of many other countries outside the EU (then: EEC) subsequently enacted strict liability regimes based on the European model (that is, generally applying only to manufacturers and importers), including
+Israel
+(March 1980, based on an early proposed draft of the Directive),
+Brazil
+(September 1990),
+Peru
+(November 1991),
+Australia
+(July 1992),
+Russia
+(February 1992),
+Switzerland
+(December 1992),
+Argentina
+(October 1993),
+Japan
+(June 1994),
+Taiwan
+(June 1994),
+Malaysia
+(August 1999),
+South Korea
+(January 2000),
+Thailand
+(December 2007), and
+South Africa
+(April 2009).
+[
+citation needed
+]
+As of 2015, in most countries outside of the United States and European Union, "product liability remains largely a regime of paper rules with little practical impact[.]"
+[
+68
+]
+Applicable law
+[
+edit
+]
+The law that needs to be applied in product liability cases is governed by the
+Convention on the Law Applicable to Products Liability
+of 1971 for the 11 countries that are party to it.
+[
+69
+]
+The country where the damage occurred determines the applicable law, if that country is also the residence of the person suffering damage, the principal place of business of the person held liable or the place where the product was bought. If that is not the case, the law of the country of residence is used, provided the product was bought there, or it was the principal place of business of the person held liable.
+Debate over strict liability laws
+[
+edit
+]
+Advocates of strict liability laws argue that strict products liability causes manufacturers to internalize costs they would normally
+externalize
+. Strict liability thus requires manufacturers to evaluate the full costs of their products. In this way, strict liability provides a mechanism for ensuring that a product's absolute good outweighs its absolute harm.
+[
+70
+]
+Empirical data has shown that increased liability can force manufacturers to actively confront the risks imposed by their products.  For example, at the peak of the liability insurance crisis in 1986, a survey of manufacturers found that because of expanding liability, 47 percent had withdrawn products, 39 percent had decided against introducing new products, and 25 percent had discontinued new product research.
+[
+13
+]
+Between two parties who are not negligent (manufacturer and consumer), one will necessarily shoulder the costs of product defects. Proponents say it is preferable to place the economic costs on the manufacturer because it can better absorb them and pass them on to other consumers. The manufacturer thus becomes a de facto insurer against its defective products, with premiums built into the product's price.
+[
+70
+]
+Strict liability also seeks to diminish the impact of
+information asymmetry
+between manufacturers and consumers. Manufacturers have better knowledge of their own products' dangers than do consumers. Therefore, manufacturers properly bear the burden of finding, correcting, and warning consumers of those dangers.
+[
+70
+]
+Strict liability reduces
+litigation
+costs, because a
+plaintiff
+need only prove
+causation
+, not imprudence. Where causation is easy to establish, parties to a strict liability suit will most likely settle, because only damages are in dispute.
+[
+70
+]
+Critics charge that strict liability creates risk of
+moral hazard
+. They claim that strict liability causes consumers to under invest in care even when they are the least-cost avoiders. This, they say, results in a lower aggregate level of care than under a negligence standard. Proponents counter that people have enough natural incentive to avoid inflicting serious harm on themselves to mitigate this concern.
+Critics charge that the requiring manufacturers to internalize costs they would otherwise externalize increases the price of goods. Critics claim that in
+elastic
+, price-sensitive markets, price increases cause some consumers to seek substitutes for that product. As a result, they say, manufacturers may not produce the socially optimal level of goods. Proponents respond that these consumer opt outs reflect a product whose absolute harm outweighs its absolute value; products that do more harm than good ought not be produced.
+In the
+law and economics
+literature, there is a debate about whether liability and regulation are substitutes or complements.
+[
+71
+]
+[
+72
+]
+[
+73
+]
+[
+74
+]
+If they are substitutes, then either liability or regulation should be used. If they are complements, then the joint use of liability and regulation is optimal.
+See also
+[
+edit
+]
+Asbestos and the law
+Automobile products liability
+Consumer Product Safety Commission
+(U.S.)
+Consumer protection
+Donoghue v Stevenson
+- Scotland snail case
+Market share liability
+- U.S.
+McDonald's coffee case
+- U.S.
+Product recall
+Statute of limitations
+Summers v. Tice
+Tort reform
+Toxic tort
+Tombstone mentality
+Wyeth v. Levine
+References
+[
+edit
+]
+↑
+Restatement (Third) of Torts: Products Liability, § 19.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+Reimann, Mathias (2003). "Liability for Defective Products at the Beginning of the Twenty-First Century: Emergence of a Worldwide Standard".
+The American Journal of Comparative Law
+.
+51
+(4):
+751–
+838.
+doi
+:
+10.2307/3649130
+.
+JSTOR
+3649130
+.
+Online access to this source requires a subscription to JSTOR or the Oxford Academic database operated by
+Oxford University Press
+.
+1
+2
+3
+4
+5
+6
+Reimann, Mathias (2015).
+"Product liability"
+. In Bussani, Mauro; Sebok, Anthony J. (eds.).
+Comparative Tort Law: Global Perspectives
+. Cheltenham: Edward Elgar Publishing. pp.
+250–
+278.
+ISBN
+9781784718138
+. Retrieved
+1 May
+2020
+.
+↑
+Goldberg, John C. P.; Zipursky, Benjamin C. (2010).
+The Oxford Introductions to U.S. Law: Torts
+. Oxford: Oxford University Press. p.
+270.
+ISBN
+9780195373974
+. Retrieved
+27 January
+2024
+.
+↑
+Howells, Geraint (1993).
+Comparative Product Liability
+. Aldershot: Dartmouth Publishing Company. p.
+201.
+ISBN
+9781855210783
+.
+1
+2
+Reimann, Mathias (2015).
+"Product liability"
+. In Bussani, Mauro; Sebok, Anthony J. (eds.).
+Comparative Tort Law: Global Perspectives
+. Cheltenham: Edward Elgar Publishing. pp.
+250–
+278.
+ISBN
+9781784718138
+. Retrieved
+1 May
+2020
+.
+↑
+Logan, Michael A.; Mayer, Zach T.; Fisher, Brian J. (5 August 2010).
+"Products Liability: Protection for the "Innocent" Seller in Texas"
+.
+National Law Journal
+. Retrieved
+11 August
+2018
+.
+1
+2
+3
+4
+5
+6
+Gifford, Donald G. (2018-09-25).
+"Technological Triggers to Tort Revolutions: Steam Locomotives, Autonomous Vehicles, and Accident Compensation"
+.
+Journal of Tort Law
+.
+11
+(1). Walter de Gruyter GmbH:
+71–
+143.
+doi
+:
+10.1515/jtl-2017-0029
+.
+ISSN
+2194-6515
+.
+S2CID
+158064216
+.
+The copy available through the direct link from the article title is the preprint version. The final version with as-published pagination, linked from the
+digital object identifier
+, requires a subscription to the
+De Gruyter
+database.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+Owen, David G. (2015).
+Products Liability Law
+(3rd
+ed.). St. Paul: West Academic. pp.
+14–
+22.
+ISBN
+9780314268396
+.
+1
+2
+3
+Howells, Geraint; Owen, David G. (2018).
+"Products liability law in America and Europe"
+. In Howells, Geraint; Ramsay, Iain; Wilhelmsson, Thomas (eds.).
+Handbook of Research on International Consumer Law
+(2nd
+ed.). Cheltenham: Edward Elgar Publishing. pp.
+202–
+230.
+ISBN
+9781785368219
+. Retrieved
+31 May
+2020
+.
+↑
+White, G. Edward (2003).
+Tort Law in America: An Intellectual History
+(Expanded
+ed.). Oxford: Oxford University Press. pp.
+169–
+170.
+ISBN
+9780195139655
+.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Kiely, Terrence F.; Ottley, Bruce L. (2006).
+Understanding Products Liability Law
+. Newark: Matthew Bender. pp.
+2–
+21.
+ISBN
+0820561088
+.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+Priest, George L.
+(Summer 1991).
+"The Modern Expansion of Tort Liability: Its Sources, Its Effects, and Its Reform"
+.
+The Journal of Economic Perspectives
+.
+5
+(3):
+31–
+50.
+doi
+:
+10.1257/jep.5.3.31
+.
+JSTOR
+1942795
+.
+↑
+White, Robert Jeffrey. "
+Top 10 in torts: evolution in the common law.
+"
+Trial
+32, no. 7 (July 1996): 50–53.
+1
+2
+Howells, Geraint; Owen, David G. (2018).
+"Products liability law in America and Europe"
+. In Howells, Geraint; Ramsay, Iain; Wilhelmsson, Thomas (eds.).
+Handbook of Research on International Consumer Law
+(2nd
+ed.). Cheltenham: Edward Elgar Publishing. pp.
+202–
+230.
+ISBN
+9781785368219
+. Retrieved
+31 May
+2020
+.
+1
+2
+O'Connell, Jeffrey; Linehan, John (2006). Carrington, Paul D.; Jones, Trina (eds.).
+"The Rise and Fall (and Rise Again?) of Accident Law: A Continuing Saga"
+.
+Law and Class in America: Trends Since the Cold War
+. New York: New York University Press:
+349–
+363.
+ISBN
+9780814716540
+. Retrieved
+12 February
+2017
+.
+↑
+Vandall, Frank J. (2011).
+A History of Civil Litigation: Political and Economic Perspectives
+. Oxford: Oxford University Press. p.
+27.
+ISBN
+9780199781096
+.
+↑
+Feinman, Jay M. (2023).
+Law 101: Everything You Need to Know About American Law
+(6th
+ed.). Oxford: Oxford University Press. p.
+196.
+ISBN
+9780197662595
+.
+↑
+Friedman, Lawrence M. (2002).
+American Law in the Twentieth Century
+. New Haven: Yale University Press. pp.
+356–357
+.
+ISBN
+9780300091373
+.
+↑
+Escola v. Coca-Cola Bottling Co.
+, 24 Cal. 2d 453, 462, 150 P.2d 436 (1944) (Traynor, J., concurring).
+↑
+Goldberg, John C. P.; Zipursky, Benjamin C. (2010).
+The Oxford Introductions to U.S. Law: Torts
+. Oxford: Oxford University Press. p.
+280.
+ISBN
+9780195373974
+. Retrieved
+12 March
+2022
+.
+1
+2
+Nolan, Virginia; Ursin, Edmund (1995).
+Understanding Enterprise Liability: Rethinking Tort Reform for the Twenty-First Century
+. Philadelphia: Temple University Press. p.
+117.
+ISBN
+9781566392303
+. Retrieved
+19 January
+2021
+.
+↑
+Vandermark v. Ford Motor Co.
+,
+61 Cal. 2d 256
+(1964)
+↑
+Elmore v. American Motors Corp.
+,
+70 Cal. 2d 578
+(1969).
+1
+2
+Howells, Geraint; Owen, David G. (2018).
+"Products liability law in America and Europe"
+. In Howells, Geraint; Ramsay, Iain; Wilhelmsson, Thomas (eds.).
+Handbook of Research on International Consumer Law
+(2nd
+ed.). Cheltenham: Edward Elgar Publishing. pp.
+202–
+230.
+ISBN
+9781785368219
+. Retrieved
+31 May
+2020
+.
+1
+2
+3
+4
+5
+6
+Graham, Kyle (2014).
+"Strict Products Liability at 50: Four Histories"
+.
+Marquette Law Review
+.
+98
+(2):
+555–
+624.
+doi
+:
+10.2139/ssrn.2385731
+.
+↑
+N.C. Gen. Stat. § 99B-1.1
+(1995).
+↑
+East River S. S. Corp. v. Transamerica Delaval Inc.
+,
+476
+U.S.
+858
+(1986)
+.
+1
+2
+3
+4
+Stapleton, Jane
+(1994).
+Product Liability
+. Cambridge: Cambridge University Press. p.
+30.
+ISBN
+9780406035035
+.
+↑
+Cohen, Lizabeth (2008).
+A Consumers' Republic: The Politics of Mass Consumption in Postwar America
+. New York: Alfred A. Knopf. p.
+360.
+ISBN
+9780307555366
+. Retrieved
+29 August
+2020
+.
+↑
+Vandall, Frank J. (2011).
+A History of Civil Litigation: Political and Economic Perspectives
+. Oxford: Oxford University Press. pp.
+36–
+37.
+ISBN
+9780199781096
+.
+↑
+Hackney, James R. Jr. (2007).
+Under Cover of Science: American Legal-Economic Theory and the Quest for Objectivity
+. Durham: Duke University Press. p.
+111.
+ISBN
+9780822339984
+.
+1
+2
+Heafey, Richard J.; Kennedy, Don M. (2006).
+Product Liability: Winning Strategies and Techniques
+. New York: Law Journal Press. pp.
+2–
+9.
+ISBN
+1-58852-067-6
+.
+1
+2
+Vandall, Frank J. (2011).
+A History of Civil Litigation: Political and Economic Perspectives
+. Oxford: Oxford University Press. pp.
+31–
+32.
+ISBN
+9780199781096
+.
+1
+2
+Stapleton, Jane (1994).
+Product Liability
+. Cambridge: Cambridge University Press. p.
+26.
+ISBN
+9780406035035
+.
+↑
+Moore, Michael J.; Viscusi, W. Kip (2001).
+Product Liability Entering the Twenty-First Century: The U.S. Perspective
+. Washington, D.C.: AEI-Brookings Joint Center for Regulatory Studies. p.
+10.
+ISBN
+9780815798798
+. Retrieved
+19 September
+2020
+.
+↑
+Manweller, Mathew (2006).
+"Chapter 2, The Roles, Functions, and Powers of State Courts"
+. In Hogan, Sean O. (ed.).
+The Judicial Branch of State Government: People, Process, and Politics
+. Santa Barbara: ABC-CLIO. pp.
+37–
+96.
+ISBN
+9781851097517
+. Retrieved
+5 October
+2020
+.
+1
+2
+3
+Wittenberg, Daniel S. (February 19, 2020).
+"Multidistrict Litigation: Dominating the Federal Docket"
+.
+Litigation News
+. American Bar Association. Archived from
+the original
+on October 21, 2020.
+↑
+Priest, George L.
+(2002).
+"Introduction: The Problem and Efforts to Understand It"
+. In
+Sunstein, Cass R.
+; Hastie, Reid; Payne, John W.;
+Viscusi, W. Kip
+; Schkade, David A. (eds.).
+Punitive Damages: How Juries Decide
+. Chicago: University of Chicago Press. pp.
+1–
+16.
+ISBN
+9780226780160
+.
+(At p. 1.)
+1
+2
+Sautter, Ed (2011).
+"Chapter 2: Conflicts of laws in multiple jurisdictions"
+. In Coleman, Lynn; Lemieux, Victoria L.; Stone, Rod; Yeo, Geoffrey (eds.).
+Managing Records in Global Financial Markets: Ensuring Compliance and Mitigating Risk
+. London: Facet Publishing. pp.
+17–
+32.
+ISBN
+9781856046633
+.
+1
+2
+3
+Stapleton, Jane (1994).
+Product Liability
+. Cambridge: Cambridge University Press. p.
+33.
+ISBN
+9780406035035
+.
+1
+2
+3
+Owen, David G. (2008).
+"Design Defects"
+.
+Missouri Law Review
+.
+73
+(2):
+292–
+368.
+↑
+Howells, Geraint; Owen, David G. (2018).
+"Products liability law in America and Europe"
+. In Howells, Geraint; Ramsay, Iain; Wilhelmsson, Thomas (eds.).
+Handbook of Research on International Consumer Law
+(2nd
+ed.). Cheltenham: Edward Elgar Publishing. pp.
+202–
+230.
+ISBN
+9781785368219
+. Retrieved
+31 May
+2020
+.
+1
+2
+Reimann, Mathias (2015).
+"Product liability"
+. In Bussani, Mauro; Sebok, Anthony J. (eds.).
+Comparative Tort Law: Global Perspectives
+. Cheltenham: Edward Elgar Publishing. pp.
+250–
+278.
+ISBN
+9781784718138
+. Retrieved
+1 May
+2020
+.
+1
+2
+Koenig, Thomas;
+Rustad, Michael
+(2001).
+In Defense of Tort Law
+. New York: New York University Press. p.
+63.
+ISBN
+9780814748992
+. Retrieved
+9 June
+2020
+.
+1
+2
+3
+Vandall, Frank J. (2011).
+A History of Civil Litigation: Political and Economic Perspectives
+. Oxford: Oxford University Press. p.
+91.
+ISBN
+9780199781096
+.
+↑
+Howells, Geraint; Owen, David G. (2018).
+"Products liability law in America and Europe"
+. In Howells, Geraint; Ramsay, Iain; Wilhelmsson, Thomas (eds.).
+Handbook of Research on International Consumer Law
+(2nd
+ed.). Cheltenham: Edward Elgar Publishing. pp.
+202–
+230.
+ISBN
+9781785368219
+. Retrieved
+31 May
+2020
+.
+↑
+Reimann, Mathias (2015).
+"Product liability"
+. In Bussani, Mauro; Sebok, Anthony J. (eds.).
+Comparative Tort Law: Global Perspectives
+. Cheltenham: Edward Elgar Publishing. pp.
+250–
+278.
+ISBN
+9781784718138
+. Retrieved
+1 May
+2020
+.
+↑
+Howells, Geraint; Owen, David G. (2018).
+"Products liability law in America and Europe"
+. In Howells, Geraint; Ramsay, Iain; Wilhelmsson, Thomas (eds.).
+Handbook of Research on International Consumer Law
+(2nd
+ed.). Cheltenham: Edward Elgar Publishing. pp.
+202–
+230.
+ISBN
+9781785368219
+. Retrieved
+31 May
+2020
+.
+↑
+See, e.g.,
+Merrill v. Navegar, Inc.
+,
+26 Cal. 4th 465
+(2001).
+↑
+Noel, Dix W. (1969).
+"Products Defective because of Inadequate Directions or Warnings"
+.
+Southwestern Law Journal
+.
+23
+: 256
+. Retrieved
+11 August
+2018
+.
+1
+2
+3
+4
+Speidel, Richard E. (2006). Carrington, Paul D.; Jones, Trina (eds.).
+"Consumers and the American Contract System: A Polemic"
+.
+Law and Class in America: Trends Since the Cold War
+. New York: New York University Press:
+260–
+278.
+ISBN
+9780814716540
+. Retrieved
+12 February
+2017
+.
+(At p. 269.)
+↑
+Hagel III, John
+; Singer, Marc (1999).
+Net Worth: Shaping Markets when Customers Make the Rules
+. Boston: Harvard Business School Press. pp.
+62–
+63.
+ISBN
+9780875848891
+. Retrieved
+1 June
+2020
+.
+1
+2
+Howells, Geraint; Owen, David G. (2018).
+"Products liability law in America and Europe"
+. In Howells, Geraint; Ramsay, Iain; Wilhelmsson, Thomas (eds.).
+Handbook of Research on International Consumer Law
+(2nd
+ed.). Cheltenham: Edward Elgar Publishing. pp.
+202–
+230.
+ISBN
+9781785368219
+. Retrieved
+31 May
+2020
+.
+↑
+Stapleton, Jane (1994).
+Product Liability
+. Cambridge: Cambridge University Press. p.
+37.
+ISBN
+9780406035035
+.
+1
+2
+3
+4
+5
+Stapleton, Jane (1994).
+Product Liability
+. Cambridge: Cambridge University Press. pp.
+42–
+47.
+ISBN
+9780406035035
+.
+↑
+"European Convention on Products Liability in regard to Personal Injury and Death"
+. Council of Europe. 1977
+. Retrieved
+2008-04-30
+.
+↑
+Reimann, Mathias (2015).
+"Product liability"
+. In Bussani, Mauro; Sebok, Anthony J. (eds.).
+Comparative Tort Law: Global Perspectives
+. Cheltenham: Edward Elgar Publishing. pp.
+250–
+278.
+ISBN
+9781784718138
+. Retrieved
+1 May
+2020
+.
+1
+2
+Bergkamp, Lucas (2003).
+European Community Law for the New Economy
+. Antwerp: Intersentia. p.
+420.
+ISBN
+9789050952293
+. Retrieved
+9 June
+2020
+.
+↑
+Oakley, John B.;
+Amar, Vikram D.
+(2009).
+American Civil Procedure: A Guide to Civil Adjudication in US Courts
+. Alphen aan den Rijn: Kluwer Law International. p.
+177.
+ISBN
+9789041128720
+.
+↑
+Maxeiner, James R. (2011).
+Failures of American Civil Justice in International Perspective
+. Cambridge: Cambridge University Press. p.
+151.
+ISBN
+9781139504898
+. Retrieved
+9 June
+2020
+.
+↑
+Evans, Judith (19 November 2019).
+"Grenfell cladding manufacturer declines to release documents"
+.
+Financial Times
+. FT Group.
+Archived
+from the original on 2022-12-10
+. Retrieved
+23 May
+2020
+.
+↑
+Société Nationale Industrielle Aérospatiale v. United States District Court,
+482
+U.S.
+522
+(1987)
+.
+↑
+"Commission Staff Working Document, Evaluation of Council Directive 85/374/EEC of 25 July 1985 on the approximation of the laws, regulations and administrative provisions of the Member States concerning liability for defective products Accompanying the document Report from the Commission to the European Parliament, the Council and the European Economic and Social Committee on the Application of the Council Directive on the approximation of the laws, regulations, and administrative provisions of the Member States concerning liability for defective products (85/374/EEC) (SWD/2018/157 final)"
+.
+EUR-Lex
+. Luxembourg: Publications Office of the European Union. 5 July 2018
+. Retrieved
+29 October
+2022
+.
+↑
+Fairgrieve, Duncan; Goldberg, Richard S. (2020).
+Product Liability
+(3rd
+ed.). Oxford: Oxford University Press. p.
+15.
+ISBN
+9780191669941
+. Retrieved
+10 October
+2020
+.
+1
+2
+3
+4
+5
+6
+Hensler, Deborah R.
+; Kalajdzic, Jasminka; Cashman, Peter; Gómez, Manuel A.; Halfmeier, Axel; Tzankova, Ianika (2021).
+The Globalization of Mass Civil Litigation: Lessons from the Volkswagen "Clean Diesel" Case
+(PDF)
+. Santa Monica:
+RAND Corporation
+. pp.
+31–
+33,
+46–
+47,
+62–
+63
+. Retrieved
+31 December
+2021
+.
+↑
+"Directive (EU) 2020/1828 of the European Parliament and of the Council of 25 November 2020 on representative actions for the protection of the collective interests of consumers and repealing Directive 2009/22/EC"
+.
+EUR-Lex
+.
+Publications Office of the European Union
+. 25 November 2020.
+↑
+Reimann, Mathias (2015).
+"Product liability"
+. In Bussani, Mauro; Sebok, Anthony J. (eds.).
+Comparative Tort Law: Global Perspectives
+. Cheltenham: Edward Elgar Publishing. pp.
+250–
+278.
+ISBN
+9781784718138
+. Retrieved
+1 May
+2020
+.
+↑
+"Status Table, 22: Convention of 2 October 1973 on the Law Applicable to Products Liability"
+.
+HCCH
+. Retrieved
+10 February
+2020
+.
+1
+2
+3
+4
+Heafey, Richard J.; Kennedy, Don M. (2006).
+Product Liability: Winning Strategies and Techniques
+. New York: Law Journal Press. pp.
+2–
+10.
+ISBN
+1-58852-067-6
+.
+↑
+Kolstad, Charles D.; Ulen, Thomas S.; Johnson, Gary V. (1990). "Ex Post Liability for Harm vs. Ex Ante Safety Regulation: Substitutes or Complements?".
+The American Economic Review
+.
+80
+(4):
+888–
+901.
+JSTOR
+2006714
+.
+↑
+Ewerhart, Christian; Schmitz, Patrick W. (1998). "Ex Post Liability for Harm vs. Ex Ante Safety Regulation: Substitutes or Complements? Comment".
+The American Economic Review
+.
+88
+(4):
+1027–
+1028.
+JSTOR
+117018
+.
+↑
+Shavell, Steven (1984). "A Model of the Optimal Use of Liability and Safety Regulation".
+The RAND Journal of Economics
+.
+15
+(2):
+271–
+280.
+ISSN
+0741-6261
+.
+JSTOR
+2555680
+.
+↑
+Schmitz, Patrick W. (2000).
+"On the joint use of liability and safety regulation"
+(PDF)
+.
+International Review of Law and Economics
+.
+20
+(3):
+371–
+382.
+doi
+:
+10.1016/s0144-8188(00)00037-5
+.
+ISSN
+0144-8188
+.
+External links
+[
+edit
+]
+Congressional Research Service (CRS) Reports regarding Product Liability
+Product Liability Forum - British Institute of International and Comparative Law
+v
+t
+e
+Law
+Core subjects
+Administrative law
+Civil law
+Constitutional law
+Contract
+Criminal law
+Crime
+Deed
+Doctrine
+Equity
+Evidence
+International law
+Law of obligations
+Private law
+Procedure
+Civil
+Criminal
+Property law
+Public law
+Punishment
+Capital
+Corporal
+Restitution and unjust enrichment
+Statutory law
+Tort
+Disciplines
+Abortion law
+Agricultural law
+Animal law
+Aviation law
+Amnesty law
+Banking law
+Bankruptcy
+Commercial law
+Competition law
+Conflict of laws
+Construction law
+Consumer protection
+Corporate law
+Cyberlaw
+Drugs law
+Election law
+Energy law
+Entertainment law
+Environmental law
+Family law
+Financial law
+Financial regulation
+Health law
+public health
+global health
+Immigration law
+Intellectual property
+International criminal law
+International labour law
+International human rights
+International slavery laws
+International trade law
+Jurimetrics
+Labour
+Landlord–tenant law
+Law of war
+Legal archaeology
+Legal fiction
+Maritime law
+Marriage law
+Military law
+Music law
+Nationality law
+Probate
+Estate
+Will and testament
+Product liability
+Public international law
+Refugee law
+Space law
+Sports law
+State of emergency
+Tax law
+Transport law
+Trust law
+Unenforced law
+Sources of law
+Charter
+Legal code
+/
+Statutory law
+Constitution
+Custom
+Divine law
+Divine right
+Human rights
+Legitimacy
+Letters patent
+Man-made law
+Natural law
+Natural and legal rights
+Case law
+Precedent
+Law reports
+Legal treatise
+Regulations
+Law making
+Ballot measure
+Codification
+Decree
+Edict
+Executive order
+Proclamation
+Legislation
+Delegated legislation
+Regulation
+Reform
+Rulemaking
+Promulgation
+Ratification
+Repeal
+Treaty
+Concordat
+Statutory law
+Statute
+Act of parliament
+Act of Congress
+Basic structure doctrine
+Legal systems
+Civil law
+Common law
+Chinese law
+Legal pluralism
+Religious law
+Canon law
+Catholic canon law
+Hindu law
+Jain law
+Jewish law
+Parsi law
+Sharia
+Roman law
+Byzantine law
+Socialist law
+Statutory law
+Xeer
+Yassa
+Legal theory
+Anarchist
+Contract theory
+Comparative law
+Expressive function
+Feminist
+Law and economics
+Legal ethics
+Legal formalism
+History
+Libertarian
+International legal theory
+Principle of legality
+Principle of typicality
+Pseudolaw
+Rule of law
+Rule of man
+Sociology
+Jurisprudence
+Adjudication
+Administration of justice
+Admission to practice law
+Constitutionalism
+Criminal justice
+Court-martial
+Disbarment
+Dispute resolution
+Fiqh
+Lawsuit/Litigation
+Legal opinion
+Legal remedy
+Damages
+Deterrence (penology)
+Proportionality
+Reparations
+Legal status
+Judge
+Justice of the peace
+Magistrate
+Judgment
+Judicial activism
+Judicial interpretation
+Judicial misconduct
+Kangaroo court
+Judicial review
+Jurisdiction
+Jury
+Justice
+Practice of law
+Attorney
+Barrister
+Counsel
+Lawyer
+Legal representation
+Prosecutor
+Solicitor
+Question of fact
+Question of law
+Trial
+Trial advocacy
+Trier of fact
+Ultra vires
+Verdict
+Legal institutions
+Barristers' chambers
+Bureaucracy
+The bar
+The bench
+Civil society
+Court
+Ecclesiastical
+Court of equity
+Election commission
+Executive
+Judiciary
+Law enforcement
+Agency
+Legal education
+Law school
+Legal industry by country
+Legislature
+Military
+Police
+Political party
+Tribunal
+History
+History of the legal profession
+History of the American legal profession
+Women in law
+Law
+portal
+Category
+Index
+Outline
+Authority control databases
+National
+United States
+Czech Republic
+Israel
+Other
+Yale LUX
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Product_liability&oldid=1357921409
+"
+Category
+:
+Product liability
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+All articles with unsourced statements
+Articles with unsourced statements from August 2017
+Search
+Search
+Product liability
+7 languages
+Add topic

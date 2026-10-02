@@ -1,4 +1,5 @@
 import asyncio
+import json
 import tempfile
 from pathlib import Path
 
@@ -37,6 +38,11 @@ def test_case_repository_creates_healthcare_case() -> None:
 
 
 def test_qdrant_fallback_returns_healthcare_hit() -> None:
+    asyncio.run(qdrant_service.upsert_chunks(
+        Domain.HEALTH_INSURANCE, "synthetic-test-policy",
+        ["Synthetic test policy: MRI medical necessity."],
+        {"source": "synthetic_test_fixture"},
+    ))
     hits = asyncio.run(qdrant_service.search(Domain.HEALTH_INSURANCE, "MRI medical necessity", 3))
     assert hits
     assert hits[0]["metadata"]["domain"] == "health_insurance"
@@ -116,8 +122,11 @@ def test_repository_persists_agent_run_and_appeal() -> None:
     assert len(appeals) == 1
 
 
-def test_official_source_collector_rejects_untrusted_domain() -> None:
-    root = Path(__file__).resolve().parents[2]
+def test_official_source_collector_rejects_untrusted_domain(tmp_path) -> None:
+    root = tmp_path
+    registry = root / "knowledge/health_insurance/official_sources/source_registry.json"
+    registry.parent.mkdir(parents=True)
+    registry.write_text(json.dumps({"policy": {"allowed_domains": ["irdai.gov.in"]}, "sources": []}))
     collector = OfficialHealthSourceCollector(
         root / "knowledge" / "health_insurance" / "official_sources" / "source_registry.json",
         root / "knowledge" / "health_insurance" / "official_sources",
@@ -138,8 +147,18 @@ def test_research_ranking_prefers_irdai_over_medical_context() -> None:
     assert hits[0]["id"] == "reg"
 
 
-def test_insurer_collector_allows_only_official_domains() -> None:
-    root = Path(__file__).resolve().parents[2]
+def test_insurer_collector_allows_only_official_domains(tmp_path) -> None:
+    root = tmp_path
+    registry = root / "knowledge/health_insurance/insurers/insurer_registry.json"
+    registry.parent.mkdir(parents=True)
+    registry.write_text(json.dumps({
+        "policy": {}, "insurers": [],
+        "document_categories": {
+            "policy_wording": ["policy wording"],
+            "claim_procedure": ["claim form"],
+            "waiting_period": ["waiting period"],
+        },
+    }))
     collector = InsurerDocumentCollector(
         root / "knowledge" / "health_insurance" / "insurers" / "insurer_registry.json",
         root / "knowledge" / "health_insurance" / "insurers",
@@ -149,8 +168,18 @@ def test_insurer_collector_allows_only_official_domains() -> None:
     assert collector.host_allowed(insurer, "https://randombroker.example/star-health-policy.pdf") is False
 
 
-def test_insurer_document_classification() -> None:
-    root = Path(__file__).resolve().parents[2]
+def test_insurer_document_classification(tmp_path) -> None:
+    root = tmp_path
+    registry = root / "knowledge/health_insurance/insurers/insurer_registry.json"
+    registry.parent.mkdir(parents=True)
+    registry.write_text(json.dumps({
+        "policy": {}, "insurers": [],
+        "document_categories": {
+            "policy_wording": ["policy wording"],
+            "claim_procedure": ["claim form"],
+            "waiting_period": ["waiting period"],
+        },
+    }))
     collector = InsurerDocumentCollector(
         root / "knowledge" / "health_insurance" / "insurers" / "insurer_registry.json",
         root / "knowledge" / "health_insurance" / "insurers",
@@ -194,7 +223,7 @@ def test_supervisor_routes_cataract_coverage_to_policy_and_medical() -> None:
     assert "medical" in routes
     assert "claims" not in routes
     assert any(step == "retrieval:qdrant" for step in state["agent_trace"])
-    assert state["llm_call_count"] == len(state["specialist_outputs"]) + 5
+    assert state["llm_call_count"] == len(state["specialist_outputs"]) + 6
     expected_model = gemini_service.model_for("reasoning")
     assert all(output["model"] == expected_model for output in state["specialist_outputs"])
 
@@ -216,7 +245,7 @@ def test_supervisor_routes_denial_to_claims_agent() -> None:
     assert state["route"] == "claims"
     assert routes == ["claims"]
     assert "negotiator:merged-specialists" not in state["agent_trace"]
-    assert state["llm_call_count"] == 6
+    assert state["llm_call_count"] == 7
 
 
 def test_gemini_role_model_mapping_uses_optimized_defaults() -> None:

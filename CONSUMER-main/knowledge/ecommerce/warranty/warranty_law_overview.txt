@@ -1,0 +1,851 @@
+Warranty - Wikipedia
+Jump to content
+From Wikipedia, the free encyclopedia
+Contractual assurance given by a seller to a buyer
+The examples and perspective in this article
+deal primarily with the United States and do not represent a
+worldwide view
+of the subject
+.
+You may
+improve this article
+, discuss the issue on the
+talk page
+, or
+create a new article
+, as appropriate.
+(
+September 2010
+)
+(
+Learn how and when to remove this message
+)
+This article's lead section
+may be too technical for most readers to understand
+.
+Please
+help improve it
+to
+make it understandable to non-experts
+.
+(
+March 2021
+)
+(
+Learn how and when to remove this message
+)
+In law, a
+warranty
+is an expressed or implied promise or assurance of some kind.  The term's meaning varies across legal subjects.
+[
+1
+]
+In property law, it refers to a covenant by the grantor of a deed.
+[
+2
+]
+In insurance law, it refers to a promise by the purchaser of an insurance about the thing or person to be insured.
+[
+3
+]
+In
+contract
+law, a warranty is a contractual assurance given, typically, by a seller to a buyer,
+[
+4
+]
+for example confirming that the seller is the owner of the property being sold.
+[
+5
+]
+A warranty is a
+term of a contract
+, but not usually a condition of the contract or an
+innominate term
+, meaning that it is a term "not going to the root of the contract",
+[
+6
+]
+and therefore only entitles the innocent party to
+damages
+if it is
+breached
+,
+[
+6
+]
+i.e. if the warranty is not true or the defaulting party does not perform the contract in accordance with the terms of the warranty. A warranty is not a
+guarantee
+: it is a mere promise. It may be enforced if it is breached by an award for the
+legal remedy
+of damages.
+Depending on the terms of the contract, a product warranty may cover a product such that a
+manufacturer
+provides a warranty to a consumer with whom the manufacturer has no direct contractual relationship because it is purchased via an intermediary.
+A warranty may be
+express
+or
+implied
+. An express warranty is expressly stated (typically, written); whether or not a term will be implied into a contract depends on the particular contract law of the country in question. Warranties may also state that a particular fact is true at a point in time, or that the fact will continue into the future (a "continuing warranty").
+Express warranty
+[
+edit
+]
+Main article:
+Express warranties
+Express warranties are created when the seller makes a guarantee to the buyer that the product or service being offered has certain qualities. For there to exist an express warranty, a statement regarding the product or service must be made to the buyer and the statement must play a role in the buyer's decision to purchase the product or service. If, after purchase, the buyer feels that the given statement was a misrepresentation of the actual product or service, the buyer can file for breach of express warranty.
+[
+7
+]
+Implied warranty
+[
+edit
+]
+Main article:
+Implied warranty
+Implied warranties are unwritten promises that arise from the nature of the transaction, and the inherent understanding by the buyer, rather than from the express representations of the seller.
+Sale of goods
+[
+edit
+]
+Main article:
+Sale of goods
+Warranties provided in the sale of goods (tangible
+products
+) vary according to jurisdiction, but commonly new goods are sold with implied warranty that the goods are as advertised. Used products, however, may be sold "
+as is
+" with no warranties. Each country, however, defines its own parameters with regard to implied conditions or implied warranties. The rules regarding warranties are largely standardised; i.e., the concepts of
+offer
+,
+acceptance
+,
+consideration
+,
+capacity to contract
+and
+intention to create legal relations
+. Those are the five elements to create a legally binding contract in the United States (all 50 states), England and Wales, Scotland and Northern Ireland, each of the seven states of Australia, and all other common law countries. Countries with
+civil law
+systems, however, recognise legally binding contracts which are not supported by consideration.
+[
+citation needed
+]
+United States
+[
+edit
+]
+In the United States, various laws apply, including provisions in the
+Uniform Commercial Code
+which provide for implied warranties.
+[
+8
+]
+However, these implied warranties were often limited by
+disclaimers
+. In 1975 the
+Magnuson–Moss Warranty Act
+was passed to strengthen warranties on consumer goods.
+[
+9
+]
+Among other things, under the law implied warranties cannot be disclaimed if an express warranty is offered, and attorney fees may be recovered.
+[
+9
+]
+In some states, statutory warranties are required on new home construction, and "
+lemon laws
+" apply to motor vehicles.
+Article 2 of the Uniform Commercial Code, which has been adopted with variations in each
+state
+, provides that the following two warranties are implied unless they are explicitly disclaimed (such as an "
+as is
+" statement):
+The
+warranty of merchantability
+is implied unless expressly disclaimed by name, or the sale is identified with the phrase "
+as is
+" or "with all faults."  To be "merchantable", the goods must reasonably conform to an ordinary buyer's expectations. For example, a fruit that looks and smells good but has hidden defects may violate the warranty if its quality does not meet the standards for such fruit "as passes ordinarily in the trade". In most states, products inherently come with implied warranty of merchantability; however, in states like
+Massachusetts
+under
+consumer protection law
+, it is illegal to disclaim this warranty on household goods sold to consumers. (
+Massachusetts General Laws
+, Chapter 106: Section 2-316A)
+The
+warranty of fitness for a particular purpose
+is implied unless disclaimed when a buyer relies upon the seller to select the goods to fit a specific request. For example, this warranty is violated when a buyer asks a mechanic to provide tires for use on snowy roads and receives tires that are unsafe to use in snow.
+Defects In Materials and Workmanship
+[
+edit
+]
+A common kind of warranty on goods is a warranty that the product is free from material defects in materials and workmanship. This simply promises that the manufacturer properly constructed the product, out of proper materials. This implies that the product is not defective for the purposes for which it was made.
+Warranties may be time limited, thus limiting the time the buyer has to make a claim for breach of warranty. For example, a typical 90-day warranty on a television gives the buyer 90 days from the date of purchase to claim that the television was improperly constructed. Should the television fail after 91 days of normal usage, which because televisions customarily last longer than 91 days means there was a defect in the materials or workmanship of the television, the buyer nonetheless may not collect on the warranty because it is too late to file a claim. Consumer protection laws implemented by statute, however, provide additional remedies as it is not usually expected that a television will last for only 90 days.
+Time-limited warranties are often confused with performance warranties. A 90-day performance warranty would promise that the television would work for 90 days, which is fundamentally different from promising that it was delivered free of defects and limiting the time the buyer has to prove otherwise. But because the usual evidence that a product was delivered defective is that it later breaks, the effect is very similar.
+One situation in which the effect of a time-limited warranty is different from the effect of a performance warranty is where the time limit exceeds a normal lifetime of the product. If a coat is designed to last two years, but has a 10-year limited warranty against defects in materials and workmanship, a buyer who wears the coat for 3 years and then finds it worn out would not be able to collect on the warranty. But it is different from a 2-year warranty because if the buyer starts wearing the coat 5 years after buying it, and finds it wears out a year later, the buyer would have a warranty claim in Year 6. On the other hand, a 10-year performance warranty would promise that the coat would last 10 years.
+Satisfaction guarantee
+[
+edit
+]
+In the United States, the
+Magnuson–Moss Warranty Act
+of 1976 provides for enforcement of a satisfaction guarantee warranty. In these cases, the advertiser must refund the full purchase price regardless of the reason for dissatisfaction.
+[
+10
+]
+Lifetime warranty
+[
+edit
+]
+A lifetime warranty is usually a warranty against defects in materials and workmanship that has no time limit to make a claim, rather than a warranty that the product will perform for the lifetime of the buyer.
+[
+11
+]
+The actual time that product can be expected to perform is normally determined by the custom for products of its kind used the way the buyer uses it.
+If a product has been discontinued and is no longer available, the warranty may last a limited period longer. For example:
+the Cisco Limited Lifetime Warranty currently lasts for five years after the product has been discontinued, but only if one knows where they bought it from as the seller is responsible for administering it.
+[
+12
+]
+HP Networking product lifetime warranties last for as long as one owns the product.
+[
+13
+]
+Limited warranty
+[
+edit
+]
+A warranty may be limited in duration (as above) and/or in scope. In Avrora Fine Arts v Christie, Manson and Woods (a UK High Court case), the auctioneers had issued a "limited warranty" that a certain painting sold at auction had been painted by the Russian painter
+Boris Kustodiev
+, which experts subsequently stated was not the case. The sale was cancelled and the buyer was reimbursed, but further claims of negligence and misrepresentation were denied because they fell outside the warranty's scope.
+[
+14
+]
+Breach of warranty
+[
+edit
+]
+Warranties are breached when the promise is not performed at all, or not performed in accordance with the contract. The seller may honor the warranty by making a refund or a replacement. The
+statute of limitations
+depends on the jurisdiction and contractual agreements. In the United States, the
+Uniform Commercial Code
+§ 2-725 provides for a four-year time limit, which can be limited to one year by contract, starting from the date of delivery or if future performance is guaranteed from the date of discovery. Refusing to honor the warranty may be an
+unfair business practice
+. In the United States, breach of warranty lawsuits may be distinct from
+revocation
+of contract suits; in the case of the breach of warranty, the buyer's item is repaired or replaced while breach of contract involves returning the item to the seller.
+[
+15
+]
+Warranty label on top of a
+hard disk
+Warranty label lifted. The word "VOID" is shown multiple times.
+Some warranties require that repairs be undertaken by an
+authorized service provider
+. In such cases, service by non-authorized personnel or company may
+void
+(nullify) the warranty.  However, according to the
+Magnuson-Moss Act
+(a U.S. Federal law that governs warranties, which was passed in 1975), if the warranty does not provide full or partial payment of labor (to repair the device or system), it is the owner's choice who will provide the labor, including the possibility of DIY ("Do It Yourself") repairs, in which case the device or system owner will pay zero dollars for labor, yet the company that provided the warranty must still provide all the parts needed for the repair at absolutely no charge to the owner.
+If the defective product causes injury, this may be a
+cause of action
+for a
+product liability
+lawsuit (
+tort
+).
+Strict liability
+may be applied.
+Extended warranty
+[
+edit
+]
+In addition to standard warranties on new items, third parties or manufacturers may sell or offer extended warranties (also called service contracts).
+[
+16
+]
+These extend the warranty for a further length of time. However, these warranties have terms and conditions which may not match the original terms and conditions. For example, these may not cover anything other than mechanical failure from normal usage. Exclusions may include commercial use, "acts of God", owner abuse, and malicious destruction. They may also exclude parts that normally wear out such as tires and lubrication on a vehicle.
+These types of warranties are provided for various products, but
+automobiles
+and
+electronics
+are common examples. Warranties which are sold through retailers such as
+Best Buy
+may include significant commission for the retailer as a result of
+reverse competition
+.
+[
+17
+]
+For instance, an auto warranty from a
+car dealership
+may be subcontracted and vehicle repairs may be at a lower rate which could compromise the quality of service. At the time of repair, out-of-pocket expenses may be charged for unexpected services provided outside of the warranty terms or uncovered parts. Extended Warranties are mostly back to back underwritten by underwriters, who are the actual bearer of the risk.
+Representations versus warranties
+[
+edit
+]
+Further information:
+Misrepresentation
+Statements of fact in a contract or in obtaining the contract are considered to be either warranties or representations. Traditionally, warranties are factual promises which are enforced through a contract legal action, regardless of materiality, intent, or reliance.
+[
+18
+]
+Representations are traditionally pre-contractual statements which allow for a tort-based action if the misrepresentation is innocent, negligent or fraudulent.
+[
+19
+]
+In U.S. law, the distinction between the two is somewhat unclear;
+[
+18
+]
+warranties are viewed as primarily contract-based legal action while negligent or fraudulent misrepresentations are tort-based, but there is a confusing mix of case law in the United States.
+[
+18
+]
+In modern English law, sellers often avoid using the term "represents" in order to avoid claims under the
+Misrepresentation Act 1967
+(although English law will look to the substance rather than the form of the representation to decide what it is), while in the U.S. "warrants and represents" is relatively common.
+[
+20
+]
+Some modern commentators suggest avoiding the words and substituting "state" or "agree", and some model forms do not use the words;
+[
+19
+]
+however, others disagree.
+[
+21
+]
+Product types
+[
+edit
+]
+Appliance warranty
+[
+edit
+]
+Canada and United States
+[
+edit
+]
+Written warranties on new major appliances, such as
+refrigerators
+,
+kitchen stoves
+and
+dishwashers
+, usually cover the cost of parts and labor to repair defects in materials or workmanship which appear under normal home use.
+Warranties often cover defects up to a year after purchase or delivery.
+[
+22
+]
+However some exclude new owners when a house or appliance is sold within the year (
+Frigidaire
+,
+[
+23
+]
+LG
+,
+[
+24
+]
+Samsung
+[
+25
+]
+). Others do let warranties transfer to new buyers (
+Amana
+,
+[
+26
+]
+General Electric
+,
+[
+27
+]
+Whirlpool
+). Some manufacturers cover refrigerators' sealed parts (compressors, tubing, etc.) for five years (
+General Electric
+,
+[
+27
+]
+Samsung
+,
+[
+28
+]
+Whirlpool
+)
+[
+25
+]
+or seven years (
+LG
+[
+24
+]
+) or ten years (
+KitchenAid
+[
+29
+]
+).
+Warranties on
+water heaters
+cover parts for 5 to 12 years in single family residences, one year otherwise. They do not cover new owners when a house or heater is sold; nor do they cover the original owner if the heater is moved to a second location.
+[
+30
+]
+[
+31
+]
+[
+32
+]
+[
+33
+]
+[
+34
+]
+Tank models from
+A. O. Smith
+do not allow heating elements to be replaced with lower (or higher) wattages, and do not cover renter-occupied single family. They end if the unit is flooded or ever uses
+desalinated
+or
+deionized
+water, such as
+municipal desalination
+plants or
+reverse osmosis
+filters.
+[
+32
+]
+[
+33
+]
+Smith's tank models for
+manufactured housing
+do not provide coverage if a whirlpool or hot tub is connected.
+[
+33
+]
+Tank water heater warranties exclude labor, liability for water damage, and shipping cost to return the old heater or parts. Tankless warranties do not exclude water damage; they cover labor for a year, and Ruud/Rheem covers return shipping on tankless models.
+[
+31
+]
+[
+34
+]
+Smith's tankless water heaters do not restrict coverage to a single family, and require professional installation.
+[
+34
+]
+Implied warranties under US law could extend for longer periods. However, most states allow the written warranties to include clauses which limit these implied warranties to the same time period as the written warranty.
+[
+35
+]
+Car warranty
+[
+edit
+]
+United States
+[
+edit
+]
+New car factory warranties commonly range from one year to five years and in some cases extend even 10 years, with typically a mileage limit as well. Car warranties can be extended by the manufacturer or other companies with a renewal fee.
+Used car warranties are usually 3 months and 3,000 miles.
+United Kingdom
+[
+edit
+]
+In the United Kingdom, types of warranties have been classified as either an:
+original manufacturer warranty,
+insurance warranty underwritten and regulated as insurance or
+obligor warranty, typically written by a car dealership or garage.
+In the United Kingdom, the
+Financial Conduct Authority
+(FCA), which began to regulate insurance contracts in this context in 2005, determined that additional warranties sold by car dealerships are "unlikely to be insurance".
+[
+36
+]
+Insurance warranties may offer greater protection to the consumer.
+Home warranty
+[
+edit
+]
+Main article:
+Home warranty
+A home warranty protects against the costs of home and appliance repair by offering home warranty coverage for houses, townhomes, condominiums, mobile homes, and new construction homes. When a problem occurs with a covered appliance or mechanical system such as an
+air conditioning unit
+or furnace, a service technician repairs or replaces it. The homeowner may have to pay for a service call fee and the home warranty company pays the balance for the repair or replacement of the covered item.
+Intellectual property right warranty
+[
+edit
+]
+An
+intellectual property right
+(IPR) warranty provides contractual protection against breach of rights in
+software development
+and other fields where IPR is protected. Increasing reluctance on the part of suppliers to offer an IPR warranty or indemnity has been noted in recent years.
+[
+37
+]
+Warranty data
+[
+edit
+]
+Warranty data consists of claims data and supplementary data. Claims data are the data collected during the servicing of claims under warranty and supplementary data are additional data such as production and marketing data.
+[
+38
+]
+This data can help determine product reliability and plan for future modifications.
+[
+38
+]
+See also
+[
+edit
+]
+Business law
+Consumer protection
+Due diligence
+Extended warranty
+Magnuson-Moss Warranty Act
+Surety
+Warranty deed
+Warranty tolling
+References
+[
+edit
+]
+↑
+Gilmore, Grant; Black, Jr., Charles L. (1975).
+The Law of Admiralty
+. Foundation Press. p.
+63.
+ISBN
+0882774093
+.
+↑
+Black's Law Dictionary
+(15
+ed.). Thomson Reuters West. 2015. p.
+1344.
+ISBN
+9780314642721
+.
+↑
+Black's Law Dictionary
+(15
+ed.). Thomson Reuters West. 2015. p.
+1345.
+ISBN
+9780314642721
+.
+↑
+Gordons Partnership Solicitors,
+Guarantees, Warranties and Indemnities – Spot the Difference
+, accessed 2 February 2023
+↑
+Johnson, M.,
+Warranties in share purchase agreements
+,
+Rocket Lawyer
+, accessed 2 February 2023
+1
+2
+Hogg M. (2011).
+Promises and Contract Law: Comparative Perspectives
+,
+p. 48
+, Cambridge University Press.
+↑
+Bagley, Constance; Dauchy, Craig (2018).
+The Entrepreneur's Guide to Law and Strategy
+(Fifth
+ed.). Boston, MA: Cengage Learning, Inc. pp.
+313–
+315.
+ISBN
+978-1-285-42849-9
+.
+↑
+Warranties in Sales of Goods
+. LexisNexis Study Outlines.
+1
+2
+12 Reasons to Love the Magnuson-Moss Act
+.
+Journal of Texas Consumer Law
+. Reprinted with permission from the
+National Consumer Law Center
+.
+↑
+Andreoni J. (2005).
+Trust, Reciprocity, and Contract Enforcement: Experiments on Satisfaction Guaranteed
+.
+↑
+Lifetime Warranties
+.
+Warranty Week
+.
+WebCite Archive
+.
+↑
+"Cisco Limited Lifetime Hardware Warranty Terms"
+. Retrieved
+2008-09-10
+.
+↑
+"HP Networking warranty information"
+. Retrieved
+2011-08-26
+.
+↑
+Maitland Chambers,
+AVRORA FINE ARTS INVESTMENT LTD V CHRISTIE, MANSON & WOODS LTD (2012)
+, accessed 23 December 2022
+↑
+Davis T. (2009).
+UCC Breach of Warranty and Contract Claims: Clarifying the Distinction
+.
+Baylor Law Review
+.
+↑
+"Appliances - 247 Home Rescue"
+. 247 Home Rescue
+. Retrieved
+26 June
+2015
+.
+↑
+Baker T, Siegelman P. (2013).
+Protecting Consumers from Add-On Insurance Products: New Lessons for Insurance Regulation
+.
+1
+2
+3
+West G D, Lewis W B. (2009).
+Contracting to Avoid Extra-Contractual Liability—Can Your Contractual Deal Ever Really Be the "Entire" Deal?
+The Business Lawyer
+.
+1
+2
+Primack MA. (2009), and it was relied upon by a party to enter into the contract.
+Representations, Warranties and Covenants: Back to the Basics in Contracts
+, and do not form part of the contract.
+National Law Review
+.
+↑
+Ferara L N, Philips J, Runnicles J. (2007).
+Some Differences in Law and Practice Between U.K. and U.S. Stock Purchase Agreements
+Archived
+2013-05-14 at the
+Wayback Machine
+.
+Jones Day Publications
+.
+↑
+Telman J. (2012).
+Representations and Warranties
+. ContractsProf Blog.
+↑
+Moor, Tom (2016).
+"Are Extended Warranties on Appliances Worth It?"
+. Angies' List (published 2016-07-22)
+. Retrieved
+16 January
+2017
+.
+Most manufacturers offer warranties for appliances that last from three months to up to one year.
+↑
+"Frigidaire, All about the Use & Care of your Refrigerator"
+(PDF)
+. Electrolux. p.
+20. Archived from
+the original
+(PDF)
+on 20 December 2016
+. Retrieved
+11 September
+2016
+.
+1
+2
+"LG OWNER'S MANUAL FRENCH DOOR REFRIGERATOR"
+. LG. pp.
+55–
+58
+. Retrieved
+11 September
+2016
+.
+1
+2
+"WHIRLPOOL® REFRIGERATOR WARRANTY"
+(PDF)
+. Whirlpool. Archived from
+the original
+(PDF)
+on 20 December 2016
+. Retrieved
+11 September
+2016
+.
+↑
+"AMANA® MAJOR APPLIANCE WARRANTY"
+(PDF)
+. Amana. Archived from
+the original
+(PDF)
+on 20 September 2016
+. Retrieved
+11 September
+2016
+.
+1
+2
+"GE Appliances, Refrigerators, Owner's Manual"
+(PDF)
+. General Electric. p.
+11
+. Retrieved
+11 September
+2016
+.
+↑
+"Refrigerator Product Info"
+. Samsung
+. Retrieved
+11 September
+2016
+.
+↑
+"KITCHENAID® REFRIGERATOR WARRANTY"
+(PDF)
+. KitchenAid. Archived from
+the original
+(PDF)
+on 20 December 2016
+. Retrieved
+23 September
+2016
+.
+↑
+"Certificate of Limited Warranty, Rheem and Ruud Water Heaters"
+.
+ruud.com/product/ruud-residential-electric-water-heaters-professional-achiever-series-standard-electric/#specs-docs
+. 2014-09-01
+. Retrieved
+2017-10-13
+.
+1
+2
+"Rheem Limited Warranty For the RHEEM®, RUUD®, Richmond®, Paloma®, and Sure Comfort® Residential Tankless Gas Water Heaters"
+.
+ruud.com/product/ruud-condensing-tankless-professional-ultra-series-96-direct-vent-indoor/#specs-docs
+. Retrieved
+2017-10-13
+.
+1
+2
+AO Smith (2017-08-01).
+"Limited Warranty
+[
+nor manufactured housing
+]
+"
+(PDF)
+.
+hotwater.com/resources/product-literature/warranty-sheets/residential-electric/
+. Retrieved
+2017-10-13
+.
+1
+2
+3
+"AO Smith Water Heaters, Residential Electric Warranty
+[
+Manufactured Housing
+]
+"
+(PDF)
+.
+hotwater.com/resources/product-literature/warranty-sheets/residential-electric/
+. Retrieved
+2017-10-13
+.
+1
+2
+3
+A. O. Smith.
+"Warranty"
+(PDF)
+.
+hotwater.com/resources/product-literature/warranty-sheets/tankless/
+. Retrieved
+2017-10-13
+.
+↑
+"What you need to know about warranty laws"
+. Consumer Reports. 2013
+. Retrieved
+11 September
+2016
+.
+↑
+What is a contract of insurance?
+Archived
+2012-10-06 at the
+Wayback Machine
+. Financial Services Authority.
+↑
+Simon Halberstam LLP,
+Difference between an IPR indemnity and an IPR warranty
+, published 2009, accessed 27 December 2022
+1
+2
+Wu S. (2012).
+Warranty Data Analysis: A Review
+.
+Quality and Reliability Engineering International
+.
+External links
+[
+edit
+]
+Federal Trade Commission: Warranty Information (United States)
+Authority control databases
+International
+GND
+National
+Czech Republic
+Other
+Encyclopedia of Modern Ukraine
+Retrieved from "
+https://en.wikipedia.org/w/index.php?title=Warranty&oldid=1338305855
+"
+Categories
+:
+Contract law
+Product return
+Kitchen
+Hidden categories:
+Articles with short description
+Short description is different from Wikidata
+Articles with limited geographic scope from September 2010
+United States-centric
+Wikipedia articles that are too technical from March 2021
+All articles that are too technical
+All articles with unsourced statements
+Articles with unsourced statements from October 2024
+Webarchive template wayback links
+Search
+Search
+Warranty
+24 languages
+Add topic

@@ -26,13 +26,21 @@ permissions on the user's behalf.  ``PermissionSet`` stays the authority.
 from __future__ import annotations
 
 import json
+import math
 import os
 import threading
 import time
+from pathlib import Path
 from collections import defaultdict, deque
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from typing import Any, TypeVar
 from urllib.parse import urlparse
+from datetime import timedelta
+
+from beacon.assurance import EventKind, IntentMandate, Money, State
+from beacon.peoplepay.agent import parse_budget
+from beacon.peoplepay.evidence_gate import EvidenceGate, EvidenceRequirement
+from beacon.peoplepay.authority import AuthorityError
 
 from beacon.peoplepay.authority import Permission, TransactionType
 from beacon.peoplepay.transaction import Transaction, TransactionOwnershipError
@@ -51,8 +59,10 @@ from adapters.property import PropertyAdapter
 from adapters.resolution import ResolutionAdapter
 from adapters.spatial import SpatialAdapter
 from gateway.auth import SECRET_ENV, auth_mode, verify_caller
+from gateway.commerce import save_cart, sandbox_checkout, update_delivery, create_dispute
 from transaction.eventbus import EventBus
-from transaction.store import InMemoryTransactionStore, TransactionNotFound
+from transaction.store import InMemoryTransactionStore, TransactionNotFound, TransactionStore
+from transaction.sqlite_store import SqliteTransactionStore
 
 __all__ = [
     "GatewayState",
@@ -97,7 +107,7 @@ def _env_float(name: str, default: float, *, minimum: float = 0.0) -> float:
     except ValueError:
         _CONFIG_WARNINGS.append(f"{name}={raw!r} is not a number; using {default}")
         return default
-    if value <= minimum:
+    if not math.isfinite(value) or value <= minimum:
         _CONFIG_WARNINGS.append(
             f"{name}={value} must be greater than {minimum}; using {default}"
         )
@@ -214,11 +224,12 @@ class GatewayState:
     def __init__(
         self,
         *,
-        store: InMemoryTransactionStore | None = None,
+        store: TransactionStore | None = None,
         bus: EventBus | None = None,
         capabilities: dict[str, Capability] | None = None,
     ) -> None:
-        self.store = store or InMemoryTransactionStore()
+        self.store = store if store is not None else InMemoryTransactionStore()
+        self.workflow_lock = threading.RLock()
         self.bus = bus or EventBus()
         self.capabilities = (
             capabilities if capabilities is not None else build_capabilities()
@@ -440,6 +451,25 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
 
         def do_GET(self) -> None:
             path = urlparse(self.path).path.rstrip("/") or "/"
+            if path == "/favicon.ico":
+                self.send_response(204)
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+                return
+            assets = {"/": ("index.html", "text/html"),
+                      "/app.js": ("app.js", "text/javascript"),
+                      "/styles.css": ("styles.css", "text/css")}
+            if path in assets:
+                filename, mime = assets[path]
+                raw = (Path(__file__).parent / "web" / filename).read_bytes()
+                self.send_response(200)
+                self.send_header("Content-Type", mime + "; charset=utf-8")
+                self.send_header("Content-Length", str(len(raw)))
+                self.send_header("X-Content-Type-Options", "nosniff")
+                self.send_header("Content-Security-Policy", "default-src 'self'; style-src 'self'; script-src 'self'; frame-ancestors 'none'; base-uri 'none'")
+                self.end_headers()
+                self.wfile.write(raw)
+                return
             if path == "/health":
                 self._send(200, {"status": "ok", "service": "beacon-gateway"})
                 return
@@ -474,7 +504,13 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 if len(parts) == 2:
                     self._send(200, txn.to_dict())
                     return
-                if parts[2] == "timeline":
+                if len(parts) == 3 and parts[2] == "evidence":
+                    self._send(200, txn.graph.reconstruct())
+                    return
+                if len(parts) == 3 and parts[2] == "context":
+                    self._send(200, {"context": txn.context})
+                    return
+                if len(parts) == 3 and parts[2] == "timeline":
                     intact, message = txn.ledger.verify_chain()
                     self._send(
                         200,
@@ -507,16 +543,111 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             if parts == ["transactions"]:
                 self._create_transaction(user, body)
                 return
+            if len(parts) == 3 and parts[0] == "transactions":
+                with state.workflow_lock:
+                    self._workflow(user, parts[1], parts[2], body)
+                return
             if (
                 len(parts) == 4
                 and parts[0] == "transactions"
                 and parts[2] == "capabilities"
             ):
-                self._run_capability(user, parts[1], parts[3], body)
+                with state.workflow_lock:
+                    self._run_capability(user, parts[1], parts[3], body)
                 return
             self._fail(404, f"no route for POST {path}")
 
         # --- handlers --------------------------------------------------
+
+        def _workflow(
+            self, user: str, transaction_id: str, action: str, body: dict[str, Any]
+        ) -> None:
+            txn = self._owned_or_404(transaction_id, user)
+            if txn is None:
+                return
+            actor = f"gateway:{user}"
+            result: dict[str, Any]
+            try:
+                if action == "plan":
+                    txn.require_permission(Permission.PLANNING, actor=actor)
+                    if txn.state is State.CANCELLED:
+                        raise ValueError("cancelled transactions cannot be planned")
+                    summary = body.get("summary")
+                    steps = body.get("steps")
+                    if not isinstance(summary, str) or not summary.strip():
+                        raise ValueError("summary is required")
+                    if not isinstance(steps, list) or not steps or any(
+                        not isinstance(step, str) or not step.strip() for step in steps
+                    ):
+                        raise ValueError("steps must be a non-empty list of text")
+                    amount = body.get("amount_minor")
+                    if type(amount) is not int or amount < 0:
+                        raise ValueError("amount_minor must be a non-negative integer")
+                    currency = body.get("currency", "INR")
+                    if not isinstance(currency, str):
+                        raise ValueError("currency must be text")
+                    estimate = Money(amount, currency)
+                    if txn.state is State.DRAFT:
+                        mandate = IntentMandate.create(
+                            user_id=user, raw_utterance=txn.raw_utterance,
+                            product_query=summary,
+                            max_amount=parse_budget(txn.raw_utterance),
+                        )
+                        txn.capture_intent(mandate, normalized_intent=summary, actor=actor)
+                    txn.plan = {
+                        "summary": summary, "steps": steps,
+                        "estimated_amount": estimate.to_dict(), "executed": False,
+                    }
+                    txn.ledger.append(EventKind.POLICY_EVALUATED, actor=actor,
+                                      detail={"plan": txn.plan})
+                    result = {"plan": txn.plan}
+                elif action == "validate":
+                    txn.require_permission(Permission.PLANNING, actor=actor)
+                    problems = []
+                    if not txn.plan:
+                        problems.append("Create a plan first")
+                    if txn.state is State.CANCELLED:
+                        problems.append("Transaction is cancelled")
+                    if txn.plan and txn.mandate and txn.mandate.max_amount:
+                        estimate = Money.from_dict(txn.plan["estimated_amount"])
+                        budget = txn.mandate.max_amount
+                        if estimate.currency != budget.currency or estimate.minor > budget.minor:
+                            problems.append("Plan exceeds the budget or uses another currency")
+                    passport = EvidenceGate().evaluate(
+                        txn,
+                        tuple(EvidenceRequirement(field, timedelta(minutes=5))
+                              for field in ("price_minor", "stock", "merchant_id")),
+                        actor=actor,
+                    )
+                    if not passport.decision_grade:
+                        problems.append("Required checkout evidence is missing or insufficient")
+                    result = {"valid": not problems, "problems": problems,
+                              "passport": passport.to_dict(), "executed": False,
+                              "payment_status": "NOT_CONFIGURED"}
+                elif action == "cart":
+                    result = {"cart": save_cart(txn, body, actor)}
+                elif action == "sandbox-checkout":
+                    result = sandbox_checkout(txn, body, actor)
+                elif action == "delivery":
+                    result = update_delivery(txn, body, actor)
+                elif action == "dispute":
+                    result = create_dispute(txn, body, actor)
+                elif action == "checkout":
+                    self._fail(503, "Live payments are not configured; no money moved")
+                    return
+                elif action == "cancel":
+                    if txn.state is not State.CANCELLED:
+                        txn.transition_to(State.CANCELLED, actor=actor)
+                    result = txn.to_dict()
+                else:
+                    self._fail(404, f"unknown workflow {action!r}")
+                    return
+                state.store.put(txn)
+                self._send(200, result)
+            except AuthorityError as exc:
+                self._fail(403, str(exc))
+            except (ValueError, KeyError, TypeError) as exc:
+                self._fail(400, str(exc))
 
         def _owned_or_404(self, transaction_id: str, user: str) -> Transaction | None:
             """Fetch a transaction the caller owns, or answer 404.
@@ -536,8 +667,8 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             return txn
 
         def _create_transaction(self, user: str, body: dict[str, Any]) -> None:
-            utterance = str(body.get("raw_utterance") or "").strip()
-            if not utterance:
+            utterance = body.get("raw_utterance")
+            if not isinstance(utterance, str) or not utterance.strip():
                 self._fail(
                     400,
                     "raw_utterance is required: a transaction needs the user's "
@@ -556,7 +687,7 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
             txn = Transaction.create(
                 user_id=user,
-                raw_utterance=utterance,
+                raw_utterance=utterance.strip(),
                 transaction_type=txn_type,
                 language=body.get("language"),
                 actor=f"gateway:{user}",
@@ -603,6 +734,7 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             node_id = attach_capability_result(txn, result, actor=f"gateway:{user}")
+            state.store.put(txn)
             state.bus.publish_ledger_tail(txn.ledger, source=name, since_seq=before)
             self._send(
                 200,
@@ -692,7 +824,11 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
 def serve(port: int | None = None, *, state: GatewayState | None = None) -> None:
     """Run the gateway.  Blocks."""
     bound = port or _env_int("BEACON_GATEWAY_PORT", 8080, minimum=1)
-    gateway_state = state or GatewayState()
+    gateway_state = state if state is not None else GatewayState(
+        store=SqliteTransactionStore(
+            os.getenv("BEACON_GATEWAY_DB", "peoplepay.sqlite3")
+        )
+    )
     httpd = ThreadingHTTPServer((BIND_HOST, bound), make_handler(gateway_state))
     health = gateway_state.integrations()
     print(f"beacon-gateway on http://{BIND_HOST}:{bound}")

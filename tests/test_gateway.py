@@ -19,6 +19,7 @@ import threading
 from contextlib import contextmanager
 from http.server import ThreadingHTTPServer
 from types import SimpleNamespace
+from typing import Any, cast
 
 import pytest
 
@@ -255,7 +256,7 @@ class TestBodyLimits:
 
     @staticmethod
     def _parse(headers, body=b""):
-        handler = make_handler(GatewayState(capabilities={}))
+        handler = cast(Any, make_handler(GatewayState(capabilities={})))
         stub = SimpleNamespace(headers=headers, rfile=io.BytesIO(body))
         return handler._body(stub)
 
@@ -291,7 +292,7 @@ class TestBodyLimits:
         the *decision* needs only the header: the stub carries no body at all and
         the refusal still happens.
         """
-        handler = make_handler(GatewayState(capabilities={}))
+        handler = cast(Any, make_handler(GatewayState(capabilities={})))
         stub = SimpleNamespace(
             headers={"Content-Length": str(MAX_BODY_BYTES + 1)},
             rfile=io.BytesIO(b""),
@@ -302,7 +303,7 @@ class TestBodyLimits:
 
     def test_the_drain_is_bounded_rather_than_trusting_the_declared_length(self):
         """A client that declares a huge body must not make us read it all."""
-        handler = make_handler(GatewayState(capabilities={}))
+        handler = cast(Any, make_handler(GatewayState(capabilities={})))
         # Far more data than DRAIN_LIMIT allows, so the cap is what stops it.
         rfile = io.BytesIO(b"x" * (DRAIN_LIMIT + 4096))
         stub = SimpleNamespace(headers={}, rfile=rfile)
@@ -311,7 +312,7 @@ class TestBodyLimits:
 
     def test_the_drain_stops_early_when_the_client_sent_less(self):
         """A short body ends the drain rather than blocking on a closed stream."""
-        handler = make_handler(GatewayState(capabilities={}))
+        handler = cast(Any, make_handler(GatewayState(capabilities={})))
         rfile = io.BytesIO(b"x" * 10)
         stub = SimpleNamespace(headers={}, rfile=rfile)
         handler._drain(stub, 100_000)
@@ -389,7 +390,7 @@ class TestEnvConfig:
 
     def test_adapter_timeouts_come_from_the_environment(self, monkeypatch):
         monkeypatch.setenv("BEACON_RESOLUTION_TIMEOUT", "3.5")
-        assert build_capabilities()["resolution"].timeout == 3.5
+        assert getattr(build_capabilities()["resolution"], "timeout") == 3.5
 
     def test_adapter_timeouts_default_when_unset(self, monkeypatch):
         """An unset environment must not change the adapters' own defaults."""
@@ -401,10 +402,10 @@ class TestEnvConfig:
         ):
             monkeypatch.delenv(var, raising=False)
         built = build_capabilities()
-        assert built["spatial"].timeout == 15.0
-        assert built["market"].timeout == 15.0
-        assert built["property"].timeout == 20.0
-        assert built["resolution"].timeout == 60.0
+        assert getattr(built["spatial"], "timeout") == 15.0
+        assert getattr(built["market"], "timeout") == 15.0
+        assert getattr(built["property"], "timeout") == 20.0
+        assert getattr(built["resolution"], "timeout") == 60.0
 
 
 class TestDispatchShapeChecking:
@@ -434,12 +435,12 @@ class TestDispatchShapeChecking:
             def health(self):
                 return HealthReport(name=self.name, mode=CapabilityMode.LIVE)
 
-        handler = make_handler(GatewayState(capabilities={"market": Bare()}))
+        handler = cast(Any, make_handler(GatewayState(capabilities={"market": Bare()})))
         with pytest.raises(NotImplementedError, match="does not implement"):
             handler._dispatch(Bare(), "market", {"item_query": "laptop"})
 
     def test_an_unknown_capability_name_has_no_dispatch(self):
-        handler = make_handler(GatewayState(capabilities={}))
+        handler = cast(Any, make_handler(GatewayState(capabilities={})))
         with pytest.raises(NotImplementedError, match="no gateway dispatch"):
             handler._dispatch(build_capabilities()["market"], "nope", {})
 
@@ -575,3 +576,9 @@ class TestRefusalOnAReusedConnection:
             )
             assert status == 200
             assert will_close is False
+
+
+@pytest.mark.parametrize("value", ["nan", "inf", "-inf"])
+def test_timeout_rejects_nonfinite_values(monkeypatch, value):
+    monkeypatch.setenv("BEACON_TEST_TIMEOUT", value)
+    assert _env_float("BEACON_TEST_TIMEOUT", 15.0) == 15.0

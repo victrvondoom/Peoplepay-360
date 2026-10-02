@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "NCDRC",
+  "title": "NCDRC Home and Jurisdiction",
+  "category": "consumer_commission",
+  "source_url": "https://ncdrc.nic.in/",
+  "final_url": "https://ncdrc.nic.in/",
+  "type": "html_text",
+  "raw_chars": 3938,
+  "stored_path": "knowledge/ecommerce/official/ncdrc/ncdrc_home.txt",
+  "sha256": "b2424a0e4b38260498087e7badcd075d98843ca8b9201c86612f20abd7849468",
+  "bytes": 3953,
+  "fetched_at": "2026-07-07T12:47:10.895761+00:00",
+  "official_source": true
+}

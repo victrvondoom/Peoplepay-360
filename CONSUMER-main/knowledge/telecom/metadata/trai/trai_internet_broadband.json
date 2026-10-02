@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "TRAI Internet and Broadband",
+  "category": "broadband_regulations",
+  "source_url": "https://www.trai.gov.in/telecom/internet-broadband",
+  "final_url": "https://www.trai.gov.in/telecom/internet-broadband",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 34919,
+  "stored_path": "knowledge/telecom/trai/trai_internet_broadband.txt",
+  "sha256": "91c9d60ca3c9fa2d0fe4939a069cea0b1827b3b39e1d3ada44b346d474ce8831",
+  "bytes": 34992,
+  "fetched_at": "2026-07-06T13:58:23.842053+00:00"
+}

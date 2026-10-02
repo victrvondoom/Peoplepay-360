@@ -1,0 +1,28 @@
+{"domain":"ecommerce","label":"Customer","name":"Customer"}
+{"domain":"ecommerce","label":"Marketplace","name":"Marketplace"}
+{"domain":"ecommerce","label":"Seller","name":"Seller"}
+{"domain":"ecommerce","label":"Order","name":"Order"}
+{"domain":"ecommerce","label":"Product","name":"Product"}
+{"domain":"ecommerce","label":"Defective Product","name":"Defective Product"}
+{"domain":"ecommerce","label":"Wrong Product","name":"Wrong Product"}
+{"domain":"ecommerce","label":"Missing Package","name":"Missing Package"}
+{"domain":"ecommerce","label":"Return Request","name":"Return Request"}
+{"domain":"ecommerce","label":"Refund","name":"Refund"}
+{"domain":"ecommerce","label":"Replacement","name":"Replacement"}
+{"domain":"ecommerce","label":"Cancellation","name":"Cancellation"}
+{"domain":"ecommerce","label":"Payment","name":"Payment"}
+{"domain":"ecommerce","label":"Chargeback","name":"Chargeback"}
+{"domain":"ecommerce","label":"Wallet","name":"Wallet"}
+{"domain":"ecommerce","label":"UPI Transaction","name":"UPI Transaction"}
+{"domain":"ecommerce","label":"Courier","name":"Courier"}
+{"domain":"ecommerce","label":"Delivery Attempt","name":"Delivery Attempt"}
+{"domain":"ecommerce","label":"Invoice","name":"Invoice"}
+{"domain":"ecommerce","label":"Warranty","name":"Warranty"}
+{"domain":"ecommerce","label":"Consumer Complaint","name":"Consumer Complaint"}
+{"domain":"ecommerce","label":"Appeal","name":"Appeal"}
+{"domain":"ecommerce","label":"Consumer Right","name":"Consumer Right"}
+{"domain":"ecommerce","label":"Consumer Protection Act 2019","name":"Consumer Protection Act 2019"}
+{"domain":"ecommerce","label":"National Consumer Helpline","name":"National Consumer Helpline"}
+{"domain":"ecommerce","label":"NCDRC","name":"NCDRC"}
+{"domain":"ecommerce","label":"BIS Standard","name":"BIS Standard"}
+{"domain":"ecommerce","label":"Marketplace Policy","name":"Marketplace Policy"}

@@ -1,0 +1,15 @@
+{
+  "domain": "ecommerce",
+  "authority": "Amazon",
+  "title": "Amazon A-to-z Guarantee",
+  "category": "marketplace_guarantee",
+  "source_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV",
+  "final_url": "https://www.amazon.in/gp/help/customer/display.html?nodeId=GQ37ZCNECJKTFYQV",
+  "type": "html_text",
+  "raw_chars": 7685,
+  "stored_path": "knowledge/ecommerce/marketplaces/amazon/amazon_a_to_z_official.txt",
+  "sha256": "3cd84dc9c7ab1353831ce4be235a6a0e6bddfb3066a653e9e5027bd4e747af3f",
+  "bytes": 7702,
+  "fetched_at": "2026-07-07T12:47:19.825647+00:00",
+  "official_source": true
+}

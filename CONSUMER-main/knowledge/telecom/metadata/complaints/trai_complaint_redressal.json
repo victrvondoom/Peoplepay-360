@@ -1,0 +1,15 @@
+{
+  "domain": "telecom",
+  "authority": "TRAI",
+  "title": "TRAI Complaint Redressal",
+  "category": "complaint_redressal",
+  "source_url": "https://www.trai.gov.in/telecom/complaint-redressal",
+  "final_url": "https://www.trai.gov.in/telecom/complaint-redressal",
+  "type": "html_text",
+  "official_source": true,
+  "raw_chars": 7071,
+  "stored_path": "knowledge/telecom/complaints/trai_complaint_redressal.txt",
+  "sha256": "24fec5084c518d94163694104e05a8fa96cc1d80cdfaabdf17759807cf8c1e04",
+  "bytes": 7444,
+  "fetched_at": "2026-07-06T13:58:56.737200+00:00"
+}
