@@ -1,5 +1,27 @@
 # PeoplePay error review - 2 October 2026
 
+## Unified Journey v1 verification - 5 October 2026
+
+The `/journey` portal now transfers the requirement and provider receipts into
+ECHO over HTTP, binds human approval to an immutable decision/version/terms
+hash, creates a reference merchant order, and transfers the original evidence
+into a dispute draft after a delivery discrepancy. The operational guide is
+[Unified Journey v1](unified-journey-v1.md). The earlier directory-only update
+below describes the state before this milestone.
+
+Verified: 299 root tests and 115 ECHO tests passed, including actual Gateway
+HTTP -> ECHO HTTP -> FalkorDB integration, a six-day clock advancement,
+repricing, cancellation, ownership, restart persistence, optimistic concurrency
+and ambiguous PROXY handoff protection. Root mypy and Ruff passed. A browser
+completed approval, simulated delivery, historical explanation and refresh;
+desktop and mobile layouts were inspected with no console errors.
+
+This is a reference commerce lifecycle. GreenChain reference inputs are
+fictitious and scored by its native function; live discovery was not exercised.
+InflationForge reports chairs as untracked. Native adapters use the bundled
+services' real HTTP shapes, but native PROXY endpoint checks use a test server;
+its full database/LLM workflow was not run. Payment execution remains disabled.
+
 ## Product integration update - 5 October 2026
 
 The checkout now includes `GREENCHAIN-main/` as a separate supplier-sourcing service and PeoplePay ECHO as a graph-backed evidence audit service. The shared gateway UI exposes a server-configured directory for ECHO, GreenChain, Rumi, InflationForge, InHeir.AI, PROXY, and Beacon. See [the unified product plan](unified-product-plan.md).

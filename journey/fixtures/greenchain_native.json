@@ -1,0 +1,208 @@
+{
+  "capture": {
+    "mode": "reference",
+    "synthetic_inputs": true,
+    "native_function": "backend.ml_scorer.compute_composite_scores",
+    "native_source_sha256": "bfbffdc57b521f5ec587baefa0b22a9461586d1fae7776c1f20581ae6f5fb293",
+    "captured_at": "2026-10-05T15:11:36.932719+00:00",
+    "discovery_performed": false,
+    "verification_performed": false,
+    "description": "Actual native /score function on fictitious inputs; replayed as a /search-shaped reference envelope only."
+  },
+  "response": {
+    "product": "ergonomic office chairs",
+    "destination": "IN",
+    "transport_mode": "road",
+    "countries": [
+      "IN"
+    ],
+    "duration_seconds": 0,
+    "count": 3,
+    "results": [
+      {
+        "name": "Supplier B Inc.",
+        "country": "IN",
+        "city": "Bengaluru",
+        "synthetic": true,
+        "sustainability_url": "https://supplier-b.example/sustainability",
+        "certifications": [
+          "iso14001",
+          "sbt_committed"
+        ],
+        "disclosure_status": "partial",
+        "emission_factor": {
+          "q10_tco2e": 4,
+          "q50_tco2e": 7,
+          "q90_tco2e": 13
+        },
+        "transport": {
+          "distance_km": 100,
+          "weight_kg": 6000,
+          "mode": "road",
+          "transport_tco2e": 0.0372
+        },
+        "verification": {
+          "registry_match": null,
+          "source_count": 0,
+          "domain_age_days": null,
+          "domain_flag": false,
+          "confidence": "unverified",
+          "reference_only": true
+        },
+        "rank": 1,
+        "composite_score": 87.5,
+        "env_rating": "green",
+        "transport_mode": "road",
+        "scores": {
+          "manufacturing_tco2e": 6.09,
+          "transport_tco2e": 0.058,
+          "grid_carbon_gco2_kwh": 705.4,
+          "cert_score": 0,
+          "climate_risk_score": 54.5,
+          "total_tco2e": 6.1
+        },
+        "rank_scores": {
+          "manufacturing_norm": 0.0,
+          "transport_norm": 0.0,
+          "grid_norm": 50.0,
+          "cert_norm": 0.0,
+          "risk_norm": 50.0
+        },
+        "scoring_inputs": {
+          "manufacturing_tco2e": 6.09,
+          "cert_adjustment": 0.87,
+          "grid_gco2_kwh": 705.4,
+          "climate_risk": 54.5,
+          "transport_tco2e_by_mode": {
+            "sea": 0.0066,
+            "air": 0.3612,
+            "rail": 0.0168,
+            "road": 0.0576
+          }
+        }
+      },
+      {
+        "name": "Supplier C",
+        "country": "IN",
+        "city": "Delhi",
+        "synthetic": true,
+        "sustainability_url": "https://supplier-c.example/sustainability",
+        "certifications": [
+          "iso14001"
+        ],
+        "disclosure_status": "partial",
+        "emission_factor": {
+          "q10_tco2e": 8,
+          "q50_tco2e": 12,
+          "q90_tco2e": 22
+        },
+        "transport": {
+          "distance_km": 1800,
+          "weight_kg": 6000,
+          "mode": "road",
+          "transport_tco2e": 0.6696
+        },
+        "verification": {
+          "registry_match": null,
+          "source_count": 0,
+          "domain_age_days": null,
+          "domain_flag": false,
+          "confidence": "unverified",
+          "reference_only": true
+        },
+        "rank": 2,
+        "composite_score": 47.1,
+        "env_rating": "amber",
+        "transport_mode": "road",
+        "scores": {
+          "manufacturing_tco2e": 11.4,
+          "transport_tco2e": 1.037,
+          "grid_carbon_gco2_kwh": 705.4,
+          "cert_score": 0,
+          "climate_risk_score": 54.5,
+          "total_tco2e": 12.4
+        },
+        "rank_scores": {
+          "manufacturing_norm": 31.4,
+          "transport_norm": 100.0,
+          "grid_norm": 50.0,
+          "cert_norm": 28.6,
+          "risk_norm": 50.0
+        },
+        "scoring_inputs": {
+          "manufacturing_tco2e": 11.4,
+          "cert_adjustment": 0.95,
+          "grid_gco2_kwh": 705.4,
+          "climate_risk": 54.5,
+          "transport_tco2e_by_mode": {
+            "sea": 0.1188,
+            "air": 6.5016,
+            "rail": 0.3024,
+            "road": 1.0368
+          }
+        }
+      },
+      {
+        "name": "Supplier A",
+        "country": "IN",
+        "city": "Pune",
+        "synthetic": true,
+        "sustainability_url": "https://supplier-a.example/sustainability",
+        "certifications": [],
+        "disclosure_status": "none",
+        "emission_factor": {
+          "q10_tco2e": 12,
+          "q50_tco2e": 20,
+          "q90_tco2e": 34
+        },
+        "transport": {
+          "distance_km": 1000,
+          "weight_kg": 6000,
+          "mode": "road",
+          "transport_tco2e": 0.372
+        },
+        "verification": {
+          "registry_match": null,
+          "source_count": 0,
+          "domain_age_days": null,
+          "domain_flag": false,
+          "confidence": "unverified",
+          "reference_only": true
+        },
+        "rank": 3,
+        "composite_score": 24.3,
+        "env_rating": "red",
+        "transport_mode": "road",
+        "scores": {
+          "manufacturing_tco2e": 23.0,
+          "transport_tco2e": 0.576,
+          "grid_carbon_gco2_kwh": 705.4,
+          "cert_score": 0,
+          "climate_risk_score": 54.5,
+          "total_tco2e": 23.6
+        },
+        "rank_scores": {
+          "manufacturing_norm": 100.0,
+          "transport_norm": 52.9,
+          "grid_norm": 50.0,
+          "cert_norm": 100.0,
+          "risk_norm": 50.0
+        },
+        "scoring_inputs": {
+          "manufacturing_tco2e": 23.0,
+          "cert_adjustment": 1.15,
+          "grid_gco2_kwh": 705.4,
+          "climate_risk": 54.5,
+          "transport_tco2e_by_mode": {
+            "sea": 0.066,
+            "air": 3.612,
+            "rail": 0.168,
+            "road": 0.576
+          }
+        }
+      }
+    ],
+    "cache_hits": 0,
+    "fallback_components": []
+  }
+}

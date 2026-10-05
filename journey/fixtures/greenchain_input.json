@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "description": "Fictitious suppliers and model inputs for the 300-chair IN reference journey. No real certifications, discovery or quotes.",
+  "transport_mode": "road",
+  "manufacturers": [
+    {"name": "Supplier A", "country": "IN", "city": "Pune", "synthetic": true, "sustainability_url": "https://supplier-a.example/sustainability", "certifications": [], "disclosure_status": "none", "emission_factor": {"q10_tco2e": 12, "q50_tco2e": 20, "q90_tco2e": 34}, "transport": {"distance_km": 1000, "weight_kg": 6000, "mode": "road", "transport_tco2e": 0.372}},
+    {"name": "Supplier B Inc.", "country": "IN", "city": "Bengaluru", "synthetic": true, "sustainability_url": "https://supplier-b.example/sustainability", "certifications": ["iso14001", "sbt_committed"], "disclosure_status": "partial", "emission_factor": {"q10_tco2e": 4, "q50_tco2e": 7, "q90_tco2e": 13}, "transport": {"distance_km": 100, "weight_kg": 6000, "mode": "road", "transport_tco2e": 0.0372}},
+    {"name": "Supplier C", "country": "IN", "city": "Delhi", "synthetic": true, "sustainability_url": "https://supplier-c.example/sustainability", "certifications": ["iso14001"], "disclosure_status": "partial", "emission_factor": {"q10_tco2e": 8, "q50_tco2e": 12, "q90_tco2e": 22}, "transport": {"distance_km": 1800, "weight_kg": 6000, "mode": "road", "transport_tco2e": 0.6696}}
+  ]
+}

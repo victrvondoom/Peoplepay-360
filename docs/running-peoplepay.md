@@ -41,6 +41,12 @@ updates, dispute drafts, evidence exports, and capability requests. Records
 persist in SQLite across restarts. The browser stores a local user identifier;
 bearer tokens remain in memory and must be entered again after a reload.
 
+The **Unified Journey** navigation link opens `/journey`. This carries the
+300-chair scenario through SDK normalization, ECHO approval, reference merchant
+checkout and an automatic dispute evidence handoff. It requires the local SDK
+and ECHO/FalkorDB services. See [the launch and verification guide](unified-journey-v1.md)
+for installation, API routes, native service configuration and precise limits.
+
 Additional POST routes under `/transactions/{id}/`:
 
 | Action | Result |

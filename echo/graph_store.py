@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from falkordb import FalkorDB
+from falkordb import FalkorDB  # type: ignore[import-untyped]  # Upstream ships no type marker.
 
 from echo.models import stable_id
 

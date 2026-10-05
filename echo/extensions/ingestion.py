@@ -248,21 +248,21 @@ class ExtensionIngestor:
         for evidence in result.evidence:
             claim_id = claim_ids[evidence.claim_ref]
             source_id = source_ids.get(evidence.source_ref or "")
-            snapshot_id = snapshot_ids.get(evidence.source_ref or "")
-            source = next((s for s in result.sources if s.ref == evidence.source_ref), None)
-            observed = (source.original_observed_at if source else None) or evidence.observed_at
+            evidence_snapshot_id = snapshot_ids.get(evidence.source_ref or "")
+            evidence_source = next((s for s in result.sources if s.ref == evidence.source_ref), None)
+            observed = (evidence_source.original_observed_at if evidence_source else None) or evidence.observed_at
             content_hash = evidence.content_hash or text_hash(evidence.excerpt)
             identifier = stable_id("evidence", requirement_id, claim_id, source_id or "unknown",
                                    content_hash, utc_iso(observed) or "unknown")
             evidence_ids.append(identifier)
-            known = evidence.provenance_state == "KNOWN" and source is not None and source.provenance_state == "KNOWN"
+            known = evidence.provenance_state == "KNOWN" and evidence_source is not None and evidence_source.provenance_state == "KNOWN"
             if not source_id:
                 source_id = stable_id("source-unknown", requirement_id, claim_id, evidence.ref)
                 node("Source", {"id": source_id, "provenance_state": "PROVENANCE_UNKNOWN", "active": True})
             claim = next(c for c in result.claims if c.ref == evidence.claim_ref)
             state = "SYNTHETIC_DEMO" if demo_scope else ("MODEL_OUTPUT" if claim.kind == "model_output" else "UNVERIFIED")
             node("Evidence", {"id": identifier, "claim_id": claim_id, "source_id": source_id,
-                              "snapshot_id": snapshot_id, "content_hash": content_hash,
+                              "snapshot_id": evidence_snapshot_id, "content_hash": content_hash,
                               "excerpt": " ".join(evidence.excerpt.split()),
                               "observed_at": utc_iso(observed),
                               "valid_from": utc_iso(evidence.valid_from),
@@ -274,8 +274,8 @@ class ExtensionIngestor:
             edge("ExtensionRun", execution.run_id, "OBSERVED", "Evidence", identifier)
             if source_id:
                 edge("Evidence", identifier, "FROM_SOURCE", "Source", source_id)
-            if snapshot_id:
-                edge("Evidence", identifier, "OBSERVED_AT", "SourceSnapshot", snapshot_id)
+            if evidence_snapshot_id:
+                edge("Evidence", identifier, "OBSERVED_AT", "SourceSnapshot", evidence_snapshot_id)
         for observation in result.observations:
             identifier = stable_id("observation", execution.run_id, observation.ref)
             node("ExtensionObservation", {"id": identifier, "requirement_id": requirement_id,

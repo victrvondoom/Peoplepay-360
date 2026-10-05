@@ -4,3 +4,5 @@ FalkorDB==1.6.0
 pydantic==2.10.4
 PyYAML==6.0.2
 starlette==1.7.0
+# Install from the repository root; Journey v1 consumes the existing SDK package.
+-e ./packages/peoplepay-extension-sdk

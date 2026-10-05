@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Unified Journey · PeoplePay</title>
+    <link rel="stylesheet" href="/journey.css" />
+    <script src="/journey.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#journey-content">Skip to journey</a>
+    <header class="topbar">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">P</span><span>PeoplePay<small>EVIDENCE → ACTION</small></span></a>
+      <nav aria-label="PeoplePay workspaces"><a href="/">Transactions</a><a href="/journey" aria-current="page">Unified journey</a></nav>
+      <span class="connection" id="connection">Connecting</span>
+    </header>
+    <main class="layout">
+      <div class="page-heading"><div><p class="eyebrow">PEOPLEPAY UNIFIED JOURNEY V1</p><h1>From requirement to resolution.</h1><p class="lead">Carry the evidence, the decision and the approved terms through one connected lifecycle.</p></div><span class="edition">PROCUREMENT</span></div>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      <div class="workspace">
+        <aside class="sidebar" aria-label="Procurement requirements and journeys">
+          <section class="card requirement-card">
+            <div class="section-heading"><span class="number">01</span><h2>Your requirement</h2></div>
+            <form id="requirement-form">
+              <label for="mode">Journey mode</label><select id="mode" name="mode"><option value="reference">Reference lifecycle</option><option value="live">Connected service research</option></select>
+              <p id="mode-help" class="hint">Fictitious suppliers, captured provider outputs and a merchant simulator. No payment is made.</p>
+              <label for="description">Purchase brief</label><textarea id="description" name="description" rows="4" required maxlength="1000">Procure 300 ergonomic office chairs under INR 20 lakh, delivery within 30 days, prioritize sustainability.</textarea>
+              <label for="product">Product</label><input id="product" name="product" value="ergonomic office chairs" required maxlength="120" />
+              <div class="form-row"><div><label for="quantity">Quantity</label><input id="quantity" name="quantity" type="number" min="1" max="10000" value="300" required /></div><div><label for="delivery-days">Delivery within</label><div class="input-unit"><input id="delivery-days" name="delivery_days" type="number" min="1" max="365" value="30" required /><span>days</span></div></div></div>
+              <label for="budget">Total budget · INR</label><input id="budget" name="budget" inputmode="decimal" value="2000000" required pattern="[0-9]+([.][0-9]{1,2})?" /><p class="hint">₹20,00,000 for the full order, including the quoted charges.</p>
+              <label class="check"><input id="sustainability" name="sustainability" type="checkbox" checked /><span>Prioritize sustainability</span></label>
+              <button class="primary full" id="run-journey" type="submit">Run unified journey <span aria-hidden="true">→</span></button>
+            </form>
+          </section>
+          <section class="card"><div class="section-heading small-heading"><h2>Saved journeys</h2><button id="reload" class="text-button" type="button">Reload</button></div><div id="journey-list" class="journey-list"><p class="hint">Loading your journeys…</p></div></section>
+          <details class="card account"><summary>Account connection</summary><form id="account-form"><label for="user">PeoplePay actor</label><input id="user" name="user" required maxlength="128" /><label for="token">Bearer token</label><input id="token" name="token" type="password" autocomplete="off" /><p class="hint">The actor is shared with the transaction workspace. The token stays in this page's memory.</p><button class="secondary" type="submit">Connect account</button></form></details>
+        </aside>
+        <section class="journey-content" id="journey-content" aria-label="Journey evidence and lifecycle">
+          <div class="card welcome" id="empty-state"><span class="welcome-icon" aria-hidden="true">↗</span><p class="eyebrow">ONE REQUEST. ONE RECORD.</p><h2>Evidence travels with the order.</h2><p>Run the 300-chair scenario to compare suppliers, approve one exact decision and see a partial delivery become a complete dispute draft.</p><div class="preview-chain"><span>GreenChain</span><span>InflationForge</span><span>ECHO</span><span>Gateway</span><span>Merchant</span><span>PROXY</span></div><p class="hint">Your first run uses an explicitly labeled reference lifecycle. Live research requires the upstream services to be configured.</p></div>
+          <div id="active-journey" hidden>
+            <section class="card journey-header"><div class="heading-row"><div><p class="eyebrow" id="journey-mode">REFERENCE LIFECYCLE</p><h2 id="journey-title">300 ergonomic office chairs</h2></div><span id="phase" class="pill">Collecting evidence</span></div><div class="metrics" id="requirement-metrics"></div><ol class="progress-chain" id="progress-chain" aria-label="Journey progress"></ol><p class="hint" id="journey-boundary"></p></section>
+            <section class="card evidence-card"><div class="section-heading"><span class="number">02</span><div><h2>Provider evidence</h2><p class="hint">Native outputs enter the SDK and keep their source, time and uncertainty.</p></div></div><div class="provider-grid" id="providers"></div><details class="evidence-details"><summary>Inspect normalized claims, evidence and identity links</summary><div id="evidence-summary" class="evidence-summary"></div><pre id="evidence-json"></pre></details></section>
+            <section class="card decision-card"><div class="section-heading"><span class="number">03</span><div><h2>ECHO comparison</h2><p class="hint" id="decision-caption">Decision and policy will appear here.</p></div><span id="policy-outcome" class="pill"></span></div><div class="table-wrap"><table><caption class="sr-only">Supplier comparison with provider scores, ECHO ranking and merchant terms</caption><thead><tr><th scope="col">Supplier</th><th scope="col">Provider score</th><th scope="col">ECHO score</th><th scope="col">Merchant total</th><th scope="col">Delivery</th><th scope="col">Policy</th></tr></thead><tbody id="supplier-table"></tbody></table></div><p class="authority-note">Price authority: the reference merchant supplies the chair offers. InflationForge does not track this chair product and does not supply the INR quote.</p><details class="warnings"><summary id="warning-count">Decision warnings</summary><ul id="decision-warnings"></ul></details>
+              <form id="approval-form" class="approval-box" hidden><div><p class="eyebrow">HUMAN APPROVAL</p><h3>Approve the exact supplier and terms.</h3><p class="hint">Approval binds the displayed decision version and hash. The Gateway then creates the merchant checkout session and order.</p></div><fieldset id="supplier-options"><legend>Choose an eligible supplier</legend></fieldset><label class="check"><input id="approve-confirmation" type="checkbox" required /><span id="approval-label">I reviewed this reference decision and approve the simulated order. No money will move.</span></label><button id="approve" class="primary" type="submit" disabled>Approve & create reference order</button><code class="hash" id="decision-binding"></code></form>
+              <div id="approval-receipt" class="approval-receipt" hidden></div>
+            </section>
+            <section class="card commerce-card"><div class="section-heading"><span class="number">04</span><div><h2>Merchant order & delivery</h2><p class="hint">Merchant state carries the checkout, order reference and fulfillment events.</p></div></div><div id="commerce-empty" class="pending">Waiting for human approval.</div><div id="commerce-details" hidden><dl id="commerce-references" class="reference-list"></dl><form id="delivery-form" class="delivery-form"><label for="delivered">Record a final reference delivery</label><div class="delivery-controls"><div class="input-unit"><input id="delivered" name="delivered_quantity" type="number" min="0" max="300" value="260" required /><span id="delivery-unit">of 300 units</span></div><button id="record-delivery" class="secondary" type="submit">Simulate delivery event</button></div><p class="hint">Delivering 260 of 300 creates a 40-chair discrepancy and automatically hands the original evidence to PROXY.</p></form><div id="delivery-result" class="delivery-result" hidden></div></div></section>
+            <section class="card dispute-card" id="dispute-card"><div class="section-heading"><span class="number">05</span><div><h2>PROXY dispute evidence</h2><p class="hint">The case receives the complete transaction context without retyping.</p></div></div><div id="dispute-empty" class="pending">A delivery discrepancy will produce a draft for human review.</div><div id="dispute-details" hidden><div class="draft-status"><strong>Draft ready for review</strong><span class="pill">Not submitted</span></div><p id="draft-mode" class="hint"></p><div id="bundle-links" class="bundle-links"></div><pre id="draft-text" class="draft-text"></pre><details class="evidence-details"><summary>View the complete linked evidence bundle</summary><pre id="bundle-json"></pre></details></div></section>
+            <section class="card history-card"><div class="section-heading"><span class="number">06</span><div><h2>Reasoning that stays with the decision</h2><p class="hint">Read the historical snapshot separately from current research.</p></div></div><div class="history-actions"><button id="explain" class="secondary" type="button">Why did we select this supplier?</button><button id="refresh-evidence" class="secondary" type="button">What changed since the decision?</button></div><div id="historical-explanation" class="historical-explanation" hidden></div><div id="changes" class="changes" hidden></div></section>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer><span>PeoplePay ECHO</span><span>Evidence → decision → approval → transaction → outcome</span><a href="/">Back to transaction workspace</a></footer>
+  </body>
+</html>

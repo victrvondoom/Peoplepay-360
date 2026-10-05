@@ -285,6 +285,7 @@ class GatewayState:
         store: TransactionStore | None = None,
         bus: EventBus | None = None,
         capabilities: dict[str, Capability] | None = None,
+        journey: Any = None,
     ) -> None:
         self.store = store if store is not None else InMemoryTransactionStore()
         self.workflow_lock = threading.RLock()
@@ -294,6 +295,15 @@ class GatewayState:
         )
         self._hits: dict[str, deque[float]] = defaultdict(deque)
         self._lock = threading.Lock()
+        self._journey = journey
+
+    def journey_service(self):
+        """Load the concrete journey only when requested, preserving legacy startup."""
+        with self.workflow_lock:
+            if self._journey is None:
+                from journey.service import JourneyService
+                self._journey = JourneyService(self)
+        return self._journey
 
     # --- rate limiting -------------------------------------------------
 
@@ -515,6 +525,9 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 self.end_headers()
                 return
             assets = {"/": ("index.html", "text/html"),
+                      "/journey": ("journey.html", "text/html"),
+                      "/journey.js": ("journey.js", "text/javascript"),
+                      "/journey.css": ("journey.css", "text/css"),
                       "/app.js": ("app.js", "text/javascript"),
                       "/styles.css": ("styles.css", "text/css")}
             if path in assets:
@@ -552,6 +565,9 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             parts = [p for p in path.split("/") if p]
+            if parts[:3] == ["api", "v1", "journeys"]:
+                self._journey_route(user, parts[3:], None)
+                return
             if parts == ["transactions"]:
                 self._send(
                     200,
@@ -601,6 +617,10 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             parts = [p for p in path.split("/") if p]
+            if parts[:3] == ["api", "v1", "journeys"]:
+                with state.workflow_lock:
+                    self._journey_route(user, parts[3:], body)
+                return
             if parts == ["transactions"]:
                 self._create_transaction(user, body)
                 return
@@ -619,6 +639,44 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             self._fail(404, f"no route for POST {path}")
 
         # --- handlers --------------------------------------------------
+
+        def _journey_route(self, user: str, parts: list[str], body: dict[str, Any] | None) -> None:
+            try:
+                from journey.service import JourneyUnavailable
+                service = state.journey_service()
+                authorization = self.headers.get("Authorization")
+                if body is None:
+                    if not parts:
+                        result = {"journeys": service.store.list(user)}
+                    elif len(parts) == 1:
+                        result = service.store.get(parts[0], user)
+                    elif len(parts) == 2 and parts[1] == "explain":
+                        result = service.explain(parts[0], user, authorization)
+                    else:
+                        self._fail(404, "unknown journey route")
+                        return
+                elif not parts:
+                    result = service.create(user, body, authorization)
+                elif len(parts) == 2 and parts[1] == "approve":
+                    result = service.approve(parts[0], user, body, authorization)
+                elif len(parts) == 2 and parts[1] == "delivery":
+                    result = service.delivery(parts[0], user, body)
+                elif len(parts) == 2 and parts[1] == "refresh":
+                    if body:
+                        raise ValueError("refresh takes no provider override data")
+                    result = service.refresh(parts[0], user, authorization)
+                else:
+                    self._fail(404, "unknown journey route")
+                    return
+                self._send(201 if body is not None and not parts else 200, result)
+            except KeyError:
+                self._fail(404, "journey or decision not found")
+            except (ValueError, TypeError) as exc:
+                self._fail(409, str(exc))
+            except ImportError:
+                self._fail(503, "Journey dependencies are missing. Install the local Extension SDK and journey requirements.")
+            except JourneyUnavailable as exc:
+                self._fail(503, str(exc))
 
         def _workflow(
             self, user: str, transaction_id: str, action: str, body: dict[str, Any]

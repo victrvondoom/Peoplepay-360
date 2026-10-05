@@ -1,0 +1,390 @@
+{
+  "capture": {
+    "mode": "reference",
+    "captured_at": "2026-10-05T15:12:15.490150+00:00",
+    "native_source": "backend.services.inflation.service.InflationForgeService",
+    "snapshot_file_sha256": "fcfc4345ec92077d9bfe86b1ff50be286aef4d1337b612998df7372e40c9b39f",
+    "native_source_sha256": "83b292ab808cb33a35f7e283a6be6ae4c3fbdfe07cf7e8b0dd2fc6a974feab1a",
+    "live_sync_performed": false,
+    "description": "Native bootstrap/service output from a disposable DB; prices remain the bundled historical USD city observations."
+  },
+  "items": [
+    {
+      "id": "apples-pound",
+      "slug": "apples-pound",
+      "name": "Apples",
+      "category": "GROCERIES",
+      "unit": "1 lb",
+      "match_terms": [
+        "Apples (1 lb)",
+        "Apples (1kg)"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "1kg",
+          "multiplier": 0.453592
+        },
+        {
+          "label_contains": "1 lb",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "05a1e727d8bc187f6150",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:14.030108Z",
+      "updated_at": "2026-10-05T15:12:14.030108Z"
+    },
+    {
+      "id": "cappuccino",
+      "slug": "cappuccino",
+      "name": "Cappuccino",
+      "category": "DINING",
+      "unit": "regular",
+      "match_terms": [
+        "Cappuccino (regular)"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "Cappuccino",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "200bae32cd9382452c87",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:14.021111Z",
+      "updated_at": "2026-10-05T15:12:14.021111Z"
+    },
+    {
+      "id": "transit-ticket",
+      "slug": "transit-ticket",
+      "name": "Local transit",
+      "category": "TRANSPORT",
+      "unit": "one-way ticket",
+      "match_terms": [
+        "One-way Ticket (Local Transport)"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "One-way Ticket",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "47c69c379cb0907425fc",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:14.012109Z",
+      "updated_at": "2026-10-05T15:12:14.012109Z"
+    },
+    {
+      "id": "gas-gallon",
+      "slug": "gas-gallon",
+      "name": "Gasoline",
+      "category": "TRANSPORT",
+      "unit": "1 gallon",
+      "match_terms": [
+        "Gasoline (1 gallon)",
+        "Gasoline (1 liter)"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "1 liter",
+          "multiplier": 3.78541
+        },
+        {
+          "label_contains": "1 gallon",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "9958b67cb27850ea0af5",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:14.005109Z",
+      "updated_at": "2026-10-05T15:12:14.005109Z"
+    },
+    {
+      "id": "chicken-pound",
+      "slug": "chicken-pound",
+      "name": "Chicken fillets",
+      "category": "GROCERIES",
+      "unit": "1 lb",
+      "match_terms": [
+        "Chicken Fillets (1 lb)",
+        "Chicken Fillets (1kg)"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "1kg",
+          "multiplier": 0.453592
+        },
+        {
+          "label_contains": "1 lb",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "694cc04177ff37c97748",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:13.997527Z",
+      "updated_at": "2026-10-05T15:12:13.997527Z"
+    },
+    {
+      "id": "bread-pound",
+      "slug": "bread-pound",
+      "name": "White bread",
+      "category": "GROCERIES",
+      "unit": "1 lb",
+      "match_terms": [
+        "Loaf of Fresh White Bread (1 lb)",
+        "Loaf of Fresh White Bread (500g)",
+        "Fresh White Bread (1 lb Loaf)"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "500g",
+          "multiplier": 0.907185
+        },
+        {
+          "label_contains": "1 lb",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "264b185d70538c579941",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:13.989525Z",
+      "updated_at": "2026-10-05T15:12:13.989525Z"
+    },
+    {
+      "id": "eggs-dozen",
+      "slug": "eggs-dozen",
+      "name": "Eggs",
+      "category": "GROCERIES",
+      "unit": "dozen",
+      "match_terms": [
+        "Eggs (12, Large Size)",
+        "Eggs (regular) (12)"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "Eggs",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "3ad12098e35882fc35d9",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:13.981013Z",
+      "updated_at": "2026-10-05T15:12:13.981013Z"
+    },
+    {
+      "id": "milk-gallon",
+      "slug": "milk-gallon",
+      "name": "Milk",
+      "category": "GROCERIES",
+      "unit": "1 gallon",
+      "match_terms": [
+        "Milk (Regular, 1 Liter)",
+        "Milk (regular), (1 gallon)"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "1 Liter",
+          "multiplier": 3.78541
+        },
+        {
+          "label_contains": "1 gallon",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "eccfca6022d464870e56",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:13.974013Z",
+      "updated_at": "2026-10-05T15:12:13.974013Z"
+    },
+    {
+      "id": "rent-1br-center",
+      "slug": "rent-1br-center",
+      "name": "1 bed \u00b7 city center",
+      "category": "HOUSING",
+      "unit": "per month",
+      "match_terms": [
+        "Apartment (1 bedroom) in City Centre",
+        "1 Bedroom Apartment in City Centre"
+      ],
+      "normalizations": [
+        {
+          "label_contains": "Apartment",
+          "multiplier": 1.0
+        }
+      ],
+      "source_method": "CITY_PRICE_TABLE",
+      "status": "ACTIVE",
+      "owner": "inflationforge-core",
+      "version": "1.0.0",
+      "spec_hash": "45b96f29b5e93a88a23a",
+      "validation": [
+        {
+          "id": "builtin-contract",
+          "name": "Built-in source contract",
+          "passed": true,
+          "detail": "Versioned source labels and unit conversions are deterministic."
+        }
+      ],
+      "created_at": "2026-10-05T15:12:13.966493Z",
+      "updated_at": "2026-10-05T15:12:13.966493Z"
+    }
+  ],
+  "snapshot": {
+    "city_count": 16,
+    "comparison_count": 144,
+    "content_hash": "c123aff021eed0bd3249",
+    "current_year": 2026,
+    "failed_cities": [],
+    "id": "prices-20260822220648-4b8580",
+    "item_count": 9,
+    "observation_count": 288,
+    "previous_year": 2025,
+    "provider_mode": "BRIGHT DATA SERP + JINA LIVE READER FALLBACK",
+    "retrieved_at": "2026-08-22T22:06:59.027859Z",
+    "source_urls": [
+      "https://www.numbeo.com/cost-of-living/in/Austin?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Boston?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Chicago?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Dallas?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Denver?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Houston?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Los-Angeles?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Miami?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Minneapolis?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Nashville?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/New-York?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Philadelphia?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Phoenix?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/San-Francisco?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Seattle?displayCurrency=USD",
+      "https://www.numbeo.com/cost-of-living/in/Washington?displayCurrency=USD"
+    ],
+    "trace_id": "5f39e0fa0585ac5b44ecd05387b789a8"
+  },
+  "observations": [
+    {
+      "archive_timestamp": null,
+      "city_id": "chicago",
+      "conversion_multiplier": 3.78541,
+      "currency": "USD",
+      "id": "obs-prices-20260822220648-4b8580-chicago-milk-gallon-2026",
+      "item_id": "milk-gallon",
+      "kind": "LIVE",
+      "observed_at": "2026-08-22T22:06:48.479102Z",
+      "price_usd": 4.96,
+      "raw_label": "Milk (Regular, 1 Liter)",
+      "raw_price": 1.31,
+      "retrieved_at": "2026-08-22T22:06:58.916102Z",
+      "snapshot_id": "prices-20260822220648-4b8580",
+      "source": "Numbeo public city price table",
+      "source_url": "https://www.numbeo.com/cost-of-living/in/Chicago?displayCurrency=USD",
+      "year": 2026
+    },
+    {
+      "archive_timestamp": "20250729154250",
+      "city_id": "chicago",
+      "conversion_multiplier": 1.0,
+      "currency": "USD",
+      "id": "obs-prices-20260822220648-4b8580-chicago-milk-gallon-2025",
+      "item_id": "milk-gallon",
+      "kind": "ARCHIVED",
+      "observed_at": "2025-07-29T15:42:50Z",
+      "price_usd": 4.19,
+      "raw_label": "Milk (regular), (1 gallon)",
+      "raw_price": 4.19,
+      "retrieved_at": "2026-08-22T22:06:58.916119Z",
+      "snapshot_id": "prices-20260822220648-4b8580",
+      "source": "Internet Archive capture of Numbeo",
+      "source_url": "https://web.archive.org/web/20250729154250id_/https://www.numbeo.com/cost-of-living/in/Chicago",
+      "year": 2025
+    }
+  ]
+}

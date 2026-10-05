@@ -5,6 +5,20 @@ It brings discovery, analysis, verification, decision review, transaction
 records, and after-sales resolution into one product journey while keeping
 specialist apps and services independently runnable.
 
+## Unified Journey v1
+
+The portal now carries one procurement requirement through the existing
+Extension SDK, GreenChain and InflationForge adapters, ECHO on FalkorDB, exact
+human approval, a persistent reference merchant, and a PROXY dispute draft.
+Open `/journey` on the Gateway. [Run the journey](docs/unified-journey-v1.md).
+
+The acceptance scenario orders 300 chairs from Supplier B for INR 17.7 lakh,
+records a simulated delivery of 260, and retains the approved evidence in the
+draft for the 40 missing chairs. Historical explanations use the sealed ECHO
+decision; refreshing evidence creates a new version. No money moves.
+Reference suppliers are fictitious. InflationForge does not track chairs;
+the system records that gap instead of inventing price observations.
+
 ## ECHO: evidence correlation and decision audit
 
 PeoplePay ECHO is the canonical trust, provenance, and decision service. It
@@ -38,11 +52,13 @@ it never executes payment. Synthetic demo decisions are barred from approval.
 
 See [the unified product plan](docs/unified-product-plan.md),
 [ECHO architecture](docs/echo-architecture.md), [project review](docs/project-review.md),
-and [integration map](docs/integration-map.md). The next platform milestone is
-[PeoplePay Extension SDK v1](docs/unified-product-plan.md#next-milestone-peoplepay-extension-sdk-v1).
+and [integration map](docs/integration-map.md). The existing
+[PeoplePay Extension SDK v1](packages/peoplepay-extension-sdk/README.md) now
+carries the [Unified Journey v1](docs/unified-journey-v1.md).
 GreenChain, Rumi, InflationForge, PROXY, Beacon, and InHeir remain separate
 services with separate data and runtime boundaries. The suite directory is
-navigation, not shared sign-in or a common database. External provider and
-supplier integrations are not implied by the ECHO demo.
+navigation, not shared sign-in or a common database. The journey has explicit
+data handoffs for GreenChain, InflationForge and PROXY. External provider and
+supplier verification is not implied by either reference demo.
 
 Run instructions and current limitations are in [running PeoplePay](docs/running-peoplepay.md) and [licensing blockers](docs/licensing-blockers.md). See [the ECHO demo guide](docs/DEMO.md) and [judge Q&A](docs/JUDGE_QA.md) for a reproducible walkthrough and claim boundaries.

@@ -383,7 +383,7 @@ class NormalizedResult(ContractModel):
         for evidence in self.evidence:
             if evidence.claim_ref not in indices["claims"] or (evidence.source_ref and evidence.source_ref not in indices["sources"]):
                 raise ValueError("evidence references a missing claim or source")
-            if evidence.provenance_state == "KNOWN" and indices["sources"][evidence.source_ref].provenance_state != "KNOWN":
+            if evidence.provenance_state == "KNOWN" and (not evidence.source_ref or indices["sources"][evidence.source_ref].provenance_state != "KNOWN"):
                 raise ValueError("known evidence cannot rely on unknown source provenance")
         adjacency: dict[str, list[str]] = {}
         for dependency in self.source_dependencies:
