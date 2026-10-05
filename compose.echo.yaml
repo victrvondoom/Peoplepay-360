@@ -1,0 +1,16 @@
+services:
+  falkordb:
+    image: falkordb/falkordb:v4.20.4-alpine
+    command: ["--appendonly", "yes"]
+    ports:
+      - "127.0.0.1:16380:6379"
+    volumes:
+      - echo-falkordb-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 3s
+      timeout: 2s
+      retries: 20
+
+volumes:
+  echo-falkordb-data:

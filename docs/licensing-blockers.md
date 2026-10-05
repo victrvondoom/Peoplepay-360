@@ -1,5 +1,15 @@
 # Licensing blockers
 
+## PeoplePay ECHO addition (2026-10-05)
+
+ECHO is new code in this repository. Its graph database is an external
+container dependency, not vendored source. The pinned official FalkorDB image
+is distributed under SSPLv1 according to its registry metadata; confirm that
+its license and operating model fit the intended deployment before shipping
+it as part of a hosted or redistributed product. The Python client is a
+separate dependency and has its own package license. No FalkorDB source has
+been copied into this repository.
+
 **Status:** Open. Two of five projects cannot be redistributed.
 **Date:** 2026-09-27
 **Verified:** by reading each project's `LICENSE` file and `package.json` on disk.
@@ -20,6 +30,12 @@ This file records what was found. It does not resolve anything, and per §37
 | `rumi-main` | **NONE** | Unknown — not stated anywhere in the repo | **BLOCKED.** Not touched. | Owner must add an explicit licence. |
 
 Checked for both blocked projects and found nothing to infer permission from:
+
+GreenChain was added to the checkout on 5 October 2026. Its README says MIT,
+but the added tree has no `LICENSE` file. Before copying its source into another
+distributable package, confirm the intended licence grant, attribution, and
+third-party dataset/model redistribution terms with its owners. This review
+does not treat a README claim as a substitute for that confirmation.
 
 - no `LICENSE` / `LICENCE` file at any level
 - no `license` field in `package.json`

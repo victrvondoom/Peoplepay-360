@@ -1,0 +1,38 @@
+schema_version: "1"
+id: inflationforge
+name: InflationForge city price receipts
+version: 1.0.0
+type: PRICE_INTELLIGENCE
+enabled: false
+priority: 100
+upstream:
+  # README-declared origin, not an established upstream snapshot match.
+  repository: https://github.com/KaushikSiva/Inflation-Forge
+  commit: null
+license:
+  spdx: MIT
+  notice_required: true
+  source_reused: false
+runtime:
+  mode: service
+  language: python
+  url_env: ECHO_EXT_INFLATIONFORGE_URL
+  allowed_hosts: [127.0.0.1, localhost, host.docker.internal]
+  timeout_seconds: 8
+  max_concurrency: 2
+  max_failures: 3
+  cooldown_seconds: 30
+capabilities: [price_intelligence]
+permissions:
+  network: true
+  filesystem: false
+  subprocess: false
+graph:
+  read: []
+  write: [Product, Claim, Evidence, Source]
+secrets: []
+healthcheck:
+  path: /health
+dependencies: []
+# Inspected local PeoplePay tree: e563d5acf09f89a76fbc65aa9451fc0d3cf10762.
+# Full dossier: docs/extensions/intake/bundled-projects.md.

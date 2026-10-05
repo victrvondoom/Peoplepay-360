@@ -126,6 +126,64 @@ def config_warnings() -> tuple[str, ...]:
     return tuple(_CONFIG_WARNINGS)
 
 
+def product_modules() -> list[dict[str, str | None]]:
+    """Return the PeoplePay suite directory with only configured app URLs."""
+    modules = (
+        (
+            "evidence", "PeoplePay ECHO", "Audit evidence lineage and supplier decisions",
+            "PEOPLEPAY_ECHO_URL",
+        ),
+        (
+            "sourcing", "GreenChain", "Compare suppliers and sourcing impact",
+            "PEOPLEPAY_GREENCHAIN_URL",
+        ),
+        (
+            "spaces", "Rumi", "Plan a room and discover furniture",
+            "PEOPLEPAY_RUMI_URL",
+        ),
+        (
+            "prices", "InflationForge", "Explore sourced regional price trends",
+            "PEOPLEPAY_INFLATIONFORGE_URL",
+        ),
+        (
+            "property", "InHeir.AI", "Manage property cases and reports",
+            "PEOPLEPAY_INHEIR_URL",
+        ),
+        (
+            "resolution", "PROXY", "Prepare consumer dispute evidence",
+            "PEOPLEPAY_PROXY_URL",
+        ),
+        (
+            "operations", "Beacon", "Operator incident response",
+            "PEOPLEPAY_BEACON_URL",
+        ),
+    )
+    result: list[dict[str, str | None]] = []
+    for module_id, name, description, env_name in modules:
+        raw_url = os.getenv(env_name, "").strip()
+        url: str | None = None
+        if raw_url:
+            parsed = urlparse(raw_url)
+            if (
+                parsed.scheme in {"http", "https"}
+                and parsed.netloc
+                and not parsed.username
+                and not parsed.password
+            ):
+                # Never reflect URL credentials, query parameters or fragments into the browser.
+                url = f"{parsed.scheme}://{parsed.netloc}{parsed.path.rstrip('/')}"
+        result.append(
+            {
+                "id": module_id,
+                "name": name,
+                "description": description,
+                "url": url,
+                "status": "AVAILABLE" if url else "NOT_CONFIGURED",
+            }
+        )
+    return result
+
+
 #: Requests allowed per user per window.  Crude on purpose: a real deployment
 #: puts this at the edge, but "no limit at all" is not a defensible default for
 #: a surface that fronts money.
@@ -480,6 +538,9 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                     200,
                     state.integrations(authenticated=self._caller() is not None),
                 )
+                return
+            if path == "/product/modules":
+                self._send(200, {"modules": product_modules()})
                 return
 
             user = self._caller()

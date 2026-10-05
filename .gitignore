@@ -22,3 +22,4 @@ output/playwright/
 
 # Isolated dependency verification environment
 .venv-beacon-review/
+.venv-echo/

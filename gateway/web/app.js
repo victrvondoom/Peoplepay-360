@@ -96,6 +96,34 @@ async function refresh() {
   transactions = data.transactions;
   list();
 }
+async function loadModules() {
+  const response = await fetch("/product/modules");
+  if (!response.ok) throw Error(`Product directory unavailable (${response.status})`);
+  const { modules } = await response.json();
+  const directory = $("modules");
+  directory.replaceChildren();
+  for (const module of modules) {
+    const card = document.createElement(module.url ? "a" : "div");
+    card.className = "module-card";
+    if (module.url) {
+      card.href = module.url;
+      card.target = "_blank";
+      card.rel = "noopener noreferrer";
+      card.setAttribute("aria-label", `Open ${module.name} in a new tab`);
+    } else {
+      card.setAttribute("aria-disabled", "true");
+      card.title = `Set the service URL to enable ${module.name}`;
+    }
+    const name = document.createElement("strong");
+    name.textContent = module.name;
+    const description = document.createElement("span");
+    description.textContent = module.description;
+    const status = document.createElement("small");
+    status.textContent = module.url ? "OPEN WORKSPACE ↗" : "SERVICE NOT CONFIGURED";
+    card.append(name, description, status);
+    directory.append(card);
+  }
+}
 async function load(id) {
   selected = id;
   const t = await api(`/transactions/${id}`);
@@ -386,6 +414,7 @@ $("capability").onsubmit = (e) => {
   });
 };
 run(async () => {
+  await loadModules();
   await health();
   await refresh();
   if (transactions.length)

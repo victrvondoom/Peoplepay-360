@@ -1,0 +1,6 @@
+fastapi==0.142.2
+uvicorn[standard]==0.32.1
+FalkorDB==1.6.0
+pydantic==2.10.4
+PyYAML==6.0.2
+starlette==1.7.0

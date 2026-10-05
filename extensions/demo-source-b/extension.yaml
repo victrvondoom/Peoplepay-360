@@ -1,0 +1,15 @@
+schema_version: "1"
+id: demo-source-b
+name: Synthetic source provider B
+version: 1.0.0
+type: SOURCE_DISCOVERY
+enabled: true
+priority: 20
+upstream: {repository: null, commit: null}
+license: {spdx: NOASSERTION, notice_required: false, source_reused: false}
+runtime: {mode: builtin, language: python, timeout_seconds: 2}
+capabilities: [demo_evidence]
+permissions: {network: false, filesystem: false, subprocess: false}
+graph:
+  read: []
+  write: [Supplier, Claim, Evidence, Source]

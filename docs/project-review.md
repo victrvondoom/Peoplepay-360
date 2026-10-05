@@ -1,5 +1,13 @@
 # PeoplePay error review - 2 October 2026
 
+## Product integration update - 5 October 2026
+
+The checkout now includes `GREENCHAIN-main/` as a separate supplier-sourcing service and PeoplePay ECHO as a graph-backed evidence audit service. The shared gateway UI exposes a server-configured directory for ECHO, GreenChain, Rumi, InflationForge, InHeir.AI, PROXY, and Beacon. See [the unified product plan](unified-product-plan.md).
+
+The directory is shared navigation, not shared login or storage. ECHO can pass an explicitly approved recommendation into the existing gateway planner; other specialist data handoffs remain unimplemented. GreenChain source is not copied into the gateway. GreenChain's README states MIT, but the added tree has no LICENSE file; confirm licensing and data/model redistribution rights before deeper code integration.
+
+The GreenChain module link uses `PEOPLEPAY_GREENCHAIN_URL`; equivalent gateway settings are documented in [running PeoplePay](running-peoplepay.md). These UI changes have not been runtime-tested in this update.
+
 This review covers the root gateway/integration layer and checks available in the five bundled projects. It is not a claim that every possible defect has been eliminated or that live payment/provider flows have been verified.
 
 ## Fixed findings
@@ -65,3 +73,53 @@ Certificate failures initially blocked Python/Bun downloads. Checks used a tempo
 10. **Licensing remains unresolved in repository documentation.** No LICENSE/LICENCE files were found outside dependencies in PROXY or Rumi. See `licensing-blockers.md`; this review does not grant or change license terms.
 
 The gateway is usable as a local sandbox. Passing local tests does not establish production payment readiness, live provider correctness or complete upstream project health.
+# PeoplePay ECHO review (2026-10-05)
+
+ECHO now exists as a focused, separate service at `echo/`, with a dedicated
+FalkorDB graph and a local UI. The PeoplePay gateway includes it in the
+server-configured module directory. ECHO's graph—not a hard-coded root count—
+drives the synthetic evidence diversity traversal and robust-score decision.
+See [the demo walkthrough](DEMO.md), [judge Q&A](JUDGE_QA.md), and
+[unified product plan](unified-product-plan.md).
+
+## Proven demonstration
+
+The deterministic fixture contains invented Alpha/Beta/Gamma suppliers and
+`.example` sources. The graph returns eight Alpha observations terminating at
+one provenance root, and three Beta observations terminating at three roots.
+The configured score yields Alpha 71 from raw 94 and Beta 85 from raw 87;
+Beta becomes the recommendation. Gamma is ineligible with one root. This proves
+the prototype can detect *explicitly modeled* correlation and affect a
+recommendation. It does not validate real-world source inference, procurement
+quality, or statistical independence.
+
+ECHO verification on 5 October: **107 tests passed** with
+`ECHO_REQUIRE_GRAPH_TESTS=1` against the local FalkorDB service. Fifteen
+deterministic synthetic benchmark scenarios completed; results and scope are
+in [the benchmark record](extensions/benchmark-results.json). The OSV scan
+covered 33 packages in `.venv-echo` and returned no matching advisory IDs at
+scan time; see the [dependency snapshot](extensions/dependency-advisories.json)
+and [security boundary](extensions/security.md). Playwright verified both demo
+buttons, graph trace rendering, and extension status/settings; the refreshed
+page had no console errors or warnings. A full review with remaining limits is
+in the [red-team challenge](extensions/red-team-review.md).
+
+## New limitations
+
+- ECHO requires a caller token when `BEACON_GATEWAY_SECRET` is configured.
+  Without that shared secret it uses the explicitly local `X-Beacon-User`
+  fallback; neither mode establishes production SSO or tenant operations.
+- Reviewed extension ingestion and a narrow read-only InflationForge service
+  adapter now exist. GreenChain, PROXY, and Rumi have intake manifests but no
+  executable adapters; see the [intake decision record](OPEN_SOURCE_EXTENSIONS.md).
+- Dependency links are explicit and human review remains necessary. The engine
+  cannot prove hidden copying, source authenticity, domain ownership, exact
+  product/SKU fit, or factual correctness. Its scored roots describe recorded
+  provenance paths, not statistical independence.
+- Human approval can create a gateway draft transaction and planning record;
+  it never triggers checkout or moves money. Uncertain transaction creation
+  enters reconciliation-required state. Approval serialization is process
+  local, so multiple API workers need distributed coordination before use.
+- Compose supplies the loopback FalkorDB service. ECHO API launch and identity
+  settings are described in [running PeoplePay](running-peoplepay.md); this
+  local configuration is not a production deployment recipe.

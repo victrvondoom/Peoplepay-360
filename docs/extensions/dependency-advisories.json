@@ -1,0 +1,172 @@
+{
+  "source": "OSV querybatch",
+  "scanned_at": "2026-10-05T13:55:04.045368+00:00",
+  "environment": ".venv-echo",
+  "packages": [
+    {
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "anyio",
+      "version": "4.15.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "certifi",
+      "version": "2026.7.22",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "click",
+      "version": "8.5.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "colorama",
+      "version": "0.4.6",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "FalkorDB",
+      "version": "1.6.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "fastapi",
+      "version": "0.142.2",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "h11",
+      "version": "0.16.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "httpcore",
+      "version": "1.0.9",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "httptools",
+      "version": "0.8.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "httpx",
+      "version": "0.28.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "idna",
+      "version": "3.20",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "opentelemetry-api",
+      "version": "1.45.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "packaging",
+      "version": "26.3",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pydantic",
+      "version": "2.10.4",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pydantic_core",
+      "version": "2.27.2",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "Pygments",
+      "version": "2.21.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "pytest-asyncio",
+      "version": "1.4.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "python-dotenv",
+      "version": "1.2.4",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "PyYAML",
+      "version": "6.0.2",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "redis",
+      "version": "8.1.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "six",
+      "version": "1.17.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "starlette",
+      "version": "1.7.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "uvicorn",
+      "version": "0.32.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "watchfiles",
+      "version": "1.3.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "websockets",
+      "version": "17.2",
+      "vulnerability_ids": []
+    }
+  ]
+}

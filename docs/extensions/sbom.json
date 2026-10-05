@@ -1,0 +1,1472 @@
+{
+  "$schema": "https://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:23e88040-7f5f-4385-9d4d-dd3467aa4973",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2026-10-05T13:55:04.045368+00:00",
+    "component": {
+      "type": "application",
+      "bom-ref": "peoplepay:echo:first-party",
+      "name": "PeoplePay ECHO first-party core and adapters",
+      "licenses": [
+        {
+          "license": {
+            "name": "NOASSERTION"
+          }
+        }
+      ]
+    },
+    "properties": [
+      {
+        "name": "echo:inventory-source",
+        "value": "Installed .venv-echo importlib.metadata and local license files"
+      },
+      {
+        "name": "echo:inventory-scope",
+        "value": "Windows Python ECHO environment; not full monorepo, container, OS, dataset or model inventory"
+      },
+      {
+        "name": "echo:dependency-resolution",
+        "value": "Installed Requires-Dist active markers; uvicorn standard extra selected; pip/setuptools excluded as environment tools"
+      },
+      {
+        "name": "echo:advisory-scan",
+        "value": "OSV querybatch snapshot; see dependency-advisories.json"
+      },
+      {
+        "name": "echo:license-assessment",
+        "value": "Distribution metadata and installed license files; no legal interpretation or guessed SPDX for ambiguous metadata"
+      }
+    ]
+  },
+  "components": [
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/annotated-doc@0.0.5",
+      "name": "annotated-doc",
+      "version": "0.0.5",
+      "purl": "pkg:pypi/annotated-doc@0.0.5",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Intended Audience :: Information Technology\", \"Intended Audience :: System Administrators\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python\", \"Topic :: Internet\", \"Topic :: Software Development :: Libraries :: Application Frameworks\", \"Topic :: Software Development :: Libraries :: Python Modules\", \"Topic :: Software Development :: Libraries\", \"Topic :: Software Development\", \"Typing :: Typed\", \"Development Status :: 4 - Beta\", \"Intended Audience :: Developers\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\annotated_doc-0.0.5.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"fff170779a6acbf65abdb405c087f1cee1786691e4a96a4034517e4a504a0cdf\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/annotated-types@0.8.0",
+      "name": "annotated-types",
+      "version": "0.8.0",
+      "purl": "pkg:pypi/annotated-types@0.8.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 4 - Beta\", \"Environment :: Console\", \"Environment :: MacOS X\", \"Intended Audience :: Developers\", \"Intended Audience :: Information Technology\", \"License :: OSI Approved :: MIT License\", \"Operating System :: POSIX :: Linux\", \"Operating System :: Unix\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Topic :: Software Development :: Libraries :: Python Modules\", \"Typing :: Typed\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\annotated_types-0.8.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"fe1049884b1a0d9342901e88e07f32925d24b3121d9972b6a6805fb9824b095d\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/anyio@4.15.1",
+      "name": "anyio",
+      "version": "4.15.1",
+      "purl": "pkg:pypi/anyio@4.15.1",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Intended Audience :: Developers\", \"Framework :: AnyIO\", \"Typing :: Typed\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Programming Language :: Python :: Free Threading :: 2 - Beta\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\anyio-4.15.1.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"5361ac9dc58f2ef5fd2e9b09c68297c17f04950909bbc8023bdb82eacf22c2b0\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"exceptiongroup>=1.0.2; python_version < \\\"3.11\\\"\", \"idna>=2.8\", \"typing_extensions>=4.16.0; python_version < \\\"3.15\\\"\", \"trio>=0.32.0; extra == \\\"trio\\\"\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/certifi@2026.7.22",
+      "name": "certifi",
+      "version": "2026.7.22",
+      "purl": "pkg:pypi/certifi@2026.7.22",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "MPL-2.0"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)\", \"Natural Language :: English\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.7\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\certifi-2026.7.22.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"e93716da6b9c0d5a4a1df60fe695b370f0695603d21f6f83f053e42cfc10caf7\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/click@8.5.0",
+      "name": "click",
+      "version": "8.5.0",
+      "purl": "pkg:pypi/click@8.5.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Intended Audience :: Developers\", \"Operating System :: OS Independent\", \"Programming Language :: Python\", \"Typing :: Typed\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\click-8.5.0.dist-info\\\\licenses\\\\LICENSE.txt\", \"sha256\": \"9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/colorama@0.4.6",
+      "name": "colorama",
+      "version": "0.4.6",
+      "purl": "pkg:pypi/colorama@0.4.6",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Environment :: Console\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: BSD License\", \"Operating System :: OS Independent\", \"Programming Language :: Python\", \"Programming Language :: Python :: 2\", \"Programming Language :: Python :: 2.7\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.7\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Topic :: Terminals\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\colorama-0.4.6.dist-info\\\\licenses\\\\LICENSE.txt\", \"sha256\": \"cac35c02686e5d04a5a7140bfb3b36e73aed496656e891102e428886d7930318\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/falkordb@1.6.0",
+      "name": "FalkorDB",
+      "version": "1.6.0",
+      "purl": "pkg:pypi/falkordb@1.6.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Environment :: Console\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: MIT License\", \"Operating System :: OS Independent\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\falkordb-1.6.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"89426b46632a47cb50d8beb8a3a2cc9e41386be84690b7465b940e2f516a5ba2\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"python-dateutil>=2.9.0\", \"redis>=7.1.0\", \"pytest-asyncio>=1.3.0; extra == 'test'\", \"pytest-cov>=7.0.0; extra == 'test'\", \"pytest>=9.0.2; extra == 'test'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/fastapi@0.142.2",
+      "name": "fastapi",
+      "version": "0.142.2",
+      "purl": "pkg:pypi/fastapi@0.142.2",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Intended Audience :: Information Technology\", \"Intended Audience :: System Administrators\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python\", \"Topic :: Internet\", \"Topic :: Software Development :: Libraries :: Application Frameworks\", \"Topic :: Software Development :: Libraries :: Python Modules\", \"Topic :: Software Development :: Libraries\", \"Topic :: Software Development\", \"Typing :: Typed\", \"Development Status :: 4 - Beta\", \"Environment :: Web Environment\", \"Framework :: AsyncIO\", \"Framework :: FastAPI\", \"Framework :: Pydantic\", \"Framework :: Pydantic :: 2\", \"Intended Audience :: Developers\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Topic :: Internet :: WWW/HTTP :: HTTP Servers\", \"Topic :: Internet :: WWW/HTTP\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\fastapi-0.142.2.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"4ec89ffc81485b97fec584b2d4a961032eeffe834453894fd9c1274906cc744e\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"starlette>=0.46.0\", \"pydantic>=2.9.0\", \"typing-extensions>=4.8.0\", \"typing-inspection>=0.4.2\", \"annotated-doc>=0.0.2\", \"opentelemetry-api>=1.44.0\", \"opentelemetry-sdk>=1.44.0; extra == \\\"opentelemetry\\\"\", \"opentelemetry-exporter-otlp-proto-http>=1.44.0; extra == \\\"opentelemetry\\\"\", \"opentelemetry-sdk>=1.44.0; extra == \\\"standard\\\"\", \"opentelemetry-exporter-otlp-proto-http>=1.44.0; extra == \\\"standard\\\"\", \"fastapi-cli[standard]>=0.0.32; extra == \\\"standard\\\"\", \"fastar>=0.9.0; extra == \\\"standard\\\"\", \"httpx<1.0.0,>=0.23.0; extra == \\\"standard\\\"\", \"jinja2>=3.1.5; extra == \\\"standard\\\"\", \"python-multipart>=0.0.18; extra == \\\"standard\\\"\", \"email-validator>=2.0.0; extra == \\\"standard\\\"\", \"uvicorn[standard]>=0.12.0; extra == \\\"standard\\\"\", \"pydantic-settings>=2.0.0; extra == \\\"standard\\\"\", \"pydantic-extra-types>=2.0.0; extra == \\\"standard\\\"\", \"opentelemetry-sdk>=1.44.0; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"opentelemetry-exporter-otlp-proto-http>=1.44.0; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.32; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"httpx<1.0.0,>=0.23.0; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"jinja2>=3.1.5; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"python-multipart>=0.0.18; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"email-validator>=2.0.0; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"uvicorn[standard]>=0.12.0; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"pydantic-settings>=2.0.0; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"pydantic-extra-types>=2.0.0; extra == \\\"standard-no-fastapi-cloud-cli\\\"\", \"opentelemetry-sdk>=1.44.0; extra == \\\"all\\\"\", \"opentelemetry-exporter-otlp-proto-http>=1.44.0; extra == \\\"all\\\"\", \"fastapi-cli[standard]>=0.0.32; extra == \\\"all\\\"\", \"httpx<1.0.0,>=0.23.0; extra == \\\"all\\\"\", \"jinja2>=3.1.5; extra == \\\"all\\\"\", \"python-multipart>=0.0.18; extra == \\\"all\\\"\", \"itsdangerous>=1.1.0; extra == \\\"all\\\"\", \"pyyaml>=5.3.1; extra == \\\"all\\\"\", \"email-validator>=2.0.0; extra == \\\"all\\\"\", \"uvicorn[standard]>=0.12.0; extra == \\\"all\\\"\", \"pydantic-settings>=2.0.0; extra == \\\"all\\\"\", \"pydantic-extra-types>=2.0.0; extra == \\\"all\\\"\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/h11@0.16.0",
+      "name": "h11",
+      "version": "0.16.0",
+      "purl": "pkg:pypi/h11@0.16.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 3 - Alpha\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: MIT License\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Topic :: Internet :: WWW/HTTP\", \"Topic :: System :: Networking\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\h11-0.16.0.dist-info\\\\licenses\\\\LICENSE.txt\", \"sha256\": \"37db5bb85926db28a427a25867f10b1232003aea1be69ccb851138adb8e6f361\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpcore@1.0.9",
+      "name": "httpcore",
+      "version": "1.0.9",
+      "purl": "pkg:pypi/httpcore@1.0.9",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 3 - Alpha\", \"Environment :: Web Environment\", \"Framework :: AsyncIO\", \"Framework :: Trio\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: BSD License\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Topic :: Internet :: WWW/HTTP\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\httpcore-1.0.9.dist-info\\\\licenses\\\\LICENSE.md\", \"sha256\": \"fdcb59154c74cbaba16a11242f7740bea9f23d6feb5547917d8c5f94a80392a5\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"certifi\", \"h11>=0.16\", \"anyio<5.0,>=4.0; extra == 'asyncio'\", \"h2<5,>=3; extra == 'http2'\", \"socksio==1.*; extra == 'socks'\", \"trio<1.0,>=0.22.0; extra == 'trio'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httptools@0.8.0",
+      "name": "httptools",
+      "version": "0.8.0",
+      "purl": "pkg:pypi/httptools@0.8.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Intended Audience :: Developers\", \"Programming Language :: Python :: 3\", \"Operating System :: POSIX\", \"Operating System :: MacOS :: MacOS X\", \"Environment :: Web Environment\", \"Development Status :: 5 - Production/Stable\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\httptools-0.8.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"1c028b059d7a58e14ccda38cabced698c591fe614ffbe4f721430446e86c8d69\"}, {\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\httptools-0.8.0.dist-info\\\\licenses\\\\vendor\\\\http-parser\\\\LICENSE-MIT\", \"sha256\": \"5cd1b682c0ccbac0cb31b86a9a1104c3e2e7b1377a282b8169d2694b400db7c2\"}, {\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\httptools-0.8.0.dist-info\\\\licenses\\\\vendor\\\\llhttp\\\\LICENSE\", \"sha256\": \"279012e02a10acfd59a3f2d8f13a497332535d871c2b27c89988985b06a3a438\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpx@0.28.1",
+      "name": "httpx",
+      "version": "0.28.1",
+      "purl": "pkg:pypi/httpx@0.28.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 4 - Beta\", \"Environment :: Web Environment\", \"Framework :: AsyncIO\", \"Framework :: Trio\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: BSD License\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Topic :: Internet :: WWW/HTTP\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\httpx-0.28.1.dist-info\\\\licenses\\\\LICENSE.md\", \"sha256\": \"4ec59d544f12b5f539a3a716fd321ac58ccd8030b465221f2c880200cdf28d8d\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"anyio\", \"certifi\", \"httpcore==1.*\", \"idna\", \"brotli; (platform_python_implementation == 'CPython') and extra == 'brotli'\", \"brotlicffi; (platform_python_implementation != 'CPython') and extra == 'brotli'\", \"click==8.*; extra == 'cli'\", \"pygments==2.*; extra == 'cli'\", \"rich<14,>=10; extra == 'cli'\", \"h2<5,>=3; extra == 'http2'\", \"socksio==1.*; extra == 'socks'\", \"zstandard>=0.18.0; extra == 'zstd'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "development"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/idna@3.20",
+      "name": "idna",
+      "version": "3.20",
+      "purl": "pkg:pypi/idna@3.20",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Intended Audience :: Developers\", \"Intended Audience :: System Administrators\", \"Operating System :: OS Independent\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Topic :: Internet :: Name Service (DNS)\", \"Topic :: Software Development :: Libraries :: Python Modules\", \"Topic :: Utilities\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\idna-3.20.dist-info\\\\licenses\\\\LICENSE.md\", \"sha256\": \"1a9a4f0e3d479a27240ddd59a9137a66ab4a0f9dfdc8ca6188cc0bfd85187f04\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"ruff >= 0.16.0 ; extra == \\\"all\\\"\", \"mypy >= 1.11.2 ; extra == \\\"all\\\"\", \"ty >= 0.0.37 ; extra == \\\"all\\\"\", \"pytest >= 8.3.2 ; extra == \\\"all\\\"\", \"hypothesis >= 6.141.1 ; extra == \\\"all\\\"\", \"coverage >= 7.10.0 ; extra == \\\"all\\\"\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/iniconfig@2.3.0",
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "purl": "pkg:pypi/iniconfig@2.3.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 4 - Beta\", \"Intended Audience :: Developers\", \"Operating System :: MacOS :: MacOS X\", \"Operating System :: Microsoft :: Windows\", \"Operating System :: POSIX\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Topic :: Software Development :: Libraries\", \"Topic :: Utilities\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\iniconfig-2.3.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"3409fa91f7ace557894632676656e32264fe5ef7581535725dc9a23774551bd4\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/opentelemetry-api@1.45.0",
+      "name": "opentelemetry-api",
+      "version": "1.45.0",
+      "purl": "pkg:pypi/opentelemetry-api@1.45.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Framework :: OpenTelemetry\", \"Intended Audience :: Developers\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Typing :: Typed\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\opentelemetry_api-1.45.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"typing-extensions>=4.5.0\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/packaging@26.3",
+      "name": "packaging",
+      "version": "26.3",
+      "purl": "pkg:pypi/packaging@26.3",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "Apache-2.0 OR BSD-2-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Intended Audience :: Developers\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Programming Language :: Python :: Free Threading :: 4 - Resilient\", \"Typing :: Typed\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\packaging-26.3.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"cad1ef5bd340d73e074ba614d26f7deaca5c7940c3d8c34852e65c4909686c48\"}, {\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\packaging-26.3.dist-info\\\\licenses\\\\LICENSE.APACHE\", \"sha256\": \"0d542e0c8804e39aa7f37eb00da5a762149dc682d7829451287e11b938e94594\"}, {\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\packaging-26.3.dist-info\\\\licenses\\\\LICENSE.BSD\", \"sha256\": \"b70e7e9b742f1cc6f948b34c16aa39ffece94196364bc88ff0d2180f0028fac5\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0 OR BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pluggy@1.6.0",
+      "name": "pluggy",
+      "version": "1.6.0",
+      "purl": "pkg:pypi/pluggy@1.6.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 6 - Mature\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: MIT License\", \"Operating System :: POSIX\", \"Operating System :: Microsoft :: Windows\", \"Operating System :: MacOS :: MacOS X\", \"Topic :: Software Development :: Testing\", \"Topic :: Software Development :: Libraries\", \"Topic :: Utilities\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\pluggy-1.6.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"d6b65e6c213a5d0b577911d34d6e5949b9f59d76c238c5071a2f3fc16cfb2606\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"pre-commit; extra == \\\"dev\\\"\", \"tox; extra == \\\"dev\\\"\", \"pytest; extra == \\\"testing\\\"\", \"pytest-benchmark; extra == \\\"testing\\\"\", \"coverage; extra == \\\"testing\\\"\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic@2.10.4",
+      "name": "pydantic",
+      "version": "2.10.4",
+      "purl": "pkg:pypi/pydantic@2.10.4",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Framework :: Hypothesis\", \"Framework :: Pydantic\", \"Intended Audience :: Developers\", \"Intended Audience :: Information Technology\", \"License :: OSI Approved :: MIT License\", \"Operating System :: OS Independent\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Topic :: Internet\", \"Topic :: Software Development :: Libraries :: Python Modules\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\pydantic-2.10.4.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"a9e186f3ca16b5eef84318e7a701721351a00cb7b8ae3a4394b67b49e3529ef3\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"annotated-types>=0.6.0\", \"pydantic-core==2.27.2\", \"typing-extensions>=4.12.2\", \"email-validator>=2.0.0; extra == 'email'\", \"tzdata; (python_version >= '3.9' and platform_system == 'Windows') and extra == 'timezone'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pydantic-core@2.27.2",
+      "name": "pydantic_core",
+      "version": "2.27.2",
+      "purl": "pkg:pypi/pydantic-core@2.27.2",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 3 - Alpha\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Rust\", \"Framework :: Pydantic\", \"Intended Audience :: Developers\", \"Intended Audience :: Information Technology\", \"License :: OSI Approved :: MIT License\", \"Operating System :: POSIX :: Linux\", \"Operating System :: Microsoft :: Windows\", \"Operating System :: MacOS\", \"Typing :: Typed\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\pydantic_core-2.27.2.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"fbe7f615f18d135c07000e5a86325db27f42c7729699ef166ac1f7a3f4586bf4\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"typing-extensions >=4.6.0, !=4.7.0\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pygments@2.21.0",
+      "name": "Pygments",
+      "version": "2.21.0",
+      "purl": "pkg:pypi/pygments@2.21.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "BSD-2-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 6 - Mature\", \"Intended Audience :: Developers\", \"Intended Audience :: End Users/Desktop\", \"Intended Audience :: System Administrators\", \"Operating System :: OS Independent\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Topic :: Text Processing :: Filters\", \"Topic :: Utilities\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\pygments-2.21.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"a9d66f1d526df02e29dce73436d34e56e8632f46c275bbdffc70569e882f9f17\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"colorama>=0.4.6; extra == 'windows-terminal'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pytest@9.1.1",
+      "name": "pytest",
+      "version": "9.1.1",
+      "purl": "pkg:pypi/pytest@9.1.1",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 6 - Mature\", \"Intended Audience :: Developers\", \"Operating System :: MacOS\", \"Operating System :: Microsoft :: Windows\", \"Operating System :: POSIX\", \"Operating System :: Unix\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Topic :: Software Development :: Libraries\", \"Topic :: Software Development :: Testing\", \"Topic :: Utilities\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\pytest-9.1.1.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"ca836a5f9ecca3b2f350230faa20a48fb8b145653b5568d784862df864706b9b\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"colorama>=0.4; sys_platform == \\\"win32\\\"\", \"exceptiongroup>=1; python_version < \\\"3.11\\\"\", \"iniconfig>=1.0.1\", \"packaging>=22\", \"pluggy<2,>=1.5\", \"pygments>=2.7.2\", \"tomli>=1; python_version < \\\"3.11\\\"\", \"argcomplete; extra == \\\"dev\\\"\", \"attrs>=19.2; extra == \\\"dev\\\"\", \"hypothesis>=3.56; extra == \\\"dev\\\"\", \"mock; extra == \\\"dev\\\"\", \"requests; extra == \\\"dev\\\"\", \"setuptools; extra == \\\"dev\\\"\", \"xmlschema; extra == \\\"dev\\\"\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "development"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pytest-asyncio@1.4.0",
+      "name": "pytest-asyncio",
+      "version": "1.4.0",
+      "purl": "pkg:pypi/pytest-asyncio@1.4.0",
+      "scope": "optional",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "Apache-2.0"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Framework :: AsyncIO\", \"Framework :: Pytest\", \"Intended Audience :: Developers\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Topic :: Software Development :: Testing\", \"Typing :: Typed\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\pytest_asyncio-1.4.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"a8ad31b1c3f40dca5a84119351b8fa8ddc868edd77fad8a8ebf6d8f2d16fa4ae\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"backports-asyncio-runner<2,>=1.1; python_version < \\\"3.11\\\"\", \"pytest<10,>=8.4\", \"typing-extensions>=4.12; python_version < \\\"3.13\\\"\", \"sphinx>=5.3; extra == \\\"docs\\\"\", \"sphinx-rtd-theme>=1; extra == \\\"docs\\\"\", \"sphinx-tabs>=3.5; extra == \\\"docs\\\"\", \"coverage>=6.2; extra == \\\"testing\\\"\", \"hypothesis>=5.7.1; extra == \\\"testing\\\"\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "development"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "Apache-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "name": "python-dateutil",
+      "version": "2.9.0.post0",
+      "purl": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "Dual License"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: BSD License\", \"License :: OSI Approved :: Apache Software License\", \"Programming Language :: Python\", \"Programming Language :: Python :: 2\", \"Programming Language :: Python :: 2.7\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.3\", \"Programming Language :: Python :: 3.4\", \"Programming Language :: Python :: 3.5\", \"Programming Language :: Python :: 3.6\", \"Programming Language :: Python :: 3.7\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Topic :: Software Development :: Libraries\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\python_dateutil-2.9.0.post0.dist-info\\\\LICENSE\", \"sha256\": \"ba00f51a0d92823b5a1cde27d8b5b9d2321e67ed8da9bc163eff96d5e17e577e\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"six >=1.5\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/python-dotenv@1.2.4",
+      "name": "python-dotenv",
+      "version": "1.2.4",
+      "purl": "pkg:pypi/python-dotenv@1.2.4",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Intended Audience :: Developers\", \"Intended Audience :: System Administrators\", \"Operating System :: OS Independent\", \"Topic :: System :: Systems Administration\", \"Topic :: Utilities\", \"Environment :: Web Environment\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\python_dotenv-1.2.4.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"80619b7049f08c81683ad0e01f08f257a840652dd71ee83146d36658c7d2c2b9\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"click>=5.0; extra == \\\"cli\\\"\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/pyyaml@6.0.2",
+      "name": "PyYAML",
+      "version": "6.0.2",
+      "purl": "pkg:pypi/pyyaml@6.0.2",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: MIT License\", \"Operating System :: OS Independent\", \"Programming Language :: Cython\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Topic :: Software Development :: Libraries :: Python Modules\", \"Topic :: Text Processing :: Markup\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\PyYAML-6.0.2.dist-info\\\\LICENSE\", \"sha256\": \"8d3928f9dc4490fd635707cb88eb26bd764102a7282954307d3e5167a577e8a4\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/redis@8.1.0",
+      "name": "redis",
+      "version": "8.1.0",
+      "purl": "pkg:pypi/redis@8.1.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Environment :: Console\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: MIT License\", \"Operating System :: OS Independent\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\redis-8.1.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"a57b250a5bf03d7afe55b74063313f2adb7b00d546c0ab149a89398333fe3cc8\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"async-timeout>=4.0.3; python_full_version < '3.11.3'\", \"pybreaker>=1.4.0; extra == 'circuit-breaker'\", \"hiredis>=3.2.0; extra == 'hiredis'\", \"pyjwt>=2.13.0; extra == 'jwt'\", \"cryptography>=36.0.1; extra == 'ocsp'\", \"pyopenssl>=20.0.1; extra == 'ocsp'\", \"requests>=2.31.0; extra == 'ocsp'\", \"opentelemetry-api>=1.39.1; extra == 'otel'\", \"opentelemetry-exporter-otlp-proto-http>=1.39.1; extra == 'otel'\", \"opentelemetry-sdk>=1.39.1; extra == 'otel'\", \"xxhash~=3.6.0; extra == 'xxhash'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/six@1.17.0",
+      "name": "six",
+      "version": "1.17.0",
+      "purl": "pkg:pypi/six@1.17.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Programming Language :: Python :: 2\", \"Programming Language :: Python :: 3\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: MIT License\", \"Topic :: Software Development :: Libraries\", \"Topic :: Utilities\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\six-1.17.0.dist-info\\\\LICENSE\", \"sha256\": \"4375ba20e2b9c6c4e7cad2940a628fd90e95cc3d50ee92aae755715d8ba1fbd0\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/starlette@1.7.0",
+      "name": "starlette",
+      "version": "1.7.0",
+      "purl": "pkg:pypi/starlette@1.7.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 3 - Alpha\", \"Environment :: Web Environment\", \"Framework :: AnyIO\", \"Intended Audience :: Developers\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Topic :: Internet :: WWW/HTTP\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\starlette-1.7.0.dist-info\\\\licenses\\\\LICENSE.md\", \"sha256\": \"dcb95677a02240243187e964f941847d19b17821cf99e5afae684fab328c19bf\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"anyio<5,>=4.0.0\", \"typing-extensions>=4.10.0; python_version < '3.13'\", \"httpx2>=2.0.0; extra == 'full'\", \"httpx<0.29.0,>=0.27.0; extra == 'full'\", \"itsdangerous; extra == 'full'\", \"jinja2; extra == 'full'\", \"opentelemetry-api; extra == 'full'\", \"python-multipart>=0.0.18; extra == 'full'\", \"pyyaml; extra == 'full'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-inspection@0.4.4",
+      "name": "typing-inspection",
+      "version": "0.4.4",
+      "purl": "pkg:pypi/typing-inspection@0.4.4",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 3 - Alpha\", \"Intended Audience :: Developers\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Programming Language :: Python :: Implementation :: CPython\", \"Topic :: Software Development :: Libraries :: Python Modules\", \"Typing :: Typed\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\typing_inspection-0.4.4.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"804b59b25f2c31bd278f9202a19ae49a3945aa2664387e2d0a128c7cacc61ec3\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"typing-extensions>=4.15.0\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/typing-extensions@4.16.0",
+      "name": "typing_extensions",
+      "version": "4.16.0",
+      "purl": "pkg:pypi/typing-extensions@4.16.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "PSF-2.0"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Environment :: Console\", \"Intended Audience :: Developers\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Topic :: Software Development\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\typing_extensions-4.16.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"3b2f81fe21d181c499c59a256c8e1968455d6689d269aa85373bfb6af41da3bf\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "PSF-2.0"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/uvicorn@0.32.1",
+      "name": "uvicorn",
+      "version": "0.32.1",
+      "purl": "pkg:pypi/uvicorn@0.32.1",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 4 - Beta\", \"Environment :: Web Environment\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: BSD License\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.8\", \"Programming Language :: Python :: 3.9\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\", \"Topic :: Internet :: WWW/HTTP\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\uvicorn-0.32.1.dist-info\\\\licenses\\\\LICENSE.md\", \"sha256\": \"efe1acf3e62fb99c288b0ec73e5a773b7268ef4320fe757ea994214e4b63c371\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"click>=7.0\", \"h11>=0.8\", \"typing-extensions>=4.0; python_version < '3.11'\", \"colorama>=0.4; (sys_platform == 'win32') and extra == 'standard'\", \"httptools>=0.6.3; extra == 'standard'\", \"python-dotenv>=0.13; extra == 'standard'\", \"pyyaml>=5.1; extra == 'standard'\", \"uvloop!=0.15.0,!=0.15.1,>=0.14.0; (sys_platform != 'win32' and (sys_platform != 'cygwin' and platform_python_implementation != 'PyPy')) and extra == 'standard'\", \"watchfiles>=0.13; extra == 'standard'\", \"websockets>=10.4; extra == 'standard'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/watchfiles@1.3.0",
+      "name": "watchfiles",
+      "version": "1.3.0",
+      "purl": "pkg:pypi/watchfiles@1.3.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Environment :: Console\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Intended Audience :: Developers\", \"Intended Audience :: Information Technology\", \"Intended Audience :: System Administrators\", \"License :: OSI Approved :: MIT License\", \"Operating System :: POSIX :: Linux\", \"Operating System :: Microsoft :: Windows\", \"Operating System :: MacOS\", \"Environment :: MacOS X\", \"Topic :: Software Development :: Libraries :: Python Modules\", \"Topic :: System :: Filesystems\", \"Framework :: AnyIO\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\watchfiles-1.3.0.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"2d40a03346bded8daa4bd22d23825a6f2568a0820fbef76ac05bae534421e189\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"anyio>=3.0.0\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/websockets@17.2",
+      "name": "websockets",
+      "version": "17.2",
+      "purl": "pkg:pypi/websockets@17.2",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Environment :: Web Environment\", \"Intended Audience :: Developers\", \"Operating System :: OS Independent\", \"Programming Language :: Python\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\websockets-17.2.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"0f44514998aca209d3482d10204a8adf2aa4296ff157a36a5c0922f2280632d3\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "peoplepay:echo:first-party",
+      "dependsOn": [
+        "pkg:pypi/falkordb@1.6.0",
+        "pkg:pypi/fastapi@0.142.2",
+        "pkg:pypi/pydantic@2.10.4",
+        "pkg:pypi/pyyaml@6.0.2",
+        "pkg:pypi/uvicorn@0.32.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/annotated-doc@0.0.5",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/annotated-types@0.8.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/anyio@4.15.1",
+      "dependsOn": [
+        "pkg:pypi/idna@3.20",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/certifi@2026.7.22",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/click@8.5.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/colorama@0.4.6",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/falkordb@1.6.0",
+      "dependsOn": [
+        "pkg:pypi/python-dateutil@2.9.0.post0",
+        "pkg:pypi/redis@8.1.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/fastapi@0.142.2",
+      "dependsOn": [
+        "pkg:pypi/annotated-doc@0.0.5",
+        "pkg:pypi/opentelemetry-api@1.45.0",
+        "pkg:pypi/pydantic@2.10.4",
+        "pkg:pypi/starlette@1.7.0",
+        "pkg:pypi/typing-extensions@4.16.0",
+        "pkg:pypi/typing-inspection@0.4.4"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/h11@0.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/httpcore@1.0.9",
+      "dependsOn": [
+        "pkg:pypi/certifi@2026.7.22",
+        "pkg:pypi/h11@0.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/httptools@0.8.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/httpx@0.28.1",
+      "dependsOn": [
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/certifi@2026.7.22",
+        "pkg:pypi/httpcore@1.0.9",
+        "pkg:pypi/idna@3.20"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/idna@3.20",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/iniconfig@2.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/opentelemetry-api@1.45.0",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/packaging@26.3",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pluggy@1.6.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pydantic@2.10.4",
+      "dependsOn": [
+        "pkg:pypi/annotated-types@0.8.0",
+        "pkg:pypi/pydantic-core@2.27.2",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pydantic-core@2.27.2",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pygments@2.21.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pytest@9.1.1",
+      "dependsOn": [
+        "pkg:pypi/colorama@0.4.6",
+        "pkg:pypi/iniconfig@2.3.0",
+        "pkg:pypi/packaging@26.3",
+        "pkg:pypi/pluggy@1.6.0",
+        "pkg:pypi/pygments@2.21.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/pytest-asyncio@1.4.0",
+      "dependsOn": [
+        "pkg:pypi/pytest@9.1.1",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/python-dateutil@2.9.0.post0",
+      "dependsOn": [
+        "pkg:pypi/six@1.17.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/python-dotenv@1.2.4",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/pyyaml@6.0.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/redis@8.1.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/six@1.17.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/starlette@1.7.0",
+      "dependsOn": [
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/typing-inspection@0.4.4",
+      "dependsOn": [
+        "pkg:pypi/typing-extensions@4.16.0"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/typing-extensions@4.16.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/uvicorn@0.32.1",
+      "dependsOn": [
+        "pkg:pypi/click@8.5.0",
+        "pkg:pypi/colorama@0.4.6",
+        "pkg:pypi/h11@0.16.0",
+        "pkg:pypi/httptools@0.8.0",
+        "pkg:pypi/python-dotenv@1.2.4",
+        "pkg:pypi/pyyaml@6.0.2",
+        "pkg:pypi/watchfiles@1.3.0",
+        "pkg:pypi/websockets@17.2"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/watchfiles@1.3.0",
+      "dependsOn": [
+        "pkg:pypi/anyio@4.15.1"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/websockets@17.2",
+      "dependsOn": []
+    },
+    {
+      "ref": "peoplepay:bundled:inflationforge",
+      "dependsOn": []
+    }
+  ]
+}

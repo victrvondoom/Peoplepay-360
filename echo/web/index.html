@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#10251f" />
+    <title>PeoplePay ECHO — Evidence Audit</title>
+    <link rel="stylesheet" href="/styles.css?v=20261005" />
+    <script src="/app.js?v=20261005" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="PeoplePay ECHO home">
+        <span class="brand-mark">E</span>
+        <span>PeoplePay <b>ECHO</b><small>Evidence Correlation &amp; Historical Oracle</small></span>
+      </a>
+      <span id="health" class="health" role="status">Connecting to FalkorDB…</span>
+    </header>
+
+    <main>
+      <section class="intro">
+        <p class="eyebrow">CORRELATION-AWARE PROCUREMENT</p>
+        <h1>Four agents agree.<br />How many sources actually agree?</h1>
+        <p class="lede">ECHO follows evidence dependencies in FalkorDB, counts provenance-distinct roots, and recomputes the supplier decision from that graph.</p>
+        <button id="run-demo" class="primary">Run the false-consensus demo</button>
+        <button id="run-extensions-demo">Run the cross-extension demo</button>
+        <p class="demo-note">Synthetic fixture only. Supplier names, source URLs, claims, and scores below are invented for this demonstration.</p>
+      </section>
+
+      <section id="error" class="error" role="alert" hidden></section>
+      <section id="result" hidden aria-live="polite">
+        <div class="decision-banner">
+          <div>
+            <p class="eyebrow">GRAPH-RECOMPUTED OUTCOME</p>
+            <h2 id="decision-title"></h2>
+            <p id="decision-reason"></p>
+          </div>
+          <div class="fragility">
+            <span>Decision fragility</span>
+            <strong id="fragility-value"></strong>
+            <small id="flip-count"></small>
+          </div>
+        </div>
+
+        <div class="comparison-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">Supplier</th>
+                <th scope="col">Raw score</th>
+                <th scope="col">Robust score</th>
+                <th scope="col">Apparent evidence</th>
+                <th scope="col">Provenance roots</th>
+                <th scope="col">Outcome</th>
+              </tr>
+            </thead>
+            <tbody id="candidate-rows"></tbody>
+          </table>
+        </div>
+
+        <section class="audit" aria-labelledby="audit-heading">
+          <div class="audit-copy">
+            <p class="eyebrow">WHY THE RANKING CHANGED</p>
+            <h2 id="audit-heading">Evidence lineage, traced in FalkorDB</h2>
+            <p>Each row below is an evidence-to-source-to-root path returned by a graph traversal. The raw score is preserved; only the robust score applies the displayed provenance and confidence penalties.</p>
+          </div>
+          <div id="lineage" class="lineage-grid"></div>
+        </section>
+
+        <details class="policy">
+          <summary>Scoring policy and counterfactuals</summary>
+          <pre id="policy-data"></pre>
+          <div id="counterfactuals" class="counterfactuals"></div>
+        </details>
+      </section>
+      <details class="policy" id="extension-settings">
+        <summary>Extension settings and developer tools</summary>
+        <p>Providers propose evidence to ECHO. ECHO owns the graph, scoring, and approvals.</p>
+        <form id="extension-identity" class="settings-form">
+          <label>PeoplePay user ID <input name="user" value="echo-demo-user" required maxlength="128" /></label>
+          <label>Caller bearer token (when configured) <input name="bearer" type="password" autocomplete="off" /></label>
+          <label>Administrator token (for enable/disable) <input name="admin" type="password" autocomplete="off" /></label>
+          <button type="submit">Refresh extensions</button>
+        </form>
+        <p id="extension-notice" role="status">Loading configured providers...</p>
+        <div id="extension-cards" class="lineage-grid"></div>
+        <details>
+          <summary>Ingest a scoped InflationForge observation</summary>
+          <p>Use an existing requirement owned by your PeoplePay user. Observation IDs come from the separately running InflationForge service.</p>
+          <form id="price-extension" class="settings-form">
+            <label>Requirement ID <input name="requirement" required /></label>
+            <label>Snapshot ID <input name="snapshot" required /></label>
+            <label>Item ID <input name="item" required /></label>
+            <label>City ID <input name="city" required /></label>
+            <button type="submit">Collect price observations</button>
+          </form>
+          <pre id="extension-execution"></pre>
+        </details>
+      </details>
+      <footer>
+        ECHO counts provenance-distinct roots. It does not claim the underlying observations are statistically independent.
+      </footer>
+    </main>
+  </body>
+</html>

@@ -11,6 +11,14 @@ The default address is http://127.0.0.1:8080. Set
 the SQLite database path. Existing schema-version-1 databases require migration
 before this version can open them; retain the original file.
 
+The workspace includes a PeoplePay product directory. Configure any deployed
+specialist frontend URL on the gateway server to enable its link:
+`PEOPLEPAY_GREENCHAIN_URL`, `PEOPLEPAY_RUMI_URL`,
+`PEOPLEPAY_INFLATIONFORGE_URL`, `PEOPLEPAY_INHEIR_URL`,
+`PEOPLEPAY_PROXY_URL`, and `PEOPLEPAY_BEACON_URL`. Unset URLs appear as
+`SERVICE NOT CONFIGURED`. These links do not provide shared sign-in or transfer
+data between services.
+
 Local requests use `X-Beacon-User`. When `BEACON_GATEWAY_SECRET` is configured,
 the existing signed bearer token authentication is required instead.
 
@@ -88,6 +96,16 @@ installed development dependencies; the shared Python installation is unchanged.
 Run Beacon tests from `Beacon-main` using that environment's Python. A fresh CI
 setup should install Beacon's development dependencies and image requirements
 in a dedicated environment rather than combine all five projects in one Python.
+
+## ECHO graph and API
+
+Start FalkorDB with `docker compose -f compose.echo.yaml up -d falkordb`.
+The compose file binds the graph to `127.0.0.1:16380` to avoid colliding with
+the repository's existing CLINI-CASE Redis container on port 16379. Run the
+FastAPI process from the repository root with `.venv-echo` and
+`ECHO_FALKORDB_PORT=16380`; see [the ECHO demo guide](DEMO.md). The database
+volume is persistent. `down` stops containers but keeps that volume; add
+`-v` only when intentionally removing the local ECHO graph data.
 
 Git LFS is required for the bundled vector/graph datasets. Run `git lfs pull`
 after cloning; `.gitattributes` records the original LFS paths. Recovered source
