@@ -1,58 +1,132 @@
-# PeoplePay as one product
+# PeoplePay: an evidence-aware transaction operating system for AI agents
 
-**Product direction:** one PeoplePay front door and transaction record, backed by focused services that keep their own runtime, data, and permissions.
+PeoplePay brings specialist discovery, analysis, verification, decision, and
+transaction capabilities into one product journey. **ECHO is the canonical
+trust, provenance, and decision layer.** Extensions collect and normalize
+intelligence; ECHO evaluates the evidence; PeoplePay applies user and business
+policy before consequential actions.
 
-## What the user experiences
+## Product architecture
 
-PeoplePay is a procurement and transaction workspace. A user begins with a need, finds and compares options, reviews the evidence and uncertainty, saves a decision to a transaction, and can later follow its order record or prepare a dispute. Specialist workspaces are available from one directory; the transaction workspace remains the durable user journey.
-
-```text
-Need or product idea
-    ├── ECHO: audit evidence lineage and explain supplier decisions
-    ├── GreenChain: discover and compare suppliers and environmental estimates
-    ├── Rumi: plan a room and discover furniture
-    └── InflationForge: inspect applicable regional price trends
-                    ↓ user reviews the options
-PeoplePay transaction: record the chosen plan, user-entered cart, and evidence
-                    ↓ order issue, when requested
-PROXY: organize evidence and prepare a user-reviewed dispute draft
-
-Separate specialist areas:
-InHeir.AI: property cases and reports
-Beacon: platform operator incident response
+```mermaid
+flowchart TB
+  U[Human or shopping agent] --> X
+  subgraph X[Capability extensions]
+    D[Discovery: supplier, catalog, product search]
+    A[Analysis: price, risk, logistics, sustainability]
+    V[Verification: entity, contradiction, provenance, freshness]
+    AS[After sales: delivery, warranty, returns, dispute evidence]
+  end
+  D --> N[Versioned adapter contract and normalization]
+  A --> N
+  V --> N
+  AS --> N
+  N --> E[ECHO: typed claims, evidence, source snapshots and provenance]
+  E <--> F[(FalkorDB canonical evidence graph)]
+  F --> C[Correlation, temporal, identity and contradiction checks]
+  C --> R[Decision, uncertainty, counterfactuals and abstention]
+  R --> H[Human review and organization policy]
+  H --> G[PeoplePay Gateway: intent, approval and transaction reference]
+  G --> M[Merchant and payment provider APIs]
+  M -->|authoritative order/payment events| G
+  G -->|linked evidence and lifecycle references| E
+  G --> O[Order, fulfillment, refund and dispute lifecycle]
+  O --> AS
+  P[Extension SDK, capability registry and service operations] -. governs .-> X
+  ENT[Organizations, budgets, approval chains, SSO and audit export] -. governs .-> H
 ```
 
-The user approves each handoff. Discovery, design, a plan, and a transaction are different actions. A model or supplier ranking cannot authorize a purchase. Property and operations tools are available in the same suite but are not inserted into a consumer purchase flow without a reason.
+The policy boundary is deliberate: extensions submit evidence proposals, ECHO
+judges what the graph and policy support, and PeoplePay mediates user-authorized
+actions. A merchant and its payment service provider remain authoritative for
+their order and payment records. PeoplePay should store their identifiers and
+verified lifecycle events, not claim authority over a merchant's backend.
 
-## Current implementation in this checkout
+OpenAI's Agentic Commerce Protocol is a useful commerce integration reference:
+agents create, update, and complete merchant checkout sessions, while the
+merchant validates the cart, uses its payment rails, and sends order lifecycle
+events. PeoplePay can adopt the same separation when it builds merchant
+connectors; ACP is not a replacement for ECHO's evidence contract or the
+PeoplePay internal transaction model. See the [Agentic Checkout Spec](https://developers.openai.com/commerce/specs/checkout)
+and [Agentic Commerce key concepts](https://developers.openai.com/commerce/guides/key-concepts).
 
-- The gateway serves the PeoplePay transaction workspace and now displays a directory for ECHO, GreenChain, Rumi, InflationForge, InHeir.AI, PROXY, and Beacon.
-- Module destinations are configured on the gateway server with `PEOPLEPAY_GREENCHAIN_URL`, `PEOPLEPAY_RUMI_URL`, `PEOPLEPAY_INFLATIONFORGE_URL`, `PEOPLEPAY_INHEIR_URL`, `PEOPLEPAY_PROXY_URL`, and `PEOPLEPAY_BEACON_URL`.
-- A configured destination opens in a separate tab. An unconfigured service is visibly disabled; the directory does not claim that a service is running or authenticated.
-- The gateway still owns transaction records, carts, sandbox order records, evidence, and activity. Module destinations do not yet provide shared sign-in or transfer data into a transaction.
-- ECHO is a separate FastAPI service backed by a dedicated FalkorDB graph. Its synthetic demo traverses explicit citation/derivation edges and demonstrably changes the raw-score winner. The API can create a Gateway planning record after explicit human confirmation for non-demo decisions; it cannot execute checkout. Authentication for the ECHO API and general source/evidence ingestion are not implemented.
-- GreenChain can discover and score supplier candidates, but its documented roadmap still lists unit cost integration as future work. Its environmental estimates and public web findings must retain their source and uncertainty. They are not verified supplier certifications or purchase prices.
-- GreenChain's README claims MIT, but the added checkout contains no LICENSE file. Confirm the grant, attribution, and rights to redistribute its datasets and model artifacts before copying GreenChain source into another distributable package.
+## Where the bundled projects fit
 
-## Integration sequence
+| Project | Capability role | Current integration state |
+|---|---|---|
+| PeoplePay Gateway | Product entry, intent, user approvals, transaction and sandbox order lifecycle | Existing gateway remains separate. Live `/checkout` is unavailable and sandbox orders move no money. |
+| ECHO | Canonical claims, evidence, provenance graph, decision traces and controlled approvals | Implemented as a separate FastAPI/FalkorDB service; extension manifest/runtime/API and two synthetic source providers are available. |
+| InflationForge | Regional price intelligence | A narrow read-only, disabled-by-default adapter is implemented. Its observations are not merchant quotes. |
+| GreenChain | Supplier and sourcing discovery, sustainability estimates | Intake and deferred manifest only. README claims MIT, but the bundled tree has no LICENSE file; source/data/model redistribution rights need resolution. |
+| PROXY | After-sales dispute evidence and draft preparation | Deferred manifest and intake only. No executable ECHO adapter; upstream license and API/authorship boundaries need review. |
+| Rumi | Product/room planning and furniture discovery | Deferred manifest and intake only. No executable ECHO adapter or verified external-search handoff. |
+| Beacon | Platform health, incidents, and operator actions | Existing separate service and gateway directory entry; not a trust decision authority. |
+| InHeir.AI | Property and legal vertical workflows | Existing separate service and gateway directory entry; not inserted into procurement decisions by default. |
 
-1. **One front door — implemented:** expose the specialist workspaces from the transaction gateway, with server-configured links and honest unavailable states.
-2. **ECHO evidence handoff — next:** define an authenticated, versioned source and evidence ingestion contract. Preserve snapshots, hashes, timestamps, dependency explanations, contradictions, SKU scope, and human review state. Validate the current scoring policy against real labeled data before using it for procurement.
-3. **GreenChain decision handoff — next:** define a versioned, user-approved supplier comparison payload. Preserve candidate identity, source URLs, search time, scoring assumptions, transport mode, and score uncertainty. Attach it to a transaction as research evidence; do not create a priced cart from emissions scores.
-4. **Rumi plan handoff — after rights and API review:** send the user's approved room plan and selected items as evidence. Keep geometry validation and unknown dimensions explicit. Create cart lines only when product, variant, price, currency, and merchant source are known.
-5. **Price and evidence adapters:** connect InflationForge only when its US city-basket observations apply. Preserve USD and observation provenance; never treat basket inflation as a merchant quote. Add property and dispute handoffs with explicit user selection and data minimization.
-6. **Shared identity and deployment:** establish one identity provider and deployment gateway, while each service retains its own authorization checks, database, and secrets. Enforce an allowlist for service URLs and browser origins.
-7. **Real commerce:** select a payment provider, implement hosted payment and order APIs, reconciliation, cancellation, and refund flows. Until then, checkout remains unavailable and sandbox records move no money.
+The suite directory is one entry point, not shared authentication, shared
+storage, or proof that every module is deployed. See the [bundled project
+intake](extensions/intake/bundled-projects.md) for evidence, licensing, and
+activation gates.
 
-## Boundaries that keep it one product without forcing one codebase
+## Capability layers and build order
 
-- The gateway is the source of truth for transaction ownership, user intent, permissions, and audit history.
-- Specialist services own their domain data and model calls. The gateway stores references and user-approved evidence, not copies of private specialist databases.
-- Every handoff uses a versioned JSON contract with provenance, timestamps, currency, and explicit evidence quality.
-- External search results, ML estimates, manually entered prices, sandbox actions, and verified provider data remain distinct evidence classes.
-- No service URL, API key, or provider secret is placed in browser code or model context.
-- Keep individual dependency environments and deploy each service independently. A shared navigation shell is not shared authentication; SSO remains a separate integration task.
+1. **Evidence acquisition:** supplier discovery, catalog/search feeds,
+   document parsers, and web extraction. Every result includes source address,
+   retrieval time, scope, and capture metadata where actually available.
+2. **Evidence intelligence:** canonical entity resolution, claim conflicts,
+   provenance/root analysis, freshness, and uncertainty. Exact identifiers can
+   support links; names or matching domains alone do not certify ownership.
+3. **Decision intelligence:** transparent multi-objective policy, supplier
+   ranking, fragility/counterfactual analysis, and abstention. External scores
+   are inputs with provenance, not authority.
+4. **Commerce:** merchant-specific catalog, checkout, payment, order, and
+   cancellation connectors. Keep merchant pricing/inventory and order/payment
+   outcomes authoritative at the merchant/PSP. Require signed requests,
+   idempotency, safe retry/reconciliation, and explicit user authorization.
+5. **After sales:** delivery evidence, warranties, returns, refunds, and
+   dispute preparation. PROXY can help organize a draft; a human approves
+   submissions and the merchant remains authoritative for resolution.
+6. **Enterprise:** organization identity, tenant isolation, budgets, policies,
+   approval chains, SSO, and audit exports.
+7. **Developer platform:** Extension SDK, manifests, capability/version
+   registry, permission model, API credentials, conformance tests, and
+   observability.
 
-## Release truth
+Verticals such as procurement, B2B buying, travel, insurance, property,
+healthcare purchasing, subscriptions, vendor approval, and contract renewals
+can reuse these layers. They need domain-specific evidence and policies; a
+shared runtime does not make their decisions interchangeable.
 
-The module directory is a connected entry point, not proof that all six applications are deployed, share accounts, or exchange records. The end state is one product journey and one transaction history with specialist capabilities connected through reviewed contracts. Production payment, shared identity, and several data handoffs still require implementation and verification.
+## Next milestone: PeoplePay Extension SDK v1
+
+Make a reviewed external service the default integration shape so adding an
+open-source project does not require importing its code into ECHO or changing
+ECHO's decision internals. Keep in-process adapters limited to reviewed
+first-party code. SDK v1 should provide:
+
+- Python reference package and versioned request/result types matching ECHO's
+  v1 envelope and manifest contract.
+- A reference HTTP service scaffold with health/readiness endpoints, bounded
+  request/response sizes, fixed capability routes, and structured safe errors.
+- Manifest linting for capabilities, versions, permissions, secrets, source
+  requirements, dependency ordering, and unsupported operations.
+- Test utilities and conformance cases for provenance retention, idempotency,
+  cancellation/timeouts, malformed output, secret redaction, and disabled
+  service behavior.
+- One tutorial adapter using synthetic fixtures plus an adapter intake
+  worksheet for license, upstream identity/commit, data/model rights, API,
+  auth, egress, state, failure modes, and maintenance evidence.
+- A repeatable build, package inventory, and contribution/release checklist.
+
+The ECHO core keeps sole ownership of graph writes, entity/claim policy,
+scoring, approval, and transaction lineage. The SDK produces proposals and
+conformance evidence. The registry/operator decides which reviewed service is
+available; a manifest cannot execute arbitrary code or grant itself authority.
+
+## Release boundary
+
+The current checkout proves local graph evaluation, extension boundaries,
+synthetic cross-extension ingestion, and a planning handoff. It does not prove
+live supplier accuracy, hidden-copy detection, production identity, multi-
+worker approval safety, or live merchant checkout. Build these in layers and
+keep each readiness claim tied to its tests and actual provider environment.

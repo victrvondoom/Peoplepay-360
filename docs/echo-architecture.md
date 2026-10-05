@@ -1,57 +1,120 @@
-# PeoplePay ECHO architecture
+# PeoplePay ECHO: canonical trust and provenance layer
 
-ECHO is an evidence service in the PeoplePay product suite. It does not replace
-the PeoplePay transaction aggregate or gateway. The gateway remains the
-transaction owner; ECHO records evidence lineage and recommendation provenance
-in its own graph.
+ECHO is the evidence and decision service for PeoplePay's agentic commerce
+journey. An agent, a specialist product, or a person may propose a supplier,
+price, risk assessment, or other claim. ECHO validates the proposal, preserves
+its source and producer lineage, checks it against existing evidence and
+policy, and explains the resulting recommendation or abstention.
 
 ```mermaid
 flowchart LR
-  U[User need] --> G[PeoplePay Gateway]
-  G -->|directory link| E[ECHO UI and API]
-  E -->|requirements, claims, evidence| F[(FalkorDB: peoplepay_echo)]
-  F -->|source-root traversal| E
-  E -->|human-confirmed, non-demo plan| G
-  G --> T[Existing transaction lifecycle]
-  T -->|transaction reference| F
+  A[Agent or user] --> X[Discovery, analysis and verification extensions]
+  X -->|versioned typed proposals| N[Core normalization and provenance checks]
+  N --> F[(FalkorDB evidence graph)]
+  F --> I[Identity, temporal, contradiction and correlation checks]
+  I --> D[Policy decision, uncertainty and counterfactuals]
+  D -->|recommend, review or abstain| H[Human and organization controls]
+  H -->|authorized intent| G[PeoplePay Gateway]
+  G -->|merchant connector request| M[Merchant / PSP]
+  M -->|order and payment events| G
+  G -->|transaction/event references| F
+  G --> L[Order, delivery, refund and dispute lifecycle]
+  L --> X
 ```
 
-## Graph vocabulary
+**Extensions collect intelligence. ECHO evaluates trust and decisions.
+PeoplePay mediates consequential actions.** The merchant/payment provider stays
+authoritative for its own inventory, checkout, payments, and order status.
+PeoplePay records authorized requests and verified references/events. ECHO
+stores the evidence lineage and decision rationale that led to those requests.
 
-Nodes include `User`, `Requirement`, `Product`, `Supplier`, `Claim`, `Evidence`,
-`Agent`, `AgentRun`, `Source`, `SourceSnapshot`, `Decision`,
-`DecisionCandidate`, `Approval`, `Transaction`, `Order`, `DeliveryEvent`, and
-`Dispute`. Relationships capture creation, source observation, claim support,
-agent production, source dependency, supplier offer, decision use, review, and
-downstream transaction lineage.
+## Current service boundary
 
-The current candidate ranking query follows evidence → source → terminal source
-root with explicit `DERIVED_FROM`, `CITES`, and `MIRRORS` links, up to eight
-edges. The demo marks Alpha's copied pages as children of one root, so its eight
-observations count as one root. Beta's three sources have no dependency edges,
-so each is a root. In real data, missing dependency links will result in roots
-being counted separately; ECHO does not yet discover hidden relationships.
+- `echo/` contains the FastAPI service, static UI, core evidence engine,
+  extension registry/runtime/transport, graph ingestion, and approval adapter.
+- `extensions/*/extension.yaml` contains validated extension declarations.
+  Core bootstrap attaches only explicitly reviewed in-process adapters.
+- `compose.echo.yaml` runs FalkorDB on loopback port 16380 with a persistent
+  named volume. The ECHO API is started separately on loopback port 8090.
+- The ECHO graph is `peoplepay_echo`; the PeoplePay Gateway keeps its own
+  transaction database. Approval stores references and state for the draft
+  handoff rather than replacing the gateway transaction record.
+- The ECHO browser has a false-consensus fixture and a two-provider synthetic
+  integration fixture. They use invented `.example` data and do not contact
+  live suppliers.
 
-## Decision rule
+When `BEACON_GATEWAY_SECRET` is set, ECHO derives caller identity from the
+Gateway's signed bearer token. Without it, the local demo trusts
+`X-Beacon-User`; this fallback is not production SSO or tenant isolation.
+`ECHO_ADMIN_TOKEN` protects extension toggles in local mode. See the
+[security boundary](extensions/security.md) and [local run guide](DEMO.md).
 
-`robust = clamp(raw - 3 × max(0, active_observations - roots) - 20 × (1 - mean_confidence), 0, 100)`
+## Extension flow
 
-The weights, source graph, and raw scores are demo policy inputs. Confidence is
-a field supplied with evidence, not a calibrated probability. At least two
-roots are required for a recommendation. If no candidate meets this minimum,
-ECHO abstains. Root-removal scenarios are recomputed from the query's evidence
-paths and are shown as sensitivity analysis, not statistical estimates.
+1. The caller binds the request to a requirement it owns and selects a
+   capability or a named reviewed provider.
+2. The registry checks enabled state, adapter availability, dependencies,
+   declared permissions, service configuration, and health.
+3. The runtime applies bounded typed envelopes, provider-specific concurrency,
+   deadlines, circuit state, safe errors, secret checks, and fallback policy.
+4. The adapter returns proposals. It cannot issue graph queries or alter
+   decision policy. Service mode uses fixed reviewed methods/paths and bounded
+   JSON over the configured allowlisted endpoint.
+5. Core ingestion checks producer/version, request ownership, required source
+   metadata, identifiers, dependency cycles, duplicate conflicts, and graph
+   permissions before writing one idempotency event and its records.
+6. The engine traverses the current candidate evidence paths, resolves
+   explicit source dependencies, applies freshness/identity/provenance gates,
+   and stores a candidate-specific decision snapshot.
+7. A human-confirmed non-demo recommendation is reevaluated before ECHO asks
+   the Gateway to create a draft transaction and planning record. ECHO never
+   executes checkout or charges a payment method.
 
-## Handoff and trust boundary
+## Trust and graph semantics
 
-`POST /echo/decisions/{id}/approve` rejects missing human confirmation,
-non-recommendations, demo decisions, missing owner match, and requirements
-without a budget. It then calls the existing gateway to create a transaction
-and planning record. It does not make a booking or payment. ECHO's API currently
-has no authentication; user IDs are fields, not verified identities. A
-production handoff must add authenticated tenant identity and durable event or
-transaction-reference handling before wider deployment.
+The graph holds `Requirement`, `CandidatePolicy`, `Supplier`,
+`EntityRepresentation`, `Claim`, `Evidence`, `Source`, `SourceSnapshot`,
+`Extension`, `ExtensionVersion`, `ExtensionRun`, `Observation`, `Decision`,
+`DecisionCandidate`, `Approval`, and linked transaction references. Edges
+record source derivation/citation/mirroring, claim support/contradiction,
+producer observation, entity resolution, policy eligibility, decision use,
+human review, and gateway handoff.
 
-FalkorDB is started locally by `compose.echo.yaml` and bound only to loopback on
-port 16380. The FastAPI service is currently started in an isolated local
-Python environment, also on loopback. See [the operator/demo guide](DEMO.md).
+ECHO only treats explicitly recorded source-dependency paths as shared roots.
+Missing, cyclic, unknown, stale, future-dated, or otherwise unresolved paths
+can block a recommendation. Exact domain identifiers may connect
+representations, but they do not prove domain ownership. Text or names alone
+remain unresolved. A root count is recorded provenance diversity; it does not
+prove truth or statistical independence.
+
+Core decisions are recomputed from current graph state and saved with the
+candidate evidence/policy snapshot used. Reassessment creates a new decision
+linked to its parent. Approval compares the current recommendation with that
+snapshot before proceeding, and an uncertain remote create enters
+reconciliation-required state instead of blindly creating another draft.
+
+## Cross-project capability status
+
+| Capability | Current status |
+|---|---|
+| Synthetic source discovery and cross-provider ingestion | Implemented for deterministic first-party demos. |
+| InflationForge price observations | Narrow read-only adapter implemented; disabled by default; USD city basket observations are not merchant quotes. |
+| GreenChain, PROXY, Rumi adapters | Deferred manifests and intake/licensing records only; no executable ECHO adapters. |
+| Beacon, InHeir | Separate services exposed through the PeoplePay directory, with no default authority in ECHO decisions. |
+| Merchant ACP or equivalent connector | Not implemented. The [Agentic Checkout Spec](https://developers.openai.com/commerce/specs/checkout) is a relevant merchant-session, completion, and lifecycle-event reference, not a deployed PeoplePay integration. |
+| Live payment, refund, and fulfillment | Not implemented in PeoplePay checkout. The Gateway `/checkout` remains unavailable; local sandbox orders move no money. |
+| Organization policy, SSO, multi-worker coordination | Roadmap. Current fallback identity, extension toggles, and approval serialization are local/process scoped. |
+
+## Decision policy and measurements
+
+The demo applies `clamp(raw - 3 × max(0, active_observations - roots) - 20 × (1 - mean_confidence), 0, 100)` and requires at least two provenance roots. The fixture is useful for explaining correlation penalties and abstention, not for supplier ranking claims. The 15 synthetic graph benchmark cases report their precise edits and local runtimes in [`extensions/benchmark-results.json`](extensions/benchmark-results.json); they do not measure live supplier precision or production throughput.
+
+## Next engineering milestone
+
+Build **PeoplePay Extension SDK v1** around the current versioned contract:
+Python schemas, a remote-service scaffold, manifest linting, health/error
+conventions, conformance tests, and an example provider. New open-source tools
+should run behind a reviewed service boundary and submit normalized proposals.
+ECHO's graph and decision internals should not change for a new adapter unless
+the core contract itself is intentionally versioned. The full milestone and
+capability rollout order are in [the product plan](unified-product-plan.md).

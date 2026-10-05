@@ -1,25 +1,73 @@
-# ECHO judge Q&A
+# PeoplePay ECHO judge Q&A
 
-## What problem does ECHO address?
+## What is PeoplePay building?
 
-Agent agreement can exaggerate support when agents repeat pages that copied the same original. ECHO stores explicit `DERIVED_FROM`, `CITES`, and `MIRRORS` edges and counts terminal source roots for the evidence attached to each supplier claim.
+PeoplePay is an **evidence-aware transaction operating system for AI agents**.
+Its specialist apps can discover or analyze options, while ECHO provides the
+canonical provenance graph and evidence-backed decision layer. The PeoplePay
+Gateway mediates user intent, approvals, and the transaction journey.
 
-## What changes in the demo?
+## What is ECHO's role?
 
-The raw score winner is Alpha (94). Graph traversal finds eight observations but one provenance root. Applying the displayed policy gives Alpha 71. Beta's lower raw score (87) and three provenance roots produce 85, so the recommendation changes to Beta. Gamma is excluded because it has fewer than two roots.
+An agent or extension proposes claims and supporting evidence. ECHO validates
+the envelope and provenance, correlates recorded source paths, applies policy,
+and explains a recommendation or abstention. Extensions do not write canonical
+graph truth or authorize a purchase.
 
-## Is the demo based on real supplier data?
+## How does it fit the current projects?
 
-No. Supplier names, sources, URLs, observations, and scores are invented and use reserved `.example` domains. No supplier has been contacted and no market data has been fetched.
+- **GreenChain:** supplier sourcing and sustainability intelligence; currently
+  deferred pending license and data/model rights review.
+- **InflationForge:** price context; a narrow read-only ECHO adapter exists,
+  disabled by default, and its city basket observations are not merchant quotes.
+- **PROXY:** after-sales dispute evidence and draft preparation; deferred.
+- **Rumi:** room and furniture discovery; deferred.
+- **Beacon:** platform operations and incident response.
+- **InHeir.AI:** property/legal vertical.
+- **PeoplePay Gateway:** user intent, transaction records, and future merchant
+  connectors.
+
+The integrated directory links separate services. Shared login, storage, and
+data exchange are not implied. See the [capability map](unified-product-plan.md).
+
+## What changes in the ECHO demonstration?
+
+The raw score winner is Alpha (94). Its eight observations traverse to one
+recorded provenance root. Beta's raw score is 87, with three explicit roots;
+the demonstration policy gives Beta 85 and Alpha 71, so Beta is recommended.
+Two synthetic providers also submit repeated Alpha observations through the
+same extension flow; they do not create extra roots. All names, URLs, and
+observations are invented and use `.example` domains.
 
 ## Does ECHO prove sources are independent or true?
 
-No. It counts graph-distinct roots only when a dependency is explicitly present. It does not infer hidden copying, verify source identity or truth, determine whether evidence applies to an exact SKU, or establish statistical independence. Missing edges can overstate diversity.
+No. It counts recorded provenance roots when explicit dependency edges exist.
+It does not establish truth, hidden copying, domain ownership, exact SKU fit,
+or statistical independence. Missing links can overstate source diversity.
+Unknown or unresolved paths can instead force the system to abstain.
 
-## Is ECHO a shared login, checkout, or payment system?
+## How does commerce authority work?
 
-No. The product directory links separate apps. ECHO has no independent authentication in this prototype. Its approval API requires an explicit confirmation field and passes a planning request to the existing PeoplePay Gateway. The Gateway plan is not an order or payment. The demo decision is blocked from creating a real transaction.
+PeoplePay controls its user-authorized handoffs and transaction workspace.
+ECHO does not make purchases. A merchant and its payment provider remain the
+source of truth for merchant pricing, payment, and order outcomes. OpenAI's
+[Agentic Checkout Spec](https://developers.openai.com/commerce/specs/checkout)
+illustrates create/update/complete checkout sessions and order events handled
+against a merchant's existing systems. PeoplePay has not implemented that
+protocol or another live merchant checkout connector yet.
 
-## What is not built yet?
+## What is built and what is next?
 
-External sourcing feeds, URL ingestion and crawling, inferred dependency matching, freshness schedules, contradiction resolution, supplier identity/quote verification, full approval UI, durable cross-service event delivery, and a production identity/tenant boundary. Benchmark and adversarial performance claims are not available yet.
+ECHO has a local FalkorDB graph, authenticated owner-scoped APIs when the
+Gateway signing secret is configured, reviewed extension manifests/runtime,
+synthetic graph demos, and a read-only InflationForge adapter. The next
+milestone is **PeoplePay Extension SDK v1**: Python types, remote-service
+scaffold, manifest lint, conformance tests, and a reference provider so future
+capabilities can be added behind the contract without granting them core
+authority.
+
+The 15-case local benchmark measures explicit synthetic graph variations; it
+does not establish provider quality. Production SSO, multi-worker approval
+coordination, GreenChain/PROXY/Rumi adapters, organization policy, live checkout,
+refund, and fulfillment integrations remain future work. The current Gateway
+checkout is unavailable and sandbox orders move no money.
