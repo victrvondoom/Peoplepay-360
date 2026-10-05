@@ -1,0 +1,4 @@
+product,quantity,unit,destination,transport_mode,target_count,component,current_manufacturer,current_country,current_city,current_website,current_certifications,current_disclosure_status,current_revenue_usd_m,current_renewable_pct
+LED desk lamp,8000,units,US,sea,6,aluminum housing,MetalForm Precision,CN,Shenzhen,https://example.com/sustainability,iso14001|sbt_committed,verified,38,22
+LED desk lamp,8000,units,US,sea,6,led module,LuxLED Korea,KR,Suwon,https://example.com/esg,iso14001,partial,52,31
+LED desk lamp,8000,units,US,sea,6,power adapter,VoltPeak Electronics,TW,Taichung,https://example.com/impact,iso14001,verified,28,41

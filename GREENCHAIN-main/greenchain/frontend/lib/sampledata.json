@@ -1,0 +1,863 @@
+{
+  "scenario": {
+    "id": "scenario_lint_roller_live_multicomponent_002",
+    "productName": "Lint Roller",
+    "quantity": 10000,
+    "unit": "units",
+    "destination": {
+      "country": "US",
+      "city": "New York",
+      "lat": 40.7128,
+      "lng": -74.006
+    }
+  },
+  "nodes": [
+    {
+      "id": "product_lint_roller",
+      "nodeKind": "base",
+      "baseType": "product",
+      "label": "Lint Roller",
+      "subtitle": "10,000 units",
+      "children": [
+        "component_adhesive",
+        "component_plastic",
+        "component_cardboard"
+      ]
+    },
+    {
+      "id": "mfr_adhesive_1",
+      "nodeKind": "manufacturer",
+      "name": "AdhesiveCo",
+      "component": "Adhesive",
+      "isCurrent": true,
+      "location": {
+        "country": "DE",
+        "city": "Hamburg",
+        "lat": 53.5511,
+        "lng": 9.9937
+      },
+      "ecoScore": 16,
+      "gridCarbonScore": 63,
+      "climateRiskScore": 31.0,
+      "transportEmissionsTco2e": 0.1407,
+      "manufacturingEmissionsTco2e": {
+        "q10": 23.4,
+        "q50": 61.3,
+        "q90": 276.4
+      },
+      "certifications": [
+        "iso14001",
+        "sbt_committed"
+      ],
+      "industry": {
+        "code": "325520",
+        "title": "Adhesive Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.87,
+        "climateRisk": 31.0,
+        "gridGco2Kwh": 329.6,
+        "manufacturingTco2e": 53.331,
+        "transportTco2eByMode": {
+          "sea": 0.1407,
+          "air": 7.7026,
+          "rail": 0.3583,
+          "road": 1.2283
+        }
+      }
+    },
+    {
+      "id": "mfr_adhesive_3",
+      "nodeKind": "manufacturer",
+      "name": "Artecola Industrias Quimicas Ltda",
+      "component": "Adhesive",
+      "isCurrent": false,
+      "location": {
+        "country": "BR",
+        "city": "São Paulo",
+        "lat": -23.5558,
+        "lng": -46.6396
+      },
+      "ecoScore": 20,
+      "gridCarbonScore": 100,
+      "climateRiskScore": 50.9,
+      "transportEmissionsTco2e": 0.1774,
+      "manufacturingEmissionsTco2e": {
+        "q10": 2.4,
+        "q50": 6.0,
+        "q90": 33.4
+      },
+      "certifications": [
+        "iso14001"
+      ],
+      "industry": {
+        "code": "325520",
+        "title": "Adhesive Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.95,
+        "climateRisk": 50.9,
+        "gridGco2Kwh": 106.1,
+        "manufacturingTco2e": 5.7,
+        "transportTco2eByMode": {
+          "sea": 0.1774,
+          "air": 9.7083,
+          "rail": 0.4515,
+          "road": 1.5482
+        }
+      }
+    },
+    {
+      "id": "mfr_adhesive_4",
+      "nodeKind": "manufacturer",
+      "name": "Henkel AG & Co. KGaA",
+      "component": "Adhesive",
+      "isCurrent": false,
+      "location": {
+        "country": "DE",
+        "city": "Düsseldorf",
+        "lat": 51.2277,
+        "lng": 6.7735
+      },
+      "ecoScore": 16,
+      "gridCarbonScore": 63,
+      "climateRiskScore": 31.0,
+      "transportEmissionsTco2e": 0.1407,
+      "manufacturingEmissionsTco2e": {
+        "q10": 25.8,
+        "q50": 61.4,
+        "q90": 326.5
+      },
+      "certifications": [
+        "iso14001",
+        "science_based_targets"
+      ],
+      "industry": {
+        "code": "325520",
+        "title": "Adhesive Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.87,
+        "climateRisk": 31.0,
+        "gridGco2Kwh": 329.6,
+        "manufacturingTco2e": 53.418,
+        "transportTco2eByMode": {
+          "sea": 0.1407,
+          "air": 7.7026,
+          "rail": 0.3583,
+          "road": 1.2283
+        }
+      }
+    },
+    {
+      "id": "mfr_adhesive_6",
+      "nodeKind": "manufacturer",
+      "name": "Tex Year Industries Inc.",
+      "component": "Adhesive",
+      "isCurrent": false,
+      "location": {
+        "country": "TW",
+        "city": "Taoyuan",
+        "lat": 24.9936,
+        "lng": 121.301
+      },
+      "ecoScore": 76,
+      "gridCarbonScore": 12,
+      "climateRiskScore": 50.0,
+      "transportEmissionsTco2e": 0.2938,
+      "manufacturingEmissionsTco2e": {
+        "q10": 42.3,
+        "q50": 121.2,
+        "q90": 673.9
+      },
+      "certifications": [
+        "iso14001"
+      ],
+      "industry": {
+        "code": "325520",
+        "title": "Adhesive Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.95,
+        "climateRisk": 50.0,
+        "gridGco2Kwh": 635.2,
+        "manufacturingTco2e": 115.14,
+        "transportTco2eByMode": {
+          "sea": 0.2938,
+          "air": 16.0764,
+          "rail": 0.7477,
+          "road": 2.5637
+        }
+      }
+    },
+    {
+      "id": "mfr_adhesive_7",
+      "nodeKind": "manufacturer",
+      "name": "Pidilite Industries Limited",
+      "component": "Adhesive",
+      "isCurrent": false,
+      "location": {
+        "country": "IN",
+        "city": "Mumbai",
+        "lat": 19.076,
+        "lng": 72.8777
+      },
+      "ecoScore": 99,
+      "gridCarbonScore": 0,
+      "climateRiskScore": 54.5,
+      "transportEmissionsTco2e": 0.2879,
+      "manufacturingEmissionsTco2e": {
+        "q10": 90.9,
+        "q50": 239.9,
+        "q90": 1351.4
+      },
+      "certifications": [
+        "iso14001"
+      ],
+      "industry": {
+        "code": "325520",
+        "title": "Adhesive Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.95,
+        "climateRisk": 54.5,
+        "gridGco2Kwh": 705.4,
+        "manufacturingTco2e": 227.905,
+        "transportTco2eByMode": {
+          "sea": 0.2879,
+          "air": 15.7533,
+          "rail": 0.7327,
+          "road": 2.5122
+        }
+      }
+    },
+    {
+      "id": "component_adhesive",
+      "nodeKind": "base",
+      "baseType": "component",
+      "label": "Adhesive",
+      "children": [
+        "mfr_adhesive_1",
+        "mfr_adhesive_2",
+        "mfr_adhesive_3",
+        "mfr_adhesive_4",
+        "mfr_adhesive_5",
+        "mfr_adhesive_6",
+        "mfr_adhesive_7"
+      ]
+    },
+    {
+      "id": "mfr_plastic_1",
+      "nodeKind": "manufacturer",
+      "name": "PolymerWorks",
+      "component": "Plastic",
+      "isCurrent": true,
+      "location": {
+        "country": "CN",
+        "city": "Shenzhen",
+        "lat": 22.5431,
+        "lng": 114.0579
+      },
+      "ecoScore": 86,
+      "gridCarbonScore": 23,
+      "climateRiskScore": 41.3,
+      "transportEmissionsTco2e": 0.2718,
+      "manufacturingEmissionsTco2e": {
+        "q10": 102.5,
+        "q50": 303.9,
+        "q90": 1624.2
+      },
+      "certifications": [
+        "iso14001"
+      ],
+      "industry": {
+        "code": "326199",
+        "title": "All Other Plastics Product Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.95,
+        "climateRisk": 41.3,
+        "gridGco2Kwh": 555.4,
+        "manufacturingTco2e": 288.705,
+        "transportTco2eByMode": {
+          "sea": 0.2718,
+          "air": 14.8724,
+          "rail": 0.6917,
+          "road": 2.3717
+        }
+      }
+    },
+    {
+      "id": "mfr_plastic_3",
+      "nodeKind": "manufacturer",
+      "name": "Braskem",
+      "component": "Plastic",
+      "isCurrent": false,
+      "location": {
+        "country": "BR",
+        "city": "Sao Paulo",
+        "lat": -23.5558,
+        "lng": -46.6396
+      },
+      "ecoScore": 15,
+      "gridCarbonScore": 100,
+      "climateRiskScore": 50.9,
+      "transportEmissionsTco2e": 0.1774,
+      "manufacturingEmissionsTco2e": {
+        "q10": 2.4,
+        "q50": 6.0,
+        "q90": 33.4
+      },
+      "certifications": [
+        "cdp_a"
+      ],
+      "industry": {
+        "code": "326199",
+        "title": "All Other Plastics Product Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.9,
+        "climateRisk": 50.9,
+        "gridGco2Kwh": 106.1,
+        "manufacturingTco2e": 5.4,
+        "transportTco2eByMode": {
+          "sea": 0.1774,
+          "air": 9.7083,
+          "rail": 0.4515,
+          "road": 1.5482
+        }
+      }
+    },
+    {
+      "id": "mfr_plastic_5",
+      "nodeKind": "manufacturer",
+      "name": "Covestro",
+      "component": "Plastic",
+      "isCurrent": false,
+      "location": {
+        "country": "DE",
+        "city": "Leverkusen",
+        "lat": 51.0303,
+        "lng": 6.9843
+      },
+      "ecoScore": 14,
+      "gridCarbonScore": 62,
+      "climateRiskScore": 31.0,
+      "transportEmissionsTco2e": 0.1407,
+      "manufacturingEmissionsTco2e": {
+        "q10": 25.8,
+        "q50": 61.4,
+        "q90": 326.5
+      },
+      "certifications": [
+        "iso14001",
+        "cdp_a_minus"
+      ],
+      "industry": {
+        "code": "326199",
+        "title": "All Other Plastics Product Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.85,
+        "climateRisk": 31.0,
+        "gridGco2Kwh": 329.6,
+        "manufacturingTco2e": 52.19,
+        "transportTco2eByMode": {
+          "sea": 0.1407,
+          "air": 7.7026,
+          "rail": 0.3583,
+          "road": 1.2283
+        }
+      }
+    },
+    {
+      "id": "mfr_plastic_6",
+      "nodeKind": "manufacturer",
+      "name": "Indorama Ventures",
+      "component": "Plastic",
+      "isCurrent": false,
+      "location": {
+        "country": "TH",
+        "city": "Bangkok",
+        "lat": 13.7563,
+        "lng": 100.5018
+      },
+      "ecoScore": 70,
+      "gridCarbonScore": 23,
+      "climateRiskScore": 47.3,
+      "transportEmissionsTco2e": 0.3199,
+      "manufacturingEmissionsTco2e": {
+        "q10": 39.9,
+        "q50": 122.3,
+        "q90": 663.5
+      },
+      "certifications": [
+        "iso14001"
+      ],
+      "industry": {
+        "code": "326199",
+        "title": "All Other Plastics Product Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.95,
+        "climateRisk": 47.3,
+        "gridGco2Kwh": 554.7,
+        "manufacturingTco2e": 116.185,
+        "transportTco2eByMode": {
+          "sea": 0.3199,
+          "air": 17.5072,
+          "rail": 0.8143,
+          "road": 2.7918
+        }
+      }
+    },
+    {
+      "id": "mfr_plastic_7",
+      "nodeKind": "manufacturer",
+      "name": "SABIC",
+      "component": "Plastic",
+      "isCurrent": false,
+      "location": {
+        "country": "SA",
+        "city": "Riyadh",
+        "lat": 24.7136,
+        "lng": 46.6753
+      },
+      "ecoScore": 78,
+      "gridCarbonScore": 0,
+      "climateRiskScore": 41.8,
+      "transportEmissionsTco2e": 0.2526,
+      "manufacturingEmissionsTco2e": {
+        "q10": 89.3,
+        "q50": 224.1,
+        "q90": 1118.8
+      },
+      "certifications": [
+        "iso14001"
+      ],
+      "industry": {
+        "code": "326199",
+        "title": "All Other Plastics Product Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.95,
+        "climateRisk": 41.8,
+        "gridGco2Kwh": 692.0,
+        "manufacturingTco2e": 212.895,
+        "transportTco2eByMode": {
+          "sea": 0.2526,
+          "air": 13.8259,
+          "rail": 0.6431,
+          "road": 2.2048
+        }
+      }
+    },
+    {
+      "id": "component_plastic",
+      "nodeKind": "base",
+      "baseType": "component",
+      "label": "Plastic",
+      "children": [
+        "mfr_plastic_1",
+        "mfr_plastic_2",
+        "mfr_plastic_3",
+        "mfr_plastic_4",
+        "mfr_plastic_5",
+        "mfr_plastic_6",
+        "mfr_plastic_7"
+      ]
+    },
+    {
+      "id": "mfr_cardboard_1",
+      "nodeKind": "manufacturer",
+      "name": "BoxFab",
+      "component": "Cardboard",
+      "isCurrent": true,
+      "location": {
+        "country": "MX",
+        "city": "Monterrey",
+        "lat": 25.6866,
+        "lng": -100.3161
+      },
+      "ecoScore": 42,
+      "gridCarbonScore": 14,
+      "climateRiskScore": 51.3,
+      "transportEmissionsTco2e": 0.0889,
+      "manufacturingEmissionsTco2e": {
+        "q10": 29.6,
+        "q50": 108.5,
+        "q90": 465.6
+      },
+      "certifications": [
+        "fsc",
+        "iso14001"
+      ],
+      "industry": {
+        "code": "322211",
+        "title": "Corrugated and Solid Fiber Box Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.95,
+        "climateRisk": 51.3,
+        "gridGco2Kwh": 483.1,
+        "manufacturingTco2e": 103.075,
+        "transportTco2eByMode": {
+          "sea": 0.0889,
+          "air": 4.8632,
+          "rail": 0.2262,
+          "road": 0.7755
+        }
+      }
+    },
+    {
+      "id": "mfr_cardboard_2",
+      "nodeKind": "manufacturer",
+      "name": "Mondi Group",
+      "component": "Cardboard",
+      "isCurrent": false,
+      "location": {
+        "country": "AT",
+        "city": "Vienna",
+        "lat": 48.2082,
+        "lng": 16.3738
+      },
+      "ecoScore": 12,
+      "gridCarbonScore": 88,
+      "climateRiskScore": 31.0,
+      "transportEmissionsTco2e": 0.1493,
+      "manufacturingEmissionsTco2e": {
+        "q10": 7.3,
+        "q50": 24.4,
+        "q90": 116.5
+      },
+      "certifications": [
+        "iso14001",
+        "cdp_a",
+        "science_based_targets"
+      ],
+      "industry": {
+        "code": "322211",
+        "title": "Corrugated and Solid Fiber Box Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.77,
+        "climateRisk": 31.0,
+        "gridGco2Kwh": 116.9,
+        "manufacturingTco2e": 18.788,
+        "transportTco2eByMode": {
+          "sea": 0.1493,
+          "air": 8.1691,
+          "rail": 0.38,
+          "road": 1.3027
+        }
+      }
+    },
+    {
+      "id": "mfr_cardboard_3",
+      "nodeKind": "manufacturer",
+      "name": "DS Smith",
+      "component": "Cardboard",
+      "isCurrent": false,
+      "location": {
+        "country": "GB",
+        "city": "London",
+        "lat": 51.5072,
+        "lng": -0.1276
+      },
+      "ecoScore": 16,
+      "gridCarbonScore": 68,
+      "climateRiskScore": 30.3,
+      "transportEmissionsTco2e": 0.1292,
+      "manufacturingEmissionsTco2e": {
+        "q10": 21.3,
+        "q50": 50.6,
+        "q90": 239.2
+      },
+      "certifications": [
+        "iso14001",
+        "cdp_a-",
+        "science_based_targets"
+      ],
+      "industry": {
+        "code": "322211",
+        "title": "Corrugated and Solid Fiber Box Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.77,
+        "climateRisk": 30.3,
+        "gridGco2Kwh": 217.1,
+        "manufacturingTco2e": 38.962,
+        "transportTco2eByMode": {
+          "sea": 0.1292,
+          "air": 7.0725,
+          "rail": 0.329,
+          "road": 1.1278
+        }
+      }
+    },
+    {
+      "id": "mfr_cardboard_5",
+      "nodeKind": "manufacturer",
+      "name": "Stora Enso",
+      "component": "Cardboard",
+      "isCurrent": false,
+      "location": {
+        "country": "FI",
+        "city": "Helsinki",
+        "lat": 60.1699,
+        "lng": 24.9384
+      },
+      "ecoScore": 27,
+      "gridCarbonScore": 100,
+      "climateRiskScore": 26.7,
+      "transportEmissionsTco2e": 0.1407,
+      "manufacturingEmissionsTco2e": {
+        "q10": 60.8,
+        "q50": 200.7,
+        "q90": 781.2
+      },
+      "certifications": [
+        "iso14001",
+        "cdp_a",
+        "science_based_targets"
+      ],
+      "industry": {
+        "code": "322211",
+        "title": "Corrugated and Solid Fiber Box Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.77,
+        "climateRisk": 26.7,
+        "gridGco2Kwh": 57.5,
+        "manufacturingTco2e": 154.539,
+        "transportTco2eByMode": {
+          "sea": 0.1407,
+          "air": 7.7026,
+          "rail": 0.3583,
+          "road": 1.2283
+        }
+      }
+    },
+    {
+      "id": "mfr_cardboard_6",
+      "nodeKind": "manufacturer",
+      "name": "Smurfit Kappa",
+      "component": "Cardboard",
+      "isCurrent": false,
+      "location": {
+        "country": "IE",
+        "city": "Dublin",
+        "lat": 53.3498,
+        "lng": -6.2603
+      },
+      "ecoScore": 35,
+      "gridCarbonScore": 60,
+      "climateRiskScore": 35.8,
+      "transportEmissionsTco2e": 0.1265,
+      "manufacturingEmissionsTco2e": {
+        "q10": 60.8,
+        "q50": 200.7,
+        "q90": 781.2
+      },
+      "certifications": [
+        "iso14001",
+        "cdp_a-",
+        "science_based_targets"
+      ],
+      "industry": {
+        "code": "322211",
+        "title": "Corrugated and Solid Fiber Box Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 0.77,
+        "climateRisk": 35.8,
+        "gridGco2Kwh": 256.5,
+        "manufacturingTco2e": 154.539,
+        "transportTco2eByMode": {
+          "sea": 0.1265,
+          "air": 6.922,
+          "rail": 0.322,
+          "road": 1.1038
+        }
+      }
+    },
+    {
+      "id": "mfr_cardboard_7",
+      "nodeKind": "manufacturer",
+      "name": "Nine Dragons Paper",
+      "component": "Cardboard",
+      "isCurrent": false,
+      "location": {
+        "country": "CN",
+        "city": "Dongguan",
+        "lat": 23.0207,
+        "lng": 113.7518
+      },
+      "ecoScore": 98,
+      "gridCarbonScore": 0,
+      "climateRiskScore": 41.3,
+      "transportEmissionsTco2e": 0.2718,
+      "manufacturingEmissionsTco2e": {
+        "q10": 115.1,
+        "q50": 291.4,
+        "q90": 1661.8
+      },
+      "certifications": [
+        "fsc"
+      ],
+      "industry": {
+        "code": "322211",
+        "title": "Corrugated and Solid Fiber Box Manufacturing"
+      },
+      "scoringInputs": {
+        "certAdjustment": 1.0,
+        "climateRisk": 41.3,
+        "gridGco2Kwh": 555.4,
+        "manufacturingTco2e": 291.4,
+        "transportTco2eByMode": {
+          "sea": 0.2718,
+          "air": 14.8724,
+          "rail": 0.6917,
+          "road": 2.3717
+        }
+      }
+    },
+    {
+      "id": "component_cardboard",
+      "nodeKind": "base",
+      "baseType": "component",
+      "label": "Cardboard",
+      "children": [
+        "mfr_cardboard_1",
+        "mfr_cardboard_2",
+        "mfr_cardboard_3",
+        "mfr_cardboard_4",
+        "mfr_cardboard_5",
+        "mfr_cardboard_6",
+        "mfr_cardboard_7"
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "product_lint_roller",
+      "target": "component_adhesive"
+    },
+    {
+      "id": "e2",
+      "source": "component_adhesive",
+      "target": "mfr_adhesive_1"
+    },
+    {
+      "id": "e3",
+      "source": "component_adhesive",
+      "target": "mfr_adhesive_2"
+    },
+    {
+      "id": "e4",
+      "source": "component_adhesive",
+      "target": "mfr_adhesive_3"
+    },
+    {
+      "id": "e5",
+      "source": "component_adhesive",
+      "target": "mfr_adhesive_4"
+    },
+    {
+      "id": "e6",
+      "source": "component_adhesive",
+      "target": "mfr_adhesive_5"
+    },
+    {
+      "id": "e7",
+      "source": "component_adhesive",
+      "target": "mfr_adhesive_6"
+    },
+    {
+      "id": "e8",
+      "source": "component_adhesive",
+      "target": "mfr_adhesive_7"
+    },
+    {
+      "id": "e9",
+      "source": "product_lint_roller",
+      "target": "component_plastic"
+    },
+    {
+      "id": "e10",
+      "source": "component_plastic",
+      "target": "mfr_plastic_1"
+    },
+    {
+      "id": "e11",
+      "source": "component_plastic",
+      "target": "mfr_plastic_2"
+    },
+    {
+      "id": "e12",
+      "source": "component_plastic",
+      "target": "mfr_plastic_3"
+    },
+    {
+      "id": "e13",
+      "source": "component_plastic",
+      "target": "mfr_plastic_4"
+    },
+    {
+      "id": "e14",
+      "source": "component_plastic",
+      "target": "mfr_plastic_5"
+    },
+    {
+      "id": "e15",
+      "source": "component_plastic",
+      "target": "mfr_plastic_6"
+    },
+    {
+      "id": "e16",
+      "source": "component_plastic",
+      "target": "mfr_plastic_7"
+    },
+    {
+      "id": "e17",
+      "source": "product_lint_roller",
+      "target": "component_cardboard"
+    },
+    {
+      "id": "e18",
+      "source": "component_cardboard",
+      "target": "mfr_cardboard_1"
+    },
+    {
+      "id": "e19",
+      "source": "component_cardboard",
+      "target": "mfr_cardboard_2"
+    },
+    {
+      "id": "e20",
+      "source": "component_cardboard",
+      "target": "mfr_cardboard_3"
+    },
+    {
+      "id": "e21",
+      "source": "component_cardboard",
+      "target": "mfr_cardboard_4"
+    },
+    {
+      "id": "e22",
+      "source": "component_cardboard",
+      "target": "mfr_cardboard_5"
+    },
+    {
+      "id": "e23",
+      "source": "component_cardboard",
+      "target": "mfr_cardboard_6"
+    },
+    {
+      "id": "e24",
+      "source": "component_cardboard",
+      "target": "mfr_cardboard_7"
+    }
+  ]
+}

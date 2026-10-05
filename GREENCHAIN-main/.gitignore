@@ -1,0 +1,10 @@
+.claude/
+.ruff_cache/
+node_modules/
+.env
+.env.local
+__pycache__/
+*.pyc
+.venv/
+.next/
+*.db

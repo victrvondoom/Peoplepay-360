@@ -1,0 +1,32 @@
+============================================================
+GreenChain XGBoost Emissions Model — Training Report
+============================================================
+Training records : 10948
+Test records     : 3977
+Features         : 55
+
+── Validation Metrics (median model, q=0.50) ──
+  spearman_rho_overall                0.843
+  spearman_p_value                    0.0
+  mean_group_spearman                 0.4851
+  mae_log_scale                       0.4499
+  median_abs_pct_err                  36.1
+  n_test                              3977
+  n_groups_evaluated                  77
+
+── Key insight ──
+  Spearman rank correlation >> 0.70 means the model
+  reliably orders suppliers from low to high emissions.
+  Portugal < China < India ordering is preserved.
+
+── Feature importance (top 10, q50 model) ──
+  useeio_x_grid                       5.2
+  useeio_x_ctry                       2.6
+  ctry_IN                             1.8
+  log_useeio_base                     1.2
+  log_grid                            0.9
+  ctry_KR                             0.8
+  ctry_JP                             0.8
+  ctry_CN                             0.8
+  ctry_PK                             0.8
+  ctry_DE                             0.8
