@@ -13,7 +13,7 @@ from pydantic import BaseModel, ConfigDict, Field, field_validator, model_valida
 
 API_VERSION: Literal["1"] = "1"
 _IDENTIFIER = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$")
-_CAPABILITY = re.compile(r"^[a-z][a-z0-9_]{0,63}$")
+_CAPABILITY = re.compile(r"^[a-z][a-z0-9_]{0,63}(?:\.[a-z][a-z0-9_]{0,63})*$")
 _SECRET = re.compile(r"^(authorization|password|secret|api_key|access_token|refresh_token|bearer_token|private_key)$", re.I)
 
 
@@ -87,6 +87,8 @@ class ExtensionMetadata(Contract):
 
 
 class ExtensionContext(Contract):
+    workflow_id: str | None = Field(default=None, max_length=128)
+    jurisdiction: str | None = Field(default=None, pattern=r"^[A-Z]{2}$")
     tenant_id: str | None = Field(default=None, max_length=128)
     user_id: str | None = Field(default=None, max_length=128)
     transaction_id: str | None = Field(default=None, max_length=128)
@@ -158,6 +160,8 @@ class ExtensionHealth(Contract):
     status: Literal["healthy", "degraded", "unavailable"]
     checked_at: datetime
     message: str = Field(default="", max_length=200)
+    components: dict[str, Literal["healthy", "degraded", "unavailable"]] = Field(default_factory=dict, max_length=30)
+    capability_health: dict[str, Literal["healthy", "degraded", "unavailable"]] = Field(default_factory=dict, max_length=20)
 
     @model_validator(mode="after")
     def timezone_required(self) -> "ExtensionHealth":
@@ -238,6 +242,10 @@ class ProviderRegistry:
 
     def get(self, extension_id: str) -> Extension:
         return self._providers[extension_id]
+
+    def unregister(self, extension_id: str) -> None:
+        """Detach a runtime instance without deleting its source or manifest."""
+        self._providers.pop(extension_id, None)
 
     def providers_for(self, capability: str) -> list[Extension]:
         return [provider for provider in self._providers.values()

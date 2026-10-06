@@ -3,6 +3,7 @@ import asyncio
 import os
 import threading
 import time
+from pathlib import Path
 from datetime import datetime, timezone
 from uuid import uuid4
 
@@ -32,7 +33,7 @@ class AssistanceService:
     def __init__(self, *, store=None, echo=None, runtime=None):
         self.store = store or JourneyStore(os.getenv("PEOPLEPAY_ASSISTANCE_DB", "peoplepay-assistance.sqlite3"))
         self.echo = echo or EchoClient(os.getenv("PEOPLEPAY_ECHO_URL", "http://127.0.0.1:8090"))
-        self.runtime = runtime or CapabilityRuntime()
+        self.runtime = runtime or CapabilityRuntime().load(Path(__file__).resolve().parents[1] / "extensions")
         self.lock = threading.RLock()
         if runtime is None and os.getenv("PEOPLEPAY_CIVICMESH_API_URL"):
             provider = CivicMeshProvider(HttpSourceClient(os.environ["PEOPLEPAY_CIVICMESH_API_URL"],

@@ -26,36 +26,52 @@ class RegisteredExtension:
 class ExtensionRegistry:
     def __init__(self) -> None:
         self._extensions: dict[str, RegisteredExtension] = {}
+        self.invalid_configurations: dict[str, dict[str, Any]] = {}
         self._enabled_override = (
             {item.strip() for item in os.environ["ECHO_EXTENSIONS"].split(",") if item.strip()}
             if "ECHO_EXTENSIONS" in os.environ else None
         )
 
     @classmethod
-    def load(cls, directory: Path | str, adapters: Mapping[str, ExtensionAdapter] | None = None) -> "ExtensionRegistry":
+    def load(cls, directory: Path | str, adapters: Mapping[str, ExtensionAdapter] | None = None,
+             *, isolate_invalid: bool = False) -> "ExtensionRegistry":
         """Load only one level of extension.yaml files from a trusted core directory."""
         registry = cls()
         root = Path(directory).resolve(strict=True)
         if not root.is_dir():
             raise ValueError("extension manifest location must be a directory")
         files = sorted(root.glob("*/extension.yaml"))
-        if len(files) > MAX_EXTENSIONS:
+        if len(files) > MAX_EXTENSIONS and not isolate_invalid:
             raise ValueError("too many extension manifests")
         for file in files:
-            resolved = file.resolve(strict=True)
-            if not resolved.is_relative_to(root) or file.is_symlink() or file.parent.is_symlink():
-                raise ValueError("extension manifests must remain within the core-owned directory")
-            if file.stat().st_size > MAX_MANIFEST_BYTES:
-                raise ValueError("extension manifest exceeds the size limit")
-            data = yaml.safe_load(file.read_text(encoding="utf-8"))
-            if not isinstance(data, dict):
-                raise ValueError("extension manifest must be an object")
-            manifest = ExtensionManifest.model_validate(data)
-            if file.parent.name != manifest.id:
-                raise ValueError("manifest id must match its containing directory")
-            registry.register(manifest, (adapters or {}).get(manifest.id))
-        registry._validate_dependencies()
-        if registry._enabled_override is not None and registry._enabled_override - registry._extensions.keys():
+            try:
+                resolved = file.resolve(strict=True)
+                if not resolved.is_relative_to(root) or file.is_symlink() or file.parent.is_symlink():
+                    raise ValueError("extension manifests must remain within the core-owned directory")
+                if file.stat().st_size > MAX_MANIFEST_BYTES:
+                    raise ValueError("extension manifest exceeds the size limit")
+                data = yaml.safe_load(file.read_text(encoding="utf-8"))
+                if not isinstance(data, dict):
+                    raise ValueError("extension manifest must be an object")
+                manifest = ExtensionManifest.model_validate(data)
+                if file.parent.name != manifest.id:
+                    raise ValueError("manifest id must match its containing directory")
+                registry.register(manifest, (adapters or {}).get(manifest.id))
+            except Exception:
+                if not isolate_invalid:
+                    raise
+                registry.invalid_configurations[file.parent.name] = {
+                    "id": file.parent.name, "status": "INVALID_CONFIGURATION", "enabled": False,
+                    "capabilities": [], "adapter_available": False}
+        if not isolate_invalid:
+            registry._validate_dependencies()
+        else:
+            # Dependency checks are fail-closed at invocation. Invalid optional
+            # manifests must not prevent core graph/API startup.
+            for record in registry._extensions.values():
+                if any(item not in registry._extensions for item in record.manifest.dependencies):
+                    record.enabled = False
+        if not isolate_invalid and registry._enabled_override is not None and registry._enabled_override - registry._extensions.keys():
             raise ValueError("ECHO_EXTENSIONS contains an unknown extension id")
         return registry
 
@@ -148,4 +164,4 @@ class ExtensionRegistry:
                 "configured": configured, "adapter_available": record.adapter is not None,
                 "dependencies_available": dependencies, "status": reason,
             })
-        return rows
+        return rows + list(self.invalid_configurations.values())

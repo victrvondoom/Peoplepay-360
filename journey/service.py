@@ -104,6 +104,11 @@ class JourneyService:
                 InflationForgeProvider(HttpSourceClient(inflation), mode="live")]
 
     async def _collect(self, record: dict[str, Any]) -> list[dict[str, Any]]:
+        from journey.extension_runtime import CapabilityRuntime
+        runtime = CapabilityRuntime().load(Path(__file__).resolve().parents[1] / "extensions")
+        providers = self._providers(record["mode"], record["actor_id"])
+        for provider in providers:
+            runtime.register(provider)
         async def call(provider):
             metadata = provider.metadata()
             req = record["requirement"]
@@ -115,15 +120,15 @@ class JourneyService:
                 constraints={"budget_minor": req["budget_minor"], "currency": req["currency"], "delivery_days": req["delivery_days"]},
             )
             try:
-                result = await asyncio.wait_for(provider.execute(request), timeout=30)
-                result = ExtensionResult.model_validate(result.model_dump(mode="json"))
-                if result.extension_id != metadata.id or result.request_id != request.request_id:
-                    raise ValueError("provider receipt is not bound to its invocation")
+                result, trace = await runtime.invoke(request, "IN", timeout=30, extension_id=metadata.id)
+                record["runtime_traces"] = [*record.get("runtime_traces", [])[-99:], trace]
+                if result is None:
+                    raise JourneyUnavailable("provider invocation failed")
                 return result.model_dump(mode="json")
             except Exception:
                 return ExtensionResult(request_id=request.request_id, extension_id=metadata.id,
                     extension_version=metadata.version, status="partial", warnings=["PROVIDER_UNAVAILABLE_OR_INVALID_RESULT"]).model_dump(mode="json")
-        return await asyncio.gather(*(call(provider) for provider in self._providers(record["mode"], record["actor_id"])))
+        return await asyncio.gather(*(call(provider) for provider in providers))
 
     def _evaluate(self, record: dict[str, Any], authorization: str | None) -> dict[str, Any]:
         txn = self.gateway.store.get(record["transaction_id"])

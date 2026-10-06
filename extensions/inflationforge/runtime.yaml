@@ -1,0 +1,15 @@
+schema_version: '1'
+id: inflationforge
+version: 1.0.0
+runtime_type: HTTP_SERVICE
+endpoint_env: PEOPLEPAY_INFLATIONFORGE_API_URL
+capabilities:
+  price.observe: price_intelligence
+jurisdictions: ['*']
+input_fields: [product, quantity, destination]
+constraint_fields: [budget_minor, currency, delivery_days]
+permissions: [network.http]
+timeout_seconds: 30
+upstream: Inflation-Forge-main
+license_reference: Inflation-Forge-main/LICENSE
+readiness: EXPERIMENTAL

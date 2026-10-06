@@ -69,3 +69,21 @@ Run instructions and current limitations are in [running PeoplePay](docs/running
 PeoplePay now routes relevant U.S. assistance needs through the original CivicMesh deterministic Jac engine, SDK normalization, ECHO evidence/versioned decisions and the `/assistance` portal. Procurement stays connected to GreenChain, InflationForge, the sandbox merchant and PROXY. No live payment is enabled.
 
 Run core: `python scripts/dev_peoplepay.py`. Run assistance: `python scripts/dev_peoplepay.py --assistance`. Run all integrated runtime services: `python scripts/dev_peoplepay.py --all`. Install the isolated environments first. [Run guide](extensions/civicmesh/README.md), [integration report](docs/integration/CIVICMESH_INTEGRATION_REPORT.md), [documentation index](docs/INDEX.md).
+# Extension Runtime and workflow engine
+
+The SDK v1 runtime now supplies manifest-based capability resolution, jurisdiction
+and input permission gates, validated provider receipts, host provenance, bounded
+invocation and provider transparency at `/extensions`. Procurement and assistance
+share this invocation path. The reusable workflow engine and versioned APIs are
+experimental; their generic ECHO/Gateway callbacks and full specialist migration
+are not yet connected. Existing reference procurement/aftersales and local
+CivicMesh assistance remain the verified journeys. No production payments occur.
+
+See [implementation evidence and remaining work](docs/integration/RUNTIME_IMPLEMENTATION_REPORT.md),
+[runtime architecture](docs/architecture/EXTENSION_RUNTIME.md),
+[workflow engine](docs/architecture/WORKFLOW_ENGINE.md), and
+[journey ownership](docs/architecture/UNIFIED_JOURNEYS.md).
+
+Run core with `.\.venv-journey-review\Scripts\python.exe scripts/dev_peoplepay.py`;
+add `--all` for all currently integrated local services. FalkorDB must be running
+first. Specialist projects retain their separate dependencies and run commands.

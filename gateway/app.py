@@ -299,6 +299,17 @@ class GatewayState:
         self._lock = threading.Lock()
         self._journey = journey
         self._assistance: Any = None
+        self._workflow_engine: Any = None
+
+    def workflow_engine(self):
+        with self.workflow_lock:
+            if self._workflow_engine is None:
+                from journey.bootstrap import configured_runtime
+                from journey.workflow import WorkflowEngine
+                from journey.store import JourneyStore
+                self._workflow_engine = WorkflowEngine(configured_runtime(),
+                    store=JourneyStore(os.getenv("PEOPLEPAY_WORKFLOW_DB", "peoplepay-workflows.sqlite3")))
+        return self._workflow_engine
 
     def assistance_service(self):
         with self.workflow_lock:
@@ -556,6 +567,8 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                       "/journey": ("journey.html", "text/html"),
                       "/journey.js": ("journey.js", "text/javascript"),
                       "/journey.css": ("journey.css", "text/css"),
+                      "/extensions": ("extensions.html", "text/html"),
+                      "/extensions.js": ("extensions.js", "text/javascript"),
                       "/app.js": ("app.js", "text/javascript"),
                       "/styles.css": ("styles.css", "text/css")}
             if path in assets:
@@ -593,6 +606,20 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             parts = [p for p in path.split("/") if p]
+            if parts[:3] == ["api", "v1", "extensions"] and len(parts) == 3:
+                rows = state.workflow_engine().runtime.describe()
+                # Runtime telemetry remains internal; no other actor's workflow IDs.
+                for row in rows:
+                    row.pop("last_invocation", None)
+                self._send(200, {"extensions": rows})
+                return
+            if parts[:3] == ["api", "v1", "capabilities"] and len(parts) == 3:
+                runtime = state.workflow_engine().runtime
+                self._send(200, {"capabilities": sorted({c for m in runtime.manifests.values() for c in m.capabilities})})
+                return
+            if parts[:3] == ["api", "v1", "workflows"]:
+                self._platform_workflow(user, parts[3:], None)
+                return
             if parts[:3] == ["api", "v1", "assistance"]:
                 self._assistance_route(user, parts[3:], None)
                 return
@@ -648,6 +675,17 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             parts = [p for p in path.split("/") if p]
+            if parts[:3] == ["api", "v1", "workflows"]:
+                self._platform_workflow(user, parts[3:], body)
+                return
+            if parts == ["api", "v1", "capabilities", "resolve"]:
+                try:
+                    if set(body) != {"capability", "jurisdiction"}:
+                        raise ValueError("capability and jurisdiction required")
+                    self._send(200, state.workflow_engine().runtime.resolve(body["capability"], body["jurisdiction"]))
+                except (ValueError, TypeError) as exc:
+                    self._fail(400, str(exc))
+                return
             if parts == ["api", "v1", "routing"]:
                 from journey.capability_router import route_need
                 try:
@@ -681,6 +719,36 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             self._fail(404, f"no route for POST {path}")
 
         # --- handlers --------------------------------------------------
+
+        def _platform_workflow(self, user, parts, body):
+            try:
+                engine = state.workflow_engine()
+                with state.workflow_lock:
+                    if body is None:
+                        if not parts:
+                            result = {"workflows": engine.store.list(user)}
+                        elif len(parts) == 1:
+                            result = engine.store.get(parts[0], user)
+                        elif len(parts) == 2 and parts[1] == "timeline":
+                            result = {"events": engine.store.get(parts[0], user)["events"]}
+                        else:
+                            raise KeyError("unknown workflow route")
+                    elif not parts:
+                        if set(body) != {"intent", "jurisdiction", "steps"}:
+                            raise ValueError("intent, jurisdiction and steps required")
+                        result = engine.create(user, **body)
+                    elif len(parts) == 2 and parts[1] in {"run", "input", "approve", "cancel"}:
+                        operation = getattr(engine, parts[1])
+                        result = operation(parts[0], user, **body)
+                    else:
+                        raise KeyError("unknown workflow route")
+                self._send(201 if body is not None and not parts else 200, result)
+            except KeyError:
+                self._fail(404, "workflow not found")
+            except (ValueError, TypeError) as exc:
+                self._fail(409, str(exc))
+            except (ImportError, sqlite3.Error):
+                self._fail(503, "Workflow runtime or storage is unavailable")
 
         def _assistance_route(self, user, parts, body):
             try:

@@ -1,0 +1,13 @@
+schema_version: '1'
+id: civicmesh
+version: 1.0.0
+runtime_type: HTTP_SERVICE
+endpoint_env: PEOPLEPAY_CIVICMESH_API_URL
+capabilities:
+  policy.eligibility: assistance_eligibility
+jurisdictions: [US]
+input_fields: [jurisdiction, language, need, facts, consent]
+permissions: [network.http]
+upstream: CivicMesh-main
+license_reference: CivicMesh-main/LICENSE
+readiness: EXPERIMENTAL

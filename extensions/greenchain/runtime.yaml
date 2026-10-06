@@ -1,0 +1,15 @@
+schema_version: '1'
+id: greenchain
+version: 1.0.0
+runtime_type: HTTP_SERVICE
+endpoint_env: PEOPLEPAY_GREENCHAIN_API_URL
+capabilities:
+  supplier.discovery: supplier_discovery
+jurisdictions: ['*']
+input_fields: [product, quantity, destination]
+constraint_fields: [budget_minor, currency, delivery_days]
+permissions: [network.http]
+timeout_seconds: 30
+upstream: GREENCHAIN-main
+license_reference: THIRD_PARTY_NOTICES.md
+readiness: EXPERIMENTAL
