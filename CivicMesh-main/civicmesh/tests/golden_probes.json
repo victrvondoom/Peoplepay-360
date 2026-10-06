@@ -1,0 +1,880 @@
+{
+ "_about": "Probes: realistic sentences where a lexicon word appears in another sense (an agency, a card, a job, a body part, a charity), each paired with the true positive it must not break. Started from an outside finding (\"I don't have a social security number\" flagged a mother as a senior). Scored with the rest; failures here were fixed by tightening the lexicon, never by editing the case.",
+ "cases": [
+  {
+   "text": "I'm a mother of three kids aged 2, 5 and 8 and we need food. I don't have a social security number.",
+   "expect": {
+    "category": "food",
+    "flag_absent": "senior"
+   },
+   "tier_not": {
+    "Senior Farmers Market Nutrition Program": "likely",
+    "Commodity Supplemental Food Program": "likely"
+   },
+   "_why": "outside review: SSN sentence flagged a 30-something mother as a senior and flipped two 60+ programs to likely",
+   "suite": "probes",
+   "p_max": {
+    "Senior Farmers Market Nutrition Program": 0.4
+   }
+  },
+  {
+   "text": "I lost my social security card and need food for my kids",
+   "expect": {
+    "category": "food",
+    "flag_absent": "senior"
+   },
+   "tier_not": {
+    "Senior Farmers Market Nutrition Program": "likely",
+    "Commodity Supplemental Food Program": "likely"
+   },
+   "_why": "a card is not an age",
+   "suite": "probes",
+   "p_max": {
+    "Senior Farmers Market Nutrition Program": 0.4
+   }
+  },
+  {
+   "text": "The social security office cut my kids' survivor benefits and now we can't buy groceries",
+   "expect": {
+    "category": "food",
+    "flag_absent": "senior"
+   },
+   "_why": "survivor benefits go to children",
+   "suite": "probes"
+  },
+  {
+   "text": "My son gets SSDI from Social Security and we're behind on rent",
+   "expect": {
+    "category": "housing",
+    "flag_absent": "senior",
+    "flag": "disabled"
+   },
+   "_why": "SSDI is disability, not age",
+   "suite": "probes"
+  },
+  {
+   "text": "Social Security cut my SSI and I can't pay rent",
+   "expect": {
+    "category": "housing",
+    "flag_absent": "senior",
+    "flag": "disabled"
+   },
+   "_why": "SSI is disability or low income, not age",
+   "suite": "probes"
+  },
+  {
+   "text": "I'm 34 and a senior at the community college and I can't afford food",
+   "expect": {
+    "category": "food",
+    "flag_absent": "senior",
+    "age": 34
+   },
+   "_why": "a college senior",
+   "suite": "probes"
+  },
+  {
+   "text": "I retired from the army at 42 and now I'm homeless",
+   "expect": {
+    "flag": "veteran",
+    "flag_absent": "senior"
+   },
+   "_why": "retired at 42 is not a senior",
+   "suite": "probes"
+  },
+  {
+   "text": "I'm retired and living on Social Security, I need food",
+   "expect": {
+    "category": "food",
+    "flag": "senior"
+   },
+   "_why": "true positive must survive",
+   "suite": "probes"
+  },
+  {
+   "text": "Soy jubilada y vivo del seguro social, necesito comida",
+   "expect": {
+    "category": "food",
+    "flag": "senior"
+   },
+   "_why": "true positive (es)",
+   "suite": "probes"
+  },
+  {
+   "text": "My Social Security retirement check isn't enough to cover rent",
+   "expect": {
+    "category": "housing",
+    "flag": "senior"
+   },
+   "_why": "a retirement check means 62+",
+   "suite": "probes"
+  },
+  {
+   "text": "My 70-year-old mother lives with us, I'm 45, and we need food",
+   "expect": {
+    "category": "food",
+    "age": 45
+   },
+   "_why": "a relative's age is not the person's age",
+   "suite": "probes"
+  },
+  {
+   "text": "The Salvation Army shelter is full tonight and I have nowhere to sleep",
+   "expect": {
+    "flag": "homeless",
+    "flag_absent": "veteran"
+   },
+   "_why": "Salvation Army is a charity",
+   "suite": "probes"
+  },
+  {
+   "text": "I served in a restaurant for ten years and just lost my job, we need food",
+   "expect": {
+    "category": "food",
+    "flag_absent": "veteran"
+   },
+   "_why": "served tables",
+   "suite": "probes"
+  },
+  {
+   "text": "I worked at the military base cafeteria and got laid off, I need help with rent",
+   "expect": {
+    "category": "housing",
+    "flag_absent": "veteran"
+   },
+   "_why": "a civilian job on a base",
+   "suite": "probes"
+  },
+  {
+   "text": "I served in the Army for 6 years and now I'm homeless",
+   "expect": {
+    "flag": "veteran"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "I'm a Navy veteran and need a doctor",
+   "expect": {
+    "category": "healthcare",
+    "flag": "veteran"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "Serví en el ejército y ahora necesito vivienda",
+   "expect": {
+    "category": "housing",
+    "flag": "veteran"
+   },
+   "_why": "true positive (es) the lexicon missed",
+   "suite": "probes"
+  },
+  {
+   "text": "My car was parked on the street and got towed, is that legal?",
+   "expect": {
+    "flag_absent": "homeless"
+   },
+   "_why": "a parked car",
+   "suite": "probes"
+  },
+  {
+   "text": "We've been living on the streets for a week",
+   "expect": {
+    "flag": "homeless"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "Mi carro estaba en la calle y se lo llevó la grúa, necesito ayuda legal",
+   "expect": {
+    "flag_absent": "homeless"
+   },
+   "_why": "a car on the street (es)",
+   "suite": "probes"
+  },
+  {
+   "text": "Nos dejaron en la calle con los niños",
+   "expect": {
+    "flag": "homeless"
+   },
+   "_why": "true positive (es)",
+   "suite": "probes"
+  },
+  {
+   "text": "Vivo en la calle desde hace un mes",
+   "expect": {
+    "flag": "homeless"
+   },
+   "_why": "true positive (es)",
+   "suite": "probes"
+  },
+  {
+   "text": "My kids are grown and moved out, I live alone and need food",
+   "expect": {
+    "category": "food",
+    "flag_absent": "children"
+   },
+   "_why": "adult children elsewhere",
+   "suite": "probes"
+  },
+  {
+   "text": "I worked as a child care provider and got laid off, I need food",
+   "expect": {
+    "category": "food",
+    "flag_absent": "children"
+   },
+   "_why": "a job, not a household member",
+   "suite": "probes"
+  },
+  {
+   "text": "I have two kids and we need food",
+   "expect": {
+    "category": "food",
+    "flag": "children"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "No tengo hijos, vivo sola y necesito comida",
+   "expect": {
+    "category": "food",
+    "flag_absent": "children"
+   },
+   "_why": "negated (es)",
+   "suite": "probes"
+  },
+  {
+   "text": "I need a substance abuse treatment program and I don't have insurance",
+   "expect": {
+    "category": "healthcare",
+    "flag_absent": "dv"
+   },
+   "_why": "substance abuse is treatment, not violence",
+   "suite": "probes"
+  },
+  {
+   "text": "My back hurts me every day and I can't afford a doctor",
+   "expect": {
+    "category": "healthcare",
+    "flag_absent": "dv"
+   },
+   "_why": "pain, not a person",
+   "suite": "probes"
+  },
+  {
+   "text": "My husband hurts me when he drinks",
+   "expect": {
+    "flag": "dv"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "My boyfriend is abusive and I need to leave",
+   "expect": {
+    "flag": "dv"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "He hurts me and I'm scared to go home",
+   "expect": {
+    "flag": "dv"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "I hurt myself at work lifting boxes and need a doctor",
+   "expect": {
+    "category": "healthcare",
+    "flag_absent": "self_harm"
+   },
+   "_why": "a workplace injury",
+   "suite": "probes"
+  },
+  {
+   "text": "Sometimes I want to hurt myself",
+   "expect": {
+    "flag": "self_harm"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "I hurt myself last night on purpose",
+   "expect": {
+    "flag": "self_harm"
+   },
+   "_why": "true positive",
+   "suite": "probes"
+  },
+  {
+   "text": "I don't have a disability, I just lost my job and need food",
+   "expect": {
+    "category": "food",
+    "flag_absent": "disabled"
+   },
+   "_why": "negated",
+   "suite": "probes"
+  },
+  {
+   "text": "I'm not pregnant, but I need food for my toddler",
+   "expect": {
+    "category": "food",
+    "flag_absent": "pregnant",
+    "flag": "children"
+   },
+   "_why": "negated",
+   "suite": "probes"
+  },
+  {
+   "text": "I'm in the US on an F-1 student visa and I can't afford food",
+   "expect": {
+    "category": "food",
+    "citizenship": "non_citizen"
+   },
+   "suite": "probes",
+   "_why": "a temporary visa, stated by the speaker"
+  },
+  {
+   "text": "I'm currently in the US on the Visa Waiver Program and need a doctor",
+   "expect": {
+    "citizenship": "non_citizen"
+   },
+   "suite": "probes",
+   "_why": "visa waiver"
+  },
+  {
+   "text": "My friend's visa expired and she needs a lawyer",
+   "expect": {
+    "citizenship": ""
+   },
+   "suite": "probes",
+   "_why": "someone else's status is not the speaker's"
+  },
+  {
+   "text": "Is he going to get deported? I'm asking for my cousin",
+   "expect": {
+    "citizenship": ""
+   },
+   "suite": "probes",
+   "_why": "a relative's case"
+  },
+  {
+   "text": "I hold US citizenship and need help with rent",
+   "expect": {
+    "category": "housing",
+    "citizenship": "citizen"
+   },
+   "suite": "probes",
+   "_why": "citizenship (noun)"
+  },
+  {
+   "text": "I got my green card through my K1 visa and now I need food",
+   "expect": {
+    "category": "food",
+    "citizenship": "eligible_immigrant"
+   },
+   "suite": "probes",
+   "_why": "the green card wins over the visa it came from"
+  },
+  {
+   "text": "There are 3 people in my family and we need food",
+   "expect": {
+    "category": "food",
+    "household_size": 3
+   },
+   "suite": "probes",
+   "_why": "live conversation: 'there are 3 people' read as household 0"
+  },
+  {
+   "text": "3 people live in my apartment and we're behind on rent",
+   "expect": {
+    "category": "housing",
+    "household_size": 3
+   },
+   "suite": "probes",
+   "_why": "count before 'people live'"
+  },
+  {
+   "text": "We're not homeless, we just need help with rent",
+   "expect": {
+    "category": "housing",
+    "flag_absent": "homeless"
+   },
+   "tier_not": {
+    "Emergency Solutions Grant Shelter Network": "likely",
+    "Rapid Re-Housing Program": "likely"
+   },
+   "suite": "probes",
+   "_why": "the scorer's own targeting regex ignored negation"
+  },
+  {
+   "text": "The Salvation Army shelter is full and we have nowhere to sleep tonight",
+   "expect": {
+    "flag": "homeless",
+    "flag_absent": "veteran"
+   },
+   "tier_not": {
+    "HUD-VASH (Veterans Affairs Supportive Housing)": "likely"
+   },
+   "p_max": {
+    "HUD-VASH (Veterans Affairs Supportive Housing)": 0.5
+   },
+   "suite": "probes",
+   "_why": "the scorer's veteran regex matched 'army'"
+  },
+  {
+   "text": "I don't have a disability, I just need legal help with my landlord",
+   "expect": {
+    "category_in": [
+     "legal",
+     "housing"
+    ],
+    "flag_absent": "disabled"
+   },
+   "tier_not": {
+    "Disability Rights Network Protection and Advocacy": "likely"
+   },
+   "suite": "probes",
+   "_why": "negated disability matched the scorer's regex"
+  },
+  {
+   "text": "I'm not pregnant and I have no kids, I need food",
+   "expect": {
+    "category": "food",
+    "flag_absent": "pregnant"
+   },
+   "tier_not": {
+    "WIC (Women, Infants and Children)": "likely"
+   },
+   "suite": "probes",
+   "_why": "negated pregnancy matched the young-child regex"
+  },
+  {
+   "text": "Everyone would be better off without me",
+   "expect": {
+    "flag": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "I feel like such a burden to my family since I lost my job",
+   "expect": {
+    "flag": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "There's no reason to go on anymore, I lost the apartment",
+   "expect": {
+    "flag": "self_harm"
+   },
+   "suite": "probes",
+   "_why": "already a direct self-harm phrase: the stronger flag wins"
+  },
+  {
+   "text": "I can't take it anymore, nothing is working",
+   "expect": {
+    "flag": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "I wish I could just disappear",
+   "expect": {
+    "flag": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "I don't see a way out of this",
+   "expect": {
+    "flag": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "Estarían mejor sin mí",
+   "expect": {
+    "flag": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "Ya no puedo más, soy una carga para todos",
+   "expect": {
+    "flag": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "I'm scared to go home tonight",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "My husband controls all my money and checks my phone",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "He won't let me see my family or work",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "She threatens to call immigration if I leave",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "He says he'll take the kids if I go to anyone",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "Tengo miedo de volver a casa",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "Mi esposo me quita el dinero y no me deja salir",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "indirect crisis wording (988 / Hotline warning signs): escalate-only concern"
+  },
+  {
+   "text": "I'm trapped in a lease I can't afford",
+   "expect": {
+    "flag_absent": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "everyday wording must not raise a concern"
+  },
+  {
+   "text": "There's no way out of this contract, can a lawyer help?",
+   "expect": {
+    "flag_absent": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "everyday wording must not raise a concern"
+  },
+  {
+   "text": "I can't take this paperwork anymore lol, I need food stamps",
+   "expect": {
+    "flag_absent": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "everyday wording must not raise a concern"
+  },
+  {
+   "text": "My phone is broken and I need food",
+   "expect": {
+    "flag_absent": "self_harm_concern"
+   },
+   "suite": "probes",
+   "_why": "everyday wording must not raise a concern"
+  },
+  {
+   "text": "My landlord checks my mail and won't let me have guests",
+   "expect": {
+    "flag_absent": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "a landlord is not a partner (no 'my phone' / money / immigration cue)"
+  },
+  {
+   "text": "We are a family of 4 in Fort Worth making $52,000 a year and need housing help",
+   "expect": {
+    "category": "housing",
+    "household_size": 4
+   },
+   "suite": "probes",
+   "tier_not": {
+    "Section 8 Housing Choice Voucher Program": "unlikely"
+   },
+   "_why": "local HUD limit (Fort Worth area) — a national figure would misjudge this family"
+  },
+  {
+   "text": "Family of 4 in Fort Lauderdale, we make $60,000 a year and need a housing voucher",
+   "expect": {
+    "category": "housing",
+    "city": "Fort Lauderdale",
+    "household_size": 4
+   },
+   "tier_not": {
+    "Section 8 Housing Choice Voucher Program": "possible"
+   },
+   "suite": "probes",
+   "_why": "outside review: the national limit ($53,950) left this family at 'possible 47%'; Fort Lauderdale's HUD limit is $63,400, so 'likely'"
+  },
+  {
+   "text": "My friend was hit in the face by her boyfriend last night, where can she go?",
+   "expect": {
+    "flag": "dv"
+   },
+   "suite": "probes",
+   "_why": "passive, with words between the act and 'by': a friend asking is a true positive"
+  },
+  {
+   "text": "I got shoved into a wall by my stepdad and I need somewhere to stay",
+   "expect": {
+    "flag": "dv"
+   },
+   "suite": "probes",
+   "_why": "passive family violence: true positive"
+  },
+  {
+   "text": "My ex-husband assaulted my new partner and now he knows where I live",
+   "expect": {
+    "flag": "dv"
+   },
+   "suite": "probes",
+   "_why": "violence-only verb with no 'me' after it: true positive"
+  },
+  {
+   "text": "He put his hands around my neck during a fight",
+   "expect": {
+    "flag": "dv"
+   },
+   "suite": "probes",
+   "_why": "strangulation, the Danger Assessment's strongest single predictor: true positive"
+  },
+  {
+   "text": "She threatened to kill the kids if I leave",
+   "expect": {
+    "flag": "dv"
+   },
+   "suite": "probes",
+   "_why": "Danger Assessment / Hotline warning sign, in the words people use: true positive"
+  },
+  {
+   "text": "My boyfriend pulled a knife on me last week",
+   "expect": {
+    "flag": "dv"
+   },
+   "suite": "probes",
+   "_why": "Danger Assessment / Hotline warning sign, in the words people use: true positive"
+  },
+  {
+   "text": "He forced me to have sex and I don't know what to do",
+   "expect": {
+    "flag": "dv"
+   },
+   "suite": "probes",
+   "_why": "Danger Assessment / Hotline warning sign, in the words people use: true positive"
+  },
+  {
+   "text": "Mi pareja me amenazó con un cuchillo",
+   "expect": {
+    "flag": "dv"
+   },
+   "suite": "probes",
+   "_why": "Danger Assessment / Hotline warning sign, in the words people use: true positive"
+  },
+  {
+   "text": "My husband is getting more and more aggressive when he drinks",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "escalation or intimidation (Danger Assessment, Hotline): escalate-only concern"
+  },
+  {
+   "text": "He smashed my phone so I couldn't call anyone",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "escalation or intimidation (Danger Assessment, Hotline): escalate-only concern"
+  },
+  {
+   "text": "I'm afraid of my son, he yells and takes my checks",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "escalation or intimidation (Danger Assessment, Hotline): escalate-only concern"
+  },
+  {
+   "text": "Mi esposo se está poniendo muy violento",
+   "expect": {
+    "flag": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "escalation or intimidation (Danger Assessment, Hotline): escalate-only concern"
+  },
+  {
+   "text": "My car was hit by a truck on the highway and I need a lawyer",
+   "expect": {
+    "flag_absent": "dv"
+   },
+   "suite": "probes",
+   "_why": "a car hit by a truck: no person doing it to someone"
+  },
+  {
+   "text": "My son was assaulted at school by another student",
+   "expect": {
+    "flag_absent": "dv"
+   },
+   "suite": "probes",
+   "_why": "a family member as the victim of a stranger is not domestic violence"
+  },
+  {
+   "text": "The buyer threatened to kill the deal unless we sign today",
+   "expect": {
+    "flag_absent": "dv"
+   },
+   "suite": "probes",
+   "_why": "'kill the deal' is not a threat to a person"
+  },
+  {
+   "text": "My brother choked on a fishbone and we have no insurance",
+   "expect": {
+    "flag_absent": "dv"
+   },
+   "suite": "probes",
+   "_why": "choking on food"
+  },
+  {
+   "text": "The kids are getting more aggressive at daycare",
+   "expect": {
+    "flag_absent": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "children's behaviour, not a partner escalating"
+  },
+  {
+   "text": "I punched the wall and broke my hand, I need a doctor",
+   "expect": {
+    "flag_absent": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "the person hurt themselves; no one else is punching walls at them"
+  },
+  {
+   "text": "My dad is afraid of my brother's dog",
+   "expect": {
+    "flag_absent": "dv_concern"
+   },
+   "suite": "probes",
+   "_why": "afraid of a dog, not of a family member"
+  },
+  {
+   "text": "My landlord pulled a knife on me",
+   "expect": {
+    "flag_absent": "dv"
+   },
+   "suite": "probes",
+   "_why": "a landlord's threat is a police matter, not the domestic violence hotline"
+  },
+ {
+  "text": "não aguento mais esperar na fila do SNAP, preciso de comida",
+  "expect": {
+   "category": "food",
+   "flag_absent": "self_harm_concern"
+  },
+  "_why": "'can't stand waiting' is not the warning sign"
+ },
+ {
+  "text": "我的生意撑不下去了，需要医疗保险",
+  "expect": {
+   "category": "healthcare",
+   "flag_absent": "self_harm_concern"
+  },
+  "_why": "a business that can't go on"
+ },
+ {
+  "text": "больше не могу платить за квартиру",
+  "expect": {
+   "flag_absent": "self_harm_concern"
+  },
+  "_why": "can't pay the rent any more"
+ },
+ {
+  "text": "Je n'en peux plus de ce loyer trop cher",
+  "expect": {
+   "flag_absent": "self_harm_concern"
+  },
+  "_why": "fed up with the rent"
+ },
+ {
+  "text": "My ex-husband follows me on Instagram, I need food stamps",
+  "expect": {
+   "category": "food",
+   "flag_absent": "dv_concern"
+  },
+  "_why": "a social-media follow is not stalking"
+ },
+ {
+  "text": "My boss kicked me out of the meeting and I need help paying for insulin",
+  "expect": {
+   "category": "healthcare"
+  },
+  "_why": "out of a meeting, not out of a home"
+ },
+ {
+  "text": "my parents give me $500 a month, I need food",
+  "expect": {
+   "income_annual": 6000,
+   "category": "food"
+  },
+  "_why": "'parents' contains 'rent'"
+ },
+ {
+  "text": "I work for a flood insurance company and I need health insurance for my kids",
+  "expect": {
+   "category": "healthcare",
+   "flag_absent": "homeless"
+  },
+  "_why": "flood in a job title, not a lost home"
+ },
+ {
+  "text": "My home health aide quit and I need a doctor for my mother",
+  "expect": {
+   "category": "healthcare"
+  },
+  "_why": "'home' without a loss"
+ },
+ {
+  "text": "The fire department fixed the smoke alarm in my apartment, now I need food",
+  "expect": {
+   "category": "food"
+  },
+  "_why": "a fire department visit is not a house fire"
+ }
+ ]
+}

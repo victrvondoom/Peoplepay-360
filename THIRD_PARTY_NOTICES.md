@@ -222,3 +222,8 @@ files. Record newly accepted upstream commits and retain their original
 copyright/NOTICE files. Do not replace missing license evidence with a guessed
 SPDX identifier. Keep server, data, model, and application license reviews
 separate from Python package metadata.
+
+
+## CivicMesh
+
+CivicMesh is bundled under MIT, copyright (c) 2026 Anbu. Original notice/license: `CivicMesh-main/LICENSE`. Declared upstream: https://github.com/Anbu-00001/CivicMesh. Native project version 1.0.0; upstream commit was not supplied and is unknown. Original algorithms, policy data, UI and test suites are upstream work. PeoplePay adds an adapter, normalized evidence/decision intake, workflow routing and portal. See `docs/integration/CIVICMESH_UPSTREAM.md`.

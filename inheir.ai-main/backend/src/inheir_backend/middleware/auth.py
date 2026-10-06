@@ -1,4 +1,5 @@
 import jwt
+import time
 from typing import Dict, Optional, Callable
 from ..config import AppConfig
 from fastapi import Request, HTTPException, Response
@@ -13,6 +14,8 @@ class JWTMiddleware(BaseHTTPMiddleware):
         self, request: Request, call_next: Callable[[Request], Response]
     ) -> Response:
         if not (
+            request.method == "OPTIONS"
+            or
             request.url.path.startswith("/docs")
             or request.url.path.startswith("/openapi.json")
             or request.url.path.startswith("/api/v1/auth")
@@ -22,6 +25,8 @@ class JWTMiddleware(BaseHTTPMiddleware):
                 try:
                     payload = jwt.decode(
                         token, config.env.jwt_secret, algorithms=["HS512"])
+                    if int(payload.get("expires", 0)) < int(time.time()):
+                        raise jwt.ExpiredSignatureError("Legacy token has expired")
                     request.state.user = payload
                     response = await call_next(request)
                     return response
@@ -31,7 +36,7 @@ class JWTMiddleware(BaseHTTPMiddleware):
                     return JSONResponse(
                         status_code=401, content={"status": "failed", "message": "JWT token has expired"})
 
-                except jwt.PyJWTError:
+                except (jwt.PyJWTError, ValueError, TypeError):
                     request.state.user = None
                     return JSONResponse(
                         status_code=401, content={"status": "failed", "message": "JWT token is invalid"})

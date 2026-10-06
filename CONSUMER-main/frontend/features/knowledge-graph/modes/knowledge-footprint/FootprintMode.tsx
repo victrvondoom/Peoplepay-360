@@ -192,7 +192,7 @@ export function FootprintMode({ onOpenCase }: { onOpenCase: (caseId: string) => 
               </div>
             </>
           ) : (
-            <p className="text-xs text-proxy-tertiary">Click a domain planet to see confidence, institutions, and cases -- or a moon to jump straight into that case's Reasoning Trail.</p>
+            <p className="text-xs text-proxy-tertiary">Click a domain planet to see confidence, institutions, and cases -- or a moon to jump straight into that case&apos;s Reasoning Trail.</p>
           )}
         </aside>
       </div>

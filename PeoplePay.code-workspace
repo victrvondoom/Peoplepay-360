@@ -1,0 +1,15 @@
+{
+  "folders": [
+    {"name": "PeoplePay core", "path": "."},
+    {"name": "ECHO", "path": "echo"},
+    {"name": "GreenChain", "path": "GREENCHAIN-main/greenchain"},
+    {"name": "InflationForge", "path": "Inflation-Forge-main"},
+    {"name": "CivicMesh", "path": "CivicMesh-main/civicmesh"},
+    {"name": "InHeir backend", "path": "inheir.ai-main/backend"},
+    {"name": "Beacon", "path": "Beacon-main"},
+    {"name": "PROXY", "path": "CONSUMER-main/backend"},
+    {"name": "Rumi", "path": "rumi-main"}
+  ],
+  "settings": {"python.analysis.autoSearchPaths": true},
+  "extensions": {"recommendations": ["ms-python.python", "ms-python.vscode-pylance", "dbaeumer.vscode-eslint"]}
+}

@@ -25,4 +25,11 @@ output/playwright/
 .venv-echo/
 .venv-journey-review/
 .venv-greenchain-review/
+.venv-inflationforge-review/
+.venv-inheir-review/
 *.egg-info/
+.venv-civicmesh/
+output/diagnostics/
+output/frontend-review/
+**/.jac/
+**/__jac_gen__/

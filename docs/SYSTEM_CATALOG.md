@@ -1,5 +1,25 @@
 # PeoplePay system catalog
 
+## Current verified integration, 2026-10-06
+
+The reference procurement lifecycle is now implemented and tested: GreenChain/InflationForge SDK receipts -> ECHO -> exact approval -> Gateway/reference merchant -> partial-delivery event -> PROXY draft. CivicMesh additionally supplies real deterministic U.S. assistance policy results through the SDK into ECHO and the portal, with versioned follow-up. Live provider, identity, payment and specialist session limits remain.
+
+| Project | Capability | Current / target level | Adapter / SDK | ECHO / Gateway / UI | Events and health | Tests and license | Limits |
+|---|---|---|---|---|---|---|---|
+| CivicMesh | Policy eligibility, next question, proposed plan/routes | 3 / 4 | Real HTTP service, SDK v1 normalization | Canonical graph decisions; advisory workflow; /assistance | Correlated SDK events; engine/model health split | Native golden + guard + boundary + SDK + graph; MIT | U.S. only, heuristic scores, bundled policy, no native session/SSO federation |
+| GreenChain | Supplier/environment/logistics observations | 3 / 4 | Native service + explicit reference capture, SDK | Procurement graph and approved sandbox journey | Provider health, correlated journey | Native suite; upstream license unresolved | Live credentials and provenance/license rights unresolved |
+| InflationForge | Dated price context | 3 / 4 | Native receipt adapter, SDK; scoped ECHO adapter | Procurement and price evidence | Health, observation times and journey events | Native suite; MIT | City basket observations are not merchant quotes |
+| PROXY | Dispute drafts | 3 / 4 | Typed transaction evidence packet; live/reference adapter | Downstream automatic sandbox discrepancy handoff | Draft failure and retry preserved | Native tests; upstream license unresolved | No official submission or legal adjudication |
+| Rumi | Room/product selection | 1 / 3 | Existing bounded spatial adapter; no complete SDK provider | Separate specialist UI | Existing capability health | Native tests; upstream license unresolved | Convex/Clerk/service contract still needed for full handoff |
+| InHeir | Property/legal evidence | 1 / 3 | Existing bounded property adapter; no complete SDK provider | Separate specialist UI | Existing capability health | New native service regressions; MIT backend | Azure/Mongo credentials and full live journey remain |
+| Beacon | Operations assurance | Separate operations plane | Existing assurance/runtime APIs | Separate operational approval/UI | Incident lifecycle and health | Native suite; retain upstream notices | Does not share consumer action authority |
+
+See [CivicMesh report](integration/CIVICMESH_INTEGRATION_REPORT.md), [technical map](integration/CIVICMESH_TECHNICAL_MAP.md), [source of truth](architecture/SOURCE_OF_TRUTH_MATRIX.md), and [unified journey](unified-journey-v1.md).
+
+## Earlier catalog snapshot
+
+The remaining tables record the earlier unification stage; the current matrix above supersedes their integration-level statements.
+
 This catalog describes how the code in this checkout fits the single PeoplePay
 product without collapsing the applications into one runtime or dependency
 tree. Integration levels: **0 linked**, **1 shared navigation**, **2 shared

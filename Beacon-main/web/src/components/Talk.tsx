@@ -228,7 +228,7 @@ export function Talk({
       alive = false;
       if (id) window.clearInterval(id);
     };
-  }, [api, incident.incident_id, incident.status, replayTurns]);
+  }, [api, incident.incident_id, incident.status, incident.timeline, incident.executed_at, incident.timestamp, incident.alarm_name, replayTurns]);
 
   const speak = useCallback(
     (msgIndex: number, resp: TurnResponse) => {
@@ -285,7 +285,7 @@ export function Talk({
       });
       if (resp.incident) onIncident(resp.incident);
     },
-    [api, incident.incident_id, onIncident, replayTurns, sessionId, speak],
+    [api, incident.incident_id, onIncident, replayTurns, sessionId, speak, sttLanguage],
   );
 
   const send = useCallback(
@@ -370,7 +370,7 @@ export function Talk({
       setState("error");
       setError(e instanceof Error ? e.message : String(e));
     }
-  }, [activeStt, api, player, replayTurns, send, state]);
+  }, [activeStt, api, player, replayTurns, send, state, sttLanguage]);
 
   const stopListening = useCallback(async () => {
     const t = transport.current;

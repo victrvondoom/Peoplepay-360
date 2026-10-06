@@ -335,3 +335,8 @@ dependencies change. Pin an inspected upstream revision for any reused source
 or model. Recheck the diff, schema, licensing, credentials, permissions, and
 tests before changing an upstream version. Do not update an upstream service
 silently if its output schema is part of the reviewed contract.
+
+
+## Real bounded-service example: CivicMesh
+
+`extensions/civicmesh` demonstrates explicit registration, typed/minimized request, jurisdiction coverage, health, deadline, result validation, producer trace, SDK-to-ECHO translation and UI follow-up without rewriting the provider. `journey/extension_runtime.py` uses the existing SDK registry; ECHO uses its existing manifest/runtime/ingestion boundary. SDK v1 request/result schemas remain unchanged; program claims/estimates use entity attributes, and question/paths use the bounded receipt envelope. Conceptual assistance.eligibility maps to the existing snake_case capability assistance_eligibility. See the adapter README and native boundary tests.

@@ -2,7 +2,7 @@
 const $ = (id) => document.getElementById(id);
 let user = localStorage.getItem("peoplepay-user") || crypto.randomUUID();
 localStorage.setItem("peoplepay-user", user);
-let token = "",
+let token = sessionStorage.getItem("peoplepay-token") || "",
   selected = null,
   transactions = [],
   context = {},
@@ -215,6 +215,7 @@ account.onsubmit = (e) => {
   run(async () => {
     user = account.elements.user.value.trim();
     token = account.elements.token.value;
+    sessionStorage.setItem("peoplepay-token", token);
     localStorage.setItem("peoplepay-user", user);
     selected = null;
     transactions = [];

@@ -164,3 +164,8 @@ native GreenChain scorer were required for the integration verification. The
 browser also verified error recovery and preserved dispute retry. All 1,945
 original baseline paths remain. Full evidence and remaining deployment/native
 service limits are in [the remediation record](error-remediation-2026-10-06.md).
+
+
+## Continued repairs and CivicMesh integration
+
+See `integration/CIVICMESH_INTEGRATION_REPORT.md` for the current verified assistance chain, preservation results, test matrix and limits. Native frontend lint/type errors and backend document/auth/collection bugs were addressed; prior published readiness caveats still apply.

@@ -70,7 +70,7 @@ Open `http://127.0.0.1:8080/journey`. These services use the existing local
 PeoplePay actor. OPEN identity is for loopback development only. If using
 signed bearer authentication, set the same `BEACON_GATEWAY_SECRET` in both
 service terminals and enter an operator-issued token in the portal. The token
-is forwarded to ECHO and retained only in browser memory. This is not SSO.
+is forwarded to ECHO and retained in sessionStorage for that browser tab so navigation to assistance preserves the same authorization context. This is not SSO.
 
 SQLite records and FalkorDB's named volume persist across restarts. Keep those
 stores together when backing up the workflow. `docker compose -f compose.echo.yaml down`

@@ -1,0 +1,6 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv-journey-review/Scripts/python.exe",
+  "python.analysis.extraPaths": ["Beacon-main/src", "packages/peoplepay-extension-sdk/src"],
+  "python.analysis.exclude": ["**/.venv*/**", "**/node_modules/**", "CivicMesh-main", "GREENCHAIN-main", "Inflation-Forge-main", "CONSUMER-main", "inheir.ai-main", "rumi-main", "Beacon-main"],
+  "python.analysis.diagnosticMode": "openFilesOnly"
+}

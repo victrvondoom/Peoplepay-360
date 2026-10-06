@@ -130,3 +130,8 @@ synthetic cross-extension ingestion, and a planning handoff. It does not prove
 live supplier accuracy, hidden-copy detection, production identity, multi-
 worker approval safety, or live merchant checkout. Build these in layers and
 keep each readiness claim tied to its tests and actual provider environment.
+
+
+## Current assistance milestone
+
+CivicMesh is now a real policy capability provider. PeoplePay retains minimal workflow context; CivicMesh computes assistance options; ECHO preserves normalized evidence and advisory decision versions; the portal supports follow-up and historical comparison. Procurement and dispute journeys remain separate authorized action paths. Rumi/InHeir/Beacon retain their existing bounded roles; they are not claimed as fully federated workflows.

@@ -1,0 +1,37 @@
+version: 2
+updates:
+  # Python packages: security updates only. The stack is pinned as a unit:
+  # jaclang and byllm pin litellm (and through it openai, fastapi and friends)
+  # exactly, so version bumps can't resolve one by one or grouped (#18: 50
+  # packages, ResolutionImpossible on litellm vs byllm==0.6.7). A limit of 0
+  # turns version updates off; security updates don't count against it and
+  # still arrive. The stack moves together in the planned Jac migration
+  # (docs/MAINTENANCE.md).
+  - package-ecosystem: pip
+    directory: "/"
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0
+    groups:
+      jac:
+        patterns: ["jac*", "byllm", "jaseci"]
+      python:
+        patterns: ["*"]
+        exclude-patterns: ["jac*", "byllm", "jaseci"]
+    # The Jac stack is held at its pins. The grouped upgrade to jaclang 0.16.7 /
+    # jac-scale 0.2.31 failed the end-to-end job: jac-scale now starts in
+    # microservice mode, its gateway listens on :8000 instead of 7860, and the
+    # walker services never report healthy. Delete this block once that
+    # migration is done on a branch (docs/MAINTENANCE.md).
+    ignore:
+      - dependency-name: "jac*"
+      - dependency-name: "byllm"
+      - dependency-name: "jaseci"
+  # GitHub Actions: all updates in one PR.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ["*"]

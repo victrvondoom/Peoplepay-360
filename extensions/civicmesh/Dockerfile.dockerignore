@@ -1,0 +1,25 @@
+# Only the adapter and supplied CivicMesh source belong in this build context.
+**
+!CivicMesh-main/
+!CivicMesh-main/**
+!extensions/
+!extensions/__init__.py
+!extensions/civicmesh/
+!extensions/civicmesh/**
+**/.env
+**/.env.*
+**/.venv*/
+**/venv/
+**/__pycache__/
+**/.jac/
+**/__jac_gen__/
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/node_modules/
+**/.git/
+**/.vscode/
+**/*.pyc
+**/*.sqlite3*
+**/*.db*
+**/*.log

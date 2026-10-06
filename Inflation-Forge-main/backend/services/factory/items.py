@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import builtins
 from datetime import datetime, timezone
 from pathlib import Path
 import re
@@ -46,11 +47,11 @@ class ItemCapabilityFactory:
         self.artifacts_dir.mkdir(parents=True, exist_ok=True)
         self._ensure_builtins()
 
-    def list(self, include_retired: bool = True) -> list[TrackedItem]:
+    def list(self, include_retired: bool = True) -> builtins.list[TrackedItem]:
         items = [TrackedItem.model_validate(row) for row in self.db.list("tracked_item", limit=250)]
         return items if include_retired else [item for item in items if item.status == ItemStatus.ACTIVE]
 
-    def active(self) -> list[TrackedItem]:
+    def active(self) -> builtins.list[TrackedItem]:
         return self.list(include_retired=False)
 
     def get(self, item_id: str) -> TrackedItem:
@@ -59,7 +60,7 @@ class ItemCapabilityFactory:
             raise KeyError("Tracked item not found")
         return TrackedItem.model_validate(raw)
 
-    def create(self, request: TrackedItemCreate, catalog: list[SourceCatalogItem]) -> TrackedItem:
+    def create(self, request: TrackedItemCreate, catalog: builtins.list[SourceCatalogItem]) -> TrackedItem:
         normalized_label = self._normalized(request.source_label)
         duplicate = next((item for item in self.list() if normalized_label in {self._normalized(term) for term in item.match_terms}), None)
         if duplicate:
@@ -94,7 +95,7 @@ class ItemCapabilityFactory:
         self._record(item, "RESTORED", actor, "Item returned to the active collection set.")
         return item
 
-    def events(self) -> list[FactoryEvent]:
+    def events(self) -> builtins.list[FactoryEvent]:
         return [FactoryEvent.model_validate(row) for row in self.db.list("factory_event", limit=100)]
 
     def counts(self) -> dict[str, int]:
@@ -139,7 +140,7 @@ class ItemCapabilityFactory:
         return re.sub(r"\b(?:1\s*(?:lb|kg|pound)|500\s*g)\b", "", normalized).strip()
 
     @staticmethod
-    def _validate(request: TrackedItemCreate, catalog_match: bool) -> list[ValidationCheck]:
+    def _validate(request: TrackedItemCreate, catalog_match: bool) -> builtins.list[ValidationCheck]:
         return [
             ValidationCheck(id="source-binding", name="Live source binding", passed=catalog_match, detail=f"Matched live source row: {request.source_label}." if catalog_match else "Choose an exact row discovered from the live city source."),
             ValidationCheck(id="normalization", name="Unit normalization", passed=0 < request.conversion_multiplier <= 100, detail=f"Multiplier {request.conversion_multiplier:g} converts the source row into {request.unit}."),

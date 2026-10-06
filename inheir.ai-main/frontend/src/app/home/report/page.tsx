@@ -25,11 +25,9 @@ const SubmitReport = () => {
     position: ToastPosition = "bottom-end",
   ) => {
     dispatchToast(
-      <>
-        <Toast>
+      <Toast>
           <ToastTitle className="text-lg font-semibold">{message}</ToastTitle>
-        </Toast>
-      </>,
+        </Toast>,
       {
         intent,
         position: position,
@@ -64,7 +62,7 @@ const SubmitReport = () => {
       });
 
       if (res.ok) {
-        const report_id: string = await res.json();
+        await res.json();
         ToastMessage(
           "Successfully submitted report. Thank you for reporting.",
           "success",
@@ -73,7 +71,7 @@ const SubmitReport = () => {
       } else {
         ToastMessage("Error creating case. Please try again.", "error");
       }
-    } catch (error) {
+    } catch {
       ToastMessage("An unexpected error occurred. Please try again.", "error");
     }
   };
@@ -173,8 +171,6 @@ const SubmitReport = () => {
 
 export default function Page() {
   return (
-    <>
-      <SubmitReport />
-    </>
+    <SubmitReport />
   );
 }

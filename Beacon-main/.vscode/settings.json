@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/../.venv-beacon-review/Scripts/python.exe",
+  "python.analysis.extraPaths": ["src"]
+}

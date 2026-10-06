@@ -38,6 +38,7 @@ def reviewed_manifest(extension_id: str) -> ExtensionManifest:
     catalog = {
         "greenchain": ("GreenChain SDK observations", "SUPPLIER_DISCOVERY", "supplier_discovery", "LICENSE_UNKNOWN"),
         "inflationforge": ("InflationForge SDK observations", "PRICE_INTELLIGENCE", "price_intelligence", "MIT"),
+        "civicmesh": ("CivicMesh assistance policy", "POLICY_ENGINE", "assistance_eligibility", "MIT"),
     }
     if extension_id not in catalog:
         raise ValueError("journey adapter has not been reviewed")
@@ -46,8 +47,9 @@ def reviewed_manifest(extension_id: str) -> ExtensionManifest:
         "schema_version": "1", "id": extension_id, "name": name, "version": "1.0.0",
         "type": category, "enabled": True, "runtime": {"mode": "builtin"},
         "license": {"spdx": license_id, "source_reused": False,
-                    "notice_required": extension_id == "inflationforge"},
-        "capabilities": [capability], "graph": {"read": [], "write": ["Supplier", "Product", "Claim", "Evidence", "Source"]},
+                    "notice_required": extension_id in {"inflationforge", "civicmesh"}},
+        "upstream": {"repository": "https://github.com/Anbu-00001/CivicMesh"} if extension_id == "civicmesh" else {},
+        "capabilities": [capability], "graph": {"read": [], "write": ["Program", "Claim", "Evidence", "Source"] if extension_id == "civicmesh" else ["Supplier", "Product", "Claim", "Evidence", "Source"]},
     })
 
 
@@ -91,11 +93,11 @@ def to_echo_result(result: ExtensionResult) -> NormalizedResult:
     claims: list[ClaimProposal] = []
     evidence: list[EvidenceProposal] = []
     for entity in result.entities:
-        if entity.entity_type not in {"supplier", "price_observation", "product", "organization", "place"}:
+        if entity.entity_type not in {"supplier", "price_observation", "product", "organization", "place", "program"}:
             raise ValueError("journey result has an unsupported entity type")
-        entity_types: dict[str, Literal["Supplier", "Product", "Organization", "Place"]] = {
+        entity_types: dict[str, Literal["Supplier", "Product", "Organization", "Place", "Program"]] = {
             "supplier": "Supplier", "price_observation": "Product", "product": "Product",
-            "organization": "Organization", "place": "Place"}
+            "organization": "Organization", "place": "Place", "program": "Program"}
         type_name = entity_types[entity.entity_type]
         aliases = dict(entity.identifiers)
         if "domain" in aliases:

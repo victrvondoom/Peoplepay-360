@@ -26,8 +26,7 @@ import {
 import { EyeOffRegular, EyeRegular } from "@fluentui/react-icons";
 import { useRouter } from "next/navigation";
 import type React from "react";
-import { type ChangeEvent, useEffect, useState } from "react";
-import { setTimeout } from "timers";
+import { type ChangeEvent, useCallback, useEffect, useState } from "react";
 import * as v from "valibot";
 import { setItems } from "@/lib/utils";
 import { SignInSchema, SignUpSchema } from "@/lib/validators/schema";
@@ -110,12 +109,10 @@ const AuthForm = () => {
     position: ToastPosition = "bottom-end",
   ) => {
     dispatchToast(
-      <>
-        <Toast>
+      <Toast>
           <ToastTitle className="text-lg font-semibold">{message}</ToastTitle>
           <ToastBody className="text-sm">{description}</ToastBody>
-        </Toast>
-      </>,
+        </Toast>,
       {
         intent,
         position,
@@ -133,7 +130,7 @@ const AuthForm = () => {
     setIsPolicyAccepted(false);
   };
 
-  const validateFormData = () => {
+  const validateFormData = useCallback(() => {
     const res = v.safeParse(
       formType === "signup" ? SignUpSchema : SignInSchema,
       formData,
@@ -172,7 +169,7 @@ const AuthForm = () => {
       full_name: newValidMsg.full_name,
     }));
     return res.success;
-  };
+  }, [formType, formData, isValidUserName]);
 
   const signUpHandler = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -333,7 +330,7 @@ const AuthForm = () => {
     if (focusState) {
       validateFormData();
     }
-  }, [formData, focusState]);
+  }, [validateFormData, focusState]);
 
   return (
     <div className="flex flex-col gap-5 items-center lg:justify-center surround w-full lg:w-3/8 bg-gray-100 border-t-4 border-b-4 border-dotted lg:border-l-6 lg:border-t-0 lg:border-b-0 lg:h-screen">
@@ -344,7 +341,7 @@ const AuthForm = () => {
           <Tab value={`signin`}>Sign In</Tab>
         </TabList>
       </div>
-      <div
+      <fieldset
         className="flex flex-col w-full p-6 items-center gap-y-5"
         onFocus={() => onFocusChange(true)}
         onBlur={() => onFocusChange(false)}
@@ -370,7 +367,7 @@ const AuthForm = () => {
                 <Input
                   value={formData.username}
                   appearance="underline"
-                  onChange={(_: any, data: InputOnChangeData) => {
+                  onChange={(_, data: InputOnChangeData) => {
                     setFormData((prev) => ({ ...prev, username: data.value }));
                   }}
                   disabled={isValidUserName}
@@ -407,7 +404,7 @@ const AuthForm = () => {
                   <Input
                     value={formData.full_name}
                     appearance="underline"
-                    onChange={(_: any, data: InputOnChangeData) => {
+                    onChange={(_, data: InputOnChangeData) => {
                       setFormData((prev) => ({
                         ...prev,
                         full_name: data.value,
@@ -428,7 +425,7 @@ const AuthForm = () => {
                     type="email"
                     value={formData.email}
                     appearance="underline"
-                    onChange={(_: any, data: InputOnChangeData) => {
+                    onChange={(_, data: InputOnChangeData) => {
                       setFormData((prev) => ({ ...prev, email: data.value }));
                     }}
                     disabled={isLoading}
@@ -447,7 +444,7 @@ const AuthForm = () => {
                     contentAfter={EyeToggleButton(showPassword)}
                     value={formData.password}
                     appearance="underline"
-                    onChange={(_: any, data: InputOnChangeData) => {
+                    onChange={(_, data: InputOnChangeData) => {
                       setFormData((prev) => ({
                         ...prev,
                         password: data.value,
@@ -504,7 +501,7 @@ const AuthForm = () => {
                   type="text"
                   value={formData.username}
                   appearance="underline"
-                  onChange={(_: any, data: InputOnChangeData) => {
+                  onChange={(_, data: InputOnChangeData) => {
                     setFormData((prev) => ({ ...prev, username: data.value }));
                   }}
                   disabled={isLoading}
@@ -523,7 +520,7 @@ const AuthForm = () => {
                   contentAfter={EyeToggleButton(showPassword)}
                   value={formData.password}
                   appearance="underline"
-                  onChange={(_: any, data: InputOnChangeData) => {
+                  onChange={(_, data: InputOnChangeData) => {
                     setFormData((prev) => ({ ...prev, password: data.value }));
                   }}
                   disabled={isLoading}
@@ -555,7 +552,7 @@ const AuthForm = () => {
             </form>
           </div>
         )}
-      </div>
+      </fieldset>
     </div>
   );
 };

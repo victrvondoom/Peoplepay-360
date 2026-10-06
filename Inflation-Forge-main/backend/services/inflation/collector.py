@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+from calendar import monthrange
 from contextlib import nullcontext
 from dataclasses import dataclass
 from datetime import datetime, timezone
@@ -161,7 +162,10 @@ class CityPriceCollector:
         collections: list[CityCollection] = []
         errors: list[str] = []
         for city, result in zip(CITY_CATALOG, results, strict=True):
-            if isinstance(result, Exception):
+            if isinstance(result, BaseException):
+                if not isinstance(result, Exception):
+                    # Cancellation and process termination must not become price data.
+                    raise result
                 detail = str(result) or type(result).__name__
                 errors.append(f"{city.name}: {detail}")
             else:
@@ -247,7 +251,8 @@ class CityPriceCollector:
         timestamps = [row[0] for row in rows[1:] if row and re.fullmatch(r"\d{14}", row[0])]
         if not timestamps:
             raise RuntimeError(f"no {year} archive capture")
-        target = datetime(year, datetime.now(timezone.utc).month, datetime.now(timezone.utc).day, tzinfo=timezone.utc)
+        now = datetime.now(timezone.utc)
+        target = datetime(year, now.month, min(now.day, monthrange(year, now.month)[1]), tzinfo=timezone.utc)
         return min(timestamps, key=lambda value: abs((datetime.strptime(value, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc) - target).total_seconds()))
 
     async def _get(
@@ -259,7 +264,7 @@ class CityPriceCollector:
         last_error: Exception | None = None
         for attempt in range(3):
             try:
-                response = await client.get(url, params=params, headers=self._headers())
+                response = await client.get(url, params=httpx.QueryParams(tuple(params)) if params is not None else None, headers=self._headers())
                 response.raise_for_status()
                 return response
             except (httpx.TimeoutException, httpx.HTTPStatusError, httpx.TransportError) as exc:

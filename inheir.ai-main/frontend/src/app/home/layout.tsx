@@ -19,7 +19,6 @@ import {
 import { ArrowExit20Regular, HomeFilled } from "@fluentui/react-icons";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { setTimeout } from "timers";
 import AppContainer from "@/lib/components/AppContainer";
 import { Cases } from "@/lib/components/Cases";
 import { clearItems, getItem, isSignedOut } from "@/lib/utils";
@@ -34,11 +33,9 @@ const Dashboard = ({ children }: { children: React.ReactNode }) => {
     position: ToastPosition = "bottom-end",
   ) => {
     dispatchToast(
-      <>
-        <Toast>
+      <Toast>
           <ToastTitle className="text-lg font-semibold">{message}</ToastTitle>
-        </Toast>
-      </>,
+        </Toast>,
       {
         intent,
         position: position,
@@ -88,10 +85,10 @@ const Dashboard = ({ children }: { children: React.ReactNode }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if (data && data.is_admin) setIsAdmin(true);
+        if (data?.is_admin) setIsAdmin(true);
       })
       .catch(() => setIsAdmin(false));
-  }, []);
+  }, [router]);
 
   return (
     <AppContainer>
@@ -153,6 +150,7 @@ const Dashboard = ({ children }: { children: React.ReactNode }) => {
                 </Button>
               )}
               <button
+                type="button"
                 onClick={logoutHandler}
                 className="text-sm lg:text-lg text-white bg-red-500 hover:bg-red-600 px-4 py-2 rounded transition-colors flex items-center justify-center gap-2 mt-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-red-400 w-full"
                 style={{ minHeight: "40px" }}
@@ -186,7 +184,7 @@ const Dashboard = ({ children }: { children: React.ReactNode }) => {
               <h1 className="text-lg font-bold">Loading...</h1>
             </div>
           ) : (
-            <>{children}</>
+            children
           )}
         </div>
       </div>

@@ -377,3 +377,8 @@ Unified rule for the integrated system: **the model proposes, code checks, evide
 4. **PROXY's role** — accept the reframe from "booking" to "resolution engine"?
 5. **Currency** — target INR? Then InflationForge's USD city data is background evidence only, not transaction price evidence.
 6. **InHeir tests** — it has zero. Add coverage before wiring it into a money path?
+
+
+## CivicMesh extension boundary, 2026-10-06
+
+PeoplePay Portal -> deterministic capability router -> reviewed CivicMesh service -> SDK -> ECHO -> advisory decision/history -> user. Separately, an approved procurement decision -> Gateway -> reference merchant -> order event -> PROXY. Original CivicMesh graph/UI/model runtime remains bounded and optional. See `architecture/SOURCE_OF_TRUTH_MATRIX.md` and `integration/CIVICMESH_TECHNICAL_MAP.md`.

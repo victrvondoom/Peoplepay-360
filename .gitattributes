@@ -17,3 +17,6 @@ CONSUMER-main/backend/datasets/vector_embeddings/proxy_telecom_v1_nvidia_1024.js
 
 # Preserve recovered source PDF bytes and avoid text diffs.
 *.pdf binary
+
+# Preserve the supplied CivicMesh snapshot exactly on Windows and Linux.
+CivicMesh-main/** -text

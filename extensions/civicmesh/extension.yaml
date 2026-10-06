@@ -1,0 +1,28 @@
+schema_version: '1'
+id: civicmesh
+name: CivicMesh assistance policy intelligence
+version: 1.0.0
+type: POLICY_ENGINE
+enabled: false
+upstream:
+  repository: https://github.com/Anbu-00001/CivicMesh
+license:
+  spdx: MIT
+  notice_required: true
+  source_reused: true
+runtime:
+  mode: service
+  language: jac
+  url_env: PEOPLEPAY_CIVICMESH_API_URL
+  auth_secret_env: PEOPLEPAY_CIVICMESH_TOKEN
+  allowed_hosts: [127.0.0.1, localhost, civicmesh]
+  timeout_seconds: 15
+capabilities: [assistance_eligibility]
+permissions:
+  network: true
+graph:
+  read: []
+  write: [Program, Claim, Evidence, Source]
+secrets: [PEOPLEPAY_CIVICMESH_TOKEN]
+healthcheck:
+  path: /health

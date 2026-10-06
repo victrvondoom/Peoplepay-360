@@ -7,7 +7,10 @@
     "deve": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
-    "lint": "bunx --bun biome format --write"
+    "lint": "biome lint .",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@fluentui/react-components": "^9.72.8",

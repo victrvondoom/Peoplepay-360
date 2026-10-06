@@ -5,6 +5,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+from starlette.types import Scope
 
 from backend.config import settings
 from backend.models.domain import InflationDashboard, PriceSnapshot, PriceSyncJob, TrackedItem, TrackedItemCreate
@@ -24,7 +25,7 @@ static_dir = settings.root / "frontend" / "static"
 
 
 class CachedStaticFiles(StaticFiles):
-    async def get_response(self, path: str, scope: dict):
+    async def get_response(self, path: str, scope: Scope):
         response = await super().get_response(path, scope)
         if response.status_code == 200:
             response.headers["Cache-Control"] = "public, max-age=3600, stale-while-revalidate=86400"

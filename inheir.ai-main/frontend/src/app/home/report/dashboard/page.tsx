@@ -78,10 +78,10 @@ export default function ReportDashboard() {
         return res.json();
       })
       .then((json: ReportApiResponse) => setReports(json.data))
-      .catch((err) => {
+      .catch(() => {
         router.push("/");
       });
-  }, []);
+  }, [router]);
 
   const openDialog = (report: Report, action: ActionType) => {
     setSelectedReport(report);
@@ -136,8 +136,8 @@ export default function ReportDashboard() {
 
       // Auto close success modal after 3 seconds
       setTimeout(() => setSuccessModalOpen(false), 3000);
-    } catch (err: any) {
-      alert("Error: " + err.message);
+    } catch (err: unknown) {
+      alert(`Error: ${err instanceof Error ? err.message : "Failed to update report"}`);
     }
   };
 
@@ -193,6 +193,7 @@ export default function ReportDashboard() {
                       </div>
                       {r.report && r.report.length > 20 && (
                         <button
+                          type="button"
                           onClick={() =>
                             setExpandedReports((prev) => ({
                               ...prev,
@@ -233,6 +234,7 @@ export default function ReportDashboard() {
                       </div>
                       {r.reason && r.reason.length > 20 && (
                         <button
+                          type="button"
                           onClick={() =>
                             setExpandedReasons((prev) => ({
                               ...prev,
@@ -298,7 +300,7 @@ export default function ReportDashboard() {
                             </MenuItem>
                           </MenuList>
                         </MenuPopover>
-                      ): <></>}
+                      ): <span hidden />}
                     </Menu>
                   </TableCell>
                 </TableRow>

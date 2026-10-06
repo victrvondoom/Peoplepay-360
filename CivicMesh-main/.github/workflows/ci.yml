@@ -1,0 +1,184 @@
+name: CI
+
+# Every push and pull request runs the same checks used locally:
+#   engine    — the 439-case eval (regression floor), message catalogs,
+#               privacy guard, and in-process walker tests (Jac)
+#   portable  — the same eval on the engine ejected to plain Python, run in a
+#               venv with no Jac installed (the escape hatch from the stack)
+#   external  — the router on real people's posts (LegalBench learned_hands),
+#               held-out numbers printed to the run summary; never fails the run
+#   e2e       — the production Docker image, 69 HTTP checks, a scan of the
+#               server logs for anything a user typed, and attack simulations
+#               against a second container (tests/security_e2e.py)
+# No secrets are needed: nothing on these paths calls a real LLM (the attack
+# simulations use tests/fake_llm.py and dummy keys that must never leak).
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  engine:
+    name: Engine eval · catalogs · privacy · walker tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: civicmesh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install pinned dependencies
+        run: pip install -r ../requirements.txt
+      - name: Engine eval — 439 golden cases and 14 conversations, fails below the regression floor
+        run: jac run tests/eval_engine.jac
+      - name: Message catalogs — keys, placeholders, numbers, detector round trip
+        run: jac run tests/check_messages.jac
+      - name: Input cost — linear money pattern, 4,000-character clip, hostile inputs under 1 s
+        run: jac run tests/check_input_limits.jac
+      - name: Abuse protection — limiter, tokens, model budget, client address, redaction (unit)
+        run: python3 -m unittest tests.test_cmguard -v
+      - name: Privacy guard — scrubbing, over-scrubbing, crisis turns
+        run: jac run tests/check_privacy.jac
+      - name: Policy dates — SNAP FY2027, net test, P.L. 119-21 rules, against published figures
+        run: jac run tests/check_policy.jac
+      - name: In-process walker tests — schema, personas, stored-data privacy
+        run: |
+          for t in tests/test_schema.jac tests/persona_single_mother.jac tests/persona_undocumented.jac \
+                   tests/persona_elderly_legal.jac tests/test_privacy_graph.jac; do
+            # A clean local store per test: jaclang 0.15.1's CLI store can keep a
+            # dangling edge after a delete (see docs/MAINTENANCE.md).
+            rm -rf .jac/data
+            echo "::group::$t"; jac test "$t"; echo "::endgroup::"
+          done
+      - name: Translation review status
+        run: python3 tools/review_sheet.py --status >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: eval-report
+          path: civicmesh/tests/eval_report.json
+          if-no-files-found: ignore
+
+  portable:
+    name: Same eval on the engine ejected to plain Python (no Jac)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: civicmesh
+    env:
+      COLUMNS: "100000"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - name: Install the Jac toolchain (only to transpile)
+        run: pip install -r ../requirements.txt
+      - name: Transpile the engine and run its eval in a fresh venv with no Jac packages
+        run: |
+          python -m venv "$RUNNER_TEMP/plain"
+          if "$RUNNER_TEMP/plain/bin/python" -m pip list 2>/dev/null | grep -i jac; then exit 1; fi
+          sh tools/eject_engine.sh "$RUNNER_TEMP/ejected" "$RUNNER_TEMP/plain/bin/python"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: civicmesh-engine-python
+          path: ${{ runner.temp }}/ejected
+
+  external:
+    name: External check on real posts (measured, not gating)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    continue-on-error: true
+    defaults:
+      run:
+        working-directory: civicmesh
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - uses: actions/cache@v6
+        with:
+          path: civicmesh/tests/.external
+          key: learned-hands-v1
+      - run: pip install -r ../requirements.txt
+      - name: LegalBench learned_hands — dv flag, housing, health, immigration status
+        run: |
+          jac run tests/eval_external.jac | tee external.txt
+          { echo '```'; cat external.txt; echo '```'; } >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v7
+        with:
+          name: external-report
+          path: civicmesh/tests/external_report.json
+          if-no-files-found: ignore
+
+  e2e:
+    name: Docker image · HTTP end-to-end · log privacy
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: docker/setup-buildx-action@v4
+      - name: Build the production image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          load: true
+          tags: civicmesh:ci
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+      - name: Start the app
+        run: |
+          docker run -d --name cm -p 7860:7860 civicmesh:ci
+          for _ in $(seq 1 90); do curl -sf -o /dev/null http://localhost:7860/ && exit 0; sleep 2; done
+          docker logs cm; exit 1
+      - name: HTTP end-to-end (69 checks, no LLM key)
+        run: python3 civicmesh/tests/e2e_http.py http://localhost:7860
+      - name: Accessibility — axe-core on the chat, replies announced, focus returned
+        run: |
+          pip install websocket-client
+          python3 civicmesh/tests/a11y_axe.py http://localhost:7860
+      - name: Browser — quick exit (own tab, Shift ×3, private session, sandboxed frame), first message during sign-in, return visit
+        run: python3 civicmesh/tests/browser_e2e.py http://localhost:7860
+      - name: Server logs hold no user text
+        run: |
+          if docker logs cm 2>&1 | grep -nE "case_text|123-45-6789|kill myself|老公|scared to go home|\{'version'"; then
+            echo "user text reached the server logs" >&2; exit 1
+          fi
+      - name: Security — attack simulations (second container, fake model provider, tight limits)
+        run: |
+          python3 civicmesh/tests/fake_llm.py 8799 0.3 &
+          docker run -d --name cm-sec -p 7861:7860 --add-host=host.docker.internal:host-gateway \
+            -e CIVICMESH_LLM_MODELS=openai/fake-retired,openai/fake-narrator -e CIVICMESH_POLYGLOT_MODELS=openai/fake-polyglot \
+            -e OPENAI_API_BASE=http://host.docker.internal:8799/v1 -e OPENAI_API_KEY=sk-test-DO-NOT-LEAK-openai-123456 \
+            -e NVIDIA_NIM_API_BASE=http://host.docker.internal:8799/v1 \
+            -e NVIDIA_NIM_API_KEY=nvapi-TESTSECRET-DO-NOT-LEAK-123456 -e NVIDIA_API_KEY=nvapi-TESTSECRET-DO-NOT-LEAK-123456 \
+            -e CIVICMESH_RL_REGISTER_IP=5/600 -e CIVICMESH_RL_CHAT_USER=6/60 -e CIVICMESH_RL_CHAT_IP=12/60 \
+            -e CIVICMESH_INFLIGHT_PER_IP=2 -e CIVICMESH_LLM_MAX_PER_HOUR=12 -e CIVICMESH_LLM_MAX_CONCURRENT=2 \
+            -e CIVICMESH_SECURITY_LOG_S=5 civicmesh:ci
+          for _ in $(seq 1 90); do curl -sf -o /dev/null http://localhost:7861/ && break; sleep 2; done
+          CM_CONTAINER=cm-sec CM_FAKE=http://localhost:8799 \
+            CM_SECRETS=nvapi-TESTSECRET-DO-NOT-LEAK-123456,sk-test-DO-NOT-LEAK-openai-123456 \
+            python3 civicmesh/tests/security_e2e.py http://localhost:7861
+      - name: Server logs (on failure)
+        if: failure()
+        run: docker logs cm 2>&1 | tail -200

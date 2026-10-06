@@ -49,10 +49,10 @@ export class TranscribeTransport implements SttTransport {
     silent.gain.value = 0;
     this.node.connect(silent).connect(this.ctx.destination);
 
-    const self = this;
+    const nextChunk = () => this.next();
     const audioStream = (async function* (): AsyncGenerator<AudioStream> {
       while (true) {
-        const chunk = await self.next();
+        const chunk = await nextChunk();
         if (chunk === null) return;
         yield { AudioEvent: { AudioChunk: chunk } };
       }

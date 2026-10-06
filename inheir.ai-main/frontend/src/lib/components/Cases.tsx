@@ -1,11 +1,12 @@
 import { Button, Link } from "@fluentui/react-components";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { CreateCase } from "@/lib/components/CreateCaseForm";
+import type { CaseResponse } from "@/lib/validators/types";
 
 export const Cases = () => {
-  const [cases, setCases] = useState<any[]>([]);
+  const [cases, setCases] = useState<CaseResponse[]>([]);
 
-  const getCases = async () => {
+  const getCases = useCallback(async () => {
     const res: Response = await fetch("/api/v1/case/history", {
       method: "GET",
       headers: {
@@ -20,7 +21,7 @@ export const Cases = () => {
       console.error("Failed to fetch cases:", res.statusText);
       return [];
     }
-  };
+  }, []);
 
   useEffect(() => {
     getCases()
@@ -35,16 +36,16 @@ export const Cases = () => {
         console.error("Error fetching cases:", error);
         setCases([]);
       });
-  }, []);
+  }, [getCases]);
 
   return (
     <div className="w-full">
       <div className="flex flex-col items-center justify-center w-full h-full">
         {cases.length > 0 ? (
           <div className="w-full px-3 py-2 flex flex-col gap-2">
-            {cases.map((caseItem, i) => (
+            {cases.map((caseItem) => (
               <Link
-                key={i}
+                key={caseItem.case_id}
                 href={`/home/case/${caseItem.case_id}`}
                 className="w-full block"
               >

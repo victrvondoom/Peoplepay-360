@@ -118,3 +118,8 @@ should run behind a reviewed service boundary and submit normalized proposals.
 ECHO's graph and decision internals should not change for a new adapter unless
 the core contract itself is intentionally versioned. The full milestone and
 capability rollout order are in [the product plan](unified-product-plan.md).
+
+
+## Assistance policy evidence
+
+CivicMesh contributes Program entities, eligibility inference claims and uncalibrated score estimates. Provider-scoped rule IDs resolve Program identity; display names do not establish cross-provider identity. ECHO persists immutable decision snapshots and USED_CLAIM provenance. Policy version, evaluation date, native policy context and rule data are preserved. Bundled source URLs remain PROVENANCE_UNKNOWN and require review. Gateway assistance never issues AuthorizedAction or moves money. [Authority matrix](architecture/SOURCE_OF_TRUTH_MATRIX.md).

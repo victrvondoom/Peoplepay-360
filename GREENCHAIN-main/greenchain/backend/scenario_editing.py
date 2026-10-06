@@ -731,7 +731,7 @@ async def _call_k2_json(
     temperature: float = 0.1,
 ) -> _K2ResponseT:
     parse_error: str | None = None
-    conversation = list(messages)
+    conversation: list[dict[str, str]] = list(messages)
 
     for attempt in range(1, 4):
         request_body = {

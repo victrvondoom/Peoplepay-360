@@ -24,11 +24,9 @@ const CreateCase = () => {
     position: ToastPosition = "bottom-end",
   ) => {
     dispatchToast(
-      <>
-        <Toast>
+      <Toast>
           <ToastTitle className="text-lg font-semibold">{message}</ToastTitle>
-        </Toast>
-      </>,
+        </Toast>,
       {
         intent,
         position: position,
@@ -110,13 +108,13 @@ const CreateCase = () => {
         },
       );
       if (res.ok) {
-        const data: any = await res.json();
+        const data: { case_id: string } = await res.json();
         const case_id = data.case_id;
         router.push(`/home/case/${case_id}`);
       } else {
         ToastMessage("Error creating case. Please try again.", "error");
       }
-    } catch (error) {
+    } catch {
       ToastMessage("An unexpected error occurred. Please try again.", "error");
     } finally {
       setLoading(false);
@@ -225,7 +223,7 @@ const CreateCase = () => {
                     <ul className="text-sm">
                       {supportingDocuments.map((file, index) => (
                         <li
-                          key={index}
+                          key={`${file.name}:${file.size}:${file.lastModified}`}
                           className="flex justify-between items-center py-1"
                         >
                           <span className="truncate max-w-xs">{file.name}</span>
@@ -268,8 +266,6 @@ const CreateCase = () => {
 
 export default function Page() {
   return (
-    <>
-      <CreateCase />
-    </>
+    <CreateCase />
   );
 }

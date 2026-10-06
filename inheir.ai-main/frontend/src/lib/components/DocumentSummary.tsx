@@ -1,4 +1,4 @@
-const DocumentSummary = ({ summary }: { summary: string }) => {
+export const DocumentSummary = ({ summary }: { summary: string }) => {
   return (
     <div>
       <div>

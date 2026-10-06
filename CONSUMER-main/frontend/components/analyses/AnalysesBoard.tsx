@@ -646,7 +646,7 @@ function AnalysisDetailPanel({
                       )}
                     </>
                   ) : (
-                    <p className="py-8 text-center text-xs text-proxy-tertiary">Strategy not yet generated. Run the analysis to see the AI's recommended action plan.</p>
+                    <p className="py-8 text-center text-xs text-proxy-tertiary">Strategy not yet generated. Run the analysis to see the AI&apos;s recommended action plan.</p>
                   )}
                 </div>
               )}

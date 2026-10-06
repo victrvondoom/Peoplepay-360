@@ -17,4 +17,8 @@ def build_registry() -> ExtensionRegistry:
         from echo.extensions.adapters.inflationforge import InflationForgeAdapter
         record = registry.get("inflationforge")
         record.adapter = InflationForgeAdapter(record.manifest)
+    if any(item["id"] == "civicmesh" for item in registry.describe()):
+        from extensions.civicmesh.echo_adapter import CivicMeshEchoAdapter
+        record = registry.get("civicmesh")
+        record.adapter = CivicMeshEchoAdapter(record.manifest)
     return registry

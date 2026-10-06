@@ -16,7 +16,7 @@ import {
   useToastController,
 } from "@fluentui/react-components";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import CreateCase from "@/lib/components/CreateCaseForm";
 import { getItem, isMobileDevice } from "@/lib/utils";
 import type {
@@ -29,7 +29,7 @@ export default function Page() {
   const router = useRouter();
   const toasterId = useId("toaster-id");
   const { dispatchToast } = useToastController(toasterId);
-  const ToastMessage = (
+  const ToastMessage = useCallback((
     {
       message,
       description,
@@ -38,25 +38,23 @@ export default function Page() {
     position: ToastPosition = isMobileDevice() ? "top" : "bottom-end",
   ) => {
     dispatchToast(
-      <>
-        <Toast>
+      <Toast>
           <ToastTitle className="text-lg font-semibold">{message}</ToastTitle>
           <ToastBody className="text-sm">{description}</ToastBody>
-        </Toast>
-      </>,
+        </Toast>,
       {
         intent,
         position,
       },
     );
-  };
+  }, [dispatchToast]);
 
   const fullName = getItem("fullName") || "User";
   const [isFetching, setIsFetching] = useState<boolean>(true);
   const [cases, setCases] = useState<CaseResponse[]>([]);
   const [selectedTab, setSelectedTab] = useState<CaseStatus>("Open");
 
-  const fetchCases = async () => {
+  const fetchCases = useCallback(async () => {
     await fetch("/api/v1/case/history", {
       method: "GET",
       headers: {
@@ -86,7 +84,7 @@ export default function Page() {
           "error",
         );
       });
-  };
+  }, [ToastMessage]);
 
   const renderCases = (status: CaseStatus) => {
     const filteredCases = cases.filter(
@@ -94,9 +92,9 @@ export default function Page() {
     );
     return filteredCases.length > 0 ? (
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {filteredCases.map((caseItem, index) => (
+        {filteredCases.map((caseItem) => (
           <div
-            key={index}
+            key={caseItem.case_id}
             className="border border-gray-200 p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow bg-white"
           >
             <h3 className="text-xl font-semibold text-gray-800 mb-2 text-wrap">
@@ -139,17 +137,15 @@ export default function Page() {
         ))}
       </div>
     ) : (
-      <>
-        <p className="text-center py-12 text-gray-500 font-semibold text-lg">
+      <p className="text-center py-12 text-gray-500 font-semibold text-lg">
           No cases available for {status} status.
         </p>
-      </>
     );
   };
 
   useEffect(() => {
     fetchCases();
-  }, []);
+  }, [fetchCases]);
 
   return (
     <div className="flex flex-col items-center justify-start min-h-screen p-6 md:p-10 lg:p-16 bg-gray-50">

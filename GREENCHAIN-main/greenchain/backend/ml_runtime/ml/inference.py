@@ -38,7 +38,7 @@ import os
 import sys
 from typing import cast
 
-import joblib
+import joblib  # type: ignore[import-untyped]  # Upstream provides no type marker.
 import numpy as np
 import pandas as pd
 

@@ -1,0 +1,83 @@
+[project]
+name = "civicmesh"
+version = "1.0.0"
+entry = "app.jac"
+
+[dependencies.npm]
+d3 = "latest"
+react = "^18.2.0"
+react-dom = "^18.2.0"
+react-router-dom = "^6.22.0"
+react-error-boundary = "^5.0.0"
+react-hook-form = "^7.71.0"
+zod = "^4.3.6"
+"@hookform/resolvers" = "^5.2.2"
+
+[dependencies.npm.dev]
+vite = "^6.4.1"
+"@vitejs/plugin-react" = "^4.2.1"
+typescript = "^5.3.3"
+"@types/react" = "^18.2.0"
+"@types/react-dom" = "^18.2.0"
+
+[plugins.byllm.model]
+default_model = "nvidia_nim/openai/gpt-oss-20b"
+temperature = 0.2
+
+# Featherless.AI fallback. Featherless gives us flat-rate access to 30k+
+# open-source models under a single API key, so if NVIDIA NIM rate-limits
+# or drops, byllm transparently retries against meta-llama/Llama-3.1-8B
+# on Featherless. Set FEATHERLESS_API_KEY in .env to enable. JacHacks
+# "Best Use of Featherless.AI" sponsor prize incentivized the integration.
+[[plugins.byllm.fallback_models]]
+model = "featherless_ai/meta-llama/Llama-3.1-8B-Instruct"
+temperature = 0.2
+
+[plugins.byllm.fallback]
+strategy = "fallback"
+# Defaults for any ModelPool that doesn't set its own. The app's pools in
+# llm/stubs.jac override these (num_retries=0, 5–8 s timeouts, SDK retries
+# off), and the routing call also runs under a 3.5 s walker deadline.
+num_retries = 1
+timeout = 25.0
+
+[plugins.byllm.compaction]
+enabled = true
+threshold_ratio = 0.8
+keep_recent_iterations = 3
+
+[plugins.scale.server]
+# jac-scale listens on loopback only; the public port (7860) belongs to the
+# cmguard gateway in front of it (python -m cmguard.serve).
+port = 8000
+host = "127.0.0.1"
+
+[plugins.scale.metrics]
+enabled = true
+
+[plugins.scale.jwt]
+# jac-scale's built-in default is a public string ("supersecretkey_for_testing_
+# only!"), so anyone could forge a login token for any visitor. The secret now
+# comes from the environment; cmguard/serve.py generates one per boot when it's
+# unset, and the server refuses to start without one.
+secret = "${CIVICMESH_JWT_SECRET:?start with python -m cmguard.serve, or set CIVICMESH_JWT_SECRET}"
+
+[plugins.scale.admin]
+# jac-scale otherwise bootstraps a login-capable admin/changeme account, and
+# this is a public demo that never uses the admin portal.
+enabled = false
+
+[plugins.client]
+debug = false
+
+[run]
+# jaclang 0.15.1's topology-index shortcut for typed graph queries goes stale:
+# after a walker's first write in a request, `[root --> [?:ResourceNode]]`
+# resolves to an empty set even though 40 ResourceNodes are seeded (untyped
+# `[root -->]` still sees them). That emptied every eligibility candidate
+# list and sent every chat turn to escalation. The plain edge walk is correct
+# and cheap at this graph size.
+topology_index = false
+
+[serve]
+base_route_app = "app"

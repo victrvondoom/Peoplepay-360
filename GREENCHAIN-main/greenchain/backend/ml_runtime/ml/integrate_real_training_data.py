@@ -49,7 +49,7 @@ from ml.reference_data import (  # noqa: E402
 REAL_DIR      = os.path.join(resolve_data_dir("new_data2"), "real_emissions")
 
 # NAICS4 → naics2, sector name lookup
-_N4_META = {}
+_N4_META: dict[str, tuple[str, str]] = {}
 for code, (n2, title, val) in NAICS_DETAIL.items():
     n4 = code[:4]
     _N4_META.setdefault(n4, (n2, title))
@@ -108,7 +108,7 @@ def load_epa_ghgrp() -> pd.DataFrame:
         try:
             df = pd.read_csv(fp, low_memory=False)
             cols = [c.lower() for c in df.columns]
-            df.columns = cols
+            df.columns = pd.Index(cols)
 
             # Detect EPA GHGRP format
             ghg_col = next((c for c in cols if "ghg" in c and "quant" in c), None)
@@ -119,7 +119,7 @@ def load_epa_ghgrp() -> pd.DataFrame:
                 print(f"  [EPA] Found GHGRP file: {os.path.basename(fp)} ({len(df)} rows)")
                 print(f"        Columns: {list(df.columns)[:8]}")
                 sub = cast(pd.DataFrame, df[[naics_col, ghg_col]]).copy()
-                sub.columns = ["naics_raw", "scope1_tco2e"]
+                sub.columns = pd.Index(["naics_raw", "scope1_tco2e"])
                 if year_col:
                     sub["year"] = df[year_col]
                 else:
@@ -172,7 +172,7 @@ def load_climate_trace() -> pd.DataFrame:
         try:
             df = pd.read_csv(fp, low_memory=False)
             cols = [c.lower().strip() for c in df.columns]
-            df.columns = cols
+            df.columns = pd.Index(cols)
 
             # Climate TRACE columns: asset_id, asset_name, country, year, co2, ...
             country_col = next((c for c in cols if c in ["iso3_country","country","iso"]), None)
@@ -257,7 +257,7 @@ def load_zenodo() -> pd.DataFrame:
         try:
             df = pd.read_csv(fp, low_memory=False)
             cols = [c.lower() for c in df.columns]
-            df.columns = cols
+            df.columns = pd.Index(cols)
 
             scope1_col  = next((c for c in cols if "scope1" in c or "scope_1" in c), None)
             scope2_col  = next((c for c in cols if "scope2" in c or "scope_2" in c), None)

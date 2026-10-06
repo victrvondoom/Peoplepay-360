@@ -1,0 +1,5 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/../../.venv-civicmesh/Scripts/python.exe",
+  "python.analysis.extraPaths": [".", "../.."],
+  "python.analysis.exclude": ["**/.jac/**", "**/node_modules/**"]
+}

@@ -1,0 +1,5 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/../../.venv-greenchain-review/Scripts/python.exe",
+  "python.analysis.extraPaths": [".", "backend/ml_runtime"],
+  "python.analysis.exclude": ["**/node_modules/**", "**/.next/**"]
+}

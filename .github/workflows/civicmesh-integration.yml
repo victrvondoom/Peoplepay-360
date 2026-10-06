@@ -1,0 +1,55 @@
+name: CivicMesh integration
+on:
+  workflow_dispatch:
+  push:
+    paths: ['CivicMesh-main/**', 'extensions/civicmesh/**', 'journey/**', 'echo/**', 'gateway/**', 'packages/peoplepay-extension-sdk/**', 'tests/test_civicmesh_integration.py', 'scripts/*assistance*', 'scripts/verify_civicmesh_preservation.py', '.github/workflows/civicmesh-integration.yml']
+  pull_request:
+    paths: ['CivicMesh-main/**', 'extensions/civicmesh/**', 'journey/**', 'echo/**', 'gateway/**', 'packages/peoplepay-extension-sdk/**', 'tests/test_civicmesh_integration.py', 'scripts/*assistance*', 'scripts/verify_civicmesh_preservation.py', '.github/workflows/civicmesh-integration.yml']
+permissions:
+  contents: read
+jobs:
+  native-policy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r extensions/civicmesh/requirements.txt
+      - run: python -m pytest extensions/civicmesh/tests CivicMesh-main/civicmesh/tests/test_cmguard.py -q
+      - run: jac run tests/eval_engine.jac
+        working-directory: CivicMesh-main/civicmesh
+        env:
+          PYTHONUTF8: '1'
+      - run: |
+          jac run tests/check_messages.jac
+          jac run tests/check_input_limits.jac
+          jac run tests/check_privacy.jac
+          jac run tests/check_policy.jac
+        working-directory: CivicMesh-main/civicmesh
+        env:
+          PYTHONUTF8: '1'
+      - run: python scripts/verify_zero_deletion.py && python scripts/verify_civicmesh_preservation.py
+  sdk-echo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      falkordb:
+        image: falkordb/falkordb:v4.20.4-alpine
+        ports: ['16380:6379']
+        options: --health-cmd "redis-cli ping" --health-interval 5s --health-timeout 3s --health-retries 12
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-journey-dev.txt
+      - run: python -m pytest tests/test_civicmesh_integration.py packages/peoplepay-extension-sdk/tests echo/tests/test_assistance_decisions.py -q
+        env:
+          REQUIRE_JOURNEY_GRAPH: '1'
+          ECHO_FALKORDB_PORT: '16380'

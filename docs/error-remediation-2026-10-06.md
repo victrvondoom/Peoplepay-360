@@ -112,3 +112,25 @@ and browser fault injection directly; no completed independent final review is
 claimed.
 
 Installation and operation: [Unified Journey guide](unified-journey-v1.md).
+
+## CivicMesh and remaining native errors: subsequent verified delivery
+
+The [CivicMesh report](integration/CIVICMESH_INTEGRATION_REPORT.md) is the current continuation of this ledger. Earlier counts and limitations above describe the previous commit.
+
+| Finding | Root cause and remediation | Evidence |
+|---|---|---|
+| CivicMesh folder has no actual product handoff | Add an isolated HTTP boundary calling original Jac policy functions, SDK normalization, ECHO Program/Claim ingestion and the portal workflow | 39 native boundary/guard tests, 439 native evaluation cases, real browser follow-up and graph tests |
+| Optional provider exit shuts down core | Launcher watched all subprocesses as mandatory; now watches core separately and reports optional service loss | Real CivicMesh stop retained Gateway/ECHO, prior decision and procurement; retry recovered after restart |
+| Provider failure/retry can lose decision context | Preserve provider receipt before ECHO, immutable version/hash checks, version-marker recovery, same-context updates | Root assistance and real FalkorDB tests; browser history shows versions 1 and 2 |
+| Malformed provider structures can fail after graph writes | Validate advisory semantics, entity/claim/estimate shape and receipt binding before ingestion; refuse verified claims and corrupted historical digests | Graph count remains zero for invalid receipts; altered historical snapshot rejected |
+| Unknown request lengths intermittently reset Windows clients | Socket closed with unread input after sending refusal; half-close write side, flush and bounded-time drain before close | Reused-connection suite plus full root suite green |
+| Assistance asks monthly income but accepts annual value | Native question units differed from portal's typed contract; label annual USD and monthly x12 explicitly | Portal question text/unit mapping reviewed |
+| Unsupported next question silently reuses an unrelated fact | Portal's select did not support every native question; now directs unsupported questions to native intake/program support | Controlled UI rendering; no extra sensitive facts collected |
+| Commercial keywords mask urgent/eviction request | Evaluate crisis/domestic-violence cues first; recognize inflected eviction when checking commercial routing | Routing regressions include company-plus-crisis and company-plus-eviction |
+| Native frontends have missing lint config and lifecycle errors | Add actual noninteractive ESLint configs; fix hook dependencies, unused/unescaped content, case fetch cancellation and map cleanup | Beacon lint/build, PROXY lint/type check, InHeir Biome/type check pass |
+| InHeir document/auth/client bugs | Correct filename/metadata, RAG client and successful acknowledgements, Text Analytics credentials, password bounds and JWT expiry; retain existing routes | 15 native backend regressions using fake cloud clients; no live writes |
+| InHeir Azure imports terminate on this Windows host | Inherited SSLKEYLOGFILE references an antivirus pipe; unset only in review child process | Python 3.13 regression environment passes; system configuration unchanged |
+| InflationForge/GreenChain typing errors | Narrow gathered exceptions/snapshots/query parameters; fix builtin-name annotations, scalar sort/conversation types, ML metadata/Index annotations | InflationForge 22 tests/26 typed files; GreenChain 54 tests, 20 backend and 10 separately typed ML files |
+| IDE uses incompatible project dependencies | Add per-project workspace/interpreter paths and isolated requirement files | Open `PeoplePay.code-workspace`; full dependency flattening remains unsupported |
+
+Latest separately executed test counts: root/SDK **393**, ECHO **139**, Beacon **451**, GreenChain **54**, InflationForge **22**, PROXY **65**, Rumi **438**, InHeir **15**, CivicMesh boundary/guard **39**: **1,616 total**, plus CivicMesh's separate **439-case** native evaluator. Frontend/static checks and local benchmark numbers are recorded in the integration report. Agents contributed repairs, but final independent review could not run after authentication/usage failures; final review was completed by the primary agent.

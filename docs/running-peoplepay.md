@@ -122,3 +122,8 @@ volume is persistent. `down` stops containers but keeps that volume; add
 Git LFS is required for the bundled vector/graph datasets. Run `git lfs pull`
 after cloning; `.gitattributes` records the original LFS paths. Recovered source
 corpus provenance is recorded in `recovered-corpus-provenance.json`.
+
+
+## Assistance and IDE environments
+
+Open `PeoplePay.code-workspace` for per-project Python interpreter paths. Native backends named backend must be checked in separate environments. Run `python scripts/dev_peoplepay.py --assistance` after creating `.venv-civicmesh` from `extensions/civicmesh/requirements.txt`; core-only startup does not require Jac. Detailed commands: `extensions/civicmesh/README.md`. InHeir regression subset uses Python 3.13 and `requirements-inheir-dev.txt`; full native application dependencies remain in its pyproject. On this Windows machine, inherited SSLKEYLOGFILE pointing at an antivirus pipe caused OpenSSL_Applink termination when importing Azure; regression commands used a child process with that variable unset, without changing the machine or antivirus configuration. Cloud clients were faked; no Azure/Mongo writes occurred.

@@ -1,0 +1,853 @@
+{
+  "request_id": "assistance-test-v1",
+  "workflow_id": "assistance-test",
+  "provider": "civicmesh",
+  "provider_version": "1.0.0",
+  "engine_fingerprint": "f65c2d2993aa07d36d0f32a9c84e483c2364002fcc03e75801812d1986ee6c9d",
+  "policy_version": "2026-09-29",
+  "policy_date": "2026-10-06",
+  "policy_sources": [
+    "HHS 2026 poverty guidelines (effective Jan 15, 2026)",
+    "HUD FY2026 income limits (U.S. median family income $107,900) (effective May 1, 2026)",
+    "USDA SNAP FY2027 allotments (from 2026-10-01)",
+    "KFF state Medicaid expansion status (2026)",
+    "P.L. 119-21 \u00a710108 SNAP (Jul 4, 2025) \u00b7 \u00a771109 Medicaid/CHIP (Oct 1, 2026)"
+  ],
+  "policy_last_verified": "2026-09-29",
+  "observed_at": "2026-10-06T11:06:08.214365+00:00",
+  "jurisdiction": "US",
+  "programs": [
+    {
+      "resource_name": "Catholic Charities Emergency Rental Assistance",
+      "category": "housing",
+      "capacity": "open",
+      "p_eligible": 0.97,
+      "coverage": 0.87,
+      "tier": "likely",
+      "match_score": 97,
+      "approval": {
+        "mean": 0.667,
+        "lo": 0.421,
+        "hi": 0.912,
+        "ucb": 0.858,
+        "alpha": 6.0,
+        "beta": 3.0,
+        "observed": 0
+      },
+      "rank_score": 1.1804,
+      "criteria": [
+        {
+          "key": "income",
+          "label": "Income",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.45,
+          "hard": false,
+          "detail": "$14,400/yr is under 80% of area median income for a household of 1 (national estimate) ($60,450/yr), +$8,650 per extra person",
+          "source": "HUD FY2026 income limits (U.S. median family income $107,900)",
+          "note": "typical for emergency rental assistance; varies by diocese; HUD sets this limit by county or metro area; tell me your city for the exact figure",
+          "typical": true
+        },
+        {
+          "key": "age",
+          "label": "Age",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.0,
+          "hard": true,
+          "detail": "72 fits age 18+"
+        },
+        {
+          "key": "residency",
+          "label": "Residency",
+          "status": "unknown",
+          "score": 0.95,
+          "weight": 0.15,
+          "hard": false,
+          "detail": "Local city residency required"
+        },
+        {
+          "key": "situation",
+          "label": "Situation",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.3,
+          "hard": false,
+          "detail": "Built for people facing eviction or a utility shutoff"
+        }
+      ],
+      "counterfactual": "",
+      "cf_effort": 99.0,
+      "benefit": {},
+      "asks": [
+        "household",
+        "location"
+      ],
+      "contact_phone": "1-800-919-9338",
+      "contact_email": "",
+      "address": "Local Catholic Charities offices",
+      "online_url": "https://www.catholiccharitiesusa.org/find-help/",
+      "description": "One-time emergency rental and utility assistance to prevent eviction or restore utilities, typically up to 1-3 months of past-due rent. Pairs with budget counseling. Funds are limi",
+      "languages_supported": [
+        "en",
+        "es"
+      ],
+      "form": {
+        "form_id": "cc-era-app",
+        "form_name": "Emergency Rental Assistance Application",
+        "url": "",
+        "required_documents": [
+          "Photo ID",
+          "Eviction notice or shutoff notice",
+          "Proof of income",
+          "Current lease"
+        ],
+        "deadline_type": "rolling",
+        "submission_method": "in_person",
+        "estimated_minutes": 50
+      },
+      "pinned": false,
+      "rule": {
+        "rule_id": "cc-era-rule",
+        "income_limit_annual": 35000,
+        "residency_requirement": "city",
+        "min_family_size": 0,
+        "citizenship_required": false,
+        "age_min": 18,
+        "age_max": 0,
+        "exceptions": "Open to all faiths and no faith; service is not contingent on religious participation. Undocumented residents are typically eligible.",
+        "criteria_summary": "At immediate risk of eviction or utility shutoff; income within program limit; can demonstrate ability to maintain rent after assistance.",
+        "targets": [
+          "eviction_risk"
+        ]
+      },
+      "policy_definition": {
+        "income": {
+          "basis": "ami",
+          "pct": 80,
+          "typical": true,
+          "note": "typical for emergency rental assistance; varies by diocese"
+        },
+        "status": ""
+      }
+    },
+    {
+      "resource_name": "Salvation Army Transitional Housing",
+      "category": "housing",
+      "capacity": "waitlist",
+      "p_eligible": 0.97,
+      "coverage": 0.87,
+      "tier": "likely",
+      "match_score": 97,
+      "approval": {
+        "mean": 0.375,
+        "lo": 0.11,
+        "hi": 0.64,
+        "ucb": 0.582,
+        "alpha": 3.0,
+        "beta": 5.0,
+        "observed": 0
+      },
+      "rank_score": 0.7371,
+      "criteria": [
+        {
+          "key": "income",
+          "label": "Income",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.45,
+          "hard": false,
+          "detail": "No income limit \u2014 income rules vary by site"
+        },
+        {
+          "key": "age",
+          "label": "Age",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.0,
+          "hard": true,
+          "detail": "72 fits age 18+"
+        },
+        {
+          "key": "residency",
+          "label": "Residency",
+          "status": "unknown",
+          "score": 0.95,
+          "weight": 0.15,
+          "hard": false,
+          "detail": "Local city residency required"
+        },
+        {
+          "key": "situation",
+          "label": "Situation",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.3,
+          "hard": false,
+          "detail": "Built for people who are homeless or about to lose housing"
+        }
+      ],
+      "counterfactual": "",
+      "cf_effort": 99.0,
+      "benefit": {},
+      "asks": [
+        "location"
+      ],
+      "contact_phone": "1-800-728-7825",
+      "contact_email": "",
+      "address": "Local Salvation Army Corps offices",
+      "online_url": "https://www.salvationarmyusa.org/usn/provide-shelter/",
+      "description": "Transitional housing programs (typically 6-24 months) with case management, employment support, and life skills training. Sites operate under local Corps; rules vary (some sober-li",
+      "languages_supported": [
+        "en",
+        "es"
+      ],
+      "form": {
+        "form_id": "sa-th-app",
+        "form_name": "Transitional Housing Intake",
+        "url": "",
+        "required_documents": [
+          "Photo ID",
+          "Income documentation if any",
+          "Homeless verification"
+        ],
+        "deadline_type": "rolling",
+        "submission_method": "in_person",
+        "estimated_minutes": 45
+      },
+      "pinned": false,
+      "rule": {
+        "rule_id": "salvation-army-th-rule",
+        "income_limit_annual": 25000,
+        "residency_requirement": "city",
+        "min_family_size": 0,
+        "citizenship_required": false,
+        "age_min": 18,
+        "age_max": 0,
+        "exceptions": "Faith-based but does not require religious participation. Some sites are sober-only; others are recovery-friendly.",
+        "criteria_summary": "Homeless or unstably housed; willing to engage with case management and employment program; sober if site requires.",
+        "targets": [
+          "housing_crisis"
+        ]
+      },
+      "policy_definition": {
+        "income": {
+          "basis": "none",
+          "note": "income rules vary by site"
+        },
+        "status": ""
+      }
+    },
+    {
+      "resource_name": "Public Housing (HUD)",
+      "category": "housing",
+      "capacity": "waitlist",
+      "p_eligible": 0.848,
+      "coverage": 0.71,
+      "tier": "likely",
+      "match_score": 85,
+      "approval": {
+        "mean": 0.375,
+        "lo": 0.11,
+        "hi": 0.64,
+        "ucb": 0.582,
+        "alpha": 3.0,
+        "beta": 5.0,
+        "observed": 0
+      },
+      "rank_score": 0.4954,
+      "criteria": [
+        {
+          "key": "income",
+          "label": "Income",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.45,
+          "hard": false,
+          "detail": "$14,400/yr is under 80% of area median income for a household of 1 (national estimate) ($60,450/yr), +$8,650 per extra person",
+          "source": "HUD FY2026 income limits (U.S. median family income $107,900)",
+          "note": "HUD sets this limit by county or metro area; tell me your city for the exact figure"
+        },
+        {
+          "key": "citizenship",
+          "label": "Status",
+          "status": "unknown",
+          "score": 0.9,
+          "weight": 0.0,
+          "hard": true,
+          "detail": "Citizens, green-card holders and some other statuses qualify",
+          "source": "P.L. 119-21 (2025) immigrant-eligibility rules"
+        },
+        {
+          "key": "age",
+          "label": "Age",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.0,
+          "hard": true,
+          "detail": "72 fits age 18+"
+        },
+        {
+          "key": "residency",
+          "label": "Residency",
+          "status": "unknown",
+          "score": 0.95,
+          "weight": 0.15,
+          "hard": false,
+          "detail": "Local city residency required"
+        },
+        {
+          "key": "situation",
+          "label": "Situation",
+          "status": "met",
+          "score": 0.85,
+          "weight": 0.3,
+          "hard": false,
+          "detail": "General program \u2014 no special situation required"
+        }
+      ],
+      "counterfactual": "",
+      "cf_effort": 99.0,
+      "benefit": {},
+      "asks": [
+        "household",
+        "citizenship",
+        "location"
+      ],
+      "contact_phone": "1-800-955-2232",
+      "contact_email": "info@hud.gov",
+      "address": "Local Public Housing Authority",
+      "online_url": "https://www.hud.gov/topics/rental_assistance/phprog",
+      "description": "Federally subsidized rental units owned by local Public Housing Authorities. Rent is set at approximately 30 percent of adjusted household income. Waitlists are typically long; som",
+      "languages_supported": [
+        "en",
+        "es"
+      ],
+      "form": {
+        "form_id": "public-housing-app",
+        "form_name": "Public Housing Application",
+        "url": "https://www.hud.gov/program_offices/public_indian_housing/programs/ph",
+        "required_documents": [
+          "Photo ID",
+          "Social Security cards",
+          "Birth certificates",
+          "Proof of income",
+          "Proof of citizenship status"
+        ],
+        "deadline_type": "rolling",
+        "submission_method": "in_person",
+        "estimated_minutes": 60
+      },
+      "pinned": false,
+      "rule": {
+        "rule_id": "public-housing-rule",
+        "income_limit_annual": 50000,
+        "residency_requirement": "city",
+        "min_family_size": 0,
+        "citizenship_required": true,
+        "age_min": 18,
+        "age_max": 0,
+        "exceptions": "Income limits vary by city (low income = 80% AMI). Non-citizens with eligible immigration status qualify; mixed-status households get prorated assistance.",
+        "criteria_summary": "Low income (under 80% AMI); citizen or eligible immigrant; pass criminal background check (no recent violent or drug-related felonies).",
+        "targets": []
+      },
+      "policy_definition": {
+        "income": {
+          "basis": "ami",
+          "pct": 80
+        },
+        "status": "hud"
+      }
+    },
+    {
+      "resource_name": "Section 8 Housing Choice Voucher Program",
+      "category": "housing",
+      "capacity": "waitlist",
+      "p_eligible": 0.847,
+      "coverage": 0.71,
+      "tier": "likely",
+      "match_score": 85,
+      "approval": {
+        "mean": 0.375,
+        "lo": 0.11,
+        "hi": 0.64,
+        "ucb": 0.582,
+        "alpha": 3.0,
+        "beta": 5.0,
+        "observed": 0
+      },
+      "rank_score": 0.4952,
+      "criteria": [
+        {
+          "key": "income",
+          "label": "Income",
+          "status": "met",
+          "score": 0.999,
+          "weight": 0.45,
+          "hard": false,
+          "detail": "$14,400/yr is under 50% of area median income for a household of 1 (national estimate) ($37,800/yr), +$5,400 per extra person",
+          "source": "HUD FY2026 income limits (U.S. median family income $107,900)",
+          "note": "75% of new vouchers go to households under 30% of area median; HUD sets this limit by county or metro area; tell me your city for the exact figure"
+        },
+        {
+          "key": "citizenship",
+          "label": "Status",
+          "status": "unknown",
+          "score": 0.9,
+          "weight": 0.0,
+          "hard": true,
+          "detail": "Citizens, green-card holders and some other statuses qualify",
+          "source": "P.L. 119-21 (2025) immigrant-eligibility rules"
+        },
+        {
+          "key": "age",
+          "label": "Age",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.0,
+          "hard": true,
+          "detail": "72 fits age 18+"
+        },
+        {
+          "key": "residency",
+          "label": "Residency",
+          "status": "unknown",
+          "score": 0.95,
+          "weight": 0.15,
+          "hard": false,
+          "detail": "Local city residency required"
+        },
+        {
+          "key": "situation",
+          "label": "Situation",
+          "status": "met",
+          "score": 0.85,
+          "weight": 0.3,
+          "hard": false,
+          "detail": "General program \u2014 no special situation required"
+        }
+      ],
+      "counterfactual": "",
+      "cf_effort": 99.0,
+      "benefit": {},
+      "asks": [
+        "household",
+        "citizenship",
+        "location"
+      ],
+      "contact_phone": "1-800-955-2232",
+      "contact_email": "info@hud.gov",
+      "address": "Local Public Housing Authority offices nationwide",
+      "online_url": "https://www.hud.gov/topics/housing_choice_voucher_program_section_8",
+      "description": "Federal rental assistance program administered by local Public Housing Authorities. Eligible families pay about 30 percent of income toward rent; the voucher covers the rest, up to",
+      "languages_supported": [
+        "en",
+        "es"
+      ],
+      "form": {
+        "form_id": "hud-50058",
+        "form_name": "HUD-50058 Family Report and PHA application",
+        "url": "https://www.hud.gov/program_offices/public_indian_housing/programs/hcv/forms",
+        "required_documents": [
+          "Photo ID",
+          "Social Security cards for all household members",
+          "Proof of income (pay stubs, benefit letters)",
+          "Birth certificates",
+          "Proof of citizenship or immigration status"
+        ],
+        "deadline_type": "rolling",
+        "submission_method": "in_person",
+        "estimated_minutes": 90
+      },
+      "pinned": false,
+      "rule": {
+        "rule_id": "section8-hcv-rule",
+        "income_limit_annual": 30000,
+        "residency_requirement": "city",
+        "min_family_size": 0,
+        "citizenship_required": true,
+        "age_min": 18,
+        "age_max": 0,
+        "exceptions": "Non-citizens with eligible immigration status (LPR, refugee, asylee) qualify. Mixed-status households receive prorated assistance.",
+        "criteria_summary": "Very low income (under 50% AMI), age 18+, citizen or eligible immigrant, no recent drug-related or violent crime convictions.",
+        "targets": []
+      },
+      "policy_definition": {
+        "income": {
+          "basis": "ami",
+          "pct": 50,
+          "note": "75% of new vouchers go to households under 30% of area median"
+        },
+        "status": "hud"
+      }
+    },
+    {
+      "resource_name": "LIHEAP (Low Income Home Energy Assistance Program)",
+      "category": "housing",
+      "capacity": "open",
+      "p_eligible": 0.264,
+      "coverage": 0.5,
+      "tier": "needs_info",
+      "match_score": 26,
+      "approval": {
+        "mean": 0.667,
+        "lo": 0.421,
+        "hi": 0.912,
+        "ucb": 0.858,
+        "alpha": 6.0,
+        "beta": 3.0,
+        "observed": 0
+      },
+      "rank_score": 0.2471,
+      "criteria": [
+        {
+          "key": "income",
+          "label": "Income",
+          "status": "met",
+          "score": 0.992,
+          "weight": 0.45,
+          "hard": false,
+          "detail": "$14,400/yr is under 150% of the 2026 poverty line for a household of 1 ($23,940/yr), +$8,520 per extra person",
+          "source": "HHS 2026 poverty guidelines",
+          "note": "states may use 60% of state median income instead, if higher"
+        },
+        {
+          "key": "residency",
+          "label": "Residency",
+          "status": "unknown",
+          "score": 0.95,
+          "weight": 0.15,
+          "hard": false,
+          "detail": "Local state residency required"
+        },
+        {
+          "key": "situation",
+          "label": "Situation",
+          "status": "unknown",
+          "score": 0.3,
+          "weight": 0.3,
+          "hard": false,
+          "detail": "Built for heating or power bills"
+        }
+      ],
+      "counterfactual": "it's for heating or power bills \u2014 tell me if that's you",
+      "cf_effort": 3.0,
+      "benefit": {},
+      "asks": [
+        "household",
+        "location"
+      ],
+      "contact_phone": "1-866-674-6327",
+      "contact_email": "energy.assistance@acf.hhs.gov",
+      "address": "Local Community Action Agency offices",
+      "online_url": "https://www.acf.hhs.gov/ocs/programs/liheap",
+      "description": "Federal program that helps low-income households pay heating and cooling bills, weatherize their homes, and handle utility crises (shutoff notices). Funded annually; apply early in",
+      "languages_supported": [
+        "en",
+        "es"
+      ],
+      "form": {
+        "form_id": "liheap-application",
+        "form_name": "LIHEAP Application",
+        "url": "https://liheapch.acf.hhs.gov/help",
+        "required_documents": [
+          "Photo ID",
+          "Proof of income for last 30 days",
+          "Most recent utility bill",
+          "Social Security numbers for household"
+        ],
+        "deadline_type": "annual",
+        "submission_method": "online",
+        "estimated_minutes": 45
+      },
+      "pinned": false,
+      "rule": {
+        "rule_id": "liheap-rule",
+        "income_limit_annual": 30000,
+        "residency_requirement": "state",
+        "min_family_size": 0,
+        "citizenship_required": false,
+        "age_min": 0,
+        "age_max": 0,
+        "exceptions": "At least one household member must be a US citizen or qualified non-citizen; mixed-status households are eligible.",
+        "criteria_summary": "Household income at or below 150 percent of federal poverty level (varies by state). Responsible for home energy costs.",
+        "targets": [
+          "energy"
+        ]
+      },
+      "policy_definition": {
+        "income": {
+          "basis": "fpl",
+          "pct": 150,
+          "note": "states may use 60% of state median income instead, if higher"
+        },
+        "status": ""
+      }
+    },
+    {
+      "resource_name": "Emergency Solutions Grant Shelter Network",
+      "category": "housing",
+      "capacity": "open",
+      "p_eligible": 0.252,
+      "coverage": 0.6,
+      "tier": "needs_info",
+      "match_score": 25,
+      "approval": {
+        "mean": 0.667,
+        "lo": 0.421,
+        "hi": 0.912,
+        "ucb": 0.858,
+        "alpha": 6.0,
+        "beta": 3.0,
+        "observed": 0
+      },
+      "rank_score": 0.2359,
+      "criteria": [
+        {
+          "key": "income",
+          "label": "Income",
+          "status": "met",
+          "score": 1.0,
+          "weight": 0.45,
+          "hard": false,
+          "detail": "No income limit"
+        },
+        {
+          "key": "situation",
+          "label": "Situation",
+          "status": "unknown",
+          "score": 0.3,
+          "weight": 0.3,
+          "hard": false,
+          "detail": "Built for people who are homeless tonight"
+        }
+      ],
+      "counterfactual": "it's for people who are homeless tonight \u2014 tell me if that's you",
+      "cf_effort": 3.0,
+      "benefit": {},
+      "asks": [
+        "homeless"
+      ],
+      "contact_phone": "2-1-1",
+      "contact_email": "",
+      "address": "Local shelters identified through 211",
+      "online_url": "https://www.hud.gov/program_offices/comm_planning/esg",
+      "description": "HUD-funded emergency shelters providing immediate overnight stay, meals, and case management. Call 211 to be routed to the nearest open bed. Some shelters are family-only; others s",
+      "languages_supported": [
+        "en",
+        "es"
+      ],
+      "form": {
+        "form_id": "esg-intake",
+        "form_name": "Shelter intake form (varies by site)",
+        "url": "",
+        "required_documents": [
+          "Photo ID if available, but not required for entry"
+        ],
+        "deadline_type": "rolling",
+        "submission_method": "in_person",
+        "estimated_minutes": 30
+      },
+      "pinned": false,
+      "rule": {
+        "rule_id": "esg-shelter-rule",
+        "income_limit_annual": 0,
+        "residency_requirement": "none",
+        "min_family_size": 0,
+        "citizenship_required": false,
+        "age_min": 0,
+        "age_max": 0,
+        "exceptions": "Sober shelters require active sobriety; LGBTQ+ youth shelters serve ages 14-24 only; DV shelters serve survivors of intimate partner violence regardless of gender.",
+        "criteria_summary": "Anyone experiencing literal homelessness tonight; no income or documentation requirement.",
+        "targets": [
+          "homeless"
+        ]
+      },
+      "policy_definition": {
+        "income": {
+          "basis": "none"
+        },
+        "status": ""
+      }
+    }
+  ],
+  "plan": {
+    "steps": [
+      {
+        "step_number": 1,
+        "agency_name": "Catholic Charities Emergency Rental Assistance",
+        "action_description": "Go in person \u2014 call 1-800-919-9338 first",
+        "documents_needed": [
+          "Photo ID",
+          "Eviction notice or shutoff notice",
+          "Proof of income",
+          "Current lease"
+        ],
+        "deadline_label": "Apply anytime",
+        "contact_info": "1-800-919-9338",
+        "estimated_minutes": 50,
+        "online_url": "https://www.catholiccharitiesusa.org/find-help/",
+        "tier": "likely",
+        "p_eligible": 0.97,
+        "approval": {
+          "mean": 0.667,
+          "lo": 0.421,
+          "hi": 0.912,
+          "ucb": 0.858,
+          "alpha": 6.0,
+          "beta": 3.0,
+          "observed": 0
+        },
+        "priority": 0.02588
+      },
+      {
+        "step_number": 2,
+        "agency_name": "Salvation Army Transitional Housing",
+        "action_description": "Go in person \u2014 call 1-800-728-7825 first",
+        "documents_needed": [
+          "Photo ID",
+          "Income documentation if any",
+          "Homeless verification"
+        ],
+        "deadline_label": "Apply anytime",
+        "contact_info": "1-800-728-7825",
+        "estimated_minutes": 45,
+        "online_url": "https://www.salvationarmyusa.org/usn/provide-shelter/",
+        "tier": "likely",
+        "p_eligible": 0.97,
+        "approval": {
+          "mean": 0.375,
+          "lo": 0.11,
+          "hi": 0.64,
+          "ucb": 0.582,
+          "alpha": 3.0,
+          "beta": 5.0,
+          "observed": 0
+        },
+        "priority": 0.00255
+      },
+      {
+        "step_number": 3,
+        "agency_name": "Public Housing (HUD)",
+        "action_description": "Go in person \u2014 call 1-800-955-2232 first",
+        "documents_needed": [
+          "Photo ID",
+          "Social Security cards",
+          "Birth certificates",
+          "Proof of income",
+          "Proof of citizenship status"
+        ],
+        "deadline_label": "Apply anytime",
+        "contact_info": "1-800-955-2232",
+        "estimated_minutes": 60,
+        "online_url": "https://www.hud.gov/topics/rental_assistance/phprog",
+        "tier": "likely",
+        "p_eligible": 0.848,
+        "approval": {
+          "mean": 0.375,
+          "lo": 0.11,
+          "hi": 0.64,
+          "ucb": 0.582,
+          "alpha": 3.0,
+          "beta": 5.0,
+          "observed": 0
+        },
+        "priority": 0.00212
+      },
+      {
+        "step_number": 4,
+        "agency_name": "Section 8 Housing Choice Voucher Program",
+        "action_description": "Go in person \u2014 call 1-800-955-2232 first",
+        "documents_needed": [
+          "Photo ID",
+          "Social Security cards for all household members",
+          "Proof of income (pay stubs, benefit letters)",
+          "Birth certificates",
+          "Proof of citizenship or immigration status"
+        ],
+        "deadline_label": "Apply anytime",
+        "contact_info": "1-800-955-2232",
+        "estimated_minutes": 90,
+        "online_url": "https://www.hud.gov/topics/housing_choice_voucher_program_section_8",
+        "tier": "likely",
+        "p_eligible": 0.847,
+        "approval": {
+          "mean": 0.375,
+          "lo": 0.11,
+          "hi": 0.64,
+          "ucb": 0.582,
+          "alpha": 3.0,
+          "beta": 5.0,
+          "observed": 0
+        },
+        "priority": 0.00192
+      }
+    ],
+    "shared_documents": [
+      [
+        "Photo ID",
+        4
+      ],
+      [
+        "Proof of income",
+        2
+      ],
+      [
+        "Birth certificates",
+        2
+      ]
+    ],
+    "total_minutes": 245
+  },
+  "routes": [
+    {
+      "start": "Catholic Charities Emergency Rental Assistance",
+      "end": "Section 8 Housing Choice Voucher Program",
+      "hops": [
+        {
+          "from": "Catholic Charities Emergency Rental Assistance",
+          "to": "Section 8 Housing Choice Voucher Program",
+          "days": 60,
+          "difficulty": "easy",
+          "reason": "Catholic Charities case managers routinely escalate ERA recipients into the Section 8 application pipeline."
+        }
+      ],
+      "hop_count": 1,
+      "total_days": 60,
+      "success_p": 0.318,
+      "cost": 97.6
+    },
+    {
+      "start": "Salvation Army Transitional Housing",
+      "end": "Section 8 Housing Choice Voucher Program",
+      "hops": [
+        {
+          "from": "Salvation Army Transitional Housing",
+          "to": "Section 8 Housing Choice Voucher Program",
+          "days": 365,
+          "difficulty": "moderate",
+          "reason": "Twelve-month transitional residency at Salvation Army produces the documented tenancy history Section 8 priority lists weight heavily."
+        }
+      ],
+      "hop_count": 1,
+      "total_days": 365,
+      "success_p": 0.318,
+      "cost": 412.6
+    }
+  ],
+  "question": {
+    "key": "location",
+    "gain": 1.045,
+    "affects": 7,
+    "text": "What state or city do you live in?"
+  },
+  "crisis": false,
+  "calibrated_probability": false,
+  "duration_ms": 57.653,
+  "warnings": [
+    "US_POLICY_ONLY",
+    "HEURISTIC_SCORES_NOT_PROBABILITIES",
+    "PROGRAM_AVAILABILITY_REQUIRES_REVIEW",
+    "POLICY_SOURCES_ARE_BUNDLED_REFERENCES_NOT_LIVE_VERIFICATION"
+  ]
+}

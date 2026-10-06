@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/../.venv-inflationforge-review/Scripts/python.exe",
+  "python.analysis.extraPaths": ["."]
+}

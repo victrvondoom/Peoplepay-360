@@ -62,3 +62,10 @@ data handoffs for GreenChain, InflationForge and PROXY. External provider and
 supplier verification is not implied by either reference demo.
 
 Run instructions and current limitations are in [running PeoplePay](docs/running-peoplepay.md) and [licensing blockers](docs/licensing-blockers.md). See [the ECHO demo guide](docs/DEMO.md) and [judge Q&A](docs/JUDGE_QA.md) for a reproducible walkthrough and claim boundaries.
+
+
+## CivicMesh assistance integration
+
+PeoplePay now routes relevant U.S. assistance needs through the original CivicMesh deterministic Jac engine, SDK normalization, ECHO evidence/versioned decisions and the `/assistance` portal. Procurement stays connected to GreenChain, InflationForge, the sandbox merchant and PROXY. No live payment is enabled.
+
+Run core: `python scripts/dev_peoplepay.py`. Run assistance: `python scripts/dev_peoplepay.py --assistance`. Run all integrated runtime services: `python scripts/dev_peoplepay.py --all`. Install the isolated environments first. [Run guide](extensions/civicmesh/README.md), [integration report](docs/integration/CIVICMESH_INTEGRATION_REPORT.md), [documentation index](docs/INDEX.md).

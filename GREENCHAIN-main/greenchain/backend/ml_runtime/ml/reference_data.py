@@ -116,7 +116,7 @@ def _build_naics2_from_real():
     import collections
     import statistics
     by2 = collections.defaultdict(list)
-    sector_names = {}
+    sector_names: dict[str, str] = {}
     for code, (title, val) in USEEIO_FACTORS.items():
         n2 = str(code)[:2]
         by2[n2].append(val)

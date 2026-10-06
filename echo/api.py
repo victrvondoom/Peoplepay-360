@@ -23,6 +23,7 @@ from echo.extensions.bootstrap import build_registry
 from echo.extensions.runtime import ExtensionRuntime
 from echo.extensions.api import ExtensionPlatform, build_router
 from echo.journey import build_journey_router
+from echo.assistance import build_assistance_router
 
 logger = logging.getLogger("peoplepay.echo")
 class BoundedBodyMiddleware:
@@ -88,6 +89,7 @@ registry = build_registry()
 runtime = ExtensionRuntime(registry)
 app.include_router(build_router(ExtensionPlatform(store, registry, runtime)))
 app.include_router(build_journey_router(store))
+app.include_router(build_assistance_router(store))
 
 
 app.add_middleware(BoundedBodyMiddleware)

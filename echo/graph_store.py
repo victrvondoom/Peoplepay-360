@@ -23,7 +23,7 @@ NODE_QUERIES = {
         "PriceObservation", "DeliveryPromise", "Decision", "DecisionCandidate", "Approval",
         "Transaction", "Order", "DeliveryEvent", "Dispute", "Policy", "CandidatePolicy",
         "Extension", "ExtensionVersion", "ExtensionRun", "IngestionEvent",
-        "EntityRepresentation", "Organization", "Place", "ExtensionObservation",
+        "EntityRepresentation", "Organization", "Place", "ExtensionObservation", "Program",
     )
 }
 

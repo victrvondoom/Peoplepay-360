@@ -185,9 +185,9 @@ export default function App() {
   const [reportNight, setReportNight] = useState<string | null>(null);
   const reportQ = usePoll<MorningReport>(api ? () => api.report(reportNight ?? undefined) : null, 60000, [api, reportNight], !!api && route === "report");
 
-  const incidents: Incident[] = replay ? replay.incidents : incidentsQ.data?.incidents ?? [];
+  const incidents: Incident[] = useMemo(() => replay ? replay.incidents : incidentsQ.data?.incidents ?? [], [replay, incidentsQ.data]);
   const tally: Tally | null = replay ? replay.tally : tallyQ.data;
-  const contracts: Contract[] = replay ? replay.contracts : contractsQ.data?.contracts ?? [];
+  const contracts: Contract[] = useMemo(() => replay ? replay.contracts : contractsQ.data?.contracts ?? [], [replay, contractsQ.data]);
   const safety: SafetyData | null = replay ? replay.safety : safetyQ.data;
   // Replay prefers what the server rendered at export time; browser mirrors cover older bundles and a pre-feature API.
   const audit: AuditRow[] | null = replay ? replay.audit ?? auditRows(replay.incidents, replay.contracts) : auditQ.data?.rows ?? (auditQ.error ? auditRows(incidents, contracts) : null);

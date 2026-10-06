@@ -57,8 +57,8 @@ export default function InstitutionRadarPage() {
         </h1>
         <p className="mt-2 max-w-2xl text-sm leading-6 text-proxy-muted">
           Real dispute volume per institution, aggregated across every citizen and every domain in the knowledge graph --
-          not a single user's opinion, a pattern that only becomes visible once enough real cases accumulate. A single
-          conversation with a chatbot can never show you this; it has no memory of anyone else's case.
+          not a single user&apos;s opinion, a pattern that only becomes visible once enough real cases accumulate. A single
+          conversation with a chatbot can never show you this; it has no memory of anyone else&apos;s case.
         </p>
         {!loading && !error && entries.length > 0 && (
           <div className="mt-4 flex flex-wrap gap-4 text-xs text-proxy-muted">

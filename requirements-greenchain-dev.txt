@@ -3,3 +3,8 @@
 -r GREENCHAIN-main/greenchain/backend/requirements.txt
 pytest==9.1.1
 pytest-asyncio==1.4.0
+mypy==1.13.0
+types-requests
+types-PyYAML
+pandas-stubs==2.2.3.250527
+types-beautifulsoup4

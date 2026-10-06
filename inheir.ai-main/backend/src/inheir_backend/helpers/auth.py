@@ -21,10 +21,10 @@ def get_hashed_password(password: str) -> str:
 
 
 def verify_password(password: str, hashed_pass: str) -> bool:
-    return bcrypt.checkpw(
-        password.encode("utf-8"),
-        hashed_pass.encode("utf-8"),
-    )
+    try:
+        return bcrypt.checkpw(password.encode("utf-8"), hashed_pass.encode("utf-8"))
+    except (ValueError, TypeError):
+        return False
 
 def sign_jwt(user_id: str, username: str, role: str):
     try:
@@ -32,7 +32,7 @@ def sign_jwt(user_id: str, username: str, role: str):
             user_id=user_id, username=username, expires=int(time.time() + 3600), role=role
         )
         token = jwt.encode(
-            payload.dict(), config.env.jwt_secret, algorithm="HS512")
+            {**payload.model_dump(), "exp": payload.expires}, config.env.jwt_secret, algorithm="HS512")
         return (token, payload.expires)
     except Exception as e:
         logging.error(e)

@@ -306,7 +306,7 @@ function WorkspacePreferences() {
         </select>
       </label>
       <p className="mt-3 text-[10px] text-proxy-tertiary">
-        Applied next time you open <span style={{ color: domainTheme(domain).color }}>{domainTheme(domain).label}</span>'s New Analysis flow or the Knowledge Graph page.
+        Applied next time you open <span style={{ color: domainTheme(domain).color }}>{domainTheme(domain).label}</span>&apos;s New Analysis flow or the Knowledge Graph page.
       </p>
     </section>
   );
@@ -382,7 +382,7 @@ function DataPrivacy() {
           </div>
           <div>
             <p className="text-xs font-medium text-proxy-text">{clearedCache ? "Cache cleared" : "Clear local app cache"}</p>
-            <p className="mt-0.5 text-[10px] leading-4 text-proxy-tertiary">Chat history, pinned analyses, recent searches -- {CACHE_KEYS.length} keys. Doesn't touch your backend data.</p>
+            <p className="mt-0.5 text-[10px] leading-4 text-proxy-tertiary">Chat history, pinned analyses, recent searches -- {CACHE_KEYS.length} keys. Doesn&apos;t touch your backend data.</p>
           </div>
         </button>
 
@@ -395,7 +395,7 @@ function DataPrivacy() {
           </div>
           <div>
             <p className="text-xs font-medium text-red-100">Reset device identity</p>
-            <p className="mt-0.5 text-[10px] leading-4 text-proxy-tertiary">Generates a new anonymous id -- you'll lose access to everything under this one.</p>
+            <p className="mt-0.5 text-[10px] leading-4 text-proxy-tertiary">Generates a new anonymous id -- you&apos;ll lose access to everything under this one.</p>
           </div>
         </button>
       </div>
@@ -412,7 +412,7 @@ function DataPrivacy() {
             </div>
             <p className="mb-4 text-xs leading-6 text-proxy-muted">
               This app has no login -- your device id <strong>is</strong> your account. Resetting it generates a brand-new anonymous identity in this browser.
-              Every case, appeal, and document you've created stays in the backend, but you will no longer be able to reach it from here. This cannot be undone from the UI.
+              Every case, appeal, and document you&apos;ve created stays in the backend, but you will no longer be able to reach it from here. This cannot be undone from the UI.
             </p>
             <div className="flex gap-2">
               <button onClick={() => setConfirmReset(false)} className="flex-1 rounded-lg border border-white/10 px-3 py-2 text-xs text-proxy-muted hover:border-white/25">

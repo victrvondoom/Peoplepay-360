@@ -22,13 +22,13 @@ async def upload_user_file(file: UploadFile, user_id: str, case_id: str | None, 
     blob_client.upload_blob(
         file_content,
         overwrite=True,
-        metadata={
+        metadata={key: str(value) for key, value in {
             "user_id": user_id,
             "filename": file_name,
             "id": digest,
             "case_id": case_id,
             "chat_id": chat_id
-        })
+        }.items() if value is not None})
 
     # results = ingest_document(
     #    f"{config.env.knowledge_base_endpoint}{hashed_filename}")
@@ -64,9 +64,9 @@ def update_user_metadata(hashed_file_name: str,  case_id: str | None, chat_id: s
 
     properties = blob_client.get_blob_properties()
     prev_metadata = properties.metadata or {}
-    update_metadata = {"case_id": case_id, "chat_id": chat_id}
+    update_metadata = {key: value for key, value in {"case_id": case_id, "chat_id": chat_id}.items() if value is not None}
     updated_metadata = {**prev_metadata, **update_metadata}
     
     blob_client.set_blob_metadata(updated_metadata)
 
-    return {"status": "success", "url": f"{config.env.uploads_endpoint}{hashed_filename}"}
+    return {"status": "success", "url": f"{config.env.uploads_endpoint}{hashed_file_name}"}

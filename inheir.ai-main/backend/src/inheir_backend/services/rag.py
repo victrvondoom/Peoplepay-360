@@ -92,7 +92,7 @@ def process_document(file_path: str):
             return {"id": blob_id, "updated": str(datetime.now()), "content": "\n".join(extracted_text), "metadata_file_path": file_path, "metadata_filename": filename}
         elif content_type == "text/plain":
             blob_data = blob_client.download_blob().readall().decode("utf-8")
-            return {"id": blob_id, "content": blob_data, "username": username, "metadata_file_path": file_path, "metadata_filename": filename}
+            return {"id": blob_id, "updated": str(datetime.now()), "content": blob_data, "metadata_file_path": file_path, "metadata_filename": filename}
         else:
             return None
     except Exception as e:
@@ -110,7 +110,9 @@ def ingest_document(file_path: str):
     processed_content = process_document(file_path)
     if processed_content:
         index_result = config.search.upload_documents([processed_content])
-        return {"status": "error", "message": "Failed to process the document."}
+        if index_result and all(item.succeeded for item in index_result):
+            return {"status": "success", "message": "Document indexed."}
+        return {"status": "error", "message": "Index did not acknowledge successful ingestion."}
 
     else:
         return {"status": "error", "message": "Failed to process the document."}
@@ -141,7 +143,7 @@ def generate_response(query, documents):
     try:
         # Format prompt for the model
         with get_openai_callback() as cb:
-            output = config.llm.invoke(prompt)
+            output = config.langchain_llm.invoke(prompt)
             ret = output.content.strip()
     except Exception as e:
         raise Exception(f"Error during prompt classification: {str(e)}")

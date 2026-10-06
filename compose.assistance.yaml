@@ -1,0 +1,16 @@
+# Optional service; the existing compose.echo.yaml graph/volume is unchanged.
+services:
+  civicmesh:
+    profiles: [assistance]
+    build:
+      context: .
+      dockerfile: extensions/civicmesh/Dockerfile
+    ports: ["127.0.0.1:8092:8092"]
+    environment:
+      PEOPLEPAY_CIVICMESH_TOKEN: ${PEOPLEPAY_CIVICMESH_TOKEN:?Set a dedicated token of at least 32 characters}
+      CIVICMESH_POLICY_DATE: ${CIVICMESH_POLICY_DATE:-}
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8092/health', timeout=10)"]
+      interval: 10s
+      timeout: 12s
+      retries: 6

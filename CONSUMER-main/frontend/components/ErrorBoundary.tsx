@@ -25,7 +25,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: unknown) {
-    // eslint-disable-next-line no-console
+
     console.error("ErrorBoundary caught an error (isolated, rest of the page is unaffected):", error);
   }
 

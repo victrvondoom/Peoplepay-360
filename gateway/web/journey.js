@@ -2,7 +2,7 @@
 const $ = (id) => document.getElementById(id);
 let actor = localStorage.getItem("peoplepay-user") || crypto.randomUUID();
 localStorage.setItem("peoplepay-user", actor);
-let token = "", active = null, busy = false, journeys = [];
+let token = sessionStorage.getItem("peoplepay-token") || "", active = null, busy = false, journeys = [];
 $("user").value = actor;
 const pretty = (value) => JSON.stringify(value, null, 2);
 const rupees = (minor) => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(minor / 100);
@@ -202,7 +202,7 @@ $("explain").onclick = () => run(async () => {
 $("refresh-evidence").onclick = () => run(async () => { active = await api(`/api/v1/journeys/${active.id}/refresh`, {}); await reload(); render(); });
 $("reload").onclick = () => run(reload);
 $("account-form").onsubmit = (event) => { event.preventDefault(); run(async () => {
-  actor = $("user").value.trim(); token = $("token").value.trim(); localStorage.setItem("peoplepay-user", actor);
+  actor = $("user").value.trim(); token = $("token").value.trim(); localStorage.setItem("peoplepay-user", actor); sessionStorage.setItem("peoplepay-token", token);
   active = null; render(); await reload();
 }); };
 $("mode").onchange = () => { $("mode-help").textContent = $("mode").value === "reference" ? "Fictitious suppliers, captured provider outputs and a merchant simulator. No payment is made." : "Calls configured native services. Missing coverage stays missing. Live orders cannot be authorized in this version."; };

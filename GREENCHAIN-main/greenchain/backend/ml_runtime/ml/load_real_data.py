@@ -188,7 +188,7 @@ def load_useeio(version: str = "v1.3") -> dict:
 def load_useeio_naics2() -> dict:
     """Returns {naics2: (sector_name, mean_kgco2e_per_usdM)} — 20 sectors."""
     full = load_useeio()
-    by2  = {}
+    by2: dict[str, list[float]] = {}
     for code, (title, val) in full.items():
         n2 = code[:2]
         if n2 not in by2:

@@ -99,6 +99,7 @@ export type Asset = {
 };
 
 export type GISResponse = {
+  coordinates?: Coordinates;
   property_buying_risk: number;
   property_renting_risk: number;
   flood_risk: number;

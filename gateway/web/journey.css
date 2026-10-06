@@ -3,6 +3,11 @@
 body { margin: 0; }
 [hidden] { display: none !important; }
 .approval-receipt { overflow-wrap: anywhere; }
+.assistance-content { line-height: 1.65; overflow-wrap: anywhere; }
+.assistance-content .module-card { padding: 18px; margin: 16px 0; border: 1px solid var(--line); border-radius: 9px; background: var(--cream); }
+.assistance-content h2, .assistance-content h3 { margin: 12px 0; }
+.assistance-content p { color: var(--muted); font-size: 13px; }
+.assistance-history:not(:empty) { background: white; border: 1px solid var(--line); border-radius: 13px; padding: 23px; }
 .metrics small, .metrics strong { display: block; }
 .metrics small { margin-bottom: 5px; }
 .provider-card > .pill { margin-left: 8px; }

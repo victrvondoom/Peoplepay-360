@@ -147,7 +147,7 @@ class GraphPermissions(ContractModel):
     @field_validator("read", "write")
     @classmethod
     def permitted_labels(cls, values: list[str]) -> list[str]:
-        permitted = {"Requirement", "Supplier", "Product", "Organization", "Place", "Claim", "Evidence", "Source"}
+        permitted = {"Requirement", "Supplier", "Product", "Organization", "Place", "Program", "Claim", "Evidence", "Source"}
         if set(values) - permitted:
             raise ValueError("manifest requests a graph label outside the proposal boundary")
         return values
@@ -273,7 +273,7 @@ class SourceProposal(ContractModel):
 
 class EntityProposal(ContractModel):
     ref: str = Field(pattern=IDENTIFIER)
-    type: Literal["Supplier", "Product", "Organization", "Place"]
+    type: Literal["Supplier", "Product", "Organization", "Place", "Program"]
     name: str = Field(min_length=1, max_length=200)
     external_ids: dict[str, str] = Field(default_factory=dict, max_length=10)
 

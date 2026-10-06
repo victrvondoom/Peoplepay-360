@@ -486,7 +486,7 @@ def _build_report_context(
             }
             for manufacturer in current_path
         ),
-        key=lambda item: item["estimatedTotalQ50Tco2e"],
+        key=lambda item: float(str(item["estimatedTotalQ50Tco2e"])),
         reverse=True,
     )[:3]
 

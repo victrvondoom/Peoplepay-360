@@ -26,12 +26,12 @@ import sys
 import time
 from typing import Any, cast
 
-import joblib
+import joblib  # type: ignore[import-untyped]
 import numpy as np
 import pandas as pd
 import xgboost as xgb
-from scipy import stats
-from sklearn.model_selection import GroupShuffleSplit
+from scipy import stats  # type: ignore[import-untyped]
+from sklearn.model_selection import GroupShuffleSplit  # type: ignore[import-untyped]
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from ml.reference_data import COUNTRY_EMISSION_MULTIPLIER

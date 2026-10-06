@@ -241,7 +241,7 @@ export function InstitutionMode() {
       </section>
 
       <aside className="rounded-2xl border border-white/10 bg-glass p-4 backdrop-blur-2xl">
-        {selectedNode ? <NodeDetailPanel node={selectedNode} /> : <p className="text-xs text-proxy-tertiary">Query an institution, then select a node to inspect it -- or a gold arc's endpoints to see what&apos;s shared.</p>}
+        {selectedNode ? <NodeDetailPanel node={selectedNode} /> : <p className="text-xs text-proxy-tertiary">Query an institution, then select a node to inspect it -- or a gold arc&apos;s endpoints to see what&apos;s shared.</p>}
       </aside>
     </div>
   );

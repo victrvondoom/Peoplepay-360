@@ -187,7 +187,7 @@ class InflationForgeService:
             current_year, previous_year = now.year, now.year - 1
             active_items = self.factory.active()
             latest = self.latest_snapshot()
-            if not force and self._snapshot_is_fresh(latest, now, len(active_items), len(CITY_CATALOG)):
+            if latest is not None and not force and self._snapshot_is_fresh(latest, now, len(active_items), len(CITY_CATALOG)):
                 with self.telemetry.span("inflationforge.sync.cache_hit", {
                     "snapshot_id": latest.id, "age_seconds": (now - latest.retrieved_at).total_seconds(),
                 }):

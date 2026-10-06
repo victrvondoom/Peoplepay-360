@@ -86,7 +86,7 @@ export function ReportsDashboard() {
   if (!summary) {
     return (
       <div className="rounded-2xl border border-red-300/20 bg-red-300/5 p-6 text-center text-sm text-red-200">
-        Couldn't load your reports. Is the backend running?
+        Couldn&apos;t load your reports. Is the backend running?
       </div>
     );
   }

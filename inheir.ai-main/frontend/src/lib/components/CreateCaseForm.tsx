@@ -36,12 +36,10 @@ export const CreateCase = () => {
     position: ToastPosition = isMobileDevice() ? "top" : "bottom-end",
   ) => {
     dispatchToast(
-      <>
-        <Toast>
+      <Toast>
           <ToastTitle className="text-lg font-semibold">{message}</ToastTitle>
           <ToastBody className="text-sm">{description}</ToastBody>
-        </Toast>
-      </>,
+        </Toast>,
       {
         intent,
         position,
@@ -297,7 +295,7 @@ export const CreateCase = () => {
                           <ul className="text-sm">
                             {supportingDocuments.map((file, index) => (
                               <li
-                                key={index}
+                                key={`${file.name}:${file.size}:${file.lastModified}`}
                                 className="flex justify-between items-center py-1"
                               >
                                 <span className="truncate max-w-xs">
@@ -349,8 +347,6 @@ export const CreateCase = () => {
 
 export default function Page() {
   return (
-    <>
-      <CreateCase />
-    </>
+    <CreateCase />
   );
 }

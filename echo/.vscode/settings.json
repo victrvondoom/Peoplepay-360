@@ -1,0 +1,4 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}/../.venv-echo/Scripts/python.exe",
+  "python.analysis.extraPaths": ["..", "../Beacon-main/src", "../packages/peoplepay-extension-sdk/src"]
+}

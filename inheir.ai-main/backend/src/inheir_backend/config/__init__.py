@@ -61,7 +61,7 @@ class AppConfig:
             self.env.ai_search_index_name, self.env.ai_search_api_key, self.env.ai_search_endpoint)
 
         # Text Analytics Client
-        self.text_analytics_client: TextAnalyticsClient = get_text_analysis_client(self.env.document_intelligence_endpoint, self.env.document_intelligence_key)
+        self.text_analytics_client: TextAnalyticsClient = get_text_analysis_client(self.env.azure_language_endpoint, self.env.azure_language_api_key)
 
 
 def get_config() -> AppConfig:

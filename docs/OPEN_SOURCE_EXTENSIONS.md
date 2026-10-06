@@ -228,3 +228,8 @@ external search API remain unresolved. The graph detects recorded dependency
 links; hidden copying/entity ownership/factual accuracy need their own evidence.
 The platform is a local prototype with explicit limitations in the security
 and run guides, not a claim of production procurement or payment readiness.
+
+
+## CivicMesh addition, 2026-10-06
+
+The user supplied `CivicMesh-main/`; it was not cloned or duplicated. Its 167 original files are preserved byte for byte. A real HTTP/SDK adapter now invokes the native deterministic Jac engine and records advisory Program/Claim/Evidence/Decision state in ECHO. Level 3 is verified; original specialist graph/session, full UI build, SSO and live government-source verification remain separate. [Map](integration/CIVICMESH_TECHNICAL_MAP.md), [upstream and license](integration/CIVICMESH_UPSTREAM.md).

@@ -87,8 +87,8 @@ export default function Default() {
           </div>
           <div className="flex flex-col w-full">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5">
-              {features.map((feature, i) => {
-                return <Card feature={feature} key={i} />;
+              {features.map((feature) => {
+                return <Card feature={feature} key={feature.title} />;
               })}
             </div>
           </div>

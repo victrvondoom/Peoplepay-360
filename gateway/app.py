@@ -28,6 +28,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import socket
 import sqlite3
 import threading
 import time
@@ -297,6 +298,14 @@ class GatewayState:
         self._hits: dict[str, deque[float]] = defaultdict(deque)
         self._lock = threading.Lock()
         self._journey = journey
+        self._assistance: Any = None
+
+    def assistance_service(self):
+        with self.workflow_lock:
+            if self._assistance is None:
+                from journey.assistance import AssistanceService
+                self._assistance = AssistanceService()
+        return self._assistance
 
     def journey_service(self):
         """Load the concrete journey only when requested, preserving legacy startup."""
@@ -422,6 +431,22 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 self.send_header("Connection", "close")
             self.end_headers()
             self.wfile.write(raw)
+            if self.close_connection:
+                # Preserve the refusal response before closing with unread
+                # bytes, which otherwise intermittently resets Windows peers.
+                self.wfile.flush()
+                try:
+                    self.connection.shutdown(socket.SHUT_WR)
+                    deadline = time.monotonic() + 0.1
+                    remaining = DRAIN_LIMIT
+                    while remaining and time.monotonic() < deadline:
+                        self.connection.settimeout(min(0.05, max(0.001, deadline - time.monotonic())))
+                        chunk = self.rfile.read1(min(_DRAIN_CHUNK, remaining))
+                        if not chunk:
+                            break
+                        remaining -= len(chunk)
+                except (TimeoutError, OSError):
+                    pass
 
         def _fail(self, code: int, message: str, **extra: Any) -> None:
             self._send(code, {"error": message, **extra})
@@ -526,6 +551,8 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 self.end_headers()
                 return
             assets = {"/": ("index.html", "text/html"),
+                      "/assistance": ("assistance.html", "text/html"),
+                      "/assistance.js": ("assistance.js", "text/javascript"),
                       "/journey": ("journey.html", "text/html"),
                       "/journey.js": ("journey.js", "text/javascript"),
                       "/journey.css": ("journey.css", "text/css"),
@@ -566,6 +593,9 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             parts = [p for p in path.split("/") if p]
+            if parts[:3] == ["api", "v1", "assistance"]:
+                self._assistance_route(user, parts[3:], None)
+                return
             if parts[:3] == ["api", "v1", "journeys"]:
                 self._journey_route(user, parts[3:], None)
                 return
@@ -618,6 +648,17 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             parts = [p for p in path.split("/") if p]
+            if parts == ["api", "v1", "routing"]:
+                from journey.capability_router import route_need
+                try:
+                    self._send(200, route_need(body.get("message"), body.get("jurisdiction")))
+                except ValueError as exc:
+                    self._fail(400, str(exc))
+                return
+            if parts[:3] == ["api", "v1", "assistance"]:
+                with state.workflow_lock:
+                    self._assistance_route(user, parts[3:], body)
+                return
             if parts[:3] == ["api", "v1", "journeys"]:
                 with state.workflow_lock:
                     self._journey_route(user, parts[3:], body)
@@ -640,6 +681,40 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             self._fail(404, f"no route for POST {path}")
 
         # --- handlers --------------------------------------------------
+
+        def _assistance_route(self, user, parts, body):
+            try:
+                from journey.service import JourneyUnavailable
+                service = state.assistance_service()
+                authorization = self.headers.get("Authorization")
+                if body is None and not parts:
+                    result = {"workflows": service.store.list(user)}
+                elif body is None and parts == ["providers"]:
+                    result = {"providers": service.providers()}
+                elif body is None and len(parts) == 1:
+                    result = service.store.get(parts[0], user)
+                elif body is None and len(parts) == 2 and parts[1] == "explain":
+                    result = service.explain(parts[0], user, authorization)
+                elif body is not None and not parts:
+                    result = service.create(user, body, authorization)
+                elif body is not None and len(parts) == 2 and parts[1] == "answer":
+                    result = service.update(parts[0], user, body, authorization)
+                elif body == {} and len(parts) == 2 and parts[1] == "retry":
+                    result = service.retry(parts[0], user, authorization)
+                else:
+                    self._fail(404, "unknown assistance route")
+                    return
+                self._send(201 if body is not None and not parts else 200, result)
+            except KeyError:
+                self._fail(404, "assistance workflow not found")
+            except (ValueError, TypeError) as exc:
+                self._fail(409, str(exc))
+            except ImportError:
+                self._fail(503, "Assistance SDK dependencies are missing; the core workspace remains available.")
+            except JourneyUnavailable:
+                self._fail(503, "ECHO is unavailable; historical decisions are retained.")
+            except sqlite3.Error:
+                self._fail(503, "Assistance storage is unavailable")
 
         def _journey_route(self, user: str, parts: list[str], body: dict[str, Any] | None) -> None:
             try:

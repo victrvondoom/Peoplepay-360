@@ -1044,7 +1044,7 @@ function AgentContent({ agentKey, breakdown, color }: { agentKey: keyof AgentBre
         {e.evidence_relevant === false && (
           <div className="mb-2.5 flex items-start gap-2 rounded-lg border border-amber-300/25 bg-amber-300/10 p-2.5">
             <AlertCircle className="mt-0.5 size-3.5 shrink-0 text-amber-300" />
-            <p className="text-xs leading-5 text-amber-100">Uploaded evidence doesn't appear to match this case -- nothing was extracted from it to avoid guessing.</p>
+            <p className="text-xs leading-5 text-amber-100">Uploaded evidence doesn&apos;t appear to match this case -- nothing was extracted from it to avoid guessing.</p>
           </div>
         )}
         {fields.length > 0 && (
@@ -1095,7 +1095,7 @@ function AgentContent({ agentKey, breakdown, color }: { agentKey: keyof AgentBre
         {degraded ? (
           <div className="mb-2.5 flex items-start gap-2 rounded-lg border border-white/10 bg-white/[0.03] p-2.5">
             <AlertCircle className="mt-0.5 size-3.5 shrink-0 text-proxy-tertiary" />
-            <p className="text-xs leading-5 text-proxy-tertiary">The strategy model's response couldn't be parsed into a clean structure this run -- showing its best-effort summary below instead of a confidence score.</p>
+            <p className="text-xs leading-5 text-proxy-tertiary">The strategy model&apos;s response couldn&apos;t be parsed into a clean structure this run -- showing its best-effort summary below instead of a confidence score.</p>
           </div>
         ) : (
           <div className="mb-3 flex items-center gap-3">
@@ -1138,7 +1138,7 @@ function AgentContent({ agentKey, breakdown, color }: { agentKey: keyof AgentBre
       ["Escalation note", n.escalation_note],
       ["Consumer complaint", n.consumer_complaint],
     ].filter(([, v]) => v && v.trim()) as Array<[string, string]>;
-    if (docs.length === 0) return <p className="text-xs text-proxy-tertiary">No documents drafted for this run -- enable "Also draft appeal / complaint letters" and re-run to generate them.</p>;
+    if (docs.length === 0) return <p className="text-xs text-proxy-tertiary">No documents drafted for this run -- enable &quot;Also draft appeal / complaint letters&quot; and re-run to generate them.</p>;
     return (
       <div className="space-y-2">
         {docs.map(([label, content]) => (

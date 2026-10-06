@@ -163,6 +163,14 @@ class ExtensionIngestor:
                 resolved[entity.ref] = identifier
                 props.update(match_status="IDENTIFIER_MATCH", match_confidence=1.0)
                 edge("EntityRepresentation", representation_id, "RESOLVES_TO", entity.type, identifier)
+            elif entity.type == "Program" and manifest.id == "civicmesh" and entity.external_ids.get("civicmesh_rule_id"):
+                identifier = stable_id("program", manifest.id, entity.external_ids["civicmesh_rule_id"])
+                node("Program", {"id": identifier, "name": entity.name, "provider": manifest.id,
+                                 "rule_ref": entity.external_ids["civicmesh_rule_id"], "jurisdiction": "US"})
+                entity_ids[entity.ref] = ("Program", identifier)
+                resolved[entity.ref] = identifier
+                props.update(match_status="PROVIDER_SCOPED_IDENTIFIER", match_confidence=1.0)
+                edge("EntityRepresentation", representation_id, "RESOLVES_TO", "Program", identifier)
             else:
                 # A display name never silently becomes a canonical supplier.
                 entity_ids[entity.ref] = ("EntityRepresentation", representation_id)
