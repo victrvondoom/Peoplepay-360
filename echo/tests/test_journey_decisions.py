@@ -137,3 +137,111 @@ def test_invalid_merchant_quote_rejected_before_policy(field, value):
     request["merchant_quotes"][0][field] = value
     with pytest.raises(ValueError):
         EvaluateJourney.model_validate(request)
+
+
+@pytest.mark.parametrize("score", [None, True, -1, 101, "90", 10**400])
+def test_unavailable_or_invalid_provider_score_cannot_win_sustainability_policy(graph, score):
+    request = body()
+    supplier = request.providers[0].entities[0]
+    supplier.attributes["provider_score"] = score
+    supplier.attributes["claims"][0]["value"] = score
+    decision = JourneyEcho(graph).evaluate(request, "owner")
+    candidate = next(item for item in decision["candidates"] if item["supplier_id"] == "supplier-b")
+    assert candidate["raw_provider_score"] is None
+    assert candidate["sustainability_score"] is None
+    assert "SUSTAINABILITY_SCORE_UNAVAILABLE" in candidate["policy_violations"]
+    assert not candidate["eligible"]
+    assert decision["recommended_supplier_id"] != "supplier-b"
+
+
+def test_conflicting_score_claim_cannot_support_supplier_ranking(graph):
+    request = body()
+    request.providers[0].entities[0].attributes["claims"][0]["value"] = 1
+    decision = JourneyEcho(graph).evaluate(request, "owner")
+    candidate = next(item for item in decision["candidates"] if item["supplier_id"] == "supplier-b")
+    assert "SUSTAINABILITY_SCORE_EVIDENCE_MISSING_OR_CONFLICTING" in candidate["policy_violations"]
+    assert not candidate["eligible"]
+
+
+def test_duplicate_supplier_domain_is_ambiguous_instead_of_first_match_winning(graph):
+    request = body()
+    duplicate = request.providers[0].entities[0].model_copy(deep=True)
+    duplicate.id += "-duplicate"
+    duplicate.attributes["claims"] = []
+    duplicate.attributes["estimates"] = []
+    request.providers[0].entities.append(duplicate)
+    decision = JourneyEcho(graph).evaluate(request, "owner")
+    candidate = next(item for item in decision["candidates"] if item["supplier_id"] == "supplier-b")
+    assert not candidate["eligible"]
+    assert any("AMBIGUOUS" in item for item in candidate["policy_violations"])
+
+
+@pytest.mark.parametrize("change", ["malformed_second_provider", "unreviewed_version", "mode", "quantity", "product"])
+def test_invalid_receipts_are_rejected_before_graph_ingestion(graph, change):
+    request = body()
+    if change == "malformed_second_provider":
+        request.providers[1].entities.append(Entity(id="bad-product", entity_type="product", name="Bad",
+            attributes={"claims": {"bad": "shape"}}))
+    elif change == "unreviewed_version":
+        request.providers[0].extension_version = "2.0.0"
+    elif change == "mode":
+        request.providers[0].raw_result["mode"] = "live"
+    elif change == "quantity":
+        request.providers[0].raw_result["request_context"]["quantity"] = 1
+    else:
+        request.providers[0].raw_result["request_context"]["product"] = "different product"
+    before = graph.read_only_rows("MATCH (n) RETURN count(n)", {})
+    with pytest.raises(ValueError):
+        JourneyEcho(graph).evaluate(request, "owner")
+    assert graph.read_only_rows("MATCH (n) RETURN count(n)", {}) == before
+
+
+def test_corrupt_stored_approval_cannot_be_replayed(graph):
+    import json
+    engine = JourneyEcho(graph)
+    decision = engine.evaluate(body(), "owner")
+    action = engine.approve(decision["decision_id"], "owner", approval(decision))
+    action["actor_id"] = "another-owner"
+    graph.upsert_node("Approval", {"id": action["action_id"], "action_json": json.dumps(action)})
+    with pytest.raises(ValueError, match="binding"):
+        engine.approve(decision["decision_id"], "owner", approval(decision))
+
+
+def journey_api(graph):
+    from fastapi import FastAPI
+    from fastapi.testclient import TestClient
+    from echo.auth import caller
+    from echo.journey import build_journey_router
+    app = FastAPI()
+    app.include_router(build_journey_router(graph))
+    app.dependency_overrides[caller] = lambda: "owner"
+    return TestClient(app)
+
+
+def test_snapshot_integrity_error_is_a_controlled_conflict_in_both_read_routes(graph):
+    decision = JourneyEcho(graph).evaluate(body(), "owner")
+    graph.upsert_node("Decision", {"id": decision["decision_id"], "journey_snapshot_json": "[]"})
+    with journey_api(graph) as client:
+        for path in (f"/echo/v1/journeys/decisions/{decision['decision_id']}",
+                     f"/echo/v1/journeys/{decision['journey_id']}/current"):
+            response = client.get(path)
+            assert response.status_code == 409
+            assert response.json()["detail"] == "historical decision snapshot failed its integrity check"
+
+
+def test_graph_outage_is_sanitized_unavailability_for_every_journey_route(graph, monkeypatch):
+    from redis.exceptions import ConnectionError
+    request = body()
+    decision = JourneyEcho(graph).evaluate(request, "owner")
+    def offline():
+        raise ConnectionError("sensitive-host-password")
+    monkeypatch.setattr(graph, "ping", offline)
+    with journey_api(graph) as client:
+        calls = [("GET", f"/echo/v1/journeys/decisions/{decision['decision_id']}", None),
+            ("GET", f"/echo/v1/journeys/{decision['journey_id']}/current", None),
+            ("POST", "/echo/v1/journeys/evaluate", request.model_dump(mode="json")),
+            ("POST", f"/echo/v1/journeys/decisions/{decision['decision_id']}/approve", approval(decision).model_dump())]
+        for method, path, payload in calls:
+            response = client.request(method, path, json=payload)
+            assert response.status_code == 503
+            assert response.json()["detail"] == "ECHO graph service is unavailable"

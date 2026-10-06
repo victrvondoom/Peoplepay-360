@@ -3,7 +3,7 @@
 from uuid import uuid4
 
 from echo.engine import EchoEngine
-from echo.extensions.contracts import ExtensionRequest
+from echo.extensions.contracts import ExtensionContext, ExtensionRequest
 from echo.extensions.ingestion import ExtensionIngestor
 from echo.extensions.runtime import ExtensionRuntime
 from echo.graph_store import EchoGraphStore
@@ -30,11 +30,13 @@ async def run_extension_demo(store: EchoGraphStore, runtime: ExtensionRuntime) -
                                               "active": True, "demo_scope": SCOPE})
         store.link("Requirement", requirement_id, "HAS_POLICY", "CandidatePolicy", policy_id)
     request = ExtensionRequest(request_id=f"demo-event-{uuid4().hex}", capability="demo_evidence",
-                               context={"requirement_id": requirement_id, "user_id": user_id})
+                               context=ExtensionContext(requirement_id=requirement_id, user_id=user_id))
     ingestor = ExtensionIngestor(store)
     runs = await runtime.execute_all(request)
     ingestions = []
     for execution in runs:
+        if execution.extension_id is None:
+            raise ValueError("demo execution has no registered provider identity")
         record = runtime.registry.get(execution.extension_id)
         ingestions.append(ingestor.ingest(record.manifest, request, execution))
     decision = EchoEngine(store).analyze_requirement(requirement_id)

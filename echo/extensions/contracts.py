@@ -349,6 +349,8 @@ class ModelProvenance(ContractModel):
 
 
 class NormalizedResult(ContractModel):
+    # model_provenance is a public contract field, not a BaseModel method.
+    model_config = ConfigDict(protected_namespaces=("model_validate", "model_dump"))
     schema_version: Literal["1"] = "1"
     extension_id: str = Field(pattern=r"^[a-z][a-z0-9-]{0,63}$")
     extension_version: str = Field(max_length=100)
@@ -412,8 +414,11 @@ class NormalizedResult(ContractModel):
         return self
 
 
+ExtensionErrorCode = Literal["EXTENSION_DISABLED", "EXTENSION_UNAVAILABLE", "EXTENSION_TIMEOUT", "INVALID_INPUT", "INVALID_OUTPUT", "CAPABILITY_UNAVAILABLE", "DEPENDENCY_UNAVAILABLE", "PERMISSION_DENIED", "CIRCUIT_OPEN", "RATE_LIMITED", "AUTH_REQUIRED", "CONFIGURATION_REQUIRED"]
+
+
 class ExtensionError(ContractModel):
-    code: Literal["EXTENSION_DISABLED", "EXTENSION_UNAVAILABLE", "EXTENSION_TIMEOUT", "INVALID_INPUT", "INVALID_OUTPUT", "CAPABILITY_UNAVAILABLE", "DEPENDENCY_UNAVAILABLE", "PERMISSION_DENIED", "CIRCUIT_OPEN", "RATE_LIMITED", "AUTH_REQUIRED", "CONFIGURATION_REQUIRED"]
+    code: ExtensionErrorCode
     message: str = Field(min_length=1, max_length=200)
 
 

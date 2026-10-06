@@ -28,15 +28,17 @@ after new evidence is evaluated. The existing SDK remains version 1.0.0.
 
 ## Run on Windows
 
-Run all commands from the repository root with Python 3.12. Existing project
-environments can be used if they already contain the required dependencies.
-Keep the Gateway and ECHO environments separate from the bundled apps.
+Run all commands from the repository root with Python 3.12. Keep Gateway,
+ECHO and the native bundled apps in separate environments. Their Pydantic,
+FastAPI and ML package versions differ; the shared interpreter is unsuitable
+for a reproducible combined development setup.
 
 Install the Gateway dependencies:
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e Beacon-main -e packages/peoplepay-extension-sdk -r journey/requirements.txt
+python -m venv .venv-journey-review
+.\.venv-journey-review\Scripts\python.exe -m pip install -r requirements-journey-dev.txt
+.\.venv-journey-review\Scripts\python.exe -m pip check
 ```
 
 Start FalkorDB and install ECHO:
@@ -61,7 +63,7 @@ In a Gateway terminal:
 $env:PEOPLEPAY_ECHO_URL = "http://127.0.0.1:8090"
 $env:PEOPLEPAY_JOURNEY_DB = "peoplepay-journey.sqlite3"
 $env:BEACON_GATEWAY_DB = "peoplepay.sqlite3"
-.\.venv\Scripts\python.exe -m gateway.app
+.\.venv-journey-review\Scripts\python.exe -m gateway.app
 ```
 
 Open `http://127.0.0.1:8080/journey`. These services use the existing local
@@ -147,33 +149,63 @@ checkout implementation, and all orders record `money_moved: false`.
 
 ## Verification
 
-Start FalkorDB first. Run the root suite from its existing development
-environment, and ECHO tests from the isolated environment:
+Start FalkorDB first. Install the native scoring environment so the captured
+GreenChain scores can be checked against the preserved implementation:
+
+```powershell
+python -m venv .venv-greenchain-review
+.\.venv-greenchain-review\Scripts\python.exe -m pip install -r requirements-greenchain-dev.txt
+.\.venv-greenchain-review\Scripts\python.exe -m pip check
+```
+
+Run the root and ECHO suites from their isolated environments:
 
 ```powershell
 $env:REQUIRE_JOURNEY_GRAPH = "1"
-python -m pytest -q
+$env:REQUIRE_NATIVE_CAPTURE = "1"
+.\.venv-journey-review\Scripts\python.exe -m pytest -q
 .\.venv-echo\Scripts\python.exe -m pytest -q echo/tests
-python -m mypy --check-untyped-defs transaction adapters gateway tests
-ruff check transaction adapters gateway journey tests echo/journey.py echo/tests/test_journey_decisions.py
+.\.venv-journey-review\Scripts\python.exe -m mypy --check-untyped-defs transaction adapters gateway journey tests packages/peoplepay-extension-sdk/src echo
+.\.venv-journey-review\Scripts\python.exe -m ruff check transaction adapters gateway journey tests packages/peoplepay-extension-sdk echo
 node --check gateway/web/journey.js
-python scripts/verify_zero_deletion.py
+.\.venv-journey-review\Scripts\python.exe scripts/verify_zero_deletion.py
 ```
 
-Verified on 5 October 2026: **299 root tests and 115 ECHO tests passed**.
+Verified on 6 October 2026: **373 root tests and 131 ECHO tests passed**.
 The HTTP integration suite runs real Gateway and ECHO processes against
 FalkorDB, with UUID test graphs and temporary SQLite stores. Missing graph
 infrastructure is a failure when `REQUIRE_JOURNEY_GRAPH=1`. Tests cover exact
 approval, ownership, cold graph startup, retries, repricing, cancellation,
 restart persistence, concurrent write protection, duplicate-order prevention,
-and an ambiguous native PROXY failure. ECHO history tests advance the clock
+and an ambiguous native PROXY failure. Additional regressions cover interrupted
+merchant-order checkpoints, safe dispute retries, malformed claims and source
+timestamps, ambiguous supplier identities and sanitized graph/storage outages.
+ECHO history tests advance the clock
 six days and confirm that refresh does not overwrite the original evidence.
 
 The browser completed the preset, approval, 260-chair delivery, dispute draft,
-history and refresh. Desktop and mobile were inspected, with no console errors
-and no page overflow at 390 pixels. Two dependency warnings remain: Pydantic's
-protected namespace warning in the existing ECHO contract and Starlette's
-test-client deprecation. Tests passed with these warnings.
+history and refresh. It also verified an ECHO outage and a retained dispute
+bundle retry after incomplete native configuration. Expected HTTP 503 responses
+appeared during fault injection; a fresh load had no console errors or warnings.
+There was no page overflow at 390 pixels. The ECHO namespace warning and
+Starlette test-client warning were resolved without changing the SDK version.
+See [the error remediation record](error-remediation-2026-10-06.md) for the full
+project matrix and remaining limits.
+
+## Recovery behavior
+
+If a merchant order commits before Gateway saves its checkpoint, approval retry
+or evidence refresh reconciles that existing order using its actor, transaction,
+decision version/hash and exact approved terms. It cannot authorize a second
+order. Ledger entries are deduplicated when the same operation is replayed.
+
+A delivery discrepancy retains its complete bundle before attempting PROXY.
+When local configuration fails before any external case request starts, the
+portal offers **Retry preserved dispute draft**. Correct the configuration and
+retry; the endpoint accepts no replacement evidence. If an external request may
+have created a case, retry is blocked until an operator reconciles the native
+case. No automatic duplicate native case is created. Reference drafts never
+submit a complaint.
 
 ## API entry points
 
@@ -185,6 +217,7 @@ Gateway authenticates all `/api/v1/journeys` routes:
 | GET | `/api/v1/journeys/{id}` | Read the owned persisted workflow |
 | POST | `/api/v1/journeys/{id}/approve` | Bind exact decision/version/supplier and explicit confirmations; run reference checkout |
 | POST | `/api/v1/journeys/{id}/delivery` | Record a final reference delivery event; hand off discrepancy evidence |
+| POST | `/api/v1/journeys/{id}/retry-dispute` | Retry the preserved draft only when no external handoff is ambiguous; body `{}` |
 | POST | `/api/v1/journeys/{id}/refresh` | Evaluate current evidence as a new version and preserve history |
 | GET | `/api/v1/journeys/{id}/explain` | Retrieve the sealed approved decision from ECHO |
 

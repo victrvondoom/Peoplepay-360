@@ -13,6 +13,7 @@ import urllib.request
 from datetime import datetime, timezone
 from importlib import metadata
 from pathlib import Path
+from typing import Any
 
 from packaging.markers import default_environment
 from packaging.requirements import Requirement
@@ -32,7 +33,7 @@ def main() -> None:
     names = sorted(distributions, key=str.lower)
     versions = {name: distributions[name].version for name in names}
     refs = {name: f"pkg:pypi/{name.lower().replace('_', '-')}@{versions[name]}" for name in names}
-    env = default_environment()
+    env: dict[str, str] = {key: str(value) for key, value in default_environment().items()}
     env.update({"python_version": f"{sys.version_info.major}.{sys.version_info.minor}",
                 "python_full_version": sys.version.split()[0], "sys_platform": sys.platform,
                 "platform_python_implementation": "CPython"})
@@ -61,11 +62,11 @@ def main() -> None:
         license_files = []
         for file in dist.files or []:
             if Path(str(file)).name.lower().startswith(("license", "copying", "notice")):
-                path = Path(dist.locate_file(file))
+                path = Path(str(dist.locate_file(file)))
                 if path.is_file():
                     license_files.append({"path": str(path.resolve().relative_to(ROOT)),
                                           "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
-        c = {"type": "library", "bom-ref": refs[name], "name": name, "version": versions[name],
+        c: dict[str, Any] = {"type": "library", "bom-ref": refs[name], "name": name, "version": versions[name],
              "purl": refs[name], "scope": "optional" if name.lower() in {"pytest", "pytest-asyncio", "httpx"} else "required",
              "properties": [prop("echo:metadata:license-expression", raw_license or "NOASSERTION"),
                             prop("echo:metadata:license", (dist.metadata.get("License") or "NOASSERTION").strip() or "NOASSERTION"),
@@ -92,10 +93,10 @@ def main() -> None:
                             *[{"ref": refs[n], "dependsOn": sorted(refs[d] for d in deps[n])} for n in names],
                             {"ref": "peoplepay:bundled:inflationforge", "dependsOn": []}]}
     queries = [{"version": versions[n], "package": {"name": n, "ecosystem": "PyPI"}} for n in names]
-    req = urllib.request.Request("https://api.osv.dev/v1/querybatch", data=json.dumps({"queries": queries}).encode(),
+    osv_request = urllib.request.Request("https://api.osv.dev/v1/querybatch", data=json.dumps({"queries": queries}).encode(),
                                   headers={"Content-Type": "application/json"}, method="POST")
-    response = json.load(urllib.request.urlopen(req, timeout=20))["results"]
-    advisories = {"source": "OSV querybatch", "scanned_at": stamp, "environment": ".venv-echo",
+    response = json.load(urllib.request.urlopen(osv_request, timeout=20))["results"]
+    advisories: dict[str, Any] = {"source": "OSV querybatch", "scanned_at": stamp, "environment": ".venv-echo",
                   "packages": [{"name": n, "version": versions[n],
                                 "vulnerability_ids": sorted({v["id"] for v in row.get("vulns", [])})}
                                for n, row in zip(names, response, strict=True)]}

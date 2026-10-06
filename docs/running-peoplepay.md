@@ -1,9 +1,12 @@
 # Running the PeoplePay gateway
 
-From the repository root, with the Beacon Python package installed:
+From the repository root, use an isolated Python 3.12 environment:
 
 ```powershell
-python -m gateway.app
+python -m venv .venv-journey-review
+.\.venv-journey-review\Scripts\python.exe -m pip install -r requirements-journey-dev.txt
+.\.venv-journey-review\Scripts\python.exe -m pip check
+.\.venv-journey-review\Scripts\python.exe -m gateway.app
 ```
 
 The default address is http://127.0.0.1:8080. Set
@@ -74,14 +77,17 @@ production HTTP server, and configured payment/merchant/courier integrations.
 Run the gateway checks separately from the bundled projects:
 
 ```powershell
-python -m pytest -q
-python -m ruff check transaction adapters gateway tests
-python -m mypy --check-untyped-defs transaction adapters gateway tests
+.\.venv-journey-review\Scripts\python.exe -m pytest -q
+.\.venv-journey-review\Scripts\python.exe -m ruff check transaction adapters gateway journey tests packages/peoplepay-extension-sdk echo
+.\.venv-journey-review\Scripts\python.exe -m mypy --check-untyped-defs transaction adapters gateway journey tests packages/peoplepay-extension-sdk/src echo
 node --check gateway/web/app.js
 ```
 
 See [the project review](project-review.md) for fixes, verified results, remaining
-upstream test blockers and production limitations from 2 October 2026.
+upstream test blockers and production limitations. The
+[6 October remediation record](error-remediation-2026-10-06.md) contains the
+latest verification; the [journey guide](unified-journey-v1.md) describes how to
+require real graph and native scoring checks rather than accepting skips.
 
 
 For Rumi's complete local checks without a deployment, run from `rumi-main`:

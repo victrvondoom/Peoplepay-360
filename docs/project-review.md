@@ -132,16 +132,35 @@ in the [red-team challenge](extensions/red-team-review.md).
   Without that shared secret it uses the explicitly local `X-Beacon-User`
   fallback; neither mode establishes production SSO or tenant operations.
 - Reviewed extension ingestion and a narrow read-only InflationForge service
-  adapter now exist. GreenChain, PROXY, and Rumi have intake manifests but no
-  executable adapters; see the [intake decision record](OPEN_SOURCE_EXTENSIONS.md).
+  adapter now exist. The subsequent Unified Journey adds executable GreenChain
+  and InflationForge SDK adapters, plus reference and native-service PROXY
+  handoff support. Rumi remains an intake capability; see the
+  [journey guide](unified-journey-v1.md) and
+  [intake decision record](OPEN_SOURCE_EXTENSIONS.md).
 - Dependency links are explicit and human review remains necessary. The engine
   cannot prove hidden copying, source authenticity, domain ownership, exact
   product/SKU fit, or factual correctness. Its scored roots describe recorded
   provenance paths, not statistical independence.
 - Human approval can create a gateway draft transaction and planning record;
-  it never triggers checkout or moves money. Uncertain transaction creation
+  it never moves money. The Unified Journey's separate exact approval can
+  create a reference merchant checkout/order. Uncertain transaction creation
   enters reconciliation-required state. Approval serialization is process
   local, so multiple API workers need distributed coordination before use.
 - Compose supplies the loopback FalkorDB service. ECHO API launch and identity
   settings are described in [running PeoplePay](running-peoplepay.md); this
   local configuration is not a production deployment recipe.
+
+## Unified Journey error remediation (2026-10-06)
+
+The latest pass resolves interrupted-order recovery, exact approval replay,
+renewed checkout decision IDs, safe dispute retry, stale portal state, malformed
+receipts, ambiguous supplier identity and historical decision/approval integrity
+errors. Gateway, ECHO and GreenChain now have separate reproducible development
+setups. The broader mypy check passes for 77 root/SDK/ECHO source files.
+
+Current local suites: **373 root, 131 ECHO, 451 Beacon, 54 GreenChain,
+18 InflationForge, 65 PROXY and 438 Rumi tests passed**. Real FalkorDB and the
+native GreenChain scorer were required for the integration verification. The
+browser also verified error recovery and preserved dispute retry. All 1,945
+original baseline paths remain. Full evidence and remaining deployment/native
+service limits are in [the remediation record](error-remediation-2026-10-06.md).

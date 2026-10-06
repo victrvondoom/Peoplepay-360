@@ -61,15 +61,17 @@ class EchoClient:
             if len(raw_response) > 524288:
                 raise JourneyUnavailable("ECHO response exceeded the journey limit")
             value = json.loads(raw_response)
+            if not isinstance(value, dict):
+                raise JourneyUnavailable("ECHO returned an invalid journey response")
             if response.status == 404:
                 raise KeyError("ECHO decision not found")
             if response.status == 409:
                 raise ValueError(value.get("detail", "ECHO rejected the decision/approval"))
-            if response.status not in {200, 201} or not isinstance(value, dict):
+            if response.status not in {200, 201}:
                 raise JourneyUnavailable("ECHO rejected the journey request")
             return value
-        except (OSError, json.JSONDecodeError, http.client.HTTPException) as exc:
-            raise JourneyUnavailable("ECHO is unavailable; no order was authorized") from exc
+        except (OSError, json.JSONDecodeError, UnicodeDecodeError, http.client.HTTPException) as exc:
+            raise JourneyUnavailable("ECHO is unavailable; existing approvals and orders are retained") from exc
         finally:
             conn.close()
 
@@ -185,29 +187,81 @@ class JourneyService:
         txn.context["journey"] = {"id": record["id"], "phase": record["phase"],
                                    "decision_id": record["decision"]["decision_id"] if record["decision"] else None,
                                    "external_order_ref": record["order"].get("external_order_ref") if record["order"] else None}
-        txn.ledger.append(kind, actor=f"gateway:{record['actor_id']}", detail={"journey_id": record["id"], **payload})
+        detail = {"journey_id": record["id"], **payload}
+        if any(event.kind == kind and event.detail == detail for event in txn.ledger):
+            return
+        txn.ledger.append(kind, actor=f"gateway:{record['actor_id']}", detail=detail)
         self.gateway.store.put(txn)
         self.gateway.bus.publish_ledger_tail(txn.ledger, source="unified-journey", since_seq=before)
+
+    @staticmethod
+    def _approval_input(body: dict[str, Any]) -> None:
+        expected = {"decision_hash", "decision_version", "supplier_id", "human_confirmation", "confirm_reference"}
+        if set(body) != expected:
+            raise ValueError("approval must contain the exact decision, supplier and explicit confirmations")
+        version, decision_hash, supplier = body["decision_version"], body["decision_hash"], body["supplier_id"]
+        if type(version) is not int or version < 1:
+            raise ValueError("decision_version must be a positive integer")
+        if (not isinstance(decision_hash, str) or len(decision_hash) != 64
+                or any(char not in "0123456789abcdef" for char in decision_hash)):
+            raise ValueError("decision_hash must be a lowercase SHA-256 digest")
+        if not isinstance(supplier, str) or not supplier.strip() or len(supplier) > 200:
+            raise ValueError("supplier_id must be non-empty bounded text")
+        if body["human_confirmation"] is not True or body["confirm_reference"] is not True:
+            raise ValueError("explicit human confirmation of the simulated order is required")
+
+    def _recover_order(self, record: dict[str, Any]) -> bool:
+        """Reconcile a committed merchant order without creating or approving one."""
+        if record["order"] or record["mode"] != "reference" or not record["approval"]:
+            return False
+        order = self.merchant.get_order_for_transaction(record["actor_id"], record["transaction_id"])
+        if order is None:
+            return False
+        action = record["approval"]
+        if (any(order[key] != action[key] for key in
+                ("actor_id", "transaction_id", "decision_id", "decision_version", "decision_hash", "terms_hash"))
+                or order["approved_terms"] != action["terms"] or digest(order["approved_terms"]) != action["terms_hash"]
+                or order["money_moved"] is not False):
+            raise ValueError("the merchant order does not match this journey's sealed approval")
+        session = self.merchant.get_session(order["checkout_session_id"])
+        if (session["status"] != "completed" or session["external_order_ref"] != order["external_order_ref"]
+                or any(session["authorized_action"][key] != action[key] for key in
+                       ("action_id", "actor_id", "transaction_id", "decision_id", "decision_version", "decision_hash", "terms_hash"))):
+            raise ValueError("the merchant checkout does not match this journey's sealed approval")
+        record["checkout"], record["order"] = session, order
+        record["phase"] = "ORDER_CREATED"
+        record["last_error"] = None
+        self.store.put(record)
+        self._ledger(record, EventKind.CHECKOUT_OBSERVED, {"checkout_session_id": session["id"],
+                     "external_order_ref": order["external_order_ref"], "money_moved": False})
+        return True
 
     def approve(self, journey_id: str, actor: str, body: dict[str, Any], authorization: str | None) -> dict[str, Any]:
         with self.lock:
             record = self.store.get(journey_id, actor)
+            self._approval_input(body)
+            self._recover_order(record)
             txn = self.gateway.store.get(record["transaction_id"])
             txn.assert_owned_by(actor)
-            if txn.state is State.CANCELLED or not txn.permissions.allows(Permission.PLANNING):
-                raise ValueError("the transaction is cancelled or its planning authorization was revoked")
-            if body.get("human_confirmation") is not True or body.get("confirm_reference") is not True:
-                raise ValueError("explicit human confirmation of the simulated order is required")
             if record["order"]:
                 prior = record["approval"]
                 if (body.get("decision_hash") != prior["decision_hash"] or body.get("supplier_id") != prior["terms"]["supplier_id"]
                         or body.get("decision_version") != prior["decision_version"]):
                     raise ValueError("an order already exists under different approved terms")
                 return record
+            if txn.state is State.CANCELLED or not txn.permissions.allows(Permission.PLANNING):
+                raise ValueError("the transaction is cancelled or its planning authorization was revoked")
             if record["mode"] != "reference" or not record["decision"]:
                 raise ValueError("only an evaluated reference journey can create a simulated order")
             decision = record["decision"]
-            action = self.echo.request("POST", f"/echo/v1/journeys/decisions/{decision['decision_id']}/approve", actor, authorization, body)
+            prior = record["approval"]
+            if prior:
+                if (body["decision_hash"] != prior["decision_hash"] or body["decision_version"] != prior["decision_version"]
+                        or body["supplier_id"] != prior["terms"]["supplier_id"]):
+                    raise ValueError("the preserved approval already selected different terms")
+                action = prior
+            else:
+                action = self.echo.request("POST", f"/echo/v1/journeys/decisions/{decision['decision_id']}/approve", actor, authorization, body)
             if (action["actor_id"] != actor or action["transaction_id"] != record["transaction_id"]
                     or action["decision_id"] != decision["decision_id"] or action["decision_hash"] != decision["decision_hash"]
                     or action["decision_version"] != decision["decision_version"] or digest(action["terms"]) != action["terms_hash"]):
@@ -233,14 +287,15 @@ class JourneyService:
                 "external_order_ref": completed["external_order_ref"], "money_moved": False})
             return record
 
-    def _proxy_draft(self, bundle: dict[str, Any], actor: str) -> dict[str, Any]:
+    def _proxy_operation(self, bundle: dict[str, Any], actor: str):
+        """Validate local configuration before claiming an external handoff."""
         from journey.proxy import NativeProxyAdapter, create_draft
         if self.proxy_factory:
-            return self.proxy_factory(bundle, actor)
+            return "external", lambda: self.proxy_factory(bundle, actor)
         origin = os.getenv("PEOPLEPAY_PROXY_API_URL")
         session_file = os.getenv("PEOPLEPAY_PROXY_SESSION_FILE")
         if not origin and not session_file:
-            return create_draft(bundle)
+            return "reference", lambda: create_draft(bundle)
         if not origin or not session_file:
             raise JourneyUnavailable("Native PROXY needs both its API origin and an actor session mapping")
         path = Path(session_file)
@@ -250,7 +305,48 @@ class JourneyService:
         mapped = sessions.get(actor) if isinstance(sessions, dict) else None
         if not isinstance(mapped, dict) or not mapped.get("bearer_token") or not mapped.get("proxy_user_id"):
             raise JourneyUnavailable("No native PROXY session is mapped for this PeoplePay actor")
-        return NativeProxyAdapter(origin).create_draft(bundle, bearer_token=mapped["bearer_token"], proxy_user_id=mapped["proxy_user_id"])
+        adapter = NativeProxyAdapter(origin)
+        return "native", lambda: adapter.create_draft(bundle, bearer_token=mapped["bearer_token"], proxy_user_id=mapped["proxy_user_id"])
+
+    def _handoff_dispute(self, record: dict[str, Any]) -> dict[str, Any]:
+        if record["dispute"]:
+            return record
+        if record.get("proxy_requires_reconciliation") or record.get("proxy_handoff_started"):
+            raise JourneyUnavailable("The previous native PROXY handoff may have created a case; reconcile it before another handoff")
+        bundle = record["dispute_bundle"]
+        try:
+            mode, operation = self._proxy_operation(bundle, record["actor_id"])
+        except (JourneyUnavailable, ValueError, OSError):
+            record["last_error"] = "PROXY configuration is not ready. Evidence is retained and no case handoff started; fix the configuration and retry the draft."
+            self.store.put(record)
+            raise JourneyUnavailable("PROXY is not configured for this actor; evidence is retained and draft retry is safe") from None
+        record["proxy_handoff_started"] = mode != "reference"
+        self.store.put(record)
+        try:
+            record["dispute"] = operation()
+        except Exception as exc:
+            record["proxy_requires_reconciliation"] = mode != "reference"
+            record["last_error"] = ("PROXY draft handoff failed. Evidence bundle is retained; reconcile native case before retry."
+                                    if mode != "reference" else "Reference PROXY draft failed. Evidence is retained; retry the local draft.")
+            case_id = getattr(exc, "case_id", None)
+            if case_id:
+                record["native_proxy_case_id"] = case_id
+            self.store.put(record)
+            raise JourneyUnavailable("PROXY draft handoff failed; order and evidence are retained") from None
+        record["phase"] = "DISPUTE_DRAFT_READY"
+        record["last_error"] = None
+        self.store.put(record)
+        self._ledger(record, EventKind.DISPUTE_OPENED, {"bundle_hash": bundle["bundle_hash"], "submitted": False,
+                                                     "merchant_event_id": record["delivery_event"].get("event_id")})
+        return record
+
+    def retry_dispute(self, journey_id: str, actor: str) -> dict[str, Any]:
+        """Retry only handoffs known not to have created an external case."""
+        with self.lock:
+            record = self.store.get(journey_id, actor)
+            if not record.get("dispute_bundle") or not record["order"]:
+                raise ValueError("a preserved delivery discrepancy bundle is required")
+            return self._handoff_dispute(record)
 
     def delivery(self, journey_id: str, actor: str, body: dict[str, Any]) -> dict[str, Any]:
         from journey.proxy import build_bundle
@@ -277,8 +373,8 @@ class JourneyService:
                 return record
             if record["dispute"]:
                 return record
-            if record.get("proxy_requires_reconciliation") or record.get("proxy_handoff_started"):
-                raise JourneyUnavailable("The previous native PROXY handoff may have created a case; reconcile it before another handoff")
+            if record.get("dispute_bundle"):
+                return self._handoff_dispute(record)
             approved = record["approved_decision"]
             selected = next(item for item in approved["candidates"] if item["supplier_id"] == record["approval"]["terms"]["supplier_id"])
             bundle = build_bundle(requirement=record["requirement"], decision=approved,
@@ -287,27 +383,13 @@ class JourneyService:
                 delivery_event=record["delivery_event"], actor_id=actor, correlation_id=record["id"])
             record["dispute_bundle"] = bundle
             record["phase"] = "DISPUTE_DRAFT_PENDING"
-            record["proxy_handoff_started"] = True
             self.store.put(record)
-            try:
-                record["dispute"] = self._proxy_draft(bundle, actor)
-            except Exception as exc:
-                record["last_error"] = "PROXY draft handoff failed. Evidence bundle is retained; reconcile native case before retry."
-                record["proxy_requires_reconciliation"] = True
-                case_id = getattr(exc, "case_id", None)
-                if case_id:
-                    record["native_proxy_case_id"] = case_id
-                self.store.put(record)
-                raise JourneyUnavailable("PROXY draft handoff failed; order and evidence are retained") from None
-            record["phase"] = "DISPUTE_DRAFT_READY"
-            self.store.put(record)
-            self._ledger(record, EventKind.DISPUTE_OPENED, {"bundle_hash": bundle["bundle_hash"], "submitted": False,
-                                                         "merchant_event_id": record["delivery_event"].get("event_id")})
-            return record
+            return self._handoff_dispute(record)
 
     def refresh(self, journey_id: str, actor: str, authorization: str | None) -> dict[str, Any]:
         with self.lock:
             record = self.store.get(journey_id, actor)
+            self._recover_order(record)
             original = record.get("approved_decision") or record["decision"]
             phase = record["phase"]
             self._evaluate(record, authorization)

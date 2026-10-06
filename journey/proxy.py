@@ -30,18 +30,29 @@ def _text(value: Any, name: str, maximum: int = 200) -> str:
         not isinstance(value, str)
         or not value.strip()
         or len(value) > maximum
-        or any(ord(char) < 32 or ord(char) == 127 for char in value)
+        or any(ord(char) < 32 or ord(char) == 127 or 0xD800 <= ord(char) <= 0xDFFF for char in value)
     ):
         raise ValueError(f"{name} must be nonempty text of at most {maximum} characters")
     return value.strip()
 
 
 def _canonical(value: Any) -> bytes:
+    # Bound nesting independently of Python's recursion limit. This also
+    # protects native responses parsed under a test runner's larger limit.
+    pending = [(value, 0)]
+    while pending:
+        current, depth = pending.pop()
+        if depth > 12:
+            raise ValueError("PROXY evidence/response JSON nesting exceeds 12 levels")
+        if isinstance(current, dict):
+            pending.extend((item, depth + 1) for item in current.values())
+        elif isinstance(current, list):
+            pending.extend((item, depth + 1) for item in current)
     try:
         raw = json.dumps(
             value, sort_keys=True, ensure_ascii=False, separators=(",", ":"), allow_nan=False
         ).encode("utf-8")
-    except (TypeError, ValueError, RecursionError) as exc:
+    except (TypeError, ValueError, RecursionError, UnicodeEncodeError) as exc:
         raise ValueError("Dispute context must contain finite JSON values") from exc
     if len(raw) > MAX_BUNDLE_BYTES:
         raise ValueError("Dispute evidence exceeds the 512 KiB limit")
@@ -88,6 +99,9 @@ def build_bundle(
     terms = _object(approved_terms, "approved_terms")
     event = _object(delivery_event, "delivery_event")
     supplier = _object(selected_supplier, "selected_supplier")
+    approved_decision = _object(decision, "decision")
+    owner = _text(actor_id, "actor_id")
+    transaction = _text(transaction_reference, "transaction_reference")
     approved_quantity = _quantity(terms.get("quantity"), "approved_terms.quantity", 1)
     payload = event.get("data", event)
     if not isinstance(payload, dict):
@@ -99,17 +113,54 @@ def build_bundle(
     event_order = payload.get("merchant_order_reference")
     if event_order != order_reference:
         raise ValueError("Delivery event belongs to another merchant order")
-    if "ordered_quantity" in payload and payload["ordered_quantity"] != approved_quantity:
+    if "ordered_quantity" in payload and _quantity(payload["ordered_quantity"], "ordered_quantity", 1) != approved_quantity:
         raise ValueError("Delivery event ordered quantity differs from approved terms")
+    if "missing_quantity" in payload and _quantity(payload["missing_quantity"], "missing_quantity") != approved_quantity - delivered_quantity:
+        raise ValueError("Delivery event missing quantity differs from approved terms")
+    if "delivery_final" in payload and payload["delivery_final"] is not True:
+        raise ValueError("A delivery dispute requires a final delivery receipt")
+    for key, expected in (("merchant_order_ref", order_reference), ("transaction_id", transaction), ("actor_id", owner)):
+        if key in event and event[key] != expected:
+            raise ValueError(f"Delivery event {key} differs from the approved transaction")
+    for key, expected in (("actor_id", owner), ("transaction_id", transaction)):
+        if key in approved_decision and approved_decision[key] != expected:
+            raise ValueError(f"Decision {key} differs from the approved transaction")
+    if isinstance(original_requirement, dict) and "quantity" in original_requirement:
+        if _quantity(original_requirement["quantity"], "requirement.quantity", 1) != approved_quantity:
+            raise ValueError("Original requirement quantity differs from approved terms")
+    if "supplier_id" in terms and terms["supplier_id"] != supplier.get("supplier_id", supplier.get("id")):
+        raise ValueError("Selected supplier differs from approved terms")
+    for key in ("decision_id", "decision_version"):
+        if key in event and key in approved_decision and event[key] != approved_decision[key]:
+            raise ValueError(f"Delivery event {key} differs from the approved decision")
+    if "decision_version" in event and (type(event["decision_version"]) is not int or event["decision_version"] < 1):
+        raise ValueError("Delivery event decision_version must be a positive integer")
+    if "requirement" in approved_decision and _canonical(approved_decision["requirement"]) != _canonical(original_requirement):
+        raise ValueError("Original requirement differs from the preserved decision")
+    decision_hash = approved_decision.get("decision_hash")
+    if decision_hash is not None:
+        snapshot = {key: value for key, value in approved_decision.items() if key != "decision_hash"}
+        actual_hash = hashlib.sha256(json.dumps(snapshot, sort_keys=True, separators=(",", ":"),
+                                               ensure_ascii=True, allow_nan=False).encode()).hexdigest()
+        if not isinstance(decision_hash, str) or not hmac.compare_digest(decision_hash, actual_hash):
+            raise ValueError("Preserved decision hash does not match its snapshot")
+    candidates = approved_decision.get("candidates")
+    if candidates is not None:
+        if not isinstance(candidates, list):
+            raise ValueError("Decision candidates must be a list")
+        selected = next((candidate for candidate in candidates if isinstance(candidate, dict)
+                         and candidate.get("supplier_id") == terms.get("supplier_id")), None)
+        if selected is None or _canonical(selected.get("terms")) != _canonical(terms) or selected.get("eligible") is not True:
+            raise ValueError("Approved terms do not match an eligible candidate in the preserved decision")
     context = {
         "schema_version": SCHEMA_VERSION,
-        "actor_id": _text(actor_id, "actor_id"),
+        "actor_id": owner,
         "correlation_id": _text(correlation_id, "correlation_id"),
         "requirement": original_requirement,
-        "decision": _object(decision, "decision"),
+        "decision": approved_decision,
         "selected_supplier": supplier,
         "approved_terms": terms,
-        "transaction_reference": _text(transaction_reference, "transaction_reference"),
+        "transaction_reference": transaction,
         "merchant_order_reference": order_reference,
         "delivery_event": event,
         "discrepancy": {
@@ -277,8 +328,10 @@ class NativeProxyAdapter:
     ) -> dict[str, Any]:
         preserved = verify_bundle(bundle)
         token = _text(bearer_token, "bearer_token", 16_384)
+        if not token.isascii() or any(char.isspace() for char in token):
+            raise ValueError("Native PROXY bearer_token must be an ASCII token without whitespace")
         expected_user = _text(proxy_user_id, "proxy_user_id")
-        case_id = _text(native_case_id, "native_case_id") if native_case_id else None
+        case_id = _text(native_case_id, "native_case_id") if native_case_id is not None else None
         headers = {
             "Authorization": f"Bearer {token}",
             "Accept": "application/json",
@@ -310,10 +363,18 @@ class NativeProxyAdapter:
                     "summary": summary,
                     "jurisdiction": "IN",
                 })
-            case_id = _text(case.get("id"), "native case id")
+            try:
+                returned_case_id = _text(case.get("id"), "native case id")
+            except ValueError as exc:
+                raise NativeProxyError("Native PROXY returned no valid case identifier", case_id=case_id) from exc
+            if case_id is not None and returned_case_id != case_id:
+                raise NativeProxyError("Native PROXY returned a different resume case", case_id=case_id)
+            case_id = returned_case_id
             if case.get("user_id") != expected_user:
                 raise NativeProxyError("Native PROXY returned a case for another mapped user", case_id=case_id)
-            if case.get("domain") != "ecommerce" or case.get("status") in {"submitted", "resolved", "closed"}:
+            if case.get("domain") != "ecommerce" or case.get("status") not in {
+                "draft", "intake", "review_required", "ready_for_approval",
+            }:
                 raise NativeProxyError("Native PROXY case is not an open ecommerce draft workflow", case_id=case_id)
             if native_case_id and (
                 not isinstance(case.get("summary"), str)
@@ -328,18 +389,26 @@ class NativeProxyAdapter:
             )
             if document.get("case_id") != case_id or document.get("user_id") != expected_user:
                 raise NativeProxyError("Native PROXY returned evidence for another case or user", case_id=case_id)
+            try:
+                document_id = _text(document.get("id") or document.get("document_id"), "native document id")
+            except ValueError as exc:
+                raise NativeProxyError("Native PROXY returned no valid evidence document identifier", case_id=case_id) from exc
             analysis = self._request(
                 client, "POST", "/case/appeal", case_id=case_id, json={"case_id": case_id}
             )
             if analysis.get("case_id") != case_id:
                 raise NativeProxyError("Native PROXY returned analysis for another case", case_id=case_id)
+            if ("user_id" in analysis and analysis["user_id"] != expected_user) or analysis.get("submitted") is True:
+                raise NativeProxyError("Native PROXY returned analysis outside this user's draft workflow", case_id=case_id)
+            if "status" in analysis and analysis["status"] not in {"draft", "review_required", "ready_for_approval"}:
+                raise NativeProxyError("Native PROXY analysis is not a draft awaiting human review", case_id=case_id)
             draft_text = analysis.get("appeal_draft")
             if not isinstance(draft_text, str) or not draft_text.strip():
                 raise NativeProxyError("Native PROXY produced no appeal draft; review its provider configuration", case_id=case_id)
         return {
             "draft_id": f"proxy-native-{case_id}-{preserved['bundle_hash'][:16]}",
             "native_case_id": case_id,
-            "native_document_id": document.get("id", document.get("document_id")),
+            "native_document_id": document_id,
             "provider": "PROXY native service",
             "mode": "NATIVE_SERVICE",
             "status": "draft",
@@ -366,12 +435,24 @@ class NativeProxyAdapter:
                 if not 200 <= response.status_code < 300:
                     raise NativeProxyError(f"Native PROXY {path} returned HTTP {response.status_code}", case_id=case_id)
                 raw = bytearray()
-                for chunk in response.iter_bytes():
+                for chunk in response.iter_bytes(chunk_size=64 * 1024):
                     raw.extend(chunk)
                     if len(raw) > MAX_RESPONSE_BYTES:
                         raise NativeProxyError("Native PROXY response exceeded 512 KiB", case_id=case_id)
-            decoded = json.loads(raw)
-        except (httpx.HTTPError, json.JSONDecodeError, UnicodeDecodeError) as exc:
+            def reject_constant(value: str) -> None:
+                raise ValueError(f"Nonfinite JSON constant {value}")
+
+            def reject_duplicate_keys(pairs: list[tuple[str, Any]]) -> dict[str, Any]:
+                result: dict[str, Any] = {}
+                for key, value in pairs:
+                    if key in result:
+                        raise ValueError("Duplicate JSON object key")
+                    result[key] = value
+                return result
+
+            decoded = json.loads(raw, parse_constant=reject_constant, object_pairs_hook=reject_duplicate_keys)
+            _canonical(decoded)
+        except (httpx.HTTPError, ValueError, UnicodeDecodeError, RecursionError) as exc:
             raise NativeProxyError(f"Native PROXY {path} failed or returned invalid JSON", case_id=case_id) from exc
         if not isinstance(decoded, dict):
             raise NativeProxyError("Native PROXY returned a nonobject response", case_id=case_id)

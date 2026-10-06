@@ -8,18 +8,18 @@ import time
 from collections import deque
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from typing import Any
+from typing import Any, cast
 from uuid import uuid4
 
 from pydantic import ValidationError
 
 from echo.extensions.contracts import (
-    ExtensionError, ExtensionExecution, ExtensionHealth, ExtensionRequest, NormalizedResult, contains_secret,
+    ExtensionError, ExtensionErrorCode, ExtensionExecution, ExtensionHealth, ExtensionRequest, NormalizedResult, contains_secret,
 )
 from echo.extensions.registry import ExtensionRegistry, RegisteredExtension
 from echo.extensions.transport import ExtensionTransportError, ServiceTransport
 
-ERROR_MESSAGES = {
+ERROR_MESSAGES: dict[ExtensionErrorCode, str] = {
     "EXTENSION_DISABLED": "Extension is disabled",
     "EXTENSION_UNAVAILABLE": "Extension execution failed",
     "EXTENSION_TIMEOUT": "Extension exceeded its time limit",
@@ -55,7 +55,7 @@ class ExtensionRuntime:
 
     def _finish(self, request: ExtensionRequest, record: RegisteredExtension | None, started_at: datetime,
                 started_clock: float, *, result: NormalizedResult | None = None,
-                code: str | None = None, message: str = "") -> ExtensionExecution:
+                code: ExtensionErrorCode | None = None, message: str = "") -> ExtensionExecution:
         execution = ExtensionExecution(
             run_id=f"ext-run-{uuid4().hex}", request_id=request.request_id, capability=request.capability,
             extension_id=record.manifest.id if record else None,
@@ -70,7 +70,7 @@ class ExtensionRuntime:
         self.recent_runs.append(execution)
         return execution
 
-    def _ready_error(self, record: RegisteredExtension, request: ExtensionRequest) -> tuple[str, str] | None:
+    def _ready_error(self, record: RegisteredExtension, request: ExtensionRequest) -> tuple[ExtensionErrorCode, str] | None:
         if not record.enabled:
             return "EXTENSION_DISABLED", "Extension is disabled"
         if request.capability not in record.manifest.capabilities:
@@ -82,7 +82,8 @@ class ExtensionRuntime:
         if record.manifest.runtime.mode == "service":
             configuration_error = ServiceTransport(record.manifest).configuration_error
             if configuration_error:
-                return configuration_error.code, ERROR_MESSAGES[configuration_error.code]
+                code = cast(ExtensionErrorCode, configuration_error.code if configuration_error.code in ERROR_MESSAGES else "EXTENSION_UNAVAILABLE")
+                return code, ERROR_MESSAGES[code]
         if self._state(record).open_until > time.monotonic():
             return "CIRCUIT_OPEN", "Extension failure circuit is temporarily open"
         return None
@@ -94,7 +95,7 @@ class ExtensionRuntime:
         if result.extension_id != record.manifest.id or result.extension_version != record.manifest.version:
             raise ValueError("result producer does not match the reviewed manifest")
         writes = set(record.manifest.graph.write)
-        produced_labels = {entity.type for entity in result.entities}
+        produced_labels: set[str] = {entity.type for entity in result.entities}
         if result.sources or result.source_dependencies:
             produced_labels.add("Source")
         if result.claims or result.observations:
@@ -119,6 +120,7 @@ class ExtensionRuntime:
             return self._finish(request, record, started_at, started_clock, code=problem[0], message=problem[1])
         state = self._state(record)
         acquired = False
+        code: ExtensionErrorCode
         try:
             try:
                 await asyncio.wait_for(state.semaphore.acquire(), timeout=record.manifest.runtime.timeout_seconds)
@@ -134,7 +136,11 @@ class ExtensionRuntime:
             if remaining <= 0:
                 return self._finish(request, record, started_at, started_clock, code="RATE_LIMITED",
                                     message="Extension execution deadline expired while queued")
-            raw = await asyncio.wait_for(record.adapter.execute(request), timeout=remaining)
+            adapter = record.adapter
+            if adapter is None:
+                return self._finish(request, record, started_at, started_clock, code="EXTENSION_UNAVAILABLE",
+                                    message="No reviewed adapter is attached")
+            raw = await asyncio.wait_for(adapter.execute(request), timeout=remaining)
             result = self._normalize(raw, record)
             state.failures = 0
             state.open_until = 0
@@ -142,7 +148,7 @@ class ExtensionRuntime:
         except TimeoutError:
             code, message = "EXTENSION_TIMEOUT", "Extension exceeded its time limit"
         except ExtensionTransportError as exc:
-            code = exc.code if exc.code in ERROR_MESSAGES else "EXTENSION_UNAVAILABLE"
+            code = cast(ExtensionErrorCode, exc.code if exc.code in ERROR_MESSAGES else "EXTENSION_UNAVAILABLE")
             message = ERROR_MESSAGES[code]
         except (ValidationError, ValueError, TypeError):
             code, message = "INVALID_OUTPUT", "Extension result failed the normalized contract"

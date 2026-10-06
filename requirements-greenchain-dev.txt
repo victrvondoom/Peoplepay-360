@@ -1,0 +1,5 @@
+# GreenChain's native scoring dependencies remain separate from Gateway/ECHO.
+# Install from the repository root in an isolated Python 3.12 environment.
+-r GREENCHAIN-main/greenchain/backend/requirements.txt
+pytest==9.1.1
+pytest-asyncio==1.4.0

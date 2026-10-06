@@ -8,12 +8,14 @@ with unresolved identity or provenance makes this journey abstain.
 from __future__ import annotations
 
 import json
+import math
 import threading
 from datetime import datetime, timezone
 from typing import Any, Literal
 
 from fastapi import APIRouter, Depends, HTTPException
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, model_validator
+from redis.exceptions import RedisError
 
 from echo.auth import caller
 from echo.graph_store import EchoGraphStore
@@ -24,6 +26,12 @@ from journey.models import ProcurementRequirement, digest
 from peoplepay_sdk import ExtensionResult
 
 LOCK = threading.RLock()
+
+
+def _score(value: Any) -> float | None:
+    if isinstance(value, (int, float)) and not isinstance(value, bool) and 0 <= value <= 100 and math.isfinite(value):
+        return float(value)
+    return None
 
 
 class MerchantQuote(BaseModel):
@@ -109,10 +117,16 @@ class JourneyEcho:
         )
         if not rows or not rows[0][0]:
             raise KeyError("decision not found")
-        snapshot = json.loads(rows[0][0])
-        expected = snapshot.pop("decision_hash")
-        if digest(snapshot) != expected:
-            raise ValueError("historical decision snapshot failed its integrity check")
+        try:
+            snapshot = json.loads(rows[0][0])
+            if not isinstance(snapshot, dict):
+                raise ValueError("snapshot is not an object")
+            expected = snapshot.pop("decision_hash")
+            if (not isinstance(expected, str) or len(expected) != 64 or digest(snapshot) != expected
+                    or snapshot.get("decision_id") != decision_id or snapshot.get("actor_id") != actor):
+                raise ValueError("snapshot binding or digest is invalid")
+        except (ValueError, TypeError, KeyError, RecursionError, UnicodeError) as exc:
+            raise ValueError("historical decision snapshot failed its integrity check") from exc
         snapshot["decision_hash"] = expected
         return snapshot
 
@@ -123,6 +137,25 @@ class JourneyEcho:
 
         if {result.extension_id for result in body.providers} != {"greenchain", "inflationforge"}:
             raise ValueError("the journey requires exactly GreenChain and InflationForge receipts")
+        # Validate every receipt before creating requirements or ingesting any
+        # provider. Malformed second-provider output must not partially mutate
+        # the graph on its way to a rejected decision.
+        normalizations = [to_echo_result(item) for item in body.providers]
+        manifests = [reviewed_manifest(item.extension_id) for item in body.providers]
+        for sdk_result, manifest in zip(body.providers, manifests):
+            if sdk_result.extension_version != manifest.version:
+                raise ValueError("journey receipt does not match the reviewed provider version")
+            mode = sdk_result.raw_result.get("mode")
+            if mode is not None and mode != body.mode:
+                raise ValueError("provider receipt mode does not match the journey")
+            context = sdk_result.raw_result.get("request_context")
+            if context is not None:
+                if not isinstance(context, dict) or context.get("product") != body.requirement.product:
+                    raise ValueError("provider receipt product context does not match the requirement")
+                if sdk_result.extension_id == "greenchain" and (
+                        context.get("quantity") != body.requirement.quantity or context.get("destination") != body.requirement.destination):
+                    raise ValueError("GreenChain receipt shipment context does not match the requirement")
+        reconciliation = reconcile_entities(body.providers)
         receipt_hash = digest(body.model_dump(mode="json"))
         decision_id = stable_id("journey-decision", actor, body.journey_id, str(body.version))
         with LOCK:
@@ -155,10 +188,8 @@ class JourneyEcho:
                 raise ValueError("journey requirement, mode or transaction binding cannot change")
             ingest = []
             normalized = []
-            for sdk_result in body.providers:
-                result = to_echo_result(sdk_result)
-                manifest = reviewed_manifest(sdk_result.extension_id)
-                request = ExtensionRequest(request_id=f"{body.journey_id}-v{body.version}-{sdk_result.extension_id}",
+            for sdk_result, result, manifest in zip(body.providers, normalizations, manifests):
+                request = ExtensionRequest(request_id=sdk_result.request_id,
                     capability=manifest.capabilities[0], context=ExtensionContext(requirement_id=body.journey_id, user_id=actor),
                     input={"sdk_receipt_hash": digest(sdk_result.model_dump(mode="json"))})
                 execution = ExtensionExecution(run_id=stable_id("journey-run", decision_id, sdk_result.extension_id),
@@ -167,18 +198,18 @@ class JourneyEcho:
                     status=result.status, result=result, started_at=self.clock(), finished_at=self.clock(), duration_ms=0)
                 ingest.append(ExtensionIngestor(self.store).ingest(manifest, request, execution))
                 normalized.append(result.model_dump(mode="json"))
-            reconciliation = reconcile_entities(body.providers)
             greenchain = next(item for item in body.providers if item.extension_id == "greenchain")
-            warnings = list(dict.fromkeys([warning for provider in body.providers for warning in provider.warnings]))
+            warnings = list(dict.fromkeys([warning for result in normalizations for warning in result.warnings]))
             candidates = []
             for typed_quote in body.merchant_quotes:
                 quote = typed_quote.model_dump()
                 domain = f"{quote.get('supplier_id')}.example" if body.mode == "reference" else quote.get("supplier_domain")
-                supplier = next((entity for entity in greenchain.entities
-                                 if domain and entity.identifiers.get("domain") == domain), None)
+                matches = [entity for entity in greenchain.entities if entity.entity_type == "supplier" and domain
+                           and entity.identifiers.get("domain") and domain_identity(entity.identifiers["domain"]) == domain]
+                supplier = matches[0] if len(matches) == 1 else None
                 violations = []
                 if not supplier:
-                    violations.append("SUPPLIER_IDENTITY_UNRESOLVED")
+                    violations.append("SUPPLIER_IDENTITY_AMBIGUOUS" if len(matches) > 1 else "SUPPLIER_IDENTITY_UNRESOLVED")
                 if quote.get("currency") != body.requirement.currency:
                     violations.append("CURRENCY_MISMATCH")
                 if type(quote.get("total_minor")) is not int or quote["total_minor"] > body.requirement.budget_minor:
@@ -194,26 +225,41 @@ class JourneyEcho:
                     # certify a chair order; procurement verification remains required.
                     violations.append("LIVE_MERCHANT_AND_SUPPLIER_VERIFICATION_REQUIRED")
                 attrs = supplier.attributes if supplier else {}
-                score = attrs.get("provider_score", 0)
-                if type(score) not in {int, float}:
-                    score = 0
+                provider_score = attrs.get("provider_score")
+                raw_score = _score(provider_score)
+                raw = round(raw_score, 4) if raw_score is not None else None
                 estimates = attrs.get("estimates", [])
                 carbon = next((item.get("value") for item in estimates
                                if "emission" in item.get("kind", "").lower() or "carbon" in item.get("kind", "").lower()), None)
-                raw = round(float(score), 4)
                 sustainability = attrs.get("sustainability_score")
+                sustainability_basis = "EXPLICIT_PROVIDER_SUSTAINABILITY_SCORE"
                 if sustainability is None:
                     sustainability = next((claim.get("value") for claim in attrs.get("claims", [])
-                                           if claim.get("predicate") == "sustainability_score"), raw)
-                sustainability = float(sustainability) if isinstance(sustainability, (int, float)) and not isinstance(sustainability, bool) else raw
+                                           if claim.get("predicate") == "sustainability_score"), None)
+                if sustainability is None:
+                    sustainability, sustainability_basis = raw, "GREENCHAIN_ENVIRONMENTAL_COMPOSITE_PROXY"
+                sustainability = _score(sustainability)
+                score_claims = [claim for claim in attrs.get("claims", [])
+                                if claim.get("predicate") in {"environmental_score", "sustainability_score"}
+                                and claim.get("evidence_ids")]
+                if body.requirement.prioritize_sustainability:
+                    if sustainability is None:
+                        violations.append("SUSTAINABILITY_SCORE_UNAVAILABLE")
+                    elif not any(claim.get("value") == sustainability for claim in score_claims):
+                        violations.append("SUSTAINABILITY_SCORE_EVIDENCE_MISSING_OR_CONFLICTING")
                 # Policy weights are fixed by ECHO; upstream composite score is audit context.
                 price_score = max(0, 100 * (1 - quote.get("total_minor", body.requirement.budget_minor) / body.requirement.budget_minor))
-                score = round((0.8 * sustainability + 0.2 * price_score) if body.requirement.prioritize_sustainability else price_score, 4)
+                score = round((0.8 * (sustainability or 0) + 0.2 * price_score) if body.requirement.prioritize_sustainability else price_score, 4)
                 candidates.append({"supplier_id": quote.get("supplier_id"), "supplier_name": supplier.name if supplier else quote.get("supplier_id"),
                     "canonical_entity_id": stable_id("supplier", domain) if domain else None,
                     "raw_provider_score": raw, "echo_score": score, "sustainability_score": sustainability,
+                    "sustainability_score_basis": sustainability_basis,
                     "carbon_estimate": carbon, "terms": quote, "terms_hash": digest(quote),
                     "evidence_ids": attrs.get("evidence_ids", []),
+                    "evidence_references": [{"extension_id": "greenchain", "evidence_id": identifier,
+                        "request_id": greenchain.request_id,
+                        "source_id": next(item for item in ingest if item["extension_id"] == "greenchain")["source_ids"].get("src-" + identifier)}
+                        for identifier in attrs.get("evidence_ids", [])],
                     "price_context_evidence_ids": [item.id for provider in body.providers if provider.extension_id == "inflationforge" for item in provider.evidence],
                     "price_context_warnings": next(item.warnings for item in body.providers if item.extension_id == "inflationforge"),
                     "policy_violations": violations,
@@ -288,7 +334,13 @@ class JourneyEcho:
             ).result_set
             if not rows:
                 raise ValueError("the decision has a different existing approval or was superseded")
-            return json.loads(rows[0][0])
+            try:
+                persisted_action = json.loads(rows[0][0])
+            except (ValueError, TypeError) as exc:
+                raise ValueError("stored approval failed its integrity check") from exc
+            if persisted_action != action:
+                raise ValueError("stored approval failed its exact decision binding check")
+            return persisted_action
 
 
 def build_journey_router(store: EchoGraphStore) -> APIRouter:
@@ -301,6 +353,8 @@ def build_journey_router(store: EchoGraphStore) -> APIRouter:
             return engine.evaluate(body, identity)
         except ValueError as exc:
             raise HTTPException(409, detail=str(exc)) from exc
+        except (RedisError, OSError) as exc:
+            raise HTTPException(503, detail="ECHO graph service is unavailable") from exc
 
     @router.get("/echo/v1/journeys/decisions/{decision_id}")
     def get(decision_id: str, identity: str = Depends(caller)):
@@ -308,15 +362,26 @@ def build_journey_router(store: EchoGraphStore) -> APIRouter:
             return engine.get(decision_id, identity)
         except KeyError as exc:
             raise HTTPException(404, detail="decision not found") from exc
+        except ValueError as exc:
+            raise HTTPException(409, detail=str(exc)) from exc
+        except (RedisError, OSError) as exc:
+            raise HTTPException(503, detail="ECHO graph service is unavailable") from exc
 
     @router.get("/echo/v1/journeys/{journey_id}/current")
     def current(journey_id: str, identity: str = Depends(caller)):
-        store.ping()
-        rows = store.read_only_rows("MATCH (r:Requirement {id: $id, user_id: $user}) RETURN r.current_journey_decision_id",
-                                    {"id": journey_id, "user": identity})
-        if not rows or not rows[0][0]:
-            raise HTTPException(404, detail="current journey decision not found")
-        return engine.get(rows[0][0], identity)
+        try:
+            store.ping()
+            rows = store.read_only_rows("MATCH (r:Requirement {id: $id, user_id: $user}) RETURN r.current_journey_decision_id",
+                                        {"id": journey_id, "user": identity})
+            if not rows or not rows[0][0]:
+                raise KeyError("current journey decision not found")
+            return engine.get(rows[0][0], identity)
+        except KeyError as exc:
+            raise HTTPException(404, detail="current journey decision not found") from exc
+        except ValueError as exc:
+            raise HTTPException(409, detail=str(exc)) from exc
+        except (RedisError, OSError) as exc:
+            raise HTTPException(503, detail="ECHO graph service is unavailable") from exc
 
     @router.post("/echo/v1/journeys/decisions/{decision_id}/approve")
     def approve(decision_id: str, body: ApproveJourney, identity: str = Depends(caller)):
@@ -326,5 +391,7 @@ def build_journey_router(store: EchoGraphStore) -> APIRouter:
             raise HTTPException(404, detail="decision not found") from exc
         except ValueError as exc:
             raise HTTPException(409, detail=str(exc)) from exc
+        except (RedisError, OSError) as exc:
+            raise HTTPException(503, detail="ECHO graph service is unavailable") from exc
 
     return router

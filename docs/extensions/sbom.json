@@ -2,10 +2,10 @@
   "$schema": "https://cyclonedx.org/schema/bom-1.6.schema.json",
   "bomFormat": "CycloneDX",
   "specVersion": "1.6",
-  "serialNumber": "urn:uuid:23e88040-7f5f-4385-9d4d-dd3467aa4973",
+  "serialNumber": "urn:uuid:2a8e8e48-12f4-4276-8e7c-1d9c24f5fc62",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-10-05T13:55:04.045368+00:00",
+    "timestamp": "2026-10-06T10:09:32.039566+00:00",
     "component": {
       "type": "application",
       "bom-ref": "peoplepay:echo:first-party",
@@ -414,6 +414,45 @@
     },
     {
       "type": "library",
+      "bom-ref": "pkg:pypi/httpcore2@2.13.1",
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "purl": "pkg:pypi/httpcore2@2.13.1",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Environment :: Web Environment\", \"Framework :: AnyIO\", \"Framework :: AsyncIO\", \"Framework :: Trio\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: BSD License\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Topic :: Internet :: WWW/HTTP\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\httpcore2-2.13.1.dist-info\\\\licenses\\\\LICENSE.md\", \"sha256\": \"c4df125c807b0613501e943a5c92496dd11d2c16604ce396097a8dde396304d9\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"h11>=0.16\", \"truststore>=0.10\", \"anyio<5.0,>=4.5.0; extra == 'asyncio'\", \"h2<5,>=3; extra == 'http2'\", \"socksio==1.*; extra == 'socks'\", \"trio<1.0,>=0.34.0; extra == 'trio'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "bom-ref": "pkg:pypi/httptools@0.8.0",
       "name": "httptools",
       "version": "0.8.0",
@@ -482,6 +521,45 @@
         {
           "name": "echo:environment-role",
           "value": "development"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/httpx2@2.13.1",
+      "name": "httpx2",
+      "version": "2.13.1",
+      "purl": "pkg:pypi/httpx2@2.13.1",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "BSD-3-Clause"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Environment :: Web Environment\", \"Framework :: AnyIO\", \"Framework :: AsyncIO\", \"Framework :: Trio\", \"Intended Audience :: Developers\", \"License :: OSI Approved :: BSD License\", \"Operating System :: OS Independent\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: 3.14\", \"Programming Language :: Python :: 3.15\", \"Topic :: Internet :: WWW/HTTP\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\httpx2-2.13.1.dist-info\\\\licenses\\\\LICENSE.md\", \"sha256\": \"7e7d6dbaf7fe160d39fd6e84fd02c33cab96bcbea34d36998d545bceb4a19c30\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"anyio>=4.10; sys_platform != 'emscripten'\", \"httpcore2==2.13.1; sys_platform != 'emscripten'\", \"httpx2-jsfetch; sys_platform == 'emscripten' and python_version >= '3.12'\", \"idna>=3.18\", \"truststore>=0.10; sys_platform != 'emscripten'\", \"typing-extensions>=4.5.0; python_version < '3.13'\", \"brotli>=1.2.0; (platform_python_implementation == 'CPython') and extra == 'brotli'\", \"brotlicffi>=1.2.0.2; (platform_python_implementation != 'CPython') and extra == 'brotli'\", \"click>=8.4.2; extra == 'cli'\", \"pygments==2.*; extra == 'cli'\", \"rich<16,>=10; extra == 'cli'\", \"h2<5,>=3; extra == 'http2'\", \"socksio==1.*; extra == 'socks'\", \"wsproto>=1.2; extra == 'ws'\", \"backports-zstd>=1.0.0; (python_version <= '3.13') and extra == 'zstd'\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "BSD-3-Clause"
         }
       ]
     },
@@ -638,6 +716,40 @@
       "licenses": [
         {
           "expression": "Apache-2.0 OR BSD-2-Clause"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:pypi/peoplepay-extension-sdk@1.0.0",
+      "name": "peoplepay-extension-sdk",
+      "version": "1.0.0",
+      "purl": "pkg:pypi/peoplepay-extension-sdk@1.0.0",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[\"pydantic<3,>=2.10\"]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
         }
       ]
     },
@@ -1081,6 +1193,45 @@
     },
     {
       "type": "library",
+      "bom-ref": "pkg:pypi/truststore@0.10.4",
+      "name": "truststore",
+      "version": "0.10.4",
+      "purl": "pkg:pypi/truststore@0.10.4",
+      "scope": "required",
+      "properties": [
+        {
+          "name": "echo:metadata:license-expression",
+          "value": "MIT"
+        },
+        {
+          "name": "echo:metadata:license",
+          "value": "NOASSERTION"
+        },
+        {
+          "name": "echo:metadata:license-classifiers",
+          "value": "[\"Development Status :: 5 - Production/Stable\", \"Intended Audience :: Developers\", \"Operating System :: MacOS\", \"Operating System :: Microsoft\", \"Programming Language :: Python :: 3\", \"Programming Language :: Python :: 3 :: Only\", \"Programming Language :: Python :: 3.10\", \"Programming Language :: Python :: 3.11\", \"Programming Language :: Python :: 3.12\", \"Programming Language :: Python :: 3.13\", \"Programming Language :: Python :: Implementation :: CPython\", \"Programming Language :: Python :: Implementation :: PyPy\"]"
+        },
+        {
+          "name": "echo:metadata:license-files",
+          "value": "[{\"path\": \".venv-echo\\\\Lib\\\\site-packages\\\\truststore-0.10.4.dist-info\\\\licenses\\\\LICENSE\", \"sha256\": \"33be7b7e8fa4fd19b1760e1a8ed8a668bdab852c91b692dd41424bcb725a9fca\"}]"
+        },
+        {
+          "name": "echo:metadata:requires-dist",
+          "value": "[]"
+        },
+        {
+          "name": "echo:environment-role",
+          "value": "runtime"
+        }
+      ],
+      "licenses": [
+        {
+          "expression": "MIT"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "bom-ref": "pkg:pypi/typing-inspection@0.4.4",
       "name": "typing-inspection",
       "version": "0.4.4",
@@ -1333,6 +1484,13 @@
       ]
     },
     {
+      "ref": "pkg:pypi/httpcore2@2.13.1",
+      "dependsOn": [
+        "pkg:pypi/h11@0.16.0",
+        "pkg:pypi/truststore@0.10.4"
+      ]
+    },
+    {
       "ref": "pkg:pypi/httptools@0.8.0",
       "dependsOn": []
     },
@@ -1343,6 +1501,16 @@
         "pkg:pypi/certifi@2026.7.22",
         "pkg:pypi/httpcore@1.0.9",
         "pkg:pypi/idna@3.20"
+      ]
+    },
+    {
+      "ref": "pkg:pypi/httpx2@2.13.1",
+      "dependsOn": [
+        "pkg:pypi/anyio@4.15.1",
+        "pkg:pypi/httpcore2@2.13.1",
+        "pkg:pypi/idna@3.20",
+        "pkg:pypi/truststore@0.10.4",
+        "pkg:pypi/typing-extensions@4.16.0"
       ]
     },
     {
@@ -1362,6 +1530,12 @@
     {
       "ref": "pkg:pypi/packaging@26.3",
       "dependsOn": []
+    },
+    {
+      "ref": "pkg:pypi/peoplepay-extension-sdk@1.0.0",
+      "dependsOn": [
+        "pkg:pypi/pydantic@2.10.4"
+      ]
     },
     {
       "ref": "pkg:pypi/pluggy@1.6.0",
@@ -1430,6 +1604,10 @@
         "pkg:pypi/anyio@4.15.1",
         "pkg:pypi/typing-extensions@4.16.0"
       ]
+    },
+    {
+      "ref": "pkg:pypi/truststore@0.10.4",
+      "dependsOn": []
     },
     {
       "ref": "pkg:pypi/typing-inspection@0.4.4",

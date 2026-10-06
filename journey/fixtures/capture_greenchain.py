@@ -23,7 +23,8 @@ def capture() -> dict:
     project = root / "GREENCHAIN-main" / "greenchain"
     os.environ["ML_ROOT"] = str(project / "backend" / "ml_runtime")
     sys.path.insert(0, str(project))
-    from backend import ml_scorer
+    # The preserved project's import root is selected above at runtime.
+    from backend import ml_scorer  # type: ignore[import-not-found]
 
     original_verifier = ml_scorer.verify_all
     def reference_verification(rows: list[dict]) -> None:

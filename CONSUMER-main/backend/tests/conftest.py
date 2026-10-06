@@ -23,6 +23,14 @@ def isolated_working_directory():
     with tempfile.TemporaryDirectory(prefix="proxy-tests-") as directory:
         patches = pytest.MonkeyPatch()
         patches.chdir(directory)
+        # Collection imports the application's singleton before fixtures run.
+        # Rebind its store and caches after entering the temporary directory;
+        # otherwise a single test relies on earlier tests to create its folder.
+        from app.database.postgres.repositories import LocalRepositoryStore, case_repository
+        patches.setattr(case_repository, "local", LocalRepositoryStore())
+        for name in ("_cases", "_documents", "_agent_runs", "_appeals", "_knowledge_sources", "_knowledge_chunks"):
+            patches.setattr(case_repository, name, {})
+        patches.setattr(case_repository, "_events", [])
         try:
             yield
         finally:

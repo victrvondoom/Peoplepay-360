@@ -5,6 +5,7 @@ from __future__ import annotations
 import asyncio
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 from contextlib import contextmanager
@@ -118,10 +119,15 @@ def test_native_captures_record_preserved_source_hashes_and_no_real_discovery():
 
 
 def test_captured_greenchain_scores_match_real_native_scoring_function():
-    if any(importlib.util.find_spec(name) is None for name in ("numpy", "pandas", "joblib", "dotenv")):
+    native_executables = [ROOT / ".venv-greenchain-review" / "Scripts" / "python.exe",
+                          ROOT / ".venv-greenchain-review" / "bin" / "python"]
+    interpreter = next((str(path) for path in native_executables if path.is_file()), sys.executable)
+    if interpreter == sys.executable and any(importlib.util.find_spec(name) is None for name in ("numpy", "pandas", "joblib", "dotenv")):
+        if os.getenv("REQUIRE_NATIVE_CAPTURE") == "1":
+            pytest.fail("Native GreenChain scoring environment is required")
         pytest.skip("Native GreenChain scoring dependencies are unavailable; replay boundary tests still run.")
     completed = subprocess.run(
-        [sys.executable, "-c", "import json;from journey.fixtures.capture_greenchain import capture;print(json.dumps(capture()['response']['results']))"],
+        [interpreter, "-c", "import json;from journey.fixtures.capture_greenchain import capture;print(json.dumps(capture()['response']['results']))"],
         cwd=ROOT, check=True, capture_output=True, text=True, timeout=30,
     )
     native = json.loads(completed.stdout.splitlines()[-1])

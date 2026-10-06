@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Any, Literal
 from urllib.parse import urlsplit
 
@@ -13,6 +13,20 @@ from echo.extensions.contracts import (
     ClaimProposal, EntityProposal, EvidenceProposal, ExtensionManifest,
     NormalizedResult, SourceProposal,
 )
+
+
+def _proposal_list(attributes: dict[str, Any], field: str) -> list[dict[str, Any]]:
+    proposals = attributes.get(field, [])
+    if not isinstance(proposals, list) or any(not isinstance(item, dict) for item in proposals):
+        raise ValueError(f"SDK entity {field} must be a list of objects")
+    return proposals
+
+
+def _support_ids(value: Any, evidence_index: dict[str, Any]) -> list[str]:
+    if (not isinstance(value, list) or any(not isinstance(item, str) or item not in evidence_index for item in value)
+            or len(value) != len(set(value))):
+        raise ValueError("SDK proposal has duplicate or missing evidence ids")
+    return value
 
 
 def reviewed_manifest(extension_id: str) -> ExtensionManifest:
@@ -51,6 +65,7 @@ def to_echo_result(result: ExtensionResult) -> NormalizedResult:
     reviewed_manifest(result.extension_id)
     received_at = _time(result.raw_result.get("received_at"))
     reference = result.raw_result.get("mode") == "reference"
+    warnings = list(result.warnings)
     evidence_index = {item.id: item for item in result.evidence}
     known: dict[str, bool] = {}
     sources: list[SourceProposal] = []
@@ -58,6 +73,12 @@ def to_echo_result(result: ExtensionResult) -> NormalizedResult:
         source_ref = "src-" + item.id
         synthetic_address = bool(item.source_uri and (urlsplit(item.source_uri).hostname or "").endswith(".example"))
         known[item.id] = item.provenance_state == "known" and not reference and not synthetic_address
+        if item.observed_at and received_at and item.observed_at > received_at:
+            known[item.id] = False
+            warnings.append("INVALID_SOURCE_TIMESTAMP_ORDER")
+        if item.observed_at and item.observed_at > datetime.now(timezone.utc):
+            known[item.id] = False
+            warnings.append("FUTURE_SOURCE_TIMESTAMP")
         sources.append(SourceProposal(
             ref=source_ref, url=item.source_uri, publisher=item.source_name,
             source_type="reference" if reference else "provider_observation",
@@ -81,16 +102,21 @@ def to_echo_result(result: ExtensionResult) -> NormalizedResult:
             # Exact identity alias is not verification of the supplier or its claims.
             aliases["official_domain"] = aliases.pop("domain")
         entities.append(EntityProposal(ref=entity.id, type=type_name, name=entity.name, external_ids=aliases))
-        proposals = list(entity.attributes.get("claims", []))
-        for estimate in entity.attributes.get("estimates", []):
+        _support_ids(entity.attributes.get("evidence_ids", []), evidence_index)
+        proposals = list(_proposal_list(entity.attributes, "claims"))
+        for estimate in _proposal_list(entity.attributes, "estimates"):
+            if not isinstance(estimate.get("id"), str) or not isinstance(estimate.get("kind"), str):
+                raise ValueError("SDK estimate requires id and kind")
             proposals.append({"id": estimate["id"], "predicate": estimate["kind"], "value": estimate,
                               "kind": "estimate", "evidence_ids": estimate.get("evidence_ids", [])})
         for proposal in proposals:
-            if not isinstance(proposal, dict):
-                raise ValueError("SDK entity claim must be an object")
-            support_ids = proposal.get("evidence_ids", [])
-            if not isinstance(support_ids, list) or any(item not in evidence_index for item in support_ids):
-                raise ValueError("SDK claim references missing evidence")
+            if not isinstance(proposal.get("id"), str) or not isinstance(proposal.get("predicate"), str):
+                raise ValueError("SDK claim requires id and predicate")
+            if proposal.get("subject_id", entity.id) != entity.id:
+                raise ValueError("SDK claim subject does not match its containing entity")
+            if proposal.get("text") is not None and not isinstance(proposal["text"], str):
+                raise ValueError("SDK claim text must be a string")
+            support_ids = _support_ids(proposal.get("evidence_ids", []), evidence_index)
             kind = proposal.get("kind", "fact")
             if kind not in {"fact", "estimate", "inference", "model_output"}:
                 raise ValueError("SDK claim kind is not supported")
@@ -104,10 +130,10 @@ def to_echo_result(result: ExtensionResult) -> NormalizedResult:
                 predicate=proposal["predicate"], value=value, kind=kind,
                 provenance_state="KNOWN" if claim_known else "PROVENANCE_UNKNOWN",
             ))
-            for evidence_id in support_ids:
+            for support_index, evidence_id in enumerate(support_ids):
                 item = evidence_index[evidence_id]
                 evidence.append(EvidenceProposal(
-                    ref=proposal["id"] + "-" + str(support_ids.index(evidence_id)), claim_ref=proposal["id"],
+                    ref=proposal["id"] + "-" + str(support_index), claim_ref=proposal["id"],
                     source_ref="src-" + item.id, excerpt=item.excerpt,
                     observed_at=item.observed_at,
                     provenance_state="KNOWN" if claim_known and known[evidence_id] else "PROVENANCE_UNKNOWN",
@@ -117,6 +143,6 @@ def to_echo_result(result: ExtensionResult) -> NormalizedResult:
     return NormalizedResult(
         extension_id=result.extension_id, extension_version=result.extension_version,
         status=result.status, sources=sources, entities=entities, claims=claims,
-        evidence=evidence, warnings=result.warnings, confidence=result.confidence,
+        evidence=evidence, warnings=list(dict.fromkeys(warnings)), confidence=result.confidence,
         raw_reference=f"sdk:{result.extension_id}:{result.request_id}",
     )

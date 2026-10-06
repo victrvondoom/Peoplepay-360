@@ -7,7 +7,7 @@ import pytest
 
 from echo.engine import EchoEngine
 from echo.extensions.bootstrap import build_registry
-from echo.extensions.contracts import ExtensionRequest, NormalizedResult
+from echo.extensions.contracts import ExtensionContext, ExtensionRequest, NormalizedResult
 from echo.extensions.demo import run_extension_demo
 from echo.extensions.ingestion import ExtensionIngestor, IngestionRejected
 from echo.extensions.runtime import ExtensionRuntime
@@ -31,7 +31,7 @@ def seeded(graph):
 
 def fresh_request(result, identifier="event-replay"):
     return ExtensionRequest(request_id=identifier, capability="demo_evidence",
-                            context={"requirement_id": result["requirement_id"], "user_id": "echo-demo-user"})
+                            context=ExtensionContext(requirement_id=result["requirement_id"], user_id="echo-demo-user"))
 
 
 def test_two_providers_share_one_root_and_deduplicate_observation(graph):

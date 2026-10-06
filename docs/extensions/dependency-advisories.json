@@ -1,6 +1,6 @@
 {
   "source": "OSV querybatch",
-  "scanned_at": "2026-10-05T13:55:04.045368+00:00",
+  "scanned_at": "2026-10-06T10:09:32.039566+00:00",
   "environment": ".venv-echo",
   "packages": [
     {
@@ -54,6 +54,11 @@
       "vulnerability_ids": []
     },
     {
+      "name": "httpcore2",
+      "version": "2.13.1",
+      "vulnerability_ids": []
+    },
+    {
       "name": "httptools",
       "version": "0.8.0",
       "vulnerability_ids": []
@@ -61,6 +66,11 @@
     {
       "name": "httpx",
       "version": "0.28.1",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "httpx2",
+      "version": "2.13.1",
       "vulnerability_ids": []
     },
     {
@@ -81,6 +91,11 @@
     {
       "name": "packaging",
       "version": "26.3",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "peoplepay-extension-sdk",
+      "version": "1.0.0",
       "vulnerability_ids": []
     },
     {
@@ -141,6 +156,11 @@
     {
       "name": "starlette",
       "version": "1.7.0",
+      "vulnerability_ids": []
+    },
+    {
+      "name": "truststore",
+      "version": "0.10.4",
       "vulnerability_ids": []
     },
     {

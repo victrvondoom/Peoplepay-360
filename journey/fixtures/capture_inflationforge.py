@@ -22,8 +22,9 @@ def capture() -> dict:
     project = root / "Inflation-Forge-main"
     sys.path.insert(0, str(project))
     os.environ["INFLATIONFORGE_OTEL_EXPORTER"] = "none"
-    from backend.config import Settings
-    from backend.services.inflation.service import InflationForgeService
+    # The preserved project's import root is selected above at runtime.
+    from backend.config import Settings  # type: ignore[import-not-found]
+    from backend.services.inflation.service import InflationForgeService  # type: ignore[import-not-found]
 
     with TemporaryDirectory(prefix="peoplepay-inflation-capture-") as temporary:
         temp = Path(temporary)

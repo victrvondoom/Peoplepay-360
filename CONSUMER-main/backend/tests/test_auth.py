@@ -48,7 +48,7 @@ def test_expired_jwt_rejected() -> None:
 
 def test_tampered_jwt_rejected() -> None:
     with pytest.raises(JwtVerificationError):
-        verify_supabase_jwt(_token(secret="wrong-secret"))
+        verify_supabase_jwt(_token(secret="wrong-secret-for-proxy-test-123456"))
 
 
 def test_case_access_is_user_scoped() -> None:

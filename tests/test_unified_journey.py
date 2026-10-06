@@ -367,3 +367,37 @@ def test_proxy_ambiguous_failure_keeps_bundle_and_blocks_duplicate_native_case(g
     assert retained["proxy_requires_reconciliation"]
     assert gateway.request("POST", f"/api/v1/journeys/{record['id']}/delivery", payload)[0] == 503
     assert len(calls) == 1
+    assert gateway.request("POST", f"/api/v1/journeys/{record['id']}/retry-dispute", {})[0] == 503
+    assert len(calls) == 1
+
+
+def test_dispute_retry_http_route_preserves_bundle_and_enforces_owner_and_no_overrides(gateway_http, monkeypatch):
+    gateway = gateway_http
+    record = gateway.create()
+    assert gateway.approve(record)[0] == 200
+    monkeypatch.setenv("PEOPLEPAY_PROXY_API_URL", "http://127.0.0.1:65530")
+    monkeypatch.delenv("PEOPLEPAY_PROXY_SESSION_FILE", raising=False)
+    path = f"/api/v1/journeys/{record['id']}"
+    assert gateway.request("POST", path + "/delivery", {"delivered_quantity": 260, "event_id": "retained-delivery"})[0] == 503
+    retained = gateway.journeys.get(record["id"], "buyer-a")
+    assert not retained.get("proxy_handoff_started")
+    assert gateway.request("POST", path + "/retry-dispute", {}, actor="buyer-b")[0] == 404
+    assert gateway.request("POST", path + "/retry-dispute", {"bundle": "override"})[0] == 409
+    monkeypatch.delenv("PEOPLEPAY_PROXY_API_URL")
+    status, ready = gateway.request("POST", path + "/retry-dispute", {})
+    assert status == 200, ready
+    assert ready["dispute"]["bundle_hash"] == retained["dispute_bundle"]["bundle_hash"]
+    assert ready["dispute"]["submitted"] is False
+    assert ready["phase"] == "DISPUTE_DRAFT_READY"
+    assert len(gateway.merchant.get_events(ready["order"]["external_order_ref"])) == 2
+
+
+def test_journey_storage_failure_is_a_sanitized_503(gateway_http, monkeypatch):
+    import sqlite3
+    record = gateway_http.create()
+    def unavailable(*args, **kwargs):
+        raise sqlite3.OperationalError("sensitive-store-location")
+    monkeypatch.setattr(gateway_http.journeys, "get", unavailable)
+    status, response = gateway_http.request("GET", f"/api/v1/journeys/{record['id']}")
+    assert status == 503
+    assert "sensitive-store-location" not in str(response)

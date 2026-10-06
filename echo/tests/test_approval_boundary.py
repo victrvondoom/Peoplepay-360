@@ -1,6 +1,7 @@
 """Owner, freshness and retry boundaries with real isolated graph persistence."""
 
 from datetime import datetime, timezone
+from typing import Any
 from uuid import uuid4
 
 import pytest
@@ -74,7 +75,7 @@ def test_synthetic_reassessment_cannot_create_gateway_transaction(isolated_store
     engine = EchoEngine(isolated_store)
     first = engine.run_false_consensus_demo()
     reassessed = engine.analyze_requirement(REQUIREMENT_ID, parent_decision_id=first["decision_id"])
-    calls = []
+    calls: list[Any] = []
     monkeypatch.setattr(approval, "gateway_post", successful_gateway(calls))
     with pytest.raises(HTTPException) as error:
         approval.approve(isolated_store, engine, reassessed["decision_id"], "echo-demo-user", request())
@@ -84,7 +85,7 @@ def test_synthetic_reassessment_cannot_create_gateway_transaction(isolated_store
 
 def test_owner_mismatch_cannot_approve_existing_recommendation(isolated_store, monkeypatch):
     engine, decision_id = recommendation(isolated_store)
-    calls = []
+    calls: list[Any] = []
     monkeypatch.setattr(approval, "gateway_post", successful_gateway(calls))
     with pytest.raises(HTTPException) as error:
         approval.approve(isolated_store, engine, decision_id, "other-owner", request("other-owner"))
@@ -106,7 +107,7 @@ def test_changed_decision_evidence_requires_new_human_review(isolated_store, mon
         isolated_store.link("Source", "approval-source-1", "DERIVED_FROM", "Source", "new-upstream")
     else:
         isolated_store.upsert_node("CandidatePolicy", {"id": "approval-policy", "raw_score": 70.0})
-    calls = []
+    calls: list[Any] = []
     monkeypatch.setattr(approval, "gateway_post", successful_gateway(calls))
     with pytest.raises(HTTPException) as error:
         approval.approve(isolated_store, engine, decision_id, "owner", request())

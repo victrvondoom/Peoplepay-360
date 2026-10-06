@@ -6,6 +6,7 @@ let token = "", active = null, busy = false, journeys = [];
 $("user").value = actor;
 const pretty = (value) => JSON.stringify(value, null, 2);
 const rupees = (minor) => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 }).format(minor / 100);
+const score = (value) => Number.isFinite(value) ? value.toFixed(2) : "Unavailable";
 const readable = (value) => value.replaceAll("_", " ").toLowerCase();
 function node(tag, text, className) {
   const element = document.createElement(tag);
@@ -23,7 +24,10 @@ async function api(path, body) {
     headers: { "Content-Type": "application/json", "X-Beacon-User": actor,
       ...(token ? { Authorization: `Bearer ${token}` } : {}) },
     ...(body === undefined ? {} : { body: JSON.stringify(body) }) });
-  const result = await response.json();
+  let result;
+  try { result = await response.json(); }
+  catch (_) { throw new Error(`The gateway returned an unreadable response (${response.status}). Reload the saved journey before retrying.`); }
+  if (!result || typeof result !== "object" || Array.isArray(result)) throw new Error("The gateway returned an invalid response. Reload the saved journey before retrying.");
   if (!response.ok) throw new Error(result.error || `Request failed (${response.status})`);
   return result;
 }
@@ -31,8 +35,8 @@ async function run(task) {
   if (busy) return;
   busy = true; notice(""); sync();
   try { await task(); } catch (error) {
-    notice(error.message, true);
     try { await reload(); } catch (_) { /* Preserve the original error while offline. */ }
+    notice(error.message, true);
   }
   finally { busy = false; sync(); }
 }
@@ -56,9 +60,13 @@ function list() {
   }
 }
 async function reload() {
-  journeys = (await api("/api/v1/journeys")).journeys;
+  try { journeys = (await api("/api/v1/journeys")).journeys; }
+  catch (error) { $("connection").textContent = "Account unavailable"; throw error; }
   $("connection").textContent = "Account connected";
-  list();
+  if (active) {
+    active = await api(`/api/v1/journeys/${active.id}`);
+    render();
+  } else list();
 }
 function references(target, fields) {
   target.replaceChildren();
@@ -98,7 +106,7 @@ function render() {
   for (const candidate of decision?.candidates || []) {
     const row = node("tr", undefined, candidate.supplier_id === decision.recommended_supplier_id ? "recommended" : "");
     const name = node("td"); name.append(node("strong", candidate.supplier_name), node("small", candidate.supplier_id === decision.recommended_supplier_id ? "Recommended" : "Alternative"));
-    row.append(name, node("td", candidate.raw_provider_score.toFixed(2)), node("td", candidate.echo_score.toFixed(2)), node("td", rupees(candidate.terms.total_minor)), node("td", `${candidate.terms.delivery_days} days`), node("td", candidate.eligible ? "Eligible for reference" : candidate.policy_violations.map(readable).join(", ")));
+    row.append(name, node("td", score(candidate.raw_provider_score)), node("td", score(candidate.echo_score)), node("td", rupees(candidate.terms.total_minor)), node("td", `${candidate.terms.delivery_days} days`), node("td", candidate.eligible ? "Eligible for reference" : candidate.policy_violations.map(readable).join(", ")));
     $("supplier-table").append(row);
     if (candidate.eligible) {
       const label = node("label", undefined, "supplier-choice"); const input = node("input"); input.type = "radio"; input.name = "supplier_id"; input.value = candidate.supplier_id;
@@ -120,7 +128,24 @@ function render() {
   $("delivered").max = requirement.quantity; $("delivery-unit").textContent = `of ${requirement.quantity} units`;
   $("delivery-result").hidden = !record.delivery_event;
   if (record.delivery_event) $("delivery-result").textContent = `${record.order.delivered_quantity}/${record.order.ordered_quantity} units delivered. ${record.order.ordered_quantity - record.order.delivered_quantity} missing. Event ${record.delivery_event.event_id}.`;
-  $("dispute-empty").hidden = Boolean(record.dispute); $("dispute-details").hidden = !record.dispute;
+  $("dispute-empty").hidden = Boolean(record.dispute) || Boolean(record.dispute_bundle);
+  $("dispute-details").hidden = !record.dispute && !record.dispute_bundle;
+  $("dispute-details").querySelector(".draft-status strong").textContent = record.dispute ? "Draft ready for review" : "Evidence retained · draft pending";
+  document.getElementById("retry-dispute")?.remove();
+  if (!record.dispute && record.dispute_bundle) {
+    $("draft-mode").textContent = record.proxy_requires_reconciliation || record.proxy_handoff_started
+      ? "A native case may exist. Operator reconciliation is required before another handoff."
+      : "No external case handoff started. Fix any configuration problem and retry the preserved draft.";
+    $("draft-text").textContent = record.last_error || "The complete evidence is preserved below.";
+    $("bundle-json").textContent = pretty(record.dispute_bundle);
+    $("bundle-links").replaceChildren(node("code", record.dispute_bundle.bundle_hash, "hash"));
+    if (!record.proxy_requires_reconciliation && !record.proxy_handoff_started) {
+      const retry = node("button", "Retry preserved dispute draft", "secondary");
+      retry.id = "retry-dispute"; retry.type = "button";
+      retry.onclick = () => run(async () => { active = await api(`/api/v1/journeys/${active.id}/retry-dispute`, {}); await reload(); render(); });
+      $("draft-mode").after(retry);
+    }
+  }
   if (record.dispute) {
     $("draft-mode").textContent = `${record.dispute.mode} · ${record.dispute.provider || "Native PROXY"} · requires human review`;
     $("draft-text").textContent = record.dispute.draft_text || pretty(record.dispute);
@@ -128,7 +153,7 @@ function render() {
     $("bundle-links").replaceChildren(...["Requirement", "Supplier", "Decision & evidence", "Approved terms", "Transaction", "Merchant order", "Delivery event"].map((label) => node("span", label)));
     $("bundle-links").append(node("code", record.dispute.bundle_hash, "hash"));
   }
-  if (record.last_error) notice(record.last_error, true);
+  notice(record.last_error || "", Boolean(record.last_error));
   $("historical-explanation").hidden = true;
   showChanges(); list(); sync();
 }
@@ -171,7 +196,7 @@ $("delivery-form").onsubmit = (event) => { event.preventDefault(); run(async () 
 }); };
 $("explain").onclick = () => run(async () => {
   const explanation = await api(`/api/v1/journeys/${active.id}/explain`);
-  $("historical-explanation").replaceChildren(node("h3", `Preserved decision · version ${explanation.decision_version}`), node("p", new Date(explanation.evaluated_at).toLocaleString()), node("p", explanation.explanation), node("p", explanation.candidate ? `${explanation.candidate.supplier_name}: ${rupees(explanation.candidate.terms.total_minor)}, ${explanation.candidate.terms.delivery_days} days. ECHO score ${explanation.candidate.echo_score}.` : "No supplier recommendation."), node("code", explanation.decision_hash, "hash"));
+  $("historical-explanation").replaceChildren(node("h3", `Preserved decision · version ${explanation.decision_version}`), node("p", new Date(explanation.evaluated_at).toLocaleString()), node("p", explanation.explanation), node("p", explanation.candidate ? `${explanation.candidate.supplier_name}: ${rupees(explanation.candidate.terms.total_minor)}, ${explanation.candidate.terms.delivery_days} days. ECHO score ${score(explanation.candidate.echo_score)}.` : "No supplier recommendation."), node("code", explanation.decision_hash, "hash"));
   $("historical-explanation").hidden = false;
 });
 $("refresh-evidence").onclick = () => run(async () => { active = await api(`/api/v1/journeys/${active.id}/refresh`, {}); await reload(); render(); });

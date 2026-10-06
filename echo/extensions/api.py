@@ -64,7 +64,7 @@ def build_router(platform: ExtensionPlatform) -> APIRouter:
         )
         if not rows:
             raise HTTPException(status_code=404, detail="requirement not found")
-        providers = [platform.registry.get(extension_id)] if extension_id in {
+        providers = [platform.registry.get(extension_id)] if extension_id is not None and extension_id in {
             item["id"] for item in platform.registry.describe()
         } else platform.registry.find(body.capability)
         if extension_id and not any(record.manifest.id == extension_id for record in providers):

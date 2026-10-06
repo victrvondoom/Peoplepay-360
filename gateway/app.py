@@ -28,6 +28,7 @@ from __future__ import annotations
 import json
 import math
 import os
+import sqlite3
 import threading
 import time
 from pathlib import Path
@@ -661,6 +662,10 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                     result = service.approve(parts[0], user, body, authorization)
                 elif len(parts) == 2 and parts[1] == "delivery":
                     result = service.delivery(parts[0], user, body)
+                elif len(parts) == 2 and parts[1] == "retry-dispute":
+                    if body:
+                        raise ValueError("draft retry takes no evidence override data")
+                    result = service.retry_dispute(parts[0], user)
                 elif len(parts) == 2 and parts[1] == "refresh":
                     if body:
                         raise ValueError("refresh takes no provider override data")
@@ -677,6 +682,8 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 self._fail(503, "Journey dependencies are missing. Install the local Extension SDK and journey requirements.")
             except JourneyUnavailable as exc:
                 self._fail(503, str(exc))
+            except sqlite3.Error:
+                self._fail(503, "Journey storage is unavailable; existing orders and evidence are retained. Reload before retrying.")
 
         def _workflow(
             self, user: str, transaction_id: str, action: str, body: dict[str, Any]

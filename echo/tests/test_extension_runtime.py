@@ -15,7 +15,7 @@ import pytest
 from pydantic import ValidationError
 
 from echo.extensions.contracts import (
-    ExtensionManifest, ExtensionRequest, ManifestAdapter, NormalizedResult, MAX_RESULT_BYTES,
+    ExtensionContext, ExtensionError, ExtensionExecution, ExtensionManifest, ExtensionRequest, ManifestAdapter, NormalizedResult, MAX_RESULT_BYTES,
 )
 from echo.extensions.registry import ExtensionRegistry
 from echo.extensions.runtime import ExtensionRuntime
@@ -36,6 +36,11 @@ def manifest(extension_id: str = "reviewed-test", **updates: Any) -> ExtensionMa
 
 def request() -> ExtensionRequest:
     return ExtensionRequest(request_id="test-request", capability="source_discovery")
+
+
+def failure(execution: ExtensionExecution) -> ExtensionError:
+    assert execution.status == "error" and execution.error is not None
+    return execution.error
 
 
 class Adapter(ManifestAdapter):
@@ -63,11 +68,11 @@ def test_disable_isolation_and_capability_selection(monkeypatch: pytest.MonkeyPa
     runtime = ExtensionRuntime(registry)
     async def scenario() -> None:
         rejected = await runtime.execute(request(), extension_id=disabled.id)
-        assert rejected.error.code == "EXTENSION_DISABLED"
+        assert failure(rejected).code == "EXTENSION_DISABLED"
         selected = await runtime.execute(request())
         assert selected.extension_id == healthy.id and selected.status == "success"
         registry.set_enabled(healthy.id, False)
-        assert (await runtime.execute(request())).error.code == "CAPABILITY_UNAVAILABLE"
+        assert failure(await runtime.execute(request())).code == "CAPABILITY_UNAVAILABLE"
     asyncio.run(scenario())
     assert blocked.calls == 0 and available.calls == 1
 
@@ -89,8 +94,8 @@ def test_timeout_circuit_and_fallback_do_not_break_other_provider(monkeypatch: p
     runtime = ExtensionRuntime(registry)
     async def scenario() -> None:
         assert (await runtime.execute(request())).extension_id == good.id
-        assert runtime.recent_runs[0].error.code == "EXTENSION_TIMEOUT"
-        assert (await runtime.execute(request(), extension_id=timed.id)).error.code == "CIRCUIT_OPEN"
+        assert failure(runtime.recent_runs[0]).code == "EXTENSION_TIMEOUT"
+        assert failure(await runtime.execute(request(), extension_id=timed.id)).code == "CIRCUIT_OPEN"
         assert (await runtime.health(good.id)).status == "healthy"
         assert (await runtime.health(timed.id)).status == "circuit_open"
     asyncio.run(scenario())
@@ -151,8 +156,8 @@ def test_malformed_output_is_rejected_without_exception_detail(attack: str, monk
     registry = ExtensionRegistry()
     registry.register(reviewed, Adapter(reviewed, untrusted))
     result = asyncio.run(ExtensionRuntime(registry).execute(request()))
-    assert result.error.code == "INVALID_OUTPUT" and result.result is None
-    assert "cypher" not in result.model_dump_json() and "missing" not in result.error.message
+    assert failure(result).code == "INVALID_OUTPUT" and result.result is None
+    assert "cypher" not in result.model_dump_json() and "missing" not in failure(result).message
 
 
 def test_graph_permissions_and_secret_echo_fail_closed(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -164,14 +169,14 @@ def test_graph_permissions_and_secret_echo_fail_closed(monkeypatch: pytest.Monke
     registry = ExtensionRegistry()
     registry.register(reviewed, Adapter(reviewed, unpermitted))
     result = asyncio.run(ExtensionRuntime(registry).execute(request()))
-    assert result.error.code == "PERMISSION_DENIED"
+    assert failure(result).code == "PERMISSION_DENIED"
     async def leaked(_: ExtensionRequest) -> Any:
         return {"extension_id": "reviewed-test", "extension_version": "1.0.0", "warnings": ['sensitive"credential']}
     reviewed = manifest(secrets=["ECHO_TEST_SECRET"])
     registry = ExtensionRegistry()
     registry.register(reviewed, Adapter(reviewed, leaked))
     result = asyncio.run(ExtensionRuntime(registry).execute(request()))
-    assert result.error.code == "INVALID_OUTPUT" and "sensitive" not in result.model_dump_json()
+    assert failure(result).code == "INVALID_OUTPUT" and "sensitive" not in result.model_dump_json()
 
 
 @pytest.mark.parametrize("code", ["AUTH_REQUIRED", "UPSTREAM_ARBITRARY_CODE"])
@@ -183,7 +188,7 @@ def test_extension_error_text_and_unknown_codes_cannot_escape(code: str, monkeyp
     registry = ExtensionRegistry()
     registry.register(reviewed, Adapter(reviewed, rejected))
     result = asyncio.run(ExtensionRuntime(registry).execute(request()))
-    assert result.status == "error" and result.error.code in {"AUTH_REQUIRED", "EXTENSION_UNAVAILABLE"}
+    assert result.status == "error" and failure(result).code in {"AUTH_REQUIRED", "EXTENSION_UNAVAILABLE"}
     assert "sensitive" not in result.model_dump_json()
 
 
@@ -212,7 +217,7 @@ def test_dependency_disable_blocks_execution_and_env_override_is_explicit(monkey
     adapter = Adapter(dependent)
     registry.register(dependent, adapter)
     result = asyncio.run(ExtensionRuntime(registry).execute(request(), extension_id=dependent.id))
-    assert result.error.code == "DEPENDENCY_UNAVAILABLE" and adapter.calls == 0
+    assert failure(result).code == "DEPENDENCY_UNAVAILABLE" and adapter.calls == 0
     assert registry.get(prerequisite.id).enabled is False
     registry.set_enabled(prerequisite.id, True)
     assert asyncio.run(ExtensionRuntime(registry).execute(request(), extension_id=dependent.id)).status == "success"
@@ -232,8 +237,8 @@ def test_concurrent_attempts_do_not_mix_colliding_request_ids(monkeypatch: pytes
     registry.register(fallback, Adapter(fallback))
     runtime = ExtensionRuntime(registry)
     async def scenario() -> None:
-        alice = ExtensionRequest(request_id="shared-id", capability="source_discovery", context={"user_id": "alice"})
-        bob = ExtensionRequest(request_id="shared-id", capability="source_discovery", context={"user_id": "bob"})
+        alice = ExtensionRequest(request_id="shared-id", capability="source_discovery", context=ExtensionContext(user_id="alice"))
+        bob = ExtensionRequest(request_id="shared-id", capability="source_discovery", context=ExtensionContext(user_id="bob"))
         (alice_result, alice_attempts), (bob_result, bob_attempts) = await asyncio.gather(
             runtime.execute_with_attempts(alice), runtime.execute_with_attempts(bob))
         assert alice_result.extension_id == fallback.id
@@ -340,7 +345,7 @@ def test_registry_readiness_uses_validated_service_configuration(monkeypatch: py
     registry.register(reviewed, adapter)
     assert registry.describe()[0]["configured"] is False
     result = asyncio.run(ExtensionRuntime(registry).execute(request()))
-    assert result.error.code == "PERMISSION_DENIED" and adapter.calls == 0
+    assert failure(result).code == "PERMISSION_DENIED" and adapter.calls == 0
     monkeypatch.setenv("ECHO_TEST_URL", "http://127.0.0.1:8123")
     assert registry.describe()[0]["configured"] is True
 

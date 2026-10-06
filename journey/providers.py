@@ -210,10 +210,12 @@ class GreenChainProvider(_Provider):
             response = await self.client.request("POST", "/search", json=payload)
             if not isinstance(response, dict) or not isinstance(response.get("results"), list):
                 raise ValueError("GreenChain did not return results")
-            if len(response["results"]) > 10 or response.get("count") != len(response["results"]):
+            if (len(response["results"]) > 10 or type(response.get("count")) is not int
+                    or response["count"] != len(response["results"])):
                 raise ValueError("GreenChain candidate count is inconsistent or exceeds journey limit")
             # A response cannot swap the requested product/destination context.
-            if response.get("product") != product or response.get("destination") != destination:
+            if (response.get("product") != product or response.get("destination") != destination
+                    or response.get("transport_mode") != payload["transport_mode"]):
                 raise ValueError("GreenChain response does not match the requested context")
             received = _now()
             evidence: list[Evidence] = []
@@ -222,7 +224,7 @@ class GreenChainProvider(_Provider):
                 if not isinstance(row, dict):
                     raise ValueError("invalid GreenChain candidate")
                 name, country = row.get("name"), row.get("country")
-                if not isinstance(name, str) or not name.strip() or not isinstance(country, str):
+                if not isinstance(name, str) or not name.strip() or not isinstance(country, str) or not country.strip():
                     raise ValueError("supplier identity is missing")
                 source = _url(row.get("sustainability_url"))
                 domain = (urlsplit(source).hostname or "").lower() if source else None
@@ -236,7 +238,9 @@ class GreenChainProvider(_Provider):
                 if not isinstance(emission, dict) or not isinstance(transport, dict):
                     raise ValueError("invalid GreenChain estimate")
                 lower, middle, upper = [_number(emission.get(key)) for key in ("q10_tco2e", "q50_tco2e", "q90_tco2e")]
-                if lower is not None and middle is not None and upper is not None and not lower <= middle <= upper:
+                if ((lower is not None and middle is not None and lower > middle)
+                        or (middle is not None and upper is not None and middle > upper)
+                        or (lower is not None and upper is not None and lower > upper)):
                     raise ValueError("GreenChain estimate quantiles are unordered")
                 excerpt = f"GreenChain reported {name} ({country}), environmental score {score}; model estimates are not carbon certificates."
                 evidence.append(Evidence(id=evidence_id, source_uri=source, source_name="GreenChain response",
@@ -276,6 +280,8 @@ class GreenChainProvider(_Provider):
                 warnings.append("NO_SUPPLIERS: discovery produced no candidates.")
             return self._result(request, entities=entities, evidence=evidence, warnings=warnings,
                                 raw={"mode": self.mode, "received_at": received.isoformat(), "native_endpoint": "/search",
+                                     "request_context": {"product": product, "quantity": quantity, "destination": destination,
+                                                         "transport_mode": payload["transport_mode"]},
                                      "response_sha256": sha256(_json(response).encode()).hexdigest(), "response": response})
         except Exception as exc:
             return self._failure(request, exc)
@@ -298,10 +304,17 @@ class InflationForgeProvider(_Provider):
             items = await self.client.request("GET", "/api/items", params={"include_retired": "false"})
             if not isinstance(items, list) or len(items) > 50 or any(not isinstance(item, dict) for item in items):
                 raise ValueError("invalid InflationForge catalog")
+            for catalog_item in items:
+                if (not isinstance(catalog_item.get("id"), str) or not catalog_item["id"]
+                        or not isinstance(catalog_item.get("name"), str) or not catalog_item["name"].strip()):
+                    raise ValueError("InflationForge catalog item requires identity and name")
+            if len({entry["id"] for entry in items}) != len(items):
+                raise ValueError("InflationForge catalog has duplicate item identities")
             match = [item for item in items if item.get("status", "ACTIVE") == "ACTIVE" and
                      (item.get("id") == item_id if item_id else product.casefold().strip() in
                       {str(item.get("id", "")).casefold(), str(item.get("name", "")).casefold()})]
             catalog_raw = {"mode": self.mode, "received_at": _now().isoformat(), "requested_product": product,
+                           "request_context": deepcopy(request.input),
                            "catalog": items, "native_endpoints": ["/api/items"]}
             if len(match) != 1:
                 return self._result(request, raw=catalog_raw, warnings=[
@@ -315,6 +328,8 @@ class InflationForgeProvider(_Provider):
                 raise ValueError("invalid InflationForge snapshots")
             if not snapshots:
                 return self._result(request, raw=catalog_raw, warnings=["NO_SNAPSHOT: no price observation is available."])
+            if any(_time(row.get("retrieved_at")) is None for row in snapshots):
+                raise ValueError("InflationForge snapshot retrieval time is missing")
             snapshot = max(snapshots, key=lambda row: _time(row.get("retrieved_at")) or datetime.min.replace(tzinfo=timezone.utc))
             snapshot_id = snapshot.get("id")
             if not isinstance(snapshot_id, str) or not re.fullmatch(r"[A-Za-z0-9_.:-]{1,128}", snapshot_id):
@@ -326,17 +341,35 @@ class InflationForgeProvider(_Provider):
             entities: list[Entity] = []
             evidence: list[Evidence] = []
             warnings = ["NOT_MERCHANT_QUOTE: observations describe a city/item basket; they do not bind supplier price, stock, tax or fulfillment."]
+            seen_observations: set[str] = set()
+            received = _now()
             for row in observations:
                 if not isinstance(row, dict) or (row.get("snapshot_id"), row.get("item_id"), row.get("city_id")) != (snapshot_id, item["id"], city_id):
                     raise ValueError("InflationForge observation context mismatch")
                 if row.get("currency") != "USD":
                     raise ValueError("native price_usd observation must carry USD")
+                observation_id = row.get("id")
+                if (not isinstance(observation_id, str) or not re.fullmatch(r"[A-Za-z0-9_.:-]{1,128}", observation_id)
+                        or observation_id in seen_observations):
+                    raise ValueError("InflationForge observation requires a unique receipt identity")
+                seen_observations.add(observation_id)
+                if row.get("kind") not in {"LIVE", "ARCHIVED"} or type(row.get("year")) is not int:
+                    raise ValueError("InflationForge observation kind or year is invalid")
                 price = _number(row.get("price_usd"))
                 observed, retrieved = _time(row.get("observed_at")), _time(row.get("retrieved_at"))
                 if price is None or price <= 0 or observed is None or retrieved is None:
                     raise ValueError("price or observation time is missing")
                 if observed > retrieved:
                     raise ValueError("observation time is after retrieval time")
+                if row["year"] != observed.year:
+                    raise ValueError("InflationForge observation year does not match its source time")
+                if row["kind"] == "ARCHIVED":
+                    warnings.append("HISTORICAL_OBSERVATION_NOT_CURRENT_QUOTE")
+                future = observed > received or retrieved > received
+                if future:
+                    warnings.append("FUTURE_SOURCE_TIMESTAMP: observation cannot be treated as current known evidence.")
+                if (received - observed).total_seconds() > 30 * 86400:
+                    warnings.append("STALE_PRICE_OBSERVATION: source observation is more than 30 days old.")
                 source = _url(row.get("source_url"))
                 if not source:
                     raise ValueError("price observation source is missing")
@@ -346,7 +379,7 @@ class InflationForgeProvider(_Provider):
                 synthetic = self.mode == "reference" or (urlsplit(source).hostname or "").endswith(".example")
                 evidence.append(Evidence(id=evidence_id, source_uri=source, source_name=str(row.get("source", "InflationForge")),
                                          excerpt=excerpt, observed_at=observed,
-                                         provenance_state="unknown" if synthetic else "known",
+                                         provenance_state="unknown" if synthetic or future else "known",
                                          uncertainty="Bundled snapshot replay; not refreshed." if self.mode == "reference" else
                                          "Provider-reported observation; underlying publisher snapshot not independently checked."))
                 entities.append(Entity(id=entity_id, entity_type="price_observation", name=str(item["name"]),
@@ -355,18 +388,19 @@ class InflationForgeProvider(_Provider):
                                                    "location": {"city_id": city_id}, "currency": "USD", "price": price,
                                                    "unit": item.get("unit"), "observed_at": observed.isoformat(),
                                                    "retrieved_at": retrieved.isoformat(), "snapshot_id": snapshot_id,
-                                                   "kind": row.get("kind"), "evidence_ids": [evidence_id],
+                                                   "kind": row["kind"], "year": row["year"], "evidence_ids": [evidence_id],
                                                    "synthetic": synthetic, "is_merchant_quote": False,
                                                    "claims": [{"id": _id("if-price", entity_id), "subject_id": entity_id,
                                                                "predicate": "city_item_price", "value": {"price": price, "currency": "USD", "city_id": city_id,
-                                                               "item_id": item["id"], "unit": item.get("unit"), "observed_at": observed.isoformat()},
+                                                               "item_id": item["id"], "unit": item.get("unit"), "observed_at": observed.isoformat(),
+                                                               "year": row["year"], "observation_kind": row["kind"]},
                                                                "kind": "fact", "evidence_ids": [evidence_id]}]}))
             if request.input.get("currency", "USD") != "USD":
                 warnings.append("CURRENCY_MISMATCH: native observations are USD; no exchange rate or INR quote was inferred.")
             if not observations:
                 warnings.append("NOT_OBSERVED: tracked item has no observation in the requested city.")
             catalog_raw.update({"snapshot": snapshot, "observations": observations, "native_endpoints": ["/api/items", "/api/snapshots", path]})
-            return self._result(request, entities=entities, evidence=evidence, warnings=warnings, raw=catalog_raw)
+            return self._result(request, entities=entities, evidence=evidence, warnings=list(dict.fromkeys(warnings)), raw=catalog_raw)
         except Exception as exc:
             return self._failure(request, exc)
 

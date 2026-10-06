@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from typing import Any
 
 from echo.models import stable_id, text_hash
 
@@ -49,7 +50,7 @@ def build_fixture() -> dict:
         "identity_status": "MATCHED",
         "demo_scope": DEMO_SCOPE,
     }
-    suppliers = [
+    suppliers: list[dict[str, Any]] = [
         {"id": "supplier-alpha-demo", "name": "Supplier Alpha",
          "official_domain": "alpha.example", "identity_status": "MATCHED",
          "raw_score": 94.0, "mean_confidence": 0.90,

@@ -18,13 +18,21 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Iterator
 
+MAX_CHECKOUT_JSON_BYTES = 64 * 1024
+
 
 class IdempotencyConflict(ValueError):
     """An idempotency key was reused for different operation input."""
 
 
 def _canonical(value: Any) -> str:
-    return json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False)
+    try:
+        serialized = json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False)
+    except (TypeError, ValueError, RecursionError) as exc:
+        raise ValueError("Merchant checkout data must contain finite JSON values") from exc
+    if len(serialized.encode("utf-8")) > MAX_CHECKOUT_JSON_BYTES:
+        raise ValueError("Merchant checkout data exceeds the 64 KiB limit")
+    return serialized
 
 
 def terms_hash(terms: dict[str, Any]) -> str:
@@ -37,7 +45,8 @@ def _now() -> str:
 
 
 def _text(value: Any, label: str, maximum: int = 200) -> str:
-    if not isinstance(value, str) or not value.strip() or len(value) > maximum:
+    if (not isinstance(value, str) or not value.strip() or len(value) > maximum
+            or any(ord(char) < 32 or ord(char) == 127 or 0xD800 <= ord(char) <= 0xDFFF for char in value)):
         raise ValueError(f"{label} must be non-empty text (maximum {maximum})")
     return value
 
@@ -125,11 +134,10 @@ class ReferenceMerchant:
             self._conn.execute("BEGIN IMMEDIATE")
             try:
                 yield
+                self._conn.commit()
             except BaseException:
                 self._conn.rollback()
                 raise
-            else:
-                self._conn.commit()
 
     def _catalog_item(self, item: dict[str, Any]) -> dict[str, Any]:
         if not isinstance(item, dict):
@@ -310,9 +318,9 @@ class ReferenceMerchant:
             if session["status"] in ("completed", "canceled"):
                 raise ValueError("Cannot update a completed or canceled checkout")
             previous = session["authorized_action"]
-            for key in ("actor_id", "transaction_id", "decision_id"):
+            for key in ("actor_id", "transaction_id"):
                 if checked[key] != previous[key]:
-                    raise ValueError("Renewed approval must belong to the same actor, transaction and decision")
+                    raise ValueError("Renewed approval must belong to the same actor and transaction")
             if checked["decision_version"] < previous["decision_version"]:
                 raise ValueError("Cannot revert checkout to an older decision version")
             if checked["decision_version"] == previous["decision_version"] and checked != previous:
@@ -399,6 +407,27 @@ class ReferenceMerchant:
     def get_order(self, external_order_ref: str) -> dict[str, Any]:
         with self._lock:
             return self._load("reference_merchant_orders", _text(external_order_ref, "external_order_ref"))
+
+    def get_order_for_transaction(self, actor_id: str,
+                                  transaction_id: str) -> dict[str, Any] | None:
+        """Read the durable order after a coordinator interruption, without mutation.
+
+        The coordinator still verifies this order against its preserved approved
+        action. Scope the lookup by both actor and transaction so recovery cannot
+        attach another buyer's order to the current journey.
+        """
+        actor_id = _text(actor_id, "actor_id")
+        transaction_id = _text(transaction_id, "transaction_id")
+        with self._lock:
+            row = self._conn.execute(
+                "SELECT order_id FROM reference_merchant_transaction_orders WHERE actor_id=? AND transaction_id=?",
+                (actor_id, transaction_id)).fetchone()
+            if row is None:
+                return None
+            order = self._load("reference_merchant_orders", row["order_id"])
+            if order.get("actor_id") != actor_id or order.get("transaction_id") != transaction_id:
+                raise ValueError("Merchant order index does not match its actor/transaction binding")
+            return order
 
     def get_events(self, external_order_ref: str) -> list[dict[str, Any]]:
         with self._lock:

@@ -1,0 +1,13 @@
+# Install from the repository root in an isolated Python 3.12 environment.
+-e ./Beacon-main
+-e ./packages/peoplepay-extension-sdk
+-r journey/requirements.txt
+FalkorDB==1.6.0
+fastapi==0.142.2
+starlette==1.7.0
+httpx2==2.13.1
+pytest==9.1.1
+pytest-asyncio==1.4.0
+mypy==1.13.0
+ruff==0.15.6
+types-PyYAML==6.0.12.20260906

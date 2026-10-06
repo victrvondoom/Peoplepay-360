@@ -23,4 +23,6 @@ output/playwright/
 # Isolated dependency verification environment
 .venv-beacon-review/
 .venv-echo/
+.venv-journey-review/
+.venv-greenchain-review/
 *.egg-info/

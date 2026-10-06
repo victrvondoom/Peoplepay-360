@@ -11,7 +11,7 @@ from urllib.parse import urlsplit
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
-API_VERSION = "1"
+API_VERSION: Literal["1"] = "1"
 _IDENTIFIER = re.compile(r"^[A-Za-z0-9][A-Za-z0-9_.:-]{0,127}$")
 _CAPABILITY = re.compile(r"^[a-z][a-z0-9_]{0,63}$")
 _SECRET = re.compile(r"^(authorization|password|secret|api_key|access_token|refresh_token|bearer_token|private_key)$", re.I)

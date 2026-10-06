@@ -1,3 +1,4 @@
 # Run from repository root after installing the local SDK with pip install -e packages/peoplepay-extension-sdk.
 httpx==0.28.1
-pydantic==2.10.4
+# Match Beacon's pinned agent runtime; older versions cannot load its LiteLLM types.
+pydantic==2.13.5
