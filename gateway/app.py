@@ -288,6 +288,7 @@ class GatewayState:
         bus: EventBus | None = None,
         capabilities: dict[str, Capability] | None = None,
         journey: Any = None,
+        models: Any = None,
     ) -> None:
         self.store = store if store is not None else InMemoryTransactionStore()
         self.workflow_lock = threading.RLock()
@@ -300,6 +301,8 @@ class GatewayState:
         self._journey = journey
         self._assistance: Any = None
         self._workflow_engine: Any = None
+        self._models: Any = models
+        self._models_lock = threading.Lock()
 
     def workflow_engine(self):
         with self.workflow_lock:
@@ -310,6 +313,23 @@ class GatewayState:
                 self._workflow_engine = WorkflowEngine(configured_runtime(),
                     store=JourneyStore(os.getenv("PEOPLEPAY_WORKFLOW_DB", "peoplepay-workflows.sqlite3")))
         return self._workflow_engine
+
+    def model_gateway(self):
+        """Model Gateway (provider-agnostic AI layer), built on first use from the environment."""
+        with self._models_lock:
+            if self._models is None:
+                try:
+                    from peoplepay_models.runtime import build_from_env
+                except ImportError:
+                    import sys
+                    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "packages" / "peoplepay-model-gateway" / "src"))
+                    from peoplepay_models.runtime import build_from_env
+                self._models = build_from_env()
+        return self._models
+
+    def models_api(self):
+        from peoplepay_models.service import ModelsAPI
+        return ModelsAPI(self.model_gateway())
 
     def assistance_service(self):
         with self.workflow_lock:
@@ -570,7 +590,13 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                       "/extensions": ("extensions.html", "text/html"),
                       "/extensions.js": ("extensions.js", "text/javascript"),
                       "/app.js": ("app.js", "text/javascript"),
-                      "/styles.css": ("styles.css", "text/css")}
+                      "/styles.css": ("styles.css", "text/css"),
+                      "/ask": ("ask.html", "text/html"),
+                      "/ask.js": ("ask.js", "text/javascript"),
+                      "/models": ("models.html", "text/html"),
+                      "/models.js": ("models.js", "text/javascript"),
+                      "/models.css": ("models.css", "text/css"),
+                      "/model-selector.js": ("model-selector.js", "text/javascript")}
             if path in assets:
                 filename, mime = assets[path]
                 raw = (Path(__file__).parent / "web" / filename).read_bytes()
@@ -596,6 +622,13 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             if path == "/product/modules":
                 self._send(200, {"modules": product_modules()})
                 return
+            if path == "/health/models":
+                # Open like /health: counts and catalog age only; no connection names, no secrets.
+                try:
+                    self._send(200, state.model_gateway().service_health())
+                except ImportError:
+                    self._send(200, {"status": "unavailable", "detail": "model gateway package not installed"})
+                return
 
             user = self._caller()
             if user is None:
@@ -606,6 +639,9 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             parts = [p for p in path.split("/") if p]
+            if parts[:3] in (["api", "v1", "models"], ["api", "v1", "chat"]):
+                self._models_route("GET", parts, {}, user)
+                return
             if parts[:3] == ["api", "v1", "extensions"] and len(parts) == 3:
                 rows = state.workflow_engine().runtime.describe()
                 # Runtime telemetry remains internal; no other actor's workflow IDs.
@@ -675,6 +711,9 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 return
 
             parts = [p for p in path.split("/") if p]
+            if parts[:3] in (["api", "v1", "models"], ["api", "v1", "chat"]):
+                self._models_route("POST", parts, body, user)
+                return
             if parts[:3] == ["api", "v1", "workflows"]:
                 self._platform_workflow(user, parts[3:], body)
                 return
@@ -719,6 +758,43 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             self._fail(404, f"no route for POST {path}")
 
         # --- handlers --------------------------------------------------
+
+        def _models_route(self, method, parts, body, user):
+            """Model Gateway API. The caller is the verified user; provider secrets never leave the server."""
+            try:
+                api = state.models_api()
+            except ImportError:
+                self._fail(503, "Model Gateway package is not available")
+                return
+            # Credential-bearing writes need a verified identity on a cloud deployment: in OPEN auth mode any
+            # caller may claim any user id, which would let them reach that user's provider connections.
+            writes_credentials = method == "POST" and parts[3:4] == ["connections"] and (
+                parts[4:] == [] or parts[5:6] == ["update"])
+            if writes_credentials and str(auth_mode()) != "VERIFIED" and state.model_gateway().net.mode == "cloud":
+                self._fail(403, "Storing provider credentials on a cloud deployment requires verified authentication "
+                                f"(set {SECRET_ENV})")
+                return
+            status, out = api.handle(method, parts, urlparse(self.path).query, body, user)
+            if hasattr(out, "cancel"):
+                self._stream_events(out)
+                return
+            self._send(status, out)
+
+        def _stream_events(self, stream):
+            """Server-sent events of canonical stream events. A dropped client cancels the provider stream."""
+            self.close_connection = True
+            self.send_response(200)
+            self.send_header("Content-Type", "text/event-stream; charset=utf-8")
+            self.send_header("Cache-Control", "no-store")
+            self.send_header("X-Content-Type-Options", "nosniff")
+            self.send_header("Connection", "close")
+            self.end_headers()
+            try:
+                for event in stream:
+                    self.wfile.write(b"data: " + json.dumps(event.to_dict(), default=str).encode("utf-8") + b"\n\n")
+                    self.wfile.flush()
+            except (BrokenPipeError, ConnectionResetError, OSError):
+                stream.cancel()
 
         def _platform_workflow(self, user, parts, body):
             try:

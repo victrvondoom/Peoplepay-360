@@ -5,6 +5,25 @@ It brings discovery, analysis, verification, decision review, transaction
 records, and after-sales resolution into one product journey while keeping
 specialist apps and services independently runnable.
 
+## Multi-model AI: use the AI you want
+
+PeoplePay is **AI-provider agnostic**. A single Model Gateway sits between PeoplePay and every provider, so one
+conversation can move between models and providers without changing PeoplePay itself.
+
+* **Your own cloud key** (OpenAI, Anthropic) · **an enterprise platform** (Amazon Bedrock) · **OpenRouter** ·
+  **NVIDIA NIM** · **local Ollama** · **any OpenAI-compatible endpoint** (vLLM, LM Studio, org gateways) ·
+  fast typed decision providers (JEV, Laya).
+* Models are **discovered** from your connected providers (cached, refreshable), not hardcoded.
+* **Auto** picks by task, capability, availability and your preferences; or choose an exact model and route.
+* If a provider is rate limited or down, PeoplePay can **fall back** — never to a route your privacy mode forbids.
+* **Local only** keeps inference on your own models; it never falls back to a cloud provider.
+* Keys are encrypted at rest, masked, never returned, and never logged.
+* A model can explain and draft; it can never approve a payment, order or submission.
+
+Open `/models` (AI & Models) and `/ask`. Docs: [docs/models](docs/models/README.md). Copy
+[`.env.example`](.env.example) for provider variables. **Verification status:** adapters are mock- and
+contract-verified in CI; none is claimed live-verified (see [docs/models/PROVIDERS.md](docs/models/PROVIDERS.md)).
+
 ## Unified Journey v1
 
 The portal now carries one procurement requirement through the existing
