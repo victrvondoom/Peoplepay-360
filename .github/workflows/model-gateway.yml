@@ -1,0 +1,22 @@
+name: model-gateway
+
+on:
+  push:
+    paths: ["packages/peoplepay-model-gateway/**", "gateway/**", "docs/models/**"]
+  pull_request:
+    paths: ["packages/peoplepay-model-gateway/**", "gateway/**", "docs/models/**"]
+
+jobs:
+  contract-and-mock:
+    # No provider credentials are used or needed. Live tests are gated behind PEOPLEPAY_LIVE_TESTS=1 and are skipped here.
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install pytest "cryptography>=42"
+      - run: python -m pytest packages/peoplepay-model-gateway/tests -q

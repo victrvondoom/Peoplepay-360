@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peoplepay-model-gateway"
+version = "0.1.0"
+description = "Provider-agnostic model gateway for PeoplePay: registry, routing, fallback, BYOK, local models"
+requires-python = ">=3.11"
+# Standard library only for transport. `cryptography` is needed to PERSIST
+# user credentials (the vault fails closed without it); `boto3` only for live Bedrock.
+dependencies = []
+
+[project.optional-dependencies]
+vault = ["cryptography>=42"]
+bedrock = ["boto3>=1.34"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

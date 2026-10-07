@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AI &amp; Models · PeoplePay</title><link rel="stylesheet" href="/journey.css"><link rel="stylesheet" href="/models.css"><script src="/model-selector.js" defer></script><script src="/models.js" defer></script></head>
+<body><a class="skip-link" href="#content">Skip to settings</a>
+<header class="topbar"><a class="brand" href="/">PeoplePay</a><nav aria-label="PeoplePay workspaces"><a href="/">Transactions</a><a href="/ask">Ask</a><a href="/journey">Unified journey</a><a href="/assistance">Assistance</a><a href="/extensions">Extensions</a><a href="/models" aria-current="page">AI &amp; Models</a></nav></header>
+<main id="content" class="layout pp-narrow">
+<div class="page-heading"><div><p class="eyebrow">USE THE AI YOU WANT</p><h1>AI &amp; Models</h1><p class="lead">PeoplePay is provider-agnostic. Connect your own keys, an enterprise platform, OpenRouter, a local model or any compatible endpoint — or leave it on Auto. Model choice never changes who may approve a payment: that stays with PeoplePay's approval policy.</p></div></div>
+<div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+<ul class="pp-nav" aria-label="Sections"><li><a href="#general">General</a></li><li><a href="#providers">Connected providers</a></li><li><a href="#models">Models</a></li><li><a href="#routing">Auto routing</a></li><li><a href="#fallbacks">Fallbacks</a></li><li><a href="#local">Local models</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#usage">Usage</a></li><li><a href="#advanced">Advanced</a></li></ul>
+
+<section id="general" class="card pp-section" aria-labelledby="h-general"><h2 id="h-general">General</h2>
+  <div class="form-row"><div><label for="default-model">Default model</label><select id="default-model"><option value="">Auto (recommended)</option></select></div>
+  <div><label for="policy">Routing preference</label><select id="policy"><option value="BALANCED">Balanced</option><option value="BEST_QUALITY">Best quality</option><option value="FASTEST">Fastest</option><option value="LOW_COST">Low cost</option><option value="PRIVACY_FIRST">Privacy first</option><option value="LOCAL_ONLY">Local only</option></select></div></div>
+  <p class="hint">These are routing preferences, not objective rankings. Unknown prices are never treated as free.</p>
+  <h3>Presets</h3><div class="pp-row" id="presets"></div>
+  <div class="pp-row"><button class="secondary" id="export" type="button">Export preferences</button><label class="secondary" for="import-file">Import preferences <input id="import-file" type="file" accept="application/json"></label></div>
+  <p class="hint">Exports contain preferences only — never keys or connections.</p></section>
+
+<section id="providers" class="card pp-section" aria-labelledby="h-providers"><h2 id="h-providers">Connected providers</h2>
+  <p id="vault-note" class="hint"></p>
+  <div id="conn-cards" class="pp-cards" aria-live="polite"></div>
+  <details class="pp-section" id="add-provider"><summary>Connect a provider (bring your own key)</summary>
+    <form id="add-form" class="pp-form" autocomplete="off">
+      <label for="ptype">Provider</label><select id="ptype"></select>
+      <label for="pname">Connection name</label><input id="pname" maxlength="80" placeholder="e.g. Personal key, Company gateway">
+      <div id="pfields"></div>
+      <div id="pnotice" class="pp-notice"></div>
+      <label class="check"><input type="checkbox" id="pack" required> <span>I understand requests sent through this provider are processed under that provider's terms, and custom endpoints are untrusted external systems.</span></label>
+      <div class="pp-row"><button class="primary" type="submit">Connect and test</button></div>
+    </form></details></section>
+
+<section id="models" class="card pp-section" aria-labelledby="h-models"><h2 id="h-models">Models</h2>
+  <div class="pp-row"><label for="mq" class="sr-only">Search models</label><input id="mq" type="search" class="pp-grow" placeholder="Search models and providers"><button class="secondary" id="refresh-all" type="button">Refresh stale catalogs</button></div>
+  <p class="hint">Model lists come from your connected providers and are cached; refresh to update. A "?" on a capability means it was inferred or set by you — use Test to confirm.</p>
+  <div class="table-wrap"><table><thead><tr><th scope="col">Model</th><th scope="col">Route</th><th scope="col">Capabilities</th><th scope="col">Status</th><th scope="col">Tier</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="model-rows"></tbody></table></div></section>
+
+<section id="routing" class="card pp-section" aria-labelledby="h-routing"><h2 id="h-routing">Auto routing</h2>
+  <p>Auto considers the task, attachments, tools, privacy policy, model health and your preferences. Try it:</p>
+  <label for="why-text">Sample request</label><textarea id="why-text" rows="2">Compare these two supplier quotes</textarea>
+  <div class="pp-row"><label class="check"><input type="checkbox" id="why-img"> <span>includes an image</span></label><label class="check"><input type="checkbox" id="why-tools"> <span>needs tools</span></label><button class="secondary" id="why-go" type="button">Why this model?</button></div>
+  <div id="why-out" class="pp-dev" hidden></div>
+  <label for="ctx">When a conversation is too long for a model</label><select id="ctx"><option value="trim">Trim older messages (never the latest ones) and tell me</option><option value="summarize">Summarize older messages</option><option value="ask">Ask me</option></select></section>
+
+<section id="fallbacks" class="card pp-section" aria-labelledby="h-fb"><h2 id="h-fb">Fallbacks</h2>
+  <fieldset><legend>If a provider is rate limited or unavailable</legend>
+  <label class="check"><input type="radio" name="fb" value="ASK"> <span>Ask before switching</span></label>
+  <label class="check"><input type="radio" name="fb" value="AUTOMATIC"> <span>Switch automatically (never to a route your privacy mode forbids)</span></label>
+  <label class="check"><input type="radio" name="fb" value="NONE"> <span>Don't switch</span></label></fieldset>
+  <h3>Preferred order</h3><p class="hint">Routes you list are tried first, in this order. Each row shows its privacy class and capabilities so you can spot a fallback that would not satisfy your privacy mode or required features.</p>
+  <ol id="fb-list" class="pp-list"></ol>
+  <div class="pp-row"><label for="fb-add" class="sr-only">Add a route</label><select id="fb-add" class="pp-grow"></select><button class="secondary" id="fb-add-btn" type="button">Add to order</button></div></section>
+
+<section id="local" class="card pp-section" aria-labelledby="h-local"><h2 id="h-local">Local models</h2>
+  <label class="check"><input type="checkbox" id="local-only"> <span><strong>Local only</strong> — all inference stays inside your local boundary. If local is unavailable PeoplePay tells you; it never falls back to a cloud provider.</span></label>
+  <div id="local-note" class="pp-notice"></div><div id="local-cards" class="pp-cards"></div></section>
+
+<section id="privacy" class="card pp-section" aria-labelledby="h-privacy"><h2 id="h-privacy">Privacy</h2>
+  <p>Each request carries a data classification. Public and Internal data may use any allowed route; Sensitive and Restricted data only goes to local or organization-approved routes.</p>
+  <label class="check"><input type="checkbox" id="allow-cloud-sens"> <span>Allow cloud providers for Sensitive data (not Restricted)</span></label>
+  <label class="check"><input type="checkbox" id="allow-auto-fb-sens"> <span>Allow automatic provider switching for Sensitive data (otherwise I'm asked first)</span></label>
+  <p class="hint">PeoplePay does not store prompt text in usage telemetry. Provider terms apply to anything you send through a provider; PeoplePay makes no legal guarantee about them.</p></section>
+
+<section id="usage" class="card pp-section" aria-labelledby="h-usage"><h2 id="h-usage">Usage</h2>
+  <div class="table-wrap"><table><thead><tr><th scope="col">Connection</th><th scope="col">Requests</th><th scope="col">Tokens in/out</th><th scope="col">Est. cost</th><th scope="col">Errors</th><th scope="col">Fallbacks</th><th scope="col">Avg latency</th></tr></thead><tbody id="usage-rows"></tbody></table></div>
+  <p class="hint">Only usage reported by providers is shown. Provider APIs often don't expose remaining quota — then you'll see "Quota information unavailable", not an invented bar. Local models use your hardware: no cloud API quota.</p></section>
+
+<section id="advanced" class="card pp-section" aria-labelledby="h-adv"><h2 id="h-adv">Advanced</h2>
+  <label class="check"><input type="checkbox" id="dev"> <span>Developer mode (route details and "Why this model?" in chat)</span></label>
+  <h3>Model playground</h3><p class="hint">Runs the same prompt on 2–3 models you pick. This calls each model and may cost money; nothing runs until you press Run.</p>
+  <label for="cmp-text">Prompt</label><textarea id="cmp-text" rows="2"></textarea>
+  <div class="pp-row"><label for="cmp-a" class="sr-only">Model A</label><select id="cmp-a"></select><label for="cmp-b" class="sr-only">Model B</label><select id="cmp-b"></select><label for="cmp-c" class="sr-only">Model C</label><select id="cmp-c"></select><button class="primary" id="cmp-run" type="button">Run comparison</button></div>
+  <div id="cmp-out" class="pp-cmp"></div></section>
+</main></body></html>
