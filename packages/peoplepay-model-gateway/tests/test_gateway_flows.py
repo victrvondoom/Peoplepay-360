@@ -443,3 +443,17 @@ def test_conversation_roundtrips_every_part_type_and_rejects_unknown_kinds():
     assert again.to_dict() == conv.to_dict() and again.required_input_kinds() == {"text", "image", "file", "tool_call", "structured", "tool_result"}
     with pytest.raises(ValueError):
         part_from_dict({"kind": "hologram"})
+
+
+def test_strict_selection_refuses_to_reroute_an_unusable_pinned_model(gw):
+    cloud = add_mock(gw, U, "Cloud", [{"id": "c", "name": "C"}])
+    add_mock(gw, U, "Local", [{"id": "l", "name": "L"}], local=True)
+    pinned = ModelSelection("model", f"{cloud}::c")
+    # default (interactive) behaviour: sensitive data pinned to a cloud model is quietly served by an allowed route, and says so
+    r = gw.infer(U, req(selection=pinned, data_class=DataClass.RESTRICTED))
+    assert r.served_by.provider_model_id == "l"
+    # programmatic callers can forbid that
+    with pytest.raises(GatewayError) as ei:
+        gw.infer(U, req(selection=pinned, data_class=DataClass.RESTRICTED, metadata={"strict_selection": True}))
+    assert ei.value.code in (ErrorCode.PRIVACY_POLICY_BLOCKED, ErrorCode.NO_ROUTE)
+    assert calls(cloud) == 0

@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peoplepay-hypergrid"
+version = "0.1.0"
+description = "Evidence-aware incremental computation, worker grid and cost-aware routing benchmarks for PeoplePay"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

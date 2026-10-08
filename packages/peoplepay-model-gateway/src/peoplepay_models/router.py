@@ -27,6 +27,7 @@ class Requirements:
     task: str = "chat"
     explicit_route: str | None = None
     explicit_connection: str | None = None
+    strict_selection: bool = False        # programmatic callers: an unusable pinned model is an error, never a silent re-route
     drop_unsupported: bool = False        # user consented to omit images/files the route cannot take
     reasons: list[str] = field(default_factory=list)
 
@@ -66,6 +67,7 @@ def build_requirements(req: InferenceRequest, cfg: RoutingConfig, prefs: dict) -
     kinds = {p.kind for m in hist for p in m.parts}
     r = Requirements(task=req.task, data_class=req.data_class, max_output=req.max_output_tokens or 0)
     r.drop_unsupported = bool(req.metadata.get("allow_drop_unsupported"))
+    r.strict_selection = bool(req.metadata.get("strict_selection"))
     r.caps.add(C.TEXT)
     if "image" in kinds and not r.drop_unsupported:
         r.caps.add(C.VISION); r.reasons.append("Vision required: conversation contains images")
@@ -177,6 +179,8 @@ def plan_routes(reqs: Requirements, routes: list[ProviderModelRoute], *, health:
             keep = keep_pinned + _order(rest, reqs, health, prefs, cfg)
             keep_pinned_n = len(keep_pinned)
             return RoutePlan(keep, excluded, reqs.reasons + explicit_note + _why_first(keep[0], reqs, keep_pinned_n))
+        if reqs.strict_selection:
+            return RoutePlan([], excluded, reqs.reasons + ["Pinned model is not usable and strict selection forbids re-routing"])
         reqs.reasons.append("Selected model is not usable for this request; falling back to routing")
     ordered = _order(keep, reqs, health, prefs, cfg)
     return RoutePlan(ordered, excluded, reqs.reasons + (_why_first(ordered[0], reqs, 0) if ordered else []))

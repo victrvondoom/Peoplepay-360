@@ -1,0 +1,5 @@
+experiment,kind,workers,decisions,median_s,min_s,max_s,throughput_per_s,speedup_vs_1,efficiency,oversubscribed
+E1_scaling,MEASURED,1,20000,15.989,15.955,16.192,1250.8,1.0,1.0,False
+E1_scaling,MEASURED,2,20000,8.135,8.094,8.297,2458.5,1.97,0.98,False
+E1_scaling,MEASURED,4,20000,4.365,4.196,4.661,4582.1,3.66,0.92,False
+E1_scaling,MEASURED,8,20000,4.449,4.374,4.468,4495.4,3.59,0.45,True

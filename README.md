@@ -24,6 +24,12 @@ Open `/models` (AI & Models) and `/ask`. Docs: [docs/models](docs/models/README.
 [`.env.example`](.env.example) for provider variables. **Verification status:** adapters are mock- and
 contract-verified in CI; none is claimed live-verified (see [docs/models/PROVIDERS.md](docs/models/PROVIDERS.md)).
 
+## HYPERGRID: do less work, prove it
+
+An evidence-aware incremental-computation and cost-aware routing slice with matched-baseline benchmarks that report quality and tail latency next to cost.
+Start with [docs/hypergrid/STATUS.md](docs/hypergrid/STATUS.md): it states what is implemented, measured, simulated, not implemented and blocked
+(no GitLab Duo automation, no deployment, no ECHO integration, no live market data, no real LLM calls). Generated results: `packages/peoplepay-hypergrid/results/SUMMARY.md`.
+
 ## Unified Journey v1
 
 The portal now carries one procurement requirement through the existing

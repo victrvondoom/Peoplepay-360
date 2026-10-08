@@ -1,0 +1,17 @@
+experiment,kind,assumption,hard_share,cpvc_A,cpvc_B,cpvc_C,cpvc_H,H_vs_B_cost_ratio,H_vs_C_cost_ratio,H_correct_share,C_correct_share
+E5_sensitivity,SIMULATED assumptions,repeat_rate=0.0,0.429,0.00249,0.00249,0.001395,0.000134,0.054,0.096,0.931,0.8782
+E5_sensitivity,SIMULATED assumptions,repeat_rate=0.15,0.45,0.002495,0.002495,0.001405,0.000118,0.047,0.084,0.9234,0.877
+E5_sensitivity,SIMULATED assumptions,repeat_rate=0.3,0.442,0.002492,0.002492,0.001427,0.000103,0.041,0.072,0.9214,0.8754
+E5_sensitivity,SIMULATED assumptions,repeat_rate=0.6,0.43,0.002506,0.002506,0.001451,5.2e-05,0.021,0.036,0.9434,0.8694
+E5_sensitivity,SIMULATED assumptions,price_spread=±10%,0.442,0.002492,0.002492,0.001427,0.000103,0.041,0.072,0.9214,0.8754
+E5_sensitivity,SIMULATED assumptions,price_spread=±25%,0.204,0.002466,0.002466,0.001337,4.6e-05,0.019,0.034,0.9664,0.9342
+E5_sensitivity,SIMULATED assumptions,small_model_accuracy_on_hard=0.3,0.442,0.002492,0.002492,0.001513,0.000146,0.059,0.096,0.9124,0.8256
+E5_sensitivity,SIMULATED assumptions,small_model_accuracy_on_hard=0.55,0.442,0.002492,0.002492,0.001427,0.000103,0.041,0.072,0.9214,0.8754
+E5_sensitivity,SIMULATED assumptions,small_model_accuracy_on_hard=0.8,0.442,0.002492,0.002492,0.001348,5.6e-05,0.022,0.042,0.9342,0.9268
+E5_sensitivity,SIMULATED assumptions,silent_error_share=0.0,0.442,0.002492,0.002492,0.001427,0.000142,0.057,0.1,1.0,0.8754
+E5_sensitivity,SIMULATED assumptions,silent_error_share=0.2,0.442,0.002492,0.002492,0.001427,0.000103,0.041,0.072,0.9214,0.8754
+E5_sensitivity,SIMULATED assumptions,silent_error_share=0.5,0.442,0.002492,0.002492,0.001427,5.2e-05,0.021,0.036,0.8372,0.8754
+E5_sensitivity,SIMULATED assumptions,NO price gap: small model priced like the large one,0.442,0.002492,0.002492,0.002626,0.000248,0.1,0.094,0.941,0.8754
+E5_sensitivity,SIMULATED assumptions,NO price gap at all: every model priced like the large one,0.442,0.002492,0.002492,0.002777,0.000524,0.21,0.189,0.991,0.8754
+E5_sensitivity,SIMULATED assumptions,validator blind: every model error is silent (share=1.0),0.442,0.002492,0.002492,0.001427,9e-06,0.004,0.006,0.7376,0.8754
+E5_sensitivity,SIMULATED assumptions,large_model_price_x0.25 (price gap shrinks),0.442,0.000623,0.000623,0.0004,3.9e-05,0.063,0.097,0.9214,0.8754
