@@ -227,3 +227,10 @@ separate from Python package metadata.
 ## CivicMesh
 
 CivicMesh is bundled under MIT, copyright (c) 2026 Anbu. Original notice/license: `CivicMesh-main/LICENSE`. Declared upstream: https://github.com/Anbu-00001/CivicMesh. Native project version 1.0.0; upstream commit was not supplied and is unknown. Original algorithms, policy data, UI and test suites are upstream work. PeoplePay adds an adapter, normalized evidence/decision intake, workflow routing and portal. See `docs/integration/CIVICMESH_UPSTREAM.md`.
+
+## World Bank Open Data (HYPERGRID fixture)
+
+`packages/peoplepay-hypergrid/fixtures/worldbank_snapshot.json` contains annual observations retrieved from the World Bank Open Data API v2
+(indicators FP.CPI.TOTL for India and the United States, and PA.NUS.FCRF for India) on 2026-10-08. World Bank Open Data is published under CC BY 4.0;
+attribution to The World Bank is required on redistribution. The file records the source URL, retrieval time, `lastupdated` value and a SHA-256 of each
+API response. The series are annual and the provider exposes no revision history, so the data is labelled HISTORICAL and not vintage-aware.

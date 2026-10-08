@@ -1,0 +1,39 @@
+# HYPERGRID pipeline for GitLab.
+#
+# STATUS: UNVERIFIED. This file has never been executed on a GitLab runner (this repository is developed on
+# GitHub and no GitLab project/runner was available). Syntax follows GitLab CI/CD documentation; treat the first
+# real pipeline run as the verification. No deploy stage is defined: deployment is NOT IMPLEMENTED.
+
+stages: [verify, secure, benchmark]
+
+default:
+  image: python:3.13-slim
+  before_script:
+    - pip install -q pytest numpy cryptography
+    - export PYTHONPATH="packages/peoplepay-model-gateway/src:packages/peoplepay-hypergrid/src"
+
+verify:unit:
+  stage: verify
+  script:
+    - python -m pytest packages/peoplepay-model-gateway/tests packages/peoplepay-hypergrid/tests -q --junitxml=report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
+
+# GitLab-provided security templates (documented names; run with the project's own configuration).
+include:
+  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/Secret-Detection.gitlab-ci.yml
+
+# Correctness gate: the incremental engine must equal a full recompute, and the mutation test must keep failing
+# the broken engine. Quick-size benchmark; raw results are kept as an artifact for audit.
+benchmark:quick:
+  stage: benchmark
+  script:
+    - python -m hypergrid.bench --quick --out results-quick
+    - python scripts/hypergrid_gate.py results-quick/results.json
+  artifacts:
+    when: always
+    paths: [results-quick/]
+    expire_in: 30 days

@@ -1,0 +1,4 @@
+experiment,kind,scenario,chunks,completed,retries,dead_lettered_chunks,decisions_missing,completed_results_identical_to_clean_run,max_in_flight,in_flight_bound,seconds,cancelled
+E4_faults,MEASURED,"transient faults on ~20% of chunks, retry budget 2",50,50,15,0,0,True,8,8,1.105,
+E4_faults,MEASURED,"persistent faults on ~10% of chunks (5 attempts), retry budget 2",50,47,6,3,300,True,8,8,1.051,
+E4_faults,MEASURED,cancelled before submission,50,0,,,5000,,,,,True
