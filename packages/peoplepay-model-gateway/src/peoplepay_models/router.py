@@ -65,7 +65,10 @@ def estimate_tokens(req: InferenceRequest) -> int:
 def build_requirements(req: InferenceRequest, cfg: RoutingConfig, prefs: dict) -> Requirements:
     hist = req.history()
     kinds = {p.kind for m in hist for p in m.parts}
-    r = Requirements(task=req.task, data_class=req.data_class, max_output=req.max_output_tokens or 0)
+    # The whole history is sent with every request, so what is already in the conversation sets a floor under what a
+    # new message may declare. A caller can raise the class, never lower it below the conversation's high-water mark.
+    data_class = req.data_class.at_least(req.conversation.data_class) if req.conversation is not None else req.data_class
+    r = Requirements(task=req.task, data_class=data_class, max_output=req.max_output_tokens or 0)
     r.drop_unsupported = bool(req.metadata.get("allow_drop_unsupported"))
     r.strict_selection = bool(req.metadata.get("strict_selection"))
     r.caps.add(C.TEXT)

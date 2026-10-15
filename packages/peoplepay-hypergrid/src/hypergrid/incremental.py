@@ -14,7 +14,7 @@ import time
 from dataclasses import dataclass, field
 
 from .procurement import DecisionResult, Requirement, compute_decision
-from .vintage import Snapshot, TrackingReader, VintageStore
+from .vintage import Key, Snapshot, TrackingReader, VintageStore
 
 
 @dataclass
@@ -33,8 +33,8 @@ class IncrementalEngine:
     def __init__(self, store: VintageStore, reqs: list[Requirement], draws: int = 1000):
         self.store, self.reqs, self.draws = store, reqs, draws
         self.results: list[DecisionResult | None] = [None] * len(reqs)
-        self.deps: list[dict[int, int] | None] = [None] * len(reqs)   # decision -> {key: fingerprint seen}
-        self.rev: dict[int, list[int]] = {}                           # key -> decisions that read it
+        self.deps: list[dict[Key, int] | None] = [None] * len(reqs)   # decision -> {key: fingerprint seen}
+        self.rev: dict[Key, list[int]] = {}                           # key -> decisions that read it
         self.t: float | None = None
 
     # -- build
@@ -42,7 +42,7 @@ class IncrementalEngine:
         rd = TrackingReader(snap)
         return compute_decision(self.reqs[i], rd, self.draws), rd.seen
 
-    def install(self, i: int, result: DecisionResult, seen: dict[int, int]) -> None:
+    def install(self, i: int, result: DecisionResult, seen: dict[Key, int]) -> None:
         """Record a result (also used by the parallel grid, which computes in worker processes)."""
         old = self.deps[i]
         if old is not None:
@@ -61,7 +61,7 @@ class IncrementalEngine:
         return time.perf_counter() - t0
 
     # -- incremental
-    def stale_candidates(self, revised: list[tuple[str, int]], t_new: float) -> tuple[set[int], list[int]]:
+    def stale_candidates(self, revised: list[tuple[str, int]], t_new: float) -> tuple[set[Key], list[int]]:
         """(revised keys, decisions whose observed dependencies really changed). A republished identical
         value changes no fingerprint and therefore invalidates nothing."""
         keys = {self.store.key(s, p) for s, p in revised}

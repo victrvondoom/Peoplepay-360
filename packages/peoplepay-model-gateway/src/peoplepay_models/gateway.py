@@ -7,6 +7,10 @@ never authorize a payment, order, submission or operational change.
 """
 from __future__ import annotations
 
+import ipaddress
+import json
+import logging
+import re
 import threading
 import time
 from dataclasses import replace
@@ -14,6 +18,7 @@ from typing import Any, Iterator
 
 from . import usage as usage_mod
 from .adapters.base import AdapterResult, CallSpec, DecisionProvider, ProviderAdapter, ProviderManifest
+from .adapters.openai_compat import HEADERS_SECRET
 from .canonical import (Capability as C, Conversation, DataClass, DecisionAnswer, DecisionQuestion, Evidence,
                         FallbackMode, FilePart, Health, ImagePart, InferenceRequest, InferenceResponse, Message,
                         ModelSelection, Attempt, Privacy, ProviderConnection, ProviderModelRoute, ProviderType,
@@ -22,16 +27,26 @@ from .canonical import (Capability as C, Conversation, DataClass, DecisionAnswer
 from .errors import ErrorCode, GatewayError, redact
 from .health import HealthManager
 from .netguard import NetPolicy, validate_url
-from .policy import OrgPolicy, PRESETS, RoutingConfig, TIMEOUTS, config_with
+from .policy import OrgPolicy, PRESETS, RoutingConfig, TIMEOUTS, config_with, sanitize_prefs, validate_prefs
 from .registry import ModelRegistry, ProviderRegistry, default_registry
 from .router import Requirements, RoutePlan, build_requirements, estimate_tokens, plan_routes, tier_of
 from .schema import parse_and_validate
 from .store import ModelStore
 from .transport import HttpTransport, Transport
-from .vault import MemoryVault, Vault
+from .vault import MemoryVault, Vault, VaultError
+
+log = logging.getLogger(__name__)
 
 SYSTEM_OWNER = "system"
 _SENSITIVE = (DataClass.SENSITIVE, DataClass.RESTRICTED)
+
+#: Output tokens assumed when a request sets no ``max_output_tokens``, for the worst-case cost of a call under a daily cap.
+DEFAULT_OUTPUT_RESERVE = 1024
+
+#: Providers whose manifests are test doubles. Only they may set a route label or scripted behaviour from user input.
+_MOCK_ONLY_FIELDS = ("script", "models", "offline", "local", "call_tool", "tool_args", "bad_tool_call",
+                     "structured_reply", "retry_after", "route_label")
+_HEADER_NAME = re.compile(r"^[A-Za-z0-9!#$%&'*+.^_`|~-]{1,64}$")
 
 
 class CancelToken:
@@ -48,6 +63,65 @@ class CancelToken:
 
 def _label(r: ProviderModelRoute) -> str:
     return f"{r.display_name or r.provider_model_id} ({r.route})"
+
+
+def _normalize_headers(value: Any, *, strict: bool = True) -> dict[str, str]:
+    """Custom request headers as a clean ``{name: value}``. Strict input raises (never echoing a value); lenient input,
+    used for rows saved by older versions, drops what it cannot use."""
+    if value in (None, "", {}):
+        return {}
+    if not isinstance(value, dict) or (strict and len(value) > 10):
+        raise GatewayError(ErrorCode.INVALID_REQUEST, "headers must be an object with at most 10 entries")
+    out: dict[str, str] = {}
+    for name, val in value.items():
+        ok = (isinstance(name, str) and _HEADER_NAME.match(name) and isinstance(val, (str, int, float))
+              and not isinstance(val, bool) and len(str(val)) <= 1024 and not any(c in str(val) for c in "\r\n\0"))
+        if not ok:
+            if strict:
+                raise GatewayError(ErrorCode.INVALID_REQUEST, f"header {str(name)[:40]!r} has an invalid name or value")
+            continue
+        if len(out) < 10:
+            out[name] = str(val)
+    return out
+
+
+class _Spend:
+    """Spend reserved by in-flight requests, so concurrent requests cannot all pass the same daily-cap check."""
+
+    def __init__(self) -> None:
+        self._lock = threading.Lock()
+        self._held: dict[str, float] = {}
+
+    def try_reserve(self, owner: str, spent: float, cap: float, amount: float) -> bool:
+        with self._lock:
+            held = self._held.get(owner, 0.0)
+            if spent + held + amount > cap:
+                return False
+            self._held[owner] = held + amount
+            return True
+
+    def release(self, owner: str, amount: float) -> None:
+        with self._lock:
+            left = self._held.get(owner, 0.0) - amount
+            if left <= 1e-12:
+                self._held.pop(owner, None)
+            else:
+                self._held[owner] = left
+
+
+class _Hold:
+    """One request's reservation. ``release`` is idempotent, so every exit path can call it."""
+
+    def __init__(self, spend: _Spend, owner: str) -> None:
+        self.spend, self.owner, self.amount = spend, owner, 0.0
+
+    def take(self, amount: float) -> None:
+        self.amount += amount
+
+    def release(self) -> None:
+        if self.amount:
+            self.spend.release(self.owner, self.amount)
+            self.amount = 0.0
 
 
 class ModelGateway:
@@ -71,6 +145,11 @@ class ModelGateway:
         self.disabled_models: set[str] = set()
         self.vault_persistent = not isinstance(self.vault, MemoryVault)
         self._lock = threading.Lock()
+        self._spend = _Spend()
+        try:
+            self.migrate_legacy_secrets()
+        except Exception:                                  # noqa: BLE001 - a migration problem must not stop the gateway
+            log.warning("legacy credential migration failed; stored values stay redacted in every response", exc_info=True)
 
     # ------------------------------------------------------------------ helpers
     def _inc(self, name: str, n: int = 1) -> None:
@@ -122,16 +201,25 @@ class ModelGateway:
                 "note": "Credentials are encrypted at rest." if self.vault_persistent else
                         "Credentials are held in memory only and will be lost on restart. Set PEOPLEPAY_MODELS_VAULT_KEY to persist them encrypted."}
 
-    def _split_fields(self, m: ProviderManifest, values: dict[str, Any]) -> tuple[dict[str, Any], dict[str, str]]:
+    def _split_fields(self, m: ProviderManifest, values: dict[str, Any], *, partial: bool = False) -> tuple[dict[str, Any], dict[str, str]]:
+        """Sort submitted values into non-secret configuration and secrets. ``partial`` is an update: required fields
+        and defaults are not enforced, but the same allow-list applies, so an update cannot set what a create cannot."""
+        if values is not None and not isinstance(values, dict):
+            raise GatewayError(ErrorCode.INVALID_REQUEST, "values must be a JSON object")
         config: dict[str, Any] = {}
         secrets: dict[str, str] = {}
         known = {f.name: f for f in m.fields}
         for name, val in (values or {}).items():
-            if name in ("headers", "capability_overrides", "manual_models", "models_endpoint", "paths", "script", "models",
-                        "offline", "local", "call_tool", "tool_args", "bad_tool_call", "structured_reply", "retry_after",
-                        "max_tokens_param", "stream_usage", "route_label"):
-                if name in ("script", "models", "offline", "local", "call_tool", "tool_args", "bad_tool_call", "structured_reply", "retry_after") and m.id != "mock":
-                    continue
+            if name == "headers":
+                headers = _normalize_headers(val)
+                if headers or partial:
+                    secrets[HEADERS_SECRET] = json.dumps(headers)      # values are credentials: vault, not configuration
+                    config["header_names"] = sorted(headers)           # names are not secret; lets the UI show what is set
+                continue
+            if name in ("capability_overrides", "manual_models", "models_endpoint", "paths", "max_tokens_param", "stream_usage",
+                        *_MOCK_ONLY_FIELDS):
+                if name in _MOCK_ONLY_FIELDS and m.id != "mock":
+                    continue                  # a user cannot script a provider or relabel the route it is served through
                 config[name] = val
                 continue
             f = known.get(name)
@@ -142,22 +230,73 @@ class ModelGateway:
                     secrets[name] = str(val)
             elif val not in (None, ""):
                 config[name] = val
-        for f in m.fields:
-            if f.required and not f.secret and f.name not in config and f.default is None and m.id != "mock":
-                raise GatewayError(ErrorCode.INVALID_REQUEST, f"{f.label} is required")
-            if f.required and f.secret and f.name not in secrets:
-                raise GatewayError(ErrorCode.INVALID_REQUEST, f"{f.label} is required")
-            if f.default is not None and f.name not in config and not f.secret:
-                config[f.name] = f.default
+        if not partial:
+            for f in m.fields:
+                if f.required and not f.secret and f.name not in config and f.default is None and m.id != "mock":
+                    raise GatewayError(ErrorCode.INVALID_REQUEST, f"{f.label} is required")
+                if f.required and f.secret and f.name not in secrets:
+                    raise GatewayError(ErrorCode.INVALID_REQUEST, f"{f.label} is required")
+                if f.default is not None and f.name not in config and not f.secret:
+                    config[f.name] = f.default
         if config.get("privacy") not in (None, "local", "organization", "cloud"):
             raise GatewayError(ErrorCode.INVALID_REQUEST, "invalid data boundary")
         return config, secrets
 
-    def _check_url(self, m: ProviderManifest, config: dict[str, Any]) -> None:
+    def _check_url(self, m: ProviderManifest, config: dict[str, Any]) -> tuple[str, int, str] | None:
         url = config.get("base_url")
         if not url:
+            return None
+        return validate_url(url, self.net)    # raises CUSTOM_ENDPOINT_BLOCKED; re-checked, IP-pinned, on every request
+
+    def _bound_privacy(self, config: dict[str, Any], validated: tuple[str, int, str] | None) -> None:
+        """A user may declare an endpoint's data boundary, but only to be MORE cautious than its address allows.
+
+        Where the bytes actually go is decided by the address, not by the label: a public host is "cloud" however it was
+        labelled, unless an administrator allow-listed it (then "organization" at best); a private-network host is at
+        most "organization"; only a loopback host can be "local". Without this, anyone could mark an arbitrary public
+        endpoint "organization" or "local" and have SENSITIVE data routed to it.
+        """
+        declared = config.get("privacy")
+        if not declared or validated is None:
             return
-        validate_url(url, self.net)    # raises CUSTOM_ENDPOINT_BLOCKED; re-checked, IP-pinned, on every request
+        host, _, ip = validated
+        addr = ipaddress.ip_address(ip)
+        if addr.is_loopback and self.net.mode != "cloud":
+            ceiling = Privacy.LOCAL
+        elif (addr.is_private or addr.is_link_local or addr.is_loopback
+              or (addr.version == 4 and addr in ipaddress.ip_network("100.64.0.0/10"))) or host in self.net.allowlist:
+            ceiling = Privacy.ORGANIZATION
+        else:
+            ceiling = Privacy.CLOUD
+        if Privacy(declared).rank < ceiling.rank:
+            config["privacy"] = ceiling.value
+
+    def migrate_legacy_secrets(self) -> int:
+        """Move custom-header values that older versions stored in plaintext connection configuration into the vault.
+
+        Idempotent. Skipped while the vault is in-memory: moving a value into a store that forgets on restart would
+        destroy it. Rows it cannot move stay untouched (and are redacted in every response regardless).
+        """
+        if not self.vault_persistent:
+            return 0
+        moved = 0
+        for c in self.store.list_connections():
+            legacy = c.configuration.get("headers")
+            if c.system or not isinstance(legacy, dict) or not legacy:
+                continue
+            try:
+                headers = _normalize_headers(legacy, strict=False)
+                old = self.vault.reveal(c.owner_scope, c.credential_ref) if c.credential_ref else {}
+                new_ref = self.vault.put(c.owner_scope, {**old, HEADERS_SECRET: json.dumps(headers)})
+            except (GatewayError, VaultError):
+                continue
+            old_ref, c.credential_ref = c.credential_ref, new_ref
+            c.configuration = {**{k: v for k, v in c.configuration.items() if k != "headers"}, "header_names": sorted(headers)}
+            self.store.save_connection(c)                      # the new reference is durable before the old one goes
+            if old_ref:
+                self.vault.delete(c.owner_scope, old_ref)
+            moved += 1
+        return moved
 
     def connect(self, owner: str, provider_type: str, display_name: str, values: dict[str, Any], *,
                 alias: str | None = None, test: bool = True) -> dict:
@@ -167,7 +306,7 @@ class ModelGateway:
         config, secrets = self._split_fields(m, values)
         if self.net.mode == "cloud" and config.get("privacy") == "local" and provider_type != "ollama":
             config["privacy"] = "organization"
-        self._check_url(m, config)
+        self._bound_privacy(config, self._check_url(m, config))
         owner_scope = self.scope_of(owner)
         ref = self.vault.put(owner_scope, secrets) if secrets else None
         conn = ProviderConnection(id=new_id("conn"), provider_type=provider_type,
@@ -192,17 +331,25 @@ class ModelGateway:
                 self.health_mgr.set_probe(cid, Health.UNKNOWN, None)
         if values:
             m = self.providers.manifest(c.provider_type)
-            merged = {**c.configuration, **values}
-            sec_names = {f.name for f in m.fields if f.secret}
-            new_secrets = {k: v for k, v in values.items() if k in sec_names and v}
-            config = {k: v for k, v in merged.items() if k not in sec_names}
-            self._check_url(m, config)
-            c.configuration = config
+            # Same allow-list as connect(): an update must not be a way to set what a create would drop.
+            cfg_patch, new_secrets = self._split_fields(m, values, partial=True)
+            config = {k: v for k, v in {**c.configuration, **cfg_patch}.items() if k != "headers"}
+            legacy = c.configuration.get("headers")
+            if HEADERS_SECRET not in new_secrets and isinstance(legacy, dict) and legacy:
+                new_secrets[HEADERS_SECRET] = json.dumps(_normalize_headers(legacy, strict=False))   # carry them into the vault
+            if self.net.mode == "cloud" and config.get("privacy") == "local" and c.provider_type != "ollama":
+                config["privacy"] = "organization"
+            self._bound_privacy(config, self._check_url(m, config))
             if new_secrets:
                 old = self.vault.reveal(c.owner_scope, c.credential_ref) if c.credential_ref else {}
-                if c.credential_ref:
-                    self.vault.delete(c.owner_scope, c.credential_ref)
-                c.credential_ref = self.vault.put(c.owner_scope, {**old, **new_secrets})
+                new_ref = self.vault.put(c.owner_scope, {**old, **new_secrets})     # the new secret exists before the old goes
+                old_ref, c.credential_ref = c.credential_ref, new_ref
+                c.configuration = config
+                self.store.save_connection(c)
+                if old_ref:
+                    self.vault.delete(c.owner_scope, old_ref)
+            else:
+                c.configuration = config
             c.validation_status = "not_validated"
         self.store.save_connection(c)
         return c.public()
@@ -350,21 +497,17 @@ class ModelGateway:
 
     # ------------------------------------------------------------------ preferences
     def get_prefs(self, owner: str) -> dict:
-        return self.store.get_prefs(owner)
+        return self._prefs(owner)
+
+    def _prefs(self, owner: str) -> dict[str, Any]:
+        """Stored preferences, read tolerantly. Every request reads them, so a bad value must never reach a request:
+        whatever fails validation (an older version stored it, or the database was edited) is dropped here."""
+        return sanitize_prefs(self.store.get_prefs(owner))
 
     def set_prefs(self, owner: str, patch: dict[str, Any]) -> dict:
-        allowed = {"routing_policy", "fallback_mode", "local_only", "default_model", "favorites", "recent", "aliases",
-                   "model_tiers", "preferred_routes", "allow_cloud_for_sensitive", "allow_auto_fallback_sensitive",
-                   "allow_unknown_price_fallback", "context_strategy", "max_attempts", "daily_cost_limit", "internal_models",
-                   "preset", "capability_models"}
-        prefs = self.store.get_prefs(owner)
-        for k, v in patch.items():
-            if k in allowed:
-                prefs[k] = v
-        if "routing_policy" in patch and patch["routing_policy"] not in [p.value for p in RoutingPolicy]:
-            raise GatewayError(ErrorCode.INVALID_REQUEST, "unknown routing policy")
-        if "fallback_mode" in patch and patch["fallback_mode"] not in [p.value for p in FallbackMode]:
-            raise GatewayError(ErrorCode.INVALID_REQUEST, "unknown fallback mode")
+        cleaned = validate_prefs(patch)          # raises INVALID_REQUEST naming the key; nothing is saved on failure
+        prefs = self._prefs(owner)
+        prefs.update(cleaned)
         self.store.save_prefs(owner, prefs)
         return prefs
 
@@ -377,7 +520,7 @@ class ModelGateway:
 
     def export_prefs(self, owner: str) -> dict:
         """Non-secret preferences only. Connections and credentials are never exported."""
-        return {"version": 1, "preferences": self.store.get_prefs(owner)}
+        return {"version": 1, "preferences": self._prefs(owner)}
 
     def import_prefs(self, owner: str, blob: dict) -> dict:
         if not isinstance(blob, dict) or not isinstance(blob.get("preferences"), dict):
@@ -393,7 +536,7 @@ class ModelGateway:
 
     def list_models(self, owner: str, *, q: str | None = None, caps: list[str] | None = None, provider: str | None = None,
                     local: bool | None = None, kind: str | None = None, include_unavailable: bool = False) -> dict:
-        prefs = self.store.get_prefs(owner)
+        prefs = self._prefs(owner)
         favs = set(prefs.get("favorites") or [])
         conns = {c.id: c for c in self.connections(owner)}
         rows = []
@@ -431,7 +574,7 @@ class ModelGateway:
 
     # ------------------------------------------------------------------ planning
     def plan(self, owner: str, req: InferenceRequest, exclude: set[str] | None = None, *, _prefs: dict | None = None) -> tuple[RoutePlan, Requirements, RoutingConfig]:
-        prefs = _prefs if _prefs is not None else self.store.get_prefs(owner)
+        prefs = _prefs if _prefs is not None else self._prefs(owner)
         cfg = config_with(prefs, self.config)
         self._apply_default(req, prefs)
         reqs = build_requirements(req, cfg, prefs)
@@ -582,9 +725,42 @@ class ModelGateway:
                                 extra={**details, **({"needs_consent": "drop_images"} if C.VISION in reqs.caps else {})})
         return GatewayError(ErrorCode.NO_ROUTE, "No connected model is available. Connect a provider or configure a local model.", extra=details)
 
+    def _within_budget(self, owner: str, r: ProviderModelRoute, reqs: Requirements, req: InferenceRequest,
+                       cfg: RoutingConfig, hold: _Hold) -> tuple[bool, str | None]:
+        """Enforce the daily cost limit BEFORE a paid call, using the route's known price and a worst-case estimate.
+
+        Free routes (on-device, or a loopback endpoint) never count. A paid route whose price is unknown is refused while a
+        limit is set, because spend that cannot be measured cannot be capped. The estimate is reserved while the call is in
+        flight, so concurrent requests cannot all pass the same check.
+        """
+        cap = cfg.daily_cost_limit
+        if cap is None or r.local or r.privacy == Privacy.LOCAL:
+            return True, None
+        p = r.pricing or {}
+        try:
+            price_in, price_out = float(p["input_per_mtok"]), float(p["output_per_mtok"])
+        except (KeyError, TypeError, ValueError):
+            return False, "a daily cost limit is set and this route has no reliable price, so it cannot be enforced"
+        out_tokens = req.max_output_tokens or DEFAULT_OUTPUT_RESERVE
+        worst = (reqs.est_tokens * price_in + out_tokens * price_out) / 1e6
+        spent = self.store.spent_since(owner, now() - 86400)
+        if not self._spend.try_reserve(owner, spent, cap, worst):
+            return False, f"daily cost limit reached ({spent:.4f} spent of {cap:.4f}; this request may cost up to {worst:.4f})"
+        hold.take(worst)
+        return True, None
+
     def _run(self, owner: str, req: InferenceRequest, cancel: CancelToken | None, streaming: bool) -> Iterator[tuple[str, Any]]:
+        hold = _Hold(self._spend, owner)
+        try:
+            yield from self._run_inner(owner, req, cancel, streaming, hold)
+        finally:
+            hold.release()                       # whatever way the generator ends: done, raised, cancelled or abandoned
+
+    def _run_inner(self, owner: str, req: InferenceRequest, cancel: CancelToken | None, streaming: bool,
+                   hold: _Hold) -> Iterator[tuple[str, Any]]:
         cancel = cancel or CancelToken()
         plan, reqs, cfg = self.plan(owner, req)
+        budget_reason: str | None = None
         if not plan.ordered:
             self._inc("no_route")
             raise self._no_route_error(owner, plan, reqs, req)
@@ -616,6 +792,12 @@ class ModelGateway:
             blocked, why = self.health_mgr.blocked(r.connection_id, r.key)
             if blocked:
                 attempts.append(Attempt(r.key, r.provider_id, r.provider_model_id, "skipped", reason=why))
+                continue
+            hold.release()                       # the previous attempt, if any, is over
+            within, why = self._within_budget(owner, r, reqs, req, cfg, hold)
+            if not within:
+                attempts.append(Attempt(r.key, r.provider_id, r.provider_model_id, "skipped", reason=why))
+                budget_reason = budget_reason or why
                 continue
             visited.add(r.key)
             primary = primary or r
@@ -673,13 +855,10 @@ class ModelGateway:
                             elif ev.type == "response.completed":
                                 done_ev = ev.data
                     except GatewayError as e:
-                        e.extra["partial_output"] = emitted     # mid-stream failures cannot be transparently retried
-                        if emitted:
-                            self._record(owner, req, r, inv_id, parent_inv, "error", started, t0, Usage(), e.code.value)
-                            self.health_mgr.record_failure(r.connection_id, r.key, e)
-                            attempts.append(Attempt(r.key, r.provider_id, r.provider_model_id, "error", e.code.value, (time.perf_counter() - t0) * 1000))
-                            e.extra["attempts"] = [a.__dict__ for a in attempts]
-                            raise
+                        # Mid-stream failures cannot be transparently retried. The failure itself is recorded exactly once,
+                        # by the handler below: recording it here as well counted one failure twice (two attempts, and a
+                        # connection marked degraded after a single request).
+                        e.extra["partial_output"] = emitted
                         raise
                     text_all = "".join(parts_text)
                     out_parts: list[Any] = ([TextPart(text_all)] if text_all else []) + tool_parts
@@ -726,6 +905,7 @@ class ModelGateway:
             usage.estimated_cost = usage.estimated_cost if usage.estimated_cost is not None else self._cost(r, usage)
             self.health_mgr.record_success(r.connection_id, r.key, lat)
             self._record(owner, req, r, inv_id, parent_inv, "ok", started, t0, usage, None)
+            hold.release()                       # the real cost is now in the usage rows; stop double-counting the estimate
             attempts.append(Attempt(r.key, r.provider_id, r.provider_model_id, "ok", None, lat))
             self._inc(f"requests.{r.provider_id}")
             if r.local:
@@ -747,7 +927,12 @@ class ModelGateway:
             return
         if last_err is not None:
             last_err.extra["attempts"] = [a.__dict__ for a in attempts]
+            if budget_reason:
+                last_err.extra["fallback_blocked_by_budget"] = budget_reason
             raise last_err
+        if budget_reason:
+            raise GatewayError(ErrorCode.QUOTA_EXHAUSTED, budget_reason,
+                               extra={"attempts": [a.__dict__ for a in attempts], "daily_cost_limit": cfg.daily_cost_limit})
         err = GatewayError(ErrorCode.NO_ROUTE, "every candidate route was unavailable", extra={"attempts": [a.__dict__ for a in attempts]})
         raise err
 
@@ -772,7 +957,7 @@ class ModelGateway:
     def _remember_recent(self, owner: str, req: InferenceRequest, r: ProviderModelRoute) -> None:
         if req.selection.one_shot:
             return
-        prefs = self.store.get_prefs(owner)
+        prefs = self._prefs(owner)
         rec = [k for k in (prefs.get("recent") or []) if k != r.key]
         prefs["recent"] = ([r.key] + rec)[:8]
         self.store.save_prefs(owner, prefs)
@@ -802,7 +987,7 @@ class ModelGateway:
             yield StreamEvent("error", e.to_dict())
 
     def _enforce_cost_limit_note(self, owner: str, resp: InferenceResponse) -> None:
-        limit = self.store.get_prefs(owner).get("daily_cost_limit")
+        limit = self._prefs(owner).get("daily_cost_limit")
         if isinstance(limit, (int, float)):
             spent = sum(r["est_cost"] or 0 for r in self.store.usage_rows(owner, now() - 86400))
             if spent >= limit:
@@ -845,11 +1030,12 @@ class ModelGateway:
              selection: ModelSelection | None = None, **kw) -> dict:
         conv = self.get_conversation(owner, conversation_id) if conversation_id else Conversation(owner=owner, title=text[:60])
         user_msg = Message("user", [TextPart(text), *(attachments or [])])
-        req = InferenceRequest(conversation=Conversation(conv.id, owner, conv.title, conv.messages + [user_msg]),
+        req = InferenceRequest(conversation=Conversation(conv.id, owner, conv.title, conv.messages + [user_msg], data_class=conv.data_class),
                                selection=selection or ModelSelection(), **kw)
         resp = self.infer(owner, req)
         conv.add(user_msg)
         conv.add(resp.to_message())
+        conv.data_class = req.data_class.at_least(conv.data_class)     # the high-water mark only ever rises
         self.store.save_conversation(conv)
         return {"conversation_id": conv.id, "message": conv.messages[-1].to_dict(), "response": resp.to_dict()}
 
@@ -860,7 +1046,7 @@ class ModelGateway:
         except GatewayError as e:
             yield StreamEvent("error", e.to_dict()); return
         user_msg = Message("user", [TextPart(text), *(attachments or [])])
-        req = InferenceRequest(conversation=Conversation(conv.id, owner, conv.title, conv.messages + [user_msg]),
+        req = InferenceRequest(conversation=Conversation(conv.id, owner, conv.title, conv.messages + [user_msg], data_class=conv.data_class),
                                selection=selection or ModelSelection(), stream=True, **kw)
         for ev in self.stream(owner, req, cancel):
             if ev.type == "response.completed":
@@ -872,6 +1058,7 @@ class ModelGateway:
                     if p.get("kind") == "tool_call":
                         msg.parts.append(ToolCallPart(p["call_id"], p["name"], p["arguments"]))
                 conv.add(user_msg); conv.add(msg)
+                conv.data_class = req.data_class.at_least(conv.data_class)
                 self.store.save_conversation(conv)
                 ev.data["conversation_id"] = conv.id
                 ev.data["message"] = msg.to_dict()
@@ -894,7 +1081,7 @@ class ModelGateway:
     def decide(self, owner: str, state: dict, questions: list[DecisionQuestion], *, local_only: bool = False,
                model: str | None = None) -> dict:
         """Typed fast decision. Decision providers never produce prose and never authorize actions."""
-        prefs = self.store.get_prefs(owner)
+        prefs = self._prefs(owner)
         local_only = local_only or bool(prefs.get("local_only"))
         kinds = {q.kind for q in questions}
         cands = self._decision_routes(owner, next(iter(kinds)) if len(kinds) == 1 else "SCORE")
@@ -925,7 +1112,7 @@ class ModelGateway:
     def decide_or_escalate(self, owner: str, questions: list[DecisionQuestion], state: dict, escalation: InferenceRequest,
                            *, threshold: float | None = None) -> dict:
         """Fast typed path when confident; otherwise a generative/reasoning route. Records which path ran."""
-        cfg = config_with(self.store.get_prefs(owner), self.config)
+        cfg = config_with(self._prefs(owner), self.config)
         threshold = cfg.decision_confidence_threshold if threshold is None else threshold
         try:
             dec = self.decide(owner, state, questions, local_only=escalation.selection.mode == "local")

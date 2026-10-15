@@ -1,0 +1,61 @@
+name: hypergrid
+
+# HYPERGRID had no GitHub job, so a Windows-only failure (the worker grid required the `fork` start method) went
+# unnoticed. Windows is in the matrix on purpose: it exercises the `spawn` path that Linux never takes.
+
+on:
+  push:
+    paths:
+      - "packages/peoplepay-hypergrid/**"
+      - "packages/peoplepay-model-gateway/**"
+      - "scripts/hypergrid_*.py"
+      - ".github/workflows/hypergrid.yml"
+  pull_request:
+    paths:
+      - "packages/peoplepay-hypergrid/**"
+      - "packages/peoplepay-model-gateway/**"
+      - "scripts/hypergrid_*.py"
+      - ".github/workflows/hypergrid.yml"
+
+jobs:
+  tests-and-gate:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.11", "3.13"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: pip install -e packages/peoplepay-model-gateway "packages/peoplepay-hypergrid[test]"
+      - run: python -m pytest packages/peoplepay-hypergrid/tests -q
+      # Correctness gate only: incremental == full recompute, fault safety, privacy and verification invariants.
+      # Speed and cost numbers are deliberately not gated (machine- and assumption-dependent).
+      - run: python -m hypergrid.bench --quick --out results-quick
+      - run: python scripts/hypergrid_gate.py results-quick/results.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: hypergrid-results-${{ matrix.os }}-py${{ matrix.python }}
+          path: results-quick/
+          retention-days: 30
+
+  wheel-ships-its-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - run: pip wheel --no-deps packages/peoplepay-hypergrid -w dist
+      - name: the built wheel must contain the World Bank snapshot
+        run: |
+          python - <<'EOF'
+          import glob, sys, zipfile
+          wheel = glob.glob("dist/peoplepay_hypergrid-*.whl")[0]
+          names = zipfile.ZipFile(wheel).namelist()
+          sys.exit(0 if any(n.endswith("hypergrid/data/worldbank_snapshot.json") for n in names) else "snapshot missing from wheel")
+          EOF

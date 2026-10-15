@@ -17,7 +17,9 @@ import numpy as np
 from .procurement import Requirement, Supplier
 from .vintage import Observation, VintageStore
 
-FIXTURE = Path(__file__).resolve().parents[2] / "fixtures" / "worldbank_snapshot.json"
+#: Shipped inside the package (``package-data``), so it is found after a normal ``pip install`` and not only from a
+#: source checkout. (It used to be located relative to the repository layout, which an installed copy does not have.)
+FIXTURE = Path(__file__).resolve().parent / "data" / "worldbank_snapshot.json"
 FIRST_PERIOD, LAST_PERIOD = 2014, 2024        # window of 10 + current
 REAL_SERIES = ("WB.IND.CPI", "WB.USA.CPI", "WB.IND.FX")
 T0 = 2025.0                                   # initial knowledge time for all first vintages

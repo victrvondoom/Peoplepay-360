@@ -62,6 +62,7 @@ from adapters.resolution import ResolutionAdapter
 from adapters.spatial import SpatialAdapter
 from gateway.auth import SECRET_ENV, auth_mode, verify_caller
 from gateway.commerce import save_cart, sandbox_checkout, update_delivery, create_dispute
+from gateway.payment_routes import PaymentRoutes
 from transaction.eventbus import EventBus
 from transaction.store import InMemoryTransactionStore, TransactionNotFound, TransactionStore
 from transaction.sqlite_store import SqliteTransactionStore
@@ -662,6 +663,12 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
             if parts[:3] == ["api", "v1", "journeys"]:
                 self._journey_route(user, parts[3:], None)
                 return
+            if parts[:3] == ["api", "v1", "payments"]:
+                self._payment_route("GET", parts[2:], {}, user)
+                return
+            if parts[:3] == ["api", "v1", "checkout"] and len(parts) >= 4 and parts[3] == "sessions":
+                self._payment_route("GET", ["checkout", "sessions"], {}, user)
+                return
             if parts == ["transactions"]:
                 self._send(
                     200,
@@ -755,6 +762,15 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 with state.workflow_lock:
                     self._run_capability(user, parts[1], parts[3], body)
                 return
+            if parts[:3] == ["api", "v1", "payments"]:
+                self._payment_route("POST", parts[2:], body, user)
+                return
+            if parts[:3] == ["api", "v1", "payments"] and len(parts) >= 4 and parts[3] == "checkout":
+                self._payment_route("POST", ["payments", "checkout"], body, user)
+                return
+            if parts[:2] == ["api", "v1"] and parts[1] == "webhooks":
+                self._payment_route("POST", ["webhooks"], body, user)
+                return
             self._fail(404, f"no route for POST {path}")
 
         # --- handlers --------------------------------------------------
@@ -779,6 +795,15 @@ def make_handler(state: GatewayState) -> type[BaseHTTPRequestHandler]:
                 self._stream_events(out)
                 return
             self._send(status, out)
+
+        def _payment_route(self, method, parts, body, user):
+            """Payment API route handler."""
+            try:
+                payment_routes = PaymentRoutes(self)
+                status, result = payment_routes.handle_payment_request(method, parts, body, user)
+                self._send(status, result)
+            except Exception as e:
+                self._fail(500, f"Payment route error: {str(e)}")
 
         def _stream_events(self, stream):
             """Server-sent events of canonical stream events. A dropped client cancels the provider stream."""

@@ -83,6 +83,14 @@ class DataClass(str, Enum):
     SENSITIVE = "SENSITIVE"
     RESTRICTED = "RESTRICTED"
 
+    @property
+    def rank(self) -> int:
+        return {"PUBLIC": 0, "INTERNAL": 1, "SENSITIVE": 2, "RESTRICTED": 3}[self.value]
+
+    def at_least(self, other: "DataClass") -> "DataClass":
+        """The more restrictive of two classifications. Classification only ever ratchets up."""
+        return self if self.rank >= other.rank else other
+
 
 class Reasoning(str, Enum):
     FAST = "FAST"
@@ -226,6 +234,9 @@ class Conversation:
     title: str = ""
     messages: list[Message] = field(default_factory=list)
     created_at: float = field(default_factory=now)
+    #: High-water mark of everything ever said in this conversation. The whole history travels with every request,
+    #: so a later message cannot declare a lower class than what is already in it.
+    data_class: DataClass = DataClass.INTERNAL
 
     def add(self, message: Message) -> Message:
         self.messages.append(message)
@@ -239,13 +250,18 @@ class Conversation:
 
     def to_dict(self) -> dict:
         return {"id": self.id, "owner": self.owner, "title": self.title,
-                "created_at": self.created_at, "messages": [m.to_dict() for m in self.messages]}
+                "created_at": self.created_at, "messages": [m.to_dict() for m in self.messages],
+                "data_class": self.data_class.value}
 
     @classmethod
     def from_dict(cls, d: dict) -> "Conversation":
+        try:
+            data_class = DataClass(d.get("data_class") or "INTERNAL")      # rows saved before the watermark existed
+        except ValueError:
+            data_class = DataClass.INTERNAL
         return cls(id=d["id"], owner=d.get("owner", ""), title=d.get("title", ""),
                    created_at=d.get("created_at", now()),
-                   messages=[Message.from_dict(m) for m in d.get("messages", [])])
+                   messages=[Message.from_dict(m) for m in d.get("messages", [])], data_class=data_class)
 
 
 @dataclass
@@ -348,6 +364,15 @@ class ProviderConnection:
         d = asdict(self)
         d["has_credential"] = bool(self.credential_ref)
         d.pop("credential_ref", None)
+        # Custom header values are credentials (people put API keys in them). They live in the vault; rows written
+        # before that change may still hold them in plaintext, so they are never echoed from here either.
+        cfg = d["configuration"] = dict(d["configuration"])
+        legacy = cfg.pop("headers", None)
+        names = set(cfg.pop("header_names", None) or [])
+        if isinstance(legacy, dict):
+            names |= {str(k) for k in legacy}
+        if names:
+            cfg["header_names"] = sorted(names)
         return d
 
 

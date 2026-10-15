@@ -10,10 +10,22 @@ macroeconomics (e.g. ALFRED); the only thing added here is making it a first-cla
 from __future__ import annotations
 
 import bisect
+import hashlib
+import struct
 from dataclasses import dataclass
 from typing import Iterable
 
+from .validation import InvalidInput, finite
+
 ORIGINS = ("SYNTHETIC", "HISTORICAL", "DELAYED", "LIVE")
+
+#: Largest period index a key may carry. Periods are small integers (years, months, ticks).
+PERIOD_LIMIT = 1 << 20
+
+#: A dependency key: (series name, period). Both parts are stable values, so a key means the same thing in
+#: every process, on every machine, and in every run. (It was once an index into a per-process intern
+#: table, which meant the same integer named different series in a worker and in its parent.)
+Key = tuple[str, int]
 
 
 @dataclass(frozen=True)
@@ -28,38 +40,49 @@ class Observation:
     origin: str = "SYNTHETIC"       # never present synthetic data as real
     ingested_at: float = 0.0
 
+    def __post_init__(self) -> None:
+        if not isinstance(self.series, str) or not self.series:
+            raise InvalidInput("series must be a non-empty string")
+        if isinstance(self.period, bool) or not isinstance(self.period, int) or not 0 <= self.period < PERIOD_LIMIT:
+            raise InvalidInput(f"period must be an integer in [0, {PERIOD_LIMIT}), got {self.period!r}")
+        finite(f"{self.series}[{self.period}].value", self.value)
+        finite(f"{self.series}[{self.period}].known_at", self.known_at)
+        if not isinstance(self.quality, str):
+            raise InvalidInput("quality must be a string")
+
     def fingerprint(self) -> int:
         """What downstream results depend on: the value and its quality, not when it was learned.
-        A republished identical value therefore invalidates nothing."""
-        return hash((self.value, self.quality))
+        A republished identical value therefore invalidates nothing.
+
+        A digest of the exact IEEE-754 bytes plus the quality label, so it is identical in every process
+        and on every platform. (The built-in ``hash`` is salted per process, can collide, and hashes a
+        NaN by object identity.) ``0`` is reserved to mean "absent", and a digest is never ``0``."""
+        fp = self.__dict__.get("_fp")
+        if fp is None:
+            digest = hashlib.blake2b(struct.pack(">d", self.value + 0.0) + self.quality.encode("utf-8"), digest_size=8)
+            fp = int.from_bytes(digest.digest(), "big") or 1
+            object.__setattr__(self, "_fp", fp)
+        return fp
 
 
 class VintageStore:
     def __init__(self) -> None:
-        self._data: dict[tuple[str, int], list[Observation]] = {}
-        self._series_ids: dict[str, int] = {}
-        self._series_names: list[str] = []
+        self._data: dict[Key, list[Observation]] = {}
+        self._series: dict[str, None] = {}          # insertion-ordered set of series names
+        self._keys: dict[Key, Key] = {}             # canonical key tuples, so dependency maps share one object per key
 
-    # -- series interning (compact int keys for dependency indexes)
-    def series_index(self, series: str) -> int:
-        i = self._series_ids.get(series)
-        if i is None:
-            i = self._series_ids[series] = len(self._series_names)
-            self._series_names.append(series)
-        return i
+    # -- dependency keys
+    def key(self, series: str, period: int) -> Key:
+        """The stable key for (series, period). Pure: it depends on nothing but its arguments, so a worker
+        process, a restarted process and a different machine all compute the same key."""
+        if isinstance(period, bool) or not isinstance(period, int) or not 0 <= period < PERIOD_LIMIT:
+            raise InvalidInput(f"period must be an integer in [0, {PERIOD_LIMIT}), got {period!r}")
+        k = (series, period)
+        return self._keys.setdefault(k, k)
 
-    def series_name(self, idx: int) -> str:
-        return self._series_names[idx]
-
-    KEY_SPAN = 1 << 20      # period must be < KEY_SPAN
-
-    def key(self, series: str, period: int) -> int:
-        if not 0 <= period < self.KEY_SPAN:
-            raise ValueError("period out of range")
-        return self.series_index(series) * self.KEY_SPAN + period
-
-    def key_parts(self, key: int) -> tuple[str, int]:
-        return self._series_names[key // self.KEY_SPAN], key % self.KEY_SPAN
+    @staticmethod
+    def key_parts(key: Key) -> tuple[str, int]:
+        return key
 
     # -- writes
     def append(self, obs: Observation) -> Observation:
@@ -68,7 +91,7 @@ class VintageStore:
         if versions and obs.known_at <= versions[-1].known_at:
             raise ValueError("a revision must have a later knowledge time than the existing vintage")
         versions.append(obs)
-        self.series_index(obs.series)
+        self._series.setdefault(obs.series)
         return obs
 
     def extend(self, observations: Iterable[Observation]) -> None:
@@ -90,7 +113,7 @@ class VintageStore:
         return Snapshot(self, t)
 
     def series_names(self) -> list[str]:
-        return list(self._series_names)
+        return list(self._series)
 
 
 class Snapshot:
@@ -109,7 +132,7 @@ class TrackingReader:
 
     def __init__(self, snapshot: Snapshot):
         self.snapshot = snapshot
-        self.seen: dict[int, int] = {}      # key -> fingerprint (0 for "absent")
+        self.seen: dict[Key, int] = {}      # key -> fingerprint (0 for "absent")
 
     def read(self, series: str, period: int) -> Observation | None:
         obs = self.snapshot.read(series, period)
