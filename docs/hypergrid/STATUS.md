@@ -42,3 +42,12 @@ The repository root has **no LICENSE file**. It aggregates Apache-2.0 (Beacon), 
 ## What would change these statuses
 
 A GitLab project with Duo enabled (flows, MCP), a Google Cloud project, API keys (FRED; a real LLM provider for a live calibration of the simulated model), a running FalkorDB for the ECHO seam, and the contest rules text.
+
+## Current-tree evidence audit (October 22, 2026)
+
+The October 15 commit adds numeric validation, stable cross-process fingerprints,
+spawn regression coverage, packaged fixtures and GitHub CI configuration. These
+changes do not verify real model costs/quality or the ECHO seam. See the
+[claim table](../evidence/CLAIMS.md), [demo guide](../evidence/README.md) and
+[offline run receipt](../evidence/OFFLINE_RUN.json). Historical counts above
+remain historical; current suite counts belong to their run receipt.

@@ -5,6 +5,23 @@ It brings discovery, analysis, verification, decision review, transaction
 records, and after-sales resolution into one product journey while keeping
 specialist apps and services independently runnable.
 
+## Demo evidence and current verification
+
+Start with the [claim-by-claim evidence table](docs/evidence/CLAIMS.md) and
+[reproducible demo guide](docs/evidence/README.md). The audit includes the October
+15 platform/payment additions. Historical implementation reports are not proof
+of production readiness. No model provider, live payment or cloud deployment is
+live-verified by this audit. Payment HTTP routes require authorization and routing
+regressions before external use; use the offline command for the demo.
+
+```sh
+python scripts/demo_evidence.py --out demo-evidence.json
+```
+
+This central command runs named offline suites, demonstrates revision-aware AI
+routing and exports source hashes and test counts. Simulated model metrics retain
+their labels; validator acceptance does not establish factual correctness.
+
 ## Multi-model AI: use the AI you want
 
 PeoplePay is **AI-provider agnostic**. A single Model Gateway sits between PeoplePay and every provider, so one

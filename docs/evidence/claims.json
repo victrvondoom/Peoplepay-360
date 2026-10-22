@@ -1,0 +1,262 @@
+{
+  "schema_version": 1,
+  "audited_commit": "7b31271379839364cfe3fcf0f1c7d4982dee6b80",
+  "claims": [
+    {
+      "id": "baseline",
+      "claim": "Audit target is current default tree, including October 15 platform additions",
+      "status": "measured",
+      "sources": [
+        "README.md",
+        "docs/hypergrid/STATUS.md",
+        "IMPLEMENTATION_STATUS.md"
+      ],
+      "boundary": "GitHub default HEAD 7b31271379839364cfe3fcf0f1c7d4982dee6b80; PR #2 is an older merged slice."
+    },
+    {
+      "id": "vintage",
+      "claim": "Knowledge-time snapshots and dependency tracking",
+      "status": "measured",
+      "sources": [
+        "packages/peoplepay-hypergrid/src/hypergrid/vintage.py",
+        "packages/peoplepay-hypergrid/tests/test_vintage_and_incremental.py"
+      ],
+      "boundary": "Local algorithm tests; not a real economic revision feed."
+    },
+    {
+      "id": "incremental",
+      "claim": "Incremental results equal full recomputation",
+      "status": "measured",
+      "sources": [
+        "packages/peoplepay-hypergrid/src/hypergrid/incremental.py",
+        "packages/peoplepay-hypergrid/tests/test_vintage_and_incremental.py"
+      ],
+      "boundary": "Random revision sequences and deliberate invalidation mutation; finite tested workloads, not a universal proof."
+    },
+    {
+      "id": "workers",
+      "claim": "Worker scaling, retry, cancellation, backpressure and fault integrity",
+      "status": "measured",
+      "sources": [
+        "packages/peoplepay-hypergrid/src/hypergrid/grid.py",
+        "packages/peoplepay-hypergrid/tests/test_grid.py",
+        "packages/peoplepay-hypergrid/results/SUMMARY.md"
+      ],
+      "boundary": "Single machine only; published 3.66x at four workers is historical, hardware-specific."
+    },
+    {
+      "id": "portability",
+      "claim": "Stable fingerprints, spawn workers, installed fixture packaging",
+      "status": "measured",
+      "sources": [
+        "packages/peoplepay-hypergrid/tests/test_cross_process.py",
+        ".github/workflows/hypergrid.yml"
+      ],
+      "boundary": "October 15 regression coverage exists; local Linux run does not certify Windows CI."
+    },
+    {
+      "id": "input-validation",
+      "claim": "Numeric inputs reject invalid values rather than inventing missing facts",
+      "status": "measured",
+      "sources": [
+        "packages/peoplepay-hypergrid/src/hypergrid/validation.py"
+      ],
+      "boundary": "Finite-value checks are code-level boundaries, not data authenticity."
+    },
+    {
+      "id": "routing",
+      "claim": "Adaptive explanation routing savings, model quality and tail latency",
+      "status": "simulated",
+      "sources": [
+        "packages/peoplepay-hypergrid/src/hypergrid/routing.py",
+        "packages/peoplepay-hypergrid/results/SUMMARY.md"
+      ],
+      "boundary": "24.2x lower cost per correct result is assumption-dependent; quality 92.5% vs 97.5%, p95 6.701s vs 2.301s. No real LLM called. Validator acceptance is not factual correctness."
+    },
+    {
+      "id": "cache",
+      "claim": "Exact-match explanation cache avoids repeated work",
+      "status": "measured",
+      "sources": [
+        "packages/peoplepay-hypergrid/src/hypergrid/routing.py",
+        "packages/peoplepay-hypergrid/tests/test_routing.py"
+      ],
+      "boundary": "Hit rate depends on synthetic repeat rate; no semantic or serving prefix cache."
+    },
+    {
+      "id": "gateway",
+      "claim": "HYPERGRID calls Model Gateway with pinned selection and privacy policy",
+      "status": "mock-verified",
+      "sources": [
+        "packages/peoplepay-hypergrid/tests/test_routing.py",
+        "packages/peoplepay-model-gateway/tests/test_audit_regressions.py"
+      ],
+      "boundary": "Mock providers only; strict-selection regression is not live provider certification."
+    },
+    {
+      "id": "providers",
+      "claim": "Cloud and local model provider adapters",
+      "status": "mock-verified",
+      "sources": [
+        "docs/models/PROVIDERS.md",
+        "packages/peoplepay-model-gateway/tests/live/README.md"
+      ],
+      "boundary": "Contract fixtures and HTTP stubs; LIVE VERIFIED: none. JEV/Laya wire protocols remain unverified."
+    },
+    {
+      "id": "worldbank",
+      "claim": "Three historical World Bank annual series available offline",
+      "status": "measured",
+      "sources": [
+        "packages/peoplepay-hypergrid/src/hypergrid/data/worldbank_snapshot.json"
+      ],
+      "boundary": "Snapshot existence and metadata locally checked; no live retrieval in this audit; revisions injected."
+    },
+    {
+      "id": "market",
+      "claim": "Live market feed and out-of-sample forecast accuracy",
+      "status": "unverified",
+      "sources": [
+        "docs/hypergrid/STATUS.md"
+      ],
+      "boundary": "Not implemented: no live/delayed market feed, no forecast accuracy evaluation."
+    },
+    {
+      "id": "echo-seam",
+      "claim": "HYPERGRID persists decisions in ECHO/FalkorDB",
+      "status": "unverified",
+      "sources": [
+        "docs/hypergrid/STATUS.md",
+        "docs/hypergrid/ADR-001-evidence-aware-incremental-recomputation.md"
+      ],
+      "boundary": "Not implemented; separate ECHO application does not prove this seam."
+    },
+    {
+      "id": "runtime",
+      "claim": "Provider contracts, minimization, fallback and workflow approval guards",
+      "status": "mock-verified",
+      "sources": [
+        "tests/test_platform_runtime.py",
+        "tests/test_platform_workflow.py"
+      ],
+      "boundary": "Deterministic local provider/callback fixtures; production endpoint behavior excluded."
+    },
+    {
+      "id": "centralization",
+      "claim": "One generic engine executes all specialist journeys",
+      "status": "unverified",
+      "sources": [
+        "docs/integration/RUNTIME_IMPLEMENTATION_REPORT.md",
+        "journey/workflow.py"
+      ],
+      "boundary": "Generic ECHO/Gateway callbacks disconnected; procurement/assistance retain domain coordinators. New evidence CLI centralizes audit only."
+    },
+    {
+      "id": "journey",
+      "claim": "Procurement, delivery shortage and PROXY aftersales reference journey",
+      "status": "mock-verified",
+      "sources": [
+        "docs/unified-journey-v1.md",
+        "docs/integration/RUNTIME_IMPLEMENTATION_REPORT.md"
+      ],
+      "boundary": "Prior local/browser report: fictitious suppliers, 260/300 simulated delivery, no money. Not rerun with graph in this audit."
+    },
+    {
+      "id": "assistance",
+      "claim": "CivicMesh local assistance service",
+      "status": "unverified",
+      "sources": [
+        "docs/integration/CIVICMESH_INTEGRATION_REPORT.md"
+      ],
+      "boundary": "Previously locally verified according to report; Jac service and graph not started here. No live eligibility certification."
+    },
+    {
+      "id": "payments",
+      "claim": "Payment creation, capture, refund, approval and audit",
+      "status": "mock-verified",
+      "sources": [
+        "payment/tests/test_payment_service.py",
+        "payment/payment_manager.py"
+      ],
+      "boundary": "Sandbox service tests only; no financial settlement, production authorization, durability or multi-process certification."
+    },
+    {
+      "id": "payment-http",
+      "claim": "All payment endpoints accessible and permission checks enforced",
+      "status": "unverified",
+      "sources": [
+        "gateway/payment_routes.py",
+        "gateway/app.py",
+        "FINAL_INTEGRATION_REPORT.txt"
+      ],
+      "boundary": "Current code contains routes, contrary to older status report. Checkout branch is shadowed, webhook predicate unreachable, get/list/capture lack route-level owner binding. Exclude HTTP payment routes from external demo pending security tests/fixes."
+    },
+    {
+      "id": "new-modules",
+      "claim": "Evidence, graph, plugins, notifications and orchestration fully integrated",
+      "status": "unverified",
+      "sources": [
+        "FINAL_DELIVERY_REPORT.md",
+        "IMPLEMENTATION_SUMMARY.md"
+      ],
+      "boundary": "Code and module tests/manual notes do not establish one end-to-end platform; all components WORKING is unsupported."
+    },
+    {
+      "id": "deployment",
+      "claim": "GitLab pipeline, cloud deployment and public demo operational",
+      "status": "unverified",
+      "sources": [
+        ".gitlab-ci.yml",
+        "docs/hypergrid/STATUS.md"
+      ],
+      "boundary": "Configuration exists; no executed GitLab/Cloud Run deployment evidence."
+    },
+    {
+      "id": "autonomy",
+      "claim": "Duo agent automation and autonomous incident recovery",
+      "status": "unverified",
+      "sources": [
+        "docs/hypergrid/STATUS.md"
+      ],
+      "boundary": "Not implemented beyond mutation detection and correctness gate."
+    },
+    {
+      "id": "scale",
+      "claim": "100k transactions, energy measurements, calibrated confidence",
+      "status": "unverified",
+      "sources": [
+        "docs/hypergrid/STATUS.md"
+      ],
+      "boundary": "Not implemented/run; published workload is 20k, not 100k."
+    },
+    {
+      "id": "licenses",
+      "claim": "Aggregate may be redistributed under a single permissive license",
+      "status": "blocked",
+      "sources": [
+        "docs/licensing-blockers.md",
+        "docs/hypergrid/STATUS.md"
+      ],
+      "boundary": "Root lacks aggregate license; unlicensed bundled trees and FalkorDB SSPL require review/rights."
+    },
+    {
+      "id": "contest",
+      "claim": "Contest eligibility, criteria and original-license requirements satisfied",
+      "status": "blocked",
+      "sources": [
+        "docs/hypergrid/STATUS.md"
+      ],
+      "boundary": "Historical rules fetch blocked by 403; this audit did not independently verify eligibility."
+    },
+    {
+      "id": "live",
+      "claim": "Real provider, production payment or hosted deployment verified",
+      "status": "unverified",
+      "sources": [
+        "docs/models/PROVIDERS.md",
+        "README.md"
+      ],
+      "boundary": "No live-verified result established by this audit. Never promote mock success to live verification."
+    }
+  ]
+}
