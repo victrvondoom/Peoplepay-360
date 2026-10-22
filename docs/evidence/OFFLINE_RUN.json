@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "run_at_utc": "2026-10-22T03:26:37.964446+00:00",
-  "git_head_at_run": "7b31271379839364cfe3fcf0f1c7d4982dee6b80",
+  "run_at_utc": "2026-10-22T05:10:57.266381+00:00",
+  "git_head_at_run": "b807fd06d605964e69aea80f89165dee7be6aca2",
   "python": "3.12.14",
   "source_sha256": {
     ".github/workflows/civicmesh-integration.yml": "2f7dc29932a9faf6a1c8ce2b4eb1e7bd2114d828faf54fb2e1f2832f4eca222e",
@@ -13,7 +13,7 @@
     "FINAL_INTEGRATION_REPORT.txt": "a38f38cdffcfefe16c0eba3cdd035418da6397e92f73a4523b027f9ad489611e",
     "IMPLEMENTATION_STATUS.md": "7dcac04b209ca44b5bb5dcd3ac5ed911ef8554b8314e30d78d2018d2acbf7c10",
     "IMPLEMENTATION_SUMMARY.md": "0b79a6a5aee38ebabb5ae575f3a300bf2fe58d6f8287417764217f30c1ba2b93",
-    "README.md": "20e1f908b9d1ffb2b60674a605ebe1ab50c483a49407a06b1ab90e554f5a8a18",
+    "README.md": "86193388a7d895cf683fc705d22a5b4b133146e2b43279179b121c17720aca6d",
     "docs/evidence/CLAIMS.md": "a3703d96db4db035479a72397eec0b2d541dd841af56a73fa0be4f53b4821ca0",
     "docs/evidence/README.md": "5939f074c113f0bb371a5253794068a3927c14d1612a501e1f877b2f578f28b2",
     "docs/evidence/claims.json": "c65c27fdb34dbf9b87655a207e67c4a61c6e1a91119fffdfbeeb11b7b3426f83",
@@ -190,7 +190,7 @@
       "recomputed": 3,
       "summary_changed": 3,
       "unchanged_after_recompute": 0,
-      "compute_seconds": 0.001696241999979975,
+      "compute_seconds": 0.0011213120000093113,
       "changed_ids": [
         40,
         66,
