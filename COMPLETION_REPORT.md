@@ -1,3 +1,11 @@
+EVIDENCE CORRECTION — October 22, 2026
+This is a historical implementation narrative, not current certification.
+Claims of production readiness, full integration, or all components working
+are not established. Payment tests use a sandbox; HTTP routing/ownership gaps
+remain. See docs/evidence/CLAIMS.md and docs/evidence/README.md for the audit
+of commit 7b31271379839364cfe3fcf0f1c7d4982dee6b80 and reproducible checks.
+Original text and historical test counts follow; they were not all rerun.
+
 # PEOPLEPAY 360 - COMPLETION REPORT
 
 ## MISSION ACCOMPLISHED ✅

@@ -23,7 +23,26 @@ def _reset_mock():
 
 
 @pytest.fixture
-def gw():
+def fake_provider_dns(monkeypatch):
+    """Fixture transport tests must not resolve a public provider on the network.
+
+    Keep the real URL policy validation, inject only the DNS answer for the one
+    fake OpenAI endpoint. Direct netguard/rebinding tests remain untouched.
+    """
+    import socket
+    import peoplepay_models.gateway as module
+    from peoplepay_models.netguard import validate_url
+
+    def resolve(host, port, **kwargs):
+        if host == "api.openai.com":
+            return [(socket.AF_INET, socket.SOCK_STREAM, 6, "", ("93.184.216.34", port))]
+        return socket.getaddrinfo(host, port, **kwargs)
+
+    monkeypatch.setattr(module, "validate_url", lambda url, policy: validate_url(url, policy, resolver=resolve))
+
+
+@pytest.fixture
+def gw(fake_provider_dns):
     return ModelGateway(store=ModelStore(), vault=MemoryVault(), transport=FakeTransport(),
                         registry=default_registry(enable_mock=True), net_policy=NetPolicy(mode="self_hosted"))
 

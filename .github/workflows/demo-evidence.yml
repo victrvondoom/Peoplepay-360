@@ -1,0 +1,22 @@
+name: offline-demo-evidence
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest pytest-asyncio numpy pydantic cryptography httpx PyYAML
+      - run: python scripts/demo_evidence.py --check
+      - run: python scripts/demo_evidence.py --out demo-evidence.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: offline-demo-evidence
+          path: demo-evidence.json

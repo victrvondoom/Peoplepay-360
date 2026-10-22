@@ -44,7 +44,7 @@ def test_vault_fails_closed_without_key(tmp_path, monkeypatch):
         EncryptedSqliteVault(tmp_path / "v.db")
 
 
-def test_secrets_never_appear_in_any_gateway_output_or_store(tmp_path):
+def test_secrets_never_appear_in_any_gateway_output_or_store(tmp_path, fake_provider_dns):
     store = ModelStore(str(tmp_path / "m.db"))
     gw = ModelGateway(store=store, vault=EncryptedSqliteVault(tmp_path / "v.db", generate_key()),
                       transport=FakeTransport(fakes.openai_like(models=("gpt-x",))), registry=default_registry(),
