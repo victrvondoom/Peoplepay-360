@@ -23,6 +23,11 @@ from .base import (AdapterResult, CallSpec, CredentialField, HealthReport, Provi
 _FORBIDDEN_HEADERS = {"host", "content-length", "transfer-encoding", "connection", "upgrade", "te",
                       "proxy-authorization", "cookie"}
 
+#: Vault key holding a connection's custom headers as a JSON object. Header values are credentials in practice
+#: (``x-api-key``, ``Authorization``), so they are stored encrypted with the other secrets and never in the plaintext,
+#: client-visible connection configuration.
+HEADERS_SECRET = "__headers__"
+
 
 def safe_custom_headers(headers: dict | None, *, has_api_key: bool) -> dict[str, str]:
     """Custom headers are untrusted input: no smuggling, no hop-by-hop, no auth override."""
@@ -130,7 +135,16 @@ class OpenAICompatibleAdapter(ProviderAdapter):
         key = self.secrets.get("api_key")
         if key:
             h["Authorization"] = f"Bearer {key}"
-        h.update(safe_custom_headers(self.config.get("headers"), has_api_key=bool(key)))
+        custom: dict = dict(self.config.get("headers") or {})          # rows saved before headers moved to the vault
+        stored = self.secrets.get(HEADERS_SECRET)
+        if stored:
+            try:
+                parsed = json.loads(stored)
+                if isinstance(parsed, dict):
+                    custom.update(parsed)
+            except ValueError:
+                pass
+        h.update(safe_custom_headers(custom, has_api_key=bool(key)))
         return h
 
     def _call(self, method: str, path: str, body: dict | None = None, *, timeout: float = 30.0,

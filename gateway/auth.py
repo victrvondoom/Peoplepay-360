@@ -33,24 +33,35 @@ from __future__ import annotations
 
 import base64
 import hmac
+import ipaddress
 import os
 import time
 from enum import StrEnum
 from hashlib import sha256
+from urllib.parse import urlsplit
 
 __all__ = [
+    "ALLOWED_HOSTS_ENV",
+    "ALLOW_OPEN_REMOTE_ENV",
     "DEFAULT_TTL_SECONDS",
     "SECRET_ENV",
     "TOKEN_PREFIX",
     "AuthMode",
     "InvalidToken",
+    "assert_safe_bind",
     "auth_mode",
+    "host_header_allowed",
+    "is_loopback_host",
     "issue_token",
     "verify_caller",
     "verify_token",
 ]
 
 SECRET_ENV = "BEACON_GATEWAY_SECRET"
+#: Explicit, loud opt-in to serve OPEN mode on a non-loopback interface. Never set this on a shared network.
+ALLOW_OPEN_REMOTE_ENV = "BEACON_GATEWAY_ALLOW_OPEN_REMOTE"
+#: Extra ``Host`` header names accepted in OPEN mode (comma separated), for a reverse proxy on loopback.
+ALLOWED_HOSTS_ENV = "BEACON_GATEWAY_ALLOWED_HOSTS"
 TOKEN_PREFIX = "v1"
 
 #: How long a freshly issued token lasts by default.
@@ -186,3 +197,50 @@ def verify_caller(
         except InvalidToken:
             return None
     return (user_header or "").strip() or None
+
+
+def is_loopback_host(host: str | None) -> bool:
+    """True for ``localhost`` and loopback addresses. Any other name or address may be reached from off the host."""
+    name = (host or "").strip().strip("[]").lower()
+    if name == "localhost":
+        return True
+    try:
+        return ipaddress.ip_address(name).is_loopback
+    except ValueError:
+        return False
+
+
+def assert_safe_bind(host: str | None) -> None:
+    """Refuse to serve OPEN mode on an interface other hosts can reach.
+
+    OPEN mode believes whatever ``X-Beacon-User`` says, so on a reachable interface anybody who can open a socket can act
+    as anybody. Loopback keeps local development working; anything else needs a secret (VERIFIED mode) or an explicit,
+    loud opt-in. Failing here, at startup, is deliberate: a warning in a log is how this kind of exposure ships.
+    """
+    if auth_mode() is AuthMode.OPEN and not is_loopback_host(host) and os.getenv(ALLOW_OPEN_REMOTE_ENV) != "1":
+        raise RuntimeError(
+            f"refusing to listen on {host!r} without authentication: {SECRET_ENV} is not set, so any caller could claim any "
+            f"user. Set {SECRET_ENV}, or bind a loopback address, or (only on a network you fully control) set "
+            f"{ALLOW_OPEN_REMOTE_ENV}=1."
+        )
+
+
+def host_header_allowed(host_header: str | None, bind_host: str | None = None) -> bool:
+    """DNS-rebinding guard for OPEN mode.
+
+    A web page can point its own domain at 127.0.0.1 and then call this gateway "same-origin", sending any
+    ``X-Beacon-User`` it likes without a CORS preflight. Browsers still send the attacker's name in ``Host``, so OPEN mode
+    accepts only loopback names, the configured bind host and ``BEACON_GATEWAY_ALLOWED_HOSTS``. VERIFIED mode needs a
+    bearer token that a rebinding page cannot hold, so it is not restricted. A missing ``Host`` (non-browser HTTP/1.0 clients)
+    is allowed: browsers always send one.
+    """
+    if auth_mode() is AuthMode.VERIFIED or os.getenv(ALLOW_OPEN_REMOTE_ENV) == "1" or not host_header:
+        return True
+    try:
+        name = urlsplit("//" + host_header.strip()).hostname or ""
+    except ValueError:
+        return False
+    allowed = {h.strip().lower() for h in os.getenv(ALLOWED_HOSTS_ENV, "").split(",") if h.strip()}
+    if bind_host and bind_host not in ("0.0.0.0", "::"):
+        allowed.add(bind_host.strip("[]").lower())
+    return is_loopback_host(name) or name.lower() in allowed

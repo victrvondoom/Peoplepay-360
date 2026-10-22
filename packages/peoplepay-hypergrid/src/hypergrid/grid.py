@@ -1,8 +1,14 @@
-"""Bounded worker grid for CPU-bound numerics (fork-based multiprocessing; Linux/macOS-fork).
+"""Bounded worker grid for CPU-bound numerics (multiprocessing; ``fork`` where available, ``spawn`` otherwise).
 
 Mechanisms, all exercised by tests: bounded in-flight chunks (backpressure/admission control),
 microbatching, idempotent chunk keys (a duplicate completion is ignored), retry budget with
 exponential-free immediate retry, dead-letter queue, cancellation, injectable faults.
+
+The shared read-only context (snapshot, requirements, draws, faults) reaches each worker through the pool
+initializer. Under ``fork`` that is inherited copy-on-write with no copying; under ``spawn`` (Windows, and
+macOS by default) it is pickled once per worker. Results are identical either way because nothing in a result
+depends on process state: seeds are CRC32 of the facts, fingerprints are content digests and dependency keys
+are ``(series, period)`` tuples.
 
 Deliberately NOT a distributed system: one machine, one process pool. Multi-host scheduling,
 work stealing and autoscaling are not implemented (see docs/hypergrid/STATUS.md).
@@ -10,6 +16,7 @@ work stealing and autoscaling are not implemented (see docs/hypergrid/STATUS.md)
 from __future__ import annotations
 
 import multiprocessing as mp
+import sys
 import threading
 import time
 import zlib
@@ -19,7 +26,19 @@ from dataclasses import dataclass, field
 from .procurement import DecisionResult, compute_decision
 from .vintage import TrackingReader
 
-_CTX: dict = {}          # populated in the parent BEFORE the pool forks (copy-on-write sharing)
+_CTX: dict = {}          # per-process, filled by ``_init_worker`` in each worker
+
+#: ProcessPoolExecutor on Windows cannot exceed 61 workers (WaitForMultipleObjects limit).
+_MAX_WORKERS = 61 if sys.platform == "win32" else 1 << 16
+
+
+def _init_worker(ctx: dict) -> None:
+    _CTX.clear()
+    _CTX.update(ctx)
+
+
+def _mp_context():
+    return mp.get_context("fork" if "fork" in mp.get_all_start_methods() else "spawn")
 
 
 class TransientFault(Exception):
@@ -72,7 +91,8 @@ class GridReport:
 def run_grid(store, reqs, indices, t: float, *, workers: int, draws: int = 1000, chunk: int = 200,
              retry_budget: int = 2, max_in_flight: int | None = None, faults: FaultPlan | None = None,
              track: bool = False, cancel: threading.Event | None = None) -> GridReport:
-    _CTX.update(snap=store.snapshot(t), reqs=reqs, draws=draws, faults=faults or FaultPlan())
+    shared = dict(snap=store.snapshot(t), reqs=reqs, draws=draws, faults=faults or FaultPlan())
+    workers = max(1, min(workers, _MAX_WORKERS))
     chunks = {c: indices[c * chunk:(c + 1) * chunk] for c in range((len(indices) + chunk - 1) // chunk)}
     limit = max_in_flight or workers * 2
     t0 = time.perf_counter()
@@ -81,8 +101,8 @@ def run_grid(store, reqs, indices, t: float, *, workers: int, draws: int = 1000,
     pending = list(chunks)
     inflight: dict = {}
     done_chunks: set[int] = set()
-    ctx = mp.get_context("fork")
-    with ProcessPoolExecutor(max_workers=workers, mp_context=ctx) as pool:
+    with ProcessPoolExecutor(max_workers=workers, mp_context=_mp_context(),
+                             initializer=_init_worker, initargs=(shared,)) as pool:
         while pending or inflight:
             while pending and len(inflight) < limit and not (cancel and cancel.is_set()):
                 c = pending.pop(0)

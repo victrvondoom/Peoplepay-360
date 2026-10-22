@@ -1,0 +1,1476 @@
+openapi: 3.1.0
+info:
+  title: PeoplePay 360 Gateway API
+  description: |
+    The PeoplePay 360 Gateway is the single HTTP entry point for the unified intelligent commerce platform.
+    
+    ## Overview
+    This API provides a thin routing layer that:
+    - Routes requests to appropriate services
+    - Enforces authentication and authorization
+    - Applies rate limiting
+    - Maintains request boundaries
+    - Provides health and status information
+    
+    ## Architecture
+    - Uses stdlib `http.server` (no external dependencies)
+    - Thread-safe with concurrent request handling
+    - All domain logic is in specialized services
+    - All payment operations are sandbox-only (no real money movement)
+    
+    ## Authentication
+    All POST requests require the `X-Beacon-User` header to identify the caller.
+    GET requests for health and module endpoints are open.
+    
+    ## Rate Limiting
+    Default rate limit: 60 requests per user per 60 seconds.
+    Configurable via environment variables.
+  version: 1.0.0
+  contact:
+    name: PeoplePay 360 Team
+    email: support@peoplepay360.com
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0
+
+servers:
+  - url: http://localhost:8080
+    description: Local development server
+  - url: https://api.peoplepay360.com
+    description: Production server
+
+paths:
+  /:
+    get:
+      tags:
+        - Gateway
+      summary: Gateway root
+      description: Returns basic gateway information and available endpoints
+      responses:
+        '200':
+          description: Gateway information
+          content:
+            text/html:
+              schema:
+                type: object
+                properties:
+                  service:
+                    type: string
+                    example: beacon-gateway
+                  version:
+                    type: string
+                    example: 1.0.0
+                  endpoints:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        path:
+                          type: string
+                        description:
+                          type: string
+        '404':
+          $ref: '#/components/responses/NotFound'
+
+  /favicon.ico:
+    get:
+      tags:
+        - Gateway
+      summary: Favicon
+      description: Returns 204 No Content for favicon requests
+      responses:
+        '204':
+          description: No content
+
+  /health:
+    get:
+      tags:
+        - Health
+      summary: Health check
+      description: Basic health check endpoint that's always available
+      responses:
+        '200':
+          description: Service is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum: [ok]
+                    example: ok
+                  service:
+                    type: string
+                    example: beacon-gateway
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /health/integrations:
+    get:
+      tags:
+        - Health
+        - Integrations
+      summary: Integration health status
+      description: |
+        Returns the status of all integrated capabilities.
+        
+        Status values:
+        - LIVE: Capability is fully operational
+        - SANDBOX: Capability is in sandbox mode
+        - MOCK: Capability uses mock data
+        - NOT_CONFIGURED: Capability is not configured
+        - UNAVAILABLE: Capability is temporarily unavailable
+        - NOT_INSTALLED: Capability package is not installed
+      security: []
+      responses:
+        '200':
+          description: Integration status report
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  capabilities:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/CapabilityStatus'
+                  authenticated:
+                    type: boolean
+                    description: Whether the request was authenticated
+                    example: false
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /health/models:
+    get:
+      tags:
+        - Health
+        - Models
+      summary: Model Gateway health
+      description: Returns health status of the Model Gateway service
+      responses:
+        '200':
+          description: Model Gateway status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    enum: [available, unavailable]
+                  detail:
+                    type: string
+                    example: Model gateway package not installed
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /product/modules:
+    get:
+      tags:
+        - Products
+        - Modules
+      summary: Available product modules
+      description: Returns information about all available PeoplePay suite modules
+      responses:
+        '200':
+          description: List of available modules
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  modules:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ProductModule'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  # ============================================================================
+  # TRANSACTION ENDPOINTS
+  # ============================================================================
+  /transactions:
+    post:
+      tags:
+        - Transactions
+      summary: Create a new transaction
+      description: Creates a new transaction for a user journey
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TransactionRequest'
+      responses:
+        '200':
+          description: Transaction created successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /transactions/{transaction_id}:
+    post:
+      tags:
+        - Transactions
+      summary: Update transaction
+      description: Updates an existing transaction
+      security:
+        - beaconUser: []
+      parameters:
+        - $ref: '#/components/parameters/transactionId'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Transaction update data
+      responses:
+        '200':
+          description: Transaction updated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TransactionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /transactions/{transaction_id}/workflows/{workflow_id}:
+    post:
+      tags:
+        - Transactions
+        - Workflows
+      summary: Execute workflow step
+      description: Executes a specific workflow step within a transaction
+      security:
+        - beaconUser: []
+      parameters:
+        - $ref: '#/components/parameters/transactionId'
+        - name: workflow_id
+          in: path
+          required: true
+          description: Workflow identifier
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Workflow execution data
+      responses:
+        '200':
+          description: Workflow step executed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkflowResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /transactions/{transaction_id}/capabilities/{capability}:
+    post:
+      tags:
+        - Transactions
+        - Capabilities
+      summary: Run capability
+      description: Executes a specific capability within a transaction context
+      security:
+        - beaconUser: []
+      parameters:
+        - $ref: '#/components/parameters/transactionId'
+        - name: capability
+          in: path
+          required: true
+          description: Capability name to execute
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              description: Capability input data
+      responses:
+        '200':
+          description: Capability executed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CapabilityResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  # ============================================================================
+  # API V1 ENDPOINTS
+  # ============================================================================
+  /api/v1/models:
+    post:
+      tags:
+        - Models
+        - AI
+      summary: Model inference
+      description: Execute AI model inference with the Model Gateway
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelRequest'
+      responses:
+        '200':
+          description: Model inference response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+        '500':
+          $ref: '#/components/responses/InternalError'
+
+  /api/v1/chat:
+    post:
+      tags:
+        - Models
+        - AI
+        - Chat
+      summary: Chat completion
+      description: Execute chat completion with streaming support
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ChatRequest'
+      responses:
+        '200':
+          description: Chat completion response (streaming)
+          content:
+            text/event-stream:
+              schema:
+                $ref: '#/components/schemas/ChatResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /api/v1/models/connections:
+    post:
+      tags:
+        - Models
+        - Configuration
+      summary: Create model connection
+      description: Create a new provider connection for the Model Gateway
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelConnectionRequest'
+      responses:
+        '200':
+          description: Connection created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelConnectionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /api/v1/models/connections/{connection_id}:
+    post:
+      tags:
+        - Models
+        - Configuration
+      summary: Update model connection
+      description: Update an existing provider connection
+      security:
+        - beaconUser: []
+      parameters:
+        - name: connection_id
+          in: path
+          required: true
+          description: Connection identifier
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ModelConnectionUpdate'
+      responses:
+        '200':
+          description: Connection updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelConnectionResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /api/v1/capabilities/resolve:
+    post:
+      tags:
+        - Capabilities
+        - Discovery
+      summary: Resolve capability
+      description: Resolve a capability to its implementation
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - capability
+                - jurisdiction
+              properties:
+                capability:
+                  type: string
+                  description: Capability name to resolve
+                  example: supplier_discovery
+                jurisdiction:
+                  type: string
+                  description: Jurisdiction context
+                  example: global
+      responses:
+        '200':
+          description: Capability resolved
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CapabilityResolution'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /api/v1/routing:
+    post:
+      tags:
+        - Routing
+        - Discovery
+      summary: Route need
+      description: Route a user need to appropriate capability
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                message:
+                  type: string
+                  description: User need description
+                  example: Find reliable supplier for office chairs under $500
+                jurisdiction:
+                  type: string
+                  description: Jurisdiction context
+                  example: US-CA
+      responses:
+        '200':
+          description: Need routed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RoutingResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /api/v1/workflows:
+    post:
+      tags:
+        - Workflows
+      summary: Platform workflow
+      description: Execute platform-level workflows
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/WorkflowRequest'
+      responses:
+        '200':
+          description: Workflow executed
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/WorkflowResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /api/v1/assistance:
+    post:
+      tags:
+        - Assistance
+        - AI
+      summary: AI assistance
+      description: Request AI assistance for a task
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AssistanceRequest'
+      responses:
+        '200':
+          description: Assistance provided
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AssistanceResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /api/v1/journeys:
+    post:
+      tags:
+        - Journeys
+        - Procurement
+      summary: Create journey
+      description: Create a new procurement journey
+      security:
+        - beaconUser: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/JourneyRequest'
+      responses:
+        '200':
+          description: Journey created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JourneyResponse'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+  /api/v1/journeys/{journey_id}:
+    get:
+      tags:
+        - Journeys
+        - Procurement
+      summary: Get journey
+      description: Retrieve journey details and status
+      security:
+        - beaconUser: []
+      parameters:
+        - name: journey_id
+          in: path
+          required: true
+          description: Journey identifier
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Journey details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JourneyResponse'
+        '401':
+          $ref: '#/components/responses/Unauthorized'
+        '403':
+          $ref: '#/components/responses/Forbidden'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '429':
+          $ref: '#/components/responses/RateLimited'
+
+components:
+  securitySchemes:
+    beaconUser:
+      type: apiKey
+      in: header
+      name: X-Beacon-User
+      description: User identifier header required for all POST requests
+
+  parameters:
+    transactionId:
+      name: transaction_id
+      in: path
+      required: true
+      description: Transaction identifier
+      schema:
+        type: string
+        format: uuid
+
+  responses:
+    BadRequest:
+      description: Bad request
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Unauthorized:
+      description: Authentication required
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    Forbidden:
+      description: Permission denied
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFound:
+      description: Resource not found
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    RateLimited:
+      description: Rate limit exceeded
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string
+                example: rate limit exceeded
+              limit:
+                type: integer
+                example: 60
+    InternalError:
+      description: Internal server error
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+
+  schemas:
+    # ===========================================================================
+    # HEALTH AND STATUS
+    # ===========================================================================
+    CapabilityStatus:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Capability name
+          example: evidence_engine
+        status:
+          type: string
+          enum: [LIVE, SANDBOX, MOCK, NOT_CONFIGURED, UNAVAILABLE, NOT_INSTALLED]
+          example: LIVE
+        version:
+          type: string
+          description: Capability version
+          example: 1.0.0
+        endpoint:
+          type: string
+          description: Endpoint URL (if authenticated and available)
+          example: http://localhost:8000
+        detail:
+          type: string
+          description: Additional status detail
+          example: Service running on port 8000
+
+    ProductModule:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Module identifier
+          example: evidence
+        name:
+          type: string
+          description: Module display name
+          example: PeoplePay ECHO
+        description:
+          type: string
+          description: Module description
+          example: Audit evidence lineage and supplier decisions
+        url:
+          type: string
+          format: uri
+          description: Module URL
+          example: http://localhost:8001
+        status:
+          type: string
+          enum: [AVAILABLE, NOT_CONFIGURED]
+          example: AVAILABLE
+
+    # ===========================================================================
+    # TRANSACTIONS
+    # ===========================================================================
+    TransactionRequest:
+      type: object
+      required:
+        - user_id
+      properties:
+        user_id:
+          type: string
+          description: User identifier
+          example: user-123
+        utterance:
+          type: string
+          description: Natural language request
+          example: Find office chairs under $500
+        metadata:
+          type: object
+          description: Additional metadata
+          example: {}
+
+    TransactionResponse:
+      type: object
+      properties:
+        transaction_id:
+          type: string
+          description: Transaction identifier
+          example: txn-abc123
+        user_id:
+          type: string
+          description: User identifier
+          example: user-123
+        state:
+          type: string
+          description: Transaction state
+          example: OPEN
+        context:
+          type: object
+          description: Transaction context
+          example: {}
+        created_at:
+          type: string
+          format: date-time
+          description: Creation timestamp
+        updated_at:
+          type: string
+          format: date-time
+          description: Last update timestamp
+
+    WorkflowRequest:
+      type: object
+      required:
+        - workflow_type
+      properties:
+        workflow_type:
+          type: string
+          description: Type of workflow to execute
+          example: procurement
+        parameters:
+          type: object
+          description: Workflow parameters
+          example: {}
+        context:
+          type: object
+          description: Workflow context
+          example: {}
+
+    WorkflowResponse:
+      type: object
+      properties:
+        workflow_id:
+          type: string
+          description: Workflow identifier
+          example: wf-123
+        transaction_id:
+          type: string
+          description: Related transaction
+          example: txn-abc123
+        status:
+          type: string
+          description: Workflow status
+          example: completed
+        result:
+          type: object
+          description: Workflow result
+          example: {}
+        steps:
+          type: array
+          items:
+            type: object
+            properties:
+              step:
+                type: string
+                example: discovery
+              status:
+                type: string
+                example: completed
+              result:
+                type: object
+                example: {}
+        created_at:
+          type: string
+          format: date-time
+        completed_at:
+          type: string
+          format: date-time
+
+    CapabilityRequest:
+      type: object
+      required:
+        - capability
+        - input
+      properties:
+        capability:
+          type: string
+          description: Capability name
+          example: supplier_search
+        input:
+          type: object
+          description: Capability input
+          example: {}
+        jurisdiction:
+          type: string
+          description: Jurisdiction context
+          example: global
+
+    CapabilityResponse:
+      type: object
+      properties:
+        capability:
+          type: string
+          description: Capability name
+          example: supplier_search
+        status:
+          type: string
+          description: Execution status
+          example: completed
+        result:
+          type: object
+          description: Capability result
+          example: {}
+        metadata:
+          type: object
+          description: Execution metadata
+          example: {}
+
+    # ===========================================================================
+    # AI AND MODELS
+    # ===========================================================================
+    ModelRequest:
+      type: object
+      required:
+        - model
+        - messages
+      properties:
+        model:
+          type: string
+          description: Model identifier
+          example: gpt-4
+        messages:
+          type: array
+          items:
+            $ref: '#/components/schemas/Message'
+          description: Chat messages
+        temperature:
+          type: number
+          default: 0.7
+          description: Sampling temperature
+        max_tokens:
+          type: integer
+          default: 1024
+          description: Maximum tokens to generate
+        stream:
+          type: boolean
+          default: false
+          description: Whether to stream the response
+
+    Message:
+      type: object
+      required:
+        - role
+        - content
+      properties:
+        role:
+          type: string
+          enum: [system, user, assistant]
+          example: user
+        content:
+          type: string
+          description: Message content
+          example: Find reliable suppliers for office chairs
+
+    ModelResponse:
+      type: object
+      properties:
+        id:
+          type: string
+          description: Response identifier
+          example: msg-123
+        model:
+          type: string
+          description: Model used
+          example: gpt-4
+        choices:
+          type: array
+          items:
+            type: object
+            properties:
+              index:
+                type: integer
+                example: 0
+              message:
+                $ref: '#/components/schemas/Message'
+              finish_reason:
+                type: string
+                example: stop
+        usage:
+          type: object
+          properties:
+            prompt_tokens:
+              type: integer
+              example: 25
+            completion_tokens:
+              type: integer
+              example: 50
+            total_tokens:
+              type: integer
+              example: 75
+        created:
+          type: integer
+          description: Unix timestamp
+          example: 1700000000
+
+    ChatRequest:
+      allOf:
+        - $ref: '#/components/schemas/ModelRequest'
+      type: object
+
+    ChatResponse:
+      allOf:
+        - $ref: '#/components/schemas/ModelResponse'
+      type: object
+
+    ModelConnectionRequest:
+      type: object
+      required:
+        - provider
+        - model
+        - api_key
+      properties:
+        provider:
+          type: string
+          description: Provider name
+          example: openai
+        model:
+          type: string
+          description: Model name
+          example: gpt-4
+        api_key:
+          type: string
+          description: API key (will be encrypted at rest)
+          example: sk-...
+        name:
+          type: string
+          description: Connection name
+          example: My OpenAI Connection
+        is_default:
+          type: boolean
+          default: false
+          description: Whether this is the default connection
+
+    ModelConnectionResponse:
+      type: object
+      properties:
+        connection_id:
+          type: string
+          description: Connection identifier
+          example: conn-123
+        provider:
+          type: string
+          description: Provider name
+          example: openai
+        model:
+          type: string
+          description: Model name
+          example: gpt-4
+        name:
+          type: string
+          description: Connection name
+          example: My OpenAI Connection
+        is_default:
+          type: boolean
+          description: Whether this is the default connection
+          example: false
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    ModelConnectionUpdate:
+      type: object
+      properties:
+        name:
+          type: string
+          description: Connection name
+          example: Updated Connection Name
+        api_key:
+          type: string
+          description: Updated API key
+          example: sk-...
+        is_default:
+          type: boolean
+          description: Whether to make this the default connection
+          example: true
+
+    CapabilityResolution:
+      type: object
+      properties:
+        capability:
+          type: string
+          description: Resolved capability
+          example: supplier_discovery
+        implementation:
+          type: string
+          description: Implementation module
+          example: greenchain
+        provider:
+          type: string
+          description: Provider name
+          example: GreenChain
+        version:
+          type: string
+          description: Implementation version
+          example: 1.0.0
+        status:
+          type: string
+          enum: [AVAILABLE, NOT_CONFIGURED, UNAVAILABLE]
+          example: AVAILABLE
+
+    # ===========================================================================
+    # ROUTING AND DISCOVERY
+    # ===========================================================================
+    RoutingResponse:
+      type: object
+      properties:
+        capability:
+          type: string
+          description: Selected capability
+          example: supplier_discovery
+        provider:
+          type: string
+          description: Selected provider
+          example: GreenChain
+        confidence:
+          type: number
+          description: Routing confidence score
+          example: 0.95
+        reason:
+          type: string
+          description: Routing reason
+          example: Best match for product discovery in US jurisdiction
+
+    # ===========================================================================
+    # ASSISTANCE
+    # ===========================================================================
+    AssistanceRequest:
+      type: object
+      required:
+        - task
+      properties:
+        task:
+          type: string
+          description: Task description
+          example: Find the best office chair under $500
+        context:
+          type: object
+          description: Task context
+          example: {}
+        options:
+          type: object
+          description: Task options
+          example: {}
+
+    AssistanceResponse:
+      type: object
+      properties:
+        task_id:
+          type: string
+          description: Task identifier
+          example: assist-123
+        status:
+          type: string
+          description: Task status
+          example: completed
+        result:
+          type: object
+          description: Task result
+          example: {}
+        recommendations:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: product
+              id:
+                type: string
+                example: product-123
+              name:
+                type: string
+                example: Ergonomic Office Chair
+              score:
+                type: number
+                example: 0.92
+              reason:
+                type: string
+                example: Highest rated within budget
+        evidence:
+          type: array
+          items:
+            type: object
+            properties:
+              type:
+                type: string
+                example: supplier_rating
+              source:
+                type: string
+                example: GreenChain
+              value:
+                type: string
+                example: 4.8/5
+              confidence:
+                type: number
+                example: 0.95
+        created_at:
+          type: string
+          format: date-time
+        completed_at:
+          type: string
+          format: date-time
+
+    # ===========================================================================
+    # JOURNEYS
+    # ===========================================================================
+    JourneyRequest:
+      type: object
+      required:
+        - task
+      properties:
+        task:
+          type: string
+          description: Journey task description
+          example: Procure office equipment within budget
+        budget:
+          type: number
+          description: Maximum budget in minor units
+          example: 50000
+        currency:
+          type: string
+          description: Currency code
+          example: USD
+        preferences:
+          type: object
+          description: User preferences
+          example: {}
+        constraints:
+          type: object
+          description: Journey constraints
+          example: {}
+
+    JourneyResponse:
+      type: object
+      properties:
+        journey_id:
+          type: string
+          description: Journey identifier
+          example: journey-123
+        task:
+          type: string
+          description: Journey task
+          example: Procure office equipment within budget
+        state:
+          type: string
+          description: Journey state
+          example: discovery
+        current_step:
+          type: string
+          description: Current step in journey
+          example: supplier_discovery
+        steps_completed:
+          type: array
+          items:
+            type: string
+            example: [intake, requirement_analysis]
+        steps_remaining:
+          type: array
+          items:
+            type: string
+            example: [supplier_discovery, comparison, recommendation]
+        results:
+          type: object
+          description: Journey results so far
+          example: {}
+        evidence:
+          type: array
+          items:
+            type: object
+            properties:
+              evidence_id:
+                type: string
+                example: evt-123
+              type:
+                type: string
+                example: supplier_profile
+              source:
+                type: string
+                example: GreenChain
+              timestamp:
+                type: string
+                format: date-time
+        created_at:
+          type: string
+          format: date-time
+        updated_at:
+          type: string
+          format: date-time
+
+    # ===========================================================================
+    # ERRORS
+    # ===========================================================================
+    ErrorResponse:
+      type: object
+      required:
+        - error
+        - message
+      properties:
+        error:
+          type: string
+          description: Error type
+          example: validation_error
+        code:
+          type: string
+          description: Error code
+          example: E001
+        message:
+          type: string
+          description: Human-readable error message
+          example: Invalid request body
+        details:
+          type: object
+          description: Additional error details
+          example: {}
+        timestamp:
+          type: string
+          format: date-time
+          description: Error timestamp
+        request_id:
+          type: string
+          description: Request identifier for correlation
+          example: req-123
+
+  # ===========================================================================
+  # EXTERNAL REFERENCES
+  # ===========================================================================
+  schemas:
+    # Reuse shared schemas for consistency
+    Money:
+      type: object
+      properties:
+        amount:
+          type: integer
+          description: Amount in minor units
+          example: 10000
+        currency:
+          type: string
+          description: Currency code
+          example: USD
+
+    User:
+      type: object
+      properties:
+        user_id:
+          type: string
+          description: User identifier
+          example: user-123
+        email:
+          type: string
+          format: email
+          description: User email
+          example: user@example.com
+        display_name:
+          type: string
+          description: Display name
+          example: John Doe
+        organization_id:
+          type: string
+          description: Organization identifier
+          example: org-123
+
+    Order:
+      type: object
+      properties:
+        order_id:
+          type: string
+          description: Order identifier
+          example: order-123
+        user_id:
+          type: string
+          description: User identifier
+          example: user-123
+        status:
+          type: string
+          enum: [draft, approved, placed, fulfilled, cancelled, failed]
+          example: draft
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              product_id:
+                type: string
+                example: product-123
+              quantity:
+                type: integer
+                example: 2
+              price:
+                $ref: '#/components/schemas/Money'
+        total:
+          $ref: '#/components/schemas/Money'
+        created_at:
+          type: string
+          format: date-time
+
+    Payment:
+      type: object
+      properties:
+        payment_id:
+          type: string
+          description: Payment identifier
+          example: pay-123
+        order_id:
+          type: string
+          description: Related order
+          example: order-123
+        amount:
+          $ref: '#/components/schemas/Money'
+        status:
+          type: string
+          enum: [pending, authorized, captured, failed, refunded, cancelled]
+          example: pending
+        method:
+          type: string
+          enum: [sandbox, card, bank_transfer]
+          example: sandbox
+        sandbox:
+          type: boolean
+          description: Whether this is a sandbox payment
+          example: true
+        money_moved:
+          type: boolean
+          description: Whether real money was moved
+          example: false
+        created_at:
+          type: string
+          format: date-time

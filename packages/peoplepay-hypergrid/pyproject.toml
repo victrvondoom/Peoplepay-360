@@ -9,5 +9,12 @@ description = "Evidence-aware incremental computation, worker grid and cost-awar
 requires-python = ">=3.11"
 dependencies = ["numpy>=1.26"]
 
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
 [tool.setuptools.packages.find]
 where = ["src"]
+
+# The World Bank snapshot is read at run time by hypergrid.corpus, so it has to travel with the package.
+[tool.setuptools.package-data]
+hypergrid = ["data/*.json"]

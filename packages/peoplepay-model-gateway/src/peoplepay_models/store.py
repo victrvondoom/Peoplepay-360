@@ -93,6 +93,13 @@ class ModelStore:
                             [rec.get(c) for c in cols])
             self._c.commit()
 
+    def spent_since(self, owner: str, since: float) -> float:
+        """Known-price spend recorded for ``owner`` since ``since``. Calls with no known cost contribute nothing."""
+        with self._lock:
+            row = self._c.execute("SELECT COALESCE(SUM(est_cost), 0.0) FROM model_invocations WHERE owner=? AND started_at>=?",
+                                  (owner, since)).fetchone()
+        return float(row[0] or 0.0)
+
     def usage_rows(self, owner: str | None = None, since: float | None = None) -> list[dict]:
         q, args = "SELECT * FROM model_invocations WHERE 1=1", []
         if owner is not None:
